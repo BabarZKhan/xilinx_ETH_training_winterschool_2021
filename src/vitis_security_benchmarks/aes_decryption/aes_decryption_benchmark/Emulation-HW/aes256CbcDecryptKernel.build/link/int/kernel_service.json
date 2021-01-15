@@ -1,0 +1,14 @@
+{
+ "kernels": [],
+ "computeUnits": [
+  {
+   "id": "",
+   "kernelName": "aes256CbcDecryptKernel",
+   "cuName": "aes256CbcDecryptKernel_1",
+   "baseAddress": "",
+   "instancePath": "/emu_wrapper/emu_i/dynamic_region/aes256CbcDecryptKernel_1",
+   "slr": []
+  }
+ ]
+}
+

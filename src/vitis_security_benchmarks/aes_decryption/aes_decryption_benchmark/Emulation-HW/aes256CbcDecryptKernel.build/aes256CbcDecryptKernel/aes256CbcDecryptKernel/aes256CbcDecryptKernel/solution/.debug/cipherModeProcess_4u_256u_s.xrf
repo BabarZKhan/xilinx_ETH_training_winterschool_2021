@@ -1,0 +1,14 @@
+Begin Function 'cipherModeProcess<4u, 256u>'
+
+RTL state condition: (1'b1 == ap_CS_fsm_state1)
+# ST_1
+local tmp <read_145> <integer> <FifoRead> 'read' </opt/Xilinx/Vitis/2020.1/common/technology/autopilot/hls_stream_39.h:145>
+tmp /opt/Xilinx/Vitis/2020.1/common/technology/autopilot/hls_stream_39.h:145
+reg: tmp_reg_166[63:0] lv
+
+
+RTL state condition: (1'b1 == ap_CS_fsm_state2)
+# ST_2
+
+End Function 'cipherModeProcess<4u, 256u>'
+

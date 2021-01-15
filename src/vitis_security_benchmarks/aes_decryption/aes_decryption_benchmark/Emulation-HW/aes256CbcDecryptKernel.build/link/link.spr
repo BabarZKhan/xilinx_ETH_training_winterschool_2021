@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="link" dir="" srcset="sources_1">
+  <FileSets>
+    <FileSet Name="kernel_aes256CbcDecryptKernel" Type="DesignSrcs">
+      <File Path="/home/centos/workspace/aes_decryption_benchmark/Emulation-HW/aes256CbcDecryptKernel.build/link/int/xo/aes256CbcDecryptKernel/aes256CbcDecryptKernel/cpu_sources/aes256CbcDecryptKernel.cpp"/>
+      <Config/>
+    </FileSet>
+    <FileSet Name="sources_1" Type="DesignSrcs">
+      <Config/>
+    </FileSet>
+  </FileSets>
+  <Runs>
+    <Run Id="run_link" Type="Ft101:LinkHwEmuTarget" SrcSet="sources_1" Description="" Dir="run_link">
+      <Strategy>
+        <StratHandle Name="" Flow="Link HW Emulation 2018"/>
+        <Step Id="system_link">
+          <Option Id="ConfigFileStr">/home/centos/workspace/aes_decryption_benchmark/Emulation-HW/aes256CbcDecryptKernel.build/link/int/syslinkConfig.ini</Option>
+          <Option Id="OptionsStrList"></Option>
+        </Step>
+        <Step Id="cf2sw">
+          <Option Id="OptionsStrList"></Option>
+        </Step>
+        <Step Id="rtd2_system_diagram"/>
+        <Step Id="vpl">
+          <Option Id="ConfigFileStr">/home/centos/workspace/aes_decryption_benchmark/Emulation-HW/aes256CbcDecryptKernel.build/link/int/vplConfig.ini</Option>
+          <Option Id="OptionsStrList"></Option>
+        </Step>
+        <Step Id="rtdgen"/>
+        <Step Id="xclbinutil">
+          <Option Id="OptionsStrList"></Option>
+        </Step>
+        <Step Id="xclbinutilinfo">
+          <Option Id="OptionsStrList"></Option>
+        </Step>
+        <Step Id="generate_sc_driver"/>
+      </Strategy>
+      <GeneratedRun Dir="run_link" File="gen_run.xml"/>
+    </Run>
+  </Runs>
+</project>

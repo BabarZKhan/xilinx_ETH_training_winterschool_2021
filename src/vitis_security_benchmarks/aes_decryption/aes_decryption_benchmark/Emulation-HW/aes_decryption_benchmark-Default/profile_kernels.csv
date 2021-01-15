@@ -1,0 +1,19 @@
+Compute Units: Running Time and Stalls
+Compute Unit, Running Time (us), Intra-Kernel Dataflow Stalls (%), External Memory Stalls (%), External Stream Stalls (%)
+aes256CbcDecryptKernel_1,4.941,76.383,11.606,0.000
+
+Functions: Running Time and Stalls
+Compute Unit, Function, Running Time (us), Intra-Kernel Dataflow Stalls (%), External Memory Stalls (%), External Stream Stalls (%)
+aes256CbcDecryptKernel_1,cipherModeProcess_4u_256u_U0,4.007,18.893,0.000,0.000
+aes256CbcDecryptKernel_1,cipherModeProcess_4u_256u_U0/grp_cipherModeParallel_4u_256u_s_fu_98,3.757,13.968,0.000,0.000
+aes256CbcDecryptKernel_1,scanMultiChannel_4u_256u_128u_104_U0,2.981,41.835,1.215,0.000
+aes256CbcDecryptKernel_1,scanMultiChannel_4u_256u_128u_104_U0/readBlock_128u_4u_256u_107_U0,1.960,0.000,1.215,0.000
+aes256CbcDecryptKernel_1,scanMultiChannel_4u_256u_128u_104_U0/splitText_4u_256u_U0,2.974,41.835,0.000,0.000
+aes256CbcDecryptKernel_1,writeOut_128u_U0,4.938,57.692,10.391,0.000
+aes256CbcDecryptKernel_1,mergeResult_128u_4u_U0,4.017,62.686,0.000,0.000
+
+Compute Units: Port Data Transfer
+Compute Unit, Port, Write Time (us), Outstanding Write (%), Read Time (us), Outstanding Read (%)
+aes256CbcDecryptKernel_1,m_axi_gmem0_0,0.000,0.000,1.434,29.015
+aes256CbcDecryptKernel_1,m_axi_gmem0_1,1.334,26.991,0.000,0.000
+

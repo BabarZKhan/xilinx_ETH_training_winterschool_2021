@@ -1,0 +1,238 @@
+Begin Function 'updateKey'
+
+RTL state condition: (1'b1 == ap_CS_fsm_pp0_stage0)
+# ST_2
+local roundkey_2_4 <> <integer> <Phi> 'phi' <>
+reg: roundkey_2_4_reg_528[127:0] lv
+
+local i_2 <> <integer> <Phi> 'phi' <>
+i /opt/Xilinx/Vitis/2020.1/common/technology/autopilot/ap_int_base.h:695
+reg: i_2_reg_538[3:0] lv
+
+local roundkey_1_3 <> <integer> <> 'load' <>
+roundkey_1_3 /opt/Xilinx/Vitis/2020.1/common/technology/autopilot/ap_int_base.h:853
+reg: roundkey_1_3_reg_2316[127:0] lv
+
+local icmp_ln882 <> <integer> <Comparator> 'icmp' <>
+icmp_ln882 /opt/Xilinx/Vitis/2020.1/common/technology/autopilot/ap_int_base.h:882
+reg: icmp_ln882_reg_2322[0:0] lv
+
+local icmp_ln874 <> <integer> <Comparator> 'icmp' <>
+icmp_ln874 /opt/Xilinx/Vitis/2020.1/common/technology/autopilot/ap_int_base.h:874
+reg: icmp_ln874_reg_2326[0:0] lv
+
+local p_Result_2 <> <integer> <> 'partselect' <>
+p_Result_2 /opt/Xilinx/Vitis/2020.1/common/technology/autopilot/ap_int_ref.h:708
+reg: p_Result_2_reg_2340[7:0] lv
+
+local p_Result_3 <> <integer> <> 'partselect' <>
+p_Result_3 /opt/Xilinx/Vitis/2020.1/common/technology/autopilot/ap_int_ref.h:708
+reg: p_Result_3_reg_2345[7:0] lv
+
+local icmp_ln874_1 <> <integer> <Comparator> 'icmp' <>
+icmp_ln874_1 /opt/Xilinx/Vitis/2020.1/common/technology/autopilot/ap_int_base.h:874
+reg: icmp_ln874_1_reg_2350[0:0] lv
+
+# ST_12
+local xor_ln1354_30 <> <integer> <Logic> 'xor' <>
+xor_ln1354_30 /opt/Xilinx/Vitis/2020.1/common/technology/autopilot/ap_int_base.h:1354
+reg: xor_ln1354_30_reg_2649[7:0] lv
+
+local xor_ln1354_33 <> <integer> <Logic> 'xor' <>
+xor_ln1354_33 /opt/Xilinx/Vitis/2020.1/common/technology/autopilot/ap_int_base.h:1354
+reg: xor_ln1354_33_reg_2654[7:0] lv
+
+local xor_ln1354_36 <> <integer> <Logic> 'xor' <>
+xor_ln1354_36 /opt/Xilinx/Vitis/2020.1/common/technology/autopilot/ap_int_base.h:1354
+reg: xor_ln1354_36_reg_2659[7:0] lv
+
+local xor_ln1354_39 <> <integer> <Logic> 'xor' <>
+xor_ln1354_39 /opt/Xilinx/Vitis/2020.1/common/technology/autopilot/ap_int_base.h:1354
+reg: xor_ln1354_39_reg_2664[7:0] lv
+
+
+RTL state condition: (1'b1 == ap_CS_fsm_pp0_stage1)
+# ST_3
+local decipher_0_3_load <> <integer> <ArrayAccess><ArrayLoad><MultiCycle> 'load' <>
+decipher_0_3_load /opt/Xilinx/Vitis/2020.1/common/technology/autopilot/ap_int_base.h:215
+reg: decipher_0_3_load_reg_2354[7:0] lv
+
+local decipher_0_3_load_1 <> <integer> <ArrayAccess><ArrayLoad><MultiCycle> 'load' <>
+decipher_0_3_load_1 /opt/Xilinx/Vitis/2020.1/common/technology/autopilot/ap_int_base.h:215
+reg: decipher_0_3_load_1_reg_2359[7:0] lv
+
+local trunc_ln674_1 <> <integer> <> 'trunc' <>
+trunc_ln674_1 /opt/Xilinx/Vitis/2020.1/common/technology/autopilot/ap_int_ref.h:674
+reg: trunc_ln674_1_reg_2374[31:0] lv
+
+local p_Result_7 <> <integer> <> 'partselect' <>
+p_Result_7 /opt/Xilinx/Vitis/2020.1/common/technology/autopilot/ap_int_ref.h:357
+reg: p_Result_7_reg_2379[31:0] lv
+
+local p_Result_8 <> <integer> <> 'partselect' <>
+p_Result_8 /opt/Xilinx/Vitis/2020.1/common/technology/autopilot/ap_int_ref.h:357
+reg: p_Result_8_reg_2384[31:0] lv
+
+local p_Result_10 <> <integer> <> 'partselect' <>
+p_Result_10 /opt/Xilinx/Vitis/2020.1/common/technology/autopilot/ap_int_ref.h:357
+reg: p_Result_10_reg_2389[31:0] lv
+
+# ST_13
+local p_Val2_36 <load_599> <integer> <ArrayAccess><ArrayLoad><MultiCycle> 'load' </home/centos/workspace/aes_decryption_benchmark/libs/xf_security/L1/include/xf_security/aes.hpp:599>
+p_Val2_36 /home/centos/workspace/aes_decryption_benchmark/libs/xf_security/L1/include/xf_security/aes.hpp:599
+reg: reg_622[31:0] lv
+
+local p_Val2_37 <load_599> <integer> <ArrayAccess><ArrayLoad><MultiCycle> 'load' </home/centos/workspace/aes_decryption_benchmark/libs/xf_security/L1/include/xf_security/aes.hpp:599>
+p_Val2_37 /home/centos/workspace/aes_decryption_benchmark/libs/xf_security/L1/include/xf_security/aes.hpp:599
+reg: reg_626[31:0] lv
+
+
+RTL state condition: (1'b1 == ap_CS_fsm_pp0_stage2)
+# ST_4
+local roundkey_22_1848 <> <integer> <Phi> 'phi' <>
+reg: roundkey_22_1848_reg_561[127:0] lv
+
+local i <> <integer> <Arithmetic> 'add' <>
+i /opt/Xilinx/Vitis/2020.1/common/technology/autopilot/ap_int_base.h:695
+reg: i_reg_2394[3:0] lv
+
+
+RTL state condition: (1'b1 == ap_CS_fsm_pp0_stage3)
+# ST_5
+local p_Result_13 <> <integer> <> 'partselect' <>
+p_Result_13 /opt/Xilinx/Vitis/2020.1/common/technology/autopilot/ap_int_ref.h:708
+reg: p_Result_13_reg_2409[7:0] lv
+
+local p_Result_14 <> <integer> <> 'partselect' <>
+p_Result_14 /opt/Xilinx/Vitis/2020.1/common/technology/autopilot/ap_int_ref.h:708
+reg: p_Result_14_reg_2414[7:0] lv
+
+local p_Result_15 <> <integer> <> 'partselect' <>
+p_Result_15 /opt/Xilinx/Vitis/2020.1/common/technology/autopilot/ap_int_ref.h:708
+reg: p_Result_15_reg_2419[7:0] lv
+
+local p_Result_16 <> <integer> <> 'partselect' <>
+p_Result_16 /opt/Xilinx/Vitis/2020.1/common/technology/autopilot/ap_int_ref.h:708
+reg: p_Result_16_reg_2424[7:0] lv
+
+local p_Result_17 <> <integer> <> 'partselect' <>
+p_Result_17 /opt/Xilinx/Vitis/2020.1/common/technology/autopilot/ap_int_ref.h:708
+reg: p_Result_17_reg_2429[7:0] lv
+
+local p_Result_18 <> <integer> <> 'partselect' <>
+p_Result_18 /opt/Xilinx/Vitis/2020.1/common/technology/autopilot/ap_int_ref.h:708
+reg: p_Result_18_reg_2434[7:0] lv
+
+local p_Result_19 <> <integer> <> 'partselect' <>
+p_Result_19 /opt/Xilinx/Vitis/2020.1/common/technology/autopilot/ap_int_ref.h:708
+reg: p_Result_19_reg_2439[7:0] lv
+
+local p_Result_20 <> <integer> <> 'partselect' <>
+p_Result_20 /opt/Xilinx/Vitis/2020.1/common/technology/autopilot/ap_int_ref.h:708
+reg: p_Result_20_reg_2444[7:0] lv
+
+local p_Result_21 <> <integer> <> 'partselect' <>
+p_Result_21 /opt/Xilinx/Vitis/2020.1/common/technology/autopilot/ap_int_ref.h:708
+reg: p_Result_21_reg_2449[7:0] lv
+
+local p_Result_22 <> <integer> <> 'partselect' <>
+p_Result_22 /opt/Xilinx/Vitis/2020.1/common/technology/autopilot/ap_int_ref.h:708
+reg: p_Result_22_reg_2454[7:0] lv
+
+local p_Result_23 <> <integer> <> 'partselect' <>
+p_Result_23 /opt/Xilinx/Vitis/2020.1/common/technology/autopilot/ap_int_ref.h:708
+reg: p_Result_23_reg_2459[7:0] lv
+
+local p_Result_24 <> <integer> <> 'partselect' <>
+p_Result_24 /opt/Xilinx/Vitis/2020.1/common/technology/autopilot/ap_int_ref.h:708
+reg: p_Result_24_reg_2464[7:0] lv
+
+local p_Result_25 <> <integer> <> 'partselect' <>
+p_Result_25 /opt/Xilinx/Vitis/2020.1/common/technology/autopilot/ap_int_ref.h:708
+reg: p_Result_25_reg_2469[7:0] lv
+
+local p_Result_26 <> <integer> <> 'partselect' <>
+p_Result_26 /opt/Xilinx/Vitis/2020.1/common/technology/autopilot/ap_int_ref.h:708
+reg: p_Result_26_reg_2474[7:0] lv
+
+
+RTL state condition: (1'b1 == ap_CS_fsm_pp0_stage5)
+# ST_7
+local p_Val2_24 <load_599> <integer> <ArrayAccess><ArrayLoad><MultiCycle> 'load' </home/centos/workspace/aes_decryption_benchmark/libs/xf_security/L1/include/xf_security/aes.hpp:599>
+p_Val2_24 /home/centos/workspace/aes_decryption_benchmark/libs/xf_security/L1/include/xf_security/aes.hpp:599
+reg: reg_622[31:0] lv
+
+local p_Val2_25 <load_599> <integer> <ArrayAccess><ArrayLoad><MultiCycle> 'load' </home/centos/workspace/aes_decryption_benchmark/libs/xf_security/L1/include/xf_security/aes.hpp:599>
+p_Val2_25 /home/centos/workspace/aes_decryption_benchmark/libs/xf_security/L1/include/xf_security/aes.hpp:599
+reg: reg_626[31:0] lv
+
+
+RTL state condition: (1'b1 == ap_CS_fsm_pp0_stage6)
+# ST_8
+local xor_ln1354_6 <> <integer> <Logic> 'xor' <>
+xor_ln1354_6 /opt/Xilinx/Vitis/2020.1/common/technology/autopilot/ap_int_base.h:1354
+reg: xor_ln1354_6_reg_2539[7:0] lv
+
+local xor_ln1354_9 <> <integer> <Logic> 'xor' <>
+xor_ln1354_9 /opt/Xilinx/Vitis/2020.1/common/technology/autopilot/ap_int_base.h:1354
+reg: xor_ln1354_9_reg_2544[7:0] lv
+
+local xor_ln1354_12 <> <integer> <Logic> 'xor' <>
+xor_ln1354_12 /opt/Xilinx/Vitis/2020.1/common/technology/autopilot/ap_int_base.h:1354
+reg: xor_ln1354_12_reg_2549[7:0] lv
+
+local xor_ln1354_15 <> <integer> <Logic> 'xor' <>
+xor_ln1354_15 /opt/Xilinx/Vitis/2020.1/common/technology/autopilot/ap_int_base.h:1354
+reg: xor_ln1354_15_reg_2554[7:0] lv
+
+
+RTL state condition: (1'b1 == ap_CS_fsm_pp0_stage7)
+# ST_9
+local p_Val2_28 <load_599> <integer> <ArrayAccess><ArrayLoad><MultiCycle> 'load' </home/centos/workspace/aes_decryption_benchmark/libs/xf_security/L1/include/xf_security/aes.hpp:599>
+p_Val2_28 /home/centos/workspace/aes_decryption_benchmark/libs/xf_security/L1/include/xf_security/aes.hpp:599
+reg: reg_622[31:0] lv
+
+local p_Val2_29 <load_599> <integer> <ArrayAccess><ArrayLoad><MultiCycle> 'load' </home/centos/workspace/aes_decryption_benchmark/libs/xf_security/L1/include/xf_security/aes.hpp:599>
+p_Val2_29 /home/centos/workspace/aes_decryption_benchmark/libs/xf_security/L1/include/xf_security/aes.hpp:599
+reg: reg_626[31:0] lv
+
+
+RTL state condition: (1'b1 == ap_CS_fsm_pp0_stage8)
+# ST_10
+local xor_ln1354_18 <> <integer> <Logic> 'xor' <>
+xor_ln1354_18 /opt/Xilinx/Vitis/2020.1/common/technology/autopilot/ap_int_base.h:1354
+reg: xor_ln1354_18_reg_2599[7:0] lv
+
+local xor_ln1354_21 <> <integer> <Logic> 'xor' <>
+xor_ln1354_21 /opt/Xilinx/Vitis/2020.1/common/technology/autopilot/ap_int_base.h:1354
+reg: xor_ln1354_21_reg_2604[7:0] lv
+
+local xor_ln1354_24 <> <integer> <Logic> 'xor' <>
+xor_ln1354_24 /opt/Xilinx/Vitis/2020.1/common/technology/autopilot/ap_int_base.h:1354
+reg: xor_ln1354_24_reg_2609[7:0] lv
+
+local xor_ln1354_27 <> <integer> <Logic> 'xor' <>
+xor_ln1354_27 /opt/Xilinx/Vitis/2020.1/common/technology/autopilot/ap_int_base.h:1354
+reg: xor_ln1354_27_reg_2614[7:0] lv
+
+
+RTL state condition: (1'b1 == ap_CS_fsm_pp0_stage9)
+# ST_11
+local p_Val2_32 <load_599> <integer> <ArrayAccess><ArrayLoad><MultiCycle> 'load' </home/centos/workspace/aes_decryption_benchmark/libs/xf_security/L1/include/xf_security/aes.hpp:599>
+p_Val2_32 /home/centos/workspace/aes_decryption_benchmark/libs/xf_security/L1/include/xf_security/aes.hpp:599
+reg: reg_622[31:0] lv
+
+local p_Val2_33 <load_599> <integer> <ArrayAccess><ArrayLoad><MultiCycle> 'load' </home/centos/workspace/aes_decryption_benchmark/libs/xf_security/L1/include/xf_security/aes.hpp:599>
+p_Val2_33 /home/centos/workspace/aes_decryption_benchmark/libs/xf_security/L1/include/xf_security/aes.hpp:599
+reg: reg_626[31:0] lv
+
+
+RTL state condition: (1'b1 == ap_CS_fsm_state1)
+# ST_1
+local roundkey_2_1 <> <integer> <> 'trunc' <>
+roundkey_2_1 /opt/Xilinx/Vitis/2020.1/common/technology/autopilot/ap_int_ref.h:674
+reg: roundkey_2_1_reg_2310[127:0] lv
+
+
+End Function 'updateKey'
+

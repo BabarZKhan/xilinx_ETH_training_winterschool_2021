@@ -1,0 +1,274 @@
+
+
+================================================================
+== Vitis HLS Report for 'cipherModeParallel_4u_256u_s'
+================================================================
+* Date:           Thu Jan 14 21:37:08 2021
+
+* Version:        2020.1 (Build 2902540 on Wed May 27 20:16:15 MDT 2020)
+* Project:        aes256CbcDecryptKernel
+* Solution:       solution (Vitis Kernel Flow Target)
+* Product family: virtexuplus
+* Target device:  xcvu9p-flgb2104-2-i
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  | 4.00 ns | 2.654 ns |   1.08 ns  |
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+----------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline |
+    |   min   |   max   |    min   |    max   | min | max |   Type   |
+    +---------+---------+----------+----------+-----+-----+----------+
+    |        ?|        ?|         ?|         ?|    ?|    ?| dataflow |
+    +---------+---------+----------+----------+-----+-----+----------+
+
+    + Detail: 
+        * Instance: 
+        +---------------------------------------+------------------------------------+---------+---------+----------+----------+-----+-----+---------+
+        |                                       |                                    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+        |                Instance               |               Module               |   min   |   max   |    min   |    max   | min | max |   Type  |
+        +---------------------------------------+------------------------------------+---------+---------+----------+----------+-----+-----+---------+
+        |singleCipherMode_256u_75_U0            |singleCipherMode_256u_75            |        ?|        ?|         ?|         ?|    ?|    ?|   none  |
+        |singleCipherMode_256u_76_U0            |singleCipherMode_256u_76            |        ?|        ?|         ?|         ?|    ?|    ?|   none  |
+        |singleCipherMode_256u_77_U0            |singleCipherMode_256u_77            |        ?|        ?|         ?|         ?|    ?|    ?|   none  |
+        |singleCipherMode_256u_78_U0            |singleCipherMode_256u_78            |        ?|        ?|         ?|         ?|    ?|    ?|   none  |
+        |cipherModeParallel_4u_256u_entry98_U0  |cipherModeParallel_4u_256u_entry98  |        0|        0|   0 ns   |   0 ns   |    0|    0|   none  |
+        +---------------------------------------+------------------------------------+---------+---------+----------+----------+-----+-----+---------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++---------------------+---------+------+---------+---------+-----+
+|         Name        | BRAM_18K|  DSP |    FF   |   LUT   | URAM|
++---------------------+---------+------+---------+---------+-----+
+|DSP                  |        -|     -|        -|        -|    -|
+|Expression           |        -|     -|        0|       85|    -|
+|FIFO                 |        -|     -|      396|      268|    -|
+|Instance             |        4|     -|    62446|    36083|    -|
+|Memory               |        -|     -|        -|        -|    -|
+|Multiplexer          |        -|     -|        -|       90|    -|
+|Register             |        -|     -|       15|        -|    -|
++---------------------+---------+------+---------+---------+-----+
+|Total                |        4|     0|    62857|    36526|    0|
++---------------------+---------+------+---------+---------+-----+
+|Available SLR        |     1440|  2280|   788160|   394080|  320|
++---------------------+---------+------+---------+---------+-----+
+|Utilization SLR (%)  |    ~0   |     0|        7|        9|    0|
++---------------------+---------+------+---------+---------+-----+
+|Available            |     4320|  6840|  2364480|  1182240|  960|
++---------------------+---------+------+---------+---------+-----+
+|Utilization (%)      |    ~0   |     0|        2|        3|    0|
++---------------------+---------+------+---------+---------+-----+
+
++ Detail: 
+    * Instance: 
+    +---------------------------------------+------------------------------------+---------+----+-------+------+-----+
+    |                Instance               |               Module               | BRAM_18K| DSP|   FF  |  LUT | URAM|
+    +---------------------------------------+------------------------------------+---------+----+-------+------+-----+
+    |cipherModeParallel_4u_256u_entry98_U0  |cipherModeParallel_4u_256u_entry98  |        0|   0|      2|    55|    0|
+    |singleCipherMode_256u_75_U0            |singleCipherMode_256u_75            |        1|   0|  15611|  9007|    0|
+    |singleCipherMode_256u_76_U0            |singleCipherMode_256u_76            |        1|   0|  15611|  9007|    0|
+    |singleCipherMode_256u_77_U0            |singleCipherMode_256u_77            |        1|   0|  15611|  9007|    0|
+    |singleCipherMode_256u_78_U0            |singleCipherMode_256u_78            |        1|   0|  15611|  9007|    0|
+    +---------------------------------------+------------------------------------+---------+----+-------+------+-----+
+    |Total                                  |                                    |        4|   0|  62446| 36083|    0|
+    +---------------------------------------+------------------------------------+---------+----+-------+------+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    +---------------+---------+----+----+-----+------+-----+---------+
+    |      Name     | BRAM_18K| FF | LUT| URAM| Depth| Bits| Size:D*B|
+    +---------------+---------+----+----+-----+------+-----+---------+
+    |taskNum_c77_U  |        0|  99|   0|    -|     2|   64|      128|
+    |taskNum_c78_U  |        0|  99|   0|    -|     2|   64|      128|
+    |taskNum_c79_U  |        0|  99|   0|    -|     2|   64|      128|
+    |taskNum_c_U    |        0|  99|   0|    -|     2|   64|      128|
+    +---------------+---------+----+----+-----+------+-----+---------+
+    |Total          |        0| 396|   0|    0|     8|  256|      512|
+    +---------------+---------+----+----+-----+------+-----+---------+
+
+    * Expression: 
+    +--------------------------------------------------------+----------+----+---+----+------------+------------+
+    |                      Variable Name                     | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +--------------------------------------------------------+----------+----+---+----+------------+------------+
+    |cipherModeParallel_4u_256u_entry98_U0_ap_ready_count    |     +    |   0|  0|   9|           2|           1|
+    |singleCipherMode_256u_75_U0_ap_ready_count              |     +    |   0|  0|   9|           2|           1|
+    |singleCipherMode_256u_76_U0_ap_ready_count              |     +    |   0|  0|   9|           2|           1|
+    |singleCipherMode_256u_77_U0_ap_ready_count              |     +    |   0|  0|   9|           2|           1|
+    |singleCipherMode_256u_78_U0_ap_ready_count              |     +    |   0|  0|   9|           2|           1|
+    |ap_ext_blocking_n                                       |    and   |   0|  0|   2|           1|           1|
+    |ap_ext_blocking_sub_n                                   |    and   |   0|  0|   2|           1|           1|
+    |ap_idle                                                 |    and   |   0|  0|   2|           1|           1|
+    |ap_int_blocking_n                                       |    and   |   0|  0|   2|           1|           1|
+    |ap_int_blocking_sub_n                                   |    and   |   0|  0|   2|           1|           1|
+    |ap_str_blocking_n                                       |    and   |   0|  0|   2|           1|           1|
+    |ap_str_blocking_sub_n                                   |    and   |   0|  0|   2|           1|           1|
+    |ap_sync_continue                                        |    and   |   0|  0|   2|           1|           1|
+    |ap_sync_done                                            |    and   |   0|  0|   2|           1|           1|
+    |ap_sync_ready                                           |    and   |   0|  0|   2|           1|           1|
+    |cipherModeParallel_4u_256u_entry98_U0_ap_start          |    and   |   0|  0|   2|           1|           1|
+    |singleCipherMode_256u_75_U0_ap_start                    |    and   |   0|  0|   2|           1|           1|
+    |singleCipherMode_256u_76_U0_ap_start                    |    and   |   0|  0|   2|           1|           1|
+    |singleCipherMode_256u_77_U0_ap_start                    |    and   |   0|  0|   2|           1|           1|
+    |singleCipherMode_256u_78_U0_ap_start                    |    and   |   0|  0|   2|           1|           1|
+    |ap_sync_cipherModeParallel_4u_256u_entry98_U0_ap_ready  |    or    |   0|  0|   2|           1|           1|
+    |ap_sync_singleCipherMode_256u_75_U0_ap_ready            |    or    |   0|  0|   2|           1|           1|
+    |ap_sync_singleCipherMode_256u_76_U0_ap_ready            |    or    |   0|  0|   2|           1|           1|
+    |ap_sync_singleCipherMode_256u_77_U0_ap_ready            |    or    |   0|  0|   2|           1|           1|
+    |ap_sync_singleCipherMode_256u_78_U0_ap_ready            |    or    |   0|  0|   2|           1|           1|
+    +--------------------------------------------------------+----------+----+---+----+------------+------------+
+    |Total                                                   |          |   0|  0|  85|          30|          25|
+    +--------------------------------------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +------------------------------------------------------------+----+-----------+-----+-----------+
+    |                            Name                            | LUT| Input Size| Bits| Total Bits|
+    +------------------------------------------------------------+----+-----------+-----+-----------+
+    |ap_sync_reg_cipherModeParallel_4u_256u_entry98_U0_ap_ready  |   9|          2|    1|          2|
+    |ap_sync_reg_singleCipherMode_256u_75_U0_ap_ready            |   9|          2|    1|          2|
+    |ap_sync_reg_singleCipherMode_256u_76_U0_ap_ready            |   9|          2|    1|          2|
+    |ap_sync_reg_singleCipherMode_256u_77_U0_ap_ready            |   9|          2|    1|          2|
+    |ap_sync_reg_singleCipherMode_256u_78_U0_ap_ready            |   9|          2|    1|          2|
+    |cipherModeParallel_4u_256u_entry98_U0_ap_ready_count        |   9|          2|    2|          4|
+    |singleCipherMode_256u_75_U0_ap_ready_count                  |   9|          2|    2|          4|
+    |singleCipherMode_256u_76_U0_ap_ready_count                  |   9|          2|    2|          4|
+    |singleCipherMode_256u_77_U0_ap_ready_count                  |   9|          2|    2|          4|
+    |singleCipherMode_256u_78_U0_ap_ready_count                  |   9|          2|    2|          4|
+    +------------------------------------------------------------+----+-----------+-----+-----------+
+    |Total                                                       |  90|         20|   15|         30|
+    +------------------------------------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +------------------------------------------------------------+---+----+-----+-----------+
+    |                            Name                            | FF| LUT| Bits| Const Bits|
+    +------------------------------------------------------------+---+----+-----+-----------+
+    |ap_sync_reg_cipherModeParallel_4u_256u_entry98_U0_ap_ready  |  1|   0|    1|          0|
+    |ap_sync_reg_singleCipherMode_256u_75_U0_ap_ready            |  1|   0|    1|          0|
+    |ap_sync_reg_singleCipherMode_256u_76_U0_ap_ready            |  1|   0|    1|          0|
+    |ap_sync_reg_singleCipherMode_256u_77_U0_ap_ready            |  1|   0|    1|          0|
+    |ap_sync_reg_singleCipherMode_256u_78_U0_ap_ready            |  1|   0|    1|          0|
+    |cipherModeParallel_4u_256u_entry98_U0_ap_ready_count        |  2|   0|    2|          0|
+    |singleCipherMode_256u_75_U0_ap_ready_count                  |  2|   0|    2|          0|
+    |singleCipherMode_256u_76_U0_ap_ready_count                  |  2|   0|    2|          0|
+    |singleCipherMode_256u_77_U0_ap_ready_count                  |  2|   0|    2|          0|
+    |singleCipherMode_256u_78_U0_ap_ready_count                  |  2|   0|    2|          0|
+    +------------------------------------------------------------+---+----+-----+-----------+
+    |Total                                                       | 15|   0|   15|          0|
+    +------------------------------------------------------------+---+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-------------------------+-----+-----+------------+------------------------------+--------------+
+|        RTL Ports        | Dir | Bits|  Protocol  |         Source Object        |    C Type    |
++-------------------------+-----+-----+------------+------------------------------+--------------+
+|taskNum                  |  in |   64|   ap_none  |            taskNum           |    scalar    |
+|taskNum_ap_vld           |  in |    1|   ap_none  |            taskNum           |    scalar    |
+|IVStrm_dout              |  in |  128|   ap_fifo  |            IVStrm            |    pointer   |
+|IVStrm_empty_n           |  in |    1|   ap_fifo  |            IVStrm            |    pointer   |
+|IVStrm_read              | out |    1|   ap_fifo  |            IVStrm            |    pointer   |
+|IVStrm1_dout             |  in |  128|   ap_fifo  |            IVStrm1           |    pointer   |
+|IVStrm1_empty_n          |  in |    1|   ap_fifo  |            IVStrm1           |    pointer   |
+|IVStrm1_read             | out |    1|   ap_fifo  |            IVStrm1           |    pointer   |
+|IVStrm2_dout             |  in |  128|   ap_fifo  |            IVStrm2           |    pointer   |
+|IVStrm2_empty_n          |  in |    1|   ap_fifo  |            IVStrm2           |    pointer   |
+|IVStrm2_read             | out |    1|   ap_fifo  |            IVStrm2           |    pointer   |
+|IVStrm3_dout             |  in |  128|   ap_fifo  |            IVStrm3           |    pointer   |
+|IVStrm3_empty_n          |  in |    1|   ap_fifo  |            IVStrm3           |    pointer   |
+|IVStrm3_read             | out |    1|   ap_fifo  |            IVStrm3           |    pointer   |
+|cipherkeyStrm_dout       |  in |  256|   ap_fifo  |         cipherkeyStrm        |    pointer   |
+|cipherkeyStrm_empty_n    |  in |    1|   ap_fifo  |         cipherkeyStrm        |    pointer   |
+|cipherkeyStrm_read       | out |    1|   ap_fifo  |         cipherkeyStrm        |    pointer   |
+|cipherkeyStrm4_dout      |  in |  256|   ap_fifo  |        cipherkeyStrm4        |    pointer   |
+|cipherkeyStrm4_empty_n   |  in |    1|   ap_fifo  |        cipherkeyStrm4        |    pointer   |
+|cipherkeyStrm4_read      | out |    1|   ap_fifo  |        cipherkeyStrm4        |    pointer   |
+|cipherkeyStrm5_dout      |  in |  256|   ap_fifo  |        cipherkeyStrm5        |    pointer   |
+|cipherkeyStrm5_empty_n   |  in |    1|   ap_fifo  |        cipherkeyStrm5        |    pointer   |
+|cipherkeyStrm5_read      | out |    1|   ap_fifo  |        cipherkeyStrm5        |    pointer   |
+|cipherkeyStrm6_dout      |  in |  256|   ap_fifo  |        cipherkeyStrm6        |    pointer   |
+|cipherkeyStrm6_empty_n   |  in |    1|   ap_fifo  |        cipherkeyStrm6        |    pointer   |
+|cipherkeyStrm6_read      | out |    1|   ap_fifo  |        cipherkeyStrm6        |    pointer   |
+|textInStrm_dout          |  in |  128|   ap_fifo  |          textInStrm          |    pointer   |
+|textInStrm_empty_n       |  in |    1|   ap_fifo  |          textInStrm          |    pointer   |
+|textInStrm_read          | out |    1|   ap_fifo  |          textInStrm          |    pointer   |
+|textInStrm7_dout         |  in |  128|   ap_fifo  |          textInStrm7         |    pointer   |
+|textInStrm7_empty_n      |  in |    1|   ap_fifo  |          textInStrm7         |    pointer   |
+|textInStrm7_read         | out |    1|   ap_fifo  |          textInStrm7         |    pointer   |
+|textInStrm8_dout         |  in |  128|   ap_fifo  |          textInStrm8         |    pointer   |
+|textInStrm8_empty_n      |  in |    1|   ap_fifo  |          textInStrm8         |    pointer   |
+|textInStrm8_read         | out |    1|   ap_fifo  |          textInStrm8         |    pointer   |
+|textInStrm9_dout         |  in |  128|   ap_fifo  |          textInStrm9         |    pointer   |
+|textInStrm9_empty_n      |  in |    1|   ap_fifo  |          textInStrm9         |    pointer   |
+|textInStrm9_read         | out |    1|   ap_fifo  |          textInStrm9         |    pointer   |
+|endTextInStrm_dout       |  in |    1|   ap_fifo  |         endTextInStrm        |    pointer   |
+|endTextInStrm_empty_n    |  in |    1|   ap_fifo  |         endTextInStrm        |    pointer   |
+|endTextInStrm_read       | out |    1|   ap_fifo  |         endTextInStrm        |    pointer   |
+|endTextInStrm10_dout     |  in |    1|   ap_fifo  |        endTextInStrm10       |    pointer   |
+|endTextInStrm10_empty_n  |  in |    1|   ap_fifo  |        endTextInStrm10       |    pointer   |
+|endTextInStrm10_read     | out |    1|   ap_fifo  |        endTextInStrm10       |    pointer   |
+|endTextInStrm11_dout     |  in |    1|   ap_fifo  |        endTextInStrm11       |    pointer   |
+|endTextInStrm11_empty_n  |  in |    1|   ap_fifo  |        endTextInStrm11       |    pointer   |
+|endTextInStrm11_read     | out |    1|   ap_fifo  |        endTextInStrm11       |    pointer   |
+|endTextInStrm12_dout     |  in |    1|   ap_fifo  |        endTextInStrm12       |    pointer   |
+|endTextInStrm12_empty_n  |  in |    1|   ap_fifo  |        endTextInStrm12       |    pointer   |
+|endTextInStrm12_read     | out |    1|   ap_fifo  |        endTextInStrm12       |    pointer   |
+|textOutStrm_din          | out |  128|   ap_fifo  |          textOutStrm         |    pointer   |
+|textOutStrm_full_n       |  in |    1|   ap_fifo  |          textOutStrm         |    pointer   |
+|textOutStrm_write        | out |    1|   ap_fifo  |          textOutStrm         |    pointer   |
+|textOutStrm13_din        | out |  128|   ap_fifo  |         textOutStrm13        |    pointer   |
+|textOutStrm13_full_n     |  in |    1|   ap_fifo  |         textOutStrm13        |    pointer   |
+|textOutStrm13_write      | out |    1|   ap_fifo  |         textOutStrm13        |    pointer   |
+|textOutStrm14_din        | out |  128|   ap_fifo  |         textOutStrm14        |    pointer   |
+|textOutStrm14_full_n     |  in |    1|   ap_fifo  |         textOutStrm14        |    pointer   |
+|textOutStrm14_write      | out |    1|   ap_fifo  |         textOutStrm14        |    pointer   |
+|textOutStrm15_din        | out |  128|   ap_fifo  |         textOutStrm15        |    pointer   |
+|textOutStrm15_full_n     |  in |    1|   ap_fifo  |         textOutStrm15        |    pointer   |
+|textOutStrm15_write      | out |    1|   ap_fifo  |         textOutStrm15        |    pointer   |
+|endTextOutStrm_din       | out |    1|   ap_fifo  |        endTextOutStrm        |    pointer   |
+|endTextOutStrm_full_n    |  in |    1|   ap_fifo  |        endTextOutStrm        |    pointer   |
+|endTextOutStrm_write     | out |    1|   ap_fifo  |        endTextOutStrm        |    pointer   |
+|endTextOutStrm16_din     | out |    1|   ap_fifo  |       endTextOutStrm16       |    pointer   |
+|endTextOutStrm16_full_n  |  in |    1|   ap_fifo  |       endTextOutStrm16       |    pointer   |
+|endTextOutStrm16_write   | out |    1|   ap_fifo  |       endTextOutStrm16       |    pointer   |
+|endTextOutStrm17_din     | out |    1|   ap_fifo  |       endTextOutStrm17       |    pointer   |
+|endTextOutStrm17_full_n  |  in |    1|   ap_fifo  |       endTextOutStrm17       |    pointer   |
+|endTextOutStrm17_write   | out |    1|   ap_fifo  |       endTextOutStrm17       |    pointer   |
+|endTextOutStrm18_din     | out |    1|   ap_fifo  |       endTextOutStrm18       |    pointer   |
+|endTextOutStrm18_full_n  |  in |    1|   ap_fifo  |       endTextOutStrm18       |    pointer   |
+|endTextOutStrm18_write   | out |    1|   ap_fifo  |       endTextOutStrm18       |    pointer   |
+|ap_clk                   |  in |    1| ap_ctrl_hs | cipherModeParallel<4u, 256u> | return value |
+|ap_rst                   |  in |    1| ap_ctrl_hs | cipherModeParallel<4u, 256u> | return value |
+|ap_start                 |  in |    1| ap_ctrl_hs | cipherModeParallel<4u, 256u> | return value |
+|ap_done                  | out |    1| ap_ctrl_hs | cipherModeParallel<4u, 256u> | return value |
+|ap_ready                 | out |    1| ap_ctrl_hs | cipherModeParallel<4u, 256u> | return value |
+|ap_idle                  | out |    1| ap_ctrl_hs | cipherModeParallel<4u, 256u> | return value |
+|ap_continue              |  in |    1| ap_ctrl_hs | cipherModeParallel<4u, 256u> | return value |
+|ap_ext_blocking_n        | out |    1| ap_ctrl_hs | cipherModeParallel<4u, 256u> | return value |
+|ap_str_blocking_n        | out |    1| ap_ctrl_hs | cipherModeParallel<4u, 256u> | return value |
+|ap_int_blocking_n        | out |    1| ap_ctrl_hs | cipherModeParallel<4u, 256u> | return value |
++-------------------------+-----+-----+------------+------------------------------+--------------+
+

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="aes256CbcDecryptKernel" dir="">
+  <FileSets>
+    <FileSet Name="kernel_aes256CbcDecryptKernel" Type="DesignSrcs">
+      <File Path="/home/centos/workspace/aes_decryption_benchmark/src/kernel/aes256CbcDecryptKernel.cpp"/>
+      <Config/>
+    </FileSet>
+  </FileSets>
+  <Runs/>
+</project>

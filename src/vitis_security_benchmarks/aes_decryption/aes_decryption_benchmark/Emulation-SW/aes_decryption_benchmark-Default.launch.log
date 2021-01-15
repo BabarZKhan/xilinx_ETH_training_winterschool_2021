@@ -1,0 +1,13 @@
+Goldens have been created using OpenSSL.
+Host map buffer has been allocated and set.
+Found Platform
+Platform Name: Xilinx
+Selected Device xilinx_aws-vu9p-f1_shell-v04261818_201920_2
+INFO: Importing ../aes256CbcDecryptKernel.xclbin
+Loading: '../aes256CbcDecryptKernel.xclbin'
+Kernel has been created.
+allocate to HBM
+DDR buffers have been mapped/copy-and-mapped
+4 channels, 2 tasks, 64 messages verified. No error found!
+Kernel has been run for 2 times.
+Total execution time 1367601us

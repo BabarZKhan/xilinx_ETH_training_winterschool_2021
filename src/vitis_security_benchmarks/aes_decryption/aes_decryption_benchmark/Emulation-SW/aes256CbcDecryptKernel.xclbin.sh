@@ -1,0 +1,1 @@
+/opt/Xilinx/Vitis/2020.1/bin/v++ --target sw_emu --link --config common-config.cfg --config aes256CbcDecryptKernel-link.cfg -oaes256CbcDecryptKernel.xclbin aes256CbcDecryptKernel.build/aes256CbcDecryptKernel.xo

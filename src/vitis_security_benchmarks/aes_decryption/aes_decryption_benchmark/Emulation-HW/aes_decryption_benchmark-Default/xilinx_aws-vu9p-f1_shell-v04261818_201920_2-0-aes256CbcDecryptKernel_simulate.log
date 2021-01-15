@@ -1,0 +1,363 @@
+#-----------------------------------------------------------
+# xsim v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:35 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Thu Jan 14 21:46:55 2021
+# Process ID: 1030
+# Current directory: /home/centos/workspace/aes_decryption_benchmark/Emulation-HW/.run/937/hw_em/device0/binary_0/behav_waveform/xsim
+# Command line: xsim -log simulate.log -mode tcl -source {xsim.dir/emu_wrapper_behav/xsim_script.tcl}
+# Log file: /home/centos/workspace/aes_decryption_benchmark/Emulation-HW/.run/937/hw_em/device0/binary_0/behav_waveform/xsim/simulate.log
+# Journal file: /home/centos/workspace/aes_decryption_benchmark/Emulation-HW/.run/937/hw_em/device0/binary_0/behav_waveform/xsim/xsim.jou
+#-----------------------------------------------------------
+source xsim.dir/emu_wrapper_behav/xsim_script.tcl
+# xsim {emu_wrapper_behav} -wdb {xilinx_aws-vu9p-f1_shell-v04261818_201920_2-0-aes256CbcDecryptKernel.wdb} -autoloadwcfg -tclbatch {emu_wrapper.tcl} -key {Behavioral:sim_1:Functional:emu_wrapper} -protoinst {protoinst_files/bd_d216.protoinst} -protoinst {protoinst_files/pfm_dynamic.protoinst} -protoinst {protoinst_files/emu.protoinst} -protoinst {./dr_behav.protoinst}
+Vivado Simulator 2020.1
+
+Warning: (W505) object already exists: .emu_wrapper.emu_i.dynamic_region.System_DPA.dpa_hub.inst.s_aximm_wr_util. Latter declaration will be renamed to .emu_wrapper.emu_i.dynamic_region.System_DPA.dpa_hub.inst.s_aximm_wr_util_0
+In file: sc_object_manager.cpp:161
+
+Warning: (W505) object already exists: .emu_wrapper.emu_i.dynamic_region.System_DPA.dpa_mon0.inst.rd_mon.rd_skt. Latter declaration will be renamed to .emu_wrapper.emu_i.dynamic_region.System_DPA.dpa_mon0.inst.rd_mon.rd_skt_0
+In file: sc_object_manager.cpp:161
+
+Warning: (W505) object already exists: .emu_wrapper.emu_i.dynamic_region.System_DPA.dpa_mon0.inst.rd_mon.wr_skt. Latter declaration will be renamed to .emu_wrapper.emu_i.dynamic_region.System_DPA.dpa_mon0.inst.rd_mon.wr_skt_0
+In file: sc_object_manager.cpp:161
+
+Info: (I804) /IEEE_Std_1666/deprecated: sc_sensitive_neg is deprecated use sc_sensitive << with neg() instead
+
+Warning: (W505) object already exists: .emu_wrapper.emu_i.dynamic_region.System_DPA.dpa_mon1.inst.rd_mon.rd_skt. Latter declaration will be renamed to .emu_wrapper.emu_i.dynamic_region.System_DPA.dpa_mon1.inst.rd_mon.rd_skt_0
+In file: sc_object_manager.cpp:161
+
+Warning: (W505) object already exists: .emu_wrapper.emu_i.dynamic_region.System_DPA.dpa_mon1.inst.wr_mon.wr_skt. Latter declaration will be renamed to .emu_wrapper.emu_i.dynamic_region.System_DPA.dpa_mon1.inst.wr_mon.wr_skt_0
+In file: sc_object_manager.cpp:161
+
+Warning: (W505) object already exists: .emu_wrapper.emu_i.dynamic_region.System_DPA.dpa_mon1.inst.mon_saxi_rd_socket. Latter declaration will be renamed to .emu_wrapper.emu_i.dynamic_region.System_DPA.dpa_mon1.inst.mon_saxi_rd_socket_0
+In file: sc_object_manager.cpp:161
+
+Warning: (W505) object already exists: .emu_wrapper.emu_i.dynamic_region.System_DPA.dpa_mon1.inst.mon_saxi_wr_socket. Latter declaration will be renamed to .emu_wrapper.emu_i.dynamic_region.System_DPA.dpa_mon1.inst.mon_saxi_wr_socket_0
+In file: sc_object_manager.cpp:161
+
+Warning: (W505) object already exists: .emu_wrapper.emu_i.dynamic_region.System_DPA.dpa_mon2.inst.rd_mon.rd_skt. Latter declaration will be renamed to .emu_wrapper.emu_i.dynamic_region.System_DPA.dpa_mon2.inst.rd_mon.rd_skt_0
+In file: sc_object_manager.cpp:161
+
+Warning: (W505) object already exists: .emu_wrapper.emu_i.dynamic_region.System_DPA.dpa_mon2.inst.wr_mon.wr_skt. Latter declaration will be renamed to .emu_wrapper.emu_i.dynamic_region.System_DPA.dpa_mon2.inst.wr_mon.wr_skt_0
+In file: sc_object_manager.cpp:161
+
+Warning: (W505) object already exists: .emu_wrapper.emu_i.dynamic_region.System_DPA.dpa_mon2.inst.mon_saxi_rd_socket. Latter declaration will be renamed to .emu_wrapper.emu_i.dynamic_region.System_DPA.dpa_mon2.inst.mon_saxi_rd_socket_0
+In file: sc_object_manager.cpp:161
+
+Warning: (W505) object already exists: .emu_wrapper.emu_i.dynamic_region.System_DPA.dpa_mon2.inst.mon_saxi_wr_socket. Latter declaration will be renamed to .emu_wrapper.emu_i.dynamic_region.System_DPA.dpa_mon2.inst.mon_saxi_wr_socket_0
+In file: sc_object_manager.cpp:161
+
+Warning: (W505) object already exists: .emu_wrapper.emu_i.dynamic_region.memory_subsystem.inst.rd_socket. Latter declaration will be renamed to .emu_wrapper.emu_i.dynamic_region.memory_subsystem.inst.rd_socket_0
+In file: sc_object_manager.cpp:161
+
+Warning: (W505) object already exists: .emu_wrapper.emu_i.dynamic_region.memory_subsystem.inst.wr_socket. Latter declaration will be renamed to .emu_wrapper.emu_i.dynamic_region.memory_subsystem.inst.wr_socket_0
+In file: sc_object_manager.cpp:161
+
+Warning: (W505) object already exists: .emu_wrapper.emu_i.dynamic_region.memory_subsystem.inst.rd_socket. Latter declaration will be renamed to .emu_wrapper.emu_i.dynamic_region.memory_subsystem.inst.rd_socket_1
+In file: sc_object_manager.cpp:161
+
+Warning: (W505) object already exists: .emu_wrapper.emu_i.dynamic_region.memory_subsystem.inst.wr_socket. Latter declaration will be renamed to .emu_wrapper.emu_i.dynamic_region.memory_subsystem.inst.wr_socket_1
+In file: sc_object_manager.cpp:161
+
+Warning: (W505) object already exists: .emu_wrapper.emu_i.dynamic_region.memory_subsystem.inst.rd_socket. Latter declaration will be renamed to .emu_wrapper.emu_i.dynamic_region.memory_subsystem.inst.rd_socket_2
+In file: sc_object_manager.cpp:161
+
+Warning: (W505) object already exists: .emu_wrapper.emu_i.dynamic_region.memory_subsystem.inst.wr_socket. Latter declaration will be renamed to .emu_wrapper.emu_i.dynamic_region.memory_subsystem.inst.wr_socket_2
+In file: sc_object_manager.cpp:161
+
+Warning: (W505) object already exists: .emu_wrapper.emu_i.dynamic_region.memory_subsystem.inst.rd_socket. Latter declaration will be renamed to .emu_wrapper.emu_i.dynamic_region.memory_subsystem.inst.rd_socket_3
+In file: sc_object_manager.cpp:161
+
+Warning: (W505) object already exists: .emu_wrapper.emu_i.dynamic_region.memory_subsystem.inst.wr_socket. Latter declaration will be renamed to .emu_wrapper.emu_i.dynamic_region.memory_subsystem.inst.wr_socket_3
+In file: sc_object_manager.cpp:161
+
+Warning: (W505) object already exists: .emu_wrapper.emu_i.dynamic_region.memory_subsystem.inst.rd_socket. Latter declaration will be renamed to .emu_wrapper.emu_i.dynamic_region.memory_subsystem.inst.rd_socket_4
+In file: sc_object_manager.cpp:161
+
+Warning: (W505) object already exists: .emu_wrapper.emu_i.dynamic_region.memory_subsystem.inst.wr_socket. Latter declaration will be renamed to .emu_wrapper.emu_i.dynamic_region.memory_subsystem.inst.wr_socket_4
+In file: sc_object_manager.cpp:161
+
+Warning: (W505) object already exists: .emu_wrapper.emu_i.dynamic_region.memory_subsystem.inst.rd_socket. Latter declaration will be renamed to .emu_wrapper.emu_i.dynamic_region.memory_subsystem.inst.rd_socket_5
+In file: sc_object_manager.cpp:161
+
+Warning: (W505) object already exists: .emu_wrapper.emu_i.dynamic_region.memory_subsystem.inst.wr_socket. Latter declaration will be renamed to .emu_wrapper.emu_i.dynamic_region.memory_subsystem.inst.wr_socket_5
+In file: sc_object_manager.cpp:161
+
+Warning: (W505) object already exists: .emu_wrapper.emu_i.dynamic_region.memory_subsystem.inst.rd_socket. Latter declaration will be renamed to .emu_wrapper.emu_i.dynamic_region.memory_subsystem.inst.rd_socket_6
+In file: sc_object_manager.cpp:161
+
+Warning: (W505) object already exists: .emu_wrapper.emu_i.dynamic_region.memory_subsystem.inst.wr_socket. Latter declaration will be renamed to .emu_wrapper.emu_i.dynamic_region.memory_subsystem.inst.wr_socket_6
+In file: sc_object_manager.cpp:161
+
+Warning: (W505) object already exists: .emu_wrapper.emu_i.dynamic_region.memory_subsystem.inst.rd_socket. Latter declaration will be renamed to .emu_wrapper.emu_i.dynamic_region.memory_subsystem.inst.rd_socket_7
+In file: sc_object_manager.cpp:161
+
+Warning: (W505) object already exists: .emu_wrapper.emu_i.dynamic_region.memory_subsystem.inst.wr_socket. Latter declaration will be renamed to .emu_wrapper.emu_i.dynamic_region.memory_subsystem.inst.wr_socket_7
+In file: sc_object_manager.cpp:161
+
+Warning: (W505) object already exists: .emu_wrapper.emu_i.dynamic_region.memory_subsystem.inst.rd_socket. Latter declaration will be renamed to .emu_wrapper.emu_i.dynamic_region.memory_subsystem.inst.rd_socket_8
+In file: sc_object_manager.cpp:161
+
+Warning: (W505) object already exists: .emu_wrapper.emu_i.dynamic_region.memory_subsystem.inst.wr_socket. Latter declaration will be renamed to .emu_wrapper.emu_i.dynamic_region.memory_subsystem.inst.wr_socket_8
+In file: sc_object_manager.cpp:161
+
+Warning: (W505) object already exists: .emu_wrapper.emu_i.dynamic_region.sim_ddr_0.inst.axi_crossbar_model.master_skt_wr_0. Latter declaration will be renamed to .emu_wrapper.emu_i.dynamic_region.sim_ddr_0.inst.axi_crossbar_model.master_skt_wr_0_0
+In file: sc_object_manager.cpp:161
+
+Warning: (W505) object already exists: .emu_wrapper.emu_i.dynamic_region.sim_ddr_0.inst.axi_crossbar_model.master_skt_rd_0. Latter declaration will be renamed to .emu_wrapper.emu_i.dynamic_region.sim_ddr_0.inst.axi_crossbar_model.master_skt_rd_0_0
+In file: sc_object_manager.cpp:161
+
+Warning: (W505) object already exists: .emu_wrapper.emu_i.dynamic_region.sim_ddr_0.inst.axi_crossbar_model.slave_skt_wr_0. Latter declaration will be renamed to .emu_wrapper.emu_i.dynamic_region.sim_ddr_0.inst.axi_crossbar_model.slave_skt_wr_0_0
+In file: sc_object_manager.cpp:161
+
+Warning: (W505) object already exists: .emu_wrapper.emu_i.dynamic_region.sim_ddr_0.inst.axi_crossbar_model.slave_skt_rd_0. Latter declaration will be renamed to .emu_wrapper.emu_i.dynamic_region.sim_ddr_0.inst.axi_crossbar_model.slave_skt_rd_0_0
+In file: sc_object_manager.cpp:161
+
+Warning: (W505) object already exists: .emu_wrapper.emu_i.dynamic_region.sim_ddr_0.inst.axi_crossbar_model.slave_skt_wr_1. Latter declaration will be renamed to .emu_wrapper.emu_i.dynamic_region.sim_ddr_0.inst.axi_crossbar_model.slave_skt_wr_1_0
+In file: sc_object_manager.cpp:161
+
+Warning: (W505) object already exists: .emu_wrapper.emu_i.dynamic_region.sim_ddr_0.inst.axi_crossbar_model.slave_skt_rd_1. Latter declaration will be renamed to .emu_wrapper.emu_i.dynamic_region.sim_ddr_0.inst.axi_crossbar_model.slave_skt_rd_1_0
+In file: sc_object_manager.cpp:161
+
+Warning: (W505) object already exists: .emu_wrapper.emu_i.dynamic_region.sim_ddr_0.inst.ddrx_top_tlm_model_0.axi_app_tlm_model_0.rd_skt_util. Latter declaration will be renamed to .emu_wrapper.emu_i.dynamic_region.sim_ddr_0.inst.ddrx_top_tlm_model_0.axi_app_tlm_model_0.rd_skt_util_0
+In file: sc_object_manager.cpp:161
+
+Warning: (W505) object already exists: .emu_wrapper.emu_i.dynamic_region.sim_ddr_2.inst.axi_crossbar_model.master_skt_wr_0. Latter declaration will be renamed to .emu_wrapper.emu_i.dynamic_region.sim_ddr_2.inst.axi_crossbar_model.master_skt_wr_0_0
+In file: sc_object_manager.cpp:161
+
+Warning: (W505) object already exists: .emu_wrapper.emu_i.dynamic_region.sim_ddr_2.inst.axi_crossbar_model.master_skt_rd_0. Latter declaration will be renamed to .emu_wrapper.emu_i.dynamic_region.sim_ddr_2.inst.axi_crossbar_model.master_skt_rd_0_0
+In file: sc_object_manager.cpp:161
+
+Warning: (W505) object already exists: .emu_wrapper.emu_i.dynamic_region.sim_ddr_2.inst.axi_crossbar_model.slave_skt_wr_0. Latter declaration will be renamed to .emu_wrapper.emu_i.dynamic_region.sim_ddr_2.inst.axi_crossbar_model.slave_skt_wr_0_0
+In file: sc_object_manager.cpp:161
+
+Warning: (W505) object already exists: .emu_wrapper.emu_i.dynamic_region.sim_ddr_2.inst.axi_crossbar_model.slave_skt_rd_0. Latter declaration will be renamed to .emu_wrapper.emu_i.dynamic_region.sim_ddr_2.inst.axi_crossbar_model.slave_skt_rd_0_0
+In file: sc_object_manager.cpp:161
+
+Warning: (W505) object already exists: .emu_wrapper.emu_i.dynamic_region.sim_ddr_2.inst.axi_crossbar_model.slave_skt_wr_1. Latter declaration will be renamed to .emu_wrapper.emu_i.dynamic_region.sim_ddr_2.inst.axi_crossbar_model.slave_skt_wr_1_0
+In file: sc_object_manager.cpp:161
+
+Warning: (W505) object already exists: .emu_wrapper.emu_i.dynamic_region.sim_ddr_2.inst.axi_crossbar_model.slave_skt_rd_1. Latter declaration will be renamed to .emu_wrapper.emu_i.dynamic_region.sim_ddr_2.inst.axi_crossbar_model.slave_skt_rd_1_0
+In file: sc_object_manager.cpp:161
+
+Warning: (W505) object already exists: .emu_wrapper.emu_i.dynamic_region.sim_ddr_2.inst.ddrx_top_tlm_model_0.axi_app_tlm_model_0.rd_skt_util. Latter declaration will be renamed to .emu_wrapper.emu_i.dynamic_region.sim_ddr_2.inst.ddrx_top_tlm_model_0.axi_app_tlm_model_0.rd_skt_util_0
+In file: sc_object_manager.cpp:161
+
+Warning: (W505) object already exists: .emu_wrapper.emu_i.dynamic_region.sim_ddr_3.inst.axi_crossbar_model.master_skt_wr_0. Latter declaration will be renamed to .emu_wrapper.emu_i.dynamic_region.sim_ddr_3.inst.axi_crossbar_model.master_skt_wr_0_0
+In file: sc_object_manager.cpp:161
+
+Warning: (W505) object already exists: .emu_wrapper.emu_i.dynamic_region.sim_ddr_3.inst.axi_crossbar_model.master_skt_rd_0. Latter declaration will be renamed to .emu_wrapper.emu_i.dynamic_region.sim_ddr_3.inst.axi_crossbar_model.master_skt_rd_0_0
+In file: sc_object_manager.cpp:161
+
+Warning: (W505) object already exists: .emu_wrapper.emu_i.dynamic_region.sim_ddr_3.inst.axi_crossbar_model.slave_skt_wr_0. Latter declaration will be renamed to .emu_wrapper.emu_i.dynamic_region.sim_ddr_3.inst.axi_crossbar_model.slave_skt_wr_0_0
+In file: sc_object_manager.cpp:161
+
+Warning: (W505) object already exists: .emu_wrapper.emu_i.dynamic_region.sim_ddr_3.inst.axi_crossbar_model.slave_skt_rd_0. Latter declaration will be renamed to .emu_wrapper.emu_i.dynamic_region.sim_ddr_3.inst.axi_crossbar_model.slave_skt_rd_0_0
+In file: sc_object_manager.cpp:161
+
+Warning: (W505) object already exists: .emu_wrapper.emu_i.dynamic_region.sim_ddr_3.inst.axi_crossbar_model.slave_skt_wr_1. Latter declaration will be renamed to .emu_wrapper.emu_i.dynamic_region.sim_ddr_3.inst.axi_crossbar_model.slave_skt_wr_1_0
+In file: sc_object_manager.cpp:161
+
+Warning: (W505) object already exists: .emu_wrapper.emu_i.dynamic_region.sim_ddr_3.inst.axi_crossbar_model.slave_skt_rd_1. Latter declaration will be renamed to .emu_wrapper.emu_i.dynamic_region.sim_ddr_3.inst.axi_crossbar_model.slave_skt_rd_1_0
+In file: sc_object_manager.cpp:161
+
+Warning: (W505) object already exists: .emu_wrapper.emu_i.dynamic_region.sim_ddr_3.inst.ddrx_top_tlm_model_0.axi_app_tlm_model_0.rd_skt_util. Latter declaration will be renamed to .emu_wrapper.emu_i.dynamic_region.sim_ddr_3.inst.ddrx_top_tlm_model_0.axi_app_tlm_model_0.rd_skt_util_0
+In file: sc_object_manager.cpp:161
+
+Warning: (W505) object already exists: .emu_wrapper.emu_i.static_region.sim_copy_kernel_0.inst.kdma.m_axi_rd_skt. Latter declaration will be renamed to .emu_wrapper.emu_i.static_region.sim_copy_kernel_0.inst.kdma.m_axi_rd_skt_0
+In file: sc_object_manager.cpp:161
+
+Warning: (W505) object already exists: .emu_wrapper.emu_i.static_region.sim_copy_kernel_0.inst.kdma.m_axi_wr_skt. Latter declaration will be renamed to .emu_wrapper.emu_i.static_region.sim_copy_kernel_0.inst.kdma.m_axi_wr_skt_0
+In file: sc_object_manager.cpp:161
+
+Warning: (W505) object already exists: .emu_wrapper.emu_i.static_region.sim_copy_kernel_1.inst.kdma.m_axi_rd_skt. Latter declaration will be renamed to .emu_wrapper.emu_i.static_region.sim_copy_kernel_1.inst.kdma.m_axi_rd_skt_0
+In file: sc_object_manager.cpp:161
+
+Warning: (W505) object already exists: .emu_wrapper.emu_i.static_region.sim_copy_kernel_1.inst.kdma.m_axi_wr_skt. Latter declaration will be renamed to .emu_wrapper.emu_i.static_region.sim_copy_kernel_1.inst.kdma.m_axi_wr_skt_0
+In file: sc_object_manager.cpp:161
+
+Warning: (W505) object already exists: .emu_wrapper.emu_i.static_region.sim_copy_kernel_2.inst.kdma.m_axi_rd_skt. Latter declaration will be renamed to .emu_wrapper.emu_i.static_region.sim_copy_kernel_2.inst.kdma.m_axi_rd_skt_0
+In file: sc_object_manager.cpp:161
+
+Warning: (W505) object already exists: .emu_wrapper.emu_i.static_region.sim_copy_kernel_2.inst.kdma.m_axi_wr_skt. Latter declaration will be renamed to .emu_wrapper.emu_i.static_region.sim_copy_kernel_2.inst.kdma.m_axi_wr_skt_0
+In file: sc_object_manager.cpp:161
+
+Warning: (W505) object already exists: .emu_wrapper.emu_i.static_region.sim_copy_kernel_3.inst.kdma.m_axi_rd_skt. Latter declaration will be renamed to .emu_wrapper.emu_i.static_region.sim_copy_kernel_3.inst.kdma.m_axi_rd_skt_0
+In file: sc_object_manager.cpp:161
+
+Warning: (W505) object already exists: .emu_wrapper.emu_i.static_region.sim_copy_kernel_3.inst.kdma.m_axi_wr_skt. Latter declaration will be renamed to .emu_wrapper.emu_i.static_region.sim_copy_kernel_3.inst.kdma.m_axi_wr_skt_0
+In file: sc_object_manager.cpp:161
+
+Warning: (W505) object already exists: .emu_wrapper.emu_i.static_region.sim_ddr_1.inst.axi_crossbar_model.master_skt_wr_0. Latter declaration will be renamed to .emu_wrapper.emu_i.static_region.sim_ddr_1.inst.axi_crossbar_model.master_skt_wr_0_0
+In file: sc_object_manager.cpp:161
+
+Warning: (W505) object already exists: .emu_wrapper.emu_i.static_region.sim_ddr_1.inst.axi_crossbar_model.master_skt_rd_0. Latter declaration will be renamed to .emu_wrapper.emu_i.static_region.sim_ddr_1.inst.axi_crossbar_model.master_skt_rd_0_0
+In file: sc_object_manager.cpp:161
+
+Warning: (W505) object already exists: .emu_wrapper.emu_i.static_region.sim_ddr_1.inst.axi_crossbar_model.slave_skt_wr_0. Latter declaration will be renamed to .emu_wrapper.emu_i.static_region.sim_ddr_1.inst.axi_crossbar_model.slave_skt_wr_0_0
+In file: sc_object_manager.cpp:161
+
+Warning: (W505) object already exists: .emu_wrapper.emu_i.static_region.sim_ddr_1.inst.axi_crossbar_model.slave_skt_rd_0. Latter declaration will be renamed to .emu_wrapper.emu_i.static_region.sim_ddr_1.inst.axi_crossbar_model.slave_skt_rd_0_0
+In file: sc_object_manager.cpp:161
+
+Warning: (W505) object already exists: .emu_wrapper.emu_i.static_region.sim_ddr_1.inst.axi_crossbar_model.slave_skt_wr_1. Latter declaration will be renamed to .emu_wrapper.emu_i.static_region.sim_ddr_1.inst.axi_crossbar_model.slave_skt_wr_1_0
+In file: sc_object_manager.cpp:161
+
+Warning: (W505) object already exists: .emu_wrapper.emu_i.static_region.sim_ddr_1.inst.axi_crossbar_model.slave_skt_rd_1. Latter declaration will be renamed to .emu_wrapper.emu_i.static_region.sim_ddr_1.inst.axi_crossbar_model.slave_skt_rd_1_0
+In file: sc_object_manager.cpp:161
+
+Warning: (W505) object already exists: .emu_wrapper.emu_i.static_region.sim_ddr_1.inst.ddrx_top_tlm_model_0.axi_app_tlm_model_0.rd_skt_util. Latter declaration will be renamed to .emu_wrapper.emu_i.static_region.sim_ddr_1.inst.ddrx_top_tlm_model_0.axi_app_tlm_model_0.rd_skt_util_0
+In file: sc_object_manager.cpp:161
+
+Info: (I804) /IEEE_Std_1666/deprecated: sc_sensitive_pos is deprecated use sc_sensitive << with pos() instead
+INFO: [Wavedata 42-565] Reading protoinst file protoinst_files/bd_d216.protoinst
+WARNING: [Wavedata 42-558] Couldn't load one or more protocol instances from protoinst file protoinst_files/bd_d216.protoinst for the following reason(s):
+There are no instances of module "bd_d216" in the design.
+
+INFO: [Wavedata 42-565] Reading protoinst file protoinst_files/pfm_dynamic.protoinst
+INFO: [Wavedata 42-564]   Found protocol instance at /emu_wrapper/emu_i/dynamic_region//System_DPA/S00_AXI
+INFO: [Wavedata 42-564]   Found protocol instance at /emu_wrapper/emu_i/dynamic_region//System_DPA/S_AXIMM
+INFO: [Wavedata 42-564]   Found protocol instance at /emu_wrapper/emu_i/dynamic_region//System_DPA/dpa_ctrl_interconnect/M00_AXI
+INFO: [Wavedata 42-564]   Found protocol instance at /emu_wrapper/emu_i/dynamic_region//System_DPA/dpa_ctrl_interconnect/M01_AXI
+INFO: [Wavedata 42-564]   Found protocol instance at /emu_wrapper/emu_i/dynamic_region//System_DPA/dpa_ctrl_interconnect/M02_AXI
+INFO: [Wavedata 42-564]   Found protocol instance at /emu_wrapper/emu_i/dynamic_region//System_DPA/dpa_ctrl_interconnect/M03_AXI
+INFO: [Wavedata 42-564]   Found protocol instance at /emu_wrapper/emu_i/dynamic_region//System_DPA/dpa_ctrl_interconnect/M04_AXI
+INFO: [Wavedata 42-564]   Found protocol instance at /emu_wrapper/emu_i/dynamic_region//System_DPA/dpa_ctrl_interconnect/S00_AXI
+INFO: [Wavedata 42-564]   Found protocol instance at /emu_wrapper/emu_i/dynamic_region//System_DPA/dpa_ctrl_interconnect/m00_couplers/M_AXI
+INFO: [Wavedata 42-564]   Found protocol instance at /emu_wrapper/emu_i/dynamic_region//System_DPA/dpa_ctrl_interconnect/m00_couplers/S_AXI
+INFO: [Wavedata 42-564]   Found protocol instance at /emu_wrapper/emu_i/dynamic_region//System_DPA/dpa_ctrl_interconnect/m00_couplers/auto_cc/M_AXI
+INFO: [Wavedata 42-564]   Found protocol instance at /emu_wrapper/emu_i/dynamic_region//System_DPA/dpa_ctrl_interconnect/m00_couplers/auto_cc/S_AXI
+INFO: [Wavedata 42-564]   Found protocol instance at /emu_wrapper/emu_i/dynamic_region//System_DPA/dpa_ctrl_interconnect/m00_couplers/m00_regslice/M_AXI
+INFO: [Wavedata 42-564]   Found protocol instance at /emu_wrapper/emu_i/dynamic_region//System_DPA/dpa_ctrl_interconnect/m00_couplers/m00_regslice/S_AXI
+INFO: [Wavedata 42-564]   Found protocol instance at /emu_wrapper/emu_i/dynamic_region//System_DPA/dpa_ctrl_interconnect/m01_couplers/M_AXI
+INFO: [Wavedata 42-564]   Found protocol instance at /emu_wrapper/emu_i/dynamic_region//System_DPA/dpa_ctrl_interconnect/m01_couplers/S_AXI
+INFO: [Wavedata 42-564]   Found protocol instance at /emu_wrapper/emu_i/dynamic_region//System_DPA/dpa_ctrl_interconnect/m01_couplers/auto_cc/M_AXI
+INFO: [Wavedata 42-564]   Found protocol instance at /emu_wrapper/emu_i/dynamic_region//System_DPA/dpa_ctrl_interconnect/m01_couplers/auto_cc/S_AXI
+INFO: [Wavedata 42-564]   Found protocol instance at /emu_wrapper/emu_i/dynamic_region//System_DPA/dpa_ctrl_interconnect/m01_couplers/m01_regslice/M_AXI
+INFO: [Wavedata 42-564]   Found protocol instance at /emu_wrapper/emu_i/dynamic_region//System_DPA/dpa_ctrl_interconnect/m01_couplers/m01_regslice/S_AXI
+INFO: [Wavedata 42-564]   Found protocol instance at /emu_wrapper/emu_i/dynamic_region//System_DPA/dpa_ctrl_interconnect/m02_couplers/M_AXI
+INFO: [Wavedata 42-564]   Found protocol instance at /emu_wrapper/emu_i/dynamic_region//System_DPA/dpa_ctrl_interconnect/m02_couplers/S_AXI
+INFO: [Wavedata 42-564]   Found protocol instance at /emu_wrapper/emu_i/dynamic_region//System_DPA/dpa_ctrl_interconnect/m02_couplers/auto_cc/M_AXI
+INFO: [Wavedata 42-564]   Found protocol instance at /emu_wrapper/emu_i/dynamic_region//System_DPA/dpa_ctrl_interconnect/m02_couplers/auto_cc/S_AXI
+INFO: [Wavedata 42-564]   Found protocol instance at /emu_wrapper/emu_i/dynamic_region//System_DPA/dpa_ctrl_interconnect/m02_couplers/m02_regslice/M_AXI
+INFO: [Wavedata 42-564]   Found protocol instance at /emu_wrapper/emu_i/dynamic_region//System_DPA/dpa_ctrl_interconnect/m02_couplers/m02_regslice/S_AXI
+INFO: [Wavedata 42-564]   Found protocol instance at /emu_wrapper/emu_i/dynamic_region//System_DPA/dpa_ctrl_interconnect/m03_couplers/M_AXI
+INFO: [Wavedata 42-564]   Found protocol instance at /emu_wrapper/emu_i/dynamic_region//System_DPA/dpa_ctrl_interconnect/m03_couplers/S_AXI
+INFO: [Wavedata 42-564]   Found protocol instance at /emu_wrapper/emu_i/dynamic_region//System_DPA/dpa_ctrl_interconnect/m03_couplers/auto_cc/M_AXI
+INFO: [Wavedata 42-564]   Found protocol instance at /emu_wrapper/emu_i/dynamic_region//System_DPA/dpa_ctrl_interconnect/m03_couplers/auto_cc/S_AXI
+INFO: [Wavedata 42-564]   Found protocol instance at /emu_wrapper/emu_i/dynamic_region//System_DPA/dpa_ctrl_interconnect/m03_couplers/m03_regslice/M_AXI
+INFO: [Wavedata 42-564]   Found protocol instance at /emu_wrapper/emu_i/dynamic_region//System_DPA/dpa_ctrl_interconnect/m03_couplers/m03_regslice/S_AXI
+INFO: [Wavedata 42-564]   Found protocol instance at /emu_wrapper/emu_i/dynamic_region//System_DPA/dpa_ctrl_interconnect/m04_couplers/M_AXI
+INFO: [Wavedata 42-564]   Found protocol instance at /emu_wrapper/emu_i/dynamic_region//System_DPA/dpa_ctrl_interconnect/m04_couplers/S_AXI
+INFO: [Wavedata 42-564]   Found protocol instance at /emu_wrapper/emu_i/dynamic_region//System_DPA/dpa_ctrl_interconnect/m04_couplers/auto_cc/M_AXI
+INFO: [Wavedata 42-564]   Found protocol instance at /emu_wrapper/emu_i/dynamic_region//System_DPA/dpa_ctrl_interconnect/m04_couplers/auto_cc/S_AXI
+INFO: [Wavedata 42-564]   Found protocol instance at /emu_wrapper/emu_i/dynamic_region//System_DPA/dpa_ctrl_interconnect/m04_couplers/m04_regslice/M_AXI
+INFO: [Wavedata 42-564]   Found protocol instance at /emu_wrapper/emu_i/dynamic_region//System_DPA/dpa_ctrl_interconnect/m04_couplers/m04_regslice/S_AXI
+INFO: [Wavedata 42-564]   Found protocol instance at /emu_wrapper/emu_i/dynamic_region//System_DPA/dpa_ctrl_interconnect/s00_couplers/M_AXI
+INFO: [Wavedata 42-564]   Found protocol instance at /emu_wrapper/emu_i/dynamic_region//System_DPA/dpa_ctrl_interconnect/s00_couplers/S_AXI
+INFO: [Wavedata 42-564]   Found protocol instance at /emu_wrapper/emu_i/dynamic_region//System_DPA/dpa_ctrl_interconnect/s00_couplers/s00_regslice/M_AXI
+INFO: [Wavedata 42-564]   Found protocol instance at /emu_wrapper/emu_i/dynamic_region//System_DPA/dpa_ctrl_interconnect/s00_couplers/s00_regslice/S_AXI
+INFO: [Wavedata 42-564]   Found protocol instance at /emu_wrapper/emu_i/dynamic_region//System_DPA/dpa_ctrl_interconnect/xbar/M00_AXI
+INFO: [Wavedata 42-564]   Found protocol instance at /emu_wrapper/emu_i/dynamic_region//System_DPA/dpa_ctrl_interconnect/xbar/M01_AXI
+INFO: [Wavedata 42-564]   Found protocol instance at /emu_wrapper/emu_i/dynamic_region//System_DPA/dpa_ctrl_interconnect/xbar/M02_AXI
+INFO: [Wavedata 42-564]   Found protocol instance at /emu_wrapper/emu_i/dynamic_region//System_DPA/dpa_ctrl_interconnect/xbar/M03_AXI
+INFO: [Wavedata 42-564]   Found protocol instance at /emu_wrapper/emu_i/dynamic_region//System_DPA/dpa_ctrl_interconnect/xbar/M04_AXI
+INFO: [Wavedata 42-564]   Found protocol instance at /emu_wrapper/emu_i/dynamic_region//System_DPA/dpa_ctrl_interconnect/xbar/S00_AXI
+INFO: [Wavedata 42-564]   Found protocol instance at /emu_wrapper/emu_i/dynamic_region//System_DPA/dpa_hub/S_AXIFIFO
+INFO: [Wavedata 42-564]   Found protocol instance at /emu_wrapper/emu_i/dynamic_region//System_DPA/dpa_hub/S_AXIHUB
+INFO: [Wavedata 42-564]   Found protocol instance at /emu_wrapper/emu_i/dynamic_region//System_DPA/dpa_hub/S_AXIMM
+INFO: [Wavedata 42-564]   Found protocol instance at /emu_wrapper/emu_i/dynamic_region//System_DPA/dpa_hub/TRACE_IN_0
+INFO: [Wavedata 42-564]   Found protocol instance at /emu_wrapper/emu_i/dynamic_region//System_DPA/dpa_hub/TRACE_IN_1
+INFO: [Wavedata 42-564]   Found protocol instance at /emu_wrapper/emu_i/dynamic_region//System_DPA/dpa_hub/TRACE_IN_2
+INFO: [Wavedata 42-564]   Found protocol instance at /emu_wrapper/emu_i/dynamic_region//System_DPA/dpa_hub/TRACE_IN_3
+INFO: [Wavedata 42-564]   Found protocol instance at /emu_wrapper/emu_i/dynamic_region//System_DPA/dpa_hub/TRACE_IN_4
+INFO: [Wavedata 42-564]   Found protocol instance at /emu_wrapper/emu_i/dynamic_region//System_DPA/dpa_mon0/S_AXI
+INFO: [Wavedata 42-564]   Found protocol instance at /emu_wrapper/emu_i/dynamic_region//System_DPA/dpa_mon0/TRACE_OUT
+INFO: [Wavedata 42-564]   Found protocol instance at /emu_wrapper/emu_i/dynamic_region//System_DPA/dpa_mon1/S_AXI
+INFO: [Wavedata 42-564]   Found protocol instance at /emu_wrapper/emu_i/dynamic_region//System_DPA/dpa_mon1/TRACE_OUT_0
+INFO: [Wavedata 42-564]   Found protocol instance at /emu_wrapper/emu_i/dynamic_region//System_DPA/dpa_mon1/TRACE_OUT_1
+INFO: [Wavedata 42-564]   Found protocol instance at /emu_wrapper/emu_i/dynamic_region//System_DPA/dpa_mon2/S_AXI
+INFO: [Wavedata 42-564]   Found protocol instance at /emu_wrapper/emu_i/dynamic_region//System_DPA/dpa_mon2/TRACE_OUT_0
+INFO: [Wavedata 42-564]   Found protocol instance at /emu_wrapper/emu_i/dynamic_region//System_DPA/dpa_mon2/TRACE_OUT_1
+INFO: [Wavedata 42-564]   Found protocol instance at /emu_wrapper/emu_i/dynamic_region//aes256CbcDecryptKernel_1/m_axi_gmem0_0
+INFO: [Wavedata 42-564]   Found protocol instance at /emu_wrapper/emu_i/dynamic_region//aes256CbcDecryptKernel_1/m_axi_gmem0_1
+INFO: [Wavedata 42-564]   Found protocol instance at /emu_wrapper/emu_i/dynamic_region//aes256CbcDecryptKernel_1/s_axi_control
+INFO: [Wavedata 42-564]   Found protocol instance at /emu_wrapper/emu_i/dynamic_region//memory_subsystem/M00_AXI
+INFO: [Wavedata 42-564]   Found protocol instance at /emu_wrapper/emu_i/dynamic_region//memory_subsystem/M01_AXI
+INFO: [Wavedata 42-564]   Found protocol instance at /emu_wrapper/emu_i/dynamic_region//memory_subsystem/M02_AXI
+INFO: [Wavedata 42-564]   Found protocol instance at /emu_wrapper/emu_i/dynamic_region//memory_subsystem/M03_AXI
+INFO: [Wavedata 42-564]   Found protocol instance at /emu_wrapper/emu_i/dynamic_region//memory_subsystem/S00_AXI
+INFO: [Wavedata 42-564]   Found protocol instance at /emu_wrapper/emu_i/dynamic_region//memory_subsystem/S01_AXI
+INFO: [Wavedata 42-564]   Found protocol instance at /emu_wrapper/emu_i/dynamic_region//memory_subsystem/S02_AXI
+INFO: [Wavedata 42-564]   Found protocol instance at /emu_wrapper/emu_i/dynamic_region//memory_subsystem/S03_AXI
+INFO: [Wavedata 42-564]   Found protocol instance at /emu_wrapper/emu_i/dynamic_region//memory_subsystem/S04_AXI
+INFO: [Wavedata 42-564]   Found protocol instance at /emu_wrapper/emu_i/dynamic_region//memory_subsystem/S05_AXI
+INFO: [Wavedata 42-564]   Found protocol instance at /emu_wrapper/emu_i/dynamic_region//sim_ddr_0/C0_DDR_SAXI
+INFO: [Wavedata 42-564]   Found protocol instance at /emu_wrapper/emu_i/dynamic_region//sim_ddr_2/C0_DDR_SAXI
+INFO: [Wavedata 42-564]   Found protocol instance at /emu_wrapper/emu_i/dynamic_region//sim_ddr_3/C0_DDR_SAXI
+INFO: [Wavedata 42-564]   Found protocol instance at /emu_wrapper/emu_i/dynamic_region//slr0/M00_AXI
+INFO: [Wavedata 42-564]   Found protocol instance at /emu_wrapper/emu_i/dynamic_region//slr0/M00_AXI1
+INFO: [Wavedata 42-564]   Found protocol instance at /emu_wrapper/emu_i/dynamic_region//slr0/M01_AXI
+INFO: [Wavedata 42-564]   Found protocol instance at /emu_wrapper/emu_i/dynamic_region//slr0/S00_AXI
+INFO: [Wavedata 42-564]   Found protocol instance at /emu_wrapper/emu_i/dynamic_region//slr0/S00_AXI1
+INFO: [Wavedata 42-564]   Found protocol instance at /emu_wrapper/emu_i/dynamic_region//slr0/icn_pass_0/M00_AXI
+INFO: [Wavedata 42-564]   Found protocol instance at /emu_wrapper/emu_i/dynamic_region//slr0/icn_pass_0/S00_AXI
+INFO: [Wavedata 42-564]   Found protocol instance at /emu_wrapper/emu_i/dynamic_region//slr0/interconnect_axilite_user_0/M00_AXI
+INFO: [Wavedata 42-564]   Found protocol instance at /emu_wrapper/emu_i/dynamic_region//slr0/interconnect_axilite_user_0/M01_AXI
+INFO: [Wavedata 42-564]   Found protocol instance at /emu_wrapper/emu_i/dynamic_region//slr0/interconnect_axilite_user_0/S00_AXI
+INFO: [Wavedata 42-564]   Found protocol instance at /emu_wrapper/emu_i/dynamic_region//slr0/interconnect_axilite_user_0/m00_couplers/M_AXI
+INFO: [Wavedata 42-564]   Found protocol instance at /emu_wrapper/emu_i/dynamic_region//slr0/interconnect_axilite_user_0/m00_couplers/S_AXI
+INFO: [Wavedata 42-564]   Found protocol instance at /emu_wrapper/emu_i/dynamic_region//slr0/interconnect_axilite_user_0/m01_couplers/M_AXI
+INFO: [Wavedata 42-564]   Found protocol instance at /emu_wrapper/emu_i/dynamic_region//slr0/interconnect_axilite_user_0/m01_couplers/S_AXI
+INFO: [Wavedata 42-564]   Found protocol instance at /emu_wrapper/emu_i/dynamic_region//slr0/interconnect_axilite_user_0/m01_couplers/auto_cc/M_AXI
+INFO: [Wavedata 42-564]   Found protocol instance at /emu_wrapper/emu_i/dynamic_region//slr0/interconnect_axilite_user_0/m01_couplers/auto_cc/S_AXI
+INFO: [Wavedata 42-564]   Found protocol instance at /emu_wrapper/emu_i/dynamic_region//slr0/interconnect_axilite_user_0/m01_couplers/m01_regslice/M_AXI
+INFO: [Wavedata 42-564]   Found protocol instance at /emu_wrapper/emu_i/dynamic_region//slr0/interconnect_axilite_user_0/m01_couplers/m01_regslice/S_AXI
+INFO: [Wavedata 42-564]   Found protocol instance at /emu_wrapper/emu_i/dynamic_region//slr0/interconnect_axilite_user_0/s00_couplers/M_AXI
+INFO: [Wavedata 42-564]   Found protocol instance at /emu_wrapper/emu_i/dynamic_region//slr0/interconnect_axilite_user_0/s00_couplers/S_AXI
+INFO: [Common 17-14] Message 'Wavedata 42-564' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Wavedata 42-565] Reading protoinst file protoinst_files/emu.protoinst
+INFO: [Wavedata 42-565] Reading protoinst file ./dr_behav.protoinst
+Time resolution is 1 ps
+source emu_wrapper.tcl
+## if { [info exists ::env(USER_PRE_SIM_SCRIPT) ] } {
+##   source $::env(USER_PRE_SIM_SCRIPT)
+## }
+## if { [info exists ::env(VITIS_WAVEFORM) ] } {
+##   if {[file exists $::env(VITIS_WAVEFORM)] == 1} {
+##     open_wave_config $::env(VITIS_WAVEFORM)
+##   }
+## }
+## if { [file exists preprocess_profile.tcl] } {
+##   source -notrace preprocess_profile.tcl
+## }
+## puts "We are running Simulator for infinite time. Added some default signals in the waveform. You can pause simulation and add signals and then resume the simulaion again."
+We are running Simulator for infinite time. Added some default signals in the waveform. You can pause simulation and add signals and then resume the simulaion again.
+## puts ""
+
+## puts "Stopping at breakpoint in simulator also stops the host code execution"
+Stopping at breakpoint in simulator also stops the host code execution
+## puts ""
+
+## if { [info exists ::env(VITIS_LAUNCH_WAVEFORM_GUI) ] } {
+##   run 1ns
+## } else {
+##   run all
+## }
+Warning: [XPM_MEMORY 30-15] MEMORY_TYPE (2) and MEMORY_PRIMITIVE (1) together specify a true dual port distributed RAM, which will be mapped to a dual port RAM structure using port A and B read interfaces but a single port A write interface, leaving the port B write interface unused. emu_wrapper.emu_i.static_region.embedded_schedular.embedded_scheduler_hw_0.inst.cu_addr_lut.xpm_memory_base_inst.config_drc
+Time: 1 ps  Iteration: 0  Process: /emu_wrapper/emu_i/static_region/embedded_schedular/embedded_scheduler_hw_0/inst/cu_addr_lut/xpm_memory_base_inst/Initial294_5006  Scope: emu_wrapper.emu_i.static_region.embedded_schedular.embedded_scheduler_hw_0.inst.cu_addr_lut.xpm_memory_base_inst.config_drc  File: /wrk/2020.1/nightly/2020_05_27_2902540/packages/customer/vivado/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv Line: 527
+$stop called at time : 45417415 ps : File "/home/centos/workspace/aes_decryption_benchmark/Emulation-HW/aes256CbcDecryptKernel.build/link/vivado/vpl/prj/prj.ip_user_files/bd/emu/sim/emu.v" Line 5280
+run: Time (s): cpu = 00:00:14 ; elapsed = 00:00:22 . Memory (MB): peak = 2568.395 ; gain = 128.000 ; free physical = 93872 ; free virtual = 135600
+## if { [file exists profile.tcl] } {
+##   source -notrace profile.tcl
+## }
+Waiting for protocol analyzers to complete...
+Done!
+## if { [info exists ::env(VITIS_LAUNCH_WAVEFORM_BATCH) ] } {
+##   if { [info exists ::env(USER_POST_SIM_SCRIPT) ] } {
+##     source $::env(USER_POST_SIM_SCRIPT)
+##   }
+##   quit
+## }
+INFO: [Common 17-206] Exiting xsim at Thu Jan 14 21:47:33 2021...

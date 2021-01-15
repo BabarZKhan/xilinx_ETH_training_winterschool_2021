@@ -1,0 +1,1083 @@
+<ENTRY>
+{
+ "thisFile": "/home/centos/workspace/aes_decryption_benchmark/Emulation-HW/aes256CbcDecryptKernel.xclbin.link_summary",
+ "connectId": "",
+ "serverToken": "",
+ "timestamp": "0"
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Thu Jan 14 21:37:59 2021",
+ "timestampMillis": "1610660279011",
+ "buildStep": {
+  "cmdId": "698eccd5-f023-4d4f-b797-78ca12daf62c",
+  "name": "v++",
+  "logFile": "/home/centos/workspace/aes_decryption_benchmark/Emulation-HW/aes256CbcDecryptKernel.build/link/link.steps.log",
+  "commandLine": "/opt/Xilinx/Vitis/2020.1/bin/unwrapped/lnx64.o/v++ --xp param:compiler.lockFlowCritSlackThreshold=0 --xp vivado_param:hd.routingContainmentAreaExpansion=true --xp vivado_param:hd.supportClockNetCrossDiffReconfigurablePartitions=1 --xp vivado_param:bitstream.enablePR=4123 --xp vivado_param:physynth.ultraRAMOptOutput=false --xp vivado_prop:run.__KERNEL__.{STEPS.SYNTH_DESIGN.ARGS.MAX_URAM_CASCADE_HEIGHT}={1} --xp vivado_param:synth.elaboration.rodinMoreOptions={rt::set_parameter disableOregPackingUram true}  --xp \"vivado_prop:run.__KERNEL__.{STEPS.SYNTH_DESIGN.ARGS.MORE OPTIONS}={-directive sdx_optimization_effort_high}\" --xp \"misc:report=type report_timing_summary name impl_report_timing_summary_route_design_summary steps {route_design} runs {impl_1} options {-max_paths 10}\" --xp \"misc:report=type report_timing_summary name impl_report_timing_summary_post_route_phys_opt_design_summary steps {post_route_phys_opt_design} runs {impl_1} options {-max_paths 10}\" --target hw_emu --link --config common-config.cfg --config aes256CbcDecryptKernel-link.cfg -oaes256CbcDecryptKernel.xclbin aes256CbcDecryptKernel.build/aes256CbcDecryptKernel.xo ",
+  "args": [
+   "--xp",
+   "param:compiler.lockFlowCritSlackThreshold=0",
+   "--xp",
+   "vivado_param:hd.routingContainmentAreaExpansion=true",
+   "--xp",
+   "vivado_param:hd.supportClockNetCrossDiffReconfigurablePartitions=1",
+   "--xp",
+   "vivado_param:bitstream.enablePR=4123",
+   "--xp",
+   "vivado_param:physynth.ultraRAMOptOutput=false",
+   "--xp",
+   "vivado_prop:run.__KERNEL__.{STEPS.SYNTH_DESIGN.ARGS.MAX_URAM_CASCADE_HEIGHT}={1}",
+   "--xp",
+   "vivado_param:synth.elaboration.rodinMoreOptions={rt::set_parameter disableOregPackingUram true}",
+   "--target",
+   "hw_emu",
+   "--link",
+   "--config",
+   "common-config.cfg",
+   "--config",
+   "aes256CbcDecryptKernel-link.cfg",
+   "-oaes256CbcDecryptKernel.xclbin",
+   "aes256CbcDecryptKernel.build/aes256CbcDecryptKernel.xo"
+  ],
+  "iniFiles": [
+   {
+    "path": "/home/centos/workspace/aes_decryption_benchmark/Emulation-HW/common-config.cfg",
+    "content": "platform=/home/centos/src/project_data/aws-fpga/Vitis/aws_platform/xilinx_aws-vu9p-f1_shell-v04261818_201920_2/xilinx_aws-vu9p-f1_shell-v04261818_201920_2.xpfm\nsave-temps=1\n"
+   },
+   {
+    "path": "/home/centos/workspace/aes_decryption_benchmark/Emulation-HW/aes256CbcDecryptKernel-link.cfg",
+    "content": "profile_kernel=exec:aes256CbcDecryptKernel:aes256CbcDecryptKernel_1:all\nprofile_kernel=data:aes256CbcDecryptKernel:aes256CbcDecryptKernel_1:inputData:all\nprofile_kernel=data:aes256CbcDecryptKernel:aes256CbcDecryptKernel_1:outputData:all\ndebug=1\nmessageDb=aes256CbcDecryptKernel.mdb\ntemp_dir=aes256CbcDecryptKernel.build\nreport_dir=aes256CbcDecryptKernel.build/reports\nlog_dir=aes256CbcDecryptKernel.build/logs\nremote_ip_cache=/home/centos/workspace/ip_cache\n\n[advanced]\nmisc=solution_name=link\n\n[connectivity]\nnk=aes256CbcDecryptKernel:1:aes256CbcDecryptKernel_1\nsp=aes256CbcDecryptKernel_1.inputData:DDR[0]\nsp=aes256CbcDecryptKernel_1.outputData:DDR[1]\nslr=aes256CbcDecryptKernel_1:SLR0\n"
+   }
+  ],
+  "cwd": "/home/centos/workspace/aes_decryption_benchmark/Emulation-HW"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Jan 14 21:37:59 2021",
+ "timestampMillis": "1610660279012",
+ "status": {
+  "cmdId": "698eccd5-f023-4d4f-b797-78ca12daf62c",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_FlowMetaData",
+ "dateTimestamp": "Thu Jan 14 21:38:13 2021",
+ "timestampMillis": "1610660293801",
+ "buildSummary": {
+  "hardwarePlatform": "xilinx_aws-vu9p-f1_shell-v04261818_201920_2.xpfm",
+  "hardwareDsa": "xilinx_aws-vu9p-f1_shell-v04261818_201920_2.xsa",
+  "platformDirectory": "/home/centos/src/project_data/aws-fpga/Vitis/aws_platform/xilinx_aws-vu9p-f1_shell-v04261818_201920_2",
+  "runtime": "OpenCL",
+  "systemConfig": "Linux",
+  "flow": "BF_LINK",
+  "target": "TT_HW_EMU",
+  "binaryContainer": {
+   "base": {
+    "type": "BT_UKNOWN",
+    "name": "aes256CbcDecryptKernel",
+    "file": "/home/centos/workspace/aes_decryption_benchmark/Emulation-HW/aes256CbcDecryptKernel.xclbin",
+    "reports": []
+   },
+   "kernels": []
+  },
+  "kernels": [
+   {
+    "base": {
+     "type": "KERNEL",
+     "name": "aes256CbcDecryptKernel",
+     "file": "/home/centos/workspace/aes_decryption_benchmark/Emulation-HW/aes256CbcDecryptKernel.build/aes256CbcDecryptKernel.xo",
+     "reports": []
+    },
+    "sources": [
+     "/home/centos/workspace/aes_decryption_benchmark/Emulation-HW/aes256CbcDecryptKernel.build/link/int/xo/aes256CbcDecryptKernel/aes256CbcDecryptKernel/cpu_sources/aes256CbcDecryptKernel.cpp"
+    ],
+    "psSources": [],
+    "cuNames": [
+     "aes256CbcDecryptKernel_1"
+    ],
+    "type": "HLS"
+   }
+  ],
+  "toolVersion": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Thu Jan 14 21:38:13 2021",
+ "timestampMillis": "1610660293965",
+ "buildStep": {
+  "cmdId": "a75151de-b379-4ba6-9d6a-818a12413c35",
+  "name": "system_link",
+  "logFile": "",
+  "commandLine": "system_link --xo /home/centos/workspace/aes_decryption_benchmark/Emulation-HW/aes256CbcDecryptKernel.build/aes256CbcDecryptKernel.xo -keep --config /home/centos/workspace/aes_decryption_benchmark/Emulation-HW/aes256CbcDecryptKernel.build/link/int/syslinkConfig.ini --xpfm /home/centos/src/project_data/aws-fpga/Vitis/aws_platform/xilinx_aws-vu9p-f1_shell-v04261818_201920_2/xilinx_aws-vu9p-f1_shell-v04261818_201920_2.xpfm --target emu --output_dir /home/centos/workspace/aes_decryption_benchmark/Emulation-HW/aes256CbcDecryptKernel.build/link/int --temp_dir /home/centos/workspace/aes_decryption_benchmark/Emulation-HW/aes256CbcDecryptKernel.build/link/sys_link",
+  "args": [
+   "--xo",
+   "/home/centos/workspace/aes_decryption_benchmark/Emulation-HW/aes256CbcDecryptKernel.build/aes256CbcDecryptKernel.xo",
+   "-keep",
+   "--config",
+   "/home/centos/workspace/aes_decryption_benchmark/Emulation-HW/aes256CbcDecryptKernel.build/link/int/syslinkConfig.ini",
+   "--xpfm",
+   "/home/centos/src/project_data/aws-fpga/Vitis/aws_platform/xilinx_aws-vu9p-f1_shell-v04261818_201920_2/xilinx_aws-vu9p-f1_shell-v04261818_201920_2.xpfm",
+   "--target",
+   "emu",
+   "--output_dir",
+   "/home/centos/workspace/aes_decryption_benchmark/Emulation-HW/aes256CbcDecryptKernel.build/link/int",
+   "--temp_dir",
+   "/home/centos/workspace/aes_decryption_benchmark/Emulation-HW/aes256CbcDecryptKernel.build/link/sys_link"
+  ],
+  "iniFiles": [
+   {
+    "path": "/home/centos/workspace/aes_decryption_benchmark/Emulation-HW/aes256CbcDecryptKernel.build/link/int/syslinkConfig.ini",
+    "content": "nk=aes256CbcDecryptKernel:1:aes256CbcDecryptKernel_1\nsp=aes256CbcDecryptKernel_1.inputData:DDR[0]\nsp=aes256CbcDecryptKernel_1.outputData:DDR[1]\nslr=aes256CbcDecryptKernel_1:SLR0\n\n"
+   }
+  ],
+  "cwd": "/home/centos/workspace/aes_decryption_benchmark/Emulation-HW"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Jan 14 21:38:13 2021",
+ "timestampMillis": "1610660293966",
+ "status": {
+  "cmdId": "a75151de-b379-4ba6-9d6a-818a12413c35",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Jan 14 21:38:27 2021",
+ "timestampMillis": "1610660307636",
+ "status": {
+  "cmdId": "a75151de-b379-4ba6-9d6a-818a12413c35",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Thu Jan 14 21:38:27 2021",
+ "timestampMillis": "1610660307638",
+ "buildStep": {
+  "cmdId": "3652d361-0907-4bee-a1b8-09d5ee468a29",
+  "name": "cf2sw",
+  "logFile": "",
+  "commandLine": "cf2sw -sdsl /home/centos/workspace/aes_decryption_benchmark/Emulation-HW/aes256CbcDecryptKernel.build/link/int/sdsl.dat -rtd /home/centos/workspace/aes_decryption_benchmark/Emulation-HW/aes256CbcDecryptKernel.build/link/int/cf2sw.rtd -xclbin /home/centos/workspace/aes_decryption_benchmark/Emulation-HW/aes256CbcDecryptKernel.build/link/int/xclbin_orig.xml -o /home/centos/workspace/aes_decryption_benchmark/Emulation-HW/aes256CbcDecryptKernel.build/link/int/xclbin_orig.1.xml",
+  "args": [
+   "-sdsl",
+   "/home/centos/workspace/aes_decryption_benchmark/Emulation-HW/aes256CbcDecryptKernel.build/link/int/sdsl.dat",
+   "-rtd",
+   "/home/centos/workspace/aes_decryption_benchmark/Emulation-HW/aes256CbcDecryptKernel.build/link/int/cf2sw.rtd",
+   "-xclbin",
+   "/home/centos/workspace/aes_decryption_benchmark/Emulation-HW/aes256CbcDecryptKernel.build/link/int/xclbin_orig.xml",
+   "-o",
+   "/home/centos/workspace/aes_decryption_benchmark/Emulation-HW/aes256CbcDecryptKernel.build/link/int/xclbin_orig.1.xml"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/centos/workspace/aes_decryption_benchmark/Emulation-HW"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Jan 14 21:38:27 2021",
+ "timestampMillis": "1610660307638",
+ "status": {
+  "cmdId": "3652d361-0907-4bee-a1b8-09d5ee468a29",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Jan 14 21:38:29 2021",
+ "timestampMillis": "1610660309338",
+ "status": {
+  "cmdId": "3652d361-0907-4bee-a1b8-09d5ee468a29",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Thu Jan 14 21:38:29 2021",
+ "timestampMillis": "1610660309341",
+ "buildStep": {
+  "cmdId": "0ee33139-c868-41d2-b224-29003457e34c",
+  "name": "rtd2_system_diagram",
+  "logFile": "",
+  "commandLine": "rtd2SystemDiagram",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/home/centos/workspace/aes_decryption_benchmark/Emulation-HW"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Jan 14 21:38:29 2021",
+ "timestampMillis": "1610660309341",
+ "status": {
+  "cmdId": "0ee33139-c868-41d2-b224-29003457e34c",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Jan 14 21:38:31 2021",
+ "timestampMillis": "1610660311274",
+ "report": {
+  "path": "/home/centos/workspace/aes_decryption_benchmark/Emulation-HW/aes256CbcDecryptKernel.build/link/int/systemDiagramModel.json",
+  "name": "",
+  "fileType": "JSON",
+  "reportType": "SYSTEM_DIAGRAM"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Jan 14 21:38:31 2021",
+ "timestampMillis": "1610660311275",
+ "status": {
+  "cmdId": "0ee33139-c868-41d2-b224-29003457e34c",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Thu Jan 14 21:38:31 2021",
+ "timestampMillis": "1610660311276",
+ "buildStep": {
+  "cmdId": "8296d694-c006-4a66-bbac-0ce0297d8c5f",
+  "name": "vpl",
+  "logFile": "",
+  "commandLine": "vpl -t hw_emu -f /home/centos/src/project_data/aws-fpga/Vitis/aws_platform/xilinx_aws-vu9p-f1_shell-v04261818_201920_2/xilinx_aws-vu9p-f1_shell-v04261818_201920_2.xpfm -g --profile_kernel exec:aes256CbcDecryptKernel:aes256CbcDecryptKernel_1:all --profile_kernel data:aes256CbcDecryptKernel:aes256CbcDecryptKernel_1:inputData:all --profile_kernel data:aes256CbcDecryptKernel:aes256CbcDecryptKernel_1:outputData:all --remote_ip_cache /home/centos/workspace/ip_cache -s --output_dir /home/centos/workspace/aes_decryption_benchmark/Emulation-HW/aes256CbcDecryptKernel.build/link/int --log_dir /home/centos/workspace/aes_decryption_benchmark/Emulation-HW/aes256CbcDecryptKernel.build/logs/link --report_dir /home/centos/workspace/aes_decryption_benchmark/Emulation-HW/aes256CbcDecryptKernel.build/reports/link --config /home/centos/workspace/aes_decryption_benchmark/Emulation-HW/aes256CbcDecryptKernel.build/link/int/vplConfig.ini -k /home/centos/workspace/aes_decryption_benchmark/Emulation-HW/aes256CbcDecryptKernel.build/link/int/kernel_info.dat --webtalk_flag Vitis --temp_dir /home/centos/workspace/aes_decryption_benchmark/Emulation-HW/aes256CbcDecryptKernel.build/link --emulation_mode debug_waveform --no-info --iprepo /home/centos/workspace/aes_decryption_benchmark/Emulation-HW/aes256CbcDecryptKernel.build/link/int/xo/ip_repo/xilinx_com_hls_aes256CbcDecryptKernel_1_0 --messageDb /home/centos/workspace/aes_decryption_benchmark/Emulation-HW/aes256CbcDecryptKernel.build/link/run_link/vpl.pb /home/centos/workspace/aes_decryption_benchmark/Emulation-HW/aes256CbcDecryptKernel.build/link/int/dr.bd.tcl",
+  "args": [
+   "-t",
+   "hw_emu",
+   "-f",
+   "/home/centos/src/project_data/aws-fpga/Vitis/aws_platform/xilinx_aws-vu9p-f1_shell-v04261818_201920_2/xilinx_aws-vu9p-f1_shell-v04261818_201920_2.xpfm",
+   "-g",
+   "--profile_kernel",
+   "exec:aes256CbcDecryptKernel:aes256CbcDecryptKernel_1:all",
+   "--profile_kernel",
+   "data:aes256CbcDecryptKernel:aes256CbcDecryptKernel_1:inputData:all",
+   "--profile_kernel",
+   "data:aes256CbcDecryptKernel:aes256CbcDecryptKernel_1:outputData:all",
+   "--remote_ip_cache",
+   "/home/centos/workspace/ip_cache",
+   "-s",
+   "--output_dir",
+   "/home/centos/workspace/aes_decryption_benchmark/Emulation-HW/aes256CbcDecryptKernel.build/link/int",
+   "--log_dir",
+   "/home/centos/workspace/aes_decryption_benchmark/Emulation-HW/aes256CbcDecryptKernel.build/logs/link",
+   "--report_dir",
+   "/home/centos/workspace/aes_decryption_benchmark/Emulation-HW/aes256CbcDecryptKernel.build/reports/link",
+   "--config",
+   "/home/centos/workspace/aes_decryption_benchmark/Emulation-HW/aes256CbcDecryptKernel.build/link/int/vplConfig.ini",
+   "-k",
+   "/home/centos/workspace/aes_decryption_benchmark/Emulation-HW/aes256CbcDecryptKernel.build/link/int/kernel_info.dat",
+   "--webtalk_flag",
+   "Vitis",
+   "--temp_dir",
+   "/home/centos/workspace/aes_decryption_benchmark/Emulation-HW/aes256CbcDecryptKernel.build/link",
+   "--emulation_mode",
+   "debug_waveform",
+   "--no-info",
+   "--iprepo",
+   "/home/centos/workspace/aes_decryption_benchmark/Emulation-HW/aes256CbcDecryptKernel.build/link/int/xo/ip_repo/xilinx_com_hls_aes256CbcDecryptKernel_1_0",
+   "--messageDb",
+   "/home/centos/workspace/aes_decryption_benchmark/Emulation-HW/aes256CbcDecryptKernel.build/link/run_link/vpl.pb",
+   "/home/centos/workspace/aes_decryption_benchmark/Emulation-HW/aes256CbcDecryptKernel.build/link/int/dr.bd.tcl"
+  ],
+  "iniFiles": [
+   {
+    "path": "/home/centos/workspace/aes_decryption_benchmark/Emulation-HW/aes256CbcDecryptKernel.build/link/int/vplConfig.ini",
+    "content": "[advanced]\nparam=compiler.lockFlowCritSlackThreshold=0\nmisc=report=type report_timing_summary name impl_report_timing_summary_route_design_summary steps {route_design} runs {impl_1} options {-max_paths 10}\nmisc=report=type report_timing_summary name impl_report_timing_summary_post_route_phys_opt_design_summary steps {post_route_phys_opt_design} runs {impl_1} options {-max_paths 10}\nparam=compiler.enablePerformanceTrace=1\nmisc=solution_name=link\nparam=hw_emu.enableDebugWaveform=1\nparam=compiler.vppCurrentWorkingDir=/home/centos/workspace/aes_decryption_benchmark/Emulation-HW\nmisc=BinaryName=aes256CbcDecryptKernel\n\n[connectivity]\nnk=aes256CbcDecryptKernel:1:aes256CbcDecryptKernel_1\n\n[vivado]\nparam=hd.routingContainmentAreaExpansion=true\nparam=hd.supportClockNetCrossDiffReconfigurablePartitions=1\nparam=bitstream.enablePR=4123\nparam=physynth.ultraRAMOptOutput=false\nprop=run.__KERNEL__.{STEPS.SYNTH_DESIGN.ARGS.MAX_URAM_CASCADE_HEIGHT}={1}\nparam=synth.elaboration.rodinMoreOptions={rt::set_parameter disableOregPackingUram true}\nprop=run.__KERNEL__.{STEPS.SYNTH_DESIGN.ARGS.MORE OPTIONS}={-directive sdx_optimization_effort_high}\n\n"
+   }
+  ],
+  "cwd": "/home/centos/workspace/aes_decryption_benchmark/Emulation-HW"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Jan 14 21:38:31 2021",
+ "timestampMillis": "1610660311277",
+ "status": {
+  "cmdId": "8296d694-c006-4a66-bbac-0ce0297d8c5f",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Thu Jan 14 21:38:34 2021",
+ "timestampMillis": "1610660314013",
+ "buildStep": {
+  "cmdId": "ad37c562-f16d-4a04-bc8a-5f83a78b50a6",
+  "name": "vpl",
+  "logFile": "/home/centos/workspace/aes_decryption_benchmark/Emulation-HW/aes256CbcDecryptKernel.build/link/link.steps.log",
+  "commandLine": "/opt/Xilinx/Vitis/2020.1/bin/unwrapped/lnx64.o/vpl -t hw_emu -f /home/centos/src/project_data/aws-fpga/Vitis/aws_platform/xilinx_aws-vu9p-f1_shell-v04261818_201920_2/xilinx_aws-vu9p-f1_shell-v04261818_201920_2.xpfm -g --profile_kernel exec:aes256CbcDecryptKernel:aes256CbcDecryptKernel_1:all --profile_kernel data:aes256CbcDecryptKernel:aes256CbcDecryptKernel_1:inputData:all --profile_kernel data:aes256CbcDecryptKernel:aes256CbcDecryptKernel_1:outputData:all --remote_ip_cache /home/centos/workspace/ip_cache -s --output_dir /home/centos/workspace/aes_decryption_benchmark/Emulation-HW/aes256CbcDecryptKernel.build/link/int --log_dir /home/centos/workspace/aes_decryption_benchmark/Emulation-HW/aes256CbcDecryptKernel.build/logs/link --report_dir /home/centos/workspace/aes_decryption_benchmark/Emulation-HW/aes256CbcDecryptKernel.build/reports/link --config /home/centos/workspace/aes_decryption_benchmark/Emulation-HW/aes256CbcDecryptKernel.build/link/int/vplConfig.ini -k /home/centos/workspace/aes_decryption_benchmark/Emulation-HW/aes256CbcDecryptKernel.build/link/int/kernel_info.dat --webtalk_flag Vitis --temp_dir /home/centos/workspace/aes_decryption_benchmark/Emulation-HW/aes256CbcDecryptKernel.build/link --emulation_mode debug_waveform --no-info --iprepo /home/centos/workspace/aes_decryption_benchmark/Emulation-HW/aes256CbcDecryptKernel.build/link/int/xo/ip_repo/xilinx_com_hls_aes256CbcDecryptKernel_1_0 --messageDb /home/centos/workspace/aes_decryption_benchmark/Emulation-HW/aes256CbcDecryptKernel.build/link/run_link/vpl.pb /home/centos/workspace/aes_decryption_benchmark/Emulation-HW/aes256CbcDecryptKernel.build/link/int/dr.bd.tcl ",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/home/centos/workspace/aes_decryption_benchmark/Emulation-HW/aes256CbcDecryptKernel.build/link/run_link"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Jan 14 21:38:34 2021",
+ "timestampMillis": "1610660314014",
+ "status": {
+  "cmdId": "ad37c562-f16d-4a04-bc8a-5f83a78b50a6",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_VivadoProject",
+ "dateTimestamp": "Thu Jan 14 21:38:40 2021",
+ "timestampMillis": "1610660320761",
+ "vivadoProject": {
+  "openDir": "/home/centos/workspace/aes_decryption_benchmark/Emulation-HW/aes256CbcDecryptKernel.build/link/vivado/vpl",
+  "openScript": "openprj.tcl",
+  "relativeProject": "prj/prj.xpr"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Thu Jan 14 21:38:40 2021",
+ "timestampMillis": "1610660320763",
+ "buildStep": {
+  "cmdId": "ec41c319-7397-495a-b6ac-63f578de2ced",
+  "name": "vivado",
+  "logFile": "/home/centos/workspace/aes_decryption_benchmark/Emulation-HW/aes256CbcDecryptKernel.build/link/vivado/vpl/vivado.log",
+  "commandLine": "vivado -log vivado.log -applog -m64 -messageDb vivado.pb -mode batch -source vpl.tcl -notrace",
+  "args": [
+   "-log",
+   "vivado.log",
+   "-applog",
+   " -m64",
+   "-messageDb",
+   "vivado.pb",
+   "-mode",
+   "batch",
+   "-source",
+   "vpl.tcl",
+   "-notrace"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/centos/workspace/aes_decryption_benchmark/Emulation-HW/aes256CbcDecryptKernel.build/link/run_link"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Jan 14 21:38:40 2021",
+ "timestampMillis": "1610660320764",
+ "status": {
+  "cmdId": "ec41c319-7397-495a-b6ac-63f578de2ced",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Jan 14 21:45:34 2021",
+ "timestampMillis": "1610660734309",
+ "status": {
+  "cmdId": "ec41c319-7397-495a-b6ac-63f578de2ced",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Jan 14 21:45:34 2021",
+ "timestampMillis": "1610660734488",
+ "status": {
+  "cmdId": "ad37c562-f16d-4a04-bc8a-5f83a78b50a6",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Jan 14 21:45:34 2021",
+ "timestampMillis": "1610660734498",
+ "status": {
+  "cmdId": "8296d694-c006-4a66-bbac-0ce0297d8c5f",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Thu Jan 14 21:45:34 2021",
+ "timestampMillis": "1610660734500",
+ "buildStep": {
+  "cmdId": "e52fd8f6-5224-41c4-a83b-a8f17cdfd6c0",
+  "name": "rtdgen",
+  "logFile": "",
+  "commandLine": "rtdgen",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/home/centos/workspace/aes_decryption_benchmark/Emulation-HW"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Jan 14 21:45:34 2021",
+ "timestampMillis": "1610660734501",
+ "status": {
+  "cmdId": "e52fd8f6-5224-41c4-a83b-a8f17cdfd6c0",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Thu Jan 14 21:45:34 2021",
+ "timestampMillis": "1610660734502",
+ "buildStep": {
+  "cmdId": "1e06b1bd-82e1-424a-a084-fa5a4de82060",
+  "name": "gcc",
+  "logFile": "",
+  "commandLine": "/opt/Xilinx/Vitis/2020.1/bin/xcpp -c -g -fPIC /home/centos/workspace/aes_decryption_benchmark/Emulation-HW/aes256CbcDecryptKernel.build/link/int/xo/aes256CbcDecryptKernel/aes256CbcDecryptKernel/cpu_sources/aes256CbcDecryptKernel.cpp -o /home/centos/workspace/aes_decryption_benchmark/Emulation-HW/aes256CbcDecryptKernel.build/link/int/xo/aes256CbcDecryptKernel/aes256CbcDecryptKernel/cpu_sources/aes256CbcDecryptKernel.cpp.o -I/opt/Xilinx/Vivado/2020.1/bin/../include -I/opt/Xilinx/Vitis/2020.1/bin/../include -g -I/home/centos/workspace/aes_decryption_benchmark/src/kernel -I/home/centos/workspace/aes_decryption_benchmark/libs/xf_security/L1/include -I/home/centos/workspace/aes_decryption_benchmark/libs/xf_security/L1/include -I/home/centos/workspace/aes_decryption_benchmark/src/kernel -g",
+  "args": [
+   "-c",
+   "-g",
+   "-fPIC",
+   "/home/centos/workspace/aes_decryption_benchmark/Emulation-HW/aes256CbcDecryptKernel.build/link/int/xo/aes256CbcDecryptKernel/aes256CbcDecryptKernel/cpu_sources/aes256CbcDecryptKernel.cpp",
+   "-o",
+   "/home/centos/workspace/aes_decryption_benchmark/Emulation-HW/aes256CbcDecryptKernel.build/link/int/xo/aes256CbcDecryptKernel/aes256CbcDecryptKernel/cpu_sources/aes256CbcDecryptKernel.cpp.o",
+   "-I/opt/Xilinx/Vivado/2020.1/bin/../include",
+   "-I/opt/Xilinx/Vitis/2020.1/bin/../include",
+   "-g",
+   "-I/home/centos/workspace/aes_decryption_benchmark/src/kernel",
+   "-I/home/centos/workspace/aes_decryption_benchmark/libs/xf_security/L1/include",
+   "-I/home/centos/workspace/aes_decryption_benchmark/libs/xf_security/L1/include",
+   "-I/home/centos/workspace/aes_decryption_benchmark/src/kernel",
+   "-g"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/centos/workspace/aes_decryption_benchmark/Emulation-HW"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Jan 14 21:45:34 2021",
+ "timestampMillis": "1610660734503",
+ "status": {
+  "cmdId": "1e06b1bd-82e1-424a-a084-fa5a4de82060",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Jan 14 21:45:41 2021",
+ "timestampMillis": "1610660741654",
+ "status": {
+  "cmdId": "1e06b1bd-82e1-424a-a084-fa5a4de82060",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Thu Jan 14 21:45:41 2021",
+ "timestampMillis": "1610660741655",
+ "buildStep": {
+  "cmdId": "62859a9e-fb26-4829-bb12-8af903ecf7c6",
+  "name": "ar",
+  "logFile": "",
+  "commandLine": "/opt/Xilinx/Vivado/2020.1/tps/lnx64/binutils-2.26/bin/ar -cr /home/centos/workspace/aes_decryption_benchmark/Emulation-HW/aes256CbcDecryptKernel.build/link/int/xo/aes256CbcDecryptKernel/aes256CbcDecryptKernel/cpu_sources/aes256CbcDecryptKernel.cpp.o.a /home/centos/workspace/aes_decryption_benchmark/Emulation-HW/aes256CbcDecryptKernel.build/link/int/xo/aes256CbcDecryptKernel/aes256CbcDecryptKernel/cpu_sources/aes256CbcDecryptKernel.cpp.o",
+  "args": [
+   "-cr",
+   "/home/centos/workspace/aes_decryption_benchmark/Emulation-HW/aes256CbcDecryptKernel.build/link/int/xo/aes256CbcDecryptKernel/aes256CbcDecryptKernel/cpu_sources/aes256CbcDecryptKernel.cpp.o.a",
+   "/home/centos/workspace/aes_decryption_benchmark/Emulation-HW/aes256CbcDecryptKernel.build/link/int/xo/aes256CbcDecryptKernel/aes256CbcDecryptKernel/cpu_sources/aes256CbcDecryptKernel.cpp.o"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/centos/workspace/aes_decryption_benchmark/Emulation-HW"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Jan 14 21:45:41 2021",
+ "timestampMillis": "1610660741656",
+ "status": {
+  "cmdId": "62859a9e-fb26-4829-bb12-8af903ecf7c6",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Jan 14 21:45:41 2021",
+ "timestampMillis": "1610660741693",
+ "status": {
+  "cmdId": "62859a9e-fb26-4829-bb12-8af903ecf7c6",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Thu Jan 14 21:45:41 2021",
+ "timestampMillis": "1610660741693",
+ "buildStep": {
+  "cmdId": "898d2b9d-f66f-45ee-8ca0-c04ff19d3db8",
+  "name": "g++",
+  "logFile": "/home/centos/workspace/aes_decryption_benchmark/Emulation-HW/aes256CbcDecryptKernel.build/link/int/aes256CbcDecryptKernel.gpp_so.log",
+  "commandLine": "/opt/Xilinx/Vitis/2020.1/bin/xcpp -Wall -shared -Wl,-whole-archive,-soname,aes256CbcDecryptKernel.so -o aes256CbcDecryptKernel.so /home/centos/workspace/aes_decryption_benchmark/Emulation-HW/aes256CbcDecryptKernel.build/link/int/xo/aes256CbcDecryptKernel/aes256CbcDecryptKernel/cpu_sources/aes256CbcDecryptKernel.cpp.o.a -Wl,--no-whole-archive",
+  "args": [
+   "-Wall",
+   "-shared",
+   "-Wl,-whole-archive,-soname,aes256CbcDecryptKernel.so",
+   "-o",
+   "aes256CbcDecryptKernel.so",
+   "/home/centos/workspace/aes_decryption_benchmark/Emulation-HW/aes256CbcDecryptKernel.build/link/int/xo/aes256CbcDecryptKernel/aes256CbcDecryptKernel/cpu_sources/aes256CbcDecryptKernel.cpp.o.a",
+   "-Wl,--no-whole-archive"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/centos/workspace/aes_decryption_benchmark/Emulation-HW"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Jan 14 21:45:41 2021",
+ "timestampMillis": "1610660741694",
+ "status": {
+  "cmdId": "898d2b9d-f66f-45ee-8ca0-c04ff19d3db8",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Jan 14 21:45:41 2021",
+ "timestampMillis": "1610660741904",
+ "status": {
+  "cmdId": "898d2b9d-f66f-45ee-8ca0-c04ff19d3db8",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Thu Jan 14 21:45:41 2021",
+ "timestampMillis": "1610660741905",
+ "buildStep": {
+  "cmdId": "175644f9-c768-44f1-816f-4d4ed1f4832b",
+  "name": "xrflink",
+  "logFile": "",
+  "commandLine": "/opt/Xilinx/Vitis/2020.1/bin/xrflink -f /home/centos/workspace/aes_decryption_benchmark/Emulation-HW/aes256CbcDecryptKernel.build/link/int/consolidated.cf --DWARF /home/centos/workspace/aes_decryption_benchmark/Emulation-HW/aes256CbcDecryptKernel.build/link/int/aes256CbcDecryptKernel.so",
+  "args": [
+   "-f",
+   "/home/centos/workspace/aes_decryption_benchmark/Emulation-HW/aes256CbcDecryptKernel.build/link/int/consolidated.cf",
+   "--DWARF",
+   "/home/centos/workspace/aes_decryption_benchmark/Emulation-HW/aes256CbcDecryptKernel.build/link/int/aes256CbcDecryptKernel.so"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/centos/workspace/aes_decryption_benchmark/Emulation-HW"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Jan 14 21:45:41 2021",
+ "timestampMillis": "1610660741906",
+ "status": {
+  "cmdId": "175644f9-c768-44f1-816f-4d4ed1f4832b",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Jan 14 21:45:42 2021",
+ "timestampMillis": "1610660742000",
+ "status": {
+  "cmdId": "175644f9-c768-44f1-816f-4d4ed1f4832b",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Jan 14 21:45:42 2021",
+ "timestampMillis": "1610660742003",
+ "report": {
+  "path": "/home/centos/workspace/aes_decryption_benchmark/Emulation-HW/aes256CbcDecryptKernel.build/link/int/aes256CbcDecryptKernel_xml.rtd",
+  "name": "",
+  "fileType": "JSON",
+  "reportType": "XCLBIN_INFO"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Thu Jan 14 21:45:42 2021",
+ "timestampMillis": "1610660742004",
+ "buildStep": {
+  "cmdId": "88e60927-c513-46a0-a779-77e721595860",
+  "name": "cf2sw",
+  "logFile": "",
+  "commandLine": "cf2sw -a /home/centos/workspace/aes_decryption_benchmark/Emulation-HW/aes256CbcDecryptKernel.build/link/int/address_map.xml -sdsl /home/centos/workspace/aes_decryption_benchmark/Emulation-HW/aes256CbcDecryptKernel.build/link/int/sdsl.dat -xclbin /home/centos/workspace/aes_decryption_benchmark/Emulation-HW/aes256CbcDecryptKernel.build/link/int/xclbin_orig.xml -rtd /home/centos/workspace/aes_decryption_benchmark/Emulation-HW/aes256CbcDecryptKernel.build/link/int/aes256CbcDecryptKernel.rtd -o /home/centos/workspace/aes_decryption_benchmark/Emulation-HW/aes256CbcDecryptKernel.build/link/int/aes256CbcDecryptKernel.xml",
+  "args": [
+   "-a",
+   "/home/centos/workspace/aes_decryption_benchmark/Emulation-HW/aes256CbcDecryptKernel.build/link/int/address_map.xml",
+   "-sdsl",
+   "/home/centos/workspace/aes_decryption_benchmark/Emulation-HW/aes256CbcDecryptKernel.build/link/int/sdsl.dat",
+   "-xclbin",
+   "/home/centos/workspace/aes_decryption_benchmark/Emulation-HW/aes256CbcDecryptKernel.build/link/int/xclbin_orig.xml",
+   "-rtd",
+   "/home/centos/workspace/aes_decryption_benchmark/Emulation-HW/aes256CbcDecryptKernel.build/link/int/aes256CbcDecryptKernel.rtd",
+   "-o",
+   "/home/centos/workspace/aes_decryption_benchmark/Emulation-HW/aes256CbcDecryptKernel.build/link/int/aes256CbcDecryptKernel.xml"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/centos/workspace/aes_decryption_benchmark/Emulation-HW"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Jan 14 21:45:42 2021",
+ "timestampMillis": "1610660742005",
+ "status": {
+  "cmdId": "88e60927-c513-46a0-a779-77e721595860",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Jan 14 21:45:43 2021",
+ "timestampMillis": "1610660743729",
+ "status": {
+  "cmdId": "88e60927-c513-46a0-a779-77e721595860",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Thu Jan 14 21:45:46 2021",
+ "timestampMillis": "1610660746770",
+ "buildStep": {
+  "cmdId": "4a295d61-1044-4887-98e6-8f94eba66b47",
+  "name": "xrflink",
+  "logFile": "",
+  "commandLine": "/opt/Xilinx/Vitis/2020.1/bin/xrflink -f /home/centos/workspace/aes_decryption_benchmark/Emulation-HW/aes256CbcDecryptKernel.build/link/int/consolidated.cf --kernel /home/centos/workspace/aes_decryption_benchmark/Emulation-HW/aes256CbcDecryptKernel.build/link/int/aes256CbcDecryptKernel.xml",
+  "args": [
+   "-f",
+   "/home/centos/workspace/aes_decryption_benchmark/Emulation-HW/aes256CbcDecryptKernel.build/link/int/consolidated.cf",
+   "--kernel",
+   "/home/centos/workspace/aes_decryption_benchmark/Emulation-HW/aes256CbcDecryptKernel.build/link/int/aes256CbcDecryptKernel.xml"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/centos/workspace/aes_decryption_benchmark/Emulation-HW"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Jan 14 21:45:46 2021",
+ "timestampMillis": "1610660746771",
+ "status": {
+  "cmdId": "4a295d61-1044-4887-98e6-8f94eba66b47",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Jan 14 21:45:46 2021",
+ "timestampMillis": "1610660746869",
+ "status": {
+  "cmdId": "4a295d61-1044-4887-98e6-8f94eba66b47",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Thu Jan 14 21:45:46 2021",
+ "timestampMillis": "1610660746870",
+ "buildStep": {
+  "cmdId": "5b245a41-dd9a-4aaa-bb6f-19ddfb075c0c",
+  "name": "xrflink",
+  "logFile": "",
+  "commandLine": "/opt/Xilinx/Vitis/2020.1/bin/xrflink -f /home/centos/workspace/aes_decryption_benchmark/Emulation-HW/aes256CbcDecryptKernel.build/link/int/consolidated.cf --hierarchy /home/centos/workspace/aes_decryption_benchmark/Emulation-HW/aes256CbcDecryptKernel.build/link/int/_kernel_inst_paths.dat",
+  "args": [
+   "-f",
+   "/home/centos/workspace/aes_decryption_benchmark/Emulation-HW/aes256CbcDecryptKernel.build/link/int/consolidated.cf",
+   "--hierarchy",
+   "/home/centos/workspace/aes_decryption_benchmark/Emulation-HW/aes256CbcDecryptKernel.build/link/int/_kernel_inst_paths.dat"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/centos/workspace/aes_decryption_benchmark/Emulation-HW"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Jan 14 21:45:46 2021",
+ "timestampMillis": "1610660746870",
+ "status": {
+  "cmdId": "5b245a41-dd9a-4aaa-bb6f-19ddfb075c0c",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Jan 14 21:45:47 2021",
+ "timestampMillis": "1610660747000",
+ "status": {
+  "cmdId": "5b245a41-dd9a-4aaa-bb6f-19ddfb075c0c",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Jan 14 21:45:47 2021",
+ "timestampMillis": "1610660747004",
+ "report": {
+  "path": "/home/centos/workspace/aes_decryption_benchmark/Emulation-HW/aes256CbcDecryptKernel.build/link/int/systemDiagramModelSlrBaseAddress.json",
+  "name": "",
+  "fileType": "JSON",
+  "reportType": "SYSTEM_DIAGRAM_PLUS"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Thu Jan 14 21:45:47 2021",
+ "timestampMillis": "1610660747004",
+ "buildStep": {
+  "cmdId": "5ab37f43-bc1a-4bbb-916c-ac431d045991",
+  "name": "rtdgen",
+  "logFile": "",
+  "commandLine": "writeSystemDiagram",
+  "args": [
+   "/home/centos/workspace/aes_decryption_benchmark/Emulation-HW/aes256CbcDecryptKernel.build/link/int/aes256CbcDecryptKernel.rtd",
+   "/home/centos/workspace/aes_decryption_benchmark/Emulation-HW/aes256CbcDecryptKernel.build/link/int/systemDiagramModelSlrBaseAddress.json"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/centos/workspace/aes_decryption_benchmark/Emulation-HW"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Jan 14 21:45:47 2021",
+ "timestampMillis": "1610660747005",
+ "status": {
+  "cmdId": "5ab37f43-bc1a-4bbb-916c-ac431d045991",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Jan 14 21:45:47 2021",
+ "timestampMillis": "1610660747006",
+ "status": {
+  "cmdId": "5ab37f43-bc1a-4bbb-916c-ac431d045991",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Jan 14 21:45:47 2021",
+ "timestampMillis": "1610660747006",
+ "status": {
+  "cmdId": "e52fd8f6-5224-41c4-a83b-a8f17cdfd6c0",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Thu Jan 14 21:45:47 2021",
+ "timestampMillis": "1610660747008",
+ "buildStep": {
+  "cmdId": "026a00a9-5a54-4d29-a136-a6dec18c13f2",
+  "name": "xclbinutil",
+  "logFile": "",
+  "commandLine": "xclbinutil --add-section DEBUG_DATA:RAW:/home/centos/workspace/aes_decryption_benchmark/Emulation-HW/aes256CbcDecryptKernel.build/link/int/consolidated.cf --add-section DEBUG_IP_LAYOUT:JSON:/home/centos/workspace/aes_decryption_benchmark/Emulation-HW/aes256CbcDecryptKernel.build/link/int/debug_ip_layout.rtd --add-section BITSTREAM:RAW:/home/centos/workspace/aes_decryption_benchmark/Emulation-HW/aes256CbcDecryptKernel.build/link/int/behav.xse --force --target hw_emu --key-value SYS:dfx_enable:false --add-section :JSON:/home/centos/workspace/aes_decryption_benchmark/Emulation-HW/aes256CbcDecryptKernel.build/link/int/aes256CbcDecryptKernel.rtd --append-section :JSON:/home/centos/workspace/aes_decryption_benchmark/Emulation-HW/aes256CbcDecryptKernel.build/link/int/appendSection.rtd --add-section CLOCK_FREQ_TOPOLOGY:JSON:/home/centos/workspace/aes_decryption_benchmark/Emulation-HW/aes256CbcDecryptKernel.build/link/int/aes256CbcDecryptKernel_xml.rtd --add-section BUILD_METADATA:JSON:/home/centos/workspace/aes_decryption_benchmark/Emulation-HW/aes256CbcDecryptKernel.build/link/int/aes256CbcDecryptKernel_build.rtd --add-section EMBEDDED_METADATA:RAW:/home/centos/workspace/aes_decryption_benchmark/Emulation-HW/aes256CbcDecryptKernel.build/link/int/aes256CbcDecryptKernel.xml --add-section SYSTEM_METADATA:RAW:/home/centos/workspace/aes_decryption_benchmark/Emulation-HW/aes256CbcDecryptKernel.build/link/int/systemDiagramModelSlrBaseAddress.json --key-value SYS:PlatformVBNV:xilinx_aws-vu9p-f1_shell-v04261818_201920_2 --output /home/centos/workspace/aes_decryption_benchmark/Emulation-HW/aes256CbcDecryptKernel.xclbin",
+  "args": [
+   "--add-section",
+   "DEBUG_DATA:RAW:/home/centos/workspace/aes_decryption_benchmark/Emulation-HW/aes256CbcDecryptKernel.build/link/int/consolidated.cf",
+   "--add-section",
+   "DEBUG_IP_LAYOUT:JSON:/home/centos/workspace/aes_decryption_benchmark/Emulation-HW/aes256CbcDecryptKernel.build/link/int/debug_ip_layout.rtd",
+   "--add-section",
+   "BITSTREAM:RAW:/home/centos/workspace/aes_decryption_benchmark/Emulation-HW/aes256CbcDecryptKernel.build/link/int/behav.xse",
+   "--force",
+   "--target",
+   "hw_emu",
+   "--key-value",
+   "SYS:dfx_enable:false",
+   "--add-section",
+   ":JSON:/home/centos/workspace/aes_decryption_benchmark/Emulation-HW/aes256CbcDecryptKernel.build/link/int/aes256CbcDecryptKernel.rtd",
+   "--append-section",
+   ":JSON:/home/centos/workspace/aes_decryption_benchmark/Emulation-HW/aes256CbcDecryptKernel.build/link/int/appendSection.rtd",
+   "--add-section",
+   "CLOCK_FREQ_TOPOLOGY:JSON:/home/centos/workspace/aes_decryption_benchmark/Emulation-HW/aes256CbcDecryptKernel.build/link/int/aes256CbcDecryptKernel_xml.rtd",
+   "--add-section",
+   "BUILD_METADATA:JSON:/home/centos/workspace/aes_decryption_benchmark/Emulation-HW/aes256CbcDecryptKernel.build/link/int/aes256CbcDecryptKernel_build.rtd",
+   "--add-section",
+   "EMBEDDED_METADATA:RAW:/home/centos/workspace/aes_decryption_benchmark/Emulation-HW/aes256CbcDecryptKernel.build/link/int/aes256CbcDecryptKernel.xml",
+   "--add-section",
+   "SYSTEM_METADATA:RAW:/home/centos/workspace/aes_decryption_benchmark/Emulation-HW/aes256CbcDecryptKernel.build/link/int/systemDiagramModelSlrBaseAddress.json",
+   "--key-value",
+   "SYS:PlatformVBNV:xilinx_aws-vu9p-f1_shell-v04261818_201920_2",
+   "--output",
+   "/home/centos/workspace/aes_decryption_benchmark/Emulation-HW/aes256CbcDecryptKernel.xclbin"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/centos/workspace/aes_decryption_benchmark/Emulation-HW"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Jan 14 21:45:47 2021",
+ "timestampMillis": "1610660747009",
+ "status": {
+  "cmdId": "026a00a9-5a54-4d29-a136-a6dec18c13f2",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Jan 14 21:45:47 2021",
+ "timestampMillis": "1610660747135",
+ "status": {
+  "cmdId": "026a00a9-5a54-4d29-a136-a6dec18c13f2",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Thu Jan 14 21:45:47 2021",
+ "timestampMillis": "1610660747137",
+ "buildStep": {
+  "cmdId": "02ebd072-0a60-414e-9e4a-9a7c20e7eca9",
+  "name": "xclbinutilinfo",
+  "logFile": "",
+  "commandLine": "xclbinutil --quiet --force --info /home/centos/workspace/aes_decryption_benchmark/Emulation-HW/aes256CbcDecryptKernel.xclbin.info --input /home/centos/workspace/aes_decryption_benchmark/Emulation-HW/aes256CbcDecryptKernel.xclbin",
+  "args": [
+   "--quiet",
+   "--force",
+   "--info",
+   "/home/centos/workspace/aes_decryption_benchmark/Emulation-HW/aes256CbcDecryptKernel.xclbin.info",
+   "--input",
+   "/home/centos/workspace/aes_decryption_benchmark/Emulation-HW/aes256CbcDecryptKernel.xclbin"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/centos/workspace/aes_decryption_benchmark/Emulation-HW"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Jan 14 21:45:47 2021",
+ "timestampMillis": "1610660747138",
+ "status": {
+  "cmdId": "02ebd072-0a60-414e-9e4a-9a7c20e7eca9",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Jan 14 21:45:47 2021",
+ "timestampMillis": "1610660747563",
+ "status": {
+  "cmdId": "02ebd072-0a60-414e-9e4a-9a7c20e7eca9",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Thu Jan 14 21:45:47 2021",
+ "timestampMillis": "1610660747564",
+ "buildStep": {
+  "cmdId": "7aa32d65-e76e-4dad-91dd-0a305f1e7b86",
+  "name": "generate_sc_driver",
+  "logFile": "",
+  "commandLine": "",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/home/centos/workspace/aes_decryption_benchmark/Emulation-HW"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Jan 14 21:45:47 2021",
+ "timestampMillis": "1610660747565",
+ "status": {
+  "cmdId": "7aa32d65-e76e-4dad-91dd-0a305f1e7b86",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Jan 14 21:45:47 2021",
+ "timestampMillis": "1610660747566",
+ "status": {
+  "cmdId": "7aa32d65-e76e-4dad-91dd-0a305f1e7b86",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Jan 14 21:45:47 2021",
+ "timestampMillis": "1610660747583",
+ "report": {
+  "path": "/home/centos/workspace/aes_decryption_benchmark/Emulation-HW/aes256CbcDecryptKernel.build/reports/link/system_estimate_aes256CbcDecryptKernel.xtxt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_SYSTEM_ESTIMATE"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Jan 14 21:45:47 2021",
+ "timestampMillis": "1610660747587",
+ "report": {
+  "path": "/home/centos/workspace/aes_decryption_benchmark/Emulation-HW/guidance.html",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Jan 14 21:45:47 2021",
+ "timestampMillis": "1610660747587",
+ "report": {
+  "path": "/home/centos/workspace/aes_decryption_benchmark/Emulation-HW/guidance.pb",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Jan 14 21:45:47 2021",
+ "timestampMillis": "1610660747589",
+ "report": {
+  "path": "/home/centos/workspace/aes_decryption_benchmark/Emulation-HW/aes256CbcDecryptKernel.build/logs/optraceViewer.html",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "OPERATION_TRACE"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Jan 14 21:45:47 2021",
+ "timestampMillis": "1610660747589",
+ "status": {
+  "cmdId": "698eccd5-f023-4d4f-b797-78ca12daf62c",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>

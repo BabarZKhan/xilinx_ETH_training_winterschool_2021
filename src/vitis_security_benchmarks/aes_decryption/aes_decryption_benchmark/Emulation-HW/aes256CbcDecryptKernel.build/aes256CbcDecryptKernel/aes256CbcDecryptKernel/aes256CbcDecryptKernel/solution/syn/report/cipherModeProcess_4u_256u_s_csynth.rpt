@@ -1,0 +1,253 @@
+
+
+================================================================
+== Vitis HLS Report for 'cipherModeProcess_4u_256u_s'
+================================================================
+* Date:           Thu Jan 14 21:37:14 2021
+
+* Version:        2020.1 (Build 2902540 on Wed May 27 20:16:15 MDT 2020)
+* Project:        aes256CbcDecryptKernel
+* Solution:       solution (Vitis Kernel Flow Target)
+* Product family: virtexuplus
+* Target device:  xcvu9p-flgb2104-2-i
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  | 4.00 ns | 2.654 ns |   1.08 ns  |
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        ?|        ?|         ?|         ?|    ?|    ?|   none  |
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        +----------------------------------------+------------------------------+---------+---------+----------+----------+-----+-----+----------+
+        |                                        |                              |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline |
+        |                Instance                |            Module            |   min   |   max   |    min   |    max   | min | max |   Type   |
+        +----------------------------------------+------------------------------+---------+---------+----------+----------+-----+-----+----------+
+        |grp_cipherModeParallel_4u_256u_s_fu_98  |cipherModeParallel_4u_256u_s  |        ?|        ?|         ?|         ?|    ?|    ?| dataflow |
+        +----------------------------------------+------------------------------+---------+---------+----------+----------+-----+-----+----------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++---------------------+---------+------+---------+---------+-----+
+|         Name        | BRAM_18K|  DSP |    FF   |   LUT   | URAM|
++---------------------+---------+------+---------+---------+-----+
+|DSP                  |        -|     -|        -|        -|    -|
+|Expression           |        -|     -|        0|       14|    -|
+|FIFO                 |        -|     -|        -|        -|    -|
+|Instance             |        4|     -|    62857|    36526|    -|
+|Memory               |        -|     -|        -|        -|    -|
+|Multiplexer          |        -|     -|        -|      249|    -|
+|Register             |        -|     -|       70|        -|    -|
++---------------------+---------+------+---------+---------+-----+
+|Total                |        4|     0|    62927|    36789|    0|
++---------------------+---------+------+---------+---------+-----+
+|Available SLR        |     1440|  2280|   788160|   394080|  320|
++---------------------+---------+------+---------+---------+-----+
+|Utilization SLR (%)  |    ~0   |     0|        7|        9|    0|
++---------------------+---------+------+---------+---------+-----+
+|Available            |     4320|  6840|  2364480|  1182240|  960|
++---------------------+---------+------+---------+---------+-----+
+|Utilization (%)      |    ~0   |     0|        2|        3|    0|
++---------------------+---------+------+---------+---------+-----+
+
++ Detail: 
+    * Instance: 
+    +----------------------------------------+------------------------------+---------+----+-------+-------+-----+
+    |                Instance                |            Module            | BRAM_18K| DSP|   FF  |  LUT  | URAM|
+    +----------------------------------------+------------------------------+---------+----+-------+-------+-----+
+    |grp_cipherModeParallel_4u_256u_s_fu_98  |cipherModeParallel_4u_256u_s  |        4|   0|  62857|  36526|    0|
+    +----------------------------------------+------------------------------+---------+----+-------+-------+-----+
+    |Total                                   |                              |        4|   0|  62857|  36526|    0|
+    +----------------------------------------+------------------------------+---------+----+-------+-------+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +---------------------------------------------------------+----------+----+---+----+------------+------------+
+    |                      Variable Name                      | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +---------------------------------------------------------+----------+----+---+----+------------+------------+
+    |ap_ext_blocking_n                                        |    and   |   0|  0|   2|           1|           2|
+    |ap_int_blocking_cur_n                                    |    and   |   0|  0|   2|           1|           0|
+    |ap_int_blocking_n                                        |    and   |   0|  0|   2|           1|           1|
+    |ap_str_blocking_n                                        |    and   |   0|  0|   2|           1|           2|
+    |ap_block_state1                                          |    or    |   0|  0|   2|           1|           1|
+    |ap_sync_grp_cipherModeParallel_4u_256u_s_fu_98_ap_done   |    or    |   0|  0|   2|           1|           1|
+    |ap_sync_grp_cipherModeParallel_4u_256u_s_fu_98_ap_ready  |    or    |   0|  0|   2|           1|           1|
+    +---------------------------------------------------------+----------+----+---+----+------------+------------+
+    |Total                                                    |          |   0|  0|  14|           7|           8|
+    +---------------------------------------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +--------------------------+----+-----------+-----+-----------+
+    |           Name           | LUT| Input Size| Bits| Total Bits|
+    +--------------------------+----+-----------+-----+-----------+
+    |IVStrm_1_V_V_read         |   9|          2|    1|          2|
+    |IVStrm_2_V_V_read         |   9|          2|    1|          2|
+    |IVStrm_3_V_V_read         |   9|          2|    1|          2|
+    |IVStrm_V_V_read           |   9|          2|    1|          2|
+    |ap_NS_fsm                 |  15|          3|    1|          3|
+    |ap_done                   |   9|          2|    1|          2|
+    |cipherkeyStrm_1_V_V_read  |   9|          2|    1|          2|
+    |cipherkeyStrm_2_V_V_read  |   9|          2|    1|          2|
+    |cipherkeyStrm_3_V_V_read  |   9|          2|    1|          2|
+    |cipherkeyStrm_V_V_read    |   9|          2|    1|          2|
+    |endTextInStrm_1_V_read    |   9|          2|    1|          2|
+    |endTextInStrm_2_V_read    |   9|          2|    1|          2|
+    |endTextInStrm_3_V_read    |   9|          2|    1|          2|
+    |endTextInStrm_V_read      |   9|          2|    1|          2|
+    |endTextOutStrm_1_V_write  |   9|          2|    1|          2|
+    |endTextOutStrm_2_V_write  |   9|          2|    1|          2|
+    |endTextOutStrm_3_V_write  |   9|          2|    1|          2|
+    |endTextOutStrm_V_write    |   9|          2|    1|          2|
+    |taskNumStrm_blk_n         |   9|          2|    1|          2|
+    |textInStrm_1_V_V_read     |   9|          2|    1|          2|
+    |textInStrm_2_V_V_read     |   9|          2|    1|          2|
+    |textInStrm_3_V_V_read     |   9|          2|    1|          2|
+    |textInStrm_V_V_read       |   9|          2|    1|          2|
+    |textOutStrm_1_V_V_write   |   9|          2|    1|          2|
+    |textOutStrm_2_V_V_write   |   9|          2|    1|          2|
+    |textOutStrm_3_V_V_write   |   9|          2|    1|          2|
+    |textOutStrm_V_V_write     |   9|          2|    1|          2|
+    +--------------------------+----+-----------+-----+-----------+
+    |Total                     | 249|         55|   27|         55|
+    +--------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-------------------------------------------------------------+----+----+-----+-----------+
+    |                             Name                            | FF | LUT| Bits| Const Bits|
+    +-------------------------------------------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                                                    |   2|   0|    2|          0|
+    |ap_done_reg                                                  |   1|   0|    1|          0|
+    |ap_sync_reg_grp_cipherModeParallel_4u_256u_s_fu_98_ap_done   |   1|   0|    1|          0|
+    |ap_sync_reg_grp_cipherModeParallel_4u_256u_s_fu_98_ap_ready  |   1|   0|    1|          0|
+    |grp_cipherModeParallel_4u_256u_s_fu_98_ap_start_reg          |   1|   0|    1|          0|
+    |tmp_reg_166                                                  |  64|   0|   64|          0|
+    +-------------------------------------------------------------+----+----+-----+-----------+
+    |Total                                                        |  70|   0|   70|          0|
+    +-------------------------------------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-----------------------------+-----+-----+------------+-----------------------------+--------------+
+|          RTL Ports          | Dir | Bits|  Protocol  |        Source Object        |    C Type    |
++-----------------------------+-----+-----+------------+-----------------------------+--------------+
+|ap_clk                       |  in |    1| ap_ctrl_hs | cipherModeProcess<4u, 256u> | return value |
+|ap_rst                       |  in |    1| ap_ctrl_hs | cipherModeProcess<4u, 256u> | return value |
+|ap_start                     |  in |    1| ap_ctrl_hs | cipherModeProcess<4u, 256u> | return value |
+|ap_done                      | out |    1| ap_ctrl_hs | cipherModeProcess<4u, 256u> | return value |
+|ap_continue                  |  in |    1| ap_ctrl_hs | cipherModeProcess<4u, 256u> | return value |
+|ap_idle                      | out |    1| ap_ctrl_hs | cipherModeProcess<4u, 256u> | return value |
+|ap_ready                     | out |    1| ap_ctrl_hs | cipherModeProcess<4u, 256u> | return value |
+|ap_ext_blocking_n            | out |    1| ap_ctrl_hs | cipherModeProcess<4u, 256u> | return value |
+|ap_str_blocking_n            | out |    1| ap_ctrl_hs | cipherModeProcess<4u, 256u> | return value |
+|ap_int_blocking_n            | out |    1| ap_ctrl_hs | cipherModeProcess<4u, 256u> | return value |
+|taskNumStrm_dout             |  in |   64|   ap_fifo  |         taskNumStrm         |    pointer   |
+|taskNumStrm_empty_n          |  in |    1|   ap_fifo  |         taskNumStrm         |    pointer   |
+|taskNumStrm_read             | out |    1|   ap_fifo  |         taskNumStrm         |    pointer   |
+|IVStrm_V_V_dout              |  in |  128|   ap_fifo  |          IVStrm_V_V         |    pointer   |
+|IVStrm_V_V_empty_n           |  in |    1|   ap_fifo  |          IVStrm_V_V         |    pointer   |
+|IVStrm_V_V_read              | out |    1|   ap_fifo  |          IVStrm_V_V         |    pointer   |
+|IVStrm_1_V_V_dout            |  in |  128|   ap_fifo  |         IVStrm_1_V_V        |    pointer   |
+|IVStrm_1_V_V_empty_n         |  in |    1|   ap_fifo  |         IVStrm_1_V_V        |    pointer   |
+|IVStrm_1_V_V_read            | out |    1|   ap_fifo  |         IVStrm_1_V_V        |    pointer   |
+|IVStrm_2_V_V_dout            |  in |  128|   ap_fifo  |         IVStrm_2_V_V        |    pointer   |
+|IVStrm_2_V_V_empty_n         |  in |    1|   ap_fifo  |         IVStrm_2_V_V        |    pointer   |
+|IVStrm_2_V_V_read            | out |    1|   ap_fifo  |         IVStrm_2_V_V        |    pointer   |
+|IVStrm_3_V_V_dout            |  in |  128|   ap_fifo  |         IVStrm_3_V_V        |    pointer   |
+|IVStrm_3_V_V_empty_n         |  in |    1|   ap_fifo  |         IVStrm_3_V_V        |    pointer   |
+|IVStrm_3_V_V_read            | out |    1|   ap_fifo  |         IVStrm_3_V_V        |    pointer   |
+|cipherkeyStrm_V_V_dout       |  in |  256|   ap_fifo  |      cipherkeyStrm_V_V      |    pointer   |
+|cipherkeyStrm_V_V_empty_n    |  in |    1|   ap_fifo  |      cipherkeyStrm_V_V      |    pointer   |
+|cipherkeyStrm_V_V_read       | out |    1|   ap_fifo  |      cipherkeyStrm_V_V      |    pointer   |
+|cipherkeyStrm_1_V_V_dout     |  in |  256|   ap_fifo  |     cipherkeyStrm_1_V_V     |    pointer   |
+|cipherkeyStrm_1_V_V_empty_n  |  in |    1|   ap_fifo  |     cipherkeyStrm_1_V_V     |    pointer   |
+|cipherkeyStrm_1_V_V_read     | out |    1|   ap_fifo  |     cipherkeyStrm_1_V_V     |    pointer   |
+|cipherkeyStrm_2_V_V_dout     |  in |  256|   ap_fifo  |     cipherkeyStrm_2_V_V     |    pointer   |
+|cipherkeyStrm_2_V_V_empty_n  |  in |    1|   ap_fifo  |     cipherkeyStrm_2_V_V     |    pointer   |
+|cipherkeyStrm_2_V_V_read     | out |    1|   ap_fifo  |     cipherkeyStrm_2_V_V     |    pointer   |
+|cipherkeyStrm_3_V_V_dout     |  in |  256|   ap_fifo  |     cipherkeyStrm_3_V_V     |    pointer   |
+|cipherkeyStrm_3_V_V_empty_n  |  in |    1|   ap_fifo  |     cipherkeyStrm_3_V_V     |    pointer   |
+|cipherkeyStrm_3_V_V_read     | out |    1|   ap_fifo  |     cipherkeyStrm_3_V_V     |    pointer   |
+|textInStrm_V_V_dout          |  in |  128|   ap_fifo  |        textInStrm_V_V       |    pointer   |
+|textInStrm_V_V_empty_n       |  in |    1|   ap_fifo  |        textInStrm_V_V       |    pointer   |
+|textInStrm_V_V_read          | out |    1|   ap_fifo  |        textInStrm_V_V       |    pointer   |
+|textInStrm_1_V_V_dout        |  in |  128|   ap_fifo  |       textInStrm_1_V_V      |    pointer   |
+|textInStrm_1_V_V_empty_n     |  in |    1|   ap_fifo  |       textInStrm_1_V_V      |    pointer   |
+|textInStrm_1_V_V_read        | out |    1|   ap_fifo  |       textInStrm_1_V_V      |    pointer   |
+|textInStrm_2_V_V_dout        |  in |  128|   ap_fifo  |       textInStrm_2_V_V      |    pointer   |
+|textInStrm_2_V_V_empty_n     |  in |    1|   ap_fifo  |       textInStrm_2_V_V      |    pointer   |
+|textInStrm_2_V_V_read        | out |    1|   ap_fifo  |       textInStrm_2_V_V      |    pointer   |
+|textInStrm_3_V_V_dout        |  in |  128|   ap_fifo  |       textInStrm_3_V_V      |    pointer   |
+|textInStrm_3_V_V_empty_n     |  in |    1|   ap_fifo  |       textInStrm_3_V_V      |    pointer   |
+|textInStrm_3_V_V_read        | out |    1|   ap_fifo  |       textInStrm_3_V_V      |    pointer   |
+|endTextInStrm_V_dout         |  in |    1|   ap_fifo  |       endTextInStrm_V       |    pointer   |
+|endTextInStrm_V_empty_n      |  in |    1|   ap_fifo  |       endTextInStrm_V       |    pointer   |
+|endTextInStrm_V_read         | out |    1|   ap_fifo  |       endTextInStrm_V       |    pointer   |
+|endTextInStrm_1_V_dout       |  in |    1|   ap_fifo  |      endTextInStrm_1_V      |    pointer   |
+|endTextInStrm_1_V_empty_n    |  in |    1|   ap_fifo  |      endTextInStrm_1_V      |    pointer   |
+|endTextInStrm_1_V_read       | out |    1|   ap_fifo  |      endTextInStrm_1_V      |    pointer   |
+|endTextInStrm_2_V_dout       |  in |    1|   ap_fifo  |      endTextInStrm_2_V      |    pointer   |
+|endTextInStrm_2_V_empty_n    |  in |    1|   ap_fifo  |      endTextInStrm_2_V      |    pointer   |
+|endTextInStrm_2_V_read       | out |    1|   ap_fifo  |      endTextInStrm_2_V      |    pointer   |
+|endTextInStrm_3_V_dout       |  in |    1|   ap_fifo  |      endTextInStrm_3_V      |    pointer   |
+|endTextInStrm_3_V_empty_n    |  in |    1|   ap_fifo  |      endTextInStrm_3_V      |    pointer   |
+|endTextInStrm_3_V_read       | out |    1|   ap_fifo  |      endTextInStrm_3_V      |    pointer   |
+|textOutStrm_V_V_din          | out |  128|   ap_fifo  |       textOutStrm_V_V       |    pointer   |
+|textOutStrm_V_V_full_n       |  in |    1|   ap_fifo  |       textOutStrm_V_V       |    pointer   |
+|textOutStrm_V_V_write        | out |    1|   ap_fifo  |       textOutStrm_V_V       |    pointer   |
+|textOutStrm_1_V_V_din        | out |  128|   ap_fifo  |      textOutStrm_1_V_V      |    pointer   |
+|textOutStrm_1_V_V_full_n     |  in |    1|   ap_fifo  |      textOutStrm_1_V_V      |    pointer   |
+|textOutStrm_1_V_V_write      | out |    1|   ap_fifo  |      textOutStrm_1_V_V      |    pointer   |
+|textOutStrm_2_V_V_din        | out |  128|   ap_fifo  |      textOutStrm_2_V_V      |    pointer   |
+|textOutStrm_2_V_V_full_n     |  in |    1|   ap_fifo  |      textOutStrm_2_V_V      |    pointer   |
+|textOutStrm_2_V_V_write      | out |    1|   ap_fifo  |      textOutStrm_2_V_V      |    pointer   |
+|textOutStrm_3_V_V_din        | out |  128|   ap_fifo  |      textOutStrm_3_V_V      |    pointer   |
+|textOutStrm_3_V_V_full_n     |  in |    1|   ap_fifo  |      textOutStrm_3_V_V      |    pointer   |
+|textOutStrm_3_V_V_write      | out |    1|   ap_fifo  |      textOutStrm_3_V_V      |    pointer   |
+|endTextOutStrm_V_din         | out |    1|   ap_fifo  |       endTextOutStrm_V      |    pointer   |
+|endTextOutStrm_V_full_n      |  in |    1|   ap_fifo  |       endTextOutStrm_V      |    pointer   |
+|endTextOutStrm_V_write       | out |    1|   ap_fifo  |       endTextOutStrm_V      |    pointer   |
+|endTextOutStrm_1_V_din       | out |    1|   ap_fifo  |      endTextOutStrm_1_V     |    pointer   |
+|endTextOutStrm_1_V_full_n    |  in |    1|   ap_fifo  |      endTextOutStrm_1_V     |    pointer   |
+|endTextOutStrm_1_V_write     | out |    1|   ap_fifo  |      endTextOutStrm_1_V     |    pointer   |
+|endTextOutStrm_2_V_din       | out |    1|   ap_fifo  |      endTextOutStrm_2_V     |    pointer   |
+|endTextOutStrm_2_V_full_n    |  in |    1|   ap_fifo  |      endTextOutStrm_2_V     |    pointer   |
+|endTextOutStrm_2_V_write     | out |    1|   ap_fifo  |      endTextOutStrm_2_V     |    pointer   |
+|endTextOutStrm_3_V_din       | out |    1|   ap_fifo  |      endTextOutStrm_3_V     |    pointer   |
+|endTextOutStrm_3_V_full_n    |  in |    1|   ap_fifo  |      endTextOutStrm_3_V     |    pointer   |
+|endTextOutStrm_3_V_write     | out |    1|   ap_fifo  |      endTextOutStrm_3_V     |    pointer   |
++-----------------------------+-----+-----+------------+-----------------------------+--------------+
+

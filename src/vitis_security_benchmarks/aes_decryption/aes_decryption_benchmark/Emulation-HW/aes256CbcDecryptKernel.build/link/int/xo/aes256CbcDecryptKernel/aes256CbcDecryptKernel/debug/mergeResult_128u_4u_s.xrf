@@ -1,0 +1,37 @@
+Begin Function 'mergeResult<128u, 4u>'
+
+RTL state condition: (1'b1 == ap_CS_fsm_pp0_stage0)
+# ST_4
+local empty_57 <> <integer> <Phi> 'phi' <>
+add_ln695_2 /opt/Xilinx/Vitis/2020.1/common/technology/autopilot/ap_int_base.h:695
+reg: empty_57_reg_171[63:0] lv
+
+local icmp_ln311 <icmp_311> <integer> <Comparator> 'icmp' </home/centos/workspace/aes_decryption_benchmark/src/kernel/aes256CbcDecryptKernel.cpp:311>
+icmp_ln311 /home/centos/workspace/aes_decryption_benchmark/src/kernel/aes256CbcDecryptKernel.cpp:311
+reg: icmp_ln311_reg_296[0:0] lv
+
+
+RTL state condition: (1'b1 == ap_CS_fsm_state1)
+# ST_1
+local msgNum_V <read_145> <integer> <FifoRead> 'read' </opt/Xilinx/Vitis/2020.1/common/technology/autopilot/hls_stream_39.h:145>
+tmp.V /opt/Xilinx/Vitis/2020.1/common/technology/autopilot/hls_stream_39.h:145
+reg: msgNum_V_reg_255[63:0] lv
+
+local taskNum_V <read_145> <integer> <FifoRead> 'read' </opt/Xilinx/Vitis/2020.1/common/technology/autopilot/hls_stream_39.h:145>
+tmp.V /opt/Xilinx/Vitis/2020.1/common/technology/autopilot/hls_stream_39.h:145
+reg: taskNum_V_reg_260[63:0] lv
+
+
+RTL state condition: (1'b1 == ap_CS_fsm_state3)
+# ST_3
+local empty <> <integer> <Phi> 'phi' <>
+add_ln695 /opt/Xilinx/Vitis/2020.1/common/technology/autopilot/ap_int_base.h:695
+reg: empty_reg_160[63:0] lv
+
+local add_ln695 <> <integer> <Arithmetic> 'add' <>
+add_ln695 /opt/Xilinx/Vitis/2020.1/common/technology/autopilot/ap_int_base.h:695
+reg: add_ln695_reg_279[63:0] lv
+
+
+End Function 'mergeResult<128u, 4u>'
+

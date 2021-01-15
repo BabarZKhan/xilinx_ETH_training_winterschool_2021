@@ -1,0 +1,168 @@
+2021-01-14T21:28:00.0383400255-21:28:00 **** Build of configuration Emulation-SW for project aes_decryption_benchmark ****
+000-make -j8 incremental 
+000-/opt/Xilinx/Vitis/2020.1/bin/v++ --target sw_emu --compile -I"../src/kernel" --config common-config.cfg --config aes256CbcDecryptKernel-aes256CbcDecryptKernel-compile.cfg -I/home/centos/workspace/aes_decryption_benchmark/libs/xf_security/L1/include -I/home/centos/workspace/aes_decryption_benchmark/libs/xf_security/L1/include -I/home/centos/workspace/aes_decryption_benchmark/src/kernel -o"aes256CbcDecryptKernel.build/aes256CbcDecryptKernel.xo" "../src/kernel/aes256CbcDecryptKernel.cpp"
+000-Option Map File Used: '/opt/Xilinx/Vitis/2020.1/data/vitis/vpp/optMap.xml'
+000-
+000-****** v++ v2020.1 (64-bit)
+000-  **** SW Build 2902540 on Wed May 27 19:54:35 MDT 2020
+000-    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+000-
+000-INFO: [v++ 60-1306] Additional information associated with this v++ compile can be found at:
+000-	Reports: /home/centos/workspace/aes_decryption_benchmark/Emulation-SW/aes256CbcDecryptKernel.build/reports/aes256CbcDecryptKernel
+000-	Log files: /home/centos/workspace/aes_decryption_benchmark/Emulation-SW/aes256CbcDecryptKernel.build/logs/aes256CbcDecryptKernel
+000-INFO: [v++ 60-1657] Initializing dispatch client.
+000-Running Dispatch Server on port:38885
+000-INFO: [v++ 60-1548] Creating build summary session with primary output /home/centos/workspace/aes_decryption_benchmark/Emulation-SW/aes256CbcDecryptKernel.build/aes256CbcDecryptKernel.xo.compile_summary, at Thu Jan 14 21:28:12 2021
+000-INFO: [v++ 60-1316] Initiating connection to rulecheck server, at Thu Jan 14 21:28:12 2021
+000-INFO: [v++ 60-895]   Target platform: /home/centos/src/project_data/aws-fpga/Vitis/aws_platform/xilinx_aws-vu9p-f1_shell-v04261818_201920_2/xilinx_aws-vu9p-f1_shell-v04261818_201920_2.xpfm
+000-INFO: [v++ 60-1578]   This platform contains Xilinx Shell Archive '/home/centos/src/project_data/aws-fpga/Vitis/aws_platform/xilinx_aws-vu9p-f1_shell-v04261818_201920_2/hw/xilinx_aws-vu9p-f1_shell-v04261818_201920_2.xsa'
+000-INFO: [v++ 60-585] Compiling for software emulation target
+000-INFO: [v++ 60-423]   Target device: xilinx_aws-vu9p-f1_shell-v04261818_201920_2
+000-INFO: [v++ 60-242] Creating kernel: 'aes256CbcDecryptKernel'
+000-INFO: [v++ 60-594] Finished kernel compilation
+000-INFO: [v++ 60-586] Created aes256CbcDecryptKernel.build/aes256CbcDecryptKernel.xo
+000-INFO: [v++ 60-2343] Use the vitis_analyzer tool to visualize and navigate the relevant reports. Run the following command. 
+000-    vitis_analyzer /home/centos/workspace/aes_decryption_benchmark/Emulation-SW/aes256CbcDecryptKernel.build/aes256CbcDecryptKernel.xo.compile_summary 
+000-INFO: [v++ 60-791] Total elapsed time: 0h 1m 45s
+000-INFO: [v++ 60-1653] Closing dispatch client.
+000-/opt/Xilinx/Vitis/2020.1/bin/v++ --target sw_emu --link --config common-config.cfg --config aes256CbcDecryptKernel-link.cfg -o"aes256CbcDecryptKernel.xclbin" aes256CbcDecryptKernel.build/aes256CbcDecryptKernel.xo
+000-Option Map File Used: '/opt/Xilinx/Vitis/2020.1/data/vitis/vpp/optMap.xml'
+000-
+000-****** v++ v2020.1 (64-bit)
+000-  **** SW Build 2902540 on Wed May 27 19:54:35 MDT 2020
+000-    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+000-
+000-INFO: [v++ 60-897] Reading --xp value from platform: param:compiler.lockFlowCritSlackThreshold=0
+000-INFO: [v++ 60-897] Reading --xp value from platform: vivado_param:hd.routingContainmentAreaExpansion=true
+000-INFO: [v++ 60-897] Reading --xp value from platform: vivado_param:hd.supportClockNetCrossDiffReconfigurablePartitions=1
+000-INFO: [v++ 60-897] Reading --xp value from platform: vivado_param:bitstream.enablePR=4123
+000-INFO: [v++ 60-897] Reading --xp value from platform: vivado_param:physynth.ultraRAMOptOutput=false
+000-INFO: [v++ 60-897] Reading --xp value from platform: vivado_prop:run.__KERNEL__.{STEPS.SYNTH_DESIGN.ARGS.MAX_URAM_CASCADE_HEIGHT}={1}
+000-INFO: [v++ 60-897] Reading --xp value from platform: vivado_param:synth.elaboration.rodinMoreOptions={rt::set_parameter disableOregPackingUram true}
+000-WARNING: [v++ 60-642] Invalid or deprecated parameter name: compiler.lockFlowCritSlackThreshold
+000-INFO: [v++ 60-1306] Additional information associated with this v++ link can be found at:
+000-	Reports: /home/centos/workspace/aes_decryption_benchmark/Emulation-SW/aes256CbcDecryptKernel.build/reports/link
+000-	Log files: /home/centos/workspace/aes_decryption_benchmark/Emulation-SW/aes256CbcDecryptKernel.build/logs/link
+000-INFO: [v++ 60-1657] Initializing dispatch client.
+000-Running Dispatch Server on port:36033
+000-INFO: [v++ 60-1548] Creating build summary session with primary output /home/centos/workspace/aes_decryption_benchmark/Emulation-SW/aes256CbcDecryptKernel.xclbin.link_summary, at Thu Jan 14 21:30:01 2021
+000-INFO: [v++ 60-1316] Initiating connection to rulecheck server, at Thu Jan 14 21:30:01 2021
+000-INFO: [v++ 60-895]   Target platform: /home/centos/src/project_data/aws-fpga/Vitis/aws_platform/xilinx_aws-vu9p-f1_shell-v04261818_201920_2/xilinx_aws-vu9p-f1_shell-v04261818_201920_2.xpfm
+000-INFO: [v++ 60-1578]   This platform contains Xilinx Shell Archive '/home/centos/src/project_data/aws-fpga/Vitis/aws_platform/xilinx_aws-vu9p-f1_shell-v04261818_201920_2/hw/xilinx_aws-vu9p-f1_shell-v04261818_201920_2.xsa'
+000-INFO: [v++ 60-629] Linking for software emulation target
+000-INFO: [v++ 60-423]   Target device: xilinx_aws-vu9p-f1_shell-v04261818_201920_2
+000-INFO: [v++ 60-645] kernel flags are '-g -I /home/centos/workspace/aes_decryption_benchmark/src/kernel -I /home/centos/workspace/aes_decryption_benchmark/libs/xf_security/L1/include -I /home/centos/workspace/aes_decryption_benchmark/libs/xf_security/L1/include -I /home/centos/workspace/aes_decryption_benchmark/src/kernel -g'
+000-INFO: [v++ 60-586] Created aes256CbcDecryptKernel.xclbin
+000-INFO: [v++ 60-1307] Run completed. Additional information can be found in:
+000-	Steps Log File: /home/centos/workspace/aes_decryption_benchmark/Emulation-SW/aes256CbcDecryptKernel.build/logs/link/link.steps.log
+000-
+000-INFO: [v++ 60-2343] Use the vitis_analyzer tool to visualize and navigate the relevant reports. Run the following command. 
+000-    vitis_analyzer /home/centos/workspace/aes_decryption_benchmark/Emulation-SW/aes256CbcDecryptKernel.xclbin.link_summary 
+000-INFO: [v++ 60-791] Total elapsed time: 0h 0m 25s
+000-INFO: [v++ 60-1653] Closing dispatch client.
+000-g++ -std=c++0x -DVITIS_PLATFORM=xilinx_aws-vu9p-f1_shell-v04261818_201920_2 -D__USE_XOPEN2K8 -I/home/centos/workspace/aes_decryption_benchmark/libs/xf_security/ext/xcl2 -I/home/centos/workspace/aes_decryption_benchmark/libs/xf_security/L1/include -I/home/centos/workspace/aes_decryption_benchmark/src/host -I/home/centos/workspace/aes_decryption_benchmark/src/kernel -I/home/centos/workspace/aes_decryption_benchmark/libs/xf_security/ext/xcl2 -I/opt/xilinx/xrt/include/ -I/opt/Xilinx/Vivado/2020.1/include/ -O0 -g -Wall -O3 -lssl -lcrypto -c -fmessage-length=0 -o "libs/xf_security/ext/xcl2/xcl2.o" "../libs/xf_security/ext/xcl2/xcl2.cpp"
+000-g++ -std=c++0x -DVITIS_PLATFORM=xilinx_aws-vu9p-f1_shell-v04261818_201920_2 -D__USE_XOPEN2K8 -I/home/centos/workspace/aes_decryption_benchmark/libs/xf_security/ext/xcl2 -I/home/centos/workspace/aes_decryption_benchmark/libs/xf_security/L1/include -I/home/centos/workspace/aes_decryption_benchmark/src/host -I/home/centos/workspace/aes_decryption_benchmark/src/kernel -I/home/centos/workspace/aes_decryption_benchmark/libs/xf_security/ext/xcl2 -I/opt/xilinx/xrt/include/ -I/opt/Xilinx/Vivado/2020.1/include/ -O0 -g -Wall -O3 -lssl -lcrypto -c -fmessage-length=0 -o "src/host/main.o" "../src/host/main.cpp"
+000-In file included from /opt/Xilinx/Vivado/2020.1/include/ap_common.h:641:0,
+000-                 from /opt/Xilinx/Vivado/2020.1/include/ap_int.h:54,
+000-                 from ../src/host/main.cpp:16:
+000-/opt/Xilinx/Vivado/2020.1/include/etc/ap_private.h: In function 'bool operator!=(const ap_range_ref<_AP_W, _AP_S>&, const ap_int_base<_AP_W3, _AP_S3>&) [with int _AP_W1 = 512; bool _AP_S1 = false; int _AP_W2 = 128; bool _AP_S2 = false]':
+000/aes_decryption_benchmark/Emulation-SW3429-1-1'<anonymous>.ap_private<512, false, false>::pVal[7]' is used uninitialized in this function [-Wuninitialized]1-/opt/Xilinx/Vivado/2020.1/include/etc/ap_private.h:3429:28: warning: '<anonymous>.ap_private<512, false, false>::pVal[7]' is used uninitialized in this function [-Wuninitialized]
+000-                      : pVal[_AP_N - 1]);
+000-                            ^
+000-In file included from /opt/Xilinx/Vivado/2020.1/include/ap_int.h:55:0,
+000-                 from ../src/host/main.cpp:16:
+000/aes_decryption_benchmark/Emulation-SW1733-1-1'<anonymous>' was declared here0-/opt/Xilinx/Vivado/2020.1/include/ap_int_base.h:1733:63: note: '<anonymous>' was declared here
+000-     return ap_int_base<_AP_W1, false>(op1).operator REL_OP(op2);           \
+000-                                                               ^
+000/aes_decryption_benchmark/Emulation-SW1742-1-1in expansion of macro 'OP_REL_WITH_RANGE'0-/opt/Xilinx/Vivado/2020.1/include/ap_int_base.h:1742:1: note: in expansion of macro 'OP_REL_WITH_RANGE'
+000- OP_REL_WITH_RANGE(!=)
+000- ^
+000-In file included from /opt/Xilinx/Vivado/2020.1/include/ap_common.h:641:0,
+000-                 from /opt/Xilinx/Vivado/2020.1/include/ap_int.h:54,
+000-                 from ../src/host/main.cpp:16:
+000-/opt/Xilinx/Vivado/2020.1/include/etc/ap_private.h: In member function 'ap_range_ref<_AP_W, _AP_S>& ap_range_ref<_AP_W, _AP_S>::operator=(int) [with int _AP_W = 512; bool _AP_S = false]':
+000/aes_decryption_benchmark/Emulation-SW3429-1-1'tmp.ap_private<512, false, false>::pVal[7]' is used uninitialized in this function [-Wuninitialized]1-/opt/Xilinx/Vivado/2020.1/include/etc/ap_private.h:3429:28: warning: 'tmp.ap_private<512, false, false>::pVal[7]' is used uninitialized in this function [-Wuninitialized]
+000-                      : pVal[_AP_N - 1]);
+000-                            ^
+000-In file included from /opt/Xilinx/Vivado/2020.1/include/ap_int.h:56:0,
+000-                 from ../src/host/main.cpp:16:
+000/aes_decryption_benchmark/Emulation-SW380-1-1'tmp' was declared here0-/opt/Xilinx/Vivado/2020.1/include/ap_int_ref.h:380:31: note: 'tmp' was declared here
+000-     ap_int_base<_AP_W, false> tmp(val);                              \
+000-                               ^
+000/aes_decryption_benchmark/Emulation-SW391-1-1in expansion of macro 'ASSIGN_WITH_CTYPE'0-/opt/Xilinx/Vivado/2020.1/include/ap_int_ref.h:391:3: note: in expansion of macro 'ASSIGN_WITH_CTYPE'
+000-   ASSIGN_WITH_CTYPE(int)
+000-   ^
+000-In file included from /opt/Xilinx/Vivado/2020.1/include/ap_common.h:641:0,
+000-                 from /opt/Xilinx/Vivado/2020.1/include/ap_int.h:54,
+000-                 from ../src/host/main.cpp:16:
+000-/opt/Xilinx/Vivado/2020.1/include/etc/ap_private.h: In member function 'ap_range_ref<_AP_W, _AP_S>& ap_range_ref<_AP_W, _AP_S>::operator=(const ap_range_ref<_AP_W2, _AP_S2>&) [with int _AP_W2 = 128; bool _AP_S2 = false; int _AP_W = 512; bool _AP_S = false]':
+000/aes_decryption_benchmark/Emulation-SW3429-1-1'<anonymous>.ap_private<128, false, false>::pVal[1]' is used uninitialized in this function [-Wuninitialized]1-/opt/Xilinx/Vivado/2020.1/include/etc/ap_private.h:3429:28: warning: '<anonymous>.ap_private<128, false, false>::pVal[1]' is used uninitialized in this function [-Wuninitialized]
+000-                      : pVal[_AP_N - 1]);
+000-                            ^
+000-In file included from /opt/Xilinx/Vivado/2020.1/include/ap_int.h:56:0,
+000-                 from ../src/host/main.cpp:16:
+000/aes_decryption_benchmark/Emulation-SW428-1-1'<anonymous>' was declared here0-/opt/Xilinx/Vivado/2020.1/include/ap_int_ref.h:428:59: note: '<anonymous>' was declared here
+000-     return operator=((const ap_int_base<_AP_W2, false>)val);
+000-                                                           ^
+000-In file included from /opt/Xilinx/Vivado/2020.1/include/ap_common.h:641:0,
+000-                 from /opt/Xilinx/Vivado/2020.1/include/ap_int.h:54,
+000-                 from ../src/host/main.cpp:16:
+000-/opt/Xilinx/Vivado/2020.1/include/etc/ap_private.h: In member function 'ap_range_ref<_AP_W, _AP_S>& ap_range_ref<_AP_W, _AP_S>::operator=(unsigned char) [with int _AP_W = 128; bool _AP_S = false]':
+000/aes_decryption_benchmark/Emulation-SW3429-1-1'tmp.ap_private<128, false, false>::pVal[1]' is used uninitialized in this function [-Wuninitialized]1-/opt/Xilinx/Vivado/2020.1/include/etc/ap_private.h:3429:28: warning: 'tmp.ap_private<128, false, false>::pVal[1]' is used uninitialized in this function [-Wuninitialized]
+000-                      : pVal[_AP_N - 1]);
+000-                            ^
+000-In file included from /opt/Xilinx/Vivado/2020.1/include/ap_int.h:56:0,
+000-                 from ../src/host/main.cpp:16:
+000/aes_decryption_benchmark/Emulation-SW380-1-1'tmp' was declared here0-/opt/Xilinx/Vivado/2020.1/include/ap_int_ref.h:380:31: note: 'tmp' was declared here
+000-     ap_int_base<_AP_W, false> tmp(val);                              \
+000-                               ^
+000/aes_decryption_benchmark/Emulation-SW388-1-1in expansion of macro 'ASSIGN_WITH_CTYPE'0-/opt/Xilinx/Vivado/2020.1/include/ap_int_ref.h:388:3: note: in expansion of macro 'ASSIGN_WITH_CTYPE'
+000-   ASSIGN_WITH_CTYPE(unsigned char)
+000-   ^
+000-In file included from /opt/Xilinx/Vivado/2020.1/include/ap_common.h:641:0,
+000-                 from /opt/Xilinx/Vivado/2020.1/include/ap_int.h:54,
+000-                 from ../src/host/main.cpp:16:
+000-/opt/Xilinx/Vivado/2020.1/include/etc/ap_private.h: In member function 'std::string ap_range_ref<_AP_W, _AP_S>::to_string(signed char) const [with int _AP_W = 512; bool _AP_S = false; std::string = std::basic_string<char>]':
+000/aes_decryption_benchmark/Emulation-SW3429-1-1'ret.ap_private<512, false, false>::pVal[7]' is used uninitialized in this function [-Wuninitialized]1-/opt/Xilinx/Vivado/2020.1/include/etc/ap_private.h:3429:28: warning: 'ret.ap_private<512, false, false>::pVal[7]' is used uninitialized in this function [-Wuninitialized]
+000-                      : pVal[_AP_N - 1]);
+000-                            ^
+000-In file included from /opt/Xilinx/Vivado/2020.1/include/ap_int.h:56:0,
+000-                 from ../src/host/main.cpp:16:
+000/aes_decryption_benchmark/Emulation-SW727-1-1'ret' was declared here0-/opt/Xilinx/Vivado/2020.1/include/ap_int_ref.h:727:31: note: 'ret' was declared here
+000-     ap_int_base<_AP_W, false> ret;
+000-                               ^
+000-g++ -o "aes_decryption_benchmark" libs/xf_security/ext/xcl2/xcl2.o src/host/main.o -lssl -lcrypto -lxilinxopencl -lpthread -lrt -lstdc++ -lmpfr -lgmp -lhlsmc++-GCC46 -lIp_floating_point_v7_0_bitacc_cmodel -lIp_xfft_v9_1_bitacc_cmodel -lIp_fir_compiler_v7_2_bitacc_cmodel -lIp_dds_compiler_v6_0_bitacc_cmodel -L/opt/xilinx/xrt/lib/ -L/opt/Xilinx/Vivado/2020.1/lnx64/tools/fpo_v7_0 -L/opt/Xilinx/Vivado/2020.1/lnx64/lib/csim -L/opt/Xilinx/Vivado/2020.1/lnx64/tools/dds_v6_0 -L/opt/Xilinx/Vivado/2020.1/lnx64/tools/fir_v7_0 -L/opt/Xilinx/Vivado/2020.1/lnx64/tools/fft_v9_1 -Wl,-rpath-link,/opt/xilinx/xrt/lib -Wl,-rpath,/opt/Xilinx/Vivado/2020.1/lnx64/lib/csim -Wl,-rpath,/opt/Xilinx/Vivado/2020.1/lnx64/tools/fpo_v7_0 -Wl,-rpath,/opt/Xilinx/Vivado/2020.1/lnx64/tools/fft_v9_1 -Wl,-rpath,/opt/Xilinx/Vivado/2020.1/lnx64/tools/fir_v7_0 -Wl,-rpath,/opt/Xilinx/Vivado/2020.1/lnx64/tools/dds_v6_0
+000/aes_decryption_benchmark/Emulation-SW0-1-1libgmp.so.11, needed by /opt/Xilinx/Vivado/2020.1/lnx64/tools/fft_v9_1/libIp_xfft_v9_1_bitacc_cmodel.so, may conflict with libgmp.so.71-/bin/ld: warning: libgmp.so.11, needed by /opt/Xilinx/Vivado/2020.1/lnx64/tools/fft_v9_1/libIp_xfft_v9_1_bitacc_cmodel.so, may conflict with libgmp.so.7
+000-/opt/Xilinx/Vitis/2020.1/bin/v++ --package --config package.cfg aes256CbcDecryptKernel.xclbin
+000-Option Map File Used: '/opt/Xilinx/Vitis/2020.1/data/vitis/vpp/optMap.xml'
+000-
+000-****** v++ v2020.1 (64-bit)
+000-  **** SW Build 2902540 on Wed May 27 19:54:35 MDT 2020
+000-    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+000-
+000-INFO: [v++ 60-1306] Additional information associated with this v++ package can be found at:
+000-	Reports: /home/centos/workspace/aes_decryption_benchmark/Emulation-SW/package.build/reports/package
+000-	Log files: /home/centos/workspace/aes_decryption_benchmark/Emulation-SW/package.build/logs/package
+000-INFO: [v++ 60-1657] Initializing dispatch client.
+000-Running Dispatch Server on port:46636
+000-INFO: [v++ 60-1548] Creating build summary session with primary output ./v++.package_summary, at Thu Jan 14 21:30:35 2021
+000-INFO: [v++ 60-1316] Initiating connection to rulecheck server, at Thu Jan 14 21:30:35 2021
+000-INFO: [v++ 60-895]   Target platform: /home/centos/src/project_data/aws-fpga/Vitis/aws_platform/xilinx_aws-vu9p-f1_shell-v04261818_201920_2/xilinx_aws-vu9p-f1_shell-v04261818_201920_2.xpfm
+000-INFO: [v++ 60-1578]   This platform contains Xilinx Shell Archive '/home/centos/src/project_data/aws-fpga/Vitis/aws_platform/xilinx_aws-vu9p-f1_shell-v04261818_201920_2/hw/xilinx_aws-vu9p-f1_shell-v04261818_201920_2.xsa'
+000-INFO: [v++ 60-2256] Packaging for software emulation
+000-INFO: [v++ 60-2343] Use the vitis_analyzer tool to visualize and navigate the relevant reports. Run the following command. 
+000-    vitis_analyzer ./v++.package_summary 
+000-INFO: [v++ 60-791] Total elapsed time: 0h 0m 14s
+000-INFO: [v++ 60-1653] Closing dispatch client.
+000-/opt/Xilinx/Vitis/2020.1/bin/emconfigutil --od . --nd 1  --platform /home/centos/src/project_data/aws-fpga/Vitis/aws_platform/xilinx_aws-vu9p-f1_shell-v04261818_201920_2/xilinx_aws-vu9p-f1_shell-v04261818_201920_2.xpfm
+000-
+000-****** configutil v2020.1 (64-bit)
+000-  **** SW Build 2902540 on Wed May 27 19:54:35 MDT 2020
+000-    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+000-
+000-INFO: [ConfigUtil 60-895]   Target platform: /home/centos/src/project_data/aws-fpga/Vitis/aws_platform/xilinx_aws-vu9p-f1_shell-v04261818_201920_2/xilinx_aws-vu9p-f1_shell-v04261818_201920_2.xpfm
+000-INFO: [ConfigUtil 60-1578]   This platform contains Xilinx Shell Archive '/home/centos/src/project_data/aws-fpga/Vitis/aws_platform/xilinx_aws-vu9p-f1_shell-v04261818_201920_2/hw/xilinx_aws-vu9p-f1_shell-v04261818_201920_2.xsa'
+000-emulation configuration file `emconfig.json` is created in . directory 
+00255-
+21:30:47 Build Finished (took 2m:46s.834ms)
+

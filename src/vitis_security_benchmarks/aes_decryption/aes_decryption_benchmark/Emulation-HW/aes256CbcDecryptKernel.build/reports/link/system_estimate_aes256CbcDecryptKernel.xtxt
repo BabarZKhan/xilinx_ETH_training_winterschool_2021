@@ -1,0 +1,81 @@
+===============================================================================
+Version:    v++ v2020.1 (64-bit)
+Build:      SW Build 2902540 on Wed May 27 19:54:35 MDT 2020
+Copyright:  Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+Created:    Thu Jan 14 21:45:47 2021
+===============================================================================
+
+-------------------------------------------------------------------------------
+Design Name:             aes256CbcDecryptKernel
+Target Device:           xilinx:aws-vu9p-f1:shell-v04261818:201920.2
+Target Clock:            250.000000MHz
+Total number of kernels: 1
+-------------------------------------------------------------------------------
+
+Kernel Summary
+Kernel Name             Type  Target              OpenCL Library          Compute Units
+----------------------  ----  ------------------  ----------------------  -------------
+aes256CbcDecryptKernel  c     fpga0:OCL_REGION_0  aes256CbcDecryptKernel  1
+
+
+-------------------------------------------------------------------------------
+OpenCL Binary:     aes256CbcDecryptKernel
+Kernels mapped to: clc_region
+
+Timing Information (MHz)
+Compute Unit              Kernel Name             Module Name                         Target Frequency  Estimated Frequency
+------------------------  ----------------------  ----------------------------------  ----------------  -------------------
+aes256CbcDecryptKernel_1  aes256CbcDecryptKernel  readBlock_128u_4u_256u_107          250               342.465759
+aes256CbcDecryptKernel_1  aes256CbcDecryptKernel  splitText_4u_256u_s                 250               342.465759
+aes256CbcDecryptKernel_1  aes256CbcDecryptKernel  scanMultiChannel_4u_256u_128u_104   250               342.465759
+aes256CbcDecryptKernel_1  aes256CbcDecryptKernel  cipherModeParallel_4u_256u_entry98  250               685.871094
+aes256CbcDecryptKernel_1  aes256CbcDecryptKernel  updateKey                           250               384.467499
+aes256CbcDecryptKernel_1  aes256CbcDecryptKernel  process_r                           250               672.042969
+aes256CbcDecryptKernel_1  aes256CbcDecryptKernel  singleCipherMode_256u_75            250               376.789734
+aes256CbcDecryptKernel_1  aes256CbcDecryptKernel  singleCipherMode_256u_76            250               376.789734
+aes256CbcDecryptKernel_1  aes256CbcDecryptKernel  singleCipherMode_256u_77            250               376.789734
+aes256CbcDecryptKernel_1  aes256CbcDecryptKernel  singleCipherMode_256u_78            250               376.789734
+aes256CbcDecryptKernel_1  aes256CbcDecryptKernel  cipherModeParallel_4u_256u_s        250               376.789734
+aes256CbcDecryptKernel_1  aes256CbcDecryptKernel  cipherModeProcess_4u_256u_s         250               376.789734
+aes256CbcDecryptKernel_1  aes256CbcDecryptKernel  mergeResult_128u_4u_s               250               233.535721
+aes256CbcDecryptKernel_1  aes256CbcDecryptKernel  writeOut_128u_s                     250               342.465759
+aes256CbcDecryptKernel_1  aes256CbcDecryptKernel  aes256CbcDecryptKernel              250               233.535721
+
+Latency Information
+Compute Unit              Kernel Name             Module Name                         Start Interval  Best (cycles)  Avg (cycles)  Worst (cycles)  Best (absolute)  Avg (absolute)  Worst (absolute)
+------------------------  ----------------------  ----------------------------------  --------------  -------------  ------------  --------------  ---------------  --------------  ----------------
+aes256CbcDecryptKernel_1  aes256CbcDecryptKernel  readBlock_128u_4u_256u_107          undef           undef          undef         undef           undef            undef           undef
+aes256CbcDecryptKernel_1  aes256CbcDecryptKernel  splitText_4u_256u_s                 undef           undef          undef         undef           undef            undef           undef
+aes256CbcDecryptKernel_1  aes256CbcDecryptKernel  scanMultiChannel_4u_256u_128u_104   undef           undef          undef         undef           undef            undef           undef
+aes256CbcDecryptKernel_1  aes256CbcDecryptKernel  cipherModeParallel_4u_256u_entry98  0               0              0             0               0 ns             0 ns            0 ns
+aes256CbcDecryptKernel_1  aes256CbcDecryptKernel  updateKey                           146             146            146           146             0.584 us         0.584 us        0.584 us
+aes256CbcDecryptKernel_1  aes256CbcDecryptKernel  process_r                           1               14             14            14              56.000 ns        56.000 ns       56.000 ns
+aes256CbcDecryptKernel_1  aes256CbcDecryptKernel  singleCipherMode_256u_75            undef           undef          undef         undef           undef            undef           undef
+aes256CbcDecryptKernel_1  aes256CbcDecryptKernel  singleCipherMode_256u_76            undef           undef          undef         undef           undef            undef           undef
+aes256CbcDecryptKernel_1  aes256CbcDecryptKernel  singleCipherMode_256u_77            undef           undef          undef         undef           undef            undef           undef
+aes256CbcDecryptKernel_1  aes256CbcDecryptKernel  singleCipherMode_256u_78            undef           undef          undef         undef           undef            undef           undef
+aes256CbcDecryptKernel_1  aes256CbcDecryptKernel  cipherModeParallel_4u_256u_s        undef           undef          undef         undef           undef            undef           undef
+aes256CbcDecryptKernel_1  aes256CbcDecryptKernel  cipherModeProcess_4u_256u_s         undef           undef          undef         undef           undef            undef           undef
+aes256CbcDecryptKernel_1  aes256CbcDecryptKernel  mergeResult_128u_4u_s               undef           undef          undef         undef           undef            undef           undef
+aes256CbcDecryptKernel_1  aes256CbcDecryptKernel  writeOut_128u_s                     undef           undef          undef         undef           undef            undef           undef
+aes256CbcDecryptKernel_1  aes256CbcDecryptKernel  aes256CbcDecryptKernel              undef           undef          undef         undef           undef            undef           undef
+
+Area Information
+Compute Unit              Kernel Name             Module Name                         FF     LUT    DSP  BRAM  URAM
+------------------------  ----------------------  ----------------------------------  -----  -----  ---  ----  ----
+aes256CbcDecryptKernel_1  aes256CbcDecryptKernel  readBlock_128u_4u_256u_107          2295   1795   0    0     0
+aes256CbcDecryptKernel_1  aes256CbcDecryptKernel  splitText_4u_256u_s                 712    538    0    0     0
+aes256CbcDecryptKernel_1  aes256CbcDecryptKernel  scanMultiChannel_4u_256u_128u_104   3503   3013   0    0     0
+aes256CbcDecryptKernel_1  aes256CbcDecryptKernel  cipherModeParallel_4u_256u_entry98  2      55     0    0     0
+aes256CbcDecryptKernel_1  aes256CbcDecryptKernel  updateKey                           3152   912    0    1     0
+aes256CbcDecryptKernel_1  aes256CbcDecryptKernel  process_r                           9487   7468   0    0     0
+aes256CbcDecryptKernel_1  aes256CbcDecryptKernel  singleCipherMode_256u_75            15611  9007   0    1     0
+aes256CbcDecryptKernel_1  aes256CbcDecryptKernel  singleCipherMode_256u_76            15611  9007   0    1     0
+aes256CbcDecryptKernel_1  aes256CbcDecryptKernel  singleCipherMode_256u_77            15611  9007   0    1     0
+aes256CbcDecryptKernel_1  aes256CbcDecryptKernel  singleCipherMode_256u_78            15611  9007   0    1     0
+aes256CbcDecryptKernel_1  aes256CbcDecryptKernel  cipherModeParallel_4u_256u_s        62857  36526  0    4     0
+aes256CbcDecryptKernel_1  aes256CbcDecryptKernel  cipherModeProcess_4u_256u_s         62927  36789  0    4     0
+aes256CbcDecryptKernel_1  aes256CbcDecryptKernel  mergeResult_128u_4u_s               362    550    0    0     0
+aes256CbcDecryptKernel_1  aes256CbcDecryptKernel  writeOut_128u_s                     1032   735    0    0     0
+aes256CbcDecryptKernel_1  aes256CbcDecryptKernel  aes256CbcDecryptKernel              73866  48196  0    135   0
+-------------------------------------------------------------------------------

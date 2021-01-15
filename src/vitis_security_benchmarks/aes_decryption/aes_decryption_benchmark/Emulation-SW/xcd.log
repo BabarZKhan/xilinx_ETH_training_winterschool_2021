@@ -1,0 +1,11 @@
+Thu Jan 14 21:30:26 2021: Server was asked to start on port: '46636'
+Thu Jan 14 21:30:26 2021: Server is using token UUID: '8f7fc2e9-8a88-48b5-b176-de548f73213c'
+Thu Jan 14 21:30:26 2021: SESSION_MGR: creating session with session uuid: '6d04a3e9-ade5-4ab9-8d63-1f78fcd2ec76' and name 'default'
+Thu Jan 14 21:30:26 2021: Attempting to start server on port '46636'
+Thu Jan 14 21:30:26 2021: XCD main fifo: created main fifo '/tmp/xcdmain8f7fc2e9-8a88-48b5-b176-de548f73213c', fd read = 13
+Thu Jan 14 21:30:26 2021: Running Dispatch Server
+Thu Jan 14 21:30:26 2021: Version 2.0.0
+Thu Jan 14 21:30:35 2021: Dispatch Server: Accepted socket connection from client
+Thu Jan 14 21:30:35 2021: EXCHANGE_TOKEN received, server token: 8f7fc2e9-8a88-48b5-b176-de548f73213c, passed token: 8f7fc2e9-8a88-48b5-b176-de548f73213c
+Thu Jan 14 21:30:35 2021: SESSION_MGR: creating session with session uuid: '88c9cee8-228e-4566-b34e-26ef5c150a06' and name 'v++_package_a'
+Thu Jan 14 21:30:39 2021: SESSION_MGR: closing session for UUID '88c9cee8-228e-4566-b34e-26ef5c150a06' with name 'v++_package_a'

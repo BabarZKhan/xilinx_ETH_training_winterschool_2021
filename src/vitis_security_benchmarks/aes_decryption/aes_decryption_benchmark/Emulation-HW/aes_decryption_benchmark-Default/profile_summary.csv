@@ -1,0 +1,138 @@
+Profile Summary
+Generated on: 2021-01-14 21:46:52
+Msec since Epoch: 1610660812574
+Profiled application: aes_decryption_benchmark
+Target platform: 
+Tool version: 2020.1
+XRT build version: 2.6.0
+Build version branch: 2020.1
+Build version hash: 12115fd4054cb46a5ade62fafa74c523f59116e6
+Build version date: 2020-07-09 15:20:59 
+Target devices: xilinx_aws-vu9p-f1_shell-v04261818_201920_2-0
+Flow mode: Hardware Emulation
+
+OpenCL API Calls
+API Name,Number Of Calls,Total Time (ms),Minimum Time (ms),Average Time (ms),Maximum Time (ms),
+clCreateProgramWithBinary,1,29235,29235,29235,29235,
+clReleaseContext,1,4696.37,4696.37,4696.37,4696.37,
+clFlush,1,3577.65,3577.65,3577.65,3577.65,
+clReleaseProgram,1,3177.43,3177.43,3177.43,3177.43,
+clEnqueueTask,2,426.249,2.02753,213.124,424.221,
+clCreateBuffer,4,12.3974,0.325371,3.09935,6.60685,
+clCreateKernel,1,2.11951,2.11951,2.11951,2.11951,
+clReleaseMemObject,8,1.37753,0.004814,0.172191,0.79656,
+clEnqueueMigrateMemObjects,4,1.18855,0.04151,0.297136,0.630641,
+clReleaseKernel,1,0.675958,0.675958,0.675958,0.675958,
+clRetainMemObject,4,0.105962,0.007833,0.0264905,0.076926,
+clSetKernelArg,4,0.097625,0.00786,0.0244063,0.067376,
+clReleaseEvent,6,0.069024,0.004839,0.011504,0.027685,
+clGetPlatformIDs,2,0.062514,0.005316,0.031257,0.057198,
+clCreateContext,1,0.028184,0.028184,0.028184,0.028184,
+clFinish,2,0.023153,0.008133,0.0115765,0.01502,
+clReleaseDevice,2,0.016654,0.005663,0.008327,0.010991,
+clCreateCommandQueue,1,0.01628,0.01628,0.01628,0.01628,
+clGetDeviceIDs,2,0.014949,0.004974,0.0074745,0.009975,
+clGetDeviceInfo,2,0.014747,0.006689,0.0073735,0.008058,
+clReleaseCommandQueue,1,0.013705,0.013705,0.013705,0.013705,
+clGetPlatformInfo,2,0.01097,0.005047,0.005485,0.005923,
+clRetainDevice,2,0.01018,0.004875,0.00509,0.005305,
+
+
+Kernel Execution (includes estimated device times)
+Kernel,Number Of Enqueues,Total Time (ms),Minimum Time (ms),Average Time (ms),Maximum Time (ms),
+aes256CbcDecryptKernel,2,0.012145,0.005734,0.0060725,0.006411,
+
+
+Compute Unit Utilization (includes estimated device times)
+Device,Compute Unit,Kernel,Global Work Size,Local Work Size,Number Of Calls,Dataflow Execution,Max Overlapping Executions,Dataflow Acceleration,Total Time (ms),Minimum Time (ms),Average Time (ms),Maximum Time (ms),Clock Frequency (MHz),
+xilinx_aws-vu9p-f1_shell-v04261818_201920_2-0,aes256CbcDecryptKernel_1,aes256CbcDecryptKernel,1:1:1,1:1:1,2,Yes,2,2.025615x,0.00325333,0.00325333,0.003295,0.00333667,300,
+
+
+Data Transfer: Host to Global Memory
+Context:Number of Devices,Transfer Type,Number Of Buffer Transfers,Transfer Rate (MB/s),Average Bandwidth Utilization (%),Average Buffer Size (KB),Total Time (ms),Average Time (ms),
+context0:1,READ,2,N/A,N/A,8.192,N/A,N/A,
+context0:1,WRITE,2,N/A,N/A,8.448,N/A,N/A,
+
+
+Data Transfer: Kernels to Global Memory
+Device,Compute Unit/Port Name,Kernel Arguments,Memory Resources,Transfer Type,Number Of Transfers,Transfer Rate (MB/s),Average Bandwidth Utilization (%),Average Size (KB),Average Latency (ns),
+xilinx_aws-vu9p-f1_shell-v04261818_201920_2-0,aes256CbcDecryptKernel_1/m_axi_gmem0_0,inputData,DDR[0],READ,8,11898.6,100,2.112,440,
+xilinx_aws-vu9p-f1_shell-v04261818_201920_2-0,aes256CbcDecryptKernel_1/m_axi_gmem0_1,outputData,DDR[1],WRITE,4,12349.7,100,4.096,445,
+
+
+Top Data Transfer: Kernels to Global Memory
+Device,Compute Unit,Number of Transfers,Average Bytes per Transfer,Transfer Efficiency (%),Total Data Transfer (MB),Total Write (MB),Total Read (MB),Total Transfer Rate (MB/s),
+xilinx_aws-vu9p-f1_shell-v04261818_201920_2-0,aes256CbcDecryptKernel_1,12,2773.33,67.7083,0.03328,0.016384,0.016896,12116.5,
+
+
+Top Kernel Execution
+Kernel Instance Address,Kernel,Context ID,Command Queue ID,Device,Start Time (ms),Duration (ms),Global Work Size,Local Work Size,
+19822496,aes256CbcDecryptKernel,0,0,xilinx_aws-vu9p-f1_shell-v04261818_201920_2-0,0.032348,0.006411,1:1:1,1:1:1,
+19822496,aes256CbcDecryptKernel,0,0,xilinx_aws-vu9p-f1_shell-v04261818_201920_2-0,0.031111,0.005734,1:1:1,1:1:1,
+
+
+Top Memory Writes: Host to Global Memory
+Buffer Address,Context ID,Command Queue ID,Start Time (ms),Duration (ms),Buffer Size (KB),Writing Rate(MB/s),
+274877906944,0,0,29284.4,N/A,8.448,N/A,
+274877919232,0,0,29281.7,N/A,8.448,N/A,
+
+
+Top Memory Reads: Host to Global Memory
+Buffer Address,Context ID,Command Queue ID,Start Time (ms),Duration (ms),Buffer Size (KB),Reading Rate(MB/s),
+17179877376,0,0,32373.4,N/A,8.192,N/A,
+17179869184,0,0,33285.9,N/A,8.192,N/A,
+
+
+Guidance Parameters
+Parameter,Element,Value,
+DEVICE_EXEC_TIME,xilinx_aws-vu9p-f1_shell-v04261818_201920_2-0,0.007648,
+CU_CALLS,xilinx_aws-vu9p-f1_shell-v04261818_201920_2-0|aes256CbcDecryptKernel_1,2,
+NUM_MONITORS,xilinx_aws-vu9p-f1_shell-v04261818_201920_2-0|XCL_PERF_MON_ACCEL|1,1,
+NUM_MONITORS,xilinx_aws-vu9p-f1_shell-v04261818_201920_2-0|XCL_PERF_MON_MEMORY|2,2,
+NUM_MONITORS,xilinx_aws-vu9p-f1_shell-v04261818_201920_2-0|XCL_PERF_MON_STR|0,0,
+MIGRATE_MEM,host,4,
+MEMORY_USAGE,xilinx_aws-vu9p-f1_shell-v04261818_201920_2-0|DDR[0],1,
+MEMORY_USAGE,xilinx_aws-vu9p-f1_shell-v04261818_201920_2-0|DDR[1],1,
+MEMORY_USAGE,xilinx_aws-vu9p-f1_shell-v04261818_201920_2-0|DDR[2],0,
+MEMORY_USAGE,xilinx_aws-vu9p-f1_shell-v04261818_201920_2-0|DDR[3],0,
+MEMORY_USAGE,xilinx_aws-vu9p-f1_shell-v04261818_201920_2-0|PLRAM[0],0,
+MEMORY_USAGE,xilinx_aws-vu9p-f1_shell-v04261818_201920_2-0|PLRAM[1],0,
+MEMORY_USAGE,xilinx_aws-vu9p-f1_shell-v04261818_201920_2-0|PLRAM[2],0,
+PLRAM_DEVICE,all,1,
+HBM_DEVICE,all,0,
+KDMA_DEVICE,all,0,
+P2P_DEVICE,all,0,
+P2P_HOST_TRANSFERS,host,0,
+PORT_BIT_WIDTH,aes256CbcDecryptKernel_1/m_axi_gmem0_0,512,
+PORT_BIT_WIDTH,aes256CbcDecryptKernel_1/m_axi_gmem0_1,512,
+KERNEL_COUNT,aes256CbcDecryptKernel,1,
+OBJECTS_RELEASED,all,1,
+TRACE_MEMORY,all,NA,
+CU_CONTEXT_EN,all,0,
+MAX_PARALLEL_KERNEL_ENQUEUES,aes256CbcDecryptKernel,2,
+COMMAND_QUEUE_OOO,19502624,1,
+PLRAM_SIZE_BYTES,xilinx_aws-vu9p-f1_shell-v04261818_201920_2-0,131072,
+KERNEL_BUFFER_INFO,aes256CbcDecryptKernel|inputData|DDR[0]|1,8448,
+KERNEL_BUFFER_INFO,aes256CbcDecryptKernel|outputData|DDR[1]|1,8192,
+TRACE_BUFFER_FULL,xilinx_aws-vu9p-f1_shell-v04261818_201920_2-0,0,
+MEMORY_TYPE_BIT_WIDTH,xilinx_aws-vu9p-f1_shell-v04261818_201920_2-0|DDR,512,
+MEMORY_TYPE_BIT_WIDTH,xilinx_aws-vu9p-f1_shell-v04261818_201920_2-0|HBM,256,
+MEMORY_TYPE_BIT_WIDTH,xilinx_aws-vu9p-f1_shell-v04261818_201920_2-0|PLRAM,512,
+XRT_INI_SETTING,continuous_trace,0,
+XRT_INI_SETTING,continuous_trace_interval_ms,10,
+XRT_INI_SETTING,data_transfer_trace,fine,
+XRT_INI_SETTING,launch_waveform,batch,
+XRT_INI_SETTING,lop_trace,0,
+XRT_INI_SETTING,power_profile,0,
+XRT_INI_SETTING,profile,1,
+XRT_INI_SETTING,stall_trace,off,
+XRT_INI_SETTING,timeline_trace,1,
+XRT_INI_SETTING,trace_buffer_size,1M,
+XRT_INI_SETTING,verbosity,4,
+BUFFER_RD_ACTIVE_TIME_MS,all,1.0233,
+BUFFER_WR_ACTIVE_TIME_MS,all,958.83,
+BUFFER_TX_ACTIVE_TIME_MS,all,4004.72,
+APPLICATION_RUN_TIME_MS,all,41163.3,
+TOTAL_KERNEL_RUN_TIME_MS,all,4000.92,
+
+

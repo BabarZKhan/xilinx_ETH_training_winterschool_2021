@@ -1,0 +1,32 @@
+XRT Build Version: 2.6.0 (2020.1)
+       Build Date: 2020-07-09 15:20:59
+          Hash ID: 12115fd4054cb46a5ade62fafa74c523f59116e6
+Creating a default 'in-memory' xclbin image.
+
+Section: 'BITSTREAM'(0) was successfully added.
+Size   : 2924400 bytes
+Format : RAW
+File   : '/home/centos/workspace/aes_decryption_benchmark/Emulation-SW/aes256CbcDecryptKernel.build/link/int/aes256CbcDecryptKernel.so'
+WARNING: Skipping CLOCK_FREQ_TOPOLOGY section for count size is zero.
+WARNING: Section 'CLOCK_FREQ_TOPOLOGY' content is empty.  No data in the given JSON file.
+
+Section: 'CLOCK_FREQ_TOPOLOGY'(11) was empty.  No action taken.
+Format : JSON
+File   : '/home/centos/workspace/aes_decryption_benchmark/Emulation-SW/aes256CbcDecryptKernel.build/link/int/aes256CbcDecryptKernel_xml.rtd'
+
+Section: 'BUILD_METADATA'(14) was successfully added.
+Size   : 1977 bytes
+Format : JSON
+File   : '/home/centos/workspace/aes_decryption_benchmark/Emulation-SW/aes256CbcDecryptKernel.build/link/int/aes256CbcDecryptKernel_build.rtd'
+
+Section: 'EMBEDDED_METADATA'(2) was successfully added.
+Size   : 2328 bytes
+Format : RAW
+File   : '/home/centos/workspace/aes_decryption_benchmark/Emulation-SW/aes256CbcDecryptKernel.build/link/int/aes256CbcDecryptKernel.xml'
+
+Section: 'DEBUG_DATA'(4) was successfully added.
+Size   : 0 bytes
+Format : RAW
+File   : '/dev/null'
+Successfully wrote (2932585 bytes) to the output file: /home/centos/workspace/aes_decryption_benchmark/Emulation-SW/aes256CbcDecryptKernel.xclbin
+Leaving xclbinutil.

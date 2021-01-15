@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xd:acceleratorMap xmlns:xd="http://www.xilinx.com/xidane" xd:functionName="aes256CbcDecryptKernel" xd:componentRef="aes256CbcDecryptKernel" xd:initiationInterval="x" xd:clockPeriod="4.000" xd:sequential="true" xd:hostMachine="64" xd:reset="control">
+  <xd:controlReg xd:name="control" xd:interfaceRef="s_axi_control" xd:busTypeRef="axilite" xd:type="generic_axi_lite" xd:offset="0x0"/>
+  <xd:arg xd:name="*(inputData)" xd:originalName="inputData" xd:direction="inout" xd:interfaceRef="m_axi_gmem0_0" xd:busTypeRef="aximm" xd:arraySize="1073741924" xd:dataWidth="512" xd:bufferDirection="in"/>
+  <xd:arg xd:name="*(outputData)" xd:originalName="outputData" xd:direction="inout" xd:interfaceRef="m_axi_gmem0_1" xd:busTypeRef="aximm" xd:arraySize="1073741824" xd:dataWidth="512" xd:bufferDirection="out"/>
+  <xd:latencyEstimates xd:best-case="undef" xd:worst-case="undef" xd:average-case="undef"/>
+  <xd:resourceEstimates xd:LUT="48196" xd:FF="73866" xd:BRAM="135" xd:DSP="16"/>
+</xd:acceleratorMap>

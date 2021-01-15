@@ -1,0 +1,379 @@
+2021-01-14T21:32:13.97926500255-21:32:14 **** Incremental Build of configuration Emulation-HW for project aes_decryption_benchmark ****
+000-make -j8 incremental 
+000-/opt/Xilinx/Vitis/2020.1/bin/v++ --target hw_emu --compile -I"../src/kernel" --config common-config.cfg --config aes256CbcDecryptKernel-aes256CbcDecryptKernel-compile.cfg -I/home/centos/workspace/aes_decryption_benchmark/libs/xf_security/L1/include -I/home/centos/workspace/aes_decryption_benchmark/libs/xf_security/L1/include -I/home/centos/workspace/aes_decryption_benchmark/src/kernel -o"aes256CbcDecryptKernel.build/aes256CbcDecryptKernel.xo" "../src/kernel/aes256CbcDecryptKernel.cpp"
+000-Option Map File Used: '/opt/Xilinx/Vitis/2020.1/data/vitis/vpp/optMap.xml'
+000-
+000-****** v++ v2020.1 (64-bit)
+000-  **** SW Build 2902540 on Wed May 27 19:54:35 MDT 2020
+000-    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+000-
+000-INFO: [v++ 60-1306] Additional information associated with this v++ compile can be found at:
+000-	Reports: /home/centos/workspace/aes_decryption_benchmark/Emulation-HW/aes256CbcDecryptKernel.build/reports/aes256CbcDecryptKernel
+000-	Log files: /home/centos/workspace/aes_decryption_benchmark/Emulation-HW/aes256CbcDecryptKernel.build/logs/aes256CbcDecryptKernel
+000-INFO: [v++ 60-1657] Initializing dispatch client.
+000-Running Dispatch Server on port:38715
+000-INFO: [v++ 60-1548] Creating build summary session with primary output /home/centos/workspace/aes_decryption_benchmark/Emulation-HW/aes256CbcDecryptKernel.build/aes256CbcDecryptKernel.xo.compile_summary, at Thu Jan 14 21:32:27 2021
+000-INFO: [v++ 60-1316] Initiating connection to rulecheck server, at Thu Jan 14 21:32:27 2021
+000-INFO: [v++ 60-895]   Target platform: /home/centos/src/project_data/aws-fpga/Vitis/aws_platform/xilinx_aws-vu9p-f1_shell-v04261818_201920_2/xilinx_aws-vu9p-f1_shell-v04261818_201920_2.xpfm
+000-INFO: [v++ 60-1578]   This platform contains Xilinx Shell Archive '/home/centos/src/project_data/aws-fpga/Vitis/aws_platform/xilinx_aws-vu9p-f1_shell-v04261818_201920_2/hw/xilinx_aws-vu9p-f1_shell-v04261818_201920_2.xsa'
+000-INFO: [v++ 60-585] Compiling for hardware emulation target
+000-INFO: [v++ 60-423]   Target device: xilinx_aws-vu9p-f1_shell-v04261818_201920_2
+000-INFO: [v++ 60-242] Creating kernel: 'aes256CbcDecryptKernel'
+000-
+000-===>The following messages were generated while  performing high-level synthesis for kernel: aes256CbcDecryptKernel Log file: /home/centos/workspace/aes_decryption_benchmark/Emulation-HW/aes256CbcDecryptKernel.build/aes256CbcDecryptKernel/aes256CbcDecryptKernel/vitis_hls.log :
+000-INFO: [v++ 204-61] Pipelining loop 'LOOP_SCAN_CFG'.
+000-INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+000-INFO: [v++ 204-61] Pipelining loop 'VITIS_LOOP_99_1'.
+000-INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+000-INFO: [v++ 204-61] Pipelining loop 'LOOP_SPLIT_TEXT'.
+000-INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+000-INFO: [v++ 204-61] Pipelining loop 'key_gen_loop'.
+000-WARNING: [v++ 200-882] User specified resource constraint cannot be honored The memory core ROM_2P_BRAM has insufficient ports to support accesses to array 'decipher_0_3' (II = 1)..
+000-Resolution: For help on HLS 200-882 see www.xilinx.com/html_docs/xilinx2020_1/hls-guidance/200-882.html
+000-WARNING: [v++ 200-885] Unable to schedule 'load' operation ('decipher_0_3_load') on array 'decipher_0_3' due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'decipher_0_3'.
+000-Resolution: For help on HLS 200-885 see www.xilinx.com/html_docs/xilinx2020_1/hls-guidance/200-885.html
+000-INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 10, Depth = 15.
+000-INFO: [v++ 204-61] Pipelining function 'process'.
+000-INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 15.
+000-INFO: [v++ 204-61] Pipelining loop 'decryption_cbc_loop'.
+000-INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 16.
+000-INFO: [v++ 204-61] Pipelining loop 'decryption_cbc_loop'.
+000-INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 16.
+000-INFO: [v++ 204-61] Pipelining loop 'decryption_cbc_loop'.
+000-INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 16.
+000-INFO: [v++ 204-61] Pipelining loop 'decryption_cbc_loop'.
+000-INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 16.
+000-INFO: [v++ 204-61] Pipelining loop 'LOOP_MERGE_RESULT'.
+000-INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+000-INFO: [v++ 204-61] Pipelining loop 'LOOP_BURST_WRITE'.
+000-INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+000-INFO: [v++ 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
+000-INFO: [v++ 200-789] **** Estimated Fmax: 233.54 MHz
+000-INFO: [v++ 60-594] Finished kernel compilation
+000-INFO: [v++ 60-244] Generating system estimate report...
+000-INFO: [v++ 60-1092] Generated system estimate report: /home/centos/workspace/aes_decryption_benchmark/Emulation-HW/aes256CbcDecryptKernel.build/reports/aes256CbcDecryptKernel/system_estimate_aes256CbcDecryptKernel.xtxt
+000-Add Instance cipherModeProcess_4u_256u_s cipherModeProcess_4u_256u_U0 294
+000-Add Instance cipherModeParallel_4u_256u_s grp_cipherModeParallel_4u_256u_s_fu_98 98
+000-Add Instance singleCipherMode_256u_75 singleCipherMode_256u_75_U0 138
+000-Add Instance process_r grp_process_r_fu_167 167
+000-Add Instance updateKey grp_updateKey_fu_192 192
+000-Add Instance singleCipherMode_256u_76 singleCipherMode_256u_76_U0 163
+000-Add Instance process_r grp_process_r_fu_167 167
+000-Add Instance updateKey grp_updateKey_fu_192 192
+000-Add Instance singleCipherMode_256u_77 singleCipherMode_256u_77_U0 188
+000-Add Instance process_r grp_process_r_fu_167 167
+000-Add Instance updateKey grp_updateKey_fu_192 192
+000-Add Instance singleCipherMode_256u_78 singleCipherMode_256u_78_U0 213
+000-Add Instance process_r grp_process_r_fu_167 167
+000-Add Instance updateKey grp_updateKey_fu_192 192
+000-Add Instance cipherModeParallel_4u_256u_entry98 cipherModeParallel_4u_256u_entry98_U0 238
+000-Add Instance scanMultiChannel_4u_256u_128u_104 scanMultiChannel_4u_256u_128u_104_U0 337
+000-Add Instance readBlock_128u_4u_256u_107 readBlock_128u_4u_256u_107_U0 136
+000-Add Instance splitText_4u_256u_s splitText_4u_256u_U0 159
+000-Add Instance writeOut_128u_s writeOut_128u_U0 365
+000-Add Instance mergeResult_128u_4u_s mergeResult_128u_4u_U0 374
+000-INFO: [v++ 60-586] Created aes256CbcDecryptKernel.build/aes256CbcDecryptKernel.xo
+000-INFO: [v++ 60-2343] Use the vitis_analyzer tool to visualize and navigate the relevant reports. Run the following command. 
+000-    vitis_analyzer /home/centos/workspace/aes_decryption_benchmark/Emulation-HW/aes256CbcDecryptKernel.build/aes256CbcDecryptKernel.xo.compile_summary 
+000-INFO: [v++ 60-791] Total elapsed time: 0h 5m 39s
+000-INFO: [v++ 60-1653] Closing dispatch client.
+000-/opt/Xilinx/Vitis/2020.1/bin/v++ --target hw_emu --link --config common-config.cfg --config aes256CbcDecryptKernel-link.cfg -o"aes256CbcDecryptKernel.xclbin" aes256CbcDecryptKernel.build/aes256CbcDecryptKernel.xo
+000-Option Map File Used: '/opt/Xilinx/Vitis/2020.1/data/vitis/vpp/optMap.xml'
+000-
+000-****** v++ v2020.1 (64-bit)
+000-  **** SW Build 2902540 on Wed May 27 19:54:35 MDT 2020
+000-    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+000-
+000-INFO: [v++ 60-897] Reading --xp value from platform: param:compiler.lockFlowCritSlackThreshold=0
+000-INFO: [v++ 60-897] Reading --xp value from platform: vivado_param:hd.routingContainmentAreaExpansion=true
+000-INFO: [v++ 60-897] Reading --xp value from platform: vivado_param:hd.supportClockNetCrossDiffReconfigurablePartitions=1
+000-INFO: [v++ 60-897] Reading --xp value from platform: vivado_param:bitstream.enablePR=4123
+000-INFO: [v++ 60-897] Reading --xp value from platform: vivado_param:physynth.ultraRAMOptOutput=false
+000-INFO: [v++ 60-897] Reading --xp value from platform: vivado_prop:run.__KERNEL__.{STEPS.SYNTH_DESIGN.ARGS.MAX_URAM_CASCADE_HEIGHT}={1}
+000-INFO: [v++ 60-897] Reading --xp value from platform: vivado_param:synth.elaboration.rodinMoreOptions={rt::set_parameter disableOregPackingUram true}
+000-WARNING: [v++ 60-642] Invalid or deprecated parameter name: compiler.lockFlowCritSlackThreshold
+000-INFO: [v++ 60-1306] Additional information associated with this v++ link can be found at:
+000-	Reports: /home/centos/workspace/aes_decryption_benchmark/Emulation-HW/aes256CbcDecryptKernel.build/reports/link
+000-	Log files: /home/centos/workspace/aes_decryption_benchmark/Emulation-HW/aes256CbcDecryptKernel.build/logs/link
+000-INFO: [v++ 60-1657] Initializing dispatch client.
+000-Running Dispatch Server on port:37916
+000-INFO: [v++ 60-1548] Creating build summary session with primary output /home/centos/workspace/aes_decryption_benchmark/Emulation-HW/aes256CbcDecryptKernel.xclbin.link_summary, at Thu Jan 14 21:38:09 2021
+000-INFO: [v++ 60-1316] Initiating connection to rulecheck server, at Thu Jan 14 21:38:09 2021
+000-INFO: [v++ 60-895]   Target platform: /home/centos/src/project_data/aws-fpga/Vitis/aws_platform/xilinx_aws-vu9p-f1_shell-v04261818_201920_2/xilinx_aws-vu9p-f1_shell-v04261818_201920_2.xpfm
+000-INFO: [v++ 60-1578]   This platform contains Xilinx Shell Archive '/home/centos/src/project_data/aws-fpga/Vitis/aws_platform/xilinx_aws-vu9p-f1_shell-v04261818_201920_2/hw/xilinx_aws-vu9p-f1_shell-v04261818_201920_2.xsa'
+000-INFO: [v++ 60-629] Linking for hardware emulation target
+000-INFO: [v++ 60-423]   Target device: xilinx_aws-vu9p-f1_shell-v04261818_201920_2
+000-INFO: [v++ 60-1332] Run 'run_link' status: Not started
+000-INFO: [v++ 60-1443] [21:38:13] Run run_link: Step system_link: Started
+000-INFO: [v++ 60-1453] Command Line: system_link --xo /home/centos/workspace/aes_decryption_benchmark/Emulation-HW/aes256CbcDecryptKernel.build/aes256CbcDecryptKernel.xo -keep --config /home/centos/workspace/aes_decryption_benchmark/Emulation-HW/aes256CbcDecryptKernel.build/link/int/syslinkConfig.ini --xpfm /home/centos/src/project_data/aws-fpga/Vitis/aws_platform/xilinx_aws-vu9p-f1_shell-v04261818_201920_2/xilinx_aws-vu9p-f1_shell-v04261818_201920_2.xpfm --target emu --output_dir /home/centos/workspace/aes_decryption_benchmark/Emulation-HW/aes256CbcDecryptKernel.build/link/int --temp_dir /home/centos/workspace/aes_decryption_benchmark/Emulation-HW/aes256CbcDecryptKernel.build/link/sys_link
+000-INFO: [v++ 60-1454] Run Directory: /home/centos/workspace/aes_decryption_benchmark/Emulation-HW/aes256CbcDecryptKernel.build/link/run_link
+000-INFO: [SYSTEM_LINK 60-1316] Initiating connection to rulecheck server, at Thu Jan 14 21:38:16 2021
+000-INFO: [SYSTEM_LINK 82-70] Extracting xo v3 file /home/centos/workspace/aes_decryption_benchmark/Emulation-HW/aes256CbcDecryptKernel.build/aes256CbcDecryptKernel.xo
+000-INFO: [SYSTEM_LINK 82-53] Creating IP database /home/centos/workspace/aes_decryption_benchmark/Emulation-HW/aes256CbcDecryptKernel.build/link/sys_link/_sysl/.cdb/xd_ip_db.xml
+000-INFO: [SYSTEM_LINK 82-38] [21:38:16] build_xd_ip_db started: /opt/Xilinx/Vitis/2020.1/bin/build_xd_ip_db -ip_search 0  -sds-pf /home/centos/workspace/aes_decryption_benchmark/Emulation-HW/aes256CbcDecryptKernel.build/link/sys_link/emu/xilinx_aws-vu9p-f1_shell-v04261818_201920_1_emu.hpfm -clkid 0 -ip /home/centos/workspace/aes_decryption_benchmark/Emulation-HW/aes256CbcDecryptKernel.build/link/sys_link/iprepo/xilinx_com_hls_aes256CbcDecryptKernel_1_0,aes256CbcDecryptKernel -o /home/centos/workspace/aes_decryption_benchmark/Emulation-HW/aes256CbcDecryptKernel.build/link/sys_link/_sysl/.cdb/xd_ip_db.xml
+000-INFO: [SYSTEM_LINK 82-37] [21:38:20] build_xd_ip_db finished successfully
+000-Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 1303.055 ; gain = 0.000 ; free physical = 95897 ; free virtual = 136408
+000-INFO: [SYSTEM_LINK 82-51] Create system connectivity graph
+000-INFO: [SYSTEM_LINK 82-102] Applying explicit connections to the system connectivity graph: /home/centos/workspace/aes_decryption_benchmark/Emulation-HW/aes256CbcDecryptKernel.build/link/sys_link/cfgraph/cfgen_cfgraph.xml
+000-INFO: [SYSTEM_LINK 82-38] [21:38:20] cfgen started: /opt/Xilinx/Vitis/2020.1/bin/cfgen  -nk aes256CbcDecryptKernel:1:aes256CbcDecryptKernel_1 -slr aes256CbcDecryptKernel_1:SLR0 -sp aes256CbcDecryptKernel_1.inputData:DDR[0] -sp aes256CbcDecryptKernel_1.outputData:DDR[1] -dmclkid 0 -r /home/centos/workspace/aes_decryption_benchmark/Emulation-HW/aes256CbcDecryptKernel.build/link/sys_link/_sysl/.cdb/xd_ip_db.xml -o /home/centos/workspace/aes_decryption_benchmark/Emulation-HW/aes256CbcDecryptKernel.build/link/sys_link/cfgraph/cfgen_cfgraph.xml
+000-INFO: [CFGEN 83-0] Kernel Specs: 
+000-INFO: [CFGEN 83-0]   kernel: aes256CbcDecryptKernel, num: 1  {aes256CbcDecryptKernel_1}
+000-INFO: [CFGEN 83-0] Port Specs: 
+000-INFO: [CFGEN 83-0]   kernel: aes256CbcDecryptKernel_1, k_port: inputData, sptag: DDR[0]
+000-INFO: [CFGEN 83-0]   kernel: aes256CbcDecryptKernel_1, k_port: outputData, sptag: DDR[1]
+000-INFO: [CFGEN 83-0] SLR Specs: 
+000-INFO: [CFGEN 83-0]   instance: aes256CbcDecryptKernel_1, SLR: SLR0
+000-INFO: [CFGEN 83-2228] Creating mapping for argument aes256CbcDecryptKernel_1.inputData to DDR[0] for directive aes256CbcDecryptKernel_1.inputData:DDR[0]
+000-INFO: [CFGEN 83-2228] Creating mapping for argument aes256CbcDecryptKernel_1.outputData to DDR[1] for directive aes256CbcDecryptKernel_1.outputData:DDR[1]
+000-INFO: [SYSTEM_LINK 82-37] [21:38:24] cfgen finished successfully
+000-Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1303.055 ; gain = 0.000 ; free physical = 95898 ; free virtual = 136410
+000-INFO: [SYSTEM_LINK 82-52] Create top-level block diagram
+000-INFO: [SYSTEM_LINK 82-38] [21:38:24] cf2bd started: /opt/Xilinx/Vitis/2020.1/bin/cf2bd  --linux --trace_buffer 1024 --input_file /home/centos/workspace/aes_decryption_benchmark/Emulation-HW/aes256CbcDecryptKernel.build/link/sys_link/cfgraph/cfgen_cfgraph.xml --ip_db /home/centos/workspace/aes_decryption_benchmark/Emulation-HW/aes256CbcDecryptKernel.build/link/sys_link/_sysl/.cdb/xd_ip_db.xml --cf_name dr --working_dir /home/centos/workspace/aes_decryption_benchmark/Emulation-HW/aes256CbcDecryptKernel.build/link/sys_link/_sysl/.xsd --temp_dir /home/centos/workspace/aes_decryption_benchmark/Emulation-HW/aes256CbcDecryptKernel.build/link/sys_link --output_dir /home/centos/workspace/aes_decryption_benchmark/Emulation-HW/aes256CbcDecryptKernel.build/link/int --target_bd emu/pfm_dynamic/pfm_dynamic.bd
+000-INFO: [CF2BD 82-31] Launching cf2xd: cf2xd -linux -trace-buffer 1024 -i /home/centos/workspace/aes_decryption_benchmark/Emulation-HW/aes256CbcDecryptKernel.build/link/sys_link/cfgraph/cfgen_cfgraph.xml -r /home/centos/workspace/aes_decryption_benchmark/Emulation-HW/aes256CbcDecryptKernel.build/link/sys_link/_sysl/.cdb/xd_ip_db.xml -o dr.xml
+000-INFO: [CF2BD 82-28] cf2xd finished successfully
+000-INFO: [CF2BD 82-31] Launching cf_xsd: cf_xsd -disable-address-gen -bd emu/pfm_dynamic/pfm_dynamic.bd -dn dr -dp /home/centos/workspace/aes_decryption_benchmark/Emulation-HW/aes256CbcDecryptKernel.build/link/sys_link/_sysl/.xsd
+000-INFO: [CF2BD 82-28] cf_xsd finished successfully
+000-INFO: [SYSTEM_LINK 82-37] [21:38:27] cf2bd finished successfully
+000-Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1303.055 ; gain = 0.000 ; free physical = 95890 ; free virtual = 136406
+000-INFO: [v++ 60-1441] [21:38:27] Run run_link: Step system_link: Completed
+000-Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 1335.516 ; gain = 0.000 ; free physical = 95917 ; free virtual = 136433
+000-INFO: [v++ 60-1443] [21:38:27] Run run_link: Step cf2sw: Started
+000-INFO: [v++ 60-1453] Command Line: cf2sw -sdsl /home/centos/workspace/aes_decryption_benchmark/Emulation-HW/aes256CbcDecryptKernel.build/link/int/sdsl.dat -rtd /home/centos/workspace/aes_decryption_benchmark/Emulation-HW/aes256CbcDecryptKernel.build/link/int/cf2sw.rtd -xclbin /home/centos/workspace/aes_decryption_benchmark/Emulation-HW/aes256CbcDecryptKernel.build/link/int/xclbin_orig.xml -o /home/centos/workspace/aes_decryption_benchmark/Emulation-HW/aes256CbcDecryptKernel.build/link/int/xclbin_orig.1.xml
+000-INFO: [v++ 60-1454] Run Directory: /home/centos/workspace/aes_decryption_benchmark/Emulation-HW/aes256CbcDecryptKernel.build/link/run_link
+000-INFO: [v++ 60-1441] [21:38:29] Run run_link: Step cf2sw: Completed
+000-Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1335.516 ; gain = 0.000 ; free physical = 95919 ; free virtual = 136436
+000-INFO: [v++ 60-1443] [21:38:29] Run run_link: Step rtd2_system_diagram: Started
+000-INFO: [v++ 60-1453] Command Line: rtd2SystemDiagram
+000-INFO: [v++ 60-1454] Run Directory: /home/centos/workspace/aes_decryption_benchmark/Emulation-HW/aes256CbcDecryptKernel.build/link/run_link
+000-INFO: [v++ 60-1441] [21:38:31] Run run_link: Step rtd2_system_diagram: Completed
+000-Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:02 . Memory (MB): peak = 1335.516 ; gain = 0.000 ; free physical = 95257 ; free virtual = 135773
+000-INFO: [v++ 60-1443] [21:38:31] Run run_link: Step vpl: Started
+000-INFO: [v++ 60-1453] Command Line: vpl -t hw_emu -f /home/centos/src/project_data/aws-fpga/Vitis/aws_platform/xilinx_aws-vu9p-f1_shell-v04261818_201920_2/xilinx_aws-vu9p-f1_shell-v04261818_201920_2.xpfm -g --profile_kernel exec:aes256CbcDecryptKernel:aes256CbcDecryptKernel_1:all --profile_kernel data:aes256CbcDecryptKernel:aes256CbcDecryptKernel_1:inputData:all --profile_kernel data:aes256CbcDecryptKernel:aes256CbcDecryptKernel_1:outputData:all --remote_ip_cache /home/centos/workspace/ip_cache -s --output_dir /home/centos/workspace/aes_decryption_benchmark/Emulation-HW/aes256CbcDecryptKernel.build/link/int --log_dir /home/centos/workspace/aes_decryption_benchmark/Emulation-HW/aes256CbcDecryptKernel.build/logs/link --report_dir /home/centos/workspace/aes_decryption_benchmark/Emulation-HW/aes256CbcDecryptKernel.build/reports/link --config /home/centos/workspace/aes_decryption_benchmark/Emulation-HW/aes256CbcDecryptKernel.build/link/int/vplConfig.ini -k /home/centos/workspace/aes_decryption_benchmark/Emulation-HW/aes256CbcDecryptKernel.build/link/int/kernel_info.dat --webtalk_flag Vitis --temp_dir /home/centos/workspace/aes_decryption_benchmark/Emulation-HW/aes256CbcDecryptKernel.build/link --emulation_mode debug_waveform --no-info --iprepo /home/centos/workspace/aes_decryption_benchmark/Emulation-HW/aes256CbcDecryptKernel.build/link/int/xo/ip_repo/xilinx_com_hls_aes256CbcDecryptKernel_1_0 --messageDb /home/centos/workspace/aes_decryption_benchmark/Emulation-HW/aes256CbcDecryptKernel.build/link/run_link/vpl.pb /home/centos/workspace/aes_decryption_benchmark/Emulation-HW/aes256CbcDecryptKernel.build/link/int/dr.bd.tcl
+000-INFO: [v++ 60-1454] Run Directory: /home/centos/workspace/aes_decryption_benchmark/Emulation-HW/aes256CbcDecryptKernel.build/link/run_link
+000-
+000-****** vpl v2020.1 (64-bit)
+000-  **** SW Build 2902540 on Wed May 27 19:54:35 MDT 2020
+000-    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+000-
+000-INFO: [VPL 60-839] Read in kernel information from file '/home/centos/workspace/aes_decryption_benchmark/Emulation-HW/aes256CbcDecryptKernel.build/link/int/kernel_info.dat'.
+000-WARNING: [VPL 60-642] Invalid or deprecated parameter name: compiler.lockFlowCritSlackThreshold
+000-INFO: [VPL 60-423]   Target device: xilinx_aws-vu9p-f1_shell-v04261818_201920_2
+000-INFO: [VPL 60-1032] Extracting hardware platform to /home/centos/workspace/aes_decryption_benchmark/Emulation-HW/aes256CbcDecryptKernel.build/link/vivado/vpl/.local/hw_platform
+000-[21:38:53] Run vpl: Step create_project: Started
+000-Creating Vivado project.
+000-[21:38:54] Run vpl: Step create_project: Completed
+000-[21:38:54] Run vpl: Step create_bd: Started
+000-[21:39:27] Run vpl: Step create_bd: Completed
+000-[21:39:27] Run vpl: Step update_bd: Started
+000-[21:39:35] Run vpl: Step update_bd: Completed
+000-[21:39:35] Run vpl: Step generate_target: Started
+000-[21:40:08] Run vpl: Step generate_target: Completed
+000-[21:40:08] Run vpl: Step config_hw_emulation: Started
+000-[21:41:25] Run vpl: Step config_hw_emulation: RUNNING...
+000-[21:42:41] Run vpl: Step config_hw_emulation: RUNNING...
+000-[21:43:56] Run vpl: Step config_hw_emulation: RUNNING...
+000-[21:45:11] Run vpl: Step config_hw_emulation: RUNNING...
+000-[21:45:33] Run vpl: Step config_hw_emulation: Completed
+000-[21:45:34] Run vpl: FINISHED. Run Status: config_hw_emulation Complete!
+000-INFO: [v++ 60-1441] [21:45:34] Run run_link: Step vpl: Completed
+000-Time (s): cpu = 00:00:13 ; elapsed = 00:07:03 . Memory (MB): peak = 1335.516 ; gain = 0.000 ; free physical = 95062 ; free virtual = 136370
+000-INFO: [v++ 60-1443] [21:45:34] Run run_link: Step rtdgen: Started
+000-INFO: [v++ 60-1453] Command Line: rtdgen
+000-INFO: [v++ 60-1454] Run Directory: /home/centos/workspace/aes_decryption_benchmark/Emulation-HW/aes256CbcDecryptKernel.build/link/run_link
+000-INFO: [v++ 60-991] clock name 'clk_main_a0' (clock ID '') is being mapped to clock name 'clk_main_a0' in the xclbin
+000-INFO: [v++ 60-1453] Command Line: cf2sw -a /home/centos/workspace/aes_decryption_benchmark/Emulation-HW/aes256CbcDecryptKernel.build/link/int/address_map.xml -sdsl /home/centos/workspace/aes_decryption_benchmark/Emulation-HW/aes256CbcDecryptKernel.build/link/int/sdsl.dat -xclbin /home/centos/workspace/aes_decryption_benchmark/Emulation-HW/aes256CbcDecryptKernel.build/link/int/xclbin_orig.xml -rtd /home/centos/workspace/aes_decryption_benchmark/Emulation-HW/aes256CbcDecryptKernel.build/link/int/aes256CbcDecryptKernel.rtd -o /home/centos/workspace/aes_decryption_benchmark/Emulation-HW/aes256CbcDecryptKernel.build/link/int/aes256CbcDecryptKernel.xml
+000-INFO: [v++ 60-1652] Cf2sw returned exit code: 0
+000-INFO: [v++ 60-2311] HPISystemDiagram::writeSystemDiagramAfterRunningVivado, rtdInputFilePath: /home/centos/workspace/aes_decryption_benchmark/Emulation-HW/aes256CbcDecryptKernel.build/link/int/aes256CbcDecryptKernel.rtd
+000-INFO: [v++ 60-2312] HPISystemDiagram::writeSystemDiagramAfterRunningVivado, systemDiagramOutputFilePath: /home/centos/workspace/aes_decryption_benchmark/Emulation-HW/aes256CbcDecryptKernel.build/link/int/systemDiagramModelSlrBaseAddress.json
+000-INFO: [v++ 60-1618] Launching 
+000-INFO: [v++ 60-1441] [21:45:47] Run run_link: Step rtdgen: Completed
+000-Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1335.516 ; gain = 0.000 ; free physical = 95015 ; free virtual = 136369
+000-INFO: [v++ 60-1443] [21:45:47] Run run_link: Step xclbinutil: Started
+000-INFO: [v++ 60-1453] Command Line: xclbinutil --add-section DEBUG_DATA:RAW:/home/centos/workspace/aes_decryption_benchmark/Emulation-HW/aes256CbcDecryptKernel.build/link/int/consolidated.cf --add-section DEBUG_IP_LAYOUT:JSON:/home/centos/workspace/aes_decryption_benchmark/Emulation-HW/aes256CbcDecryptKernel.build/link/int/debug_ip_layout.rtd --add-section BITSTREAM:RAW:/home/centos/workspace/aes_decryption_benchmark/Emulation-HW/aes256CbcDecryptKernel.build/link/int/behav.xse --force --target hw_emu --key-value SYS:dfx_enable:false --add-section :JSON:/home/centos/workspace/aes_decryption_benchmark/Emulation-HW/aes256CbcDecryptKernel.build/link/int/aes256CbcDecryptKernel.rtd --append-section :JSON:/home/centos/workspace/aes_decryption_benchmark/Emulation-HW/aes256CbcDecryptKernel.build/link/int/appendSection.rtd --add-section CLOCK_FREQ_TOPOLOGY:JSON:/home/centos/workspace/aes_decryption_benchmark/Emulation-HW/aes256CbcDecryptKernel.build/link/int/aes256CbcDecryptKernel_xml.rtd --add-section BUILD_METADATA:JSON:/home/centos/workspace/aes_decryption_benchmark/Emulation-HW/aes256CbcDecryptKernel.build/link/int/aes256CbcDecryptKernel_build.rtd --add-section EMBEDDED_METADATA:RAW:/home/centos/workspace/aes_decryption_benchmark/Emulation-HW/aes256CbcDecryptKernel.build/link/int/aes256CbcDecryptKernel.xml --add-section SYSTEM_METADATA:RAW:/home/centos/workspace/aes_decryption_benchmark/Emulation-HW/aes256CbcDecryptKernel.build/link/int/systemDiagramModelSlrBaseAddress.json --key-value SYS:PlatformVBNV:xilinx_aws-vu9p-f1_shell-v04261818_201920_2 --output /home/centos/workspace/aes_decryption_benchmark/Emulation-HW/aes256CbcDecryptKernel.xclbin
+000-INFO: [v++ 60-1454] Run Directory: /home/centos/workspace/aes_decryption_benchmark/Emulation-HW/aes256CbcDecryptKernel.build/link/run_link
+000-XRT Build Version: 2.6.0 (2020.1)
+000-       Build Date: 2020-07-09 15:20:59
+000-          Hash ID: 12115fd4054cb46a5ade62fafa74c523f59116e6
+000-Creating a default 'in-memory' xclbin image.
+000-
+000-Section: 'DEBUG_DATA'(4) was successfully added.
+000-Size   : 2728531 bytes
+000-Format : RAW
+000-File   : '/home/centos/workspace/aes_decryption_benchmark/Emulation-HW/aes256CbcDecryptKernel.build/link/int/consolidated.cf'
+000-
+000-Section: 'DEBUG_IP_LAYOUT'(9) was successfully added.
+000-Size   : 872 bytes
+000-Format : JSON
+000-File   : '/home/centos/workspace/aes_decryption_benchmark/Emulation-HW/aes256CbcDecryptKernel.build/link/int/debug_ip_layout.rtd'
+000-
+000-Section: 'BITSTREAM'(0) was successfully added.
+000-Size   : 32104624 bytes
+000-Format : RAW
+000-File   : '/home/centos/workspace/aes_decryption_benchmark/Emulation-HW/aes256CbcDecryptKernel.build/link/int/behav.xse'
+000-
+000-Section: 'MEM_TOPOLOGY'(6) was successfully added.
+000-Format : JSON
+000-File   : 'mem_topology'
+000-
+000-Section: 'IP_LAYOUT'(8) was successfully added.
+000-Format : JSON
+000-File   : 'ip_layout'
+000-
+000-Section: 'CONNECTIVITY'(7) was successfully added.
+000-Format : JSON
+000-File   : 'connectivity'
+000-WARNING: Skipping CLOCK_FREQ_TOPOLOGY section for count size is zero.
+000-WARNING: Section 'CLOCK_FREQ_TOPOLOGY' content is empty.  No data in the given JSON file.
+000-
+000-Section: 'CLOCK_FREQ_TOPOLOGY'(11) was empty.  No action taken.
+000-Format : JSON
+000-File   : '/home/centos/workspace/aes_decryption_benchmark/Emulation-HW/aes256CbcDecryptKernel.build/link/int/aes256CbcDecryptKernel_xml.rtd'
+000-
+000-Section: 'BUILD_METADATA'(14) was successfully added.
+000-Size   : 1977 bytes
+000-Format : JSON
+000-File   : '/home/centos/workspace/aes_decryption_benchmark/Emulation-HW/aes256CbcDecryptKernel.build/link/int/aes256CbcDecryptKernel_build.rtd'
+000-
+000-Section: 'EMBEDDED_METADATA'(2) was successfully added.
+000-Size   : 12783 bytes
+000-Format : RAW
+000-File   : '/home/centos/workspace/aes_decryption_benchmark/Emulation-HW/aes256CbcDecryptKernel.build/link/int/aes256CbcDecryptKernel.xml'
+000-
+000-Section: 'SYSTEM_METADATA'(22) was successfully added.
+000-Size   : 4984 bytes
+000-Format : RAW
+000-File   : '/home/centos/workspace/aes_decryption_benchmark/Emulation-HW/aes256CbcDecryptKernel.build/link/int/systemDiagramModelSlrBaseAddress.json'
+000-
+000-Section: 'PARTITION_METADATA'(20) was successfully appended to.
+000-Format : JSON
+000-File   : 'partition_metadata'
+000-Successfully wrote (34861702 bytes) to the output file: /home/centos/workspace/aes_decryption_benchmark/Emulation-HW/aes256CbcDecryptKernel.xclbin
+000-Leaving xclbinutil.
+000-INFO: [v++ 60-1441] [21:45:47] Run run_link: Step xclbinutil: Completed
+000-Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.12 . Memory (MB): peak = 1335.516 ; gain = 0.000 ; free physical = 94980 ; free virtual = 136367
+000-INFO: [v++ 60-1443] [21:45:47] Run run_link: Step xclbinutilinfo: Started
+000-INFO: [v++ 60-1453] Command Line: xclbinutil --quiet --force --info /home/centos/workspace/aes_decryption_benchmark/Emulation-HW/aes256CbcDecryptKernel.xclbin.info --input /home/centos/workspace/aes_decryption_benchmark/Emulation-HW/aes256CbcDecryptKernel.xclbin
+000-INFO: [v++ 60-1454] Run Directory: /home/centos/workspace/aes_decryption_benchmark/Emulation-HW/aes256CbcDecryptKernel.build/link/run_link
+000-INFO: [v++ 60-1441] [21:45:47] Run run_link: Step xclbinutilinfo: Completed
+000-Time (s): cpu = 00:00:00.36 ; elapsed = 00:00:00.43 . Memory (MB): peak = 1335.516 ; gain = 0.000 ; free physical = 94980 ; free virtual = 136367
+000-INFO: [v++ 60-1443] [21:45:47] Run run_link: Step generate_sc_driver: Started
+000-INFO: [v++ 60-1453] Command Line: 
+000-INFO: [v++ 60-1454] Run Directory: /home/centos/workspace/aes_decryption_benchmark/Emulation-HW/aes256CbcDecryptKernel.build/link/run_link
+000-INFO: [v++ 60-1441] [21:45:47] Run run_link: Step generate_sc_driver: Completed
+000-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1335.516 ; gain = 0.000 ; free physical = 94980 ; free virtual = 136367
+000-INFO: [v++ 60-244] Generating system estimate report...
+000-INFO: [v++ 60-1092] Generated system estimate report: /home/centos/workspace/aes_decryption_benchmark/Emulation-HW/aes256CbcDecryptKernel.build/reports/link/system_estimate_aes256CbcDecryptKernel.xtxt
+000-INFO: [v++ 60-586] Created aes256CbcDecryptKernel.xclbin
+000-INFO: [v++ 60-1307] Run completed. Additional information can be found in:
+000-	Steps Log File: /home/centos/workspace/aes_decryption_benchmark/Emulation-HW/aes256CbcDecryptKernel.build/logs/link/link.steps.log
+000-
+000-INFO: [v++ 60-2343] Use the vitis_analyzer tool to visualize and navigate the relevant reports. Run the following command. 
+000-    vitis_analyzer /home/centos/workspace/aes_decryption_benchmark/Emulation-HW/aes256CbcDecryptKernel.xclbin.link_summary 
+000-INFO: [v++ 60-791] Total elapsed time: 0h 7m 48s
+000-INFO: [v++ 60-1653] Closing dispatch client.
+000-g++ -std=c++0x -DVITIS_PLATFORM=xilinx_aws-vu9p-f1_shell-v04261818_201920_2 -D__USE_XOPEN2K8 -I/home/centos/workspace/aes_decryption_benchmark/libs/xf_security/ext/xcl2 -I/home/centos/workspace/aes_decryption_benchmark/libs/xf_security/L1/include -I/home/centos/workspace/aes_decryption_benchmark/src/host -I/home/centos/workspace/aes_decryption_benchmark/src/kernel -I/home/centos/workspace/aes_decryption_benchmark/libs/xf_security/ext/xcl2 -I/opt/xilinx/xrt/include/ -I/opt/Xilinx/Vivado/2020.1/include/ -O0 -g -Wall -O3 -lssl -lcrypto -c -fmessage-length=0 -o "libs/xf_security/ext/xcl2/xcl2.o" "../libs/xf_security/ext/xcl2/xcl2.cpp"
+000-g++ -std=c++0x -DVITIS_PLATFORM=xilinx_aws-vu9p-f1_shell-v04261818_201920_2 -D__USE_XOPEN2K8 -I/home/centos/workspace/aes_decryption_benchmark/libs/xf_security/ext/xcl2 -I/home/centos/workspace/aes_decryption_benchmark/libs/xf_security/L1/include -I/home/centos/workspace/aes_decryption_benchmark/src/host -I/home/centos/workspace/aes_decryption_benchmark/src/kernel -I/home/centos/workspace/aes_decryption_benchmark/libs/xf_security/ext/xcl2 -I/opt/xilinx/xrt/include/ -I/opt/Xilinx/Vivado/2020.1/include/ -O0 -g -Wall -O3 -lssl -lcrypto -c -fmessage-length=0 -o "src/host/main.o" "../src/host/main.cpp"
+000-In file included from /opt/Xilinx/Vivado/2020.1/include/ap_common.h:641:0,
+000-                 from /opt/Xilinx/Vivado/2020.1/include/ap_int.h:54,
+000-                 from ../src/host/main.cpp:16:
+000-/opt/Xilinx/Vivado/2020.1/include/etc/ap_private.h: In function 'bool operator!=(const ap_range_ref<_AP_W, _AP_S>&, const ap_int_base<_AP_W3, _AP_S3>&) [with int _AP_W1 = 512; bool _AP_S1 = false; int _AP_W2 = 128; bool _AP_S2 = false]':
+000/aes_decryption_benchmark/Emulation-HW3429-1-1'<anonymous>.ap_private<512, false, false>::pVal[7]' is used uninitialized in this function [-Wuninitialized]1-/opt/Xilinx/Vivado/2020.1/include/etc/ap_private.h:3429:28: warning: '<anonymous>.ap_private<512, false, false>::pVal[7]' is used uninitialized in this function [-Wuninitialized]
+000-                      : pVal[_AP_N - 1]);
+000-                            ^
+000-In file included from /opt/Xilinx/Vivado/2020.1/include/ap_int.h:55:0,
+000-                 from ../src/host/main.cpp:16:
+000/aes_decryption_benchmark/Emulation-HW1733-1-1'<anonymous>' was declared here0-/opt/Xilinx/Vivado/2020.1/include/ap_int_base.h:1733:63: note: '<anonymous>' was declared here
+000-     return ap_int_base<_AP_W1, false>(op1).operator REL_OP(op2);           \
+000-                                                               ^
+000/aes_decryption_benchmark/Emulation-HW1742-1-1in expansion of macro 'OP_REL_WITH_RANGE'0-/opt/Xilinx/Vivado/2020.1/include/ap_int_base.h:1742:1: note: in expansion of macro 'OP_REL_WITH_RANGE'
+000- OP_REL_WITH_RANGE(!=)
+000- ^
+000-In file included from /opt/Xilinx/Vivado/2020.1/include/ap_common.h:641:0,
+000-                 from /opt/Xilinx/Vivado/2020.1/include/ap_int.h:54,
+000-                 from ../src/host/main.cpp:16:
+000-/opt/Xilinx/Vivado/2020.1/include/etc/ap_private.h: In member function 'ap_range_ref<_AP_W, _AP_S>& ap_range_ref<_AP_W, _AP_S>::operator=(int) [with int _AP_W = 512; bool _AP_S = false]':
+000/aes_decryption_benchmark/Emulation-HW3429-1-1'tmp.ap_private<512, false, false>::pVal[7]' is used uninitialized in this function [-Wuninitialized]1-/opt/Xilinx/Vivado/2020.1/include/etc/ap_private.h:3429:28: warning: 'tmp.ap_private<512, false, false>::pVal[7]' is used uninitialized in this function [-Wuninitialized]
+000-                      : pVal[_AP_N - 1]);
+000-                            ^
+000-In file included from /opt/Xilinx/Vivado/2020.1/include/ap_int.h:56:0,
+000-                 from ../src/host/main.cpp:16:
+000/aes_decryption_benchmark/Emulation-HW380-1-1'tmp' was declared here0-/opt/Xilinx/Vivado/2020.1/include/ap_int_ref.h:380:31: note: 'tmp' was declared here
+000-     ap_int_base<_AP_W, false> tmp(val);                              \
+000-                               ^
+000/aes_decryption_benchmark/Emulation-HW391-1-1in expansion of macro 'ASSIGN_WITH_CTYPE'0-/opt/Xilinx/Vivado/2020.1/include/ap_int_ref.h:391:3: note: in expansion of macro 'ASSIGN_WITH_CTYPE'
+000-   ASSIGN_WITH_CTYPE(int)
+000-   ^
+000-In file included from /opt/Xilinx/Vivado/2020.1/include/ap_common.h:641:0,
+000-                 from /opt/Xilinx/Vivado/2020.1/include/ap_int.h:54,
+000-                 from ../src/host/main.cpp:16:
+000-/opt/Xilinx/Vivado/2020.1/include/etc/ap_private.h: In member function 'ap_range_ref<_AP_W, _AP_S>& ap_range_ref<_AP_W, _AP_S>::operator=(const ap_range_ref<_AP_W2, _AP_S2>&) [with int _AP_W2 = 128; bool _AP_S2 = false; int _AP_W = 512; bool _AP_S = false]':
+000/aes_decryption_benchmark/Emulation-HW3429-1-1'<anonymous>.ap_private<128, false, false>::pVal[1]' is used uninitialized in this function [-Wuninitialized]1-/opt/Xilinx/Vivado/2020.1/include/etc/ap_private.h:3429:28: warning: '<anonymous>.ap_private<128, false, false>::pVal[1]' is used uninitialized in this function [-Wuninitialized]
+000-                      : pVal[_AP_N - 1]);
+000-                            ^
+000-In file included from /opt/Xilinx/Vivado/2020.1/include/ap_int.h:56:0,
+000-                 from ../src/host/main.cpp:16:
+000/aes_decryption_benchmark/Emulation-HW428-1-1'<anonymous>' was declared here0-/opt/Xilinx/Vivado/2020.1/include/ap_int_ref.h:428:59: note: '<anonymous>' was declared here
+000-     return operator=((const ap_int_base<_AP_W2, false>)val);
+000-                                                           ^
+000-In file included from /opt/Xilinx/Vivado/2020.1/include/ap_common.h:641:0,
+000-                 from /opt/Xilinx/Vivado/2020.1/include/ap_int.h:54,
+000-                 from ../src/host/main.cpp:16:
+000-/opt/Xilinx/Vivado/2020.1/include/etc/ap_private.h: In member function 'ap_range_ref<_AP_W, _AP_S>& ap_range_ref<_AP_W, _AP_S>::operator=(unsigned char) [with int _AP_W = 128; bool _AP_S = false]':
+000/aes_decryption_benchmark/Emulation-HW3429-1-1'tmp.ap_private<128, false, false>::pVal[1]' is used uninitialized in this function [-Wuninitialized]1-/opt/Xilinx/Vivado/2020.1/include/etc/ap_private.h:3429:28: warning: 'tmp.ap_private<128, false, false>::pVal[1]' is used uninitialized in this function [-Wuninitialized]
+000-                      : pVal[_AP_N - 1]);
+000-                            ^
+000-In file included from /opt/Xilinx/Vivado/2020.1/include/ap_int.h:56:0,
+000-                 from ../src/host/main.cpp:16:
+000/aes_decryption_benchmark/Emulation-HW380-1-1'tmp' was declared here0-/opt/Xilinx/Vivado/2020.1/include/ap_int_ref.h:380:31: note: 'tmp' was declared here
+000-     ap_int_base<_AP_W, false> tmp(val);                              \
+000-                               ^
+000/aes_decryption_benchmark/Emulation-HW388-1-1in expansion of macro 'ASSIGN_WITH_CTYPE'0-/opt/Xilinx/Vivado/2020.1/include/ap_int_ref.h:388:3: note: in expansion of macro 'ASSIGN_WITH_CTYPE'
+000-   ASSIGN_WITH_CTYPE(unsigned char)
+000-   ^
+000-In file included from /opt/Xilinx/Vivado/2020.1/include/ap_common.h:641:0,
+000-                 from /opt/Xilinx/Vivado/2020.1/include/ap_int.h:54,
+000-                 from ../src/host/main.cpp:16:
+000-/opt/Xilinx/Vivado/2020.1/include/etc/ap_private.h: In member function 'std::string ap_range_ref<_AP_W, _AP_S>::to_string(signed char) const [with int _AP_W = 512; bool _AP_S = false; std::string = std::basic_string<char>]':
+000/aes_decryption_benchmark/Emulation-HW3429-1-1'ret.ap_private<512, false, false>::pVal[7]' is used uninitialized in this function [-Wuninitialized]1-/opt/Xilinx/Vivado/2020.1/include/etc/ap_private.h:3429:28: warning: 'ret.ap_private<512, false, false>::pVal[7]' is used uninitialized in this function [-Wuninitialized]
+000-                      : pVal[_AP_N - 1]);
+000-                            ^
+000-In file included from /opt/Xilinx/Vivado/2020.1/include/ap_int.h:56:0,
+000-                 from ../src/host/main.cpp:16:
+000/aes_decryption_benchmark/Emulation-HW727-1-1'ret' was declared here0-/opt/Xilinx/Vivado/2020.1/include/ap_int_ref.h:727:31: note: 'ret' was declared here
+000-     ap_int_base<_AP_W, false> ret;
+000-                               ^
+000-g++ -o "aes_decryption_benchmark" libs/xf_security/ext/xcl2/xcl2.o src/host/main.o -lssl -lcrypto -lxilinxopencl -lpthread -lrt -lstdc++ -lmpfr -lgmp -lhlsmc++-GCC46 -lIp_floating_point_v7_0_bitacc_cmodel -lIp_xfft_v9_1_bitacc_cmodel -lIp_fir_compiler_v7_2_bitacc_cmodel -lIp_dds_compiler_v6_0_bitacc_cmodel -L/opt/xilinx/xrt/lib/ -L/opt/Xilinx/Vivado/2020.1/lnx64/tools/fpo_v7_0 -L/opt/Xilinx/Vivado/2020.1/lnx64/lib/csim -L/opt/Xilinx/Vivado/2020.1/lnx64/tools/dds_v6_0 -L/opt/Xilinx/Vivado/2020.1/lnx64/tools/fir_v7_0 -L/opt/Xilinx/Vivado/2020.1/lnx64/tools/fft_v9_1 -Wl,-rpath-link,/opt/xilinx/xrt/lib -Wl,-rpath,/opt/Xilinx/Vivado/2020.1/lnx64/lib/csim -Wl,-rpath,/opt/Xilinx/Vivado/2020.1/lnx64/tools/fpo_v7_0 -Wl,-rpath,/opt/Xilinx/Vivado/2020.1/lnx64/tools/fft_v9_1 -Wl,-rpath,/opt/Xilinx/Vivado/2020.1/lnx64/tools/fir_v7_0 -Wl,-rpath,/opt/Xilinx/Vivado/2020.1/lnx64/tools/dds_v6_0
+000/aes_decryption_benchmark/Emulation-HW0-1-1libgmp.so.11, needed by /opt/Xilinx/Vivado/2020.1/lnx64/tools/fft_v9_1/libIp_xfft_v9_1_bitacc_cmodel.so, may conflict with libgmp.so.71-/bin/ld: warning: libgmp.so.11, needed by /opt/Xilinx/Vivado/2020.1/lnx64/tools/fft_v9_1/libIp_xfft_v9_1_bitacc_cmodel.so, may conflict with libgmp.so.7
+000-/opt/Xilinx/Vitis/2020.1/bin/v++ --package --config package.cfg aes256CbcDecryptKernel.xclbin
+000-Option Map File Used: '/opt/Xilinx/Vitis/2020.1/data/vitis/vpp/optMap.xml'
+000-
+000-****** v++ v2020.1 (64-bit)
+000-  **** SW Build 2902540 on Wed May 27 19:54:35 MDT 2020
+000-    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+000-
+000-INFO: [v++ 60-1306] Additional information associated with this v++ package can be found at:
+000-	Reports: /home/centos/workspace/aes_decryption_benchmark/Emulation-HW/package.build/reports/package
+000-	Log files: /home/centos/workspace/aes_decryption_benchmark/Emulation-HW/package.build/logs/package
+000-INFO: [v++ 60-1657] Initializing dispatch client.
+000-Running Dispatch Server on port:35066
+000-INFO: [v++ 60-1548] Creating build summary session with primary output ./v++.package_summary, at Thu Jan 14 21:46:06 2021
+000-INFO: [v++ 60-1316] Initiating connection to rulecheck server, at Thu Jan 14 21:46:06 2021
+000-INFO: [v++ 60-895]   Target platform: /home/centos/src/project_data/aws-fpga/Vitis/aws_platform/xilinx_aws-vu9p-f1_shell-v04261818_201920_2/xilinx_aws-vu9p-f1_shell-v04261818_201920_2.xpfm
+000-INFO: [v++ 60-1578]   This platform contains Xilinx Shell Archive '/home/centos/src/project_data/aws-fpga/Vitis/aws_platform/xilinx_aws-vu9p-f1_shell-v04261818_201920_2/hw/xilinx_aws-vu9p-f1_shell-v04261818_201920_2.xsa'
+000-INFO: [v++ 60-2256] Packaging for hardware emulation
+000-INFO: [v++ 60-2343] Use the vitis_analyzer tool to visualize and navigate the relevant reports. Run the following command. 
+000-    vitis_analyzer ./v++.package_summary 
+000-INFO: [v++ 60-791] Total elapsed time: 0h 0m 14s
+000-INFO: [v++ 60-1653] Closing dispatch client.
+000-/opt/Xilinx/Vitis/2020.1/bin/emconfigutil --od . --nd 1  --platform /home/centos/src/project_data/aws-fpga/Vitis/aws_platform/xilinx_aws-vu9p-f1_shell-v04261818_201920_2/xilinx_aws-vu9p-f1_shell-v04261818_201920_2.xpfm
+000-
+000-****** configutil v2020.1 (64-bit)
+000-  **** SW Build 2902540 on Wed May 27 19:54:35 MDT 2020
+000-    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+000-
+000-INFO: [ConfigUtil 60-895]   Target platform: /home/centos/src/project_data/aws-fpga/Vitis/aws_platform/xilinx_aws-vu9p-f1_shell-v04261818_201920_2/xilinx_aws-vu9p-f1_shell-v04261818_201920_2.xpfm
+000-INFO: [ConfigUtil 60-1578]   This platform contains Xilinx Shell Archive '/home/centos/src/project_data/aws-fpga/Vitis/aws_platform/xilinx_aws-vu9p-f1_shell-v04261818_201920_2/hw/xilinx_aws-vu9p-f1_shell-v04261818_201920_2.xsa'
+000-emulation configuration file `emconfig.json` is created in . directory 
+00255-
+21:46:17 Build Finished (took 14m:3s.697ms)
+

@@ -1,0 +1,200 @@
+<profile>
+
+<section name = "Vitis HLS Report for 'mergeResult_128u_4u_s'" level="0">
+<item name = "Date">Thu Jan 14 21:37:20 2021
+</item>
+<item name = "Version">2020.1 (Build 2902540 on Wed May 27 20:16:15 MDT 2020)</item>
+<item name = "Project">aes256CbcDecryptKernel</item>
+<item name = "Solution">solution (Vitis Kernel Flow Target)</item>
+<item name = "Product family">virtexuplus</item>
+<item name = "Target device">xcvu9p-flgb2104-2-i</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">4.00 ns, 4.282 ns, 1.08 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">?, ?, ?, ?, ?, ?, none</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+<column name="- LOOP_TASK">?, ?, ?, -, -, ?, no</column>
+<column name=" + LOOP_MERGE_RESULT">?, ?, 2, 1, 1, ?, yes</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Utilization Estimates" level="0">
+<item name = "Summary"><table name="" hasTotal="1">
+<keys size="6">Name, BRAM_18K, DSP, FF, LUT, URAM</keys>
+<column name="DSP">-, -, -, -, -</column>
+<column name="Expression">-, -, 0, 332, -</column>
+<column name="FIFO">-, -, -, -, -</column>
+<column name="Instance">-, -, -, -, -</column>
+<column name="Memory">-, -, -, -, -</column>
+<column name="Multiplexer">-, -, -, 218, -</column>
+<column name="Register">-, -, 362, -, -</column>
+<specialColumn name="Available SLR">1440, 2280, 788160, 394080, 320</specialColumn>
+<specialColumn name="Utilization SLR (%)">0, 0, ~0, ~0, 0</specialColumn>
+<specialColumn name="Available">4320, 6840, 2364480, 1182240, 960</specialColumn>
+<specialColumn name="Utilization (%)">0, 0, ~0, ~0, 0</specialColumn>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="1">
+<keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
+</table>
+</item>
+<item name = "DSP"><table name="" hasTotal="0">
+<keys size="3">Instance, Module, Expression</keys>
+</table>
+</item>
+<item name = "Memory"><table name="" hasTotal="1">
+<keys size="10">Memory, Module, BRAM_18K, FF, LUT, URAM, Words, Bits, Banks, W*Bits*Banks</keys>
+</table>
+</item>
+<item name = "FIFO"><table name="" hasTotal="1">
+<keys size="8">Name, BRAM_18K, FF, LUT, URAM, Depth, Bits, Size:D*B</keys>
+</table>
+</item>
+<item name = "Expression"><table name="" hasTotal="1">
+<keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
+<column name="add_ln695_2_fu_219_p2">+, 0, 0, 71, 64, 1</column>
+<column name="add_ln695_fu_202_p2">+, 0, 0, 71, 64, 1</column>
+<column name="burstLen_1_fu_231_p2">+, 0, 0, 39, 32, 1</column>
+<column name="ap_block_pp0_stage0_01001">and, 0, 0, 2, 1, 1</column>
+<column name="ap_block_state3">and, 0, 0, 2, 1, 1</column>
+<column name="ap_ext_blocking_n">and, 0, 0, 2, 2, 2</column>
+<column name="ap_int_blocking_cur_n">and, 0, 0, 2, 1, 1</column>
+<column name="ap_int_blocking_n">and, 0, 0, 2, 1, 2</column>
+<column name="ap_predicate_op41_write_state3">and, 0, 0, 2, 1, 1</column>
+<column name="ap_str_blocking_n">and, 0, 0, 2, 2, 2</column>
+<column name="icmp_ln284_fu_214_p2">icmp, 0, 0, 29, 64, 64</column>
+<column name="icmp_ln311_fu_225_p2">icmp, 0, 0, 20, 32, 7</column>
+<column name="icmp_ln327_fu_208_p2">icmp, 0, 0, 20, 32, 1</column>
+<column name="icmp_ln882_1_fu_197_p2">icmp, 0, 0, 29, 64, 64</column>
+<column name="icmp_ln882_fu_191_p2">icmp, 0, 0, 29, 64, 1</column>
+<column name="ap_block_state1">or, 0, 0, 2, 1, 1</column>
+<column name="ap_block_state5_pp0_stage0_iter1">or, 0, 0, 2, 1, 1</column>
+<column name="ap_block_state6">or, 0, 0, 2, 1, 1</column>
+<column name="ap_enable_pp0">xor, 0, 0, 2, 1, 2</column>
+<column name="ap_enable_reg_pp0_iter1">xor, 0, 0, 2, 2, 1</column>
+</table>
+</item>
+<item name = "Multiplexer"><table name="" hasTotal="1">
+<keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
+<column name="ap_NS_fsm">38, 7, 1, 7</column>
+<column name="ap_done">9, 2, 1, 2</column>
+<column name="ap_enable_reg_pp0_iter1">15, 3, 1, 3</column>
+<column name="burstLenStrm_blk_n">9, 2, 1, 2</column>
+<column name="burstLenStrm_din">21, 4, 32, 128</column>
+<column name="burstLen_fu_80">9, 2, 32, 64</column>
+<column name="empty_57_reg_171">9, 2, 64, 128</column>
+<column name="empty_reg_160">9, 2, 64, 128</column>
+<column name="endTextStrm_1_V_blk_n">9, 2, 1, 2</column>
+<column name="endTextStrm_2_V_blk_n">9, 2, 1, 2</column>
+<column name="endTextStrm_3_V_blk_n">9, 2, 1, 2</column>
+<column name="endTextStrm_V_blk_n">9, 2, 1, 2</column>
+<column name="msgNumStrm_blk_n">9, 2, 1, 2</column>
+<column name="outStrm_blk_n">9, 2, 1, 2</column>
+<column name="taskNumStrm_blk_n">9, 2, 1, 2</column>
+<column name="textStrm_1_V_V_blk_n">9, 2, 1, 2</column>
+<column name="textStrm_2_V_V_blk_n">9, 2, 1, 2</column>
+<column name="textStrm_3_V_V_blk_n">9, 2, 1, 2</column>
+<column name="textStrm_V_V_blk_n">9, 2, 1, 2</column>
+</table>
+</item>
+<item name = "Register"><table name="" hasTotal="1">
+<keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
+<column name="add_ln695_reg_279">64, 0, 64, 0</column>
+<column name="ap_CS_fsm">6, 0, 6, 0</column>
+<column name="ap_done_reg">1, 0, 1, 0</column>
+<column name="ap_enable_reg_pp0_iter0">1, 0, 1, 0</column>
+<column name="ap_enable_reg_pp0_iter1">1, 0, 1, 0</column>
+<column name="burstLen_fu_80">32, 0, 32, 0</column>
+<column name="empty_57_reg_171">64, 0, 64, 0</column>
+<column name="empty_reg_160">64, 0, 64, 0</column>
+<column name="icmp_ln311_reg_296">1, 0, 1, 0</column>
+<column name="msgNum_V_reg_255">64, 0, 64, 0</column>
+<column name="taskNum_V_reg_260">64, 0, 64, 0</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Interface" level="0">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
+<column name="ap_clk">in, 1, ap_ctrl_hs, mergeResult&lt;128u, 4u&gt;, return value</column>
+<column name="ap_rst">in, 1, ap_ctrl_hs, mergeResult&lt;128u, 4u&gt;, return value</column>
+<column name="ap_start">in, 1, ap_ctrl_hs, mergeResult&lt;128u, 4u&gt;, return value</column>
+<column name="ap_done">out, 1, ap_ctrl_hs, mergeResult&lt;128u, 4u&gt;, return value</column>
+<column name="ap_continue">in, 1, ap_ctrl_hs, mergeResult&lt;128u, 4u&gt;, return value</column>
+<column name="ap_idle">out, 1, ap_ctrl_hs, mergeResult&lt;128u, 4u&gt;, return value</column>
+<column name="ap_ready">out, 1, ap_ctrl_hs, mergeResult&lt;128u, 4u&gt;, return value</column>
+<column name="ap_ext_blocking_n">out, 1, ap_ctrl_hs, mergeResult&lt;128u, 4u&gt;, return value</column>
+<column name="ap_str_blocking_n">out, 1, ap_ctrl_hs, mergeResult&lt;128u, 4u&gt;, return value</column>
+<column name="ap_int_blocking_n">out, 1, ap_ctrl_hs, mergeResult&lt;128u, 4u&gt;, return value</column>
+<column name="msgNumStrm_dout">in, 64, ap_fifo, msgNumStrm, pointer</column>
+<column name="msgNumStrm_empty_n">in, 1, ap_fifo, msgNumStrm, pointer</column>
+<column name="msgNumStrm_read">out, 1, ap_fifo, msgNumStrm, pointer</column>
+<column name="taskNumStrm_dout">in, 64, ap_fifo, taskNumStrm, pointer</column>
+<column name="taskNumStrm_empty_n">in, 1, ap_fifo, taskNumStrm, pointer</column>
+<column name="taskNumStrm_read">out, 1, ap_fifo, taskNumStrm, pointer</column>
+<column name="outStrm_din">out, 512, ap_fifo, outStrm, pointer</column>
+<column name="outStrm_full_n">in, 1, ap_fifo, outStrm, pointer</column>
+<column name="outStrm_write">out, 1, ap_fifo, outStrm, pointer</column>
+<column name="burstLenStrm_din">out, 32, ap_fifo, burstLenStrm, pointer</column>
+<column name="burstLenStrm_full_n">in, 1, ap_fifo, burstLenStrm, pointer</column>
+<column name="burstLenStrm_write">out, 1, ap_fifo, burstLenStrm, pointer</column>
+<column name="textStrm_V_V_dout">in, 128, ap_fifo, textStrm_V_V, pointer</column>
+<column name="textStrm_V_V_empty_n">in, 1, ap_fifo, textStrm_V_V, pointer</column>
+<column name="textStrm_V_V_read">out, 1, ap_fifo, textStrm_V_V, pointer</column>
+<column name="textStrm_1_V_V_dout">in, 128, ap_fifo, textStrm_1_V_V, pointer</column>
+<column name="textStrm_1_V_V_empty_n">in, 1, ap_fifo, textStrm_1_V_V, pointer</column>
+<column name="textStrm_1_V_V_read">out, 1, ap_fifo, textStrm_1_V_V, pointer</column>
+<column name="textStrm_2_V_V_dout">in, 128, ap_fifo, textStrm_2_V_V, pointer</column>
+<column name="textStrm_2_V_V_empty_n">in, 1, ap_fifo, textStrm_2_V_V, pointer</column>
+<column name="textStrm_2_V_V_read">out, 1, ap_fifo, textStrm_2_V_V, pointer</column>
+<column name="textStrm_3_V_V_dout">in, 128, ap_fifo, textStrm_3_V_V, pointer</column>
+<column name="textStrm_3_V_V_empty_n">in, 1, ap_fifo, textStrm_3_V_V, pointer</column>
+<column name="textStrm_3_V_V_read">out, 1, ap_fifo, textStrm_3_V_V, pointer</column>
+<column name="endTextStrm_V_dout">in, 1, ap_fifo, endTextStrm_V, pointer</column>
+<column name="endTextStrm_V_empty_n">in, 1, ap_fifo, endTextStrm_V, pointer</column>
+<column name="endTextStrm_V_read">out, 1, ap_fifo, endTextStrm_V, pointer</column>
+<column name="endTextStrm_1_V_dout">in, 1, ap_fifo, endTextStrm_1_V, pointer</column>
+<column name="endTextStrm_1_V_empty_n">in, 1, ap_fifo, endTextStrm_1_V, pointer</column>
+<column name="endTextStrm_1_V_read">out, 1, ap_fifo, endTextStrm_1_V, pointer</column>
+<column name="endTextStrm_2_V_dout">in, 1, ap_fifo, endTextStrm_2_V, pointer</column>
+<column name="endTextStrm_2_V_empty_n">in, 1, ap_fifo, endTextStrm_2_V, pointer</column>
+<column name="endTextStrm_2_V_read">out, 1, ap_fifo, endTextStrm_2_V, pointer</column>
+<column name="endTextStrm_3_V_dout">in, 1, ap_fifo, endTextStrm_3_V, pointer</column>
+<column name="endTextStrm_3_V_empty_n">in, 1, ap_fifo, endTextStrm_3_V, pointer</column>
+<column name="endTextStrm_3_V_read">out, 1, ap_fifo, endTextStrm_3_V, pointer</column>
+</table>
+</item>
+</section>
+</profile>

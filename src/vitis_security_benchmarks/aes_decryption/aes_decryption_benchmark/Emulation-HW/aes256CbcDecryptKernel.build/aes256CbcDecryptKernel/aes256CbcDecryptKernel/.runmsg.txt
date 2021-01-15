@@ -1,0 +1,2 @@
+performing high-level synthesis for kernel: aes256CbcDecryptKernel
+Log file: /home/centos/workspace/aes_decryption_benchmark/Emulation-HW/aes256CbcDecryptKernel.build/aes256CbcDecryptKernel/aes256CbcDecryptKernel/vitis_hls.log

@@ -1,0 +1,336 @@
+INFO-FLOW: Workspace /home/centos/workspace/aes_decryption_benchmark/Emulation-SW/aes256CbcDecryptKernel.build/aes256CbcDecryptKernel/aes256CbcDecryptKernel/aes256CbcDecryptKernel/solution opened at Thu Jan 14 21:28:21 UTC 2021
+Execute       send_msg_by_id INFO @200-1505@%s%s  vitis 
+INFO: [HLS 200-1505] Using flow_target 'vitis'
+Execute       get_config_interface -m_axi_latency 
+Execute       send_msg_by_id INFO @200-435@%s%s 'config_flow -target' config_interface -m_axi_latency=64 
+INFO: [HLS 200-435] Setting 'config_flow -target' configuration: config_interface -m_axi_latency=64
+Execute       config_interface -m_axi_latency=64 
+Execute       get_config_interface -m_axi_alignment_byte_size 
+Execute       send_msg_by_id INFO @200-435@%s%s 'config_flow -target' config_interface -m_axi_alignment_byte_size=64 
+INFO: [HLS 200-435] Setting 'config_flow -target' configuration: config_interface -m_axi_alignment_byte_size=64
+Execute       config_interface -m_axi_alignment_byte_size=64 
+Execute       get_config_interface -m_axi_max_widen_bitwidth 
+Execute       send_msg_by_id INFO @200-435@%s%s 'config_flow -target' config_interface -m_axi_max_widen_bitwidth=512 
+INFO: [HLS 200-435] Setting 'config_flow -target' configuration: config_interface -m_axi_max_widen_bitwidth=512
+Execute       config_interface -m_axi_max_widen_bitwidth=512 
+Execute       get_config_interface -default_interface 
+INFO-FLOW: Setting macro_cmd 'config_flow -target' configuration: config_interface -default_interface=kernel
+Execute       config_interface -default_interface=kernel 
+Execute       get_config_interface -default_slave_interface 
+Execute       send_msg_by_id INFO @200-435@%s%s 'config_flow -target' config_interface -default_slave_interface=s_axilite 
+INFO: [HLS 200-435] Setting 'config_flow -target' configuration: config_interface -default_slave_interface=s_axilite
+Execute       config_interface -default_slave_interface=s_axilite 
+Execute       get_config_rtl -register_reset_num 
+Execute       send_msg_by_id INFO @200-435@%s%s 'config_flow -target' config_rtl -register_reset_num=3 
+INFO: [HLS 200-435] Setting 'config_flow -target' configuration: config_rtl -register_reset_num=3
+Execute       config_rtl -register_reset_num=3 
+Execute     set_part xcvu9p-flgb2104-2-i 
+INFO-FLOW: DBG:set_part: XILINX_VIVADO=/opt/Xilinx/Vivado/2020.1
+INFO-FLOW: DBG:set_part: RDI_DATADIR=/opt/Xilinx/Vivado/2020.1/data:/opt/Xilinx/Vitis/2020.1/data
+Execute       ap_part_info -name xcvu9p-flgb2104-2-i -data single -quiet 
+DBG:HLSDevice: Trying to load device library: /opt/Xilinx/Vitis/2020.1/lib/lnx64.o/librdi_hlsvwrap.so
+DBG:HLSDevice: first parts/arch.xml in RDI_DATADIR: /opt/Xilinx/Vivado/2020.1/data/parts/arch.xml
+Command       ap_part_info done; 2.28 sec.
+Execute       ap_part_info -name xcvu9p-flgb2104-2-i -data info 
+Execute       ap_family_info -name virtexuplus -data info 
+Execute       add_library xilinx/virtexuplus/virtexuplus:xcvu9p:-flgb2104:-2-i 
+Execute         get_default_platform 
+Execute         open_platform DefaultPlatform 
+Execute         import_lib /opt/Xilinx/Vitis/2020.1/common/technology/xilinx/virtexuplus/virtexuplus 
+Execute           source /opt/Xilinx/Vitis/2020.1/common/technology/xilinx/common/xilinx.lib 
+Execute             source /opt/Xilinx/Vitis/2020.1/common/technology/xilinx/common/dsp48.lib 
+Execute           source /opt/Xilinx/Vitis/2020.1/common/technology/xilinx/common/xilinx.hlp 
+Execute             source /opt/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute               source /opt/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/maxi.hlp 
+Execute               source /opt/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/saxilite.hlp 
+Execute             source /opt/Xilinx/Vitis/2020.1/common/technology/xilinx/common/dsp48.hlp 
+Execute           source /opt/Xilinx/Vitis/2020.1/common/technology/xilinx/virtexuplus/dsp48e2.hlp 
+Execute         source /opt/Xilinx/Vitis/2020.1/common/technology/xilinx/virtexuplus/virtexuplus.gen 
+Execute           source /opt/Xilinx/Vitis/2020.1/common/technology/xilinx/common/xilinx.gen 
+Execute             source /opt/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/plb46.gen 
+Execute             source /opt/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/axi4.gen 
+Execute             source /opt/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute               source /opt/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/saxilite.gen 
+Execute               source /opt/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/maxi.gen 
+Execute             source /opt/Xilinx/Vitis/2020.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute             source /opt/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute             source /opt/Xilinx/Vitis/2020.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute             source /opt/Xilinx/Vitis/2020.1/common/technology/xilinx/ip/util.gen 
+Execute             source /opt/Xilinx/Vitis/2020.1/common/technology/xilinx/ip/xfft.gen 
+Execute             source /opt/Xilinx/Vitis/2020.1/common/technology/xilinx/ip/xfir.gen 
+Execute             source /opt/Xilinx/Vitis/2020.1/common/technology/xilinx/common/dsp48.gen 
+Command           ap_source done; 0.13 sec.
+Command         ap_source done; 0.13 sec.
+Execute         ap_part_info -data single -name xcvu9p-flgb2104-2-i 
+Execute         ap_part_info -name xcvu9p-flgb2104-2-i -data resources 
+Execute         config_chip_info -resource {SLICE 147780} {LUT 1182240} {FF 2364480} {DSP 6840} {BRAM 4320} {URAM 960} {SLR 3} 
+Execute         ap_part_info -name xcvu9p-flgb2104-2-i -data info 
+Execute         config_chip_info -speed medium 
+Command       add_library done; 0.15 sec.
+Execute       add_library xilinx/virtexuplus/virtexuplus_fpv7 
+Execute         get_default_platform 
+Execute         open_platform DefaultPlatform 
+Execute         import_lib /opt/Xilinx/Vitis/2020.1/common/technology/xilinx/virtexuplus/virtexuplus_fpv7 
+Execute           source /opt/Xilinx/Vitis/2020.1/common/technology/xilinx/common/xilinx_fp.lib 
+Execute           source /opt/Xilinx/Vitis/2020.1/common/technology/xilinx/common/xilinx_fp.hlp 
+Execute             source /opt/Xilinx/Vitis/2020.1/common/technology/xilinx/common/xilinx.hlp 
+Execute               source /opt/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute                 source /opt/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/maxi.hlp 
+Execute                 source /opt/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/saxilite.hlp 
+Execute               source /opt/Xilinx/Vitis/2020.1/common/technology/xilinx/common/dsp48.hlp 
+Execute         source /opt/Xilinx/Vitis/2020.1/common/technology/xilinx/virtexuplus/virtexuplus_fpv7.gen 
+Execute           source /opt/Xilinx/Vitis/2020.1/common/technology/xilinx/common/xilinx_fp.gen 
+INFO: [HLS 200-10] Setting target device to 'xcvu9p-flgb2104-2-i'
+Execute       ap_part_info -name xcvu9p-flgb2104-2-i -data info 
+Execute       get_default_platform 
+Command     set_part done; 2.49 sec.
+Execute     create_clock -period 250.000000MHz -name default 
+Execute       ap_set_clock -name default -period 4 -unit ns -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 4ns.
+Execute     config_rtl -kernel_profile 
+Execute     config_export -vivado_optimization_level 0 
+Execute       get_config_export -vivado_impl_strategy 
+Execute       get_config_export -vivado_phys_opt 
+Execute     config_dataflow -strict_mode warning 
+Execute     config_debug -enable 
+Execute     set_clock_uncertainty 27.000000% 
+Execute       get_clock_period -default -name=default 
+Execute       ap_set_clock -name default -uncertainty 1.08 -unit % 
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 1.08ns.
+Execute     config_rtl -m_axi_conservative_mode=1 
+Execute     config_interface -m_axi_addr64 
+Execute     config_interface -default_slave_interface s_axilite 
+Execute     config_export -format ip_catalog -ipname aes256CbcDecryptKernel 
+Execute       get_config_export -vivado_impl_strategy 
+Execute       get_config_export -vivado_phys_opt 
+Execute     csynth_design -synthesis_check 
+Execute       get_config_compile -dump_cfg 
+Execute       get_config_compile -effort 
+Execute       get_config_compile -enable_clang39 
+Execute       get_config_compile -g 
+Execute       get_config_compile -ng 
+Execute       get_config_compile -opt_fp 
+Execute       get_config_compile -skip_cdt 
+Execute       get_config_compile -skip_syncheck 
+Execute       get_config_compile -skip_transform 
+Execute       get_config_compile -keep_printf 
+Execute       elaborate -effort=medium -skip_syncheck=0 -keep_printf=0 -skip_cdt=0 -skip_transform=2 -ng=0 -g=0 -opt_fp=0 -from_csynth_design=1 
+INFO: [HLS 200-10] Analyzing design file '/home/centos/workspace/aes_decryption_benchmark/src/kernel/aes256CbcDecryptKernel.cpp' ... 
+INFO-FLOW: Compiling one TU...
+Execute         get_config_compile -pragma_strict_mode 
+INFO-FLOW: Handling /home/centos/workspace/aes_decryption_benchmark/src/kernel/aes256CbcDecryptKernel.cpp as C++
+Execute         ap_part_info -name xcvu9p-flgb2104-2-i -data info 
+INFO-FLOW: Running: GCC PP 39
+INFO-FLOW: Source preprocessing
+Execute         ap_eval exec -ignorestderr /opt/Xilinx/Vitis/2020.1/lnx64/tools/clang-3.9-csynth/bin/clang -fsave-optimization-record -foptimization-record-file=/home/centos/workspace/aes_decryption_benchmark/Emulation-SW/aes256CbcDecryptKernel.build/aes256CbcDecryptKernel/aes256CbcDecryptKernel/aes256CbcDecryptKernel/solution/.autopilot/db/clang.aes256CbcDecryptKernel.cpp.diag.yml -fno-limit-debug-info -gcc-toolchain /opt/Xilinx/Vivado/2020.1/tps/lnx64/gcc-6.2.0 -fhls -fno-exceptions -E /home/centos/workspace/aes_decryption_benchmark/src/kernel/aes256CbcDecryptKernel.cpp -g -I/home/centos/workspace/aes_decryption_benchmark/src/kernel -I/home/centos/workspace/aes_decryption_benchmark/libs/xf_security/L1/include -I/home/centos/workspace/aes_decryption_benchmark/libs/xf_security/L1/include -I/home/centos/workspace/aes_decryption_benchmark/src/kernel -fno-math-errno -c -emit-llvm -mllvm -disable-llvm-optzns -Werror=implicit-function-declaration -Werror=implicit-hls-streams -Werror=return-type -Wpragmas -Wunused-parameter -fno-threadsafe-statics -fno-use-cxa-atexit -std=gnu++14 -target fpga64-xilinx-linux-gnu -fno-threadsafe-statics -fno-use-cxa-atexit -I /opt/Xilinx/Vitis/2020.1/common/technology/autopilot/39 -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /opt/Xilinx/Vitis/2020.1/common/technology/autopilot -I /opt/Xilinx/Vitis/2020.1/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E2__ -o /home/centos/workspace/aes_decryption_benchmark/Emulation-SW/aes256CbcDecryptKernel.build/aes256CbcDecryptKernel/aes256CbcDecryptKernel/aes256CbcDecryptKernel/solution/.autopilot/db/aes256CbcDecryptKernel.pp.0.cpp > /home/centos/workspace/aes_decryption_benchmark/Emulation-SW/aes256CbcDecryptKernel.build/aes256CbcDecryptKernel/aes256CbcDecryptKernel/aes256CbcDecryptKernel/solution/.autopilot/db/clang.aes256CbcDecryptKernel.cpp.out.log 2> /home/centos/workspace/aes_decryption_benchmark/Emulation-SW/aes256CbcDecryptKernel.build/aes256CbcDecryptKernel/aes256CbcDecryptKernel/aes256CbcDecryptKernel/solution/.autopilot/db/clang.aes256CbcDecryptKernel.cpp.err.log 
+INFO-FLOW: Done: GCC PP 39 time: 0.1 seconds per iteration
+Execute         set_directive_top aes256CbcDecryptKernel -name=aes256CbcDecryptKernel 
+INFO-FLOW: Setting directive 'TOP' name=aes256CbcDecryptKernel 
+INFO-FLOW: Setting directive 'TOP' name=aes256CbcDecryptKernel 
+Execute         source /opt/Xilinx/Vitis/2020.1/tps/tcl/tcllib1.11.1/yaml/huddle.tcl 
+Execute         source /opt/Xilinx/Vitis/2020.1/tps/tcl/tcllib1.11.1/yaml/json2huddle.tcl 
+Execute           source /opt/Xilinx/Vitis/2020.1/tps/tcl/tcllib1.11.1/try/try.tcl 
+INFO-FLOW: Setting directive 'TOP' name=aes256CbcDecryptKernel 
+Execute         list_core -type functional_unit 
+Execute         clang_tidy xilinx-systemc-detector /home/centos/workspace/aes_decryption_benchmark/Emulation-SW/aes256CbcDecryptKernel.build/aes256CbcDecryptKernel/aes256CbcDecryptKernel/aes256CbcDecryptKernel/solution/.autopilot/db/aes256CbcDecryptKernel.pp.0.cpp std=gnu++14 -target fpga  -directive=/home/centos/workspace/aes_decryption_benchmark/Emulation-SW/aes256CbcDecryptKernel.build/aes256CbcDecryptKernel/aes256CbcDecryptKernel/aes256CbcDecryptKernel/solution/.autopilot/db/.systemc_flag 
+INFO-FLOW: exec /opt/Xilinx/Vitis/2020.1/lnx64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-systemc-detector -import-directive=/home/centos/workspace/aes_decryption_benchmark/Emulation-SW/aes256CbcDecryptKernel.build/aes256CbcDecryptKernel/aes256CbcDecryptKernel/aes256CbcDecryptKernel/solution/.autopilot/db/.systemc_flag -fix-errors /home/centos/workspace/aes_decryption_benchmark/Emulation-SW/aes256CbcDecryptKernel.build/aes256CbcDecryptKernel/aes256CbcDecryptKernel/aes256CbcDecryptKernel/solution/.autopilot/db/aes256CbcDecryptKernel.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0
+Command         clang_tidy done; 1.71 sec.
+INFO-FLOW: Running: clang-tidy CDT preprocess 39
+Execute         clang_tidy xilinx-directive2pragma /home/centos/workspace/aes_decryption_benchmark/Emulation-SW/aes256CbcDecryptKernel.build/aes256CbcDecryptKernel/aes256CbcDecryptKernel/aes256CbcDecryptKernel/solution/.autopilot/db/aes256CbcDecryptKernel.pp.0.cpp std=gnu++14 -target fpga  -directive=/home/centos/workspace/aes_decryption_benchmark/Emulation-SW/aes256CbcDecryptKernel.build/aes256CbcDecryptKernel/aes256CbcDecryptKernel/aes256CbcDecryptKernel/solution/.autopilot/db/all.directive.json 
+INFO-FLOW: exec /opt/Xilinx/Vitis/2020.1/lnx64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-directive2pragma -import-directive=/home/centos/workspace/aes_decryption_benchmark/Emulation-SW/aes256CbcDecryptKernel.build/aes256CbcDecryptKernel/aes256CbcDecryptKernel/aes256CbcDecryptKernel/solution/.autopilot/db/all.directive.json -fix-errors /home/centos/workspace/aes_decryption_benchmark/Emulation-SW/aes256CbcDecryptKernel.build/aes256CbcDecryptKernel/aes256CbcDecryptKernel/aes256CbcDecryptKernel/solution/.autopilot/db/aes256CbcDecryptKernel.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0
+Command         clang_tidy done; 2.11 sec.
+Execute         clang_tidy xilinx-constantarray-param,xilinx-remove-assert /home/centos/workspace/aes_decryption_benchmark/Emulation-SW/aes256CbcDecryptKernel.build/aes256CbcDecryptKernel/aes256CbcDecryptKernel/aes256CbcDecryptKernel/solution/.autopilot/db/aes256CbcDecryptKernel.pp.0.cpp std=gnu++14 -target fpga  
+INFO-FLOW: exec /opt/Xilinx/Vitis/2020.1/lnx64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-constantarray-param,xilinx-remove-assert -fix-errors /home/centos/workspace/aes_decryption_benchmark/Emulation-SW/aes256CbcDecryptKernel.build/aes256CbcDecryptKernel/aes256CbcDecryptKernel/aes256CbcDecryptKernel/solution/.autopilot/db/aes256CbcDecryptKernel.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0
+Command         clang_tidy done; 2.21 sec.
+INFO-FLOW: Done: clang-tidy CDT preprocess 39 time: 4.3 seconds per iteration
+Execute         ap_part_info -name xcvu9p-flgb2104-2-i -data info 
+INFO-FLOW: compiling source code to llvm bc
+Execute         ap_eval exec -ignorestderr /opt/Xilinx/Vitis/2020.1/lnx64/tools/clang-3.9-csynth/bin/clang -fsave-optimization-record -foptimization-record-file=/home/centos/workspace/aes_decryption_benchmark/Emulation-SW/aes256CbcDecryptKernel.build/aes256CbcDecryptKernel/aes256CbcDecryptKernel/aes256CbcDecryptKernel/solution/.autopilot/db/clang.aes256CbcDecryptKernel.pragma.2.cpp.diag.yml -fno-limit-debug-info -fhls -flto -fno-exceptions -Wno-error=c++11-narrowing /home/centos/workspace/aes_decryption_benchmark/Emulation-SW/aes256CbcDecryptKernel.build/aes256CbcDecryptKernel/aes256CbcDecryptKernel/aes256CbcDecryptKernel/solution/.autopilot/db/aes256CbcDecryptKernel.pragma.2.cpp -g -I/home/centos/workspace/aes_decryption_benchmark/src/kernel -I/home/centos/workspace/aes_decryption_benchmark/libs/xf_security/L1/include -I/home/centos/workspace/aes_decryption_benchmark/libs/xf_security/L1/include -I/home/centos/workspace/aes_decryption_benchmark/src/kernel -fno-math-errno -c -emit-llvm -mllvm -disable-llvm-optzns -Werror=implicit-function-declaration -Werror=implicit-hls-streams -Werror=return-type -Wpragmas -Wunused-parameter -fno-threadsafe-statics -fno-use-cxa-atexit -std=gnu++14 -target fpga64-xilinx-linux-gnu -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /opt/Xilinx/Vitis/2020.1/common/technology/autopilot -I /opt/Xilinx/Vitis/2020.1/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E2__ -g -o /home/centos/workspace/aes_decryption_benchmark/Emulation-SW/aes256CbcDecryptKernel.build/aes256CbcDecryptKernel/aes256CbcDecryptKernel/aes256CbcDecryptKernel/solution/.autopilot/db/aes256CbcDecryptKernel.bc > /home/centos/workspace/aes_decryption_benchmark/Emulation-SW/aes256CbcDecryptKernel.build/aes256CbcDecryptKernel/aes256CbcDecryptKernel/aes256CbcDecryptKernel/solution/.autopilot/db/clang.aes256CbcDecryptKernel.pragma.2.cpp.out.log 2> /home/centos/workspace/aes_decryption_benchmark/Emulation-SW/aes256CbcDecryptKernel.build/aes256CbcDecryptKernel/aes256CbcDecryptKernel/aes256CbcDecryptKernel/solution/.autopilot/db/clang.aes256CbcDecryptKernel.pragma.2.cpp.err.log 
+Command         ap_eval done; 1.86 sec.
+WARNING: [HLS 207-1535] 'Resource' is deprecated, and it will be removed in future release: /home/centos/workspace/aes_decryption_benchmark/libs/xf_security/L1/include/xf_security/aes.hpp:40:9
+WARNING: [HLS 207-1535] 'Resource' is deprecated, and it will be removed in future release: /home/centos/workspace/aes_decryption_benchmark/libs/xf_security/L1/include/xf_security/aes.hpp:41:9
+WARNING: [HLS 207-1535] 'Resource' is deprecated, and it will be removed in future release: /home/centos/workspace/aes_decryption_benchmark/libs/xf_security/L1/include/xf_security/aes.hpp:42:9
+WARNING: [HLS 207-1535] 'Resource' is deprecated, and it will be removed in future release: /home/centos/workspace/aes_decryption_benchmark/libs/xf_security/L1/include/xf_security/aes.hpp:43:9
+WARNING: [HLS 207-1535] 'Resource' is deprecated, and it will be removed in future release: /home/centos/workspace/aes_decryption_benchmark/libs/xf_security/L1/include/xf_security/aes.hpp:44:9
+WARNING: [HLS 207-1535] 'Resource' is deprecated, and it will be removed in future release: /home/centos/workspace/aes_decryption_benchmark/libs/xf_security/L1/include/xf_security/aes.hpp:45:9
+WARNING: [HLS 207-5324] unused parameter 'cipherkey': /home/centos/workspace/aes_decryption_benchmark/libs/xf_security/L1/include/xf_security/aes.hpp:379:31
+WARNING: [HLS 207-5324] unused parameter 'plaintext': /home/centos/workspace/aes_decryption_benchmark/libs/xf_security/L1/include/xf_security/aes.hpp:387:31
+WARNING: [HLS 207-5324] unused parameter 'cipherkey': /home/centos/workspace/aes_decryption_benchmark/libs/xf_security/L1/include/xf_security/aes.hpp:387:53
+WARNING: [HLS 207-5324] unused parameter 'ciphertext': /home/centos/workspace/aes_decryption_benchmark/libs/xf_security/L1/include/xf_security/aes.hpp:387:78
+WARNING: [HLS 207-5324] unused parameter 'cipherkey': /home/centos/workspace/aes_decryption_benchmark/libs/xf_security/L1/include/xf_security/aes.hpp:445:55
+WARNING: [HLS 207-5324] unused parameter 'cipherkey': /home/centos/workspace/aes_decryption_benchmark/libs/xf_security/L1/include/xf_security/aes.hpp:526:31
+WARNING: [HLS 207-5324] unused parameter 'ciphertext': /home/centos/workspace/aes_decryption_benchmark/libs/xf_security/L1/include/xf_security/aes.hpp:534:31
+WARNING: [HLS 207-5324] unused parameter 'cipherkey': /home/centos/workspace/aes_decryption_benchmark/libs/xf_security/L1/include/xf_security/aes.hpp:534:54
+WARNING: [HLS 207-5324] unused parameter 'plaintext': /home/centos/workspace/aes_decryption_benchmark/libs/xf_security/L1/include/xf_security/aes.hpp:534:79
+WARNING: [HLS 207-5324] unused parameter 'cipherkey': /home/centos/workspace/aes_decryption_benchmark/libs/xf_security/L1/include/xf_security/aes.hpp:627:56
+WARNING: [HLS 207-5324] unused parameter 'cipherkey': /home/centos/workspace/aes_decryption_benchmark/libs/xf_security/L1/include/xf_security/aes.hpp:757:55
+WARNING: [HLS 207-5324] unused parameter 'cipherkey': /home/centos/workspace/aes_decryption_benchmark/libs/xf_security/L1/include/xf_security/aes.hpp:918:55
+WARNING: [HLS 207-5324] unused parameter 'cipherkey': /home/centos/workspace/aes_decryption_benchmark/libs/xf_security/L1/include/xf_security/aes.hpp:1073:56
+WARNING: [HLS 207-5324] unused parameter 'cipherkey': /home/centos/workspace/aes_decryption_benchmark/libs/xf_security/L1/include/xf_security/aes.hpp:1265:56
+WARNING: [HLS 207-1535] 'Resource' is deprecated, and it will be removed in future release: /home/centos/workspace/aes_decryption_benchmark/src/kernel/aes256CbcDecryptKernel.cpp:194:9
+WARNING: [HLS 207-1535] 'Resource' is deprecated, and it will be removed in future release: /home/centos/workspace/aes_decryption_benchmark/src/kernel/aes256CbcDecryptKernel.cpp:197:9
+WARNING: [HLS 207-1535] 'Resource' is deprecated, and it will be removed in future release: /home/centos/workspace/aes_decryption_benchmark/src/kernel/aes256CbcDecryptKernel.cpp:200:9
+WARNING: [HLS 207-1535] 'Resource' is deprecated, and it will be removed in future release: /home/centos/workspace/aes_decryption_benchmark/src/kernel/aes256CbcDecryptKernel.cpp:203:9
+WARNING: [HLS 207-1535] 'Resource' is deprecated, and it will be removed in future release: /home/centos/workspace/aes_decryption_benchmark/src/kernel/aes256CbcDecryptKernel.cpp:206:9
+WARNING: [HLS 207-1535] 'Resource' is deprecated, and it will be removed in future release: /home/centos/workspace/aes_decryption_benchmark/src/kernel/aes256CbcDecryptKernel.cpp:380:9
+WARNING: [HLS 207-1535] 'Resource' is deprecated, and it will be removed in future release: /home/centos/workspace/aes_decryption_benchmark/src/kernel/aes256CbcDecryptKernel.cpp:383:9
+WARNING: [HLS 207-1535] 'Resource' is deprecated, and it will be removed in future release: /home/centos/workspace/aes_decryption_benchmark/src/kernel/aes256CbcDecryptKernel.cpp:386:9
+WARNING: [HLS 207-1535] 'Resource' is deprecated, and it will be removed in future release: /home/centos/workspace/aes_decryption_benchmark/src/kernel/aes256CbcDecryptKernel.cpp:389:9
+WARNING: [HLS 207-1535] 'Resource' is deprecated, and it will be removed in future release: /home/centos/workspace/aes_decryption_benchmark/src/kernel/aes256CbcDecryptKernel.cpp:392:9
+WARNING: [HLS 207-1535] 'Resource' is deprecated, and it will be removed in future release: /home/centos/workspace/aes_decryption_benchmark/src/kernel/aes256CbcDecryptKernel.cpp:395:9
+WARNING: [HLS 207-1535] 'Resource' is deprecated, and it will be removed in future release: /home/centos/workspace/aes_decryption_benchmark/src/kernel/aes256CbcDecryptKernel.cpp:398:9
+WARNING: [HLS 207-1535] 'Resource' is deprecated, and it will be removed in future release: /home/centos/workspace/aes_decryption_benchmark/src/kernel/aes256CbcDecryptKernel.cpp:401:9
+WARNING: [HLS 207-1535] 'Resource' is deprecated, and it will be removed in future release: /home/centos/workspace/aes_decryption_benchmark/src/kernel/aes256CbcDecryptKernel.cpp:404:9
+WARNING: [HLS 207-1535] 'Resource' is deprecated, and it will be removed in future release: /home/centos/workspace/aes_decryption_benchmark/src/kernel/aes256CbcDecryptKernel.cpp:407:9
+INFO-FLOW: Linking Debug ...
+INFO-FLOW: Linking dut bc code.
+Execute         run_link_or_opt -out /home/centos/workspace/aes_decryption_benchmark/Emulation-SW/aes256CbcDecryptKernel.build/aes256CbcDecryptKernel/aes256CbcDecryptKernel/aes256CbcDecryptKernel/solution/.autopilot/db/a.g.ld.0.bc -args  "/home/centos/workspace/aes_decryption_benchmark/Emulation-SW/aes256CbcDecryptKernel.build/aes256CbcDecryptKernel/aes256CbcDecryptKernel/aes256CbcDecryptKernel/solution/.autopilot/db/aes256CbcDecryptKernel.g.bc"  
+Execute           ap_eval exec -ignorestderr /opt/Xilinx/Vitis/2020.1/lnx64/tools/clang-3.9-csynth/bin/llvm-link /home/centos/workspace/aes_decryption_benchmark/Emulation-SW/aes256CbcDecryptKernel.build/aes256CbcDecryptKernel/aes256CbcDecryptKernel/aes256CbcDecryptKernel/solution/.autopilot/db/aes256CbcDecryptKernel.g.bc -o /home/centos/workspace/aes_decryption_benchmark/Emulation-SW/aes256CbcDecryptKernel.build/aes256CbcDecryptKernel/aes256CbcDecryptKernel/aes256CbcDecryptKernel/solution/.autopilot/db/a.g.ld.0.bc > /home/centos/workspace/aes_decryption_benchmark/Emulation-SW/aes256CbcDecryptKernel.build/aes256CbcDecryptKernel/aes256CbcDecryptKernel/aes256CbcDecryptKernel/solution/.autopilot/db/llvm-link.a.g.ld.0.bc.out.log 2> /home/centos/workspace/aes_decryption_benchmark/Emulation-SW/aes256CbcDecryptKernel.build/aes256CbcDecryptKernel/aes256CbcDecryptKernel/aes256CbcDecryptKernel/solution/.autopilot/db/llvm-link.a.g.ld.0.bc.err.log 
+Command           ap_eval done; 0.11 sec.
+INFO-FLOW: 
+Command         run_link_or_opt done; 0.11 sec.
+Execute         run_link_or_opt -opt -out /home/centos/workspace/aes_decryption_benchmark/Emulation-SW/aes256CbcDecryptKernel.build/aes256CbcDecryptKernel/aes256CbcDecryptKernel/aes256CbcDecryptKernel/solution/.autopilot/db/a.g.ld.1.lower.bc -args /home/centos/workspace/aes_decryption_benchmark/Emulation-SW/aes256CbcDecryptKernel.build/aes256CbcDecryptKernel/aes256CbcDecryptKernel/aes256CbcDecryptKernel/solution/.autopilot/db/a.g.ld.0.bc -reflow-lower-math-intrinsics 
+Execute           ap_eval exec -ignorestderr /opt/Xilinx/Vitis/2020.1/lnx64/tools/clang-3.9-csynth/bin/opt -pass-remarks-missed=.* -pass-remarks-output=/home/centos/workspace/aes_decryption_benchmark/Emulation-SW/aes256CbcDecryptKernel.build/aes256CbcDecryptKernel/aes256CbcDecryptKernel/aes256CbcDecryptKernel/solution/.autopilot/db/opt.a.g.ld.1.lower.bc.diag.yml /home/centos/workspace/aes_decryption_benchmark/Emulation-SW/aes256CbcDecryptKernel.build/aes256CbcDecryptKernel/aes256CbcDecryptKernel/aes256CbcDecryptKernel/solution/.autopilot/db/a.g.ld.0.bc -reflow-lower-math-intrinsics -o /home/centos/workspace/aes_decryption_benchmark/Emulation-SW/aes256CbcDecryptKernel.build/aes256CbcDecryptKernel/aes256CbcDecryptKernel/aes256CbcDecryptKernel/solution/.autopilot/db/a.g.ld.1.lower.bc > /home/centos/workspace/aes_decryption_benchmark/Emulation-SW/aes256CbcDecryptKernel.build/aes256CbcDecryptKernel/aes256CbcDecryptKernel/aes256CbcDecryptKernel/solution/.autopilot/db/opt.a.g.ld.1.lower.bc.out.log 2> /home/centos/workspace/aes_decryption_benchmark/Emulation-SW/aes256CbcDecryptKernel.build/aes256CbcDecryptKernel/aes256CbcDecryptKernel/aes256CbcDecryptKernel/solution/.autopilot/db/opt.a.g.ld.1.lower.bc.err.log 
+Command           ap_eval done; 0.11 sec.
+INFO-FLOW: 
+Command         run_link_or_opt done; 0.11 sec.
+INFO-FLOW: Linking math bc lib
+Execute         run_link_or_opt -out /home/centos/workspace/aes_decryption_benchmark/Emulation-SW/aes256CbcDecryptKernel.build/aes256CbcDecryptKernel/aes256CbcDecryptKernel/aes256CbcDecryptKernel/solution/.autopilot/db/a.g.ld.2.m1.bc -args /home/centos/workspace/aes_decryption_benchmark/Emulation-SW/aes256CbcDecryptKernel.build/aes256CbcDecryptKernel/aes256CbcDecryptKernel/aes256CbcDecryptKernel/solution/.autopilot/db/a.g.ld.1.lower.bc -only-needed /opt/Xilinx/Vitis/2020.1/lnx64/lib/libhlsm_39.bc /opt/Xilinx/Vitis/2020.1/lnx64/lib/libhlsmc++_39.bc 
+Execute           ap_eval exec -ignorestderr /opt/Xilinx/Vitis/2020.1/lnx64/tools/clang-3.9-csynth/bin/llvm-link /home/centos/workspace/aes_decryption_benchmark/Emulation-SW/aes256CbcDecryptKernel.build/aes256CbcDecryptKernel/aes256CbcDecryptKernel/aes256CbcDecryptKernel/solution/.autopilot/db/a.g.ld.1.lower.bc -only-needed /opt/Xilinx/Vitis/2020.1/lnx64/lib/libhlsm_39.bc /opt/Xilinx/Vitis/2020.1/lnx64/lib/libhlsmc++_39.bc -o /home/centos/workspace/aes_decryption_benchmark/Emulation-SW/aes256CbcDecryptKernel.build/aes256CbcDecryptKernel/aes256CbcDecryptKernel/aes256CbcDecryptKernel/solution/.autopilot/db/a.g.ld.2.m1.bc > /home/centos/workspace/aes_decryption_benchmark/Emulation-SW/aes256CbcDecryptKernel.build/aes256CbcDecryptKernel/aes256CbcDecryptKernel/aes256CbcDecryptKernel/solution/.autopilot/db/llvm-link.a.g.ld.2.m1.bc.out.log 2> /home/centos/workspace/aes_decryption_benchmark/Emulation-SW/aes256CbcDecryptKernel.build/aes256CbcDecryptKernel/aes256CbcDecryptKernel/aes256CbcDecryptKernel/solution/.autopilot/db/llvm-link.a.g.ld.2.m1.bc.err.log 
+Command           ap_eval done; 3.2 sec.
+INFO-FLOW: 
+Command         run_link_or_opt done; 3.2 sec.
+Execute         run_link_or_opt -opt -out /home/centos/workspace/aes_decryption_benchmark/Emulation-SW/aes256CbcDecryptKernel.build/aes256CbcDecryptKernel/aes256CbcDecryptKernel/aes256CbcDecryptKernel/solution/.autopilot/db/a.g.ld.3.fpc.bc -args /home/centos/workspace/aes_decryption_benchmark/Emulation-SW/aes256CbcDecryptKernel.build/aes256CbcDecryptKernel/aes256CbcDecryptKernel/aes256CbcDecryptKernel/solution/.autopilot/db/a.g.ld.2.m1.bc -reflow-globaldce -hls-top-function-name=aes256CbcDecryptKernel -reflow-float-conversion 
+Execute           ap_eval exec -ignorestderr /opt/Xilinx/Vitis/2020.1/lnx64/tools/clang-3.9-csynth/bin/opt -pass-remarks-missed=.* -pass-remarks-output=/home/centos/workspace/aes_decryption_benchmark/Emulation-SW/aes256CbcDecryptKernel.build/aes256CbcDecryptKernel/aes256CbcDecryptKernel/aes256CbcDecryptKernel/solution/.autopilot/db/opt.a.g.ld.3.fpc.bc.diag.yml /home/centos/workspace/aes_decryption_benchmark/Emulation-SW/aes256CbcDecryptKernel.build/aes256CbcDecryptKernel/aes256CbcDecryptKernel/aes256CbcDecryptKernel/solution/.autopilot/db/a.g.ld.2.m1.bc -reflow-globaldce -hls-top-function-name=aes256CbcDecryptKernel -reflow-float-conversion -o /home/centos/workspace/aes_decryption_benchmark/Emulation-SW/aes256CbcDecryptKernel.build/aes256CbcDecryptKernel/aes256CbcDecryptKernel/aes256CbcDecryptKernel/solution/.autopilot/db/a.g.ld.3.fpc.bc > /home/centos/workspace/aes_decryption_benchmark/Emulation-SW/aes256CbcDecryptKernel.build/aes256CbcDecryptKernel/aes256CbcDecryptKernel/aes256CbcDecryptKernel/solution/.autopilot/db/opt.a.g.ld.3.fpc.bc.out.log 2> /home/centos/workspace/aes_decryption_benchmark/Emulation-SW/aes256CbcDecryptKernel.build/aes256CbcDecryptKernel/aes256CbcDecryptKernel/aes256CbcDecryptKernel/solution/.autopilot/db/opt.a.g.ld.3.fpc.bc.err.log 
+Command           ap_eval done; 1.22 sec.
+INFO-FLOW: 
+Command         run_link_or_opt done; 1.22 sec.
+Execute         run_link_or_opt -out /home/centos/workspace/aes_decryption_benchmark/Emulation-SW/aes256CbcDecryptKernel.build/aes256CbcDecryptKernel/aes256CbcDecryptKernel/aes256CbcDecryptKernel/solution/.autopilot/db/a.g.ld.4.m2.bc -args /home/centos/workspace/aes_decryption_benchmark/Emulation-SW/aes256CbcDecryptKernel.build/aes256CbcDecryptKernel/aes256CbcDecryptKernel/aes256CbcDecryptKernel/solution/.autopilot/db/a.g.ld.3.fpc.bc -only-needed /opt/Xilinx/Vitis/2020.1/lnx64/lib/libfloatconversion_39.bc 
+Execute           ap_eval exec -ignorestderr /opt/Xilinx/Vitis/2020.1/lnx64/tools/clang-3.9-csynth/bin/llvm-link /home/centos/workspace/aes_decryption_benchmark/Emulation-SW/aes256CbcDecryptKernel.build/aes256CbcDecryptKernel/aes256CbcDecryptKernel/aes256CbcDecryptKernel/solution/.autopilot/db/a.g.ld.3.fpc.bc -only-needed /opt/Xilinx/Vitis/2020.1/lnx64/lib/libfloatconversion_39.bc -o /home/centos/workspace/aes_decryption_benchmark/Emulation-SW/aes256CbcDecryptKernel.build/aes256CbcDecryptKernel/aes256CbcDecryptKernel/aes256CbcDecryptKernel/solution/.autopilot/db/a.g.ld.4.m2.bc > /home/centos/workspace/aes_decryption_benchmark/Emulation-SW/aes256CbcDecryptKernel.build/aes256CbcDecryptKernel/aes256CbcDecryptKernel/aes256CbcDecryptKernel/solution/.autopilot/db/llvm-link.a.g.ld.4.m2.bc.out.log 2> /home/centos/workspace/aes_decryption_benchmark/Emulation-SW/aes256CbcDecryptKernel.build/aes256CbcDecryptKernel/aes256CbcDecryptKernel/aes256CbcDecryptKernel/solution/.autopilot/db/llvm-link.a.g.ld.4.m2.bc.err.log 
+Command           ap_eval done; 0.17 sec.
+INFO-FLOW: 
+Command         run_link_or_opt done; 0.18 sec.
+Execute         run_link_or_opt -opt -out /home/centos/workspace/aes_decryption_benchmark/Emulation-SW/aes256CbcDecryptKernel.build/aes256CbcDecryptKernel/aes256CbcDecryptKernel/aes256CbcDecryptKernel/solution/.autopilot/db/a.g.ld.5.gdce.bc -args /home/centos/workspace/aes_decryption_benchmark/Emulation-SW/aes256CbcDecryptKernel.build/aes256CbcDecryptKernel/aes256CbcDecryptKernel/aes256CbcDecryptKernel/solution/.autopilot/db/a.g.ld.4.m2.bc -reflow-globaldce -hls-top-function-name=aes256CbcDecryptKernel 
+Execute           ap_eval exec -ignorestderr /opt/Xilinx/Vitis/2020.1/lnx64/tools/clang-3.9-csynth/bin/opt -pass-remarks-missed=.* -pass-remarks-output=/home/centos/workspace/aes_decryption_benchmark/Emulation-SW/aes256CbcDecryptKernel.build/aes256CbcDecryptKernel/aes256CbcDecryptKernel/aes256CbcDecryptKernel/solution/.autopilot/db/opt.a.g.ld.5.gdce.bc.diag.yml /home/centos/workspace/aes_decryption_benchmark/Emulation-SW/aes256CbcDecryptKernel.build/aes256CbcDecryptKernel/aes256CbcDecryptKernel/aes256CbcDecryptKernel/solution/.autopilot/db/a.g.ld.4.m2.bc -reflow-globaldce -hls-top-function-name=aes256CbcDecryptKernel -o /home/centos/workspace/aes_decryption_benchmark/Emulation-SW/aes256CbcDecryptKernel.build/aes256CbcDecryptKernel/aes256CbcDecryptKernel/aes256CbcDecryptKernel/solution/.autopilot/db/a.g.ld.5.gdce.bc > /home/centos/workspace/aes_decryption_benchmark/Emulation-SW/aes256CbcDecryptKernel.build/aes256CbcDecryptKernel/aes256CbcDecryptKernel/aes256CbcDecryptKernel/solution/.autopilot/db/opt.a.g.ld.5.gdce.bc.out.log 2> /home/centos/workspace/aes_decryption_benchmark/Emulation-SW/aes256CbcDecryptKernel.build/aes256CbcDecryptKernel/aes256CbcDecryptKernel/aes256CbcDecryptKernel/solution/.autopilot/db/opt.a.g.ld.5.gdce.bc.err.log 
+Command           ap_eval done; 0.14 sec.
+INFO-FLOW: 
+Command         run_link_or_opt done; 0.14 sec.
+Execute         get_solution -flow_target 
+Execute         get_config_rtl -module_prefix 
+Execute         get_config_interface -default_interface 
+Execute         send_msg_by_id INFO @200-777@%s Vitis 
+INFO: [HLS 200-777] Using interface defaults for 'Vitis' target.
+Execute         get_config_interface -default_slave_interface 
+Execute         get_solution -flow_target 
+Execute         get_config_interface -m_axi_offset 
+Execute         get_config_interface -m_axi_latency 
+Execute         get_config_interface -m_axi_alignment_byte_size 
+Execute         get_config_interface -m_axi_min_bitwidth 
+Execute         get_config_interface -m_axi_max_bitwidth 
+Execute         get_config_interface -m_axi_max_widen_bitwidth 
+Execute         get_config_interface -m_axi_num_read_outstanding 
+Execute         get_config_interface -m_axi_num_write_outstanding 
+Execute         get_config_interface -m_axi_max_read_burst_length 
+Execute         get_config_interface -m_axi_max_write_burst_length 
+Execute         get_config_interface -m_axi_min_bitwidth 
+Execute         get_config_interface -m_axi_max_bitwidth 
+Execute         get_config_interface -m_axi_latency 
+Execute         get_config_interface -m_axi_min_bitwidth 
+Execute         get_config_interface -m_axi_max_bitwidth 
+Execute         get_config_interface -m_axi_max_widen_bitwidth 
+Execute         get_config_interface -m_axi_auto_max_ports 
+Execute         get_config_interface -m_axi_num_read_outstanding 
+Execute         get_config_interface -m_axi_num_write_outstanding 
+Execute         get_config_interface -m_axi_max_read_burst_length 
+Execute         get_config_interface -m_axi_max_write_burst_length 
+Execute         get_config_interface -s_axilite_data64 
+Execute         get_config_interface -m_axi_alignment_byte_size 
+Execute         get_config_compile -pragma_strict_mode 
+INFO-FLOW: Doing LTO.
+Execute         ap_eval exec -ignorestderr /opt/Xilinx/Vitis/2020.1/lnx64/tools/clang-3.9-csynth/bin/clang -fsave-optimization-record -foptimization-record-file=/home/centos/workspace/aes_decryption_benchmark/Emulation-SW/aes256CbcDecryptKernel.build/aes256CbcDecryptKernel/aes256CbcDecryptKernel/aes256CbcDecryptKernel/solution/.autopilot/db/clang.a.g.ld.0.bc.diag.yml -fhls -mllvm -hls-top-function-name=aes256CbcDecryptKernel -mllvm -hls-db-dir -mllvm /home/centos/workspace/aes_decryption_benchmark/Emulation-SW/aes256CbcDecryptKernel.build/aes256CbcDecryptKernel/aes256CbcDecryptKernel/aes256CbcDecryptKernel/solution/.autopilot/db -emit-llvm -c -mllvm -hls-bitcode-version=3.1 -target fpga64-xilinx-none -mllvm -xcl-xmlinfo=/home/centos/workspace/aes_decryption_benchmark/Emulation-SW/aes256CbcDecryptKernel.build/aes256CbcDecryptKernel/aes256CbcDecryptKernel/aes256CbcDecryptKernel/solution/.autopilot/db/../../../kernel.xml -mllvm -top-io-mapping-info=/home/centos/workspace/aes_decryption_benchmark/Emulation-SW/aes256CbcDecryptKernel.build/aes256CbcDecryptKernel/aes256CbcDecryptKernel/aes256CbcDecryptKernel/solution/.autopilot/db/top-io-fe.xml -mllvm -pass-remarks=supported-subset -mllvm -xcl-target=cpu -mllvm -reflow-enable-interface-default-setting=true -mllvm -reflow-enable-slave-interface-default-setting=true -mllvm -gen-kernel-xml=true -mllvm -maxi-latency=64 -mllvm -hls-maxi-data-size-in-bits=8 -mllvm -hls-maxi-max-data-size-in-bits=1024 -mllvm -hls-max-widen-size-in-bits=512 -mllvm -xcl-kernel-max-mem-ports=0 -mllvm -maxi-read-trans=16 -mllvm -maxi-write-trans=16 -mllvm -maxi-read-burst-len=16 -mllvm -maxi-write-burst-len=16 -mllvm -reflow-enable-saxi-64bits=0 -mllvm -assume-maxi-align=64 -mllvm -no-unaligned-maxi-accesses=false -x ir /home/centos/workspace/aes_decryption_benchmark/Emulation-SW/aes256CbcDecryptKernel.build/aes256CbcDecryptKernel/aes256CbcDecryptKernel/aes256CbcDecryptKernel/solution/.autopilot/db/a.g.ld.5.gdce.bc -o /home/centos/workspace/aes_decryption_benchmark/Emulation-SW/aes256CbcDecryptKernel.build/aes256CbcDecryptKernel/aes256CbcDecryptKernel/aes256CbcDecryptKernel/solution/.autopilot/db/a.g.lto.bc > /home/centos/workspace/aes_decryption_benchmark/Emulation-SW/aes256CbcDecryptKernel.build/aes256CbcDecryptKernel/aes256CbcDecryptKernel/aes256CbcDecryptKernel/solution/.autopilot/db/clang.a.g.ld.0.bc.out.log 2> /home/centos/workspace/aes_decryption_benchmark/Emulation-SW/aes256CbcDecryptKernel.build/aes256CbcDecryptKernel/aes256CbcDecryptKernel/aes256CbcDecryptKernel/solution/.autopilot/db/clang.a.g.ld.0.bc.err.log 
+Command         ap_eval done; 39.3 sec.
+Execute         source /opt/Xilinx/Vitis/2020.1/tps/tcl/tcllib1.11.1/yaml/yaml.tcl 
+Execute           source /opt/Xilinx/Vitis/2020.1/tps/tcl/tcllib1.11.1/cmdline/cmdline.tcl 
+INFO: [HLS 214-131] Inlining function 'hls::stream<ap_uint<512>, 0>::write(ap_uint<512> const&)' into 'void readBlock<128u, 4u, 256u>(ap_uint<512>*, hls::stream<ap_uint<512>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<ap_uint<128>, 0>&, hls::stream<ap_uint<256u>, 0>&)' (/home/centos/workspace/aes_decryption_benchmark/src/kernel/aes256CbcDecryptKernel.cpp:102:25)
+INFO: [HLS 214-131] Inlining function 'hls::stream<ap_uint<64>, 0>::write(ap_uint<64> const&)' into 'void readBlock<128u, 4u, 256u>(ap_uint<512>*, hls::stream<ap_uint<512>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<ap_uint<128>, 0>&, hls::stream<ap_uint<256u>, 0>&)' (/home/centos/workspace/aes_decryption_benchmark/src/kernel/aes256CbcDecryptKernel.cpp:86:26)
+INFO: [HLS 214-131] Inlining function 'hls::stream<ap_uint<64>, 0>::write(ap_uint<64> const&)' into 'void readBlock<128u, 4u, 256u>(ap_uint<512>*, hls::stream<ap_uint<512>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<ap_uint<128>, 0>&, hls::stream<ap_uint<256u>, 0>&)' (/home/centos/workspace/aes_decryption_benchmark/src/kernel/aes256CbcDecryptKernel.cpp:84:26)
+INFO: [HLS 214-131] Inlining function 'hls::stream<ap_uint<64>, 0>::write(ap_uint<64> const&)' into 'void readBlock<128u, 4u, 256u>(ap_uint<512>*, hls::stream<ap_uint<512>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<ap_uint<128>, 0>&, hls::stream<ap_uint<256u>, 0>&)' (/home/centos/workspace/aes_decryption_benchmark/src/kernel/aes256CbcDecryptKernel.cpp:83:25)
+INFO: [HLS 214-131] Inlining function 'hls::stream<ap_uint<256>, 0>::write(ap_uint<256> const&)' into 'void readBlock<128u, 4u, 256u>(ap_uint<512>*, hls::stream<ap_uint<512>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<ap_uint<128>, 0>&, hls::stream<ap_uint<256u>, 0>&)' (/home/centos/workspace/aes_decryption_benchmark/src/kernel/aes256CbcDecryptKernel.cpp:81:27)
+INFO: [HLS 214-131] Inlining function 'hls::stream<ap_uint<128>, 0>::write(ap_uint<128> const&)' into 'void readBlock<128u, 4u, 256u>(ap_uint<512>*, hls::stream<ap_uint<512>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<ap_uint<128>, 0>&, hls::stream<ap_uint<256u>, 0>&)' (/home/centos/workspace/aes_decryption_benchmark/src/kernel/aes256CbcDecryptKernel.cpp:80:20)
+INFO: [HLS 214-131] Inlining function 'hls::stream<ap_uint<64>, 0>::write(ap_uint<64> const&)' into 'void readBlock<128u, 4u, 256u>(ap_uint<512>*, hls::stream<ap_uint<512>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<ap_uint<128>, 0>&, hls::stream<ap_uint<256u>, 0>&)' (/home/centos/workspace/aes_decryption_benchmark/src/kernel/aes256CbcDecryptKernel.cpp:79:26)
+INFO: [HLS 214-131] Inlining function 'hls::stream<ap_uint<64>, 0>::write(ap_uint<64> const&)' into 'void readBlock<128u, 4u, 256u>(ap_uint<512>*, hls::stream<ap_uint<512>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<ap_uint<128>, 0>&, hls::stream<ap_uint<256u>, 0>&)' (/home/centos/workspace/aes_decryption_benchmark/src/kernel/aes256CbcDecryptKernel.cpp:78:25)
+INFO: [HLS 214-131] Inlining function 'hls::stream<ap_uint<128>, 0>::read(ap_uint<128>&)' into 'hls::stream<ap_uint<128>, 0>::read()' (/opt/Xilinx/Vitis/2020.1/common/technology/autopilot/hls_stream_39.h:156:9)
+INFO: [HLS 214-131] Inlining function 'hls::stream<ap_uint<256>, 0>::read(ap_uint<256>&)' into 'hls::stream<ap_uint<256>, 0>::read()' (/opt/Xilinx/Vitis/2020.1/common/technology/autopilot/hls_stream_39.h:156:9)
+INFO: [HLS 214-131] Inlining function 'hls::stream<ap_uint<64>, 0>::read(ap_uint<64>&)' into 'hls::stream<ap_uint<64>, 0>::read()' (/opt/Xilinx/Vitis/2020.1/common/technology/autopilot/hls_stream_39.h:156:9)
+INFO: [HLS 214-131] Inlining function 'hls::stream<ap_uint<512>, 0>::read(ap_uint<512>&)' into 'hls::stream<ap_uint<512>, 0>::read()' (/opt/Xilinx/Vitis/2020.1/common/technology/autopilot/hls_stream_39.h:156:9)
+INFO: [HLS 214-131] Inlining function 'hls::stream<ap_uint<128>, 0>::read()' into 'void splitText<4u, 256u>(hls::stream<ap_uint<512>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<ap_uint<128>, 0>&, hls::stream<ap_uint<256u>, 0>&, hls::stream<ap_uint<128>, 0>*, hls::stream<bool, 0>*, hls::stream<ap_uint<128>, 0>*, hls::stream<ap_uint<256u>, 0>*)' (/home/centos/workspace/aes_decryption_benchmark/src/kernel/aes256CbcDecryptKernel.cpp:119:32)
+INFO: [HLS 214-131] Inlining function 'hls::stream<bool, 0>::write(bool const&)' into 'void splitText<4u, 256u>(hls::stream<ap_uint<512>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<ap_uint<128>, 0>&, hls::stream<ap_uint<256u>, 0>&, hls::stream<ap_uint<128>, 0>*, hls::stream<bool, 0>*, hls::stream<ap_uint<128>, 0>*, hls::stream<ap_uint<256u>, 0>*)' (/home/centos/workspace/aes_decryption_benchmark/src/kernel/aes256CbcDecryptKernel.cpp:173:18)
+INFO: [HLS 214-131] Inlining function 'hls::stream<ap_uint<256>, 0>::write(ap_uint<256> const&)' into 'void splitText<4u, 256u>(hls::stream<ap_uint<512>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<ap_uint<128>, 0>&, hls::stream<ap_uint<256u>, 0>&, hls::stream<ap_uint<128>, 0>*, hls::stream<bool, 0>*, hls::stream<ap_uint<128>, 0>*, hls::stream<ap_uint<256u>, 0>*)' (/home/centos/workspace/aes_decryption_benchmark/src/kernel/aes256CbcDecryptKernel.cpp:166:30)
+INFO: [HLS 214-131] Inlining function 'hls::stream<ap_uint<128>, 0>::write(ap_uint<128> const&)' into 'void splitText<4u, 256u>(hls::stream<ap_uint<512>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<ap_uint<128>, 0>&, hls::stream<ap_uint<256u>, 0>&, hls::stream<ap_uint<128>, 0>*, hls::stream<bool, 0>*, hls::stream<ap_uint<128>, 0>*, hls::stream<ap_uint<256u>, 0>*)' (/home/centos/workspace/aes_decryption_benchmark/src/kernel/aes256CbcDecryptKernel.cpp:165:12)
+INFO: [HLS 214-131] Inlining function 'hls::stream<bool, 0>::write(bool const&)' into 'void splitText<4u, 256u>(hls::stream<ap_uint<512>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<ap_uint<128>, 0>&, hls::stream<ap_uint<256u>, 0>&, hls::stream<ap_uint<128>, 0>*, hls::stream<bool, 0>*, hls::stream<ap_uint<128>, 0>*, hls::stream<ap_uint<256u>, 0>*)' (/home/centos/workspace/aes_decryption_benchmark/src/kernel/aes256CbcDecryptKernel.cpp:150:36)
+INFO: [HLS 214-131] Inlining function 'hls::stream<ap_uint<128>, 0>::write(ap_uint<128> const&)' into 'void splitText<4u, 256u>(hls::stream<ap_uint<512>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<ap_uint<128>, 0>&, hls::stream<ap_uint<256u>, 0>&, hls::stream<ap_uint<128>, 0>*, hls::stream<bool, 0>*, hls::stream<ap_uint<128>, 0>*, hls::stream<ap_uint<256u>, 0>*)' (/home/centos/workspace/aes_decryption_benchmark/src/kernel/aes256CbcDecryptKernel.cpp:149:33)
+INFO: [HLS 214-131] Inlining function 'hls::stream<ap_uint<512>, 0>::read()' into 'void splitText<4u, 256u>(hls::stream<ap_uint<512>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<ap_uint<128>, 0>&, hls::stream<ap_uint<256u>, 0>&, hls::stream<ap_uint<128>, 0>*, hls::stream<bool, 0>*, hls::stream<ap_uint<128>, 0>*, hls::stream<ap_uint<256u>, 0>*)' (/home/centos/workspace/aes_decryption_benchmark/src/kernel/aes256CbcDecryptKernel.cpp:138:37)
+INFO: [HLS 214-131] Inlining function 'hls::stream<ap_uint<64>, 0>::read()' into 'void splitText<4u, 256u>(hls::stream<ap_uint<512>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<ap_uint<128>, 0>&, hls::stream<ap_uint<256u>, 0>&, hls::stream<ap_uint<128>, 0>*, hls::stream<bool, 0>*, hls::stream<ap_uint<128>, 0>*, hls::stream<ap_uint<256u>, 0>*)' (/home/centos/workspace/aes_decryption_benchmark/src/kernel/aes256CbcDecryptKernel.cpp:128:39)
+INFO: [HLS 214-131] Inlining function 'hls::stream<ap_uint<64>, 0>::read()' into 'void splitText<4u, 256u>(hls::stream<ap_uint<512>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<ap_uint<128>, 0>&, hls::stream<ap_uint<256u>, 0>&, hls::stream<ap_uint<128>, 0>*, hls::stream<bool, 0>*, hls::stream<ap_uint<128>, 0>*, hls::stream<ap_uint<256u>, 0>*)' (/home/centos/workspace/aes_decryption_benchmark/src/kernel/aes256CbcDecryptKernel.cpp:125:37)
+INFO: [HLS 214-131] Inlining function 'hls::stream<ap_uint<256>, 0>::read()' into 'void splitText<4u, 256u>(hls::stream<ap_uint<512>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<ap_uint<128>, 0>&, hls::stream<ap_uint<256u>, 0>&, hls::stream<ap_uint<128>, 0>*, hls::stream<bool, 0>*, hls::stream<ap_uint<128>, 0>*, hls::stream<ap_uint<256u>, 0>*)' (/home/centos/workspace/aes_decryption_benchmark/src/kernel/aes256CbcDecryptKernel.cpp:122:46)
+INFO: [HLS 214-131] Inlining function 'hls::stream<ap_uint<512>, 0>::stream(char const*)' into 'void scanMultiChannel<4u, 256u, 128u>(ap_uint<512>*, hls::stream<ap_uint<128>, 0>*, hls::stream<ap_uint<256u>, 0>*, hls::stream<ap_uint<128>, 0>*, hls::stream<bool, 0>*, hls::stream<ap_uint<64>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<ap_uint<64>, 0>&)' (/home/centos/workspace/aes_decryption_benchmark/src/kernel/aes256CbcDecryptKernel.cpp:192:32)
+INFO: [HLS 214-131] Inlining function 'hls::stream<ap_uint<64>, 0>::stream()' into 'void scanMultiChannel<4u, 256u, 128u>(ap_uint<512>*, hls::stream<ap_uint<128>, 0>*, hls::stream<ap_uint<256u>, 0>*, hls::stream<ap_uint<128>, 0>*, hls::stream<bool, 0>*, hls::stream<ap_uint<64>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<ap_uint<64>, 0>&)' (/home/centos/workspace/aes_decryption_benchmark/src/kernel/aes256CbcDecryptKernel.cpp:195:28)
+INFO: [HLS 214-131] Inlining function 'hls::stream<ap_uint<64>, 0>::stream()' into 'void scanMultiChannel<4u, 256u, 128u>(ap_uint<512>*, hls::stream<ap_uint<128>, 0>*, hls::stream<ap_uint<256u>, 0>*, hls::stream<ap_uint<128>, 0>*, hls::stream<bool, 0>*, hls::stream<ap_uint<64>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<ap_uint<64>, 0>&)' (/home/centos/workspace/aes_decryption_benchmark/src/kernel/aes256CbcDecryptKernel.cpp:198:28)
+INFO: [HLS 214-131] Inlining function 'hls::stream<ap_uint<256>, 0>::stream()' into 'void scanMultiChannel<4u, 256u, 128u>(ap_uint<512>*, hls::stream<ap_uint<128>, 0>*, hls::stream<ap_uint<256u>, 0>*, hls::stream<ap_uint<128>, 0>*, hls::stream<bool, 0>*, hls::stream<ap_uint<64>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<ap_uint<64>, 0>&)' (/home/centos/workspace/aes_decryption_benchmark/src/kernel/aes256CbcDecryptKernel.cpp:204:35)
+INFO: [HLS 214-131] Inlining function 'hls::stream<ap_uint<128>, 0>::stream()' into 'void scanMultiChannel<4u, 256u, 128u>(ap_uint<512>*, hls::stream<ap_uint<128>, 0>*, hls::stream<ap_uint<256u>, 0>*, hls::stream<ap_uint<128>, 0>*, hls::stream<bool, 0>*, hls::stream<ap_uint<64>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<ap_uint<64>, 0>&)' (/home/centos/workspace/aes_decryption_benchmark/src/kernel/aes256CbcDecryptKernel.cpp:201:29)
+INFO: [HLS 214-131] Inlining function 'xf::security::aesTable::aesTable()' into 'xf::security::aesDec<256>::aesDec()' (/home/centos/workspace/aes_decryption_benchmark/libs/xf_security/L1/include/xf_security/aes.hpp:542:5)
+INFO: [HLS 214-131] Inlining function 'hls::stream<bool, 0>::read(bool&)' into 'hls::stream<bool, 0>::read()' (/opt/Xilinx/Vitis/2020.1/common/technology/autopilot/hls_stream_39.h:156:9)
+INFO: [HLS 214-131] Inlining function 'xf::security::aesDec<256>::aesDec()' into 'void xf::security::internal::aesCbcDecrypt<256u>(hls::stream<ap_uint<128>, 0>&, hls::stream<bool, 0>&, hls::stream<ap_uint<256u>, 0>&, hls::stream<ap_uint<128>, 0>&, hls::stream<ap_uint<128>, 0>&, hls::stream<bool, 0>&)' (/home/centos/workspace/aes_decryption_benchmark/libs/xf_security/L1/include/xf_security/cbc.hpp:178:37)
+INFO: [HLS 214-131] Inlining function 'hls::stream<bool, 0>::write(bool const&)' into 'void xf::security::internal::aesCbcDecrypt<256u>(hls::stream<ap_uint<128>, 0>&, hls::stream<bool, 0>&, hls::stream<ap_uint<256u>, 0>&, hls::stream<ap_uint<128>, 0>&, hls::stream<ap_uint<128>, 0>&, hls::stream<bool, 0>&)' (/home/centos/workspace/aes_decryption_benchmark/libs/xf_security/L1/include/xf_security/cbc.hpp:241:17)
+INFO: [HLS 214-131] Inlining function 'hls::stream<bool, 0>::read()' into 'void xf::security::internal::aesCbcDecrypt<256u>(hls::stream<ap_uint<128>, 0>&, hls::stream<bool, 0>&, hls::stream<ap_uint<256u>, 0>&, hls::stream<ap_uint<128>, 0>&, hls::stream<ap_uint<128>, 0>&, hls::stream<bool, 0>&)' (/home/centos/workspace/aes_decryption_benchmark/libs/xf_security/L1/include/xf_security/cbc.hpp:238:26)
+INFO: [HLS 214-131] Inlining function 'hls::stream<bool, 0>::write(bool const&)' into 'void xf::security::internal::aesCbcDecrypt<256u>(hls::stream<ap_uint<128>, 0>&, hls::stream<bool, 0>&, hls::stream<ap_uint<256u>, 0>&, hls::stream<ap_uint<128>, 0>&, hls::stream<ap_uint<128>, 0>&, hls::stream<bool, 0>&)' (/home/centos/workspace/aes_decryption_benchmark/libs/xf_security/L1/include/xf_security/cbc.hpp:236:21)
+INFO: [HLS 214-131] Inlining function 'hls::stream<ap_uint<128>, 0>::write(ap_uint<128> const&)' into 'void xf::security::internal::aesCbcDecrypt<256u>(hls::stream<ap_uint<128>, 0>&, hls::stream<bool, 0>&, hls::stream<ap_uint<256u>, 0>&, hls::stream<ap_uint<128>, 0>&, hls::stream<ap_uint<128>, 0>&, hls::stream<bool, 0>&)' (/home/centos/workspace/aes_decryption_benchmark/libs/xf_security/L1/include/xf_security/cbc.hpp:235:19)
+INFO: [HLS 214-131] Inlining function 'hls::stream<ap_uint<256>, 0>::read()' into 'void xf::security::internal::aesCbcDecrypt<256u>(hls::stream<ap_uint<128>, 0>&, hls::stream<bool, 0>&, hls::stream<ap_uint<256u>, 0>&, hls::stream<ap_uint<128>, 0>&, hls::stream<ap_uint<128>, 0>&, hls::stream<bool, 0>&)' (/home/centos/workspace/aes_decryption_benchmark/libs/xf_security/L1/include/xf_security/cbc.hpp:180:42)
+INFO: [HLS 214-131] Inlining function 'hls::stream<ap_uint<128>, 0>::read()' into 'void xf::security::internal::aesCbcDecrypt<256u>(hls::stream<ap_uint<128>, 0>&, hls::stream<bool, 0>&, hls::stream<ap_uint<256u>, 0>&, hls::stream<ap_uint<128>, 0>&, hls::stream<ap_uint<128>, 0>&, hls::stream<bool, 0>&)' (/home/centos/workspace/aes_decryption_benchmark/libs/xf_security/L1/include/xf_security/cbc.hpp:208:28)
+INFO: [HLS 214-131] Inlining function 'hls::stream<bool, 0>::read()' into 'void xf::security::internal::aesCbcDecrypt<256u>(hls::stream<ap_uint<128>, 0>&, hls::stream<bool, 0>&, hls::stream<ap_uint<256u>, 0>&, hls::stream<ap_uint<128>, 0>&, hls::stream<ap_uint<128>, 0>&, hls::stream<bool, 0>&)' (/home/centos/workspace/aes_decryption_benchmark/libs/xf_security/L1/include/xf_security/cbc.hpp:202:27)
+INFO: [HLS 214-131] Inlining function 'hls::stream<ap_uint<128>, 0>::read()' into 'void xf::security::internal::aesCbcDecrypt<256u>(hls::stream<ap_uint<128>, 0>&, hls::stream<bool, 0>&, hls::stream<ap_uint<256u>, 0>&, hls::stream<ap_uint<128>, 0>&, hls::stream<ap_uint<128>, 0>&, hls::stream<bool, 0>&)' (/home/centos/workspace/aes_decryption_benchmark/libs/xf_security/L1/include/xf_security/cbc.hpp:187:31)
+INFO: [HLS 214-131] Inlining function 'hls::stream<ap_uint<64>, 0>::read()' into 'void cipherModeProcess<4u, 256u>(hls::stream<ap_uint<64>, 0>&, hls::stream<ap_uint<128>, 0>*, hls::stream<ap_uint<256u>, 0>*, hls::stream<ap_uint<128>, 0>*, hls::stream<bool, 0>*, hls::stream<ap_uint<128>, 0>*, hls::stream<bool, 0>*)' (/home/centos/workspace/aes_decryption_benchmark/src/kernel/aes256CbcDecryptKernel.cpp:256:39)
+INFO: [HLS 214-131] Inlining function 'hls::stream<ap_uint<64>, 0>::read()' into 'void mergeResult<128u, 4u>(hls::stream<ap_uint<64>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<ap_uint<128>, 0>*, hls::stream<bool, 0>*, hls::stream<ap_uint<512>, 0>&, hls::stream<unsigned int, 0>&)' (/home/centos/workspace/aes_decryption_benchmark/src/kernel/aes256CbcDecryptKernel.cpp:275:37)
+INFO: [HLS 214-131] Inlining function 'hls::stream<unsigned int, 0>::write(unsigned int const&)' into 'void mergeResult<128u, 4u>(hls::stream<ap_uint<64>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<ap_uint<128>, 0>*, hls::stream<bool, 0>*, hls::stream<ap_uint<512>, 0>&, hls::stream<unsigned int, 0>&)' (/home/centos/workspace/aes_decryption_benchmark/src/kernel/aes256CbcDecryptKernel.cpp:331:18)
+INFO: [HLS 214-131] Inlining function 'hls::stream<unsigned int, 0>::write(unsigned int const&)' into 'void mergeResult<128u, 4u>(hls::stream<ap_uint<64>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<ap_uint<128>, 0>*, hls::stream<bool, 0>*, hls::stream<ap_uint<512>, 0>&, hls::stream<unsigned int, 0>&)' (/home/centos/workspace/aes_decryption_benchmark/src/kernel/aes256CbcDecryptKernel.cpp:328:22)
+INFO: [HLS 214-131] Inlining function 'hls::stream<bool, 0>::read()' into 'void mergeResult<128u, 4u>(hls::stream<ap_uint<64>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<ap_uint<128>, 0>*, hls::stream<bool, 0>*, hls::stream<ap_uint<512>, 0>&, hls::stream<unsigned int, 0>&)' (/home/centos/workspace/aes_decryption_benchmark/src/kernel/aes256CbcDecryptKernel.cpp:322:26)
+INFO: [HLS 214-131] Inlining function 'hls::stream<unsigned int, 0>::write(unsigned int const&)' into 'void mergeResult<128u, 4u>(hls::stream<ap_uint<64>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<ap_uint<128>, 0>*, hls::stream<bool, 0>*, hls::stream<ap_uint<512>, 0>&, hls::stream<unsigned int, 0>&)' (/home/centos/workspace/aes_decryption_benchmark/src/kernel/aes256CbcDecryptKernel.cpp:312:30)
+INFO: [HLS 214-131] Inlining function 'hls::stream<ap_uint<512>, 0>::write(ap_uint<512> const&)' into 'void mergeResult<128u, 4u>(hls::stream<ap_uint<64>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<ap_uint<128>, 0>*, hls::stream<bool, 0>*, hls::stream<ap_uint<512>, 0>&, hls::stream<unsigned int, 0>&)' (/home/centos/workspace/aes_decryption_benchmark/src/kernel/aes256CbcDecryptKernel.cpp:309:21)
+INFO: [HLS 214-131] Inlining function 'hls::stream<bool, 0>::read()' into 'void mergeResult<128u, 4u>(hls::stream<ap_uint<64>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<ap_uint<128>, 0>*, hls::stream<bool, 0>*, hls::stream<ap_uint<512>, 0>&, hls::stream<unsigned int, 0>&)' (/home/centos/workspace/aes_decryption_benchmark/src/kernel/aes256CbcDecryptKernel.cpp:293:45)
+INFO: [HLS 214-131] Inlining function 'hls::stream<ap_uint<128>, 0>::read()' into 'void mergeResult<128u, 4u>(hls::stream<ap_uint<64>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<ap_uint<128>, 0>*, hls::stream<bool, 0>*, hls::stream<ap_uint<512>, 0>&, hls::stream<unsigned int, 0>&)' (/home/centos/workspace/aes_decryption_benchmark/src/kernel/aes256CbcDecryptKernel.cpp:292:53)
+INFO: [HLS 214-131] Inlining function 'hls::stream<ap_uint<64>, 0>::read()' into 'void mergeResult<128u, 4u>(hls::stream<ap_uint<64>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<ap_uint<128>, 0>*, hls::stream<bool, 0>*, hls::stream<ap_uint<512>, 0>&, hls::stream<unsigned int, 0>&)' (/home/centos/workspace/aes_decryption_benchmark/src/kernel/aes256CbcDecryptKernel.cpp:278:39)
+INFO: [HLS 214-131] Inlining function 'hls::stream<unsigned int, 0>::read(unsigned int&)' into 'hls::stream<unsigned int, 0>::read()' (/opt/Xilinx/Vitis/2020.1/common/technology/autopilot/hls_stream_39.h:156:9)
+INFO: [HLS 214-131] Inlining function 'hls::stream<unsigned int, 0>::read()' into 'void writeOut<128u>(hls::stream<unsigned int, 0>&, hls::stream<ap_uint<512>, 0>&, ap_uint<512>*)' (/home/centos/workspace/aes_decryption_benchmark/src/kernel/aes256CbcDecryptKernel.cpp:349:29)
+INFO: [HLS 214-131] Inlining function 'hls::stream<ap_uint<512>, 0>::read()' into 'void writeOut<128u>(hls::stream<unsigned int, 0>&, hls::stream<ap_uint<512>, 0>&, ap_uint<512>*)' (/home/centos/workspace/aes_decryption_benchmark/src/kernel/aes256CbcDecryptKernel.cpp:345:33)
+INFO: [HLS 214-131] Inlining function 'hls::stream<unsigned int, 0>::read()' into 'void writeOut<128u>(hls::stream<unsigned int, 0>&, hls::stream<ap_uint<512>, 0>&, ap_uint<512>*)' (/home/centos/workspace/aes_decryption_benchmark/src/kernel/aes256CbcDecryptKernel.cpp:340:38)
+INFO: [HLS 214-131] Inlining function 'hls::stream<ap_uint<128>, 0>::stream()' into 'aes256CbcDecryptKernel' (/home/centos/workspace/aes_decryption_benchmark/src/kernel/aes256CbcDecryptKernel.cpp:378:29)
+INFO: [HLS 214-131] Inlining function 'hls::stream<ap_uint<256>, 0>::stream()' into 'aes256CbcDecryptKernel' (/home/centos/workspace/aes_decryption_benchmark/src/kernel/aes256CbcDecryptKernel.cpp:381:35)
+INFO: [HLS 214-131] Inlining function 'hls::stream<ap_uint<128>, 0>::stream()' into 'aes256CbcDecryptKernel' (/home/centos/workspace/aes_decryption_benchmark/src/kernel/aes256CbcDecryptKernel.cpp:384:29)
+INFO: [HLS 214-131] Inlining function 'hls::stream<bool, 0>::stream()' into 'aes256CbcDecryptKernel' (/home/centos/workspace/aes_decryption_benchmark/src/kernel/aes256CbcDecryptKernel.cpp:387:20)
+INFO: [HLS 214-131] Inlining function 'hls::stream<ap_uint<64>, 0>::stream()' into 'aes256CbcDecryptKernel' (/home/centos/workspace/aes_decryption_benchmark/src/kernel/aes256CbcDecryptKernel.cpp:390:28)
+INFO: [HLS 214-131] Inlining function 'hls::stream<unsigned int, 0>::stream()' into 'aes256CbcDecryptKernel' (/home/centos/workspace/aes_decryption_benchmark/src/kernel/aes256CbcDecryptKernel.cpp:408:28)
+INFO: [HLS 214-131] Inlining function 'hls::stream<ap_uint<512>, 0>::stream(char const*)' into 'aes256CbcDecryptKernel' (/home/centos/workspace/aes_decryption_benchmark/src/kernel/aes256CbcDecryptKernel.cpp:405:29)
+INFO: [HLS 214-131] Inlining function 'hls::stream<bool, 0>::stream()' into 'aes256CbcDecryptKernel' (/home/centos/workspace/aes_decryption_benchmark/src/kernel/aes256CbcDecryptKernel.cpp:402:20)
+INFO: [HLS 214-131] Inlining function 'hls::stream<ap_uint<128>, 0>::stream()' into 'aes256CbcDecryptKernel' (/home/centos/workspace/aes_decryption_benchmark/src/kernel/aes256CbcDecryptKernel.cpp:399:29)
+INFO: [HLS 214-131] Inlining function 'hls::stream<ap_uint<64>, 0>::stream()' into 'aes256CbcDecryptKernel' (/home/centos/workspace/aes_decryption_benchmark/src/kernel/aes256CbcDecryptKernel.cpp:396:28)
+INFO: [HLS 214-131] Inlining function 'hls::stream<ap_uint<64>, 0>::stream()' into 'aes256CbcDecryptKernel' (/home/centos/workspace/aes_decryption_benchmark/src/kernel/aes256CbcDecryptKernel.cpp:393:28)
+INFO: [HLS 214-186] Unrolling loop 'anonymous' (/home/centos/workspace/aes_decryption_benchmark/src/kernel/aes256CbcDecryptKernel.cpp:320:9) in function 'mergeResult<128u, 4u>' completely with a factor of 4 (/home/centos/workspace/aes_decryption_benchmark/src/kernel/aes256CbcDecryptKernel.cpp:320:9)
+INFO: [HLS 214-186] Unrolling loop 'anonymous' (/home/centos/workspace/aes_decryption_benchmark/src/kernel/aes256CbcDecryptKernel.cpp:239:2) in function 'cipherModeParallel<4u, 256u>' completely with a factor of 4 (/home/centos/workspace/aes_decryption_benchmark/src/kernel/aes256CbcDecryptKernel.cpp:239:2)
+INFO: [HLS 214-186] Unrolling loop 'anonymous' (/home/centos/workspace/aes_decryption_benchmark/libs/xf_security/L1/include/xf_security/aes.hpp:661:13) in function 'xf::security::aesDec<256>::process' completely with a factor of 16 (/home/centos/workspace/aes_decryption_benchmark/libs/xf_security/L1/include/xf_security/aes.hpp:661:13)
+INFO: [HLS 214-186] Unrolling loop 'anonymous' (/home/centos/workspace/aes_decryption_benchmark/libs/xf_security/L1/include/xf_security/aes.hpp:684:17) in function 'xf::security::aesDec<256>::process' completely with a factor of 16 (/home/centos/workspace/aes_decryption_benchmark/libs/xf_security/L1/include/xf_security/aes.hpp:684:17)
+INFO: [HLS 214-186] Unrolling loop 'anonymous' (/home/centos/workspace/aes_decryption_benchmark/libs/xf_security/L1/include/xf_security/aes.hpp:671:17) in function 'xf::security::aesDec<256>::process' completely with a factor of 4 (/home/centos/workspace/aes_decryption_benchmark/libs/xf_security/L1/include/xf_security/aes.hpp:671:17)
+INFO: [HLS 214-186] Unrolling loop 'LOOP_DISTRIBUTION' (/home/centos/workspace/aes_decryption_benchmark/src/kernel/aes256CbcDecryptKernel.cpp:146:13) in function 'splitText<4u, 256u>' completely with a factor of 4 (/home/centos/workspace/aes_decryption_benchmark/src/kernel/aes256CbcDecryptKernel.cpp:146:13)
+INFO: [HLS 214-186] Unrolling loop 'LOOP_SEND_IV_KEY' (/home/centos/workspace/aes_decryption_benchmark/src/kernel/aes256CbcDecryptKernel.cpp:163:9) in function 'splitText<4u, 256u>' completely with a factor of 4 (/home/centos/workspace/aes_decryption_benchmark/src/kernel/aes256CbcDecryptKernel.cpp:163:9)
+INFO: [HLS 214-186] Unrolling loop 'LOOP_END_FLAG' (/home/centos/workspace/aes_decryption_benchmark/src/kernel/aes256CbcDecryptKernel.cpp:171:9) in function 'splitText<4u, 256u>' completely with a factor of 4 (/home/centos/workspace/aes_decryption_benchmark/src/kernel/aes256CbcDecryptKernel.cpp:171:9)
+INFO: [HLS 214-186] Unrolling loop 'anonymous' (/home/centos/workspace/aes_decryption_benchmark/libs/xf_security/L1/include/xf_security/aes.hpp:596:17) in function 'xf::security::aesDec<256>::updateKey' completely with a factor of 16 (/home/centos/workspace/aes_decryption_benchmark/libs/xf_security/L1/include/xf_security/aes.hpp:596:17)
+INFO: [HLS 214-186] Unrolling loop 'anonymous' (/home/centos/workspace/aes_decryption_benchmark/libs/xf_security/L1/include/xf_security/aes.hpp:607:17) in function 'xf::security::aesDec<256>::updateKey' completely with a factor of 4 (/home/centos/workspace/aes_decryption_benchmark/libs/xf_security/L1/include/xf_security/aes.hpp:607:17)
+INFO-FLOW: DBG:CMD: copy_raw_kernel_xml ap_link_39: copying raw kernel.xml: /home/centos/workspace/aes_decryption_benchmark/Emulation-SW/aes256CbcDecryptKernel.build/aes256CbcDecryptKernel/aes256CbcDecryptKernel/aes256CbcDecryptKernel/solution/.autopilot/db/../../../kernel.xml -> /home/centos/workspace/aes_decryption_benchmark/Emulation-SW/aes256CbcDecryptKernel.build/aes256CbcDecryptKernel/aes256CbcDecryptKernel/aes256CbcDecryptKernel/solution/.autopilot/db/kernel.internal.xml
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:01:26 ; elapsed = 00:01:28 . Memory (MB): peak = 1530.082 ; gain = 1107.938 ; free physical = 95957 ; free virtual = 136286
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:01:26 ; elapsed = 00:01:28 . Memory (MB): peak = 1530.082 ; gain = 1107.938 ; free physical = 95957 ; free virtual = 136286
+Command       elaborate done; 85.1 sec.
+Execute       send_msg_by_id INFO @200-1493@ 
+INFO: [HLS 200-1493] Running only source code synthesis checks, skipping scheduling and RTL generation.
+Command     csynth_design done; 85.1 sec.
+Execute     close_project 
+Execute       cleanup_all -project 
+Execute     cleanup_all 
