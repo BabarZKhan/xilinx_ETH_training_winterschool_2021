@@ -1,0 +1,408 @@
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.1 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [HLS 200-1505] Using flow_target 'vitis'
+INFO: [HLS 200-435] Setting 'config_flow -target' configuration: config_interface -m_axi_latency=64
+INFO: [HLS 200-435] Setting 'config_flow -target' configuration: config_interface -m_axi_alignment_byte_size=64
+INFO: [HLS 200-435] Setting 'config_flow -target' configuration: config_interface -m_axi_max_widen_bitwidth=512
+INFO: [HLS 200-435] Setting 'config_flow -target' configuration: config_interface -default_slave_interface=s_axilite
+INFO: [HLS 200-435] Setting 'config_flow -target' configuration: config_rtl -register_reset_num=3
+INFO: [HLS 200-10] Setting target device to 'xcvu9p-flgb2104-2-i'
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 4ns.
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 1.08ns.
+INFO: [HLS 200-10] Analyzing design file '/home/centos/workspace/lab_optimization/src/krnl_idct.cpp' ... 
+WARNING: [HLS 214-113] Either use an argument of the function or declare the variable inside the dataflow loop body: /home/centos/workspace/lab_optimization/src/krnl_idct.cpp:331:31
+WARNING: [HLS 200-471] Dataflow form checks found 1 issue(s) in file /home/centos/workspace/lab_optimization/src/krnl_idct.cpp
+INFO: [HLS 200-777] Using interface defaults for 'Vitis' target.
+INFO: [HLS 214-131] Inlining function 'hls::stream<ap_uint<512>, 0>::write(ap_uint<512> const&)' into 'void read_blocks<ap_uint<512> >(ap_uint<512> const*, hls::stream<ap_uint<512>, 0>&, unsigned int)' (/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:226:6)
+INFO: [HLS 214-131] Inlining function 'hls::stream<ap_int<512>, 0>::write(ap_int<512> const&)' into 'void read_blocks<ap_int<512> >(ap_int<512> const*, hls::stream<ap_int<512>, 0>&, unsigned int)' (/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:226:6)
+INFO: [HLS 214-131] Inlining function 'hls::stream<ap_uint<512>, 0>::read(ap_uint<512>&)' into 'hls::stream<ap_uint<512>, 0>::read()' (/opt/Xilinx/Vitis/2020.1/common/technology/autopilot/hls_stream_39.h:156:9)
+INFO: [HLS 214-131] Inlining function 'hls::stream<ap_int<512>, 0>::read(ap_int<512>&)' into 'hls::stream<ap_int<512>, 0>::read()' (/opt/Xilinx/Vitis/2020.1/common/technology/autopilot/hls_stream_39.h:156:9)
+INFO: [HLS 214-131] Inlining function 'hls::stream<ap_uint<512>, 0>::read()' into 'execute(hls::stream<ap_int<512>, 0>&, hls::stream<ap_uint<512>, 0>&, hls::stream<ap_int<512>, 0>&, bool, unsigned int)' (/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:259:14)
+INFO: [HLS 214-131] Inlining function 'hls::stream<ap_int<512>, 0>::write(ap_int<512> const&)' into 'execute(hls::stream<ap_int<512>, 0>&, hls::stream<ap_uint<512>, 0>&, hls::stream<ap_int<512>, 0>&, bool, unsigned int)' (/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:281:14)
+INFO: [HLS 214-131] Inlining function 'idct(short const*, unsigned short const*, short*, bool)' into 'execute(hls::stream<ap_int<512>, 0>&, hls::stream<ap_uint<512>, 0>&, hls::stream<ap_int<512>, 0>&, bool, unsigned int)' (/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:274:5)
+INFO: [HLS 214-131] Inlining function 'hls::stream<ap_int<512>, 0>::read()' into 'execute(hls::stream<ap_int<512>, 0>&, hls::stream<ap_uint<512>, 0>&, hls::stream<ap_int<512>, 0>&, bool, unsigned int)' (/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:268:20)
+INFO: [HLS 214-131] Inlining function 'hls::stream<ap_int<512>, 0>::read()' into 'write_blocks(ap_int<512>*, hls::stream<ap_int<512>, 0>&, unsigned int)' (/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:300:14)
+INFO: [HLS 214-131] Inlining function 'hls::stream<ap_int<512>, 0>::stream(char const*)' into 'krnl_idct_dataflow(ap_int<512> const*, ap_uint<512> const*, ap_int<512>*, int, unsigned int)' (/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:321:24)
+INFO: [HLS 214-131] Inlining function 'hls::stream<ap_uint<512>, 0>::stream(char const*)' into 'krnl_idct_dataflow(ap_int<512> const*, ap_uint<512> const*, ap_int<512>*, int, unsigned int)' (/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:322:26)
+INFO: [HLS 214-131] Inlining function 'hls::stream<ap_int<512>, 0>::stream(char const*)' into 'krnl_idct_dataflow(ap_int<512> const*, ap_uint<512> const*, ap_int<512>*, int, unsigned int)' (/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:323:25)
+INFO: [HLS 214-115] Burst read of variable length and bit width 512 has been inferred on port 'gmem0' (/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:223:21)
+INFO: [HLS 214-115] Burst write of variable length and bit width 512 has been inferred on port 'gmem2' (/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:297:19)
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1530.082 ; gain = 1107.938 ; free physical = 98442 ; free virtual = 136502
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1530.082 ; gain = 1107.938 ; free physical = 98442 ; free virtual = 136502
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1530.082 ; gain = 1107.938 ; free physical = 98436 ; free virtual = 136497
+INFO: [HLS 200-10] Checking synthesizability ...
+WARNING: [SYNCHK 200-23] /opt/Xilinx/Vitis/2020.1/common/technology/autopilot/ap_int_ref.h:708: variable-indexed range selection may cause suboptimal QoR.
+INFO: [SYNCHK 200-10] 0 error(s), 1 warning(s).
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 1530.082 ; gain = 1107.938 ; free physical = 98431 ; free virtual = 136493
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'loop_execute' (/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:246) in function 'execute' for pipelining.
+WARNING: [XFORM 203-561] Updating loop upper bound from 2048 to 2 for loop 'loop_rd_blocks' (/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:223:38) in function 'read_blocks<ap_uint<512> >'.
+WARNING: [XFORM 203-561] Updating loop lower bound from 2048 to 2 for loop 'loop_rd_blocks' (/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:223:38) in function 'read_blocks<ap_uint<512> >'.
+INFO: [HLS 200-489] Unrolling loop 'VITIS_LOOP_256_1' (/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:256) in function 'execute' completely with a factor of 2.
+INFO: [HLS 200-489] Unrolling loop 'VITIS_LOOP_260_2' (/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:260) in function 'execute' completely with a factor of 32.
+INFO: [HLS 200-489] Unrolling loop 'VITIS_LOOP_266_3' (/opt/Xilinx/Vitis/2020.1/common/technology/autopilot/hls_stream_39.h:0) in function 'execute' completely with a factor of 2.
+INFO: [HLS 200-489] Unrolling loop 'VITIS_LOOP_269_4' (/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:269) in function 'execute' completely with a factor of 32.
+INFO: [HLS 200-489] Unrolling loop 'VITIS_LOOP_88_1' (/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:88) in function 'execute' completely with a factor of 8.
+INFO: [HLS 200-489] Unrolling loop 'VITIS_LOOP_154_2' (/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:154) in function 'execute' completely with a factor of 8.
+INFO: [HLS 200-489] Unrolling loop 'VITIS_LOOP_276_5' (/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:276) in function 'execute' completely with a factor of 2.
+INFO: [HLS 200-489] Unrolling loop 'VITIS_LOOP_278_6' (/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:278) in function 'execute' completely with a factor of 32.
+INFO: [XFORM 203-102] Partitioning array 'intermed' (/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:69) automatically.
+INFO: [XFORM 203-102] Partitioning array 'iiblock' (/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:252) automatically.
+INFO: [XFORM 203-102] Partitioning array 'iiq' (/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:253) automatically.
+INFO: [XFORM 203-102] Partitioning array 'iivoutp' (/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:254) automatically.
+INFO: [XFORM 203-712] Applying dataflow to function 'krnl_idct_dataflow', detected/extracted 6 process function(s): 
+	 'krnl_idct_dataflow.entry6'
+	 'read_blocks<ap_uint<512> >'
+	 'read_blocks<ap_int<512> >'
+	 'krnl_idct_dataflow_Block_.split25_proc'
+	 'execute'
+	 'write_blocks'.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (/opt/Xilinx/Vitis/2020.1/common/technology/autopilot/hls_stream_39.h:0) in function 'execute'... converting 27 basic blocks.
+INFO: [XFORM 203-11] Balancing expressions in function 'execute' (/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:241)...48 expression(s) balanced.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1530.082 ; gain = 1107.938 ; free physical = 98399 ; free virtual = 136462
+INFO: [HLS 200-444] Inferring multiple bus burst read of a total cumulative length 2 on port 'gmem1' (/opt/Xilinx/Vitis/2020.1/common/technology/autopilot/hls_stream_39.h:167:9). These data requests might be further partitioned to multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.
+WARNING: [HLS 200-1449] Process read_blocks<ap_uint<512> > has both a predecessor and reads an input from its caller (see the GUI dataflow viewer). This may lead to lower throughput. Consider copying this input via a predecessor process.
+WARNING: [HLS 200-1449] Process read_blocks<ap_int<512> > has both a predecessor and reads an input from its caller (see the GUI dataflow viewer). This may lead to lower throughput. Consider copying this input via a predecessor process.
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:22 ; elapsed = 00:00:22 . Memory (MB): peak = 1530.082 ; gain = 1107.938 ; free physical = 98336 ; free virtual = 136399
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'krnl_idct' ...
+WARNING: [SYN 201-103] Legalizing function name 'krnl_idct_dataflow.entry6' to 'krnl_idct_dataflow_entry6'.
+WARNING: [SYN 201-103] Legalizing function name 'read_blocks<ap_uint<512> >' to 'read_blocks_ap_uint_512_s'.
+WARNING: [SYN 201-103] Legalizing function name 'read_blocks<ap_int<512> >' to 'read_blocks_ap_int_512_s'.
+WARNING: [SYN 201-103] Legalizing function name 'krnl_idct_dataflow_Block_.split25_proc' to 'krnl_idct_dataflow_Block_split25_proc'.
+WARNING: [SYN 201-107] Renaming port name 'krnl_idct/block' to 'krnl_idct/block_r' to avoid the conflict with HDL keywords or other object names.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'krnl_idct_dataflow_entry6' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 22.53 seconds; current allocated memory: 210.683 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.02 seconds; current allocated memory: 210.862 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'read_blocks_ap_uint_512_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'loop_rd_blocks'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.09 seconds; current allocated memory: 211.066 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.19 seconds; current allocated memory: 211.359 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'read_blocks_ap_int_512_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'loop_rd_blocks'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.13 seconds; current allocated memory: 211.596 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.2 seconds; current allocated memory: 211.929 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'krnl_idct_dataflow_Block_split25_proc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.07 seconds; current allocated memory: 211.958 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.01 seconds; current allocated memory: 212.008 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'execute' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln182_7) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln181_7) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=add_ln180_14) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln175_7) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln174_7) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=add_ln173_7) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln172_7) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln171_7) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=add_ln170_14) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln182_6) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln181_6) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=add_ln180_12) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln175_6) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln174_6) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=add_ln173_6) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln172_6) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln171_6) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=add_ln170_12) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln182_5) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln181_5) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=add_ln180_10) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln175_5) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln174_5) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=add_ln173_5) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln172_5) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln171_5) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=add_ln170_10) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln182_4) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln181_4) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=add_ln180_8) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln175_4) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln174_4) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=add_ln173_4) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln172_4) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln171_4) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=add_ln170_8) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln182_3) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln181_3) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=add_ln180_6) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln175_3) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln174_3) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=add_ln173_3) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln172_3) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln171_3) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=add_ln170_6) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln182_2) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln181_2) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=add_ln180_4) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln175_2) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln174_2) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=add_ln173_2) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln172_2) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln171_2) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=add_ln170_4) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln182_1) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln181_1) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=add_ln180_2) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln175_1) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln174_1) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=add_ln173_1) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln172_1) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln171_1) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=add_ln170_2) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln182) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln181) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=add_ln180) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln175) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln174) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=add_ln173) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln172) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln171) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=add_ln170) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln98_7) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln97_7) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln96_7) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln95_7) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln94_7) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln93_7) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln92_7) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln91_7) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln98_6) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln97_6) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln96_6) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln95_6) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln94_6) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln93_6) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln92_6) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln91_6) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln98_5) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln97_5) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln96_5) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln95_5) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln94_5) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln93_5) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln92_5) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln91_5) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln128_4) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln127_6) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=add_ln126_4) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln98_4) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln97_4) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln96_4) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln95_4) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln94_4) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln93_4) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln92_4) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln91_4) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln98_3) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln97_3) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln96_3) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln95_3) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln94_3) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln93_3) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln92_3) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln91_3) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln98_2) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln97_2) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln96_2) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln95_2) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln94_2) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln93_2) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln92_2) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln91_2) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln98_1) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln97_1) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln96_1) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln95_1) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln94_1) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln93_1) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln92_1) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln91_1) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln128) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln127_1) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=add_ln126) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln98) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln97) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln96) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln95) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln94) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln93) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln92) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln91) to 3 in order to utilize available DSP registers.
+INFO: [SCHED 204-61] Pipelining loop 'loop_execute'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 2, Final II = 2, Depth = 24.
+WARNING: [HLS 200-871] Estimated clock period (3.392ns) exceeds the target (target clock period: 4ns, clock uncertainty: 1.08ns, effective delay budget: 2.92ns).
+WARNING: [HLS 200-1016] The critical path in module 'execute' consists of the following:	'add' operation of DSP[414] ('add_ln126', /home/centos/workspace/lab_optimization/src/krnl_idct.cpp:126->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:318) [413]  (2.4 ns)
+	'mul' operation of DSP[414] ('mul_ln127', /home/centos/workspace/lab_optimization/src/krnl_idct.cpp:127->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:318) [414]  (0.996 ns)
+
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 2.91 seconds; current allocated memory: 218.024 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 3 seconds; current allocated memory: 226.150 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'write_blocks' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'loop_wr_blocks'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 3.16 seconds; current allocated memory: 226.934 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.18 seconds; current allocated memory: 227.309 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'krnl_idct_dataflow' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.09 seconds; current allocated memory: 227.516 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 2.52 seconds; current allocated memory: 229.023 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'krnl_idct' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 1.52 seconds; current allocated memory: 229.773 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.52 seconds; current allocated memory: 230.201 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'krnl_idct_dataflow_entry6' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'krnl_idct_dataflow_entry6'.
+INFO: [HLS 200-111]  Elapsed time: 1.54 seconds; current allocated memory: 231.217 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'read_blocks_ap_uint_512_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'read_blocks_ap_uint_512_s'.
+INFO: [HLS 200-111]  Elapsed time: 0.07 seconds; current allocated memory: 232.411 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'read_blocks_ap_int_512_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'read_blocks_ap_int_512_s'.
+INFO: [HLS 200-111]  Elapsed time: 0.16 seconds; current allocated memory: 233.971 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'krnl_idct_dataflow_Block_split25_proc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'krnl_idct_dataflow_Block_split25_proc'.
+INFO: [HLS 200-111]  Elapsed time: 0.15 seconds; current allocated memory: 234.814 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'execute' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'am_addmul_24s_24s_13ns_32_4_1': 8 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'am_addmul_27s_27s_12ns_27_4_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'ama_addmuladd_24s_24s_11ns_4ns_32_4_1': 8 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'ama_addmuladd_24s_24s_12ns_4ns_30_4_1': 8 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_11s_24s_32ns_32_4_1': 8 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_12ns_24s_30s_30_4_1': 8 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_12ns_27s_27s_27_4_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_13ns_24s_32s_32_4_1': 8 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_13s_24s_30s_30_4_1': 8 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_13s_24s_32ns_32_4_1': 8 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_13s_24s_32s_32_4_1': 8 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_13s_27s_27s_27_4_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_11ns_32s_32_2_1': 8 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_11s_32s_32_2_1': 8 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_12ns_32s_32_2_1': 12 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_13ns_32s_32_2_1': 16 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_13s_32s_32_2_1': 22 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_9ns_31s_32_2_1': 16 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_9ns_32s_32_2_1': 16 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_mul_16ns_16s_21_4_1': 14 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_mul_16ns_16s_32_4_1': 48 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_mul_16s_16s_16_4_1': 2 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'execute'.
+INFO: [HLS 200-111]  Elapsed time: 1.02 seconds; current allocated memory: 249.943 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'write_blocks' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'write_blocks'.
+INFO: [HLS 200-111]  Elapsed time: 6.94 seconds; current allocated memory: 281.375 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'krnl_idct_dataflow' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Setting dangling out port 'krnl_idct_dataflow/m_axi_gmem0_AWVALID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'krnl_idct_dataflow/m_axi_gmem0_AWADDR' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'krnl_idct_dataflow/m_axi_gmem0_AWID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'krnl_idct_dataflow/m_axi_gmem0_AWLEN' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'krnl_idct_dataflow/m_axi_gmem0_AWSIZE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'krnl_idct_dataflow/m_axi_gmem0_AWBURST' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'krnl_idct_dataflow/m_axi_gmem0_AWLOCK' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'krnl_idct_dataflow/m_axi_gmem0_AWCACHE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'krnl_idct_dataflow/m_axi_gmem0_AWPROT' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'krnl_idct_dataflow/m_axi_gmem0_AWQOS' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'krnl_idct_dataflow/m_axi_gmem0_AWREGION' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'krnl_idct_dataflow/m_axi_gmem0_AWUSER' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'krnl_idct_dataflow/m_axi_gmem0_WVALID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'krnl_idct_dataflow/m_axi_gmem0_WDATA' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'krnl_idct_dataflow/m_axi_gmem0_WSTRB' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'krnl_idct_dataflow/m_axi_gmem0_WLAST' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'krnl_idct_dataflow/m_axi_gmem0_WID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'krnl_idct_dataflow/m_axi_gmem0_WUSER' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'krnl_idct_dataflow/m_axi_gmem0_BREADY' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'krnl_idct_dataflow/m_axi_gmem1_AWVALID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'krnl_idct_dataflow/m_axi_gmem1_AWADDR' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'krnl_idct_dataflow/m_axi_gmem1_AWID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'krnl_idct_dataflow/m_axi_gmem1_AWLEN' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'krnl_idct_dataflow/m_axi_gmem1_AWSIZE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'krnl_idct_dataflow/m_axi_gmem1_AWBURST' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'krnl_idct_dataflow/m_axi_gmem1_AWLOCK' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'krnl_idct_dataflow/m_axi_gmem1_AWCACHE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'krnl_idct_dataflow/m_axi_gmem1_AWPROT' to 0.

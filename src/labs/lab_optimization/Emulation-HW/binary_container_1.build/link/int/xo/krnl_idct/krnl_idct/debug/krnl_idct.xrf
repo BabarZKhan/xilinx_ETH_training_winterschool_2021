@@ -1,0 +1,22 @@
+Begin Function 'krnl_idct'
+
+RTL state condition: (1'b1 == ap_CS_fsm_state1)
+# ST_1
+local voutp_read <read_345> <integer> <> 'read' </home/centos/workspace/lab_optimization/src/krnl_idct.cpp:345>
+voutp /home/centos/workspace/lab_optimization/src/krnl_idct.cpp:345
+reg: voutp_read_reg_122[63:0] lv
+
+local q_read <read_345> <integer> <> 'read' </home/centos/workspace/lab_optimization/src/krnl_idct.cpp:345>
+q /home/centos/workspace/lab_optimization/src/krnl_idct.cpp:345
+reg: q_read_reg_127[63:0] lv
+
+local block_read <read_345> <integer> <> 'read' </home/centos/workspace/lab_optimization/src/krnl_idct.cpp:345>
+block /home/centos/workspace/lab_optimization/src/krnl_idct.cpp:345
+reg: block_read_reg_132[63:0] lv
+
+
+RTL state condition: (1'b1 == ap_CS_fsm_state2)
+# ST_2
+
+End Function 'krnl_idct'
+

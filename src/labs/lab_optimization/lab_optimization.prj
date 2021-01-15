@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="ASCII"?>
+<openclProject:OpenCLProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:openclProject="http://www.xilinx.com/openclproject" name="lab_optimization" location="/home/centos/workspace/lab_optimization" platform="/home/centos/src/project_data/aws-fpga/Vitis/aws_platform/xilinx_aws-vu9p-f1_shell-v04261818_201920_2/xilinx_aws-vu9p-f1_shell-v04261818_201920_2.xpfm" platformUID="xilinx:aws-vu9p-f1:shell-v04261818:201920.2(custom)" systemProject="lab_optimization_system" sysConfig="config0_0" cpu="x86" cpuInstance="x86" os="Linux">
+  <configuration name="Emulation-SW" id="com.xilinx.accelerated.config.sw_emu.1993266361">
+    <configBuildOptions xsi:type="openclProject:OpenCLOptions" kernelDebug="true">
+      <binaryContainers name="binary_container_1">
+        <kernels name="krnl_idct" sourceFile="src/krnl_idct.cpp">
+          <computeUnits name="krnl_idct_1" profileExecution="true" slr="">
+            <args name="block" master="true" memory="DDR[0]" profileAll="true"/>
+            <args name="q" master="true" memory="DDR[0]" profileAll="true"/>
+            <args name="voutp" master="true" memory="DDR[1]" profileAll="true"/>
+            <args name="ignore_dc" memory=""/>
+            <args name="blocks" memory=""/>
+          </computeUnits>
+          <args name="block" master="true"/>
+          <args name="q" master="true"/>
+          <args name="voutp" master="true"/>
+          <args name="ignore_dc"/>
+          <args name="blocks"/>
+        </kernels>
+      </binaryContainers>
+    </configBuildOptions>
+    <lastBuildOptions xsi:type="openclProject:OpenCLOptions" kernelDebug="true"/>
+  </configuration>
+  <configuration name="Emulation-HW" id="com.xilinx.accelerated.config.hw_emu.552320227">
+    <configBuildOptions xsi:type="openclProject:OpenCLOptions" kernelDebug="true" target="hw_emu">
+      <binaryContainers name="binary_container_1">
+        <kernels name="krnl_idct" sourceFile="src/krnl_idct.cpp">
+          <computeUnits name="krnl_idct_1" profileExecution="true" slr="">
+            <args name="block" master="true" memory="DDR[0]" profileAll="true"/>
+            <args name="q" master="true" memory="DDR[0]" profileAll="true"/>
+            <args name="voutp" master="true" memory="DDR[1]" profileAll="true"/>
+            <args name="ignore_dc" memory=""/>
+            <args name="blocks" memory=""/>
+          </computeUnits>
+          <args name="block" master="true"/>
+          <args name="q" master="true"/>
+          <args name="voutp" master="true"/>
+          <args name="ignore_dc"/>
+          <args name="blocks"/>
+        </kernels>
+      </binaryContainers>
+    </configBuildOptions>
+    <lastBuildOptions xsi:type="openclProject:OpenCLOptions" kernelDebug="true" target="hw_emu">
+      <binaryContainers name="binary_container_1">
+        <kernels name="krnl_idct" sourceFile="src/krnl_idct.cpp">
+          <computeUnits name="krnl_idct_1" profileExecution="true" slr="">
+            <args name="block" master="true" memory="DDR[0]" profileAll="true"/>
+            <args name="q" master="true" memory="DDR[0]" profileAll="true"/>
+            <args name="voutp" master="true" memory="DDR[1]" profileAll="true"/>
+            <args name="ignore_dc" memory=""/>
+            <args name="blocks" memory=""/>
+          </computeUnits>
+          <args name="block" master="true"/>
+          <args name="q" master="true"/>
+          <args name="voutp" master="true"/>
+          <args name="ignore_dc"/>
+          <args name="blocks"/>
+        </kernels>
+      </binaryContainers>
+    </lastBuildOptions>
+  </configuration>
+  <configuration name="Hardware" id="com.xilinx.accelerated.config.hw.1650652128" dirty="true">
+    <configBuildOptions xsi:type="openclProject:OpenCLOptions" target="hw">
+      <binaryContainers name="binary_container_1">
+        <kernels name="krnl_idct" sourceFile="src/krnl_idct.cpp">
+          <computeUnits name="krnl_idct_1" profileExecution="true" slr="">
+            <args name="block" master="true" memory="DDR[0]" profileAll="true"/>
+            <args name="q" master="true" memory="DDR[0]" profileAll="true"/>
+            <args name="voutp" master="true" memory="DDR[1]" profileAll="true"/>
+            <args name="ignore_dc" memory=""/>
+            <args name="blocks" memory=""/>
+          </computeUnits>
+          <args name="block" master="true"/>
+          <args name="q" master="true"/>
+          <args name="voutp" master="true"/>
+          <args name="ignore_dc"/>
+          <args name="blocks"/>
+        </kernels>
+      </binaryContainers>
+    </configBuildOptions>
+  </configuration>
+</openclProject:OpenCLProject>

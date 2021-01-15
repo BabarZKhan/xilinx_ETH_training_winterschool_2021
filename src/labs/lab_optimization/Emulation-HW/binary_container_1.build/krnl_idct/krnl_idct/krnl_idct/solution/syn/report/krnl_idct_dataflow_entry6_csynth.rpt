@@ -1,0 +1,169 @@
+
+
+================================================================
+== Vitis HLS Report for 'krnl_idct_dataflow_entry6'
+================================================================
+* Date:           Thu Jan 14 21:10:46 2021
+
+* Version:        2020.1 (Build 2902540 on Wed May 27 20:16:15 MDT 2020)
+* Project:        krnl_idct
+* Solution:       solution (Vitis Kernel Flow Target)
+* Product family: virtexuplus
+* Target device:  xcvu9p-flgb2104-2-i
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  | 4.00 ns | 1.458 ns |   1.08 ns  |
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        0|        0|   0 ns   |   0 ns   |    0|    0|   none  |
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++---------------------+---------+------+---------+---------+-----+
+|         Name        | BRAM_18K|  DSP |    FF   |   LUT   | URAM|
++---------------------+---------+------+---------+---------+-----+
+|DSP                  |        -|     -|        -|        -|    -|
+|Expression           |        -|     -|        0|       10|    -|
+|FIFO                 |        -|     -|        -|        -|    -|
+|Instance             |        -|     -|        -|        -|    -|
+|Memory               |        -|     -|        -|        -|    -|
+|Multiplexer          |        -|     -|        -|       72|    -|
+|Register             |        -|     -|        3|        -|    -|
++---------------------+---------+------+---------+---------+-----+
+|Total                |        0|     0|        3|       82|    0|
++---------------------+---------+------+---------+---------+-----+
+|Available SLR        |     1440|  2280|   788160|   394080|  320|
++---------------------+---------+------+---------+---------+-----+
+|Utilization SLR (%)  |        0|     0|    ~0   |    ~0   |    0|
++---------------------+---------+------+---------+---------+-----+
+|Available            |     4320|  6840|  2364480|  1182240|  960|
++---------------------+---------+------+---------+---------+-----+
+|Utilization (%)      |        0|     0|    ~0   |    ~0   |    0|
++---------------------+---------+------+---------+---------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +-----------------------+----------+----+---+----+------------+------------+
+    |     Variable Name     | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +-----------------------+----------+----+---+----+------------+------------+
+    |ap_ext_blocking_n      |    and   |   0|  0|   2|           2|           2|
+    |ap_int_blocking_cur_n  |    and   |   0|  0|   2|           1|           1|
+    |ap_int_blocking_n      |    and   |   0|  0|   2|           1|           2|
+    |ap_str_blocking_n      |    and   |   0|  0|   2|           2|           2|
+    |ap_block_state1        |    or    |   0|  0|   2|           1|           1|
+    +-----------------------+----------+----+---+----+------------+------------+
+    |Total                  |          |   0|  0|  10|           7|           8|
+    +-----------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +---------------------+----+-----------+-----+-----------+
+    |         Name        | LUT| Input Size| Bits| Total Bits|
+    +---------------------+----+-----------+-----+-----------+
+    |ap_done              |   9|          2|    1|          2|
+    |block_out_blk_n      |   9|          2|    1|          2|
+    |blocks_out1_blk_n    |   9|          2|    1|          2|
+    |blocks_out_blk_n     |   9|          2|    1|          2|
+    |ignore_dc_out_blk_n  |   9|          2|    1|          2|
+    |q_out_blk_n          |   9|          2|    1|          2|
+    |real_start           |   9|          2|    1|          2|
+    |voutp_out_blk_n      |   9|          2|    1|          2|
+    +---------------------+----+-----------+-----+-----------+
+    |Total                |  72|         16|    8|         16|
+    +---------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +----------------+---+----+-----+-----------+
+    |      Name      | FF| LUT| Bits| Const Bits|
+    +----------------+---+----+-----+-----------+
+    |ap_CS_fsm       |  1|   0|    1|          0|
+    |ap_done_reg     |  1|   0|    1|          0|
+    |start_once_reg  |  1|   0|    1|          0|
+    +----------------+---+----+-----+-----------+
+    |Total           |  3|   0|    3|          0|
+    +----------------+---+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++----------------------+-----+-----+------------+---------------------------+--------------+
+|       RTL Ports      | Dir | Bits|  Protocol  |       Source Object       |    C Type    |
++----------------------+-----+-----+------------+---------------------------+--------------+
+|ap_clk                |  in |    1| ap_ctrl_hs | krnl_idct_dataflow.entry6 | return value |
+|ap_rst                |  in |    1| ap_ctrl_hs | krnl_idct_dataflow.entry6 | return value |
+|ap_start              |  in |    1| ap_ctrl_hs | krnl_idct_dataflow.entry6 | return value |
+|start_full_n          |  in |    1| ap_ctrl_hs | krnl_idct_dataflow.entry6 | return value |
+|ap_done               | out |    1| ap_ctrl_hs | krnl_idct_dataflow.entry6 | return value |
+|ap_continue           |  in |    1| ap_ctrl_hs | krnl_idct_dataflow.entry6 | return value |
+|ap_idle               | out |    1| ap_ctrl_hs | krnl_idct_dataflow.entry6 | return value |
+|ap_ready              | out |    1| ap_ctrl_hs | krnl_idct_dataflow.entry6 | return value |
+|start_out             | out |    1| ap_ctrl_hs | krnl_idct_dataflow.entry6 | return value |
+|start_write           | out |    1| ap_ctrl_hs | krnl_idct_dataflow.entry6 | return value |
+|ap_ext_blocking_n     | out |    1| ap_ctrl_hs | krnl_idct_dataflow.entry6 | return value |
+|ap_str_blocking_n     | out |    1| ap_ctrl_hs | krnl_idct_dataflow.entry6 | return value |
+|ap_int_blocking_n     | out |    1| ap_ctrl_hs | krnl_idct_dataflow.entry6 | return value |
+|block_r               |  in |   64|   ap_none  |          block_r          |    scalar    |
+|q                     |  in |   64|   ap_none  |             q             |    scalar    |
+|voutp                 |  in |   64|   ap_none  |           voutp           |    scalar    |
+|ignore_dc             |  in |   32|   ap_none  |         ignore_dc         |    scalar    |
+|blocks                |  in |   32|   ap_none  |           blocks          |    scalar    |
+|block_out_din         | out |   64|   ap_fifo  |         block_out         |    pointer   |
+|block_out_full_n      |  in |    1|   ap_fifo  |         block_out         |    pointer   |
+|block_out_write       | out |    1|   ap_fifo  |         block_out         |    pointer   |
+|q_out_din             | out |   64|   ap_fifo  |           q_out           |    pointer   |
+|q_out_full_n          |  in |    1|   ap_fifo  |           q_out           |    pointer   |
+|q_out_write           | out |    1|   ap_fifo  |           q_out           |    pointer   |
+|voutp_out_din         | out |   64|   ap_fifo  |         voutp_out         |    pointer   |
+|voutp_out_full_n      |  in |    1|   ap_fifo  |         voutp_out         |    pointer   |
+|voutp_out_write       | out |    1|   ap_fifo  |         voutp_out         |    pointer   |
+|ignore_dc_out_din     | out |   32|   ap_fifo  |       ignore_dc_out       |    pointer   |
+|ignore_dc_out_full_n  |  in |    1|   ap_fifo  |       ignore_dc_out       |    pointer   |
+|ignore_dc_out_write   | out |    1|   ap_fifo  |       ignore_dc_out       |    pointer   |
+|blocks_out_din        | out |   31|   ap_fifo  |         blocks_out        |    pointer   |
+|blocks_out_full_n     |  in |    1|   ap_fifo  |         blocks_out        |    pointer   |
+|blocks_out_write      | out |    1|   ap_fifo  |         blocks_out        |    pointer   |
+|blocks_out1_din       | out |   32|   ap_fifo  |        blocks_out1        |    pointer   |
+|blocks_out1_full_n    |  in |    1|   ap_fifo  |        blocks_out1        |    pointer   |
+|blocks_out1_write     | out |    1|   ap_fifo  |        blocks_out1        |    pointer   |
++----------------------+-----+-----+------------+---------------------------+--------------+
+

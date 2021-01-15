@@ -1,0 +1,198 @@
+
+
+================================================================
+== Vitis HLS Report for 'krnl_idct_dataflow'
+================================================================
+* Date:           Thu Jan 14 21:10:40 2021
+
+* Version:        2020.1 (Build 2902540 on Wed May 27 20:16:15 MDT 2020)
+* Project:        krnl_idct
+* Solution:       solution (Vitis Kernel Flow Target)
+* Product family: virtexuplus
+* Target device:  xcvu9p-flgb2104-2-i
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  | 4.00 ns | 3.392 ns |   1.08 ns  |
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+------+------+----------+
+    |  Latency (cycles) |  Latency (absolute) |   Interval  | Pipeline |
+    |   min   |   max   |    min   |    max   |  min |  max |   Type   |
+    +---------+---------+----------+----------+------+------+----------+
+    |     2144|     2214| 8.576 us | 8.856 us |  2072|  2122| dataflow |
+    +---------+---------+----------+----------+------+------+----------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 7
+* Pipeline : 0
+* Dataflow Pipeline: 1
+  DF-Pipeline-0: Size = 7, States = { 1 2 3 4 5 6 7 }
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 7 
+7 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.45>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%blocks_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %blocks" [/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:318]   --->   Operation 8 'read' 'blocks_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%ignore_dc_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %ignore_dc" [/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:318]   --->   Operation 9 'read' 'ignore_dc_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%voutp_read = read i64 @_ssdm_op_Read.ap_auto.i64, i64 %voutp" [/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:318]   --->   Operation 10 'read' 'voutp_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%q_read = read i64 @_ssdm_op_Read.ap_auto.i64, i64 %q" [/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:318]   --->   Operation 11 'read' 'q_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%block_read = read i64 @_ssdm_op_Read.ap_auto.i64, i64 %block_r" [/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:318]   --->   Operation 12 'read' 'block_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%blocks_c14 = alloca i64" [/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:318]   --->   Operation 13 'alloca' 'blocks_c14' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 21 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.45> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 31> <Depth = 2> <FIFO>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%blocks_c13 = alloca i64" [/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:318]   --->   Operation 14 'alloca' 'blocks_c13' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 21 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.45> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 3> <FIFO>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%blocks_c = alloca i64" [/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:318]   --->   Operation 15 'alloca' 'blocks_c' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 21 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.45> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 31> <Depth = 2> <FIFO>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%ignore_dc_c = alloca i64" [/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:317]   --->   Operation 16 'alloca' 'ignore_dc_c' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 21 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.45> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 2> <FIFO>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%voutp_c = alloca i64" [/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:316]   --->   Operation 17 'alloca' 'voutp_c' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 21 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.45> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 64> <Depth = 4> <FIFO>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%q_c = alloca i64" [/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:315]   --->   Operation 18 'alloca' 'q_c' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 21 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.45> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 64> <Depth = 2> <FIFO>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%block_c = alloca i64" [/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:314]   --->   Operation 19 'alloca' 'block_c' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 21 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.45> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 64> <Depth = 2> <FIFO>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%iblock = alloca i64" [/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:321]   --->   Operation 20 'alloca' 'iblock' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO">   --->   Core 18 'FIFO' <Latency = 0> <II = 1> <Delay = 1.42> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 512> <Depth = 512> <FIFO>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%iq = alloca i64" [/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:322]   --->   Operation 21 'alloca' 'iq' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 21 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.45> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 512> <Depth = 2> <FIFO>
+ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%ivoutp = alloca i64" [/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:323]   --->   Operation 22 'alloca' 'ivoutp' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO">   --->   Core 18 'FIFO' <Latency = 0> <II = 1> <Delay = 1.42> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 512> <Depth = 512> <FIFO>
+ST_1 : Operation 23 [1/1] (1.45ns)   --->   "%call_ln318 = call void @krnl_idct_dataflow.entry6, i64 %block_read, i64 %q_read, i64 %voutp_read, i32 %ignore_dc_read, i32 %blocks_read, i64 %block_c, i64 %q_c, i64 %voutp_c, i32 %ignore_dc_c, i31 %blocks_c, i32 %blocks_c13" [/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:318]   --->   Operation 23 'call' 'call_ln318' <Predicate = true> <Delay = 1.45> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 2 <SV = 1> <Delay = 0.00>
+ST_2 : Operation 24 [2/2] (0.00ns)   --->   "%call_ln329 = call void @read_blocks<ap_uint<512> >, i512 %gmem1, i512 %iq, i64 %q_c, void %call_ln318, void %call_ln318" [/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:329]   --->   Operation 24 'call' 'call_ln329' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_2 : Operation 25 [2/2] (0.00ns)   --->   "%call_ln330 = call void @read_blocks<ap_int<512> >, i512 %gmem0, i512 %iblock, i64 %block_c, i31 %blocks_c, void %call_ln318" [/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:330]   --->   Operation 25 'call' 'call_ln330' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 3 <SV = 2> <Delay = 0.00>
+ST_3 : Operation 26 [1/2] (0.00ns)   --->   "%call_ln329 = call void @read_blocks<ap_uint<512> >, i512 %gmem1, i512 %iq, i64 %q_c, void %call_ln318, void %call_ln318" [/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:329]   --->   Operation 26 'call' 'call_ln329' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_3 : Operation 27 [1/2] (0.00ns)   --->   "%call_ln330 = call void @read_blocks<ap_int<512> >, i512 %gmem0, i512 %iblock, i64 %block_c, i31 %blocks_c, void %call_ln318" [/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:330]   --->   Operation 27 'call' 'call_ln330' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 4 <SV = 3> <Delay = 0.00>
+ST_4 : Operation 28 [1/1] (0.00ns)   --->   "%icmp_ln331_loc_channel = call i1 @krnl_idct_dataflow_Block_.split25_proc, i32 %ignore_dc_c, void %call_ln318" [/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:317]   --->   Operation 28 'call' 'icmp_ln331_loc_channel' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 21 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.45> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 1> <Depth = 2> <FIFO>
+ST_4 : Operation 29 [2/2] (0.00ns)   --->   "%call_ln331 = call void @execute, i512 %iblock, i512 %iq, i512 %ivoutp, i1 %icmp_ln331_loc_channel, i32 %blocks_c13, i31 %blocks_c14, void %call_ln330, void %call_ln329, void %call_ln329" [/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:331]   --->   Operation 29 'call' 'call_ln331' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 5 <SV = 4> <Delay = 0.00>
+ST_5 : Operation 30 [1/2] (0.00ns)   --->   "%call_ln331 = call void @execute, i512 %iblock, i512 %iq, i512 %ivoutp, i1 %icmp_ln331_loc_channel, i32 %blocks_c13, i31 %blocks_c14, void %call_ln330, void %call_ln329, void %call_ln329" [/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:331]   --->   Operation 30 'call' 'call_ln331' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 6 <SV = 5> <Delay = 0.00>
+ST_6 : Operation 31 [2/2] (0.00ns)   --->   "%call_ln332 = call void @write_blocks, i512 %gmem2, i512 %ivoutp, i64 %voutp_c, i31 %blocks_c14, void %call_ln331, void %call_ln331" [/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:332]   --->   Operation 31 'call' 'call_ln332' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 7 <SV = 6> <Delay = 0.00>
+ST_7 : Operation 32 [1/1] (0.00ns)   --->   "%specdataflowpipeline_ln0 = specdataflowpipeline void @_ssdm_op_SpecDataflowPipeline, i32, i32, void @empty_12"   --->   Operation 32 'specdataflowpipeline' 'specdataflowpipeline_ln0' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 33 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i512 %gmem2, void @empty_14, i32, i32, void @empty_12, i32, i32, void @empty_12, void @empty_12, void @empty_12, i32, i32, i32, i32, void @empty_12, void @empty_12"   --->   Operation 33 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 34 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i512 %gmem1, void @empty_14, i32, i32, void @empty_12, i32, i32, void @empty_12, void @empty_12, void @empty_12, i32, i32, i32, i32, void @empty_12, void @empty_12"   --->   Operation 34 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 35 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i512 %gmem0, void @empty_14, i32, i32, void @empty_12, i32, i32, void @empty_12, void @empty_12, void @empty_12, i32, i32, i32, i32, void @empty_12, void @empty_12"   --->   Operation 35 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 36 [1/1] (0.00ns)   --->   "%empty = specchannel i32 @_ssdm_op_SpecChannel, void @iblock_str, i32, void @p_str, void @p_str, i32, i32, i512 %iblock, i512 %iblock"   --->   Operation 36 'specchannel' 'empty' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 37 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i512 %iblock, void @empty_7, i32, i32, void @empty_12, i32, i32, void @empty_12, void @empty_12, void @empty_12, i32, i32, i32, i32, void @empty_12, void @empty_12"   --->   Operation 37 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 38 [1/1] (0.00ns)   --->   "%empty_35 = specchannel i32 @_ssdm_op_SpecChannel, void @iq_str, i32, void @p_str, void @p_str, i32, i32, i512 %iq, i512 %iq"   --->   Operation 38 'specchannel' 'empty_35' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 39 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i512 %iq, void @empty_7, i32, i32, void @empty_12, i32, i32, void @empty_12, void @empty_12, void @empty_12, i32, i32, i32, i32, void @empty_12, void @empty_12"   --->   Operation 39 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 40 [1/1] (0.00ns)   --->   "%empty_36 = specchannel i32 @_ssdm_op_SpecChannel, void @ivoutp_str, i32, void @p_str, void @p_str, i32, i32, i512 %ivoutp, i512 %ivoutp"   --->   Operation 40 'specchannel' 'empty_36' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 41 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i512 %ivoutp, void @empty_7, i32, i32, void @empty_12, i32, i32, void @empty_12, void @empty_12, void @empty_12, i32, i32, i32, i32, void @empty_12, void @empty_12"   --->   Operation 41 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 42 [1/1] (0.00ns)   --->   "%empty_37 = specchannel i32 @_ssdm_op_SpecChannel, void @block_c_str, i32, void @p_str, void @p_str, i32, i32, i64 %block_c, i64 %block_c" [/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:314]   --->   Operation 42 'specchannel' 'empty_37' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 43 [1/1] (0.00ns)   --->   "%specinterface_ln314 = specinterface void @_ssdm_op_SpecInterface, i64 %block_c, void @ap_fifo_str, i32, i32, void @p_str, i32, i32, void @p_str, void @p_str, void @p_str, i32, i32, i32, i32, void @p_str, void @p_str" [/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:314]   --->   Operation 43 'specinterface' 'specinterface_ln314' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 44 [1/1] (0.00ns)   --->   "%empty_38 = specchannel i32 @_ssdm_op_SpecChannel, void @q_c_str, i32, void @p_str, void @p_str, i32, i32, i64 %q_c, i64 %q_c" [/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:315]   --->   Operation 44 'specchannel' 'empty_38' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 45 [1/1] (0.00ns)   --->   "%specinterface_ln315 = specinterface void @_ssdm_op_SpecInterface, i64 %q_c, void @ap_fifo_str, i32, i32, void @p_str, i32, i32, void @p_str, void @p_str, void @p_str, i32, i32, i32, i32, void @p_str, void @p_str" [/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:315]   --->   Operation 45 'specinterface' 'specinterface_ln315' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 46 [1/1] (0.00ns)   --->   "%empty_39 = specchannel i32 @_ssdm_op_SpecChannel, void @voutp_c_str, i32, void @p_str, void @p_str, i32, i32, i64 %voutp_c, i64 %voutp_c" [/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:316]   --->   Operation 46 'specchannel' 'empty_39' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 47 [1/1] (0.00ns)   --->   "%specinterface_ln316 = specinterface void @_ssdm_op_SpecInterface, i64 %voutp_c, void @ap_fifo_str, i32, i32, void @p_str, i32, i32, void @p_str, void @p_str, void @p_str, i32, i32, i32, i32, void @p_str, void @p_str" [/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:316]   --->   Operation 47 'specinterface' 'specinterface_ln316' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 48 [1/1] (0.00ns)   --->   "%empty_40 = specchannel i32 @_ssdm_op_SpecChannel, void @ignore_dc_c_str, i32, void @p_str, void @p_str, i32, i32, i32 %ignore_dc_c, i32 %ignore_dc_c" [/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:317]   --->   Operation 48 'specchannel' 'empty_40' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 49 [1/1] (0.00ns)   --->   "%specinterface_ln317 = specinterface void @_ssdm_op_SpecInterface, i32 %ignore_dc_c, void @ap_fifo_str, i32, i32, void @p_str, i32, i32, void @p_str, void @p_str, void @p_str, i32, i32, i32, i32, void @p_str, void @p_str" [/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:317]   --->   Operation 49 'specinterface' 'specinterface_ln317' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 50 [1/1] (0.00ns)   --->   "%empty_41 = specchannel i32 @_ssdm_op_SpecChannel, void @blocks_c_str, i32, void @p_str, void @p_str, i32, i32, i31 %blocks_c, i31 %blocks_c" [/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:318]   --->   Operation 50 'specchannel' 'empty_41' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 51 [1/1] (0.00ns)   --->   "%specinterface_ln318 = specinterface void @_ssdm_op_SpecInterface, i31 %blocks_c, void @ap_fifo_str, i32, i32, void @p_str, i32, i32, void @p_str, void @p_str, void @p_str, i32, i32, i32, i32, void @p_str, void @p_str" [/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:318]   --->   Operation 51 'specinterface' 'specinterface_ln318' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 52 [1/1] (0.00ns)   --->   "%empty_42 = specchannel i32 @_ssdm_op_SpecChannel, void @blocks_c13_str, i32, void @p_str, void @p_str, i32, i32, i32 %blocks_c13, i32 %blocks_c13" [/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:318]   --->   Operation 52 'specchannel' 'empty_42' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 53 [1/1] (0.00ns)   --->   "%specinterface_ln318 = specinterface void @_ssdm_op_SpecInterface, i32 %blocks_c13, void @ap_fifo_str, i32, i32, void @p_str, i32, i32, void @p_str, void @p_str, void @p_str, i32, i32, i32, i32, void @p_str, void @p_str" [/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:318]   --->   Operation 53 'specinterface' 'specinterface_ln318' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 54 [1/1] (0.00ns)   --->   "%empty_43 = specchannel i32 @_ssdm_op_SpecChannel, void @blocks_c14_str, i32, void @p_str, void @p_str, i32, i32, i31 %blocks_c14, i31 %blocks_c14" [/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:318]   --->   Operation 54 'specchannel' 'empty_43' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 55 [1/1] (0.00ns)   --->   "%specinterface_ln318 = specinterface void @_ssdm_op_SpecInterface, i31 %blocks_c14, void @ap_fifo_str, i32, i32, void @p_str, i32, i32, void @p_str, void @p_str, void @p_str, i32, i32, i32, i32, void @p_str, void @p_str" [/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:318]   --->   Operation 55 'specinterface' 'specinterface_ln318' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 56 [1/2] (0.00ns)   --->   "%call_ln332 = call void @write_blocks, i512 %gmem2, i512 %ivoutp, i64 %voutp_c, i31 %blocks_c14, void %call_ln331, void %call_ln331" [/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:332]   --->   Operation 56 'call' 'call_ln332' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_7 : Operation 57 [1/1] (0.00ns)   --->   "%ret_ln333 = ret" [/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:333]   --->   Operation 57 'ret' 'ret_ln333' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 4ns, clock uncertainty: 1.08ns.
+
+ <State 1>: 1.46ns
+The critical path consists of the following:
+	wire read on port 'blocks' (/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:318) [9]  (0 ns)
+	'call' operation ('call_ln318', /home/centos/workspace/lab_optimization/src/krnl_idct.cpp:318) to 'krnl_idct_dataflow.entry6' [46]  (1.46 ns)
+
+ <State 2>: 0ns
+The critical path consists of the following:
+
+ <State 3>: 0ns
+The critical path consists of the following:
+
+ <State 4>: 0ns
+The critical path consists of the following:
+
+ <State 5>: 0ns
+The critical path consists of the following:
+
+ <State 6>: 0ns
+The critical path consists of the following:
+
+ <State 7>: 0ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

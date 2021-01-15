@@ -1,0 +1,2 @@
+performing high-level synthesis for kernel: krnl_idct
+Log file: /home/centos/workspace/lab_optimization/Emulation-HW/binary_container_1.build/krnl_idct/krnl_idct/vitis_hls.log

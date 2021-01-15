@@ -1,0 +1,75 @@
+{
+  "schema_version": {
+    "major": "1",
+    "minor": "0",
+    "patch": "0"
+  },
+  "debug_ip_layout": {
+    "m_count": "7",
+    "m_debug_ip_data": [
+      {
+        "m_type": "AXI_MONITOR_FIFO_FULL",
+        "m_index": "0",
+        "m_major": "1",
+        "m_minor": "0",
+        "m_properties": "0",
+        "m_base_address": "0x0000000000000000",
+        "m_name": "dpa_hub"
+      },
+      {
+        "m_type": "AXI_MONITOR_FIFO_LITE",
+        "m_index": "0",
+        "m_major": "1",
+        "m_minor": "0",
+        "m_properties": "0",
+        "m_base_address": "0x1C000000",
+        "m_name": "dpa_hub"
+      },
+      {
+        "m_type": "AXI_TRACE_FUNNEL",
+        "m_index": "0",
+        "m_major": "1",
+        "m_minor": "0",
+        "m_properties": "0",
+        "m_base_address": "0x1C010000",
+        "m_name": "dpa_hub"
+      },
+      {
+        "m_type": "ACCEL_MONITOR",
+        "m_index": "64",
+        "m_major": "1",
+        "m_minor": "0",
+        "m_properties": "11",
+        "m_base_address": "0x1C020000",
+        "m_name": "krnl_idct_1"
+      },
+      {
+        "m_type": "AXI_MM_MONITOR",
+        "m_index": "0",
+        "m_major": "1",
+        "m_minor": "0",
+        "m_properties": "11",
+        "m_base_address": "0x1C030000",
+        "m_name": "krnl_idct_1/m_axi_gmem0-DDR[0]"
+      },
+      {
+        "m_type": "AXI_MM_MONITOR",
+        "m_index": "2",
+        "m_major": "1",
+        "m_minor": "0",
+        "m_properties": "11",
+        "m_base_address": "0x1C040000",
+        "m_name": "krnl_idct_1/m_axi_gmem1-DDR[0]"
+      },
+      {
+        "m_type": "AXI_MM_MONITOR",
+        "m_index": "4",
+        "m_major": "1",
+        "m_minor": "0",
+        "m_properties": "11",
+        "m_base_address": "0x1C050000",
+        "m_name": "krnl_idct_1/m_axi_gmem2-DDR[1]"
+      }
+    ]
+  }
+}

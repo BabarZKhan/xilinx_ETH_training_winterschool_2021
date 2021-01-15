@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="krnl_idct" dir="">
+  <FileSets>
+    <FileSet Name="kernel_krnl_idct" Type="DesignSrcs">
+      <File Path="/home/centos/workspace/lab_optimization/src/krnl_idct.cpp"/>
+      <Config/>
+    </FileSet>
+  </FileSets>
+  <Runs/>
+</project>

@@ -1,0 +1,37 @@
+Begin Function 'read_blocks<ap_int<512> >'
+
+RTL state condition: (1'b1 == ap_CS_fsm_pp0_stage0)
+# ST_72
+local i <phi_318> <integer> <Phi> 'phi' </home/centos/workspace/lab_optimization/src/krnl_idct.cpp:223->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:330->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:318>
+add_ln223 /home/centos/workspace/lab_optimization/src/krnl_idct.cpp:223
+add_ln223 /home/centos/workspace/lab_optimization/src/krnl_idct.cpp:330
+add_ln223 /home/centos/workspace/lab_optimization/src/krnl_idct.cpp:318
+reg: i_reg_94[31:0] lv
+
+local icmp_ln223_1 <icmp_318> <integer> <Comparator> 'icmp' </home/centos/workspace/lab_optimization/src/krnl_idct.cpp:223->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:330->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:318>
+icmp_ln223_1 /home/centos/workspace/lab_optimization/src/krnl_idct.cpp:223
+icmp_ln223_1 /home/centos/workspace/lab_optimization/src/krnl_idct.cpp:330
+icmp_ln223_1 /home/centos/workspace/lab_optimization/src/krnl_idct.cpp:318
+reg: icmp_ln223_1_reg_171[0:0] lv
+
+# ST_73
+local gmem0_addr_read <read_318> <integer> <> 'read' </opt/Xilinx/Vitis/2020.1/common/technology/autopilot/hls_stream_39.h:167->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:318>
+gmem0_addr_read /opt/Xilinx/Vitis/2020.1/common/technology/autopilot/hls_stream_39.h:167
+gmem0_addr_read /home/centos/workspace/lab_optimization/src/krnl_idct.cpp:318
+reg: gmem0_addr_read_reg_180[511:0] lv
+
+
+RTL state condition: (1'b1 == ap_CS_fsm_state1)
+# ST_1
+local mul_i_i <> <integer> <> 'bitconcatenate' <>
+reg: mul_i_i_reg_150[31:0] lv
+
+local trunc_ln <partselect_318> <integer> <> 'partselect' </home/centos/workspace/lab_optimization/src/krnl_idct.cpp:223->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:330->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:318>
+trunc_ln /home/centos/workspace/lab_optimization/src/krnl_idct.cpp:223
+trunc_ln /home/centos/workspace/lab_optimization/src/krnl_idct.cpp:330
+trunc_ln /home/centos/workspace/lab_optimization/src/krnl_idct.cpp:318
+reg: trunc_ln_reg_160[57:0] lv
+
+
+End Function 'read_blocks<ap_int<512> >'
+

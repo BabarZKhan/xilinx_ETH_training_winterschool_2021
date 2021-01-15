@@ -1,0 +1,60 @@
+===============================================================================
+Version:    v++ v2020.1 (64-bit)
+Build:      SW Build 2902540 on Wed May 27 19:54:35 MDT 2020
+Copyright:  Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+Created:    Thu Jan 14 21:19:17 2021
+===============================================================================
+
+-------------------------------------------------------------------------------
+Design Name:             binary_container_1
+Target Device:           xilinx:aws-vu9p-f1:shell-v04261818:201920.2
+Target Clock:            250.000000MHz
+Total number of kernels: 1
+-------------------------------------------------------------------------------
+
+Kernel Summary
+Kernel Name  Type  Target              OpenCL Library      Compute Units
+-----------  ----  ------------------  ------------------  -------------
+krnl_idct    c     fpga0:OCL_REGION_0  binary_container_1  1
+
+
+-------------------------------------------------------------------------------
+OpenCL Binary:     binary_container_1
+Kernels mapped to: clc_region
+
+Timing Information (MHz)
+Compute Unit  Kernel Name  Module Name                            Target Frequency  Estimated Frequency
+------------  -----------  -------------------------------------  ----------------  -------------------
+krnl_idct_1   krnl_idct    krnl_idct_dataflow_entry6              250               685.871094
+krnl_idct_1   krnl_idct    read_blocks_ap_uint_512_s              250               342.465759
+krnl_idct_1   krnl_idct    read_blocks_ap_int_512_s               250               342.465759
+krnl_idct_1   krnl_idct    krnl_idct_dataflow_Block_split25_proc  250               431.59259
+krnl_idct_1   krnl_idct    execute                                250               294.81131
+krnl_idct_1   krnl_idct    write_blocks                           250               342.465759
+krnl_idct_1   krnl_idct    krnl_idct_dataflow                     250               294.81131
+krnl_idct_1   krnl_idct    krnl_idct                              250               294.81131
+
+Latency Information
+Compute Unit  Kernel Name  Module Name                            Start Interval  Best (cycles)  Avg (cycles)  Worst (cycles)  Best (absolute)  Avg (absolute)  Worst (absolute)
+------------  -----------  -------------------------------------  --------------  -------------  ------------  --------------  ---------------  --------------  ----------------
+krnl_idct_1   krnl_idct    krnl_idct_dataflow_entry6              0               0              0             0               0 ns             0 ns            0 ns
+krnl_idct_1   krnl_idct    read_blocks_ap_uint_512_s              75              75             75            75              0.300 us         0.300 us        0.300 us
+krnl_idct_1   krnl_idct    read_blocks_ap_int_512_s               1 ~ 2121        1              1061          2121            4.000 ns         4.244 us        8.484 us
+krnl_idct_1   krnl_idct    krnl_idct_dataflow_Block_split25_proc  0               0              0             0               0 ns             0 ns            0 ns
+krnl_idct_1   krnl_idct    execute                                2071            2071           2071          2071            8.284 us         8.284 us        8.284 us
+krnl_idct_1   krnl_idct    write_blocks                           1 ~ 2119        1              1060          2119            4.000 ns         4.240 us        8.476 us
+krnl_idct_1   krnl_idct    krnl_idct_dataflow                     2072 ~ 2122     2144           2144          2214            8.576 us         8.576 us        8.856 us
+krnl_idct_1   krnl_idct    krnl_idct                              2146 ~ 2216     2145           2145          2215            8.580 us         8.580 us        8.860 us
+
+Area Information
+Compute Unit  Kernel Name  Module Name                            FF     LUT    DSP  BRAM  URAM
+------------  -----------  -------------------------------------  -----  -----  ---  ----  ----
+krnl_idct_1   krnl_idct    krnl_idct_dataflow_entry6              3      82     0    0     0
+krnl_idct_1   krnl_idct    read_blocks_ap_uint_512_s              651    441    0    0     0
+krnl_idct_1   krnl_idct    read_blocks_ap_int_512_s               712    511    0    0     0
+krnl_idct_1   krnl_idct    krnl_idct_dataflow_Block_split25_proc  3      57     0    0     0
+krnl_idct_1   krnl_idct    execute                                34420  26011  0    0     0
+krnl_idct_1   krnl_idct    write_blocks                           711    516    0    0     0
+krnl_idct_1   krnl_idct    krnl_idct_dataflow                     37722  28444  0    30    0
+krnl_idct_1   krnl_idct    krnl_idct                              42493  33850  0    120   0
+-------------------------------------------------------------------------------

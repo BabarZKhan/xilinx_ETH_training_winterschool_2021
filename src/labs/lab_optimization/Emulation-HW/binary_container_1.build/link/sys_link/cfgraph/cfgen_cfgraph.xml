@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<cf:model cf:cpu="x86" cf:partition="0" cf:prefix="p_0_" cf:name="dr" xd:type="design" xmlns:xd="http://www.xilinx.com/xd" xmlns:cf="http://www.xilinx.com/connections">
+  <cf:block cf:name="hwblk_krnl_idct">
+    <cf:port cf:name="s_axi_control" cf:portType="stream" cf:direction="in"/>
+    <cf:port cf:name="block" cf:portType="stream" cf:direction="in"/>
+    <cf:port cf:name="q" cf:portType="stream" cf:direction="in"/>
+    <cf:port cf:name="voutp" cf:portType="stream" cf:direction="in"/>
+    <cf:port cf:name="ignore_dc" cf:portType="stream" cf:direction="in"/>
+    <cf:port cf:name="blocks" cf:portType="stream" cf:direction="in"/>
+  </cf:block>
+  <cf:block cf:name="swblk_krnl_idct">
+    <cf:port cf:name="s_axi_control" cf:portType="stream" cf:direction="out"/>
+    <cf:port cf:name="block" cf:portType="stream" cf:direction="out"/>
+    <cf:port cf:name="q" cf:portType="stream" cf:direction="out"/>
+    <cf:port cf:name="voutp" cf:portType="stream" cf:direction="out"/>
+    <cf:port cf:name="ignore_dc" cf:portType="stream" cf:direction="out"/>
+    <cf:port cf:name="blocks" cf:portType="stream" cf:direction="out"/>
+  </cf:block>
+  <cf:comp cf:name="shell-v04261818" xd:componentRef="shell-v04261818" xd:clockId="0"/>
+  <cf:comp cf:name="krnl_idct_1" xd:componentRef="krnl_idct" xd:clockId="0"/>
+  <cf:instance cf:name="hwinst_krnl_idct_1" cf:blockName="hwblk_krnl_idct" cf:compName="krnl_idct_1">
+    <cf:portMap cf:blockPort="s_axi_control" cf:compPort="s_axi_control" xd:register="0x0"/>
+    <cf:portMap cf:blockPort="block" cf:compPort="m_axi_gmem0" cf:ctrlPort="s_axi_control" xd:register="0x10"/>
+    <cf:portMap cf:blockPort="q" cf:compPort="m_axi_gmem1" cf:ctrlPort="s_axi_control" xd:register="0x1C"/>
+    <cf:portMap cf:blockPort="voutp" cf:compPort="m_axi_gmem2" cf:ctrlPort="s_axi_control" xd:register="0x28"/>
+    <cf:portMap cf:blockPort="ignore_dc" cf:compPort="s_axi_control" xd:register="0x34"/>
+    <cf:portMap cf:blockPort="blocks" cf:compPort="s_axi_control" xd:register="0x3C"/>
+  </cf:instance>
+  <cf:instance cf:name="swinst_krnl_idct_1" cf:blockName="swblk_krnl_idct" cf:compName="shell-v04261818">
+    <cf:portMap cf:blockPort="s_axi_control" cf:compPort="slr0/interconnect_axilite_user_0_M01_AXI"/>
+    <cf:portMap cf:blockPort="block" cf:compPort="memory_subsystem" cf:ctrlPort="slr0/interconnect_axilite_user_0_M01_AXI" cf:sptag="DDR[0]"/>
+    <cf:portMap cf:blockPort="q" cf:compPort="memory_subsystem" cf:ctrlPort="slr0/interconnect_axilite_user_0_M01_AXI" cf:sptag="DDR[0]"/>
+    <cf:portMap cf:blockPort="voutp" cf:compPort="memory_subsystem" cf:ctrlPort="slr0/interconnect_axilite_user_0_M01_AXI" cf:sptag="DDR[1]"/>
+    <cf:portMap cf:blockPort="ignore_dc" cf:compPort="slr0/interconnect_axilite_user_0_M01_AXI"/>
+    <cf:portMap cf:blockPort="blocks" cf:compPort="slr0/interconnect_axilite_user_0_M01_AXI"/>
+  </cf:instance>
+  <cf:connection cf:srcInst="swinst_krnl_idct_1" cf:srcPort="s_axi_control" cf:dstInst="hwinst_krnl_idct_1" cf:dstPort="s_axi_control">
+    <cf:dataMover cf:compName="shell-v04261818" cf:softwareLib="axi_lite"/>
+  </cf:connection>
+  <cf:connection cf:srcInst="swinst_krnl_idct_1" cf:srcPort="block" cf:dstInst="hwinst_krnl_idct_1" cf:dstPort="block">
+    <cf:dataMover cf:compName="krnl_idct_1" cf:softwareLib="zero_copy"/>
+  </cf:connection>
+  <cf:connection cf:srcInst="swinst_krnl_idct_1" cf:srcPort="q" cf:dstInst="hwinst_krnl_idct_1" cf:dstPort="q">
+    <cf:dataMover cf:compName="krnl_idct_1" cf:softwareLib="zero_copy"/>
+  </cf:connection>
+  <cf:connection cf:srcInst="swinst_krnl_idct_1" cf:srcPort="voutp" cf:dstInst="hwinst_krnl_idct_1" cf:dstPort="voutp">
+    <cf:dataMover cf:compName="krnl_idct_1" cf:softwareLib="zero_copy"/>
+  </cf:connection>
+  <cf:connection cf:srcInst="swinst_krnl_idct_1" cf:srcPort="ignore_dc" cf:dstInst="hwinst_krnl_idct_1" cf:dstPort="ignore_dc">
+    <cf:dataMover cf:compName="shell-v04261818" cf:softwareLib="axi_lite"/>
+  </cf:connection>
+  <cf:connection cf:srcInst="swinst_krnl_idct_1" cf:srcPort="blocks" cf:dstInst="hwinst_krnl_idct_1" cf:dstPort="blocks">
+    <cf:dataMover cf:compName="shell-v04261818" cf:softwareLib="axi_lite"/>
+  </cf:connection>
+</cf:model>

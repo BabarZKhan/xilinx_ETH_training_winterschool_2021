@@ -1,0 +1,789 @@
+
+
+================================================================
+== Vitis HLS Report for 'write_blocks'
+================================================================
+* Date:           Thu Jan 14 21:10:40 2021
+
+* Version:        2020.1 (Build 2902540 on Wed May 27 20:16:15 MDT 2020)
+* Project:        krnl_idct
+* Solution:       solution (Vitis Kernel Flow Target)
+* Product family: virtexuplus
+* Target device:  xcvu9p-flgb2104-2-i
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  | 4.00 ns | 2.920 ns |   1.08 ns  |
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+------+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval  | Pipeline|
+    |   min   |   max   |    min   |    max   | min |  max |   Type  |
+    +---------+---------+----------+----------+-----+------+---------+
+    |        1|     2119| 4.000 ns | 8.476 us |    1|  2119|   none  |
+    +---------+---------+----------+----------+-----+------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                  |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |     Loop Name    |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- loop_wr_blocks  |     2049|     2049|         3|          1|          1|  2048|    yes   |
+        +------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 3
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 73
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 3, States = { 3 4 5 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 73 
+2 --> 3 
+3 --> 6 4 
+4 --> 5 
+5 --> 3 
+6 --> 7 
+7 --> 8 
+8 --> 9 
+9 --> 10 
+10 --> 11 
+11 --> 12 
+12 --> 13 
+13 --> 14 
+14 --> 15 
+15 --> 16 
+16 --> 17 
+17 --> 18 
+18 --> 19 
+19 --> 20 
+20 --> 21 
+21 --> 22 
+22 --> 23 
+23 --> 24 
+24 --> 25 
+25 --> 26 
+26 --> 27 
+27 --> 28 
+28 --> 29 
+29 --> 30 
+30 --> 31 
+31 --> 32 
+32 --> 33 
+33 --> 34 
+34 --> 35 
+35 --> 36 
+36 --> 37 
+37 --> 38 
+38 --> 39 
+39 --> 40 
+40 --> 41 
+41 --> 42 
+42 --> 43 
+43 --> 44 
+44 --> 45 
+45 --> 46 
+46 --> 47 
+47 --> 48 
+48 --> 49 
+49 --> 50 
+50 --> 51 
+51 --> 52 
+52 --> 53 
+53 --> 54 
+54 --> 55 
+55 --> 56 
+56 --> 57 
+57 --> 58 
+58 --> 59 
+59 --> 60 
+60 --> 61 
+61 --> 62 
+62 --> 63 
+63 --> 64 
+64 --> 65 
+65 --> 66 
+66 --> 67 
+67 --> 68 
+68 --> 69 
+69 --> 70 
+70 --> 71 
+71 --> 72 
+72 --> 73 
+73 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 2.51>
+ST_1 : Operation 74 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i512 %gmem2, void @empty_14, i32, i32, void @empty_12, i32, i32, void @empty_12, void @empty_12, void @empty_12, i32, i32, i32, i32, void @empty_12, void @empty_12"   --->   Operation 74 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 75 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i512 %in_r, void @empty_7, i32, i32, void @empty_12, i32, i32, void @empty_12, void @empty_12, void @empty_12, i32, i32, i32, i32, void @empty_12, void @empty_12"   --->   Operation 75 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 76 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i31 %blocks, void @ap_fifo_str, i32, i32, void @p_str, i32, i32, void @p_str, void @p_str, void @p_str, i32, i32, i32, i32, void @p_str, void @ScalarProp_str"   --->   Operation 76 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 77 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %voutp, void @ap_fifo_str, i32, i32, void @p_str, i32, i32, void @p_str, void @p_str, void @p_str, i32, i32, i32, i32, void @p_str, void @ScalarProp_str"   --->   Operation 77 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 78 [1/1] (1.45ns)   --->   "%voutp_read = read i64 @_ssdm_op_Read.ap_fifo.i64P, i64 %voutp" [/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:296->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:332]   --->   Operation 78 'read' 'voutp_read' <Predicate = true> <Delay = 1.45> <CoreInst = "FIFO_SRL">   --->   Core 21 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.45> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 64> <Depth = 4> <FIFO>
+ST_1 : Operation 79 [1/1] (1.45ns)   --->   "%blocks_read = read i31 @_ssdm_op_Read.ap_fifo.i31P, i31 %blocks"   --->   Operation 79 'read' 'blocks_read' <Predicate = true> <Delay = 1.45> <CoreInst = "FIFO_SRL">   --->   Core 21 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.45> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 31> <Depth = 2> <FIFO>
+ST_1 : Operation 80 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i512 %in_r, void @empty_7, i32, i32, void @empty_12, i32, i32, void @empty_12, void @empty_12, void @empty_12, i32, i32, i32, i32, void @empty_12, void @empty_12"   --->   Operation 80 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 81 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i512 %gmem2, void @empty_14, i32, i32, void @empty_12, i32, i32, void @empty_12, void @empty_12, void @empty_12, i32, i32, i32, i32, void @empty_12, void @empty_12"   --->   Operation 81 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 82 [1/1] (0.00ns)   --->   "%mul_i_i = bitconcatenate i32 @_ssdm_op_BitConcatenate.i32.i31.i1, i31 %blocks_read, i1"   --->   Operation 82 'bitconcatenate' 'mul_i_i' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 83 [1/1] (0.84ns)   --->   "%icmp_ln297 = icmp_eq  i31 %blocks_read, i31" [/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:297->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:332->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:318]   --->   Operation 83 'icmp' 'icmp_ln297' <Predicate = true> <Delay = 0.84> <CoreInst = "Cmp">   --->   Core 10 'Cmp' <Latency = 0> <II = 1> <Delay = 0.84> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 84 [1/1] (0.00ns)   --->   "%br_ln297 = br i1 %icmp_ln297, void %.lr.ph.i.i, void %.exit" [/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:297->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:332->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:318]   --->   Operation 84 'br' 'br_ln297' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 85 [1/1] (0.00ns)   --->   "%trunc_ln = partselect i58 @_ssdm_op_PartSelect.i58.i64.i32.i32, i64 %voutp_read, i32, i32" [/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:297->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:332->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:318]   --->   Operation 85 'partselect' 'trunc_ln' <Predicate = (!icmp_ln297)> <Delay = 0.00>
+
+State 2 <SV = 1> <Delay = 2.92>
+ST_2 : Operation 86 [1/1] (0.00ns)   --->   "%sext_ln297 = sext i58 %trunc_ln" [/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:297->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:332->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:318]   --->   Operation 86 'sext' 'sext_ln297' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 87 [1/1] (0.00ns)   --->   "%gmem2_addr = getelementptr i512 %gmem2, i64 %sext_ln297" [/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:297->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:332->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:318]   --->   Operation 87 'getelementptr' 'gmem2_addr' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 88 [1/1] (2.92ns)   --->   "%empty = writereq i1 @_ssdm_op_WriteReq.m_axi.p1i512, i512 %gmem2_addr, i32 %mul_i_i" [/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:297->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:332->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:318]   --->   Operation 88 'writereq' 'empty' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_2 : Operation 89 [1/1] (0.60ns)   --->   "%br_ln297 = br void %bb.i.i" [/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:297->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:332->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:318]   --->   Operation 89 'br' 'br_ln297' <Predicate = true> <Delay = 0.60>
+
+State 3 <SV = 2> <Delay = 0.88>
+ST_3 : Operation 90 [1/1] (0.00ns)   --->   "%i = phi i32 %add_ln297, void %bb.split.i.i, i32, void %.lr.ph.i.i" [/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:297->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:332->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:318]   --->   Operation 90 'phi' 'i' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 91 [1/1] (0.85ns)   --->   "%icmp_ln297_1 = icmp_eq  i32 %i, i32 %mul_i_i" [/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:297->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:332->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:318]   --->   Operation 91 'icmp' 'icmp_ln297_1' <Predicate = true> <Delay = 0.85> <CoreInst = "Cmp">   --->   Core 10 'Cmp' <Latency = 0> <II = 1> <Delay = 0.84> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 92 [1/1] (0.88ns)   --->   "%add_ln297 = add i32 %i, i32" [/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:297->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:332->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:318]   --->   Operation 92 'add' 'add_ln297' <Predicate = true> <Delay = 0.88> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.88> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 93 [1/1] (0.00ns)   --->   "%br_ln297 = br i1 %icmp_ln297_1, void %bb.split.i.i, void %._crit_edge.loopexit.i.i" [/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:297->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:332->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:318]   --->   Operation 93 'br' 'br_ln297' <Predicate = true> <Delay = 0.00>
+
+State 4 <SV = 3> <Delay = 1.42>
+ST_4 : Operation 94 [1/1] (1.42ns)   --->   "%in_read = read i512 @_ssdm_op_Read.ap_fifo.volatile.i512P, i512 %in_r" [/opt/Xilinx/Vitis/2020.1/common/technology/autopilot/hls_stream_39.h:145->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:318]   --->   Operation 94 'read' 'in_read' <Predicate = (!icmp_ln297_1)> <Delay = 1.42> <CoreInst = "FIFO">   --->   Core 18 'FIFO' <Latency = 0> <II = 1> <Delay = 1.42> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 512> <Depth = 512> <FIFO>
+
+State 5 <SV = 4> <Delay = 2.92>
+ST_5 : Operation 95 [1/1] (0.00ns)   --->   "%specpipeline_ln297 = specpipeline void @_ssdm_op_SpecPipeline, i32, i32, i32, i32, void @empty_12" [/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:297->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:332->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:318]   --->   Operation 95 'specpipeline' 'specpipeline_ln297' <Predicate = (!icmp_ln297_1)> <Delay = 0.00>
+ST_5 : Operation 96 [1/1] (0.00ns)   --->   "%speclooptripcount_ln297 = speclooptripcount void @_ssdm_op_SpecLoopTripCount, i64, i64, i64" [/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:297->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:332->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:318]   --->   Operation 96 'speclooptripcount' 'speclooptripcount_ln297' <Predicate = (!icmp_ln297_1)> <Delay = 0.00>
+ST_5 : Operation 97 [1/1] (0.00ns)   --->   "%specloopname_ln297 = specloopname void @_ssdm_op_SpecLoopName, void @empty_0" [/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:297->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:332->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:318]   --->   Operation 97 'specloopname' 'specloopname_ln297' <Predicate = (!icmp_ln297_1)> <Delay = 0.00>
+ST_5 : Operation 98 [1/1] (2.92ns)   --->   "%write_ln318 = write void @_ssdm_op_Write.m_axi.p1i512, i512 %gmem2_addr, i512 %in_read, i64, i1 %empty" [/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:318]   --->   Operation 98 'write' 'write_ln318' <Predicate = (!icmp_ln297_1)> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 5> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_5 : Operation 99 [1/1] (0.00ns)   --->   "%br_ln0 = br void %bb.i.i"   --->   Operation 99 'br' 'br_ln0' <Predicate = (!icmp_ln297_1)> <Delay = 0.00>
+
+State 6 <SV = 3> <Delay = 2.92>
+ST_6 : Operation 100 [68/68] (2.92ns)   --->   "%empty_34 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i512, i512 %gmem2_addr" [/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:302->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:332->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:318]   --->   Operation 100 'writeresp' 'empty_34' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 7 <SV = 4> <Delay = 2.92>
+ST_7 : Operation 101 [67/68] (2.92ns)   --->   "%empty_34 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i512, i512 %gmem2_addr" [/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:302->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:332->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:318]   --->   Operation 101 'writeresp' 'empty_34' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 8 <SV = 5> <Delay = 2.92>
+ST_8 : Operation 102 [66/68] (2.92ns)   --->   "%empty_34 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i512, i512 %gmem2_addr" [/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:302->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:332->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:318]   --->   Operation 102 'writeresp' 'empty_34' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 9 <SV = 6> <Delay = 2.92>
+ST_9 : Operation 103 [65/68] (2.92ns)   --->   "%empty_34 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i512, i512 %gmem2_addr" [/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:302->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:332->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:318]   --->   Operation 103 'writeresp' 'empty_34' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 10 <SV = 7> <Delay = 2.92>
+ST_10 : Operation 104 [64/68] (2.92ns)   --->   "%empty_34 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i512, i512 %gmem2_addr" [/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:302->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:332->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:318]   --->   Operation 104 'writeresp' 'empty_34' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 11 <SV = 8> <Delay = 2.92>
+ST_11 : Operation 105 [63/68] (2.92ns)   --->   "%empty_34 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i512, i512 %gmem2_addr" [/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:302->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:332->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:318]   --->   Operation 105 'writeresp' 'empty_34' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 12 <SV = 9> <Delay = 2.92>
+ST_12 : Operation 106 [62/68] (2.92ns)   --->   "%empty_34 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i512, i512 %gmem2_addr" [/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:302->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:332->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:318]   --->   Operation 106 'writeresp' 'empty_34' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 13 <SV = 10> <Delay = 2.92>
+ST_13 : Operation 107 [61/68] (2.92ns)   --->   "%empty_34 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i512, i512 %gmem2_addr" [/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:302->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:332->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:318]   --->   Operation 107 'writeresp' 'empty_34' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 14 <SV = 11> <Delay = 2.92>
+ST_14 : Operation 108 [60/68] (2.92ns)   --->   "%empty_34 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i512, i512 %gmem2_addr" [/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:302->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:332->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:318]   --->   Operation 108 'writeresp' 'empty_34' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 15 <SV = 12> <Delay = 2.92>
+ST_15 : Operation 109 [59/68] (2.92ns)   --->   "%empty_34 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i512, i512 %gmem2_addr" [/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:302->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:332->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:318]   --->   Operation 109 'writeresp' 'empty_34' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 16 <SV = 13> <Delay = 2.92>
+ST_16 : Operation 110 [58/68] (2.92ns)   --->   "%empty_34 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i512, i512 %gmem2_addr" [/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:302->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:332->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:318]   --->   Operation 110 'writeresp' 'empty_34' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 17 <SV = 14> <Delay = 2.92>
+ST_17 : Operation 111 [57/68] (2.92ns)   --->   "%empty_34 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i512, i512 %gmem2_addr" [/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:302->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:332->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:318]   --->   Operation 111 'writeresp' 'empty_34' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 18 <SV = 15> <Delay = 2.92>
+ST_18 : Operation 112 [56/68] (2.92ns)   --->   "%empty_34 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i512, i512 %gmem2_addr" [/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:302->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:332->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:318]   --->   Operation 112 'writeresp' 'empty_34' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 19 <SV = 16> <Delay = 2.92>
+ST_19 : Operation 113 [55/68] (2.92ns)   --->   "%empty_34 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i512, i512 %gmem2_addr" [/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:302->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:332->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:318]   --->   Operation 113 'writeresp' 'empty_34' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 20 <SV = 17> <Delay = 2.92>
+ST_20 : Operation 114 [54/68] (2.92ns)   --->   "%empty_34 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i512, i512 %gmem2_addr" [/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:302->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:332->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:318]   --->   Operation 114 'writeresp' 'empty_34' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 21 <SV = 18> <Delay = 2.92>
+ST_21 : Operation 115 [53/68] (2.92ns)   --->   "%empty_34 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i512, i512 %gmem2_addr" [/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:302->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:332->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:318]   --->   Operation 115 'writeresp' 'empty_34' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 22 <SV = 19> <Delay = 2.92>
+ST_22 : Operation 116 [52/68] (2.92ns)   --->   "%empty_34 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i512, i512 %gmem2_addr" [/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:302->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:332->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:318]   --->   Operation 116 'writeresp' 'empty_34' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 23 <SV = 20> <Delay = 2.92>
+ST_23 : Operation 117 [51/68] (2.92ns)   --->   "%empty_34 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i512, i512 %gmem2_addr" [/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:302->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:332->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:318]   --->   Operation 117 'writeresp' 'empty_34' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 24 <SV = 21> <Delay = 2.92>
+ST_24 : Operation 118 [50/68] (2.92ns)   --->   "%empty_34 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i512, i512 %gmem2_addr" [/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:302->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:332->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:318]   --->   Operation 118 'writeresp' 'empty_34' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 25 <SV = 22> <Delay = 2.92>
+ST_25 : Operation 119 [49/68] (2.92ns)   --->   "%empty_34 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i512, i512 %gmem2_addr" [/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:302->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:332->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:318]   --->   Operation 119 'writeresp' 'empty_34' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 26 <SV = 23> <Delay = 2.92>
+ST_26 : Operation 120 [48/68] (2.92ns)   --->   "%empty_34 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i512, i512 %gmem2_addr" [/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:302->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:332->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:318]   --->   Operation 120 'writeresp' 'empty_34' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 27 <SV = 24> <Delay = 2.92>
+ST_27 : Operation 121 [47/68] (2.92ns)   --->   "%empty_34 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i512, i512 %gmem2_addr" [/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:302->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:332->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:318]   --->   Operation 121 'writeresp' 'empty_34' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 28 <SV = 25> <Delay = 2.92>
+ST_28 : Operation 122 [46/68] (2.92ns)   --->   "%empty_34 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i512, i512 %gmem2_addr" [/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:302->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:332->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:318]   --->   Operation 122 'writeresp' 'empty_34' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 29 <SV = 26> <Delay = 2.92>
+ST_29 : Operation 123 [45/68] (2.92ns)   --->   "%empty_34 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i512, i512 %gmem2_addr" [/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:302->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:332->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:318]   --->   Operation 123 'writeresp' 'empty_34' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 30 <SV = 27> <Delay = 2.92>
+ST_30 : Operation 124 [44/68] (2.92ns)   --->   "%empty_34 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i512, i512 %gmem2_addr" [/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:302->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:332->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:318]   --->   Operation 124 'writeresp' 'empty_34' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 31 <SV = 28> <Delay = 2.92>
+ST_31 : Operation 125 [43/68] (2.92ns)   --->   "%empty_34 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i512, i512 %gmem2_addr" [/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:302->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:332->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:318]   --->   Operation 125 'writeresp' 'empty_34' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 32 <SV = 29> <Delay = 2.92>
+ST_32 : Operation 126 [42/68] (2.92ns)   --->   "%empty_34 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i512, i512 %gmem2_addr" [/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:302->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:332->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:318]   --->   Operation 126 'writeresp' 'empty_34' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 33 <SV = 30> <Delay = 2.92>
+ST_33 : Operation 127 [41/68] (2.92ns)   --->   "%empty_34 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i512, i512 %gmem2_addr" [/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:302->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:332->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:318]   --->   Operation 127 'writeresp' 'empty_34' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 34 <SV = 31> <Delay = 2.92>
+ST_34 : Operation 128 [40/68] (2.92ns)   --->   "%empty_34 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i512, i512 %gmem2_addr" [/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:302->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:332->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:318]   --->   Operation 128 'writeresp' 'empty_34' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 35 <SV = 32> <Delay = 2.92>
+ST_35 : Operation 129 [39/68] (2.92ns)   --->   "%empty_34 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i512, i512 %gmem2_addr" [/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:302->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:332->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:318]   --->   Operation 129 'writeresp' 'empty_34' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 36 <SV = 33> <Delay = 2.92>
+ST_36 : Operation 130 [38/68] (2.92ns)   --->   "%empty_34 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i512, i512 %gmem2_addr" [/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:302->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:332->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:318]   --->   Operation 130 'writeresp' 'empty_34' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 37 <SV = 34> <Delay = 2.92>
+ST_37 : Operation 131 [37/68] (2.92ns)   --->   "%empty_34 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i512, i512 %gmem2_addr" [/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:302->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:332->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:318]   --->   Operation 131 'writeresp' 'empty_34' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 38 <SV = 35> <Delay = 2.92>
+ST_38 : Operation 132 [36/68] (2.92ns)   --->   "%empty_34 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i512, i512 %gmem2_addr" [/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:302->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:332->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:318]   --->   Operation 132 'writeresp' 'empty_34' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 39 <SV = 36> <Delay = 2.92>
+ST_39 : Operation 133 [35/68] (2.92ns)   --->   "%empty_34 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i512, i512 %gmem2_addr" [/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:302->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:332->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:318]   --->   Operation 133 'writeresp' 'empty_34' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 40 <SV = 37> <Delay = 2.92>
+ST_40 : Operation 134 [34/68] (2.92ns)   --->   "%empty_34 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i512, i512 %gmem2_addr" [/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:302->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:332->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:318]   --->   Operation 134 'writeresp' 'empty_34' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 41 <SV = 38> <Delay = 2.92>
+ST_41 : Operation 135 [33/68] (2.92ns)   --->   "%empty_34 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i512, i512 %gmem2_addr" [/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:302->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:332->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:318]   --->   Operation 135 'writeresp' 'empty_34' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 42 <SV = 39> <Delay = 2.92>
+ST_42 : Operation 136 [32/68] (2.92ns)   --->   "%empty_34 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i512, i512 %gmem2_addr" [/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:302->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:332->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:318]   --->   Operation 136 'writeresp' 'empty_34' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 43 <SV = 40> <Delay = 2.92>
+ST_43 : Operation 137 [31/68] (2.92ns)   --->   "%empty_34 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i512, i512 %gmem2_addr" [/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:302->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:332->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:318]   --->   Operation 137 'writeresp' 'empty_34' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 44 <SV = 41> <Delay = 2.92>
+ST_44 : Operation 138 [30/68] (2.92ns)   --->   "%empty_34 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i512, i512 %gmem2_addr" [/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:302->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:332->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:318]   --->   Operation 138 'writeresp' 'empty_34' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 45 <SV = 42> <Delay = 2.92>
+ST_45 : Operation 139 [29/68] (2.92ns)   --->   "%empty_34 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i512, i512 %gmem2_addr" [/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:302->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:332->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:318]   --->   Operation 139 'writeresp' 'empty_34' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 46 <SV = 43> <Delay = 2.92>
+ST_46 : Operation 140 [28/68] (2.92ns)   --->   "%empty_34 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i512, i512 %gmem2_addr" [/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:302->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:332->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:318]   --->   Operation 140 'writeresp' 'empty_34' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 47 <SV = 44> <Delay = 2.92>
+ST_47 : Operation 141 [27/68] (2.92ns)   --->   "%empty_34 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i512, i512 %gmem2_addr" [/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:302->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:332->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:318]   --->   Operation 141 'writeresp' 'empty_34' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 48 <SV = 45> <Delay = 2.92>
+ST_48 : Operation 142 [26/68] (2.92ns)   --->   "%empty_34 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i512, i512 %gmem2_addr" [/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:302->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:332->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:318]   --->   Operation 142 'writeresp' 'empty_34' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 49 <SV = 46> <Delay = 2.92>
+ST_49 : Operation 143 [25/68] (2.92ns)   --->   "%empty_34 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i512, i512 %gmem2_addr" [/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:302->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:332->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:318]   --->   Operation 143 'writeresp' 'empty_34' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 50 <SV = 47> <Delay = 2.92>
+ST_50 : Operation 144 [24/68] (2.92ns)   --->   "%empty_34 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i512, i512 %gmem2_addr" [/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:302->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:332->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:318]   --->   Operation 144 'writeresp' 'empty_34' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 51 <SV = 48> <Delay = 2.92>
+ST_51 : Operation 145 [23/68] (2.92ns)   --->   "%empty_34 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i512, i512 %gmem2_addr" [/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:302->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:332->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:318]   --->   Operation 145 'writeresp' 'empty_34' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 52 <SV = 49> <Delay = 2.92>
+ST_52 : Operation 146 [22/68] (2.92ns)   --->   "%empty_34 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i512, i512 %gmem2_addr" [/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:302->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:332->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:318]   --->   Operation 146 'writeresp' 'empty_34' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 53 <SV = 50> <Delay = 2.92>
+ST_53 : Operation 147 [21/68] (2.92ns)   --->   "%empty_34 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i512, i512 %gmem2_addr" [/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:302->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:332->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:318]   --->   Operation 147 'writeresp' 'empty_34' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 54 <SV = 51> <Delay = 2.92>
+ST_54 : Operation 148 [20/68] (2.92ns)   --->   "%empty_34 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i512, i512 %gmem2_addr" [/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:302->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:332->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:318]   --->   Operation 148 'writeresp' 'empty_34' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 55 <SV = 52> <Delay = 2.92>
+ST_55 : Operation 149 [19/68] (2.92ns)   --->   "%empty_34 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i512, i512 %gmem2_addr" [/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:302->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:332->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:318]   --->   Operation 149 'writeresp' 'empty_34' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 56 <SV = 53> <Delay = 2.92>
+ST_56 : Operation 150 [18/68] (2.92ns)   --->   "%empty_34 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i512, i512 %gmem2_addr" [/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:302->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:332->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:318]   --->   Operation 150 'writeresp' 'empty_34' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 57 <SV = 54> <Delay = 2.92>
+ST_57 : Operation 151 [17/68] (2.92ns)   --->   "%empty_34 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i512, i512 %gmem2_addr" [/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:302->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:332->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:318]   --->   Operation 151 'writeresp' 'empty_34' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 58 <SV = 55> <Delay = 2.92>
+ST_58 : Operation 152 [16/68] (2.92ns)   --->   "%empty_34 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i512, i512 %gmem2_addr" [/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:302->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:332->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:318]   --->   Operation 152 'writeresp' 'empty_34' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 59 <SV = 56> <Delay = 2.92>
+ST_59 : Operation 153 [15/68] (2.92ns)   --->   "%empty_34 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i512, i512 %gmem2_addr" [/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:302->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:332->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:318]   --->   Operation 153 'writeresp' 'empty_34' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 60 <SV = 57> <Delay = 2.92>
+ST_60 : Operation 154 [14/68] (2.92ns)   --->   "%empty_34 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i512, i512 %gmem2_addr" [/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:302->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:332->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:318]   --->   Operation 154 'writeresp' 'empty_34' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 61 <SV = 58> <Delay = 2.92>
+ST_61 : Operation 155 [13/68] (2.92ns)   --->   "%empty_34 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i512, i512 %gmem2_addr" [/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:302->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:332->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:318]   --->   Operation 155 'writeresp' 'empty_34' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 62 <SV = 59> <Delay = 2.92>
+ST_62 : Operation 156 [12/68] (2.92ns)   --->   "%empty_34 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i512, i512 %gmem2_addr" [/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:302->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:332->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:318]   --->   Operation 156 'writeresp' 'empty_34' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 63 <SV = 60> <Delay = 2.92>
+ST_63 : Operation 157 [11/68] (2.92ns)   --->   "%empty_34 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i512, i512 %gmem2_addr" [/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:302->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:332->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:318]   --->   Operation 157 'writeresp' 'empty_34' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 64 <SV = 61> <Delay = 2.92>
+ST_64 : Operation 158 [10/68] (2.92ns)   --->   "%empty_34 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i512, i512 %gmem2_addr" [/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:302->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:332->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:318]   --->   Operation 158 'writeresp' 'empty_34' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 65 <SV = 62> <Delay = 2.92>
+ST_65 : Operation 159 [9/68] (2.92ns)   --->   "%empty_34 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i512, i512 %gmem2_addr" [/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:302->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:332->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:318]   --->   Operation 159 'writeresp' 'empty_34' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 66 <SV = 63> <Delay = 2.92>
+ST_66 : Operation 160 [8/68] (2.92ns)   --->   "%empty_34 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i512, i512 %gmem2_addr" [/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:302->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:332->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:318]   --->   Operation 160 'writeresp' 'empty_34' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 67 <SV = 64> <Delay = 2.92>
+ST_67 : Operation 161 [7/68] (2.92ns)   --->   "%empty_34 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i512, i512 %gmem2_addr" [/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:302->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:332->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:318]   --->   Operation 161 'writeresp' 'empty_34' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 68 <SV = 65> <Delay = 2.92>
+ST_68 : Operation 162 [6/68] (2.92ns)   --->   "%empty_34 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i512, i512 %gmem2_addr" [/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:302->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:332->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:318]   --->   Operation 162 'writeresp' 'empty_34' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 69 <SV = 66> <Delay = 2.92>
+ST_69 : Operation 163 [5/68] (2.92ns)   --->   "%empty_34 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i512, i512 %gmem2_addr" [/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:302->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:332->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:318]   --->   Operation 163 'writeresp' 'empty_34' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 70 <SV = 67> <Delay = 2.92>
+ST_70 : Operation 164 [4/68] (2.92ns)   --->   "%empty_34 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i512, i512 %gmem2_addr" [/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:302->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:332->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:318]   --->   Operation 164 'writeresp' 'empty_34' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 71 <SV = 68> <Delay = 2.92>
+ST_71 : Operation 165 [3/68] (2.92ns)   --->   "%empty_34 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i512, i512 %gmem2_addr" [/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:302->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:332->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:318]   --->   Operation 165 'writeresp' 'empty_34' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 72 <SV = 69> <Delay = 2.92>
+ST_72 : Operation 166 [2/68] (2.92ns)   --->   "%empty_34 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i512, i512 %gmem2_addr" [/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:302->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:332->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:318]   --->   Operation 166 'writeresp' 'empty_34' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 73 <SV = 70> <Delay = 2.92>
+ST_73 : Operation 167 [1/68] (2.92ns)   --->   "%empty_34 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i512, i512 %gmem2_addr" [/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:302->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:332->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:318]   --->   Operation 167 'writeresp' 'empty_34' <Predicate = (!icmp_ln297)> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_73 : Operation 168 [1/1] (0.00ns)   --->   "%br_ln302 = br void %.exit" [/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:302->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:332->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:318]   --->   Operation 168 'br' 'br_ln302' <Predicate = (!icmp_ln297)> <Delay = 0.00>
+ST_73 : Operation 169 [1/1] (0.00ns)   --->   "%ret_ln318 = ret" [/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:318]   --->   Operation 169 'ret' 'ret_ln318' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 4ns, clock uncertainty: 1.08ns.
+
+ <State 1>: 2.52ns
+The critical path consists of the following:
+	fifo read on port 'blocks' [10]  (1.46 ns)
+	'icmp' operation ('icmp_ln297', /home/centos/workspace/lab_optimization/src/krnl_idct.cpp:297->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:332->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:318) [14]  (0.848 ns)
+	blocking operation 0.21 ns on control path)
+
+ <State 2>: 2.92ns
+The critical path consists of the following:
+	'getelementptr' operation ('gmem2_addr', /home/centos/workspace/lab_optimization/src/krnl_idct.cpp:297->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:332->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:318) [19]  (0 ns)
+	bus request on port 'gmem2' (/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:297->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:332->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:318) [20]  (2.92 ns)
+
+ <State 3>: 0.88ns
+The critical path consists of the following:
+	'phi' operation ('i', /home/centos/workspace/lab_optimization/src/krnl_idct.cpp:297->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:332->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:318) with incoming values : ('add_ln297', /home/centos/workspace/lab_optimization/src/krnl_idct.cpp:297->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:332->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:318) [23]  (0 ns)
+	'add' operation ('add_ln297', /home/centos/workspace/lab_optimization/src/krnl_idct.cpp:297->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:332->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:318) [25]  (0.88 ns)
+
+ <State 4>: 1.43ns
+The critical path consists of the following:
+	fifo read on port 'in_r' (/opt/Xilinx/Vitis/2020.1/common/technology/autopilot/hls_stream_39.h:145->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:318) [31]  (1.43 ns)
+
+ <State 5>: 2.92ns
+The critical path consists of the following:
+	bus write on port 'gmem2' (/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:318) [32]  (2.92 ns)
+
+ <State 6>: 2.92ns
+The critical path consists of the following:
+	bus access on port 'gmem2' (/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:302->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:332->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:318) [35]  (2.92 ns)
+
+ <State 7>: 2.92ns
+The critical path consists of the following:
+	bus access on port 'gmem2' (/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:302->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:332->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:318) [35]  (2.92 ns)
+
+ <State 8>: 2.92ns
+The critical path consists of the following:
+	bus access on port 'gmem2' (/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:302->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:332->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:318) [35]  (2.92 ns)
+
+ <State 9>: 2.92ns
+The critical path consists of the following:
+	bus access on port 'gmem2' (/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:302->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:332->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:318) [35]  (2.92 ns)
+
+ <State 10>: 2.92ns
+The critical path consists of the following:
+	bus access on port 'gmem2' (/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:302->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:332->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:318) [35]  (2.92 ns)
+
+ <State 11>: 2.92ns
+The critical path consists of the following:
+	bus access on port 'gmem2' (/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:302->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:332->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:318) [35]  (2.92 ns)
+
+ <State 12>: 2.92ns
+The critical path consists of the following:
+	bus access on port 'gmem2' (/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:302->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:332->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:318) [35]  (2.92 ns)
+
+ <State 13>: 2.92ns
+The critical path consists of the following:
+	bus access on port 'gmem2' (/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:302->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:332->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:318) [35]  (2.92 ns)
+
+ <State 14>: 2.92ns
+The critical path consists of the following:
+	bus access on port 'gmem2' (/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:302->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:332->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:318) [35]  (2.92 ns)
+
+ <State 15>: 2.92ns
+The critical path consists of the following:
+	bus access on port 'gmem2' (/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:302->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:332->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:318) [35]  (2.92 ns)
+
+ <State 16>: 2.92ns
+The critical path consists of the following:
+	bus access on port 'gmem2' (/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:302->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:332->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:318) [35]  (2.92 ns)
+
+ <State 17>: 2.92ns
+The critical path consists of the following:
+	bus access on port 'gmem2' (/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:302->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:332->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:318) [35]  (2.92 ns)
+
+ <State 18>: 2.92ns
+The critical path consists of the following:
+	bus access on port 'gmem2' (/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:302->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:332->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:318) [35]  (2.92 ns)
+
+ <State 19>: 2.92ns
+The critical path consists of the following:
+	bus access on port 'gmem2' (/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:302->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:332->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:318) [35]  (2.92 ns)
+
+ <State 20>: 2.92ns
+The critical path consists of the following:
+	bus access on port 'gmem2' (/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:302->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:332->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:318) [35]  (2.92 ns)
+
+ <State 21>: 2.92ns
+The critical path consists of the following:
+	bus access on port 'gmem2' (/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:302->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:332->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:318) [35]  (2.92 ns)
+
+ <State 22>: 2.92ns
+The critical path consists of the following:
+	bus access on port 'gmem2' (/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:302->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:332->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:318) [35]  (2.92 ns)
+
+ <State 23>: 2.92ns
+The critical path consists of the following:
+	bus access on port 'gmem2' (/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:302->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:332->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:318) [35]  (2.92 ns)
+
+ <State 24>: 2.92ns
+The critical path consists of the following:
+	bus access on port 'gmem2' (/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:302->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:332->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:318) [35]  (2.92 ns)
+
+ <State 25>: 2.92ns
+The critical path consists of the following:
+	bus access on port 'gmem2' (/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:302->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:332->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:318) [35]  (2.92 ns)
+
+ <State 26>: 2.92ns
+The critical path consists of the following:
+	bus access on port 'gmem2' (/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:302->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:332->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:318) [35]  (2.92 ns)
+
+ <State 27>: 2.92ns
+The critical path consists of the following:
+	bus access on port 'gmem2' (/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:302->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:332->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:318) [35]  (2.92 ns)
+
+ <State 28>: 2.92ns
+The critical path consists of the following:
+	bus access on port 'gmem2' (/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:302->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:332->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:318) [35]  (2.92 ns)
+
+ <State 29>: 2.92ns
+The critical path consists of the following:
+	bus access on port 'gmem2' (/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:302->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:332->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:318) [35]  (2.92 ns)
+
+ <State 30>: 2.92ns
+The critical path consists of the following:
+	bus access on port 'gmem2' (/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:302->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:332->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:318) [35]  (2.92 ns)
+
+ <State 31>: 2.92ns
+The critical path consists of the following:
+	bus access on port 'gmem2' (/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:302->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:332->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:318) [35]  (2.92 ns)
+
+ <State 32>: 2.92ns
+The critical path consists of the following:
+	bus access on port 'gmem2' (/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:302->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:332->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:318) [35]  (2.92 ns)
+
+ <State 33>: 2.92ns
+The critical path consists of the following:
+	bus access on port 'gmem2' (/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:302->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:332->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:318) [35]  (2.92 ns)
+
+ <State 34>: 2.92ns
+The critical path consists of the following:
+	bus access on port 'gmem2' (/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:302->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:332->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:318) [35]  (2.92 ns)
+
+ <State 35>: 2.92ns
+The critical path consists of the following:
+	bus access on port 'gmem2' (/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:302->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:332->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:318) [35]  (2.92 ns)
+
+ <State 36>: 2.92ns
+The critical path consists of the following:
+	bus access on port 'gmem2' (/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:302->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:332->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:318) [35]  (2.92 ns)
+
+ <State 37>: 2.92ns
+The critical path consists of the following:
+	bus access on port 'gmem2' (/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:302->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:332->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:318) [35]  (2.92 ns)
+
+ <State 38>: 2.92ns
+The critical path consists of the following:
+	bus access on port 'gmem2' (/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:302->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:332->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:318) [35]  (2.92 ns)
+
+ <State 39>: 2.92ns
+The critical path consists of the following:
+	bus access on port 'gmem2' (/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:302->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:332->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:318) [35]  (2.92 ns)
+
+ <State 40>: 2.92ns
+The critical path consists of the following:
+	bus access on port 'gmem2' (/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:302->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:332->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:318) [35]  (2.92 ns)
+
+ <State 41>: 2.92ns
+The critical path consists of the following:
+	bus access on port 'gmem2' (/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:302->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:332->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:318) [35]  (2.92 ns)
+
+ <State 42>: 2.92ns
+The critical path consists of the following:
+	bus access on port 'gmem2' (/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:302->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:332->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:318) [35]  (2.92 ns)
+
+ <State 43>: 2.92ns
+The critical path consists of the following:
+	bus access on port 'gmem2' (/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:302->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:332->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:318) [35]  (2.92 ns)
+
+ <State 44>: 2.92ns
+The critical path consists of the following:
+	bus access on port 'gmem2' (/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:302->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:332->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:318) [35]  (2.92 ns)
+
+ <State 45>: 2.92ns
+The critical path consists of the following:
+	bus access on port 'gmem2' (/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:302->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:332->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:318) [35]  (2.92 ns)
+
+ <State 46>: 2.92ns
+The critical path consists of the following:
+	bus access on port 'gmem2' (/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:302->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:332->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:318) [35]  (2.92 ns)
+
+ <State 47>: 2.92ns
+The critical path consists of the following:
+	bus access on port 'gmem2' (/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:302->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:332->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:318) [35]  (2.92 ns)
+
+ <State 48>: 2.92ns
+The critical path consists of the following:
+	bus access on port 'gmem2' (/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:302->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:332->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:318) [35]  (2.92 ns)
+
+ <State 49>: 2.92ns
+The critical path consists of the following:
+	bus access on port 'gmem2' (/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:302->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:332->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:318) [35]  (2.92 ns)
+
+ <State 50>: 2.92ns
+The critical path consists of the following:
+	bus access on port 'gmem2' (/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:302->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:332->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:318) [35]  (2.92 ns)
+
+ <State 51>: 2.92ns
+The critical path consists of the following:
+	bus access on port 'gmem2' (/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:302->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:332->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:318) [35]  (2.92 ns)
+
+ <State 52>: 2.92ns
+The critical path consists of the following:
+	bus access on port 'gmem2' (/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:302->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:332->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:318) [35]  (2.92 ns)
+
+ <State 53>: 2.92ns
+The critical path consists of the following:
+	bus access on port 'gmem2' (/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:302->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:332->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:318) [35]  (2.92 ns)
+
+ <State 54>: 2.92ns
+The critical path consists of the following:
+	bus access on port 'gmem2' (/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:302->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:332->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:318) [35]  (2.92 ns)
+
+ <State 55>: 2.92ns
+The critical path consists of the following:
+	bus access on port 'gmem2' (/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:302->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:332->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:318) [35]  (2.92 ns)
+
+ <State 56>: 2.92ns
+The critical path consists of the following:
+	bus access on port 'gmem2' (/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:302->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:332->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:318) [35]  (2.92 ns)
+
+ <State 57>: 2.92ns
+The critical path consists of the following:
+	bus access on port 'gmem2' (/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:302->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:332->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:318) [35]  (2.92 ns)
+
+ <State 58>: 2.92ns
+The critical path consists of the following:
+	bus access on port 'gmem2' (/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:302->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:332->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:318) [35]  (2.92 ns)
+
+ <State 59>: 2.92ns
+The critical path consists of the following:
+	bus access on port 'gmem2' (/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:302->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:332->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:318) [35]  (2.92 ns)
+
+ <State 60>: 2.92ns
+The critical path consists of the following:
+	bus access on port 'gmem2' (/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:302->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:332->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:318) [35]  (2.92 ns)
+
+ <State 61>: 2.92ns
+The critical path consists of the following:
+	bus access on port 'gmem2' (/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:302->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:332->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:318) [35]  (2.92 ns)
+
+ <State 62>: 2.92ns
+The critical path consists of the following:
+	bus access on port 'gmem2' (/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:302->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:332->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:318) [35]  (2.92 ns)
+
+ <State 63>: 2.92ns
+The critical path consists of the following:
+	bus access on port 'gmem2' (/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:302->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:332->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:318) [35]  (2.92 ns)
+
+ <State 64>: 2.92ns
+The critical path consists of the following:
+	bus access on port 'gmem2' (/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:302->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:332->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:318) [35]  (2.92 ns)
+
+ <State 65>: 2.92ns
+The critical path consists of the following:
+	bus access on port 'gmem2' (/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:302->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:332->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:318) [35]  (2.92 ns)
+
+ <State 66>: 2.92ns
+The critical path consists of the following:
+	bus access on port 'gmem2' (/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:302->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:332->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:318) [35]  (2.92 ns)
+
+ <State 67>: 2.92ns
+The critical path consists of the following:
+	bus access on port 'gmem2' (/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:302->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:332->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:318) [35]  (2.92 ns)
+
+ <State 68>: 2.92ns
+The critical path consists of the following:
+	bus access on port 'gmem2' (/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:302->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:332->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:318) [35]  (2.92 ns)
+
+ <State 69>: 2.92ns
+The critical path consists of the following:
+	bus access on port 'gmem2' (/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:302->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:332->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:318) [35]  (2.92 ns)
+
+ <State 70>: 2.92ns
+The critical path consists of the following:
+	bus access on port 'gmem2' (/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:302->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:332->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:318) [35]  (2.92 ns)
+
+ <State 71>: 2.92ns
+The critical path consists of the following:
+	bus access on port 'gmem2' (/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:302->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:332->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:318) [35]  (2.92 ns)
+
+ <State 72>: 2.92ns
+The critical path consists of the following:
+	bus access on port 'gmem2' (/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:302->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:332->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:318) [35]  (2.92 ns)
+
+ <State 73>: 2.92ns
+The critical path consists of the following:
+	bus access on port 'gmem2' (/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:302->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:332->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:318) [35]  (2.92 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+	State 14
+	State 15
+	State 16
+	State 17
+	State 18
+	State 19
+	State 20
+	State 21
+	State 22
+	State 23
+	State 24
+	State 25
+	State 26
+	State 27
+	State 28
+	State 29
+	State 30
+	State 31
+	State 32
+	State 33
+	State 34
+	State 35
+	State 36
+	State 37
+	State 38
+	State 39
+	State 40
+	State 41
+	State 42
+	State 43
+	State 44
+	State 45
+	State 46
+	State 47
+	State 48
+	State 49
+	State 50
+	State 51
+	State 52
+	State 53
+	State 54
+	State 55
+	State 56
+	State 57
+	State 58
+	State 59
+	State 60
+	State 61
+	State 62
+	State 63
+	State 64
+	State 65
+	State 66
+	State 67
+	State 68
+	State 69
+	State 70
+	State 71
+	State 72
+	State 73
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

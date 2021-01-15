@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="0">
+	<Run Id="vpl" LaunchDir="/home/centos/workspace/lab_optimization/Emulation-HW/binary_container_1.build/link/vivado/vpl" FlowId="VPL_HW_Emulation" FromStepId="create_project" ToStepId="config_hw_emulation"/>
+</Runs>
+

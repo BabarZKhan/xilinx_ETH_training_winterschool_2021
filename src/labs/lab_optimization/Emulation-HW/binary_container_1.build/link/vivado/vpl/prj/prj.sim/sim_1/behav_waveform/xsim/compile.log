@@ -1,0 +1,403 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/centos/workspace/lab_optimization/Emulation-HW/binary_container_1.build/link/vivado/vpl/prj/prj.ip_user_files/bd/pfm_dynamic/ip/pfm_dynamic_kernel2_clk_0/sim/pfm_dynamic_kernel2_clk_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pfm_dynamic_kernel2_clk_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/centos/workspace/lab_optimization/Emulation-HW/binary_container_1.build/link/vivado/vpl/prj/prj.ip_user_files/bd/pfm_dynamic/ip/pfm_dynamic_kernel_clk_0/sim/pfm_dynamic_kernel_clk_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pfm_dynamic_kernel_clk_0
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/centos/workspace/lab_optimization/Emulation-HW/binary_container_1.build/link/vivado/vpl/prj/prj.ip_user_files/bd/pfm_dynamic/ip/pfm_dynamic_xtlm_simple_intercon_0_0/sim/pfm_dynamic_xtlm_simple_intercon_0_0_stub.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pfm_dynamic_xtlm_simple_intercon_0_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/centos/workspace/lab_optimization/Emulation-HW/binary_container_1.build/link/vivado/vpl/prj/prj.ip_user_files/bd/pfm_dynamic/ip/pfm_dynamic_xlconcat_interrupt_0/sim/pfm_dynamic_xlconcat_interrupt_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pfm_dynamic_xlconcat_interrupt_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/centos/workspace/lab_optimization/Emulation-HW/binary_container_1.build/link/vivado/vpl/prj/prj.ip_user_files/bd/pfm_dynamic/ip/pfm_dynamic_xlconcat_interrupt_0_0/sim/pfm_dynamic_xlconcat_interrupt_0_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pfm_dynamic_xlconcat_interrupt_0_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/centos/workspace/lab_optimization/Emulation-HW/binary_container_1.build/link/vivado/vpl/prj/prj.ip_user_files/bd/pfm_dynamic/ip/pfm_dynamic_xlconcat_interrupt_1_0/sim/pfm_dynamic_xlconcat_interrupt_1_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pfm_dynamic_xlconcat_interrupt_1_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/centos/workspace/lab_optimization/Emulation-HW/binary_container_1.build/link/vivado/vpl/prj/prj.ip_user_files/bd/pfm_dynamic/ip/pfm_dynamic_xlconcat_interrupt_2_0/sim/pfm_dynamic_xlconcat_interrupt_2_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pfm_dynamic_xlconcat_interrupt_2_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/centos/workspace/lab_optimization/Emulation-HW/binary_container_1.build/link/vivado/vpl/prj/prj.ip_user_files/bd/pfm_dynamic/ip/pfm_dynamic_xlconcat_interrupt_3_0/sim/pfm_dynamic_xlconcat_interrupt_3_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pfm_dynamic_xlconcat_interrupt_3_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/centos/workspace/lab_optimization/Emulation-HW/binary_container_1.build/link/vivado/vpl/prj/prj.ip_user_files/bd/pfm_dynamic/ip/pfm_dynamic_xlconstant_gnd_0/sim/pfm_dynamic_xlconstant_gnd_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pfm_dynamic_xlconstant_gnd_0
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/centos/workspace/lab_optimization/Emulation-HW/binary_container_1.build/link/vivado/vpl/prj/prj.ip_user_files/bd/pfm_dynamic/ip/pfm_dynamic_memory_subsystem_0/bd_0/ip/ip_0/sim/bd_d216_xtlm_simple_intercon_0_0_stub.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module bd_d216_xtlm_simple_intercon_0_0
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/centos/workspace/lab_optimization/Emulation-HW/binary_container_1.build/link/vivado/vpl/prj/prj.ip_user_files/bd/pfm_dynamic/ip/pfm_dynamic_memory_subsystem_0/bd_0/ip/ip_1/sim/bd_d216_plram_0_0_stub.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module bd_d216_plram_0_0
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/centos/workspace/lab_optimization/Emulation-HW/binary_container_1.build/link/vivado/vpl/prj/prj.ip_user_files/bd/pfm_dynamic/ip/pfm_dynamic_memory_subsystem_0/bd_0/ip/ip_2/sim/bd_d216_plram_1_0_stub.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module bd_d216_plram_1_0
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/centos/workspace/lab_optimization/Emulation-HW/binary_container_1.build/link/vivado/vpl/prj/prj.ip_user_files/bd/pfm_dynamic/ip/pfm_dynamic_memory_subsystem_0/bd_0/ip/ip_3/sim/bd_d216_plram_2_0_stub.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module bd_d216_plram_2_0
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/centos/workspace/lab_optimization/Emulation-HW/binary_container_1.build/link/vivado/vpl/prj/prj.ip_user_files/bd/pfm_dynamic/ip/pfm_dynamic_memory_subsystem_0/sim/pfm_dynamic_memory_subsystem_0_stub.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pfm_dynamic_memory_subsystem_0
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/centos/workspace/lab_optimization/Emulation-HW/binary_container_1.build/link/vivado/vpl/prj/prj.ip_user_files/bd/pfm_dynamic/ip/pfm_dynamic_sim_ddr_0_0/sim/pfm_dynamic_sim_ddr_0_0_stub.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pfm_dynamic_sim_ddr_0_0
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/centos/workspace/lab_optimization/Emulation-HW/binary_container_1.build/link/vivado/vpl/prj/prj.ip_user_files/bd/pfm_dynamic/ip/pfm_dynamic_sim_ddr_2_0/sim/pfm_dynamic_sim_ddr_2_0_stub.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pfm_dynamic_sim_ddr_2_0
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/centos/workspace/lab_optimization/Emulation-HW/binary_container_1.build/link/vivado/vpl/prj/prj.ip_user_files/bd/pfm_dynamic/ip/pfm_dynamic_sim_ddr_3_0/sim/pfm_dynamic_sim_ddr_3_0_stub.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pfm_dynamic_sim_ddr_3_0
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/centos/workspace/lab_optimization/Emulation-HW/binary_container_1.build/link/vivado/vpl/prj/prj.ip_user_files/bd/pfm_dynamic/ip/pfm_dynamic_icn_pass_0_0/sim/pfm_dynamic_icn_pass_0_0_stub.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pfm_dynamic_icn_pass_0_0
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/centos/workspace/lab_optimization/Emulation-HW/binary_container_1.build/link/vivado/vpl/prj/prj.ip_user_files/bd/pfm_dynamic/ip/pfm_dynamic_icn_pass_1_0/sim/pfm_dynamic_icn_pass_1_0_stub.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pfm_dynamic_icn_pass_1_0
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/centos/workspace/lab_optimization/Emulation-HW/binary_container_1.build/link/vivado/vpl/prj/prj.ip_user_files/bd/pfm_dynamic/ip/pfm_dynamic_icn_pass_2_0/sim/pfm_dynamic_icn_pass_2_0_stub.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pfm_dynamic_icn_pass_2_0
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/centos/workspace/lab_optimization/Emulation-HW/binary_container_1.build/link/vivado/vpl/prj/prj.ip_user_files/bd/pfm_dynamic/ip/pfm_dynamic_icn_pass_3_0/sim/pfm_dynamic_icn_pass_3_0_stub.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pfm_dynamic_icn_pass_3_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/centos/workspace/lab_optimization/Emulation-HW/binary_container_1.build/link/vivado/vpl/prj/prj.srcs/sources_1/bd/pfm_dynamic/ipshared/d2be/hdl/verilog/krnl_idct_am_addmul_24s_24s_13ns_32_4_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module krnl_idct_am_addmul_24s_24s_13ns_32_4_1_DSP48_7
+INFO: [VRFC 10-311] analyzing module krnl_idct_am_addmul_24s_24s_13ns_32_4_1
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/centos/workspace/lab_optimization/Emulation-HW/binary_container_1.build/link/vivado/vpl/prj/prj.srcs/sources_1/bd/pfm_dynamic/ipshared/d2be/hdl/verilog/krnl_idct_am_addmul_27s_27s_12ns_27_4_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module krnl_idct_am_addmul_27s_27s_12ns_27_4_1_DSP48_3
+INFO: [VRFC 10-311] analyzing module krnl_idct_am_addmul_27s_27s_12ns_27_4_1
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/centos/workspace/lab_optimization/Emulation-HW/binary_container_1.build/link/vivado/vpl/prj/prj.srcs/sources_1/bd/pfm_dynamic/ipshared/d2be/hdl/verilog/krnl_idct_ama_addmuladd_24s_24s_11ns_4ns_32_4_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module krnl_idct_ama_addmuladd_24s_24s_11ns_4ns_32_4_1_DSP48_6
+INFO: [VRFC 10-311] analyzing module krnl_idct_ama_addmuladd_24s_24s_11ns_4ns_32_4_1
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/centos/workspace/lab_optimization/Emulation-HW/binary_container_1.build/link/vivado/vpl/prj/prj.srcs/sources_1/bd/pfm_dynamic/ipshared/d2be/hdl/verilog/krnl_idct_ama_addmuladd_24s_24s_12ns_4ns_30_4_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module krnl_idct_ama_addmuladd_24s_24s_12ns_4ns_30_4_1_DSP48_8
+INFO: [VRFC 10-311] analyzing module krnl_idct_ama_addmuladd_24s_24s_12ns_4ns_30_4_1
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/centos/workspace/lab_optimization/Emulation-HW/binary_container_1.build/link/vivado/vpl/prj/prj.srcs/sources_1/bd/pfm_dynamic/ipshared/d2be/hdl/verilog/krnl_idct_control_s_axi.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module krnl_idct_control_s_axi
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/centos/workspace/lab_optimization/Emulation-HW/binary_container_1.build/link/vivado/vpl/prj/prj.srcs/sources_1/bd/pfm_dynamic/ipshared/d2be/hdl/verilog/krnl_idct_execute.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module krnl_idct_execute
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/centos/workspace/lab_optimization/Emulation-HW/binary_container_1.build/link/vivado/vpl/prj/prj.srcs/sources_1/bd/pfm_dynamic/ipshared/d2be/hdl/verilog/krnl_idct_fifo_w1_d2_S.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module krnl_idct_fifo_w1_d2_S_shiftReg
+INFO: [VRFC 10-311] analyzing module krnl_idct_fifo_w1_d2_S
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/centos/workspace/lab_optimization/Emulation-HW/binary_container_1.build/link/vivado/vpl/prj/prj.srcs/sources_1/bd/pfm_dynamic/ipshared/d2be/hdl/verilog/krnl_idct_fifo_w31_d2_S.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module krnl_idct_fifo_w31_d2_S_shiftReg
+INFO: [VRFC 10-311] analyzing module krnl_idct_fifo_w31_d2_S
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/centos/workspace/lab_optimization/Emulation-HW/binary_container_1.build/link/vivado/vpl/prj/prj.srcs/sources_1/bd/pfm_dynamic/ipshared/d2be/hdl/verilog/krnl_idct_fifo_w32_d2_S.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module krnl_idct_fifo_w32_d2_S_shiftReg
+INFO: [VRFC 10-311] analyzing module krnl_idct_fifo_w32_d2_S
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/centos/workspace/lab_optimization/Emulation-HW/binary_container_1.build/link/vivado/vpl/prj/prj.srcs/sources_1/bd/pfm_dynamic/ipshared/d2be/hdl/verilog/krnl_idct_fifo_w32_d3_S.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module krnl_idct_fifo_w32_d3_S_shiftReg
+INFO: [VRFC 10-311] analyzing module krnl_idct_fifo_w32_d3_S
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/centos/workspace/lab_optimization/Emulation-HW/binary_container_1.build/link/vivado/vpl/prj/prj.srcs/sources_1/bd/pfm_dynamic/ipshared/d2be/hdl/verilog/krnl_idct_fifo_w64_d2_S.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module krnl_idct_fifo_w64_d2_S_shiftReg
+INFO: [VRFC 10-311] analyzing module krnl_idct_fifo_w64_d2_S
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/centos/workspace/lab_optimization/Emulation-HW/binary_container_1.build/link/vivado/vpl/prj/prj.srcs/sources_1/bd/pfm_dynamic/ipshared/d2be/hdl/verilog/krnl_idct_fifo_w64_d4_S.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module krnl_idct_fifo_w64_d4_S_shiftReg
+INFO: [VRFC 10-311] analyzing module krnl_idct_fifo_w64_d4_S
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/centos/workspace/lab_optimization/Emulation-HW/binary_container_1.build/link/vivado/vpl/prj/prj.srcs/sources_1/bd/pfm_dynamic/ipshared/d2be/hdl/verilog/krnl_idct_fifo_w512_d2_S.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module krnl_idct_fifo_w512_d2_S_shiftReg
+INFO: [VRFC 10-311] analyzing module krnl_idct_fifo_w512_d2_S
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/centos/workspace/lab_optimization/Emulation-HW/binary_container_1.build/link/vivado/vpl/prj/prj.srcs/sources_1/bd/pfm_dynamic/ipshared/d2be/hdl/verilog/krnl_idct_fifo_w512_d512_A.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module krnl_idct_fifo_w512_d512_A
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/centos/workspace/lab_optimization/Emulation-HW/binary_container_1.build/link/vivado/vpl/prj/prj.srcs/sources_1/bd/pfm_dynamic/ipshared/d2be/hdl/verilog/krnl_idct_gmem0_m_axi.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module krnl_idct_gmem0_m_axi
+INFO: [VRFC 10-311] analyzing module krnl_idct_gmem0_m_axi_reg_slice
+INFO: [VRFC 10-311] analyzing module krnl_idct_gmem0_m_axi_fifo
+INFO: [VRFC 10-311] analyzing module krnl_idct_gmem0_m_axi_buffer
+INFO: [VRFC 10-311] analyzing module krnl_idct_gmem0_m_axi_decoder
+INFO: [VRFC 10-311] analyzing module krnl_idct_gmem0_m_axi_throttl
+INFO: [VRFC 10-311] analyzing module krnl_idct_gmem0_m_axi_read
+INFO: [VRFC 10-311] analyzing module krnl_idct_gmem0_m_axi_write
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/centos/workspace/lab_optimization/Emulation-HW/binary_container_1.build/link/vivado/vpl/prj/prj.srcs/sources_1/bd/pfm_dynamic/ipshared/d2be/hdl/verilog/krnl_idct_gmem1_m_axi.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module krnl_idct_gmem1_m_axi
+INFO: [VRFC 10-311] analyzing module krnl_idct_gmem1_m_axi_reg_slice
+INFO: [VRFC 10-311] analyzing module krnl_idct_gmem1_m_axi_fifo
+INFO: [VRFC 10-311] analyzing module krnl_idct_gmem1_m_axi_buffer
+INFO: [VRFC 10-311] analyzing module krnl_idct_gmem1_m_axi_decoder
+INFO: [VRFC 10-311] analyzing module krnl_idct_gmem1_m_axi_throttl
+INFO: [VRFC 10-311] analyzing module krnl_idct_gmem1_m_axi_read
+INFO: [VRFC 10-311] analyzing module krnl_idct_gmem1_m_axi_write
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/centos/workspace/lab_optimization/Emulation-HW/binary_container_1.build/link/vivado/vpl/prj/prj.srcs/sources_1/bd/pfm_dynamic/ipshared/d2be/hdl/verilog/krnl_idct_gmem2_m_axi.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module krnl_idct_gmem2_m_axi
+INFO: [VRFC 10-311] analyzing module krnl_idct_gmem2_m_axi_reg_slice
+INFO: [VRFC 10-311] analyzing module krnl_idct_gmem2_m_axi_fifo
+INFO: [VRFC 10-311] analyzing module krnl_idct_gmem2_m_axi_buffer
+INFO: [VRFC 10-311] analyzing module krnl_idct_gmem2_m_axi_decoder
+INFO: [VRFC 10-311] analyzing module krnl_idct_gmem2_m_axi_throttl
+INFO: [VRFC 10-311] analyzing module krnl_idct_gmem2_m_axi_read
+INFO: [VRFC 10-311] analyzing module krnl_idct_gmem2_m_axi_write
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/centos/workspace/lab_optimization/Emulation-HW/binary_container_1.build/link/vivado/vpl/prj/prj.srcs/sources_1/bd/pfm_dynamic/ipshared/d2be/hdl/verilog/krnl_idct_krnl_idct_dataflow.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module krnl_idct_krnl_idct_dataflow
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/centos/workspace/lab_optimization/Emulation-HW/binary_container_1.build/link/vivado/vpl/prj/prj.srcs/sources_1/bd/pfm_dynamic/ipshared/d2be/hdl/verilog/krnl_idct_krnl_idct_dataflow_Block_split25_proc.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module krnl_idct_krnl_idct_dataflow_Block_split25_proc
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/centos/workspace/lab_optimization/Emulation-HW/binary_container_1.build/link/vivado/vpl/prj/prj.srcs/sources_1/bd/pfm_dynamic/ipshared/d2be/hdl/verilog/krnl_idct_krnl_idct_dataflow_entry6.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module krnl_idct_krnl_idct_dataflow_entry6
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/centos/workspace/lab_optimization/Emulation-HW/binary_container_1.build/link/vivado/vpl/prj/prj.srcs/sources_1/bd/pfm_dynamic/ipshared/d2be/hdl/verilog/krnl_idct_mac_muladd_11s_24s_32ns_32_4_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module krnl_idct_mac_muladd_11s_24s_32ns_32_4_1_DSP48_11
+INFO: [VRFC 10-311] analyzing module krnl_idct_mac_muladd_11s_24s_32ns_32_4_1
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/centos/workspace/lab_optimization/Emulation-HW/binary_container_1.build/link/vivado/vpl/prj/prj.srcs/sources_1/bd/pfm_dynamic/ipshared/d2be/hdl/verilog/krnl_idct_mac_muladd_12ns_24s_30s_30_4_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module krnl_idct_mac_muladd_12ns_24s_30s_30_4_1_DSP48_14
+INFO: [VRFC 10-311] analyzing module krnl_idct_mac_muladd_12ns_24s_30s_30_4_1
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/centos/workspace/lab_optimization/Emulation-HW/binary_container_1.build/link/vivado/vpl/prj/prj.srcs/sources_1/bd/pfm_dynamic/ipshared/d2be/hdl/verilog/krnl_idct_mac_muladd_12ns_27s_27s_27_4_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module krnl_idct_mac_muladd_12ns_27s_27s_27_4_1_DSP48_5
+INFO: [VRFC 10-311] analyzing module krnl_idct_mac_muladd_12ns_27s_27s_27_4_1
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/centos/workspace/lab_optimization/Emulation-HW/binary_container_1.build/link/vivado/vpl/prj/prj.srcs/sources_1/bd/pfm_dynamic/ipshared/d2be/hdl/verilog/krnl_idct_mac_muladd_13ns_24s_32s_32_4_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module krnl_idct_mac_muladd_13ns_24s_32s_32_4_1_DSP48_9
+INFO: [VRFC 10-311] analyzing module krnl_idct_mac_muladd_13ns_24s_32s_32_4_1
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/centos/workspace/lab_optimization/Emulation-HW/binary_container_1.build/link/vivado/vpl/prj/prj.srcs/sources_1/bd/pfm_dynamic/ipshared/d2be/hdl/verilog/krnl_idct_mac_muladd_13s_24s_30s_30_4_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module krnl_idct_mac_muladd_13s_24s_30s_30_4_1_DSP48_13
+INFO: [VRFC 10-311] analyzing module krnl_idct_mac_muladd_13s_24s_30s_30_4_1
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/centos/workspace/lab_optimization/Emulation-HW/binary_container_1.build/link/vivado/vpl/prj/prj.srcs/sources_1/bd/pfm_dynamic/ipshared/d2be/hdl/verilog/krnl_idct_mac_muladd_13s_24s_32ns_32_4_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module krnl_idct_mac_muladd_13s_24s_32ns_32_4_1_DSP48_12
+INFO: [VRFC 10-311] analyzing module krnl_idct_mac_muladd_13s_24s_32ns_32_4_1
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/centos/workspace/lab_optimization/Emulation-HW/binary_container_1.build/link/vivado/vpl/prj/prj.srcs/sources_1/bd/pfm_dynamic/ipshared/d2be/hdl/verilog/krnl_idct_mac_muladd_13s_24s_32s_32_4_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module krnl_idct_mac_muladd_13s_24s_32s_32_4_1_DSP48_10
+INFO: [VRFC 10-311] analyzing module krnl_idct_mac_muladd_13s_24s_32s_32_4_1
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/centos/workspace/lab_optimization/Emulation-HW/binary_container_1.build/link/vivado/vpl/prj/prj.srcs/sources_1/bd/pfm_dynamic/ipshared/d2be/hdl/verilog/krnl_idct_mac_muladd_13s_27s_27s_27_4_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module krnl_idct_mac_muladd_13s_27s_27s_27_4_1_DSP48_4
+INFO: [VRFC 10-311] analyzing module krnl_idct_mac_muladd_13s_27s_27s_27_4_1
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/centos/workspace/lab_optimization/Emulation-HW/binary_container_1.build/link/vivado/vpl/prj/prj.srcs/sources_1/bd/pfm_dynamic/ipshared/d2be/hdl/verilog/krnl_idct_mul_9ns_31s_32_2_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module krnl_idct_mul_9ns_31s_32_2_1_Multiplier_6
+INFO: [VRFC 10-311] analyzing module krnl_idct_mul_9ns_31s_32_2_1
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/centos/workspace/lab_optimization/Emulation-HW/binary_container_1.build/link/vivado/vpl/prj/prj.srcs/sources_1/bd/pfm_dynamic/ipshared/d2be/hdl/verilog/krnl_idct_mul_9ns_32s_32_2_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module krnl_idct_mul_9ns_32s_32_2_1_Multiplier_5
+INFO: [VRFC 10-311] analyzing module krnl_idct_mul_9ns_32s_32_2_1
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/centos/workspace/lab_optimization/Emulation-HW/binary_container_1.build/link/vivado/vpl/prj/prj.srcs/sources_1/bd/pfm_dynamic/ipshared/d2be/hdl/verilog/krnl_idct_mul_11ns_32s_32_2_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module krnl_idct_mul_11ns_32s_32_2_1_Multiplier_0
+INFO: [VRFC 10-311] analyzing module krnl_idct_mul_11ns_32s_32_2_1
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/centos/workspace/lab_optimization/Emulation-HW/binary_container_1.build/link/vivado/vpl/prj/prj.srcs/sources_1/bd/pfm_dynamic/ipshared/d2be/hdl/verilog/krnl_idct_mul_11s_32s_32_2_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module krnl_idct_mul_11s_32s_32_2_1_Multiplier_3
+INFO: [VRFC 10-311] analyzing module krnl_idct_mul_11s_32s_32_2_1
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/centos/workspace/lab_optimization/Emulation-HW/binary_container_1.build/link/vivado/vpl/prj/prj.srcs/sources_1/bd/pfm_dynamic/ipshared/d2be/hdl/verilog/krnl_idct_mul_12ns_32s_32_2_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module krnl_idct_mul_12ns_32s_32_2_1_Multiplier_4
+INFO: [VRFC 10-311] analyzing module krnl_idct_mul_12ns_32s_32_2_1
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/centos/workspace/lab_optimization/Emulation-HW/binary_container_1.build/link/vivado/vpl/prj/prj.srcs/sources_1/bd/pfm_dynamic/ipshared/d2be/hdl/verilog/krnl_idct_mul_13ns_32s_32_2_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module krnl_idct_mul_13ns_32s_32_2_1_Multiplier_1
+INFO: [VRFC 10-311] analyzing module krnl_idct_mul_13ns_32s_32_2_1
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/centos/workspace/lab_optimization/Emulation-HW/binary_container_1.build/link/vivado/vpl/prj/prj.srcs/sources_1/bd/pfm_dynamic/ipshared/d2be/hdl/verilog/krnl_idct_mul_13s_32s_32_2_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module krnl_idct_mul_13s_32s_32_2_1_Multiplier_2
+INFO: [VRFC 10-311] analyzing module krnl_idct_mul_13s_32s_32_2_1
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/centos/workspace/lab_optimization/Emulation-HW/binary_container_1.build/link/vivado/vpl/prj/prj.srcs/sources_1/bd/pfm_dynamic/ipshared/d2be/hdl/verilog/krnl_idct_mul_mul_16ns_16s_21_4_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module krnl_idct_mul_mul_16ns_16s_21_4_1_DSP48_1
+INFO: [VRFC 10-311] analyzing module krnl_idct_mul_mul_16ns_16s_21_4_1
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/centos/workspace/lab_optimization/Emulation-HW/binary_container_1.build/link/vivado/vpl/prj/prj.srcs/sources_1/bd/pfm_dynamic/ipshared/d2be/hdl/verilog/krnl_idct_mul_mul_16ns_16s_32_4_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module krnl_idct_mul_mul_16ns_16s_32_4_1_DSP48_2
+INFO: [VRFC 10-311] analyzing module krnl_idct_mul_mul_16ns_16s_32_4_1
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/centos/workspace/lab_optimization/Emulation-HW/binary_container_1.build/link/vivado/vpl/prj/prj.srcs/sources_1/bd/pfm_dynamic/ipshared/d2be/hdl/verilog/krnl_idct_mul_mul_16s_16s_16_4_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module krnl_idct_mul_mul_16s_16s_16_4_1_DSP48_0
+INFO: [VRFC 10-311] analyzing module krnl_idct_mul_mul_16s_16s_16_4_1
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/centos/workspace/lab_optimization/Emulation-HW/binary_container_1.build/link/vivado/vpl/prj/prj.srcs/sources_1/bd/pfm_dynamic/ipshared/d2be/hdl/verilog/krnl_idct_read_blocks_ap_int_512_s.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module krnl_idct_read_blocks_ap_int_512_s
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/centos/workspace/lab_optimization/Emulation-HW/binary_container_1.build/link/vivado/vpl/prj/prj.srcs/sources_1/bd/pfm_dynamic/ipshared/d2be/hdl/verilog/krnl_idct_read_blocks_ap_uint_512_s.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module krnl_idct_read_blocks_ap_uint_512_s
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/centos/workspace/lab_optimization/Emulation-HW/binary_container_1.build/link/vivado/vpl/prj/prj.srcs/sources_1/bd/pfm_dynamic/ipshared/d2be/hdl/verilog/krnl_idct_start_for_krnl_idct_dataflow_Block_split25_proc_U0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module krnl_idct_start_for_krnl_idct_dataflow_Block_split25_proc_U0_shiftReg
+INFO: [VRFC 10-311] analyzing module krnl_idct_start_for_krnl_idct_dataflow_Block_split25_proc_U0
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/centos/workspace/lab_optimization/Emulation-HW/binary_container_1.build/link/vivado/vpl/prj/prj.srcs/sources_1/bd/pfm_dynamic/ipshared/d2be/hdl/verilog/krnl_idct_start_for_write_blocks_U0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module krnl_idct_start_for_write_blocks_U0_shiftReg
+INFO: [VRFC 10-311] analyzing module krnl_idct_start_for_write_blocks_U0
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/centos/workspace/lab_optimization/Emulation-HW/binary_container_1.build/link/vivado/vpl/prj/prj.srcs/sources_1/bd/pfm_dynamic/ipshared/d2be/hdl/verilog/krnl_idct_write_blocks.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module krnl_idct_write_blocks
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/centos/workspace/lab_optimization/Emulation-HW/binary_container_1.build/link/vivado/vpl/prj/prj.srcs/sources_1/bd/pfm_dynamic/ipshared/d2be/hdl/verilog/krnl_idct.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module krnl_idct
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/centos/workspace/lab_optimization/Emulation-HW/binary_container_1.build/link/vivado/vpl/prj/prj.ip_user_files/bd/pfm_dynamic/ip/pfm_dynamic_krnl_idct_1_0/sim/pfm_dynamic_krnl_idct_1_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pfm_dynamic_krnl_idct_1_0
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/centos/workspace/lab_optimization/Emulation-HW/binary_container_1.build/link/vivado/vpl/prj/prj.ip_user_files/bd/pfm_dynamic/ip/pfm_dynamic_dpa_hub_0/sim/pfm_dynamic_dpa_hub_0_stub.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pfm_dynamic_dpa_hub_0
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/centos/workspace/lab_optimization/Emulation-HW/binary_container_1.build/link/vivado/vpl/prj/prj.ip_user_files/bd/pfm_dynamic/ip/pfm_dynamic_dpa_mon0_0/sim/pfm_dynamic_dpa_mon0_0_stub.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pfm_dynamic_dpa_mon0_0
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/centos/workspace/lab_optimization/Emulation-HW/binary_container_1.build/link/vivado/vpl/prj/prj.ip_user_files/bd/pfm_dynamic/ip/pfm_dynamic_dpa_mon1_0/sim/pfm_dynamic_dpa_mon1_0_stub.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pfm_dynamic_dpa_mon1_0
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/centos/workspace/lab_optimization/Emulation-HW/binary_container_1.build/link/vivado/vpl/prj/prj.ip_user_files/bd/pfm_dynamic/ip/pfm_dynamic_dpa_mon2_0/sim/pfm_dynamic_dpa_mon2_0_stub.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pfm_dynamic_dpa_mon2_0
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/centos/workspace/lab_optimization/Emulation-HW/binary_container_1.build/link/vivado/vpl/prj/prj.ip_user_files/bd/pfm_dynamic/ip/pfm_dynamic_dpa_mon3_0/sim/pfm_dynamic_dpa_mon3_0_stub.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pfm_dynamic_dpa_mon3_0
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/centos/workspace/lab_optimization/Emulation-HW/binary_container_1.build/link/vivado/vpl/prj/prj.ip_user_files/bd/pfm_dynamic/sim/pfm_dynamic_sci_stub.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pfm_dynamic_sci
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/centos/workspace/lab_optimization/Emulation-HW/binary_container_1.build/link/vivado/vpl/prj/prj.ip_user_files/bd/pfm_dynamic/sim/pfm_dynamic.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module System_DPA_imp_NCWU00
+INFO: [VRFC 10-311] analyzing module interrupt_concat_imp_1SXQM3I
+INFO: [VRFC 10-311] analyzing module m00_couplers_imp_120WOX2
+INFO: [VRFC 10-311] analyzing module m00_couplers_imp_184K1VH
+INFO: [VRFC 10-311] analyzing module m00_couplers_imp_8JNEI7
+INFO: [VRFC 10-311] analyzing module m01_couplers_imp_6BWSZC
+INFO: [VRFC 10-311] analyzing module m01_couplers_imp_87NC3
+INFO: [VRFC 10-311] analyzing module m01_couplers_imp_ZTEVG1
+INFO: [VRFC 10-311] analyzing module m02_couplers_imp_UGVDQZ
+INFO: [VRFC 10-311] analyzing module m02_couplers_imp_YCLZI8
+INFO: [VRFC 10-311] analyzing module m03_couplers_imp_1RAAZKU
+INFO: [VRFC 10-311] analyzing module m04_couplers_imp_13DUO5I
+INFO: [VRFC 10-311] analyzing module m05_couplers_imp_51HS2G
+INFO: [VRFC 10-311] analyzing module pfm_dynamic
+INFO: [VRFC 10-311] analyzing module pfm_dynamic_dpa_ctrl_interconnect_0
+INFO: [VRFC 10-311] analyzing module pfm_dynamic_interconnect_axilite_user_0_0
+INFO: [VRFC 10-311] analyzing module pfm_dynamic_interconnect_axilite_user_1_0
+INFO: [VRFC 10-311] analyzing module pfm_dynamic_interconnect_axilite_user_2_0
+INFO: [VRFC 10-311] analyzing module pfm_dynamic_user_slr_icn_0
+INFO: [VRFC 10-311] analyzing module s00_couplers_imp_1858E00
+INFO: [VRFC 10-311] analyzing module s00_couplers_imp_1VD9R9B
+INFO: [VRFC 10-311] analyzing module s00_couplers_imp_BJPJ00
+INFO: [VRFC 10-311] analyzing module s00_couplers_imp_S199H2
+INFO: [VRFC 10-311] analyzing module s00_couplers_imp_VX2DF1
+INFO: [VRFC 10-311] analyzing module slr0_imp_1Q3M93Z
+INFO: [VRFC 10-311] analyzing module slr1_imp_IZT2WG
+INFO: [VRFC 10-311] analyzing module slr2_imp_EEMOLC
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/centos/workspace/lab_optimization/Emulation-HW/binary_container_1.build/link/vivado/vpl/prj/prj.ip_user_files/bd/pfm_dynamic/ip/pfm_dynamic_xbar_4/sim/pfm_dynamic_xbar_4.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pfm_dynamic_xbar_4
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/centos/workspace/lab_optimization/Emulation-HW/binary_container_1.build/link/vivado/vpl/prj/prj.ip_user_files/bd/pfm_dynamic/ip/pfm_dynamic_xbar_6/sim/pfm_dynamic_xbar_6.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pfm_dynamic_xbar_6
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/centos/workspace/lab_optimization/Emulation-HW/binary_container_1.build/link/vivado/vpl/prj/prj.ip_user_files/bd/pfm_dynamic/ip/pfm_dynamic_xbar_5/sim/pfm_dynamic_xbar_5.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pfm_dynamic_xbar_5
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/centos/workspace/lab_optimization/Emulation-HW/binary_container_1.build/link/vivado/vpl/prj/prj.ip_user_files/bd/pfm_dynamic/ip/pfm_dynamic_m01_regslice_6/sim/pfm_dynamic_m01_regslice_6.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pfm_dynamic_m01_regslice_6
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/centos/workspace/lab_optimization/Emulation-HW/binary_container_1.build/link/vivado/vpl/prj/prj.ip_user_files/bd/pfm_dynamic/ip/pfm_dynamic_auto_cc_0/sim/pfm_dynamic_auto_cc_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pfm_dynamic_auto_cc_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/centos/workspace/lab_optimization/Emulation-HW/binary_container_1.build/link/vivado/vpl/prj/prj.ip_user_files/bd/pfm_dynamic/ip/pfm_dynamic_s00_regslice_0/sim/pfm_dynamic_s00_regslice_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pfm_dynamic_s00_regslice_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/centos/workspace/lab_optimization/Emulation-HW/binary_container_1.build/link/vivado/vpl/prj/prj.ip_user_files/bd/pfm_dynamic/ip/pfm_dynamic_m00_regslice_0/sim/pfm_dynamic_m00_regslice_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pfm_dynamic_m00_regslice_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/centos/workspace/lab_optimization/Emulation-HW/binary_container_1.build/link/vivado/vpl/prj/prj.ip_user_files/bd/pfm_dynamic/ip/pfm_dynamic_auto_cc_1/sim/pfm_dynamic_auto_cc_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pfm_dynamic_auto_cc_1
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/centos/workspace/lab_optimization/Emulation-HW/binary_container_1.build/link/vivado/vpl/prj/prj.ip_user_files/bd/pfm_dynamic/ip/pfm_dynamic_m01_regslice_7/sim/pfm_dynamic_m01_regslice_7.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pfm_dynamic_m01_regslice_7
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/centos/workspace/lab_optimization/Emulation-HW/binary_container_1.build/link/vivado/vpl/prj/prj.ip_user_files/bd/pfm_dynamic/ip/pfm_dynamic_auto_cc_2/sim/pfm_dynamic_auto_cc_2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pfm_dynamic_auto_cc_2
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/centos/workspace/lab_optimization/Emulation-HW/binary_container_1.build/link/vivado/vpl/prj/prj.ip_user_files/bd/pfm_dynamic/ip/pfm_dynamic_m02_regslice_0/sim/pfm_dynamic_m02_regslice_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pfm_dynamic_m02_regslice_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/centos/workspace/lab_optimization/Emulation-HW/binary_container_1.build/link/vivado/vpl/prj/prj.ip_user_files/bd/pfm_dynamic/ip/pfm_dynamic_auto_cc_3/sim/pfm_dynamic_auto_cc_3.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pfm_dynamic_auto_cc_3
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/centos/workspace/lab_optimization/Emulation-HW/binary_container_1.build/link/vivado/vpl/prj/prj.ip_user_files/bd/pfm_dynamic/ip/pfm_dynamic_m03_regslice_0/sim/pfm_dynamic_m03_regslice_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pfm_dynamic_m03_regslice_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/centos/workspace/lab_optimization/Emulation-HW/binary_container_1.build/link/vivado/vpl/prj/prj.ip_user_files/bd/pfm_dynamic/ip/pfm_dynamic_auto_cc_4/sim/pfm_dynamic_auto_cc_4.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pfm_dynamic_auto_cc_4
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/centos/workspace/lab_optimization/Emulation-HW/binary_container_1.build/link/vivado/vpl/prj/prj.ip_user_files/bd/pfm_dynamic/ip/pfm_dynamic_m04_regslice_0/sim/pfm_dynamic_m04_regslice_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pfm_dynamic_m04_regslice_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/centos/workspace/lab_optimization/Emulation-HW/binary_container_1.build/link/vivado/vpl/prj/prj.ip_user_files/bd/pfm_dynamic/ip/pfm_dynamic_auto_cc_5/sim/pfm_dynamic_auto_cc_5.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pfm_dynamic_auto_cc_5
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/centos/workspace/lab_optimization/Emulation-HW/binary_container_1.build/link/vivado/vpl/prj/prj.ip_user_files/bd/pfm_dynamic/ip/pfm_dynamic_m05_regslice_0/sim/pfm_dynamic_m05_regslice_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pfm_dynamic_m05_regslice_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/centos/workspace/lab_optimization/Emulation-HW/binary_container_1.build/link/vivado/vpl/prj/prj.ip_user_files/bd/pfm_dynamic/ip/pfm_dynamic_auto_cc_6/sim/pfm_dynamic_auto_cc_6.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pfm_dynamic_auto_cc_6
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/centos/workspace/lab_optimization/Emulation-HW/binary_container_1.build/link/vivado/vpl/prj/prj.ip_user_files/bd/emu/ip/emu_ddr0_ui_clk_0/sim/emu_ddr0_ui_clk_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module emu_ddr0_ui_clk_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/centos/workspace/lab_optimization/Emulation-HW/binary_container_1.build/link/vivado/vpl/prj/prj.ip_user_files/bd/emu/ip/emu_kernel2_clk_0/sim/emu_kernel2_clk_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module emu_kernel2_clk_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/centos/workspace/lab_optimization/Emulation-HW/binary_container_1.build/link/vivado/vpl/prj/prj.ip_user_files/bd/emu/ip/emu_kernel_clk_0/sim/emu_kernel_clk_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module emu_kernel_clk_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/centos/workspace/lab_optimization/Emulation-HW/binary_container_1.build/link/vivado/vpl/prj/prj.ip_user_files/bd/emu/ip/emu_dma_pcie_clk_0/sim/emu_dma_pcie_clk_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module emu_dma_pcie_clk_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/centos/workspace/lab_optimization/Emulation-HW/binary_container_1.build/link/vivado/vpl/prj/prj.srcs/sources_1/bd/emu/ip/emu_CuDmaController_0_0/hdl/verilog/emu_CuDmaController_0_0_shell_utils_cudma_controller_CQDma_m_axi.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module emu_CuDmaController_0_0_shell_utils_cudma_controller_CQDma_m_axi
+INFO: [VRFC 10-311] analyzing module emu_CuDmaController_0_0_shell_utils_cudma_controller_CQDma_m_axi_reg_slice
+INFO: [VRFC 10-311] analyzing module emu_CuDmaController_0_0_shell_utils_cudma_controller_CQDma_m_axi_fifo
+INFO: [VRFC 10-311] analyzing module emu_CuDmaController_0_0_shell_utils_cudma_controller_CQDma_m_axi_buffer
+INFO: [VRFC 10-311] analyzing module emu_CuDmaController_0_0_shell_utils_cudma_controller_CQDma_m_axi_decoder
+INFO: [VRFC 10-311] analyzing module emu_CuDmaController_0_0_shell_utils_cudma_controller_CQDma_m_axi_throttl
+INFO: [VRFC 10-311] analyzing module emu_CuDmaController_0_0_shell_utils_cudma_controller_CQDma_m_axi_read
+INFO: [VRFC 10-311] analyzing module emu_CuDmaController_0_0_shell_utils_cudma_controller_CQDma_m_axi_write
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/centos/workspace/lab_optimization/Emulation-HW/binary_container_1.build/link/vivado/vpl/prj/prj.srcs/sources_1/bd/emu/ip/emu_CuDmaController_0_0/hdl/verilog/emu_CuDmaController_0_0_shell_utils_cudma_controller_CUDma_m_axi.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module emu_CuDmaController_0_0_shell_utils_cudma_controller_CUDma_m_axi
+INFO: [VRFC 10-311] analyzing module emu_CuDmaController_0_0_shell_utils_cudma_controller_CUDma_m_axi_reg_slice
+INFO: [VRFC 10-311] analyzing module emu_CuDmaController_0_0_shell_utils_cudma_controller_CUDma_m_axi_fifo
+INFO: [VRFC 10-311] analyzing module emu_CuDmaController_0_0_shell_utils_cudma_controller_CUDma_m_axi_buffer
+INFO: [VRFC 10-311] analyzing module emu_CuDmaController_0_0_shell_utils_cudma_controller_CUDma_m_axi_decoder
+INFO: [VRFC 10-311] analyzing module emu_CuDmaController_0_0_shell_utils_cudma_controller_CUDma_m_axi_throttl
+INFO: [VRFC 10-311] analyzing module emu_CuDmaController_0_0_shell_utils_cudma_controller_CUDma_m_axi_read
+INFO: [VRFC 10-311] analyzing module emu_CuDmaController_0_0_shell_utils_cudma_controller_CUDma_m_axi_write
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/centos/workspace/lab_optimization/Emulation-HW/binary_container_1.build/link/vivado/vpl/prj/prj.srcs/sources_1/bd/emu/ip/emu_CuDmaController_0_0/hdl/verilog/emu_CuDmaController_0_0_shell_utils_cudma_controller.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module emu_CuDmaController_0_0_shell_utils_cudma_controller
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/centos/workspace/lab_optimization/Emulation-HW/binary_container_1.build/link/vivado/vpl/prj/prj.srcs/sources_1/bd/emu/ip/emu_CuDmaController_0_0/hdl/shell_utils_cudma_controller_v1_0_rfs.v" into library shell_utils_cudma_controller_v1_0_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/centos/workspace/lab_optimization/Emulation-HW/binary_container_1.build/link/vivado/vpl/prj/prj.ip_user_files/bd/emu/ip/emu_CuDmaController_0_0/sim/emu_CuDmaController_0_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module emu_CuDmaController_0_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/centos/workspace/lab_optimization/Emulation-HW/binary_container_1.build/link/vivado/vpl/prj/prj.srcs/sources_1/bd/emu/ip/emu_cuisr_0_0/hdl/verilog/emu_cuisr_0_0_shell_utils_cuisr_a_m_axi.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module emu_cuisr_0_0_shell_utils_cuisr_a_m_axi
+INFO: [VRFC 10-311] analyzing module emu_cuisr_0_0_shell_utils_cuisr_a_m_axi_reg_slice
+INFO: [VRFC 10-311] analyzing module emu_cuisr_0_0_shell_utils_cuisr_a_m_axi_fifo
+INFO: [VRFC 10-311] analyzing module emu_cuisr_0_0_shell_utils_cuisr_a_m_axi_buffer
+INFO: [VRFC 10-311] analyzing module emu_cuisr_0_0_shell_utils_cuisr_a_m_axi_decoder
+INFO: [VRFC 10-311] analyzing module emu_cuisr_0_0_shell_utils_cuisr_a_m_axi_throttl
+INFO: [VRFC 10-311] analyzing module emu_cuisr_0_0_shell_utils_cuisr_a_m_axi_read
+INFO: [VRFC 10-311] analyzing module emu_cuisr_0_0_shell_utils_cuisr_a_m_axi_write
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/centos/workspace/lab_optimization/Emulation-HW/binary_container_1.build/link/vivado/vpl/prj/prj.srcs/sources_1/bd/emu/ip/emu_cuisr_0_0/hdl/verilog/emu_cuisr_0_0_shell_utils_cuisr.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module emu_cuisr_0_0_shell_utils_cuisr
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/centos/workspace/lab_optimization/Emulation-HW/binary_container_1.build/link/vivado/vpl/prj/prj.srcs/sources_1/bd/emu/ip/emu_cuisr_0_0/hdl/shell_utils_cuisr_v1_0_rfs.v" into library shell_utils_cuisr_v1_0_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/centos/workspace/lab_optimization/Emulation-HW/binary_container_1.build/link/vivado/vpl/prj/prj.ip_user_files/bd/emu/ip/emu_cuisr_0_0/sim/emu_cuisr_0_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module emu_cuisr_0_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/centos/workspace/lab_optimization/Emulation-HW/binary_container_1.build/link/vivado/vpl/prj/prj.srcs/sources_1/bd/emu/ipshared/a5f1/hdl/shell_utils_embedded_scheduler_hw_v1_0_vl_rfs.v" into library shell_utils_embedded_scheduler_hw_v1_0_0
+INFO: [VRFC 10-311] analyzing module CuISR
+INFO: [VRFC 10-311] analyzing module CuDmaController_rtl
+INFO: [VRFC 10-311] analyzing module shell_utils_embedded_scheduler_hw
+WARNING: [VRFC 10-159] /* in comment [/home/centos/workspace/lab_optimization/Emulation-HW/binary_container_1.build/link/vivado/vpl/prj/prj.srcs/sources_1/bd/emu/ipshared/a5f1/hdl/shell_utils_embedded_scheduler_hw_v1_0_vl_rfs.v:681]
+INFO: [VRFC 10-2458] undeclared symbol src_clk, assumed default net type wire [/home/centos/workspace/lab_optimization/Emulation-HW/binary_container_1.build/link/vivado/vpl/prj/prj.srcs/sources_1/bd/emu/ipshared/a5f1/hdl/shell_utils_embedded_scheduler_hw_v1_0_vl_rfs.v:830]
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/centos/workspace/lab_optimization/Emulation-HW/binary_container_1.build/link/vivado/vpl/prj/prj.ip_user_files/bd/emu/ip/emu_embedded_scheduler_hw_0_0/sim/emu_embedded_scheduler_hw_0_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module emu_embedded_scheduler_hw_0_0
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/centos/workspace/lab_optimization/Emulation-HW/binary_container_1.build/link/vivado/vpl/prj/prj.ip_user_files/bd/emu/ip/emu_sim_embedded_scheduler_sw_0_0/sim/emu_sim_embedded_scheduler_sw_0_0_stub.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module emu_sim_embedded_scheduler_sw_0_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/centos/workspace/lab_optimization/Emulation-HW/binary_container_1.build/link/vivado/vpl/prj/prj.ip_user_files/bd/emu/ip/emu_xlconcat_0_0/sim/emu_xlconcat_0_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module emu_xlconcat_0_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/centos/workspace/lab_optimization/Emulation-HW/binary_container_1.build/link/vivado/vpl/prj/prj.ip_user_files/bd/emu/ip/emu_xlconstant_0_0/sim/emu_xlconstant_0_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module emu_xlconstant_0_0
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/centos/workspace/lab_optimization/Emulation-HW/binary_container_1.build/link/vivado/vpl/prj/prj.ip_user_files/bd/emu/ip/emu_sim_ddr_1_0/sim/emu_sim_ddr_1_0_stub.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module emu_sim_ddr_1_0
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/centos/workspace/lab_optimization/Emulation-HW/binary_container_1.build/link/vivado/vpl/prj/prj.ip_user_files/bd/emu/ip/emu_icn_pass_0_0/sim/emu_icn_pass_0_0_stub.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module emu_icn_pass_0_0
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/centos/workspace/lab_optimization/Emulation-HW/binary_container_1.build/link/vivado/vpl/prj/prj.ip_user_files/bd/emu/ip/emu_sim_xdma_0_0/sim/emu_sim_xdma_0_0_stub.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module emu_sim_xdma_0_0
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/centos/workspace/lab_optimization/Emulation-HW/binary_container_1.build/link/vivado/vpl/prj/prj.ip_user_files/bd/emu/ip/emu_sim_copy_kernel_0_0/sim/emu_sim_copy_kernel_0_0_stub.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module emu_sim_copy_kernel_0_0
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/centos/workspace/lab_optimization/Emulation-HW/binary_container_1.build/link/vivado/vpl/prj/prj.ip_user_files/bd/emu/ip/emu_sim_copy_kernel_1_0/sim/emu_sim_copy_kernel_1_0_stub.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module emu_sim_copy_kernel_1_0
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/centos/workspace/lab_optimization/Emulation-HW/binary_container_1.build/link/vivado/vpl/prj/prj.ip_user_files/bd/emu/ip/emu_sim_copy_kernel_2_0/sim/emu_sim_copy_kernel_2_0_stub.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module emu_sim_copy_kernel_2_0
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/centos/workspace/lab_optimization/Emulation-HW/binary_container_1.build/link/vivado/vpl/prj/prj.ip_user_files/bd/emu/ip/emu_sim_copy_kernel_3_0/sim/emu_sim_copy_kernel_3_0_stub.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module emu_sim_copy_kernel_3_0
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/centos/workspace/lab_optimization/Emulation-HW/binary_container_1.build/link/vivado/vpl/prj/prj.ip_user_files/bd/emu/sim/emu_sci_stub.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module emu_sci
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/centos/workspace/lab_optimization/Emulation-HW/binary_container_1.build/link/vivado/vpl/prj/prj.ip_user_files/bd/emu/sim/emu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clk_reset_wizard_imp_1N4AMRV
+INFO: [VRFC 10-311] analyzing module embedded_schedular_imp_1KU1L3J
+INFO: [VRFC 10-311] analyzing module emu
+INFO: [VRFC 10-311] analyzing module emu_connect_to_es_0
+INFO: [VRFC 10-311] analyzing module emu_connect_to_es_cu_0
+INFO: [VRFC 10-311] analyzing module m00_couplers_imp_1J2QOWN
+INFO: [VRFC 10-311] analyzing module m00_couplers_imp_THO9J8
+INFO: [VRFC 10-311] analyzing module m01_couplers_imp_1F0NE0X
+INFO: [VRFC 10-311] analyzing module m01_couplers_imp_7QT8NM
+INFO: [VRFC 10-311] analyzing module m02_couplers_imp_1A3IVOC
+INFO: [VRFC 10-311] analyzing module m02_couplers_imp_2SPS0F
+INFO: [VRFC 10-311] analyzing module m03_couplers_imp_YBOEHL
+INFO: [VRFC 10-311] analyzing module m04_couplers_imp_1VNSOX
+INFO: [VRFC 10-311] analyzing module m05_couplers_imp_1OUOKUC
+INFO: [VRFC 10-311] analyzing module s00_couplers_imp_1I78I2M
+INFO: [VRFC 10-311] analyzing module s00_couplers_imp_UX2T9P
+INFO: [VRFC 10-311] analyzing module s01_couplers_imp_1DNO9BC
+INFO: [VRFC 10-311] analyzing module s01_couplers_imp_8JQCQJ
+INFO: [VRFC 10-311] analyzing module s02_couplers_imp_47SKBQ
+INFO: [VRFC 10-311] analyzing module s03_couplers_imp_1MG1X0J
+INFO: [VRFC 10-311] analyzing module static_region_imp_PT295H
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/centos/workspace/lab_optimization/Emulation-HW/binary_container_1.build/link/vivado/vpl/prj/prj.ip_user_files/bd/emu/ip/emu_xbar_4/sim/emu_xbar_4.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module emu_xbar_4
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/centos/workspace/lab_optimization/Emulation-HW/binary_container_1.build/link/vivado/vpl/prj/prj.ip_user_files/bd/emu/ip/emu_xbar_5/sim/emu_xbar_5.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module emu_xbar_5
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/centos/workspace/lab_optimization/Emulation-HW/binary_container_1.build/link/vivado/vpl/prj/prj.ip_user_files/bd/emu/ip/emu_auto_pc_0/sim/emu_auto_pc_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module emu_auto_pc_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/centos/workspace/lab_optimization/Emulation-HW/binary_container_1.build/link/vivado/vpl/prj/prj.ip_user_files/bd/emu/ip/emu_auto_pc_1/sim/emu_auto_pc_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module emu_auto_pc_1
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/centos/workspace/lab_optimization/Emulation-HW/binary_container_1.build/link/vivado/vpl/prj/prj.ip_user_files/bd/emu/ip/emu_auto_pc_2/sim/emu_auto_pc_2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module emu_auto_pc_2
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/centos/workspace/lab_optimization/Emulation-HW/binary_container_1.build/link/vivado/vpl/prj/prj.ip_user_files/bd/emu/ip/emu_s00_mmu_0/sim/emu_s00_mmu_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module emu_s00_mmu_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/centos/workspace/lab_optimization/Emulation-HW/binary_container_1.build/link/vivado/vpl/prj/prj.ip_user_files/bd/emu/ip/emu_s01_mmu_0/sim/emu_s01_mmu_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module emu_s01_mmu_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/centos/workspace/lab_optimization/Emulation-HW/binary_container_1.build/link/vivado/vpl/prj/prj.ip_user_files/bd/emu/ip/emu_s02_mmu_0/sim/emu_s02_mmu_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module emu_s02_mmu_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/centos/workspace/lab_optimization/Emulation-HW/binary_container_1.build/link/vivado/vpl/prj/prj.ip_user_files/bd/emu/ip/emu_s03_mmu_0/sim/emu_s03_mmu_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module emu_s03_mmu_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/centos/workspace/lab_optimization/Emulation-HW/binary_container_1.build/link/vivado/vpl/prj/prj.srcs/sources_1/bd/emu/hdl/emu_wrapper.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module emu_wrapper
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/centos/workspace/lab_optimization/Emulation-HW/binary_container_1.build/link/vivado/vpl/prj/prj.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/centos/workspace/lab_optimization/Emulation-HW/binary_container_1.build/link/vivado/vpl/prj/prj.ip_user_files/bd/pfm_dynamic/ip/pfm_dynamic_psr_kernel_clk_0_0/sim/pfm_dynamic_psr_kernel_clk_0_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'pfm_dynamic_psr_kernel_clk_0_0'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/centos/workspace/lab_optimization/Emulation-HW/binary_container_1.build/link/vivado/vpl/prj/prj.ip_user_files/bd/pfm_dynamic/ip/pfm_dynamic_psr_kernel2_clk_0_0/sim/pfm_dynamic_psr_kernel2_clk_0_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'pfm_dynamic_psr_kernel2_clk_0_0'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/centos/workspace/lab_optimization/Emulation-HW/binary_container_1.build/link/vivado/vpl/prj/prj.ip_user_files/bd/pfm_dynamic/ip/pfm_dynamic_psr_kernel_clk_1_0/sim/pfm_dynamic_psr_kernel_clk_1_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'pfm_dynamic_psr_kernel_clk_1_0'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/centos/workspace/lab_optimization/Emulation-HW/binary_container_1.build/link/vivado/vpl/prj/prj.ip_user_files/bd/pfm_dynamic/ip/pfm_dynamic_psr_kernel2_clk_1_0/sim/pfm_dynamic_psr_kernel2_clk_1_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'pfm_dynamic_psr_kernel2_clk_1_0'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/centos/workspace/lab_optimization/Emulation-HW/binary_container_1.build/link/vivado/vpl/prj/prj.ip_user_files/bd/pfm_dynamic/ip/pfm_dynamic_to_delete_kernel_ctrl_1_0/sim/pfm_dynamic_to_delete_kernel_ctrl_1_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'pfm_dynamic_to_delete_kernel_ctrl_1_0'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/centos/workspace/lab_optimization/Emulation-HW/binary_container_1.build/link/vivado/vpl/prj/prj.ip_user_files/bd/pfm_dynamic/ip/pfm_dynamic_psr_kernel_clk_2_0/sim/pfm_dynamic_psr_kernel_clk_2_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'pfm_dynamic_psr_kernel_clk_2_0'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/centos/workspace/lab_optimization/Emulation-HW/binary_container_1.build/link/vivado/vpl/prj/prj.ip_user_files/bd/pfm_dynamic/ip/pfm_dynamic_psr_kernel2_clk_2_0/sim/pfm_dynamic_psr_kernel2_clk_2_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'pfm_dynamic_psr_kernel2_clk_2_0'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/centos/workspace/lab_optimization/Emulation-HW/binary_container_1.build/link/vivado/vpl/prj/prj.ip_user_files/bd/pfm_dynamic/ip/pfm_dynamic_to_delete_kernel_ctrl_2_0/sim/pfm_dynamic_to_delete_kernel_ctrl_2_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'pfm_dynamic_to_delete_kernel_ctrl_2_0'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/centos/workspace/lab_optimization/Emulation-HW/binary_container_1.build/link/vivado/vpl/prj/prj.ip_user_files/bd/emu/ip/emu_axi_intc_0_0/sim/emu_axi_intc_0_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'emu_axi_intc_0_0'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/centos/workspace/lab_optimization/Emulation-HW/binary_container_1.build/link/vivado/vpl/prj/prj.ip_user_files/bd/emu/ip/emu_psr_dma_pcie_aclk_0/sim/emu_psr_dma_pcie_aclk_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'emu_psr_dma_pcie_aclk_0'
+Multi-threading is on. Using 6 slave threads.
+Running compilation flow
+Waiting for 96 sub-compilation(s) to finish...
+Done compilation

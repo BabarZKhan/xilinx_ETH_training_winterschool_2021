@@ -1,0 +1,14 @@
+{
+ "kernels": [],
+ "computeUnits": [
+  {
+   "id": "",
+   "kernelName": "krnl_idct",
+   "cuName": "krnl_idct_1",
+   "baseAddress": "",
+   "instancePath": "/emu_wrapper/emu_i/dynamic_region/krnl_idct_1",
+   "slr": []
+  }
+ ]
+}
+

@@ -1,0 +1,82 @@
+<ENTRY>
+{
+ "thisFile": "/home/centos/workspace/lab_optimization/Emulation-HW/v++.package_summary",
+ "connectId": "",
+ "serverToken": "",
+ "timestamp": "0"
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Thu Jan 14 21:19:20 2021",
+ "timestampMillis": "1610659160023",
+ "buildStep": {
+  "cmdId": "0c822a0e-dc33-468a-a738-74fd74b74a77",
+  "name": "v++",
+  "logFile": "/home/centos/workspace/lab_optimization/Emulation-HW/package.build/package/package.steps.log",
+  "commandLine": "/opt/Xilinx/Vitis/2020.1/bin/unwrapped/lnx64.o/v++  --xp \"vivado_prop:run.__KERNEL__.{STEPS.SYNTH_DESIGN.ARGS.MORE OPTIONS}={-directive sdx_optimization_effort_high}\" --xp \"misc:report=type report_timing_summary name impl_report_timing_summary_route_design_summary steps {route_design} runs {impl_1} options {-max_paths 10}\" --xp \"misc:report=type report_timing_summary name impl_report_timing_summary_post_route_phys_opt_design_summary steps {post_route_phys_opt_design} runs {impl_1} options {-max_paths 10}\" --package --config package.cfg binary_container_1.xclbin ",
+  "args": [
+   "--package",
+   "--config",
+   "package.cfg",
+   "binary_container_1.xclbin"
+  ],
+  "iniFiles": [
+   {
+    "path": "/home/centos/workspace/lab_optimization/Emulation-HW/package.cfg",
+    "content": "target=hw_emu\ntemp_dir=package.build\nplatform=/home/centos/src/project_data/aws-fpga/Vitis/aws_platform/xilinx_aws-vu9p-f1_shell-v04261818_201920_2/xilinx_aws-vu9p-f1_shell-v04261818_201920_2.xpfm\n\n[package]\nout_dir=./package\n"
+   }
+  ],
+  "cwd": "/home/centos/workspace/lab_optimization/Emulation-HW"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Jan 14 21:19:20 2021",
+ "timestampMillis": "1610659160023",
+ "status": {
+  "cmdId": "0c822a0e-dc33-468a-a738-74fd74b74a77",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Jan 14 21:19:34 2021",
+ "timestampMillis": "1610659174576",
+ "report": {
+  "path": "/home/centos/workspace/lab_optimization/Emulation-HW/guidance.html",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Jan 14 21:19:34 2021",
+ "timestampMillis": "1610659174576",
+ "report": {
+  "path": "/home/centos/workspace/lab_optimization/Emulation-HW/guidance.pb",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Jan 14 21:19:34 2021",
+ "timestampMillis": "1610659174577",
+ "status": {
+  "cmdId": "0c822a0e-dc33-468a-a738-74fd74b74a77",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>

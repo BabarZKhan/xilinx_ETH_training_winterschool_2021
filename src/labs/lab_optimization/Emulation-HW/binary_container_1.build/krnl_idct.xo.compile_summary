@@ -1,0 +1,234 @@
+<ENTRY>
+{
+ "thisFile": "/home/centos/workspace/lab_optimization/Emulation-HW/binary_container_1.build/krnl_idct.xo.compile_summary",
+ "connectId": "",
+ "serverToken": "",
+ "timestamp": "0"
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Thu Jan 14 21:09:50 2021",
+ "timestampMillis": "1610658590166",
+ "buildStep": {
+  "cmdId": "f7aa7d57-323c-4d4e-bac8-41e1cc2d84ab",
+  "name": "v++",
+  "logFile": "/home/centos/workspace/lab_optimization/Emulation-HW/binary_container_1.build/krnl_idct/krnl_idct.steps.log",
+  "commandLine": "/opt/Xilinx/Vitis/2020.1/bin/unwrapped/lnx64.o/v++  --xp \"vivado_prop:run.__KERNEL__.{STEPS.SYNTH_DESIGN.ARGS.MORE OPTIONS}={-directive sdx_optimization_effort_high}\" --xp \"misc:report=type report_timing_summary name impl_report_timing_summary_route_design_summary steps {route_design} runs {impl_1} options {-max_paths 10}\" --xp \"misc:report=type report_timing_summary name impl_report_timing_summary_post_route_phys_opt_design_summary steps {post_route_phys_opt_design} runs {impl_1} options {-max_paths 10}\" --target hw_emu --compile -I../src --config common-config.cfg --config binary_container_1-krnl_idct-compile.cfg -obinary_container_1.build/krnl_idct.xo ../src/krnl_idct.cpp ",
+  "args": [
+   "--target",
+   "hw_emu",
+   "--compile",
+   "-I../src",
+   "--config",
+   "common-config.cfg",
+   "--config",
+   "binary_container_1-krnl_idct-compile.cfg",
+   "-obinary_container_1.build/krnl_idct.xo",
+   "../src/krnl_idct.cpp"
+  ],
+  "iniFiles": [
+   {
+    "path": "/home/centos/workspace/lab_optimization/Emulation-HW/common-config.cfg",
+    "content": "platform=/home/centos/src/project_data/aws-fpga/Vitis/aws_platform/xilinx_aws-vu9p-f1_shell-v04261818_201920_2/xilinx_aws-vu9p-f1_shell-v04261818_201920_2.xpfm\nsave-temps=1\n"
+   },
+   {
+    "path": "/home/centos/workspace/lab_optimization/Emulation-HW/binary_container_1-krnl_idct-compile.cfg",
+    "content": "kernel=krnl_idct\ndebug=1\nprofile_kernel=data:krnl_idct:all:all\nmessageDb=binary_container_1.build/krnl_idct.mdb\ntemp_dir=binary_container_1.build\nreport_dir=binary_container_1.build/reports\nlog_dir=binary_container_1.build/logs\n\n[advanced]\nmisc=solution_name=krnl_idct\n"
+   }
+  ],
+  "cwd": "/home/centos/workspace/lab_optimization/Emulation-HW"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Jan 14 21:09:50 2021",
+ "timestampMillis": "1610658590167",
+ "status": {
+  "cmdId": "f7aa7d57-323c-4d4e-bac8-41e1cc2d84ab",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_FlowMetaData",
+ "dateTimestamp": "Thu Jan 14 21:10:04 2021",
+ "timestampMillis": "1610658604808",
+ "buildSummary": {
+  "hardwarePlatform": "xilinx_aws-vu9p-f1_shell-v04261818_201920_2.xpfm",
+  "hardwareDsa": "xilinx_aws-vu9p-f1_shell-v04261818_201920_2.xsa",
+  "platformDirectory": "/home/centos/src/project_data/aws-fpga/Vitis/aws_platform/xilinx_aws-vu9p-f1_shell-v04261818_201920_2",
+  "runtime": "OpenCL",
+  "systemConfig": "Linux",
+  "flow": "BF_COMPILE",
+  "target": "TT_HW_EMU",
+  "kernels": [
+   {
+    "base": {
+     "type": "KERNEL",
+     "name": "krnl_idct",
+     "file": "/home/centos/workspace/lab_optimization/Emulation-HW/binary_container_1.build/krnl_idct.xo",
+     "reports": []
+    },
+    "sources": [
+     "/home/centos/workspace/lab_optimization/src/krnl_idct.cpp"
+    ],
+    "psSources": [],
+    "cuNames": [],
+    "type": "HLS"
+   }
+  ],
+  "toolVersion": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Thu Jan 14 21:10:04 2021",
+ "timestampMillis": "1610658604812",
+ "buildStep": {
+  "cmdId": "70df2e60-74a0-4b7f-9090-4bf9091f9e0e",
+  "name": "vitis_hls",
+  "logFile": "/home/centos/workspace/lab_optimization/Emulation-HW/binary_container_1.build/krnl_idct/krnl_idct/vitis_hls.log",
+  "commandLine": "vitis_hls -f /home/centos/workspace/lab_optimization/Emulation-HW/binary_container_1.build/krnl_idct/krnl_idct/krnl_idct.tcl -messageDb vitis_hls.pb",
+  "args": [
+   "vitis_hls",
+   "-f",
+   "/home/centos/workspace/lab_optimization/Emulation-HW/binary_container_1.build/krnl_idct/krnl_idct/krnl_idct.tcl",
+   "-messageDb",
+   "vitis_hls.pb"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/centos/workspace/lab_optimization/Emulation-HW"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Jan 14 21:10:04 2021",
+ "timestampMillis": "1610658604813",
+ "status": {
+  "cmdId": "70df2e60-74a0-4b7f-9090-4bf9091f9e0e",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Jan 14 21:11:22 2021",
+ "timestampMillis": "1610658682444",
+ "status": {
+  "cmdId": "70df2e60-74a0-4b7f-9090-4bf9091f9e0e",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Jan 14 21:11:22 2021",
+ "timestampMillis": "1610658682463",
+ "report": {
+  "path": "/home/centos/workspace/lab_optimization/Emulation-HW/binary_container_1.build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/krnl_idct.design.xml",
+  "name": "krnl_idct",
+  "fileType": "XML",
+  "reportType": "KERNEL_HLS_REPORT"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Jan 14 21:11:22 2021",
+ "timestampMillis": "1610658682464",
+ "report": {
+  "path": "/home/centos/workspace/lab_optimization/Emulation-HW/binary_container_1.build/krnl_idct/krnl_idct/krnl_idct/solution/.autopilot/db/.message_syn.xml",
+  "name": "krnl_idct",
+  "fileType": "XML",
+  "reportType": "KERNEL_HLS_DRC_SYNTHESIS"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Jan 14 21:11:22 2021",
+ "timestampMillis": "1610658682465",
+ "report": {
+  "path": "/home/centos/workspace/lab_optimization/Emulation-HW/binary_container_1.build/reports/krnl_idct/hls_reports/krnl_idct_csynth.rpt",
+  "name": "krnl_idct",
+  "fileType": "TEXT",
+  "reportType": "KERNEL_HLS_CSYNTH"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Jan 14 21:11:22 2021",
+ "timestampMillis": "1610658682465",
+ "report": {
+  "path": "/home/centos/workspace/lab_optimization/Emulation-HW/binary_container_1.build/krnl_idct/krnl_idct/krnl_idct/solution/syn/report/krnl_idct_csynth.xml",
+  "name": "krnl_idct",
+  "fileType": "XML",
+  "reportType": "KERNEL_HLS_CSYNTH"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Jan 14 21:11:22 2021",
+ "timestampMillis": "1610658682476",
+ "report": {
+  "path": "/home/centos/workspace/lab_optimization/Emulation-HW/binary_container_1.build/reports/krnl_idct/system_estimate_krnl_idct.xtxt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_SYSTEM_ESTIMATE"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Jan 14 21:11:22 2021",
+ "timestampMillis": "1610658682579",
+ "report": {
+  "path": "/home/centos/workspace/lab_optimization/Emulation-HW/guidance.html",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Jan 14 21:11:22 2021",
+ "timestampMillis": "1610658682579",
+ "report": {
+  "path": "/home/centos/workspace/lab_optimization/Emulation-HW/guidance.pb",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Jan 14 21:11:22 2021",
+ "timestampMillis": "1610658682580",
+ "status": {
+  "cmdId": "f7aa7d57-323c-4d4e-bac8-41e1cc2d84ab",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>

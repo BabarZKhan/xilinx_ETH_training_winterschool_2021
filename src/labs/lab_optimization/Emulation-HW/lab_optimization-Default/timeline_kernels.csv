@@ -1,0 +1,24 @@
+Kernel trace events
+Device, Binary, Kernel, Compute Unit, Function, Data Type, Index, Start Time (ms), End Time (ms), Value
+xilinx_aws-vu9p-f1_shell-v04261818_201920_2-0,binary_container_1,krnl_idct,krnl_idct_1,top,top,0,0.038299,0.044371,0
+xilinx_aws-vu9p-f1_shell-v04261818_201920_2-0,binary_container_1,krnl_idct,krnl_idct_1,top,top,0,0.047658,0.053729,0
+xilinx_aws-vu9p-f1_shell-v04261818_201920_2-0,binary_container_1,krnl_idct,krnl_idct_1,top,top,0,0.055649,0.061721,0
+xilinx_aws-vu9p-f1_shell-v04261818_201920_2-0,binary_container_1,krnl_idct,krnl_idct_1,top,top,0,0.064775,0.070846,0
+xilinx_aws-vu9p-f1_shell-v04261818_201920_2-0,binary_container_1,krnl_idct,krnl_idct_1,grp_execute_fu_258,outstanding,0,0.000000,0.040503,0
+xilinx_aws-vu9p-f1_shell-v04261818_201920_2-0,binary_container_1,krnl_idct,krnl_idct_1,grp_execute_fu_258,outstanding,0,0.040503,0.042290,1
+xilinx_aws-vu9p-f1_shell-v04261818_201920_2-0,binary_container_1,krnl_idct,krnl_idct_1,grp_execute_fu_258,outstanding,0,0.042290,0.049862,0
+xilinx_aws-vu9p-f1_shell-v04261818_201920_2-0,binary_container_1,krnl_idct,krnl_idct_1,grp_execute_fu_258,outstanding,0,0.049862,0.051649,1
+xilinx_aws-vu9p-f1_shell-v04261818_201920_2-0,binary_container_1,krnl_idct,krnl_idct_1,grp_execute_fu_258,outstanding,0,0.051649,0.057853,0
+xilinx_aws-vu9p-f1_shell-v04261818_201920_2-0,binary_container_1,krnl_idct,krnl_idct_1,grp_execute_fu_258,outstanding,0,0.057853,0.059640,1
+xilinx_aws-vu9p-f1_shell-v04261818_201920_2-0,binary_container_1,krnl_idct,krnl_idct_1,grp_execute_fu_258,outstanding,0,0.059640,0.066978,0
+xilinx_aws-vu9p-f1_shell-v04261818_201920_2-0,binary_container_1,krnl_idct,krnl_idct_1,grp_execute_fu_258,outstanding,0,0.066978,0.068765,1
+xilinx_aws-vu9p-f1_shell-v04261818_201920_2-0,binary_container_1,krnl_idct,krnl_idct_1,grp_execute_fu_258,outstanding,0,0.068765,0.068765,0
+xilinx_aws-vu9p-f1_shell-v04261818_201920_2-0,binary_container_1,krnl_idct,krnl_idct_1,grp_execute_fu_258,row,0,0.000000,0.040503,65535
+xilinx_aws-vu9p-f1_shell-v04261818_201920_2-0,binary_container_1,krnl_idct,krnl_idct_1,grp_execute_fu_258,row,0,0.040503,0.042290,0
+xilinx_aws-vu9p-f1_shell-v04261818_201920_2-0,binary_container_1,krnl_idct,krnl_idct_1,grp_execute_fu_258,row,0,0.042290,0.049862,65535
+xilinx_aws-vu9p-f1_shell-v04261818_201920_2-0,binary_container_1,krnl_idct,krnl_idct_1,grp_execute_fu_258,row,0,0.049862,0.051649,1
+xilinx_aws-vu9p-f1_shell-v04261818_201920_2-0,binary_container_1,krnl_idct,krnl_idct_1,grp_execute_fu_258,row,0,0.051649,0.057853,65535
+xilinx_aws-vu9p-f1_shell-v04261818_201920_2-0,binary_container_1,krnl_idct,krnl_idct_1,grp_execute_fu_258,row,0,0.057853,0.059640,2
+xilinx_aws-vu9p-f1_shell-v04261818_201920_2-0,binary_container_1,krnl_idct,krnl_idct_1,grp_execute_fu_258,row,0,0.059640,0.066978,65535
+xilinx_aws-vu9p-f1_shell-v04261818_201920_2-0,binary_container_1,krnl_idct,krnl_idct_1,grp_execute_fu_258,row,0,0.066978,0.068765,3
+xilinx_aws-vu9p-f1_shell-v04261818_201920_2-0,binary_container_1,krnl_idct,krnl_idct_1,grp_execute_fu_258,row,0,0.068765,0.068765,65535

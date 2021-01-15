@@ -1,0 +1,21 @@
+FPGA number of 64*int16_t blocks per transfer: 256
+DEVICE: xilinx_aws-vu9p-f1_shell-v04261818_201920_2
+Loading Bitstream: ../binary_container_1.xclbin
+INFO: Loaded file
+INFO: [HW-EM 01] Hardware emulation runs simulation underneath. Using a large data set will result in long simulation times. It is recommended that a small dataset is used for faster execution. The flow uses approximate models for DDR memory and interconnect and hence the performance data generated is approximate.
+Create Kernel: krnl_idct
+Create Compute Unit
+Setup complete
+Running CPU version
+Running FPGA version
+INFO::[ Vitis-EM 22 ] [Time elapsed: 0 minute(s) 40 seconds, Emulation time: 0.081704 ms]
+Data transfer between kernel(s) and global memory(s)
+krnl_idct_1:m_axi_gmem0-DDR[0]          RD = 128.000 KB             WR = 0.000 KB        
+krnl_idct_1:m_axi_gmem1-DDR[0]          RD = 0.500 KB               WR = 0.000 KB        
+krnl_idct_1:m_axi_gmem2-DDR[1]          RD = 0.000 KB               WR = 128.000 KB      
+
+INFO: [HW-EM 06-0] Waiting for the simulator process to exit
+INFO: [HW-EM 06-1] All the simulator processes exited successfully
+Runs complete validating results
+TEST PASSED
+RUN COMPLETE

@@ -1,0 +1,43 @@
+Begin Function 'write_blocks'
+
+RTL state condition: (1'b1 == ap_CS_fsm_pp0_stage0)
+# ST_3
+local i <phi_318> <integer> <Phi> 'phi' </home/centos/workspace/lab_optimization/src/krnl_idct.cpp:297->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:332->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:318>
+add_ln297 /home/centos/workspace/lab_optimization/src/krnl_idct.cpp:297
+add_ln297 /home/centos/workspace/lab_optimization/src/krnl_idct.cpp:332
+add_ln297 /home/centos/workspace/lab_optimization/src/krnl_idct.cpp:318
+reg: i_reg_101[31:0] lv
+
+local icmp_ln297_1 <icmp_318> <integer> <Comparator> 'icmp' </home/centos/workspace/lab_optimization/src/krnl_idct.cpp:297->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:332->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:318>
+icmp_ln297_1 /home/centos/workspace/lab_optimization/src/krnl_idct.cpp:297
+icmp_ln297_1 /home/centos/workspace/lab_optimization/src/krnl_idct.cpp:332
+icmp_ln297_1 /home/centos/workspace/lab_optimization/src/krnl_idct.cpp:318
+reg: icmp_ln297_1_reg_178[0:0] lv
+
+# ST_4
+local in_read <read_318> <integer> <FifoRead> 'read' </opt/Xilinx/Vitis/2020.1/common/technology/autopilot/hls_stream_39.h:145->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:318>
+in_read /opt/Xilinx/Vitis/2020.1/common/technology/autopilot/hls_stream_39.h:145
+in_read /home/centos/workspace/lab_optimization/src/krnl_idct.cpp:318
+reg: in_read_reg_187[511:0] lv
+
+
+RTL state condition: (1'b1 == ap_CS_fsm_state1)
+# ST_1
+local mul_i_i <> <integer> <> 'bitconcatenate' <>
+reg: mul_i_i_reg_157[31:0] lv
+
+local icmp_ln297 <icmp_318> <integer> <Comparator> 'icmp' </home/centos/workspace/lab_optimization/src/krnl_idct.cpp:297->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:332->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:318>
+icmp_ln297 /home/centos/workspace/lab_optimization/src/krnl_idct.cpp:297
+icmp_ln297 /home/centos/workspace/lab_optimization/src/krnl_idct.cpp:332
+icmp_ln297 /home/centos/workspace/lab_optimization/src/krnl_idct.cpp:318
+reg: icmp_ln297_reg_163[0:0] lv
+
+local trunc_ln <partselect_318> <integer> <> 'partselect' </home/centos/workspace/lab_optimization/src/krnl_idct.cpp:297->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:332->/home/centos/workspace/lab_optimization/src/krnl_idct.cpp:318>
+trunc_ln /home/centos/workspace/lab_optimization/src/krnl_idct.cpp:297
+trunc_ln /home/centos/workspace/lab_optimization/src/krnl_idct.cpp:332
+trunc_ln /home/centos/workspace/lab_optimization/src/krnl_idct.cpp:318
+reg: trunc_ln_reg_167[57:0] lv
+
+
+End Function 'write_blocks'
+

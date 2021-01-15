@@ -1,0 +1,143 @@
+
+
+================================================================
+== Vitis HLS Report for 'krnl_idct_dataflow_Block_split25_proc'
+================================================================
+* Date:           Thu Jan 14 21:10:47 2021
+
+* Version:        2020.1 (Build 2902540 on Wed May 27 20:16:15 MDT 2020)
+* Project:        krnl_idct
+* Solution:       solution (Vitis Kernel Flow Target)
+* Product family: virtexuplus
+* Target device:  xcvu9p-flgb2104-2-i
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  | 4.00 ns | 2.317 ns |   1.08 ns  |
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        0|        0|   0 ns   |   0 ns   |    0|    0|   none  |
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++---------------------+---------+------+---------+---------+-----+
+|         Name        | BRAM_18K|  DSP |    FF   |   LUT   | URAM|
++---------------------+---------+------+---------+---------+-----+
+|DSP                  |        -|     -|        -|        -|    -|
+|Expression           |        -|     -|        0|       30|    -|
+|FIFO                 |        -|     -|        -|        -|    -|
+|Instance             |        -|     -|        -|        -|    -|
+|Memory               |        -|     -|        -|        -|    -|
+|Multiplexer          |        -|     -|        -|       27|    -|
+|Register             |        -|     -|        3|        -|    -|
++---------------------+---------+------+---------+---------+-----+
+|Total                |        0|     0|        3|       57|    0|
++---------------------+---------+------+---------+---------+-----+
+|Available SLR        |     1440|  2280|   788160|   394080|  320|
++---------------------+---------+------+---------+---------+-----+
+|Utilization SLR (%)  |        0|     0|    ~0   |    ~0   |    0|
++---------------------+---------+------+---------+---------+-----+
+|Available            |     4320|  6840|  2364480|  1182240|  960|
++---------------------+---------+------+---------+---------+-----+
+|Utilization (%)      |        0|     0|    ~0   |    ~0   |    0|
++---------------------+---------+------+---------+---------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +-----------------------+----------+----+---+----+------------+------------+
+    |     Variable Name     | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +-----------------------+----------+----+---+----+------------+------------+
+    |ap_ext_blocking_n      |    and   |   0|  0|   2|           2|           2|
+    |ap_int_blocking_cur_n  |    and   |   0|  0|   2|           1|           0|
+    |ap_int_blocking_n      |    and   |   0|  0|   2|           1|           2|
+    |ap_str_blocking_n      |    and   |   0|  0|   2|           2|           2|
+    |icmp_ln331_fu_24_p2    |   icmp   |   0|  0|  20|          32|           1|
+    |ap_block_state1        |    or    |   0|  0|   2|           1|           1|
+    +-----------------------+----------+----+---+----+------------+------------+
+    |Total                  |          |   0|  0|  30|          39|           8|
+    +-----------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-----------------+----+-----------+-----+-----------+
+    |       Name      | LUT| Input Size| Bits| Total Bits|
+    +-----------------+----+-----------+-----+-----------+
+    |ap_done          |   9|          2|    1|          2|
+    |ap_return        |   9|          2|    1|          2|
+    |ignore_dc_blk_n  |   9|          2|    1|          2|
+    +-----------------+----+-----------+-----+-----------+
+    |Total            |  27|          6|    3|          6|
+    +-----------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +----------------+---+----+-----+-----------+
+    |      Name      | FF| LUT| Bits| Const Bits|
+    +----------------+---+----+-----+-----------+
+    |ap_CS_fsm       |  1|   0|    1|          0|
+    |ap_done_reg     |  1|   0|    1|          0|
+    |ap_return_preg  |  1|   0|    1|          0|
+    +----------------+---+----+-----+-----------+
+    |Total           |  3|   0|    3|          0|
+    +----------------+---+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-------------------+-----+-----+------------+----------------------------------------+--------------+
+|     RTL Ports     | Dir | Bits|  Protocol  |              Source Object             |    C Type    |
++-------------------+-----+-----+------------+----------------------------------------+--------------+
+|ap_clk             |  in |    1| ap_ctrl_hs | krnl_idct_dataflow_Block_.split25_proc | return value |
+|ap_rst             |  in |    1| ap_ctrl_hs | krnl_idct_dataflow_Block_.split25_proc | return value |
+|ap_start           |  in |    1| ap_ctrl_hs | krnl_idct_dataflow_Block_.split25_proc | return value |
+|ap_done            | out |    1| ap_ctrl_hs | krnl_idct_dataflow_Block_.split25_proc | return value |
+|ap_continue        |  in |    1| ap_ctrl_hs | krnl_idct_dataflow_Block_.split25_proc | return value |
+|ap_idle            | out |    1| ap_ctrl_hs | krnl_idct_dataflow_Block_.split25_proc | return value |
+|ap_ready           | out |    1| ap_ctrl_hs | krnl_idct_dataflow_Block_.split25_proc | return value |
+|ap_return          | out |    1| ap_ctrl_hs | krnl_idct_dataflow_Block_.split25_proc | return value |
+|ap_ext_blocking_n  | out |    1| ap_ctrl_hs | krnl_idct_dataflow_Block_.split25_proc | return value |
+|ap_str_blocking_n  | out |    1| ap_ctrl_hs | krnl_idct_dataflow_Block_.split25_proc | return value |
+|ap_int_blocking_n  | out |    1| ap_ctrl_hs | krnl_idct_dataflow_Block_.split25_proc | return value |
+|ignore_dc_dout     |  in |   32|   ap_fifo  |                ignore_dc               |    pointer   |
+|ignore_dc_empty_n  |  in |    1|   ap_fifo  |                ignore_dc               |    pointer   |
+|ignore_dc_read     | out |    1|   ap_fifo  |                ignore_dc               |    pointer   |
++-------------------+-----+-----+------------+----------------------------------------+--------------+
+
