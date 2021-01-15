@@ -1,0 +1,331 @@
+{
+    "schema_version":
+    {
+        "major": "1",
+        "minor": "0",
+        "patch": "0"
+    },
+    "files":
+    [
+        {
+            "name": "profile_summary.csv",
+            "type": "PROFILE"
+        },
+        {
+            "name": "timeline_trace.csv",
+            "type": "TRACE"
+        }
+    ],
+    "profile":
+    {
+        "header":
+        {
+            "name": "Profile Summary",
+            "generated": "2021-01-14 19:44:18",
+            "epochTime": "1610653458803",
+            "application": "vector_add_lab_xilinx",
+            "platform": "Xilinx",
+            "toolVersion": "2020.1",
+            "XRT build version": "2.6.0",
+            "Build version branch": "2020.1",
+            "Build version hash": "12115fd4054cb46a5ade62fafa74c523f59116e6",
+            "Build version date": "2020-07-09 15:20:59",
+            "flow": "Software Emulation",
+            "devices":
+            [
+                "xilinx_aws-vu9p-f1_shell-v04261818_201920_2-0"
+            ],
+            "totalTime": "5030.884647"
+        },
+        "apiCalls":
+        {
+            "clReleaseContext":
+            {
+                "numCalls": "1",
+                "totalTime": "5001.225275",
+                "minTime": "5001.225275",
+                "avgTime": "5001.225275",
+                "maxTime": "5001.225275"
+            },
+            "clCreateProgramWithBinary":
+            {
+                "numCalls": "1",
+                "totalTime": "16.218612",
+                "minTime": "16.218612",
+                "avgTime": "16.218612",
+                "maxTime": "16.218612"
+            },
+            "clFinish":
+            {
+                "numCalls": "3",
+                "totalTime": "2.743143999999994",
+                "minTime": "0.7134700000000009",
+                "avgTime": "0.9143813333333313",
+                "maxTime": "1.233173999999998"
+            },
+            "clCreateKernel":
+            {
+                "numCalls": "1",
+                "totalTime": "1.696795000000002",
+                "minTime": "1.696795000000002",
+                "avgTime": "1.696795000000002",
+                "maxTime": "1.696795000000002"
+            },
+            "clEnqueueMigrateMemObjects":
+            {
+                "numCalls": "2",
+                "totalTime": "0.9350439999999978",
+                "minTime": "0.03845299999999696",
+                "avgTime": "0.4675219999999989",
+                "maxTime": "0.8965910000000008"
+            },
+            "clSetKernelArg":
+            {
+                "numCalls": "4",
+                "totalTime": "0.3114450000000133",
+                "minTime": "0.005649000000005344",
+                "avgTime": "0.07786125000000332",
+                "maxTime": "0.1616050000000016"
+            },
+            "clReleaseKernel":
+            {
+                "numCalls": "1",
+                "totalTime": "0.2967759999999942",
+                "minTime": "0.2967759999999942",
+                "avgTime": "0.2967759999999942",
+                "maxTime": "0.2967759999999942"
+            },
+            "clEnqueueTask":
+            {
+                "numCalls": "1",
+                "totalTime": "0.2165729999999968",
+                "minTime": "0.2165729999999968",
+                "avgTime": "0.2165729999999968",
+                "maxTime": "0.2165729999999968"
+            },
+            "clGetPlatformIDs":
+            {
+                "numCalls": "2",
+                "totalTime": "0.06247100000000039",
+                "minTime": "0.005800000000000693",
+                "avgTime": "0.03123550000000019",
+                "maxTime": "0.05667099999999969"
+            },
+            "clReleaseMemObject":
+            {
+                "numCalls": "9",
+                "totalTime": "0.05986099999999084",
+                "minTime": "0.004991000000003964",
+                "avgTime": "0.006651222222221204",
+                "maxTime": "0.01050699999999694"
+            },
+            "clRetainDevice":
+            {
+                "numCalls": "4",
+                "totalTime": "0.05709199999999903",
+                "minTime": "0.01024499999999939",
+                "avgTime": "0.01427299999999976",
+                "maxTime": "0.01753199999999921"
+            },
+            "clCreateBuffer":
+            {
+                "numCalls": "3",
+                "totalTime": "0.04315799999999825",
+                "minTime": "0.005785000000003038",
+                "avgTime": "0.01438599999999942",
+                "maxTime": "0.03120099999999582"
+            },
+            "clGetDeviceInfo":
+            {
+                "numCalls": "2",
+                "totalTime": "0.03531200000000112",
+                "minTime": "0.01723300000000094",
+                "avgTime": "0.01765600000000056",
+                "maxTime": "0.01807900000000018"
+            },
+            "clCreateContext":
+            {
+                "numCalls": "1",
+                "totalTime": "0.0351410000000012",
+                "minTime": "0.0351410000000012",
+                "avgTime": "0.0351410000000012",
+                "maxTime": "0.0351410000000012"
+            },
+            "clRetainMemObject":
+            {
+                "numCalls": "6",
+                "totalTime": "0.03465799999998609",
+                "minTime": "0.004728999999997541",
+                "avgTime": "0.005776333333331015",
+                "maxTime": "0.008074999999998056"
+            },
+            "clReleaseDevice":
+            {
+                "numCalls": "4",
+                "totalTime": "0.03373899999964181",
+                "minTime": "0.005618000000001899",
+                "avgTime": "0.008434749999910451",
+                "maxTime": "0.01034399999999991"
+            },
+            "clCreateCommandQueue":
+            {
+                "numCalls": "1",
+                "totalTime": "0.02972899999999967",
+                "minTime": "0.02972899999999967",
+                "avgTime": "0.02972899999999967",
+                "maxTime": "0.02972899999999967"
+            },
+            "clGetDeviceIDs":
+            {
+                "numCalls": "2",
+                "totalTime": "0.02605900000000005",
+                "minTime": "0.00851600000000019",
+                "avgTime": "0.01302950000000003",
+                "maxTime": "0.01754299999999986"
+            },
+            "clGetPlatformInfo":
+            {
+                "numCalls": "2",
+                "totalTime": "0.01099899999999998",
+                "minTime": "0.005318000000000822",
+                "avgTime": "0.005499499999999991",
+                "maxTime": "0.005680999999999159"
+            },
+            "clReleaseCommandQueue":
+            {
+                "numCalls": "1",
+                "totalTime": "0.00875700000000279",
+                "minTime": "0.00875700000000279",
+                "avgTime": "0.00875700000000279",
+                "maxTime": "0.00875700000000279"
+            },
+            "clReleaseProgram":
+            {
+                "numCalls": "1",
+                "totalTime": "0.008292000000000854",
+                "minTime": "0.008292000000000854",
+                "avgTime": "0.008292000000000854",
+                "maxTime": "0.008292000000000854"
+            }
+        },
+        "kernelEnqueues":
+        {
+            "krnl_vadd":
+            {
+                "numCalls": "1",
+                "totalTime": "0.8686560000000014",
+                "minTime": "0.8686560000000014",
+                "avgTime": "0.8686560000000014",
+                "maxTime": "0.8686560000000014"
+            }
+        },
+        "computeUnitUtilization":
+        [
+            {
+                "name": "krnl_vadd_1",
+                "device": "xilinx_aws-vu9p-f1_shell-v04261818_201920_2-0",
+                "kernel": "krnl_vadd",
+                "globalWorkSize": "1:1:1",
+                "localWorkSize": "1:1:1",
+                "numberOfCalls": "1",
+                "dataflow": "No",
+                "maxOverlappingExecutions": "0",
+                "dataflowAcceleration": "1.000000x",
+                "totalTime": "0.5761770000000013",
+                "minTime": "0.5761770000000013",
+                "avgTime": "0.5761770000000013",
+                "maxTime": "0.5761770000000013",
+                "frequency": "300"
+            }
+        ],
+        "kernels":
+        [
+            {
+                "name": "krnl_vadd",
+                "instanceAddress": "15279040",
+                "contextId": "0",
+                "commandQueueID": "0",
+                "device": "xilinx_aws-vu9p-f1_shell-v04261818_201920_2-0",
+                "startTime": "35.548108",
+                "duration": "0.8686560000000014",
+                "globalWorkSize": "1:1:1",
+                "localWorkSize": "1:1:1"
+            }
+        ],
+        "hostGlobal":
+        {
+            "writes":
+            [
+                {
+                    "address": "0",
+                    "contextID": "0",
+                    "cmdQueueID": "0",
+                    "startTime": "34.12137",
+                    "duration": "N\/A",
+                    "size": "262.144",
+                    "rate": "N\/A"
+                }
+            ],
+            "reads":
+            [
+                {
+                    "address": "262144",
+                    "contextID": "0",
+                    "cmdQueueID": "0",
+                    "startTime": "36.581239",
+                    "duration": "N\/A",
+                    "size": "131.072",
+                    "rate": "N\/A"
+                }
+            ]
+        },
+        "guidanceMetadata":
+        {
+            "DEVICE_EXEC_TIME":
+            {
+                "xilinx_aws-vu9p-f1_shell-v04261818_201920_2-0": "0.868656"
+            },
+            "CU_CALLS":
+            {
+                "xilinx_aws-vu9p-f1_shell-v04261818_201920_2-0|krnl_vadd_1": "1"
+            },
+            "MIGRATE_MEM":
+            {
+                "host": "2"
+            },
+            "MEMORY_USAGE": "1",
+            "PLRAM_DEVICE":
+            {
+                "all": "1"
+            },
+            "HBM_DEVICE":
+            {
+                "all": "0"
+            },
+            "KDMA_DEVICE":
+            {
+                "all": "0"
+            },
+            "P2P_DEVICE":
+            {
+                "all": "0"
+            },
+            "P2P_HOST_TRANSFERS":
+            {
+                "host": "0"
+            },
+            "PORT_BIT_WIDTH":
+            {
+                "krnl_vadd_1\/m_axi_gmem": "32"
+            },
+            "KERNEL_COUNT":
+            {
+                "krnl_vadd": "1"
+            },
+            "OBJECTS_RELEASED":
+            {
+                "all": "1"
+            }
+        }
+    }
+}

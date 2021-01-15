@@ -1,0 +1,39 @@
+===============================================================================
+Version:    v++ v2020.1 (64-bit)
+Build:      SW Build 2902540 on Wed May 27 19:54:35 MDT 2020
+Copyright:  Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+Created:    Thu Jan 14 19:49:00 2021
+===============================================================================
+
+-------------------------------------------------------------------------------
+Design Name:             krnl_vadd
+Target Device:           xilinx:aws-vu9p-f1:shell-v04261818:201920.2
+Target Clock:            250.000000MHz
+Total number of kernels: 1
+-------------------------------------------------------------------------------
+
+Kernel Summary
+Kernel Name  Type  Target              OpenCL Library  Compute Units
+-----------  ----  ------------------  --------------  -------------
+krnl_vadd    c     fpga0:OCL_REGION_0  krnl_vadd       1
+
+
+-------------------------------------------------------------------------------
+OpenCL Binary:     krnl_vadd
+Kernels mapped to: clc_region
+
+Timing Information (MHz)
+Compute Unit  Kernel Name  Module Name  Target Frequency  Estimated Frequency
+------------  -----------  -----------  ----------------  -------------------
+krnl_vadd_1   krnl_vadd    krnl_vadd    250               324.044067
+
+Latency Information
+Compute Unit  Kernel Name  Module Name  Start Interval  Best (cycles)  Avg (cycles)  Worst (cycles)  Best (absolute)  Avg (absolute)  Worst (absolute)
+------------  -----------  -----------  --------------  -------------  ------------  --------------  ---------------  --------------  ----------------
+krnl_vadd_1   krnl_vadd    krnl_vadd    34 ~ 11618      33             5825          11617           0.132 us         23.300 us       46.468 us
+
+Area Information
+Compute Unit  Kernel Name  Module Name  FF    LUT   DSP  BRAM  URAM
+------------  -----------  -----------  ----  ----  ---  ----  ----
+krnl_vadd_1   krnl_vadd    krnl_vadd    1709  3070  0    3     0
+-------------------------------------------------------------------------------

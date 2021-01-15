@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xd:acceleratorMap xmlns:xd="http://www.xilinx.com/xidane" xd:functionName="krnl_vadd" xd:componentRef="krnl_vadd" xd:initiationInterval="11618" xd:clockPeriod="4.000" xd:sequential="true" xd:hostMachine="64" xd:reset="control">
+  <xd:controlReg xd:name="control" xd:interfaceRef="s_axi_control" xd:busTypeRef="axilite" xd:type="generic_axi_lite" xd:offset="0x0"/>
+  <xd:arg xd:name="*(in1)" xd:originalName="in1" xd:direction="inout" xd:interfaceRef="m_axi_gmem" xd:busTypeRef="aximm" xd:dataPack="true" xd:bitMapping="31:0" xd:dataWidth="32" xd:bufferDirection="in"/>
+  <xd:arg xd:name="*(in2)" xd:originalName="in2" xd:direction="inout" xd:interfaceRef="m_axi_gmem" xd:busTypeRef="aximm" xd:dataPack="true" xd:bitMapping="31:0" xd:dataWidth="32" xd:bufferDirection="in"/>
+  <xd:arg xd:name="*(out_r)" xd:originalName="out_r" xd:direction="inout" xd:interfaceRef="m_axi_gmem" xd:busTypeRef="aximm" xd:dataPack="true" xd:bitMapping="31:0" xd:dataWidth="32" xd:bufferDirection="out"/>
+  <xd:latencyEstimates xd:best-case="33" xd:worst-case="11617" xd:average-case="5825"/>
+  <xd:resourceEstimates xd:LUT="3070" xd:FF="1709" xd:BRAM="3" xd:DSP="0"/>
+</xd:acceleratorMap>

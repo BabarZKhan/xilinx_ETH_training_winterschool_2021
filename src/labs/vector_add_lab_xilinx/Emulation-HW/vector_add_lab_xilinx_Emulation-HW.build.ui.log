@@ -1,0 +1,263 @@
+2021-01-14T19:48:15.3726500255-19:48:15 **** Incremental Build of configuration Emulation-HW for project vector_add_lab_xilinx ****
+000-make -j8 incremental 
+000-/opt/Xilinx/Vitis/2020.1/bin/v++ --target hw_emu --compile -I"../src" --config common-config.cfg --config binary_container_1-krnl_vadd-compile.cfg -o"binary_container_1.build/krnl_vadd.xo" "../src/krnl_vadd.cpp"
+000-Option Map File Used: '/opt/Xilinx/Vitis/2020.1/data/vitis/vpp/optMap.xml'
+000-
+000-****** v++ v2020.1 (64-bit)
+000-  **** SW Build 2902540 on Wed May 27 19:54:35 MDT 2020
+000-    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+000-
+000-INFO: [v++ 60-1306] Additional information associated with this v++ compile can be found at:
+000-	Reports: /home/centos/workspace/vector_add_lab_xilinx/Emulation-HW/binary_container_1.build/reports/krnl_vadd
+000-	Log files: /home/centos/workspace/vector_add_lab_xilinx/Emulation-HW/binary_container_1.build/logs/krnl_vadd
+000-INFO: [v++ 60-1657] Initializing dispatch client.
+000-Running Dispatch Server on port:34287
+000-INFO: [v++ 60-1548] Creating build summary session with primary output /home/centos/workspace/vector_add_lab_xilinx/Emulation-HW/binary_container_1.build/krnl_vadd.xo.compile_summary, at Thu Jan 14 19:48:28 2021
+000-INFO: [v++ 60-1316] Initiating connection to rulecheck server, at Thu Jan 14 19:48:28 2021
+000-INFO: [v++ 60-895]   Target platform: /home/centos/src/project_data/aws-fpga/Vitis/aws_platform/xilinx_aws-vu9p-f1_shell-v04261818_201920_2/xilinx_aws-vu9p-f1_shell-v04261818_201920_2.xpfm
+000-INFO: [v++ 60-1578]   This platform contains Xilinx Shell Archive '/home/centos/src/project_data/aws-fpga/Vitis/aws_platform/xilinx_aws-vu9p-f1_shell-v04261818_201920_2/hw/xilinx_aws-vu9p-f1_shell-v04261818_201920_2.xsa'
+000-INFO: [v++ 60-585] Compiling for hardware emulation target
+000-INFO: [v++ 60-423]   Target device: xilinx_aws-vu9p-f1_shell-v04261818_201920_2
+000-INFO: [v++ 60-242] Creating kernel: 'krnl_vadd'
+000-
+000-===>The following messages were generated while  performing high-level synthesis for kernel: krnl_vadd Log file: /home/centos/workspace/vector_add_lab_xilinx/Emulation-HW/binary_container_1.build/krnl_vadd/krnl_vadd/vitis_hls.log :
+000-INFO: [v++ 204-61] Pipelining loop 'read1'.
+000-INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+000-INFO: [v++ 204-61] Pipelining loop 'vadd_writeC'.
+000-INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 4.
+000-INFO: [v++ 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
+000-INFO: [v++ 200-789] **** Estimated Fmax: 324.04 MHz
+000-INFO: [v++ 60-594] Finished kernel compilation
+000-INFO: [v++ 60-244] Generating system estimate report...
+000-INFO: [v++ 60-1092] Generated system estimate report: /home/centos/workspace/vector_add_lab_xilinx/Emulation-HW/binary_container_1.build/reports/krnl_vadd/system_estimate_krnl_vadd.xtxt
+000-INFO: [v++ 60-586] Created binary_container_1.build/krnl_vadd.xo
+000-INFO: [v++ 60-2343] Use the vitis_analyzer tool to visualize and navigate the relevant reports. Run the following command. 
+000-    vitis_analyzer /home/centos/workspace/vector_add_lab_xilinx/Emulation-HW/binary_container_1.build/krnl_vadd.xo.compile_summary 
+000-INFO: [v++ 60-791] Total elapsed time: 0h 0m 42s
+000-INFO: [v++ 60-1653] Closing dispatch client.
+000-/opt/Xilinx/Vitis/2020.1/bin/v++ --target hw_emu --link --config common-config.cfg --config binary_container_1-link.cfg -o"binary_container_1.xclbin" binary_container_1.build/krnl_vadd.xo
+000-Option Map File Used: '/opt/Xilinx/Vitis/2020.1/data/vitis/vpp/optMap.xml'
+000-
+000-****** v++ v2020.1 (64-bit)
+000-  **** SW Build 2902540 on Wed May 27 19:54:35 MDT 2020
+000-    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+000-
+000-INFO: [v++ 60-897] Reading --xp value from platform: param:compiler.lockFlowCritSlackThreshold=0
+000-INFO: [v++ 60-897] Reading --xp value from platform: vivado_param:hd.routingContainmentAreaExpansion=true
+000-INFO: [v++ 60-897] Reading --xp value from platform: vivado_param:hd.supportClockNetCrossDiffReconfigurablePartitions=1
+000-INFO: [v++ 60-897] Reading --xp value from platform: vivado_param:bitstream.enablePR=4123
+000-INFO: [v++ 60-897] Reading --xp value from platform: vivado_param:physynth.ultraRAMOptOutput=false
+000-INFO: [v++ 60-897] Reading --xp value from platform: vivado_prop:run.__KERNEL__.{STEPS.SYNTH_DESIGN.ARGS.MAX_URAM_CASCADE_HEIGHT}={1}
+000-INFO: [v++ 60-897] Reading --xp value from platform: vivado_param:synth.elaboration.rodinMoreOptions={rt::set_parameter disableOregPackingUram true}
+000-WARNING: [v++ 60-642] Invalid or deprecated parameter name: compiler.lockFlowCritSlackThreshold
+000-INFO: [v++ 60-1306] Additional information associated with this v++ link can be found at:
+000-	Reports: /home/centos/workspace/vector_add_lab_xilinx/Emulation-HW/binary_container_1.build/reports/link
+000-	Log files: /home/centos/workspace/vector_add_lab_xilinx/Emulation-HW/binary_container_1.build/logs/link
+000-INFO: [v++ 60-1657] Initializing dispatch client.
+000-Running Dispatch Server on port:33119
+000-INFO: [v++ 60-1548] Creating build summary session with primary output /home/centos/workspace/vector_add_lab_xilinx/Emulation-HW/binary_container_1.xclbin.link_summary, at Thu Jan 14 19:49:13 2021
+000-INFO: [v++ 60-1316] Initiating connection to rulecheck server, at Thu Jan 14 19:49:13 2021
+000-INFO: [v++ 60-895]   Target platform: /home/centos/src/project_data/aws-fpga/Vitis/aws_platform/xilinx_aws-vu9p-f1_shell-v04261818_201920_2/xilinx_aws-vu9p-f1_shell-v04261818_201920_2.xpfm
+000-INFO: [v++ 60-1578]   This platform contains Xilinx Shell Archive '/home/centos/src/project_data/aws-fpga/Vitis/aws_platform/xilinx_aws-vu9p-f1_shell-v04261818_201920_2/hw/xilinx_aws-vu9p-f1_shell-v04261818_201920_2.xsa'
+000-INFO: [v++ 60-629] Linking for hardware emulation target
+000-INFO: [v++ 60-423]   Target device: xilinx_aws-vu9p-f1_shell-v04261818_201920_2
+000-INFO: [v++ 60-1332] Run 'run_link' status: Not started
+000-INFO: [v++ 60-1443] [19:49:18] Run run_link: Step system_link: Started
+000-INFO: [v++ 60-1453] Command Line: system_link --xo /home/centos/workspace/vector_add_lab_xilinx/Emulation-HW/binary_container_1.build/krnl_vadd.xo -keep --config /home/centos/workspace/vector_add_lab_xilinx/Emulation-HW/binary_container_1.build/link/int/syslinkConfig.ini --xpfm /home/centos/src/project_data/aws-fpga/Vitis/aws_platform/xilinx_aws-vu9p-f1_shell-v04261818_201920_2/xilinx_aws-vu9p-f1_shell-v04261818_201920_2.xpfm --target emu --output_dir /home/centos/workspace/vector_add_lab_xilinx/Emulation-HW/binary_container_1.build/link/int --temp_dir /home/centos/workspace/vector_add_lab_xilinx/Emulation-HW/binary_container_1.build/link/sys_link
+000-INFO: [v++ 60-1454] Run Directory: /home/centos/workspace/vector_add_lab_xilinx/Emulation-HW/binary_container_1.build/link/run_link
+000-INFO: [SYSTEM_LINK 60-1316] Initiating connection to rulecheck server, at Thu Jan 14 19:49:20 2021
+000-INFO: [SYSTEM_LINK 82-70] Extracting xo v3 file /home/centos/workspace/vector_add_lab_xilinx/Emulation-HW/binary_container_1.build/krnl_vadd.xo
+000-INFO: [SYSTEM_LINK 82-53] Creating IP database /home/centos/workspace/vector_add_lab_xilinx/Emulation-HW/binary_container_1.build/link/sys_link/_sysl/.cdb/xd_ip_db.xml
+000-INFO: [SYSTEM_LINK 82-38] [19:49:20] build_xd_ip_db started: /opt/Xilinx/Vitis/2020.1/bin/build_xd_ip_db -ip_search 0  -sds-pf /home/centos/workspace/vector_add_lab_xilinx/Emulation-HW/binary_container_1.build/link/sys_link/emu/xilinx_aws-vu9p-f1_shell-v04261818_201920_1_emu.hpfm -clkid 0 -ip /home/centos/workspace/vector_add_lab_xilinx/Emulation-HW/binary_container_1.build/link/sys_link/iprepo/xilinx_com_hls_krnl_vadd_1_0,krnl_vadd -o /home/centos/workspace/vector_add_lab_xilinx/Emulation-HW/binary_container_1.build/link/sys_link/_sysl/.cdb/xd_ip_db.xml
+000-INFO: [SYSTEM_LINK 82-37] [19:49:24] build_xd_ip_db finished successfully
+000-Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 1303.055 ; gain = 0.000 ; free physical = 104108 ; free virtual = 137146
+000-INFO: [SYSTEM_LINK 82-51] Create system connectivity graph
+000-INFO: [SYSTEM_LINK 82-102] Applying explicit connections to the system connectivity graph: /home/centos/workspace/vector_add_lab_xilinx/Emulation-HW/binary_container_1.build/link/sys_link/cfgraph/cfgen_cfgraph.xml
+000-INFO: [SYSTEM_LINK 82-38] [19:49:24] cfgen started: /opt/Xilinx/Vitis/2020.1/bin/cfgen  -nk krnl_vadd:1:krnl_vadd_1 -dmclkid 0 -r /home/centos/workspace/vector_add_lab_xilinx/Emulation-HW/binary_container_1.build/link/sys_link/_sysl/.cdb/xd_ip_db.xml -o /home/centos/workspace/vector_add_lab_xilinx/Emulation-HW/binary_container_1.build/link/sys_link/cfgraph/cfgen_cfgraph.xml
+000-INFO: [CFGEN 83-0] Kernel Specs: 
+000-INFO: [CFGEN 83-0]   kernel: krnl_vadd, num: 1  {krnl_vadd_1}
+000-INFO: [CFGEN 83-2226] Inferring mapping for argument krnl_vadd_1.in1 to DDR[1]
+000-INFO: [CFGEN 83-2226] Inferring mapping for argument krnl_vadd_1.in2 to DDR[1]
+000-INFO: [CFGEN 83-2226] Inferring mapping for argument krnl_vadd_1.out_r to DDR[1]
+000-INFO: [SYSTEM_LINK 82-37] [19:49:29] cfgen finished successfully
+000-Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1303.055 ; gain = 0.000 ; free physical = 104105 ; free virtual = 137143
+000-INFO: [SYSTEM_LINK 82-52] Create top-level block diagram
+000-INFO: [SYSTEM_LINK 82-38] [19:49:29] cf2bd started: /opt/Xilinx/Vitis/2020.1/bin/cf2bd  --linux --trace_buffer 1024 --input_file /home/centos/workspace/vector_add_lab_xilinx/Emulation-HW/binary_container_1.build/link/sys_link/cfgraph/cfgen_cfgraph.xml --ip_db /home/centos/workspace/vector_add_lab_xilinx/Emulation-HW/binary_container_1.build/link/sys_link/_sysl/.cdb/xd_ip_db.xml --cf_name dr --working_dir /home/centos/workspace/vector_add_lab_xilinx/Emulation-HW/binary_container_1.build/link/sys_link/_sysl/.xsd --temp_dir /home/centos/workspace/vector_add_lab_xilinx/Emulation-HW/binary_container_1.build/link/sys_link --output_dir /home/centos/workspace/vector_add_lab_xilinx/Emulation-HW/binary_container_1.build/link/int --target_bd emu/pfm_dynamic/pfm_dynamic.bd
+000-INFO: [CF2BD 82-31] Launching cf2xd: cf2xd -linux -trace-buffer 1024 -i /home/centos/workspace/vector_add_lab_xilinx/Emulation-HW/binary_container_1.build/link/sys_link/cfgraph/cfgen_cfgraph.xml -r /home/centos/workspace/vector_add_lab_xilinx/Emulation-HW/binary_container_1.build/link/sys_link/_sysl/.cdb/xd_ip_db.xml -o dr.xml
+000-INFO: [CF2BD 82-28] cf2xd finished successfully
+000-INFO: [CF2BD 82-31] Launching cf_xsd: cf_xsd -disable-address-gen -bd emu/pfm_dynamic/pfm_dynamic.bd -dn dr -dp /home/centos/workspace/vector_add_lab_xilinx/Emulation-HW/binary_container_1.build/link/sys_link/_sysl/.xsd
+000-INFO: [CF2BD 82-28] cf_xsd finished successfully
+000-INFO: [SYSTEM_LINK 82-37] [19:49:31] cf2bd finished successfully
+000-Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1303.055 ; gain = 0.000 ; free physical = 104097 ; free virtual = 137140
+000-INFO: [v++ 60-1441] [19:49:31] Run run_link: Step system_link: Completed
+000-Time (s): cpu = 00:00:14 ; elapsed = 00:00:13 . Memory (MB): peak = 1335.516 ; gain = 0.000 ; free physical = 104123 ; free virtual = 137166
+000-INFO: [v++ 60-1443] [19:49:31] Run run_link: Step cf2sw: Started
+000-INFO: [v++ 60-1453] Command Line: cf2sw -sdsl /home/centos/workspace/vector_add_lab_xilinx/Emulation-HW/binary_container_1.build/link/int/sdsl.dat -rtd /home/centos/workspace/vector_add_lab_xilinx/Emulation-HW/binary_container_1.build/link/int/cf2sw.rtd -xclbin /home/centos/workspace/vector_add_lab_xilinx/Emulation-HW/binary_container_1.build/link/int/xclbin_orig.xml -o /home/centos/workspace/vector_add_lab_xilinx/Emulation-HW/binary_container_1.build/link/int/xclbin_orig.1.xml
+000-INFO: [v++ 60-1454] Run Directory: /home/centos/workspace/vector_add_lab_xilinx/Emulation-HW/binary_container_1.build/link/run_link
+000-INFO: [v++ 60-1441] [19:49:33] Run run_link: Step cf2sw: Completed
+000-Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1335.516 ; gain = 0.000 ; free physical = 104125 ; free virtual = 137169
+000-INFO: [v++ 60-1443] [19:49:33] Run run_link: Step rtd2_system_diagram: Started
+000-INFO: [v++ 60-1453] Command Line: rtd2SystemDiagram
+000-INFO: [v++ 60-1454] Run Directory: /home/centos/workspace/vector_add_lab_xilinx/Emulation-HW/binary_container_1.build/link/run_link
+000-INFO: [v++ 60-1441] [19:49:35] Run run_link: Step rtd2_system_diagram: Completed
+000-Time (s): cpu = 00:00:00 ; elapsed = 00:00:02 . Memory (MB): peak = 1335.516 ; gain = 0.000 ; free physical = 103464 ; free virtual = 136507
+000-INFO: [v++ 60-1443] [19:49:35] Run run_link: Step vpl: Started
+000-INFO: [v++ 60-1453] Command Line: vpl -t hw_emu -f /home/centos/src/project_data/aws-fpga/Vitis/aws_platform/xilinx_aws-vu9p-f1_shell-v04261818_201920_2/xilinx_aws-vu9p-f1_shell-v04261818_201920_2.xpfm -g --profile_kernel exec:krnl_vadd:krnl_vadd_1:all --profile_kernel data:krnl_vadd:krnl_vadd_1:in1:all --profile_kernel data:krnl_vadd:krnl_vadd_1:in2:all --profile_kernel data:krnl_vadd:krnl_vadd_1:out_r:all --remote_ip_cache /home/centos/workspace/ip_cache -s --output_dir /home/centos/workspace/vector_add_lab_xilinx/Emulation-HW/binary_container_1.build/link/int --log_dir /home/centos/workspace/vector_add_lab_xilinx/Emulation-HW/binary_container_1.build/logs/link --report_dir /home/centos/workspace/vector_add_lab_xilinx/Emulation-HW/binary_container_1.build/reports/link --config /home/centos/workspace/vector_add_lab_xilinx/Emulation-HW/binary_container_1.build/link/int/vplConfig.ini -k /home/centos/workspace/vector_add_lab_xilinx/Emulation-HW/binary_container_1.build/link/int/kernel_info.dat --webtalk_flag Vitis --temp_dir /home/centos/workspace/vector_add_lab_xilinx/Emulation-HW/binary_container_1.build/link --emulation_mode debug_waveform --no-info --iprepo /home/centos/workspace/vector_add_lab_xilinx/Emulation-HW/binary_container_1.build/link/int/xo/ip_repo/xilinx_com_hls_krnl_vadd_1_0 --messageDb /home/centos/workspace/vector_add_lab_xilinx/Emulation-HW/binary_container_1.build/link/run_link/vpl.pb /home/centos/workspace/vector_add_lab_xilinx/Emulation-HW/binary_container_1.build/link/int/dr.bd.tcl
+000-INFO: [v++ 60-1454] Run Directory: /home/centos/workspace/vector_add_lab_xilinx/Emulation-HW/binary_container_1.build/link/run_link
+000-
+000-****** vpl v2020.1 (64-bit)
+000-  **** SW Build 2902540 on Wed May 27 19:54:35 MDT 2020
+000-    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+000-
+000-INFO: [VPL 60-839] Read in kernel information from file '/home/centos/workspace/vector_add_lab_xilinx/Emulation-HW/binary_container_1.build/link/int/kernel_info.dat'.
+000-WARNING: [VPL 60-642] Invalid or deprecated parameter name: compiler.lockFlowCritSlackThreshold
+000-INFO: [VPL 60-423]   Target device: xilinx_aws-vu9p-f1_shell-v04261818_201920_2
+000-INFO: [VPL 60-1032] Extracting hardware platform to /home/centos/workspace/vector_add_lab_xilinx/Emulation-HW/binary_container_1.build/link/vivado/vpl/.local/hw_platform
+000-[19:49:56] Run vpl: Step create_project: Started
+000-Creating Vivado project.
+000-[19:49:58] Run vpl: Step create_project: Completed
+000-[19:49:58] Run vpl: Step create_bd: Started
+000-[19:50:29] Run vpl: Step create_bd: Completed
+000-[19:50:29] Run vpl: Step update_bd: Started
+000-[19:50:35] Run vpl: Step update_bd: Completed
+000-[19:50:35] Run vpl: Step generate_target: Started
+000-[19:51:06] Run vpl: Step generate_target: Completed
+000-[19:51:06] Run vpl: Step config_hw_emulation: Started
+000-[19:52:23] Run vpl: Step config_hw_emulation: RUNNING...
+000-[19:53:38] Run vpl: Step config_hw_emulation: RUNNING...
+000-[19:54:53] Run vpl: Step config_hw_emulation: RUNNING...
+000-[19:56:01] Run vpl: Step config_hw_emulation: Completed
+000-[19:56:01] Run vpl: FINISHED. Run Status: config_hw_emulation Complete!
+000-INFO: [v++ 60-1441] [19:56:01] Run run_link: Step vpl: Completed
+000-Time (s): cpu = 00:00:12 ; elapsed = 00:06:27 . Memory (MB): peak = 1335.516 ; gain = 0.000 ; free physical = 103314 ; free virtual = 137103
+000-INFO: [v++ 60-1443] [19:56:01] Run run_link: Step rtdgen: Started
+000-INFO: [v++ 60-1453] Command Line: rtdgen
+000-INFO: [v++ 60-1454] Run Directory: /home/centos/workspace/vector_add_lab_xilinx/Emulation-HW/binary_container_1.build/link/run_link
+000-INFO: [v++ 60-991] clock name 'clk_main_a0' (clock ID '') is being mapped to clock name 'clk_main_a0' in the xclbin
+000-INFO: [v++ 60-1453] Command Line: cf2sw -a /home/centos/workspace/vector_add_lab_xilinx/Emulation-HW/binary_container_1.build/link/int/address_map.xml -sdsl /home/centos/workspace/vector_add_lab_xilinx/Emulation-HW/binary_container_1.build/link/int/sdsl.dat -xclbin /home/centos/workspace/vector_add_lab_xilinx/Emulation-HW/binary_container_1.build/link/int/xclbin_orig.xml -rtd /home/centos/workspace/vector_add_lab_xilinx/Emulation-HW/binary_container_1.build/link/int/binary_container_1.rtd -o /home/centos/workspace/vector_add_lab_xilinx/Emulation-HW/binary_container_1.build/link/int/binary_container_1.xml
+000-INFO: [v++ 60-1652] Cf2sw returned exit code: 0
+000-INFO: [v++ 60-2311] HPISystemDiagram::writeSystemDiagramAfterRunningVivado, rtdInputFilePath: /home/centos/workspace/vector_add_lab_xilinx/Emulation-HW/binary_container_1.build/link/int/binary_container_1.rtd
+000-INFO: [v++ 60-2312] HPISystemDiagram::writeSystemDiagramAfterRunningVivado, systemDiagramOutputFilePath: /home/centos/workspace/vector_add_lab_xilinx/Emulation-HW/binary_container_1.build/link/int/systemDiagramModelSlrBaseAddress.json
+000-INFO: [v++ 60-1618] Launching 
+000-INFO: [v++ 60-1441] [19:56:06] Run run_link: Step rtdgen: Completed
+000-Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1335.516 ; gain = 0.000 ; free physical = 103284 ; free virtual = 137099
+000-INFO: [v++ 60-1443] [19:56:06] Run run_link: Step xclbinutil: Started
+000-INFO: [v++ 60-1453] Command Line: xclbinutil --add-section DEBUG_DATA:RAW:/home/centos/workspace/vector_add_lab_xilinx/Emulation-HW/binary_container_1.build/link/int/consolidated.cf --add-section DEBUG_IP_LAYOUT:JSON:/home/centos/workspace/vector_add_lab_xilinx/Emulation-HW/binary_container_1.build/link/int/debug_ip_layout.rtd --add-section BITSTREAM:RAW:/home/centos/workspace/vector_add_lab_xilinx/Emulation-HW/binary_container_1.build/link/int/behav.xse --force --target hw_emu --key-value SYS:dfx_enable:false --add-section :JSON:/home/centos/workspace/vector_add_lab_xilinx/Emulation-HW/binary_container_1.build/link/int/binary_container_1.rtd --append-section :JSON:/home/centos/workspace/vector_add_lab_xilinx/Emulation-HW/binary_container_1.build/link/int/appendSection.rtd --add-section CLOCK_FREQ_TOPOLOGY:JSON:/home/centos/workspace/vector_add_lab_xilinx/Emulation-HW/binary_container_1.build/link/int/binary_container_1_xml.rtd --add-section BUILD_METADATA:JSON:/home/centos/workspace/vector_add_lab_xilinx/Emulation-HW/binary_container_1.build/link/int/binary_container_1_build.rtd --add-section EMBEDDED_METADATA:RAW:/home/centos/workspace/vector_add_lab_xilinx/Emulation-HW/binary_container_1.build/link/int/binary_container_1.xml --add-section SYSTEM_METADATA:RAW:/home/centos/workspace/vector_add_lab_xilinx/Emulation-HW/binary_container_1.build/link/int/systemDiagramModelSlrBaseAddress.json --key-value SYS:PlatformVBNV:xilinx_aws-vu9p-f1_shell-v04261818_201920_2 --output /home/centos/workspace/vector_add_lab_xilinx/Emulation-HW/binary_container_1.xclbin
+000-INFO: [v++ 60-1454] Run Directory: /home/centos/workspace/vector_add_lab_xilinx/Emulation-HW/binary_container_1.build/link/run_link
+000-XRT Build Version: 2.6.0 (2020.1)
+000-       Build Date: 2020-07-09 15:20:59
+000-          Hash ID: 12115fd4054cb46a5ade62fafa74c523f59116e6
+000-Creating a default 'in-memory' xclbin image.
+000-
+000-Section: 'DEBUG_DATA'(4) was successfully added.
+000-Size   : 10365 bytes
+000-Format : RAW
+000-File   : '/home/centos/workspace/vector_add_lab_xilinx/Emulation-HW/binary_container_1.build/link/int/consolidated.cf'
+000-
+000-Section: 'DEBUG_IP_LAYOUT'(9) was successfully added.
+000-Size   : 728 bytes
+000-Format : JSON
+000-File   : '/home/centos/workspace/vector_add_lab_xilinx/Emulation-HW/binary_container_1.build/link/int/debug_ip_layout.rtd'
+000-
+000-Section: 'BITSTREAM'(0) was successfully added.
+000-Size   : 27552546 bytes
+000-Format : RAW
+000-File   : '/home/centos/workspace/vector_add_lab_xilinx/Emulation-HW/binary_container_1.build/link/int/behav.xse'
+000-
+000-Section: 'MEM_TOPOLOGY'(6) was successfully added.
+000-Format : JSON
+000-File   : 'mem_topology'
+000-
+000-Section: 'IP_LAYOUT'(8) was successfully added.
+000-Format : JSON
+000-File   : 'ip_layout'
+000-
+000-Section: 'CONNECTIVITY'(7) was successfully added.
+000-Format : JSON
+000-File   : 'connectivity'
+000-WARNING: Skipping CLOCK_FREQ_TOPOLOGY section for count size is zero.
+000-WARNING: Section 'CLOCK_FREQ_TOPOLOGY' content is empty.  No data in the given JSON file.
+000-
+000-Section: 'CLOCK_FREQ_TOPOLOGY'(11) was empty.  No action taken.
+000-Format : JSON
+000-File   : '/home/centos/workspace/vector_add_lab_xilinx/Emulation-HW/binary_container_1.build/link/int/binary_container_1_xml.rtd'
+000-
+000-Section: 'BUILD_METADATA'(14) was successfully added.
+000-Size   : 2096 bytes
+000-Format : JSON
+000-File   : '/home/centos/workspace/vector_add_lab_xilinx/Emulation-HW/binary_container_1.build/link/int/binary_container_1_build.rtd'
+000-
+000-Section: 'EMBEDDED_METADATA'(2) was successfully added.
+000-Size   : 2971 bytes
+000-Format : RAW
+000-File   : '/home/centos/workspace/vector_add_lab_xilinx/Emulation-HW/binary_container_1.build/link/int/binary_container_1.xml'
+000-
+000-Section: 'SYSTEM_METADATA'(22) was successfully added.
+000-Size   : 5489 bytes
+000-Format : RAW
+000-File   : '/home/centos/workspace/vector_add_lab_xilinx/Emulation-HW/binary_container_1.build/link/int/systemDiagramModelSlrBaseAddress.json'
+000-
+000-Section: 'PARTITION_METADATA'(20) was successfully appended to.
+000-Format : JSON
+000-File   : 'partition_metadata'
+000-Successfully wrote (27582084 bytes) to the output file: /home/centos/workspace/vector_add_lab_xilinx/Emulation-HW/binary_container_1.xclbin
+000-Leaving xclbinutil.
+000-INFO: [v++ 60-1441] [19:56:06] Run run_link: Step xclbinutil: Completed
+000-Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.12 . Memory (MB): peak = 1335.516 ; gain = 0.000 ; free physical = 103257 ; free virtual = 137098
+000-INFO: [v++ 60-1443] [19:56:06] Run run_link: Step xclbinutilinfo: Started
+000-INFO: [v++ 60-1453] Command Line: xclbinutil --quiet --force --info /home/centos/workspace/vector_add_lab_xilinx/Emulation-HW/binary_container_1.xclbin.info --input /home/centos/workspace/vector_add_lab_xilinx/Emulation-HW/binary_container_1.xclbin
+000-INFO: [v++ 60-1454] Run Directory: /home/centos/workspace/vector_add_lab_xilinx/Emulation-HW/binary_container_1.build/link/run_link
+000-INFO: [v++ 60-1441] [19:56:07] Run run_link: Step xclbinutilinfo: Completed
+000-Time (s): cpu = 00:00:00.30 ; elapsed = 00:00:00.35 . Memory (MB): peak = 1335.516 ; gain = 0.000 ; free physical = 103257 ; free virtual = 137100
+000-INFO: [v++ 60-1443] [19:56:07] Run run_link: Step generate_sc_driver: Started
+000-INFO: [v++ 60-1453] Command Line: 
+000-INFO: [v++ 60-1454] Run Directory: /home/centos/workspace/vector_add_lab_xilinx/Emulation-HW/binary_container_1.build/link/run_link
+000-INFO: [v++ 60-1441] [19:56:07] Run run_link: Step generate_sc_driver: Completed
+000-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1335.516 ; gain = 0.000 ; free physical = 103257 ; free virtual = 137100
+000-INFO: [v++ 60-244] Generating system estimate report...
+000-INFO: [v++ 60-1092] Generated system estimate report: /home/centos/workspace/vector_add_lab_xilinx/Emulation-HW/binary_container_1.build/reports/link/system_estimate_binary_container_1.xtxt
+000-INFO: [v++ 60-586] Created binary_container_1.xclbin
+000-INFO: [v++ 60-1307] Run completed. Additional information can be found in:
+000-	Steps Log File: /home/centos/workspace/vector_add_lab_xilinx/Emulation-HW/binary_container_1.build/logs/link/link.steps.log
+000-
+000-INFO: [v++ 60-2343] Use the vitis_analyzer tool to visualize and navigate the relevant reports. Run the following command. 
+000-    vitis_analyzer /home/centos/workspace/vector_add_lab_xilinx/Emulation-HW/binary_container_1.xclbin.link_summary 
+000-INFO: [v++ 60-791] Total elapsed time: 0h 7m 3s
+000-INFO: [v++ 60-1653] Closing dispatch client.
+000-g++ -std=c++0x -DVITIS_PLATFORM=xilinx_aws-vu9p-f1_shell-v04261818_201920_2 -D__USE_XOPEN2K8 -I/opt/xilinx/xrt/include/ -I/opt/Xilinx/Vivado/2020.1/include/ -O0 -g -Wall -c -fmessage-length=0 -o "src/vadd.o" "../src/vadd.cpp"
+000-g++ -std=c++0x -DVITIS_PLATFORM=xilinx_aws-vu9p-f1_shell-v04261818_201920_2 -D__USE_XOPEN2K8 -I/opt/xilinx/xrt/include/ -I/opt/Xilinx/Vivado/2020.1/include/ -O0 -g -Wall -c -fmessage-length=0 -o "src/xcl2.o" "../src/xcl2.cpp"
+000-g++ -o "vector_add_lab_xilinx" src/vadd.o src/xcl2.o -lxilinxopencl -lpthread -lrt -lstdc++ -lmpfr -lgmp -lhlsmc++-GCC46 -lIp_floating_point_v7_0_bitacc_cmodel -lIp_xfft_v9_1_bitacc_cmodel -lIp_fir_compiler_v7_2_bitacc_cmodel -lIp_dds_compiler_v6_0_bitacc_cmodel -L/opt/xilinx/xrt/lib/ -L/opt/Xilinx/Vivado/2020.1/lnx64/tools/fpo_v7_0 -L/opt/Xilinx/Vivado/2020.1/lnx64/lib/csim -L/opt/Xilinx/Vivado/2020.1/lnx64/tools/dds_v6_0 -L/opt/Xilinx/Vivado/2020.1/lnx64/tools/fir_v7_0 -L/opt/Xilinx/Vivado/2020.1/lnx64/tools/fft_v9_1 -Wl,-rpath-link,/opt/xilinx/xrt/lib -Wl,-rpath,/opt/Xilinx/Vivado/2020.1/lnx64/lib/csim -Wl,-rpath,/opt/Xilinx/Vivado/2020.1/lnx64/tools/fpo_v7_0 -Wl,-rpath,/opt/Xilinx/Vivado/2020.1/lnx64/tools/fft_v9_1 -Wl,-rpath,/opt/Xilinx/Vivado/2020.1/lnx64/tools/fir_v7_0 -Wl,-rpath,/opt/Xilinx/Vivado/2020.1/lnx64/tools/dds_v6_0
+000/vector_add_lab_xilinx/Emulation-HW0-1-1libgmp.so.11, needed by /opt/Xilinx/Vivado/2020.1/lnx64/tools/fft_v9_1/libIp_xfft_v9_1_bitacc_cmodel.so, may conflict with libgmp.so.71-/bin/ld: warning: libgmp.so.11, needed by /opt/Xilinx/Vivado/2020.1/lnx64/tools/fft_v9_1/libIp_xfft_v9_1_bitacc_cmodel.so, may conflict with libgmp.so.7
+000-/opt/Xilinx/Vitis/2020.1/bin/v++ --package --config package.cfg binary_container_1.xclbin
+000-Option Map File Used: '/opt/Xilinx/Vitis/2020.1/data/vitis/vpp/optMap.xml'
+000-
+000-****** v++ v2020.1 (64-bit)
+000-  **** SW Build 2902540 on Wed May 27 19:54:35 MDT 2020
+000-    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+000-
+000-INFO: [v++ 60-1306] Additional information associated with this v++ package can be found at:
+000-	Reports: /home/centos/workspace/vector_add_lab_xilinx/Emulation-HW/package.build/reports/package
+000-	Log files: /home/centos/workspace/vector_add_lab_xilinx/Emulation-HW/package.build/logs/package
+000-INFO: [v++ 60-1657] Initializing dispatch client.
+000-Running Dispatch Server on port:36801
+000-INFO: [v++ 60-1548] Creating build summary session with primary output ./v++.package_summary, at Thu Jan 14 19:56:22 2021
+000-INFO: [v++ 60-1316] Initiating connection to rulecheck server, at Thu Jan 14 19:56:22 2021
+000-INFO: [v++ 60-895]   Target platform: /home/centos/src/project_data/aws-fpga/Vitis/aws_platform/xilinx_aws-vu9p-f1_shell-v04261818_201920_2/xilinx_aws-vu9p-f1_shell-v04261818_201920_2.xpfm
+000-INFO: [v++ 60-1578]   This platform contains Xilinx Shell Archive '/home/centos/src/project_data/aws-fpga/Vitis/aws_platform/xilinx_aws-vu9p-f1_shell-v04261818_201920_2/hw/xilinx_aws-vu9p-f1_shell-v04261818_201920_2.xsa'
+000-INFO: [v++ 60-2256] Packaging for hardware emulation
+000-INFO: [v++ 60-2343] Use the vitis_analyzer tool to visualize and navigate the relevant reports. Run the following command. 
+000-    vitis_analyzer ./v++.package_summary 
+000-INFO: [v++ 60-791] Total elapsed time: 0h 0m 14s
+000-INFO: [v++ 60-1653] Closing dispatch client.
+000-/opt/Xilinx/Vitis/2020.1/bin/emconfigutil --od . --nd 1  --platform /home/centos/src/project_data/aws-fpga/Vitis/aws_platform/xilinx_aws-vu9p-f1_shell-v04261818_201920_2/xilinx_aws-vu9p-f1_shell-v04261818_201920_2.xpfm
+000-
+000-****** configutil v2020.1 (64-bit)
+000-  **** SW Build 2902540 on Wed May 27 19:54:35 MDT 2020
+000-    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+000-
+000-INFO: [ConfigUtil 60-895]   Target platform: /home/centos/src/project_data/aws-fpga/Vitis/aws_platform/xilinx_aws-vu9p-f1_shell-v04261818_201920_2/xilinx_aws-vu9p-f1_shell-v04261818_201920_2.xpfm
+000-INFO: [ConfigUtil 60-1578]   This platform contains Xilinx Shell Archive '/home/centos/src/project_data/aws-fpga/Vitis/aws_platform/xilinx_aws-vu9p-f1_shell-v04261818_201920_2/hw/xilinx_aws-vu9p-f1_shell-v04261818_201920_2.xsa'
+000-emulation configuration file `emconfig.json` is created in . directory 
+00255-
+19:56:33 Build Finished (took 8m:17s.880ms)
+

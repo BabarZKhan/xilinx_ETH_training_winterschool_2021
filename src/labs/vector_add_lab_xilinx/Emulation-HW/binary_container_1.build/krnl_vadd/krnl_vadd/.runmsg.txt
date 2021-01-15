@@ -1,0 +1,2 @@
+performing high-level synthesis for kernel: krnl_vadd
+Log file: /home/centos/workspace/vector_add_lab_xilinx/Emulation-HW/binary_container_1.build/krnl_vadd/krnl_vadd/vitis_hls.log

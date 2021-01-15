@@ -1,0 +1,5 @@
+obj/krnl_vadd.o: \
+ /home/centos/workspace/vector_add_lab_xilinx/Emulation-SW/binary_container_1.build/link/int/xo/krnl_vadd/krnl_vadd/cpu_sources/krnl_vadd.cpp \
+ /usr/include/stdc-predef.h
+
+/usr/include/stdc-predef.h:

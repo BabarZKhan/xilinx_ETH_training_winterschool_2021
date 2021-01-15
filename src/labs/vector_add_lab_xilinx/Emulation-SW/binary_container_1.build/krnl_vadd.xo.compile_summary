@@ -1,0 +1,169 @@
+<ENTRY>
+{
+ "thisFile": "/home/centos/workspace/vector_add_lab_xilinx/Emulation-SW/binary_container_1.build/krnl_vadd.xo.compile_summary",
+ "connectId": "",
+ "serverToken": "",
+ "timestamp": "0"
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Thu Jan 14 19:42:21 2021",
+ "timestampMillis": "1610653341701",
+ "buildStep": {
+  "cmdId": "20343732-a775-44ed-86b2-d992ecf70d30",
+  "name": "v++",
+  "logFile": "/home/centos/workspace/vector_add_lab_xilinx/Emulation-SW/binary_container_1.build/krnl_vadd/krnl_vadd.steps.log",
+  "commandLine": "/opt/Xilinx/Vitis/2020.1/bin/unwrapped/lnx64.o/v++  --xp \"vivado_prop:run.__KERNEL__.{STEPS.SYNTH_DESIGN.ARGS.MORE OPTIONS}={-directive sdx_optimization_effort_high}\" --xp \"misc:report=type report_timing_summary name impl_report_timing_summary_route_design_summary steps {route_design} runs {impl_1} options {-max_paths 10}\" --xp \"misc:report=type report_timing_summary name impl_report_timing_summary_post_route_phys_opt_design_summary steps {post_route_phys_opt_design} runs {impl_1} options {-max_paths 10}\" --target sw_emu --compile -I../src --config common-config.cfg --config binary_container_1-krnl_vadd-compile.cfg -obinary_container_1.build/krnl_vadd.xo ../src/krnl_vadd.cpp ",
+  "args": [
+   "--target",
+   "sw_emu",
+   "--compile",
+   "-I../src",
+   "--config",
+   "common-config.cfg",
+   "--config",
+   "binary_container_1-krnl_vadd-compile.cfg",
+   "-obinary_container_1.build/krnl_vadd.xo",
+   "../src/krnl_vadd.cpp"
+  ],
+  "iniFiles": [
+   {
+    "path": "/home/centos/workspace/vector_add_lab_xilinx/Emulation-SW/common-config.cfg",
+    "content": "platform=/home/centos/src/project_data/aws-fpga/Vitis/aws_platform/xilinx_aws-vu9p-f1_shell-v04261818_201920_2/xilinx_aws-vu9p-f1_shell-v04261818_201920_2.xpfm\nsave-temps=1\n"
+   },
+   {
+    "path": "/home/centos/workspace/vector_add_lab_xilinx/Emulation-SW/binary_container_1-krnl_vadd-compile.cfg",
+    "content": "kernel=krnl_vadd\ndebug=1\nmessageDb=binary_container_1.build/krnl_vadd.mdb\ntemp_dir=binary_container_1.build\nreport_dir=binary_container_1.build/reports\nlog_dir=binary_container_1.build/logs\n\n[advanced]\nmisc=solution_name=krnl_vadd\n"
+   }
+  ],
+  "cwd": "/home/centos/workspace/vector_add_lab_xilinx/Emulation-SW"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Jan 14 19:42:21 2021",
+ "timestampMillis": "1610653341702",
+ "status": {
+  "cmdId": "20343732-a775-44ed-86b2-d992ecf70d30",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_FlowMetaData",
+ "dateTimestamp": "Thu Jan 14 19:42:36 2021",
+ "timestampMillis": "1610653356368",
+ "buildSummary": {
+  "hardwarePlatform": "xilinx_aws-vu9p-f1_shell-v04261818_201920_2.xpfm",
+  "hardwareDsa": "xilinx_aws-vu9p-f1_shell-v04261818_201920_2.xsa",
+  "platformDirectory": "/home/centos/src/project_data/aws-fpga/Vitis/aws_platform/xilinx_aws-vu9p-f1_shell-v04261818_201920_2",
+  "runtime": "OpenCL",
+  "systemConfig": "Linux",
+  "flow": "BF_COMPILE",
+  "target": "TT_SW_EMU",
+  "kernels": [
+   {
+    "base": {
+     "type": "KERNEL",
+     "name": "krnl_vadd",
+     "file": "/home/centos/workspace/vector_add_lab_xilinx/Emulation-SW/binary_container_1.build/krnl_vadd.xo",
+     "reports": []
+    },
+    "sources": [
+     "/home/centos/workspace/vector_add_lab_xilinx/src/krnl_vadd.cpp"
+    ],
+    "psSources": [],
+    "cuNames": [],
+    "type": "HLS"
+   }
+  ],
+  "toolVersion": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Thu Jan 14 19:42:36 2021",
+ "timestampMillis": "1610653356372",
+ "buildStep": {
+  "cmdId": "4eb5cb87-e37a-4ae7-9626-9e5c39060be8",
+  "name": "vitis_hls",
+  "logFile": "/home/centos/workspace/vector_add_lab_xilinx/Emulation-SW/binary_container_1.build/krnl_vadd/krnl_vadd/vitis_hls.log",
+  "commandLine": "vitis_hls -f /home/centos/workspace/vector_add_lab_xilinx/Emulation-SW/binary_container_1.build/krnl_vadd/krnl_vadd/krnl_vadd.tcl -messageDb vitis_hls.pb",
+  "args": [
+   "vitis_hls",
+   "-f",
+   "/home/centos/workspace/vector_add_lab_xilinx/Emulation-SW/binary_container_1.build/krnl_vadd/krnl_vadd/krnl_vadd.tcl",
+   "-messageDb",
+   "vitis_hls.pb"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/centos/workspace/vector_add_lab_xilinx/Emulation-SW"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Jan 14 19:42:36 2021",
+ "timestampMillis": "1610653356373",
+ "status": {
+  "cmdId": "4eb5cb87-e37a-4ae7-9626-9e5c39060be8",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Jan 14 19:42:46 2021",
+ "timestampMillis": "1610653366818",
+ "status": {
+  "cmdId": "4eb5cb87-e37a-4ae7-9626-9e5c39060be8",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Jan 14 19:42:46 2021",
+ "timestampMillis": "1610653366827",
+ "report": {
+  "path": "/home/centos/workspace/vector_add_lab_xilinx/Emulation-SW/guidance.html",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Jan 14 19:42:46 2021",
+ "timestampMillis": "1610653366828",
+ "report": {
+  "path": "/home/centos/workspace/vector_add_lab_xilinx/Emulation-SW/guidance.pb",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Jan 14 19:42:46 2021",
+ "timestampMillis": "1610653366828",
+ "status": {
+  "cmdId": "20343732-a775-44ed-86b2-d992ecf70d30",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>

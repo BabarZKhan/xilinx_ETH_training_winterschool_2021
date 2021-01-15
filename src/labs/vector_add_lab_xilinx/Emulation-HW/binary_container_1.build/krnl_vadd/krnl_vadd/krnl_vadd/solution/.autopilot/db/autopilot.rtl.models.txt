@@ -1,0 +1,4 @@
+krnl_vadd_v1_buffer
+krnl_vadd_control_s_axi
+krnl_vadd_gmem_m_axi
+krnl_vadd

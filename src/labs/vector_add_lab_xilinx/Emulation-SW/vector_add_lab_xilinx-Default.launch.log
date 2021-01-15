@@ -1,0 +1,10 @@
+Found Platform
+Platform Name: Xilinx
+INFO: Reading ../binary_container_1.xclbin
+Loading: '../binary_container_1.xclbin'
+Trying to program device[0]: xilinx_aws-vu9p-f1_shell-v04261818_201920_2
+Device[0]: program successful!
+Running Vector add with 32768 elements
+Launching Hardware Kernel...
+Getting Hardware Results...
+TEST PASSED

@@ -1,0 +1,57 @@
+{
+  "schema_version": {
+    "major": "1",
+    "minor": "0",
+    "patch": "0"
+  },
+  "debug_ip_layout": {
+    "m_count": "5",
+    "m_debug_ip_data": [
+      {
+        "m_type": "AXI_MONITOR_FIFO_FULL",
+        "m_index": "0",
+        "m_major": "1",
+        "m_minor": "0",
+        "m_properties": "0",
+        "m_base_address": "0x0000000000000000",
+        "m_name": "dpa_hub"
+      },
+      {
+        "m_type": "AXI_MONITOR_FIFO_LITE",
+        "m_index": "0",
+        "m_major": "1",
+        "m_minor": "0",
+        "m_properties": "0",
+        "m_base_address": "0x1D000000",
+        "m_name": "dpa_hub"
+      },
+      {
+        "m_type": "AXI_TRACE_FUNNEL",
+        "m_index": "0",
+        "m_major": "1",
+        "m_minor": "0",
+        "m_properties": "0",
+        "m_base_address": "0x1D010000",
+        "m_name": "dpa_hub"
+      },
+      {
+        "m_type": "ACCEL_MONITOR",
+        "m_index": "64",
+        "m_major": "1",
+        "m_minor": "0",
+        "m_properties": "11",
+        "m_base_address": "0x1D020000",
+        "m_name": "krnl_vadd_1"
+      },
+      {
+        "m_type": "AXI_MM_MONITOR",
+        "m_index": "0",
+        "m_major": "1",
+        "m_minor": "0",
+        "m_properties": "11",
+        "m_base_address": "0x1D030000",
+        "m_name": "krnl_vadd_1/m_axi_gmem-DDR[1]"
+      }
+    ]
+  }
+}

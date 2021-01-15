@@ -1,0 +1,107 @@
+Begin Function 'krnl_vadd'
+
+RTL state condition: (1'b1 == 1'b1)
+# ST_148
+local add_ln74 <add_74> <integer> <Arithmetic> 'add' </home/centos/workspace/vector_add_lab_xilinx/src/krnl_vadd.cpp:74>
+add_ln74 /home/centos/workspace/vector_add_lab_xilinx/src/krnl_vadd.cpp:74
+reg: add_ln74_reg_626[31:0] lv
+
+
+RTL state condition: (1'b1 == ap_CS_fsm_pp0_stage0)
+# ST_73
+local j <phi_64> <integer> <Phi> 'phi' </home/centos/workspace/vector_add_lab_xilinx/src/krnl_vadd.cpp:64>
+add_ln64 /home/centos/workspace/vector_add_lab_xilinx/src/krnl_vadd.cpp:64
+reg: j_reg_240[8:0] lv
+
+local icmp_ln64_1 <icmp_64> <integer> <Comparator> 'icmp' </home/centos/workspace/vector_add_lab_xilinx/src/krnl_vadd.cpp:64>
+icmp_ln64_1 /home/centos/workspace/vector_add_lab_xilinx/src/krnl_vadd.cpp:64
+reg: icmp_ln64_1_reg_581[0:0] lv
+
+local add_ln64 <add_64> <integer> <Arithmetic> 'add' </home/centos/workspace/vector_add_lab_xilinx/src/krnl_vadd.cpp:64>
+add_ln64 /home/centos/workspace/vector_add_lab_xilinx/src/krnl_vadd.cpp:64
+reg: add_ln64_reg_585[8:0] lv
+
+# ST_74
+local gmem_addr_read <read_66> <integer> <> 'read' </home/centos/workspace/vector_add_lab_xilinx/src/krnl_vadd.cpp:66>
+gmem_addr_read /home/centos/workspace/vector_add_lab_xilinx/src/krnl_vadd.cpp:66
+reg: gmem_addr_read_reg_590[31:0] lv
+
+
+RTL state condition: (1'b1 == ap_CS_fsm_pp1_stage0)
+# ST_146
+local j_1 <phi_71> <integer> <Phi> 'phi' </home/centos/workspace/vector_add_lab_xilinx/src/krnl_vadd.cpp:71>
+add_ln71 /home/centos/workspace/vector_add_lab_xilinx/src/krnl_vadd.cpp:71
+reg: j_1_reg_252[8:0] lv
+
+local icmp_ln71 <icmp_71> <integer> <Comparator> 'icmp' </home/centos/workspace/vector_add_lab_xilinx/src/krnl_vadd.cpp:71>
+icmp_ln71 /home/centos/workspace/vector_add_lab_xilinx/src/krnl_vadd.cpp:71
+reg: icmp_ln71_reg_607[0:0] lv
+
+local add_ln71 <add_71> <integer> <Arithmetic> 'add' </home/centos/workspace/vector_add_lab_xilinx/src/krnl_vadd.cpp:71>
+add_ln71 /home/centos/workspace/vector_add_lab_xilinx/src/krnl_vadd.cpp:71
+reg: add_ln71_reg_611[8:0] lv
+
+# ST_147
+local gmem_addr_1_read <read_74> <integer> <> 'read' </home/centos/workspace/vector_add_lab_xilinx/src/krnl_vadd.cpp:74>
+gmem_addr_1_read /home/centos/workspace/vector_add_lab_xilinx/src/krnl_vadd.cpp:74
+reg: gmem_addr_1_read_reg_621[31:0] lv
+
+
+RTL state condition: (1'b1 == ap_CS_fsm_state1)
+# ST_1
+local xor_ln57 <xor_57> <integer> <Logic> 'xor' </home/centos/workspace/vector_add_lab_xilinx/src/krnl_vadd.cpp:57>
+xor_ln57 /home/centos/workspace/vector_add_lab_xilinx/src/krnl_vadd.cpp:57
+reg: xor_ln57_reg_527[31:0] lv
+
+
+RTL state condition: (1'b1 == ap_CS_fsm_state2)
+# ST_2
+local indvars_iv7 <> <integer> <Phi> 'phi' <>
+reg: indvars_iv7_reg_194[31:0] lv
+
+local indvars_iv5 <> <integer> <Phi> 'phi' <>
+reg: indvars_iv5_reg_206[31:0] lv
+
+local indvar <phi_57> <integer> <Phi> 'phi' </home/centos/workspace/vector_add_lab_xilinx/src/krnl_vadd.cpp:57>
+add_ln57 /home/centos/workspace/vector_add_lab_xilinx/src/krnl_vadd.cpp:57
+reg: indvar_reg_218[31:0] lv
+
+local i <> <integer> <Phi> 'phi' <>
+i /home/centos/workspace/vector_add_lab_xilinx/src/krnl_vadd.cpp:61
+reg: i_reg_229[31:0] lv
+
+local add_ln57 <add_57> <integer> <Arithmetic> 'add' </home/centos/workspace/vector_add_lab_xilinx/src/krnl_vadd.cpp:57>
+add_ln57 /home/centos/workspace/vector_add_lab_xilinx/src/krnl_vadd.cpp:57
+reg: add_ln57_reg_538[31:0] lv
+
+local empty_19 <sub_57> <integer> <Arithmetic> 'sub' </home/centos/workspace/vector_add_lab_xilinx/src/krnl_vadd.cpp:57>
+empty_19 /home/centos/workspace/vector_add_lab_xilinx/src/krnl_vadd.cpp:57
+reg: empty_19_reg_543[31:0] lv
+
+local sub_ln61_1 <sub_61> <integer> <Arithmetic> 'sub' </home/centos/workspace/vector_add_lab_xilinx/src/krnl_vadd.cpp:61>
+sub_ln61_1 /home/centos/workspace/vector_add_lab_xilinx/src/krnl_vadd.cpp:61
+reg: sub_ln61_1_reg_549[31:0] lv
+
+local add_ln61 <add_61> <integer> <Arithmetic> 'add' </home/centos/workspace/vector_add_lab_xilinx/src/krnl_vadd.cpp:61>
+add_ln61 /home/centos/workspace/vector_add_lab_xilinx/src/krnl_vadd.cpp:61
+reg: add_ln61_reg_556[63:0] lv
+
+local add_ln61_1 <add_61> <integer> <Arithmetic> 'add' </home/centos/workspace/vector_add_lab_xilinx/src/krnl_vadd.cpp:61>
+add_ln61_1 /home/centos/workspace/vector_add_lab_xilinx/src/krnl_vadd.cpp:61
+reg: add_ln61_1_reg_561[63:0] lv
+
+local i_1 <add_61> <integer> <Arithmetic> 'add' </home/centos/workspace/vector_add_lab_xilinx/src/krnl_vadd.cpp:61>
+i /home/centos/workspace/vector_add_lab_xilinx/src/krnl_vadd.cpp:61
+reg: i_1_reg_566[31:0] lv
+
+local and_ln64 <and_64> <integer> <Logic> 'and' </home/centos/workspace/vector_add_lab_xilinx/src/krnl_vadd.cpp:64>
+and_ln64 /home/centos/workspace/vector_add_lab_xilinx/src/krnl_vadd.cpp:64
+reg: and_ln64_reg_571[0:0] lv
+
+local gmem_addr <getelementptr_64> <integer> <> 'getelementptr' </home/centos/workspace/vector_add_lab_xilinx/src/krnl_vadd.cpp:64>
+gmem_addr /home/centos/workspace/vector_add_lab_xilinx/src/krnl_vadd.cpp:64
+reg: gmem_addr_reg_575[63:0] lv
+
+
+End Function 'krnl_vadd'
+

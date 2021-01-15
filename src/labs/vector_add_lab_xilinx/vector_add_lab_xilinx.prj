@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="ASCII"?>
+<openclProject:OpenCLProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:openclProject="http://www.xilinx.com/openclproject" name="vector_add_lab_xilinx" location="/home/centos/workspace/vector_add_lab_xilinx" platform="/home/centos/src/project_data/aws-fpga/Vitis/aws_platform/xilinx_aws-vu9p-f1_shell-v04261818_201920_2/xilinx_aws-vu9p-f1_shell-v04261818_201920_2.xpfm" platformUID="xilinx:aws-vu9p-f1:shell-v04261818:201920.2(custom)" systemProject="vector_add_lab_xilinx_system" sysConfig="config0_0" cpu="x86" cpuInstance="x86" os="Linux">
+  <configuration name="Emulation-SW" id="com.xilinx.accelerated.config.sw_emu.528275107">
+    <configBuildOptions xsi:type="openclProject:OpenCLOptions" kernelDebug="true">
+      <binaryContainers name="binary_container_1">
+        <kernels name="krnl_vadd" sourceFile="src/krnl_vadd.cpp">
+          <computeUnits name="krnl_vadd_1" profileExecution="true" slr="">
+            <args name="in1" master="true" memory="" profileAll="true"/>
+            <args name="in2" master="true" memory="" profileAll="true"/>
+            <args name="out_r" master="true" memory="" profileAll="true"/>
+            <args name="size" memory=""/>
+          </computeUnits>
+          <args name="in1" master="true"/>
+          <args name="in2" master="true"/>
+          <args name="out_r" master="true"/>
+          <args name="size"/>
+        </kernels>
+      </binaryContainers>
+    </configBuildOptions>
+    <lastBuildOptions xsi:type="openclProject:OpenCLOptions" kernelDebug="true">
+      <binaryContainers name="binary_container_1">
+        <kernels name="krnl_vadd" sourceFile="src/krnl_vadd.cpp"/>
+      </binaryContainers>
+    </lastBuildOptions>
+  </configuration>
+  <configuration name="Emulation-HW" id="com.xilinx.accelerated.config.hw_emu.362365372">
+    <configBuildOptions xsi:type="openclProject:OpenCLOptions" kernelDebug="true" target="hw_emu">
+      <binaryContainers name="binary_container_1">
+        <kernels name="krnl_vadd" sourceFile="src/krnl_vadd.cpp">
+          <computeUnits name="krnl_vadd_1" profileExecution="true" slr="">
+            <args name="in1" master="true" memory="" profileAll="true"/>
+            <args name="in2" master="true" memory="" profileAll="true"/>
+            <args name="out_r" master="true" memory="" profileAll="true"/>
+            <args name="size" memory=""/>
+          </computeUnits>
+          <args name="in1" master="true"/>
+          <args name="in2" master="true"/>
+          <args name="out_r" master="true"/>
+          <args name="size"/>
+        </kernels>
+      </binaryContainers>
+    </configBuildOptions>
+    <lastBuildOptions xsi:type="openclProject:OpenCLOptions" kernelDebug="true" target="hw_emu">
+      <binaryContainers name="binary_container_1">
+        <kernels name="krnl_vadd" sourceFile="src/krnl_vadd.cpp">
+          <computeUnits name="krnl_vadd_1" profileExecution="true" slr="">
+            <args name="in1" master="true" memory="" profileAll="true"/>
+            <args name="in2" master="true" memory="" profileAll="true"/>
+            <args name="out_r" master="true" memory="" profileAll="true"/>
+            <args name="size" memory=""/>
+          </computeUnits>
+          <args name="in1" master="true"/>
+          <args name="in2" master="true"/>
+          <args name="out_r" master="true"/>
+          <args name="size"/>
+        </kernels>
+      </binaryContainers>
+    </lastBuildOptions>
+  </configuration>
+  <configuration name="Hardware" id="com.xilinx.accelerated.config.hw.780383691" dirty="true">
+    <configBuildOptions xsi:type="openclProject:OpenCLOptions" target="hw">
+      <binaryContainers name="binary_container_1">
+        <kernels name="krnl_vadd" sourceFile="src/krnl_vadd.cpp">
+          <computeUnits name="krnl_vadd_1" profileExecution="true" slr="">
+            <args name="in1" master="true" memory="" profileAll="true"/>
+            <args name="in2" master="true" memory="" profileAll="true"/>
+            <args name="out_r" master="true" memory="" profileAll="true"/>
+            <args name="size" memory=""/>
+          </computeUnits>
+          <args name="in1" master="true"/>
+          <args name="in2" master="true"/>
+          <args name="out_r" master="true"/>
+          <args name="size"/>
+        </kernels>
+      </binaryContainers>
+    </configBuildOptions>
+  </configuration>
+</openclProject:OpenCLProject>
