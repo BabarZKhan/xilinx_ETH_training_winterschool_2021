@@ -1,0 +1,50 @@
+Begin Function 'v1_rd_proc5'
+
+RTL state condition: (1'b1 == ap_CS_fsm_pp0_stage0)
+# ST_73
+local j <phi_105> <integer> <Phi> 'phi' </home/centos/workspace/improving_performance_lab/src/wide_vadd_krnl.cpp:105>
+add_ln102 /home/centos/workspace/improving_performance_lab/src/wide_vadd_krnl.cpp:102
+reg: j_reg_194[30:0] lv
+
+local icmp_ln102 <icmp_102> <integer> <Comparator> 'icmp' </home/centos/workspace/improving_performance_lab/src/wide_vadd_krnl.cpp:102>
+icmp_ln102 /home/centos/workspace/improving_performance_lab/src/wide_vadd_krnl.cpp:102
+reg: icmp_ln102_reg_429[0:0] lv
+
+# ST_74
+local gmem_addr_read <> <integer> <> 'read' <>
+gmem_addr_read /opt/Xilinx/Vitis/2020.1/common/technology/autopilot/ap_int.h:324
+reg: gmem_addr_read_reg_438[511:0] lv
+
+local gmem1_addr_read <> <integer> <> 'read' <>
+gmem1_addr_read /opt/Xilinx/Vitis/2020.1/common/technology/autopilot/ap_int.h:324
+reg: gmem1_addr_read_reg_443[511:0] lv
+
+
+RTL state condition: (1'b1 == ap_CS_fsm_state1)
+# ST_1
+local add_ln85_3 <add_85> <integer> <Arithmetic> 'add' </home/centos/workspace/improving_performance_lab/src/wide_vadd_krnl.cpp:85>
+add_ln85_3 /home/centos/workspace/improving_performance_lab/src/wide_vadd_krnl.cpp:85
+reg: add_ln85_3_reg_389[29:0] lv
+
+local trunc_ln98 <trunc_98> <integer> <> 'trunc' </home/centos/workspace/improving_performance_lab/src/wide_vadd_krnl.cpp:98>
+trunc_ln98 /home/centos/workspace/improving_performance_lab/src/wide_vadd_krnl.cpp:98
+reg: trunc_ln98_reg_395[31:0] lv
+
+
+RTL state condition: (1'b1 == ap_CS_fsm_state2)
+# ST_2
+local select_ln97 <select_97> <integer> <> 'select' </home/centos/workspace/improving_performance_lab/src/wide_vadd_krnl.cpp:97>
+select_ln97 /home/centos/workspace/improving_performance_lab/src/wide_vadd_krnl.cpp:97
+reg: select_ln97_reg_400[31:0] lv
+
+local trunc_ln324_2 <> <integer> <> 'partselect' <>
+trunc_ln324_2 /opt/Xilinx/Vitis/2020.1/common/technology/autopilot/ap_int.h:324
+reg: trunc_ln324_2_reg_407[57:0] lv
+
+local trunc_ln324_3 <> <integer> <> 'partselect' <>
+trunc_ln324_3 /opt/Xilinx/Vitis/2020.1/common/technology/autopilot/ap_int.h:324
+reg: trunc_ln324_3_reg_412[57:0] lv
+
+
+End Function 'v1_rd_proc5'
+

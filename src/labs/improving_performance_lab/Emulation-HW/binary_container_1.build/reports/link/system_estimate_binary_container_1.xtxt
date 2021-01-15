@@ -1,0 +1,48 @@
+===============================================================================
+Version:    v++ v2020.1 (64-bit)
+Build:      SW Build 2902540 on Wed May 27 19:54:35 MDT 2020
+Copyright:  Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+Created:    Thu Jan 14 20:15:00 2021
+===============================================================================
+
+-------------------------------------------------------------------------------
+Design Name:             binary_container_1
+Target Device:           xilinx:aws-vu9p-f1:shell-v04261818:201920.2
+Target Clock:            250.000000MHz
+Total number of kernels: 1
+-------------------------------------------------------------------------------
+
+Kernel Summary
+Kernel Name  Type  Target              OpenCL Library      Compute Units
+-----------  ----  ------------------  ------------------  -------------
+wide_vadd    c     fpga0:OCL_REGION_0  binary_container_1  1
+
+
+-------------------------------------------------------------------------------
+OpenCL Binary:     binary_container_1
+Kernels mapped to: clc_region
+
+Timing Information (MHz)
+Compute Unit  Kernel Name  Module Name                       Target Frequency  Estimated Frequency
+------------  -----------  --------------------------------  ----------------  -------------------
+wide_vadd_1   wide_vadd    v1_rd_proc5                       250               342.465759
+wide_vadd_1   wide_vadd    v2_rd_add_proc                    250               342.465759
+wide_vadd_1   wide_vadd    dataflow_in_loop_VITIS_LOOP_88_1  250               342.465759
+wide_vadd_1   wide_vadd    wide_vadd                         250               342.465759
+
+Latency Information
+Compute Unit  Kernel Name  Module Name                       Start Interval  Best (cycles)  Avg (cycles)  Worst (cycles)  Best (absolute)  Avg (absolute)  Worst (absolute)
+------------  -----------  --------------------------------  --------------  -------------  ------------  --------------  ---------------  --------------  ----------------
+wide_vadd_1   wide_vadd    v1_rd_proc5                       75 ~ 138        75             106           138             0.300 us         0.424 us        0.552 us
+wide_vadd_1   wide_vadd    v2_rd_add_proc                    74 ~ 137        74             105           137             0.296 us         0.420 us        0.548 us
+wide_vadd_1   wide_vadd    dataflow_in_loop_VITIS_LOOP_88_1  76 ~ 139        144            175           207             0.576 us         0.700 us        0.828 us
+wide_vadd_1   wide_vadd    wide_vadd                         undef           undef          undef         undef           undef            undef           undef
+
+Area Information
+Compute Unit  Kernel Name  Module Name                       FF    LUT   DSP  BRAM  URAM
+------------  -----------  --------------------------------  ----  ----  ---  ----  ----
+wide_vadd_1   wide_vadd    v1_rd_proc5                       1346  1034  0    0     0
+wide_vadd_1   wide_vadd    v2_rd_add_proc                    901   1565  0    0     0
+wide_vadd_1   wide_vadd    dataflow_in_loop_VITIS_LOOP_88_1  2854  2912  0    30    0
+wide_vadd_1   wide_vadd    wide_vadd                         7834  8714  0    120   0
+-------------------------------------------------------------------------------

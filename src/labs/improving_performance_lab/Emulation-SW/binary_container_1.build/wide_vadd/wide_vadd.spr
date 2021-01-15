@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="wide_vadd" dir="">
+  <FileSets>
+    <FileSet Name="kernel_wide_vadd" Type="DesignSrcs">
+      <File Path="/home/centos/workspace/improving_performance_lab/src/wide_vadd_krnl.cpp"/>
+      <Config/>
+    </FileSet>
+  </FileSets>
+  <Runs/>
+</project>

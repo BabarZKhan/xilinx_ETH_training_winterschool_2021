@@ -1,0 +1,29 @@
+-- Parallelizing the Data Path --
+
+Loading ../binary_container_1.xclbin to program the board
+
+INFO: [HW-EM 01] Hardware emulation runs simulation underneath. Using a large data set will result in long simulation times. It is recommended that a small dataset is used for faster execution. The flow uses approximate models for DDR memory and interconnect and hence the performance data generated is approximate.
+Running kernel test XRT-allocated buffers and wide data path:
+
+
+OCL-mapped contiguous buffer example complete successfully!
+
+--------------- Key execution times ---------------
+OpenCL Initialization              : 28220.871 ms
+Allocate contiguous OpenCL buffers :   15.508 ms
+Set kernel arguments               :    0.077 ms
+Map buffers to user space pointers :    1.180 ms
+Populating buffer inputs           :    0.416 ms
+Software VADD run                  :    0.204 ms
+Memory object migration enqueue    :    4.816 ms
+OCL Enqueue task                   :    3.568 ms
+Wait for kernel to complete        : 13001.788 ms
+Read back computation results      :    1.715 ms
+INFO::[ Vitis-EM 22 ] [Time elapsed: 0 minute(s) 36 seconds, Emulation time: 0.0808312 ms]
+Data transfer between kernel(s) and global memory(s)
+wide_vadd_1:m_axi_gmem-DDR[1]          RD = 128.000 KB             WR = 0.000 KB        
+wide_vadd_1:m_axi_gmem1-DDR[1]          RD = 128.000 KB             WR = 0.000 KB        
+wide_vadd_1:m_axi_gmem2-DDR[1]          RD = 0.000 KB               WR = 128.000 KB      
+
+INFO: [HW-EM 06-0] Waiting for the simulator process to exit
+INFO: [HW-EM 06-1] All the simulator processes exited successfully

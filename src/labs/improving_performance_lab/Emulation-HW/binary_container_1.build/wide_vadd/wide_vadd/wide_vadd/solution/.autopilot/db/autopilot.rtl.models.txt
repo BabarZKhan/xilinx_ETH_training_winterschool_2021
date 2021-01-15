@@ -1,0 +1,14 @@
+wide_vadd_fifo_w512_d64_A
+wide_vadd_fifo_w512_d64_A
+wide_vadd_fifo_w64_d2_S
+wide_vadd_fifo_w32_d2_S
+wide_vadd_fifo_w64_d2_S
+wide_vadd_start_for_v2_rd_add_proc_U0
+wide_vadd_control_s_axi
+wide_vadd_gmem_m_axi
+wide_vadd_gmem1_m_axi
+wide_vadd_gmem2_m_axi
+v1_rd_proc5
+v2_rd_add_proc
+dataflow_in_loop_VITIS_LOOP_88_1
+wide_vadd

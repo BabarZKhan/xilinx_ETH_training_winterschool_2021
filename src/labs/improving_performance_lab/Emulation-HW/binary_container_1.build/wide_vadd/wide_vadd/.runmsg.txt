@@ -1,0 +1,2 @@
+performing high-level synthesis for kernel: wide_vadd
+Log file: /home/centos/workspace/improving_performance_lab/Emulation-HW/binary_container_1.build/wide_vadd/wide_vadd/vitis_hls.log

@@ -1,0 +1,158 @@
+
+
+================================================================
+== Vitis HLS Report for 'dataflow_in_loop_VITIS_LOOP_88_1'
+================================================================
+* Date:           Thu Jan 14 20:07:06 2021
+
+* Version:        2020.1 (Build 2902540 on Wed May 27 20:16:15 MDT 2020)
+* Project:        wide_vadd
+* Solution:       solution (Vitis Kernel Flow Target)
+* Product family: virtexuplus
+* Target device:  xcvu9p-flgb2104-2-i
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  | 4.00 ns | 2.920 ns |   1.08 ns  |
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+----------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline |
+    |   min   |   max   |    min   |    max   | min | max |   Type   |
+    +---------+---------+----------+----------+-----+-----+----------+
+    |      144|      207| 0.576 us | 0.828 us |   76|  139| dataflow |
+    +---------+---------+----------+----------+-----+-----+----------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 4
+* Pipeline : 0
+* Dataflow Pipeline: 1
+  DF-Pipeline-0: Size = 4, States = { 1 2 3 4 }
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 2.59>
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%out_read = read i64 @_ssdm_op_Read.ap_auto.i64, i64 %out_r"   --->   Operation 5 'read' 'out_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%in2_read = read i64 @_ssdm_op_Read.ap_auto.i64, i64 %in2"   --->   Operation 6 'read' 'in2_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%in1_read = read i64 @_ssdm_op_Read.ap_auto.i64, i64 %in1"   --->   Operation 7 'read' 'in1_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%size_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %size"   --->   Operation 8 'read' 'size_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%i_read = read i64 @_ssdm_op_Read.ap_auto.i64, i64 %i"   --->   Operation 9 'read' 'i_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%out_c = alloca i64"   --->   Operation 10 'alloca' 'out_c' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 21 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.45> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 64> <Depth = 2> <FIFO>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%size_c = alloca i64"   --->   Operation 11 'alloca' 'size_c' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 21 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.45> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 2> <FIFO>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%i_c = alloca i64"   --->   Operation 12 'alloca' 'i_c' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 21 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.45> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 64> <Depth = 2> <FIFO>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%v1_local_V = alloca i64" [/home/centos/workspace/improving_performance_lab/src/wide_vadd_krnl.cpp:78]   --->   Operation 13 'alloca' 'v1_local_V' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO">   --->   Core 18 'FIFO' <Latency = 0> <II = 1> <Delay = 1.57> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 512> <Depth = 64> <FIFO>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%v2_local_V = alloca i64" [/home/centos/workspace/improving_performance_lab/src/wide_vadd_krnl.cpp:79]   --->   Operation 14 'alloca' 'v2_local_V' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO">   --->   Core 18 'FIFO' <Latency = 0> <II = 1> <Delay = 1.57> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 512> <Depth = 64> <FIFO>
+ST_1 : Operation 15 [2/2] (2.59ns)   --->   "%call_ln0 = call void @v1_rd_proc5, i64 %i_read, i32 %size_read, i64 %in1_read, i512 %gmem, i512 %v1_local_V, i64 %in2_read, i512 %gmem1, i512 %v2_local_V, i64 %out_read, i64 %i_c, i32 %size_c, i64 %out_c"   --->   Operation 15 'call' 'call_ln0' <Predicate = true> <Delay = 2.59> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 2 <SV = 1> <Delay = 0.00>
+ST_2 : Operation 16 [1/2] (0.00ns)   --->   "%call_ln0 = call void @v1_rd_proc5, i64 %i_read, i32 %size_read, i64 %in1_read, i512 %gmem, i512 %v1_local_V, i64 %in2_read, i512 %gmem1, i512 %v2_local_V, i64 %out_read, i64 %i_c, i32 %size_c, i64 %out_c"   --->   Operation 16 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 3 <SV = 2> <Delay = 0.00>
+ST_3 : Operation 17 [2/2] (0.00ns)   --->   "%call_ln0 = call void @v2_rd_add_proc, i64 %i_c, i32 %size_c, i512 %v1_local_V, i512 %v2_local_V, i64 %out_c, i512 %gmem2, void %call_ln0, void %call_ln0"   --->   Operation 17 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 4 <SV = 3> <Delay = 0.00>
+ST_4 : Operation 18 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i512 %gmem2, void @empty_11, i32, i32, void @empty_7, i32, i32, void @empty_7, void @empty_7, void @empty_7, i32, i32, i32, i32, void @empty_7, void @empty_7"   --->   Operation 18 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 19 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i512 %gmem1, void @empty_11, i32, i32, void @empty_7, i32, i32, void @empty_7, void @empty_7, void @empty_7, i32, i32, i32, i32, void @empty_7, void @empty_7"   --->   Operation 19 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 20 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i512 %gmem, void @empty_11, i32, i32, void @empty_7, i32, i32, void @empty_7, void @empty_7, void @empty_7, i32, i32, i32, i32, void @empty_7, void @empty_7"   --->   Operation 20 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 21 [1/1] (0.00ns)   --->   "%specdataflowpipeline_ln88 = specdataflowpipeline void @_ssdm_op_SpecDataflowPipeline, i32, i32, void @empty_7" [/home/centos/workspace/improving_performance_lab/src/wide_vadd_krnl.cpp:88]   --->   Operation 21 'specdataflowpipeline' 'specdataflowpipeline_ln88' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 22 [1/1] (0.00ns)   --->   "%empty = specchannel i32 @_ssdm_op_SpecChannel, void @v1_local_OC_V_str, i32, void @p_str, void @p_str, i32, i32, i512 %v1_local_V, i512 %v1_local_V"   --->   Operation 22 'specchannel' 'empty' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 23 [1/1] (0.00ns)   --->   "%empty_30 = specchannel i32 @_ssdm_op_SpecChannel, void @v1_local_OC_V_str, i32, void @p_str, void @p_str, i32, i32, i512 %v1_local_V, i512 %v1_local_V"   --->   Operation 23 'specchannel' 'empty_30' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 24 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i512 %v1_local_V, void @empty_0, i32, i32, void @empty_7, i32, i32, void @empty_7, void @empty_7, void @empty_7, i32, i32, i32, i32, void @empty_7, void @empty_7"   --->   Operation 24 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 25 [1/1] (0.00ns)   --->   "%empty_31 = specchannel i32 @_ssdm_op_SpecChannel, void @v2_local_OC_V_str, i32, void @p_str, void @p_str, i32, i32, i512 %v2_local_V, i512 %v2_local_V"   --->   Operation 25 'specchannel' 'empty_31' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 26 [1/1] (0.00ns)   --->   "%empty_32 = specchannel i32 @_ssdm_op_SpecChannel, void @v2_local_OC_V_str, i32, void @p_str, void @p_str, i32, i32, i512 %v2_local_V, i512 %v2_local_V"   --->   Operation 26 'specchannel' 'empty_32' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 27 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i512 %v2_local_V, void @empty_0, i32, i32, void @empty_7, i32, i32, void @empty_7, void @empty_7, void @empty_7, i32, i32, i32, i32, void @empty_7, void @empty_7"   --->   Operation 27 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 28 [1/1] (0.00ns)   --->   "%empty_33 = specchannel i32 @_ssdm_op_SpecChannel, void @i_c_str, i32, void @p_str, void @p_str, i32, i32, i64 %i_c, i64 %i_c"   --->   Operation 28 'specchannel' 'empty_33' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 29 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %i_c, void @ap_fifo_str, i32, i32, void @p_str, i32, i32, void @p_str, void @p_str, void @p_str, i32, i32, i32, i32, void @p_str, void @p_str"   --->   Operation 29 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 30 [1/1] (0.00ns)   --->   "%empty_34 = specchannel i32 @_ssdm_op_SpecChannel, void @size_c_str, i32, void @p_str, void @p_str, i32, i32, i32 %size_c, i32 %size_c"   --->   Operation 30 'specchannel' 'empty_34' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 31 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %size_c, void @ap_fifo_str, i32, i32, void @p_str, i32, i32, void @p_str, void @p_str, void @p_str, i32, i32, i32, i32, void @p_str, void @p_str"   --->   Operation 31 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 32 [1/1] (0.00ns)   --->   "%empty_35 = specchannel i32 @_ssdm_op_SpecChannel, void @out_c_str, i32, void @p_str, void @p_str, i32, i32, i64 %out_c, i64 %out_c"   --->   Operation 32 'specchannel' 'empty_35' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 33 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %out_c, void @ap_fifo_str, i32, i32, void @p_str, i32, i32, void @p_str, void @p_str, void @p_str, i32, i32, i32, i32, void @p_str, void @p_str"   --->   Operation 33 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 34 [1/2] (0.00ns)   --->   "%call_ln0 = call void @v2_rd_add_proc, i64 %i_c, i32 %size_c, i512 %v1_local_V, i512 %v2_local_V, i64 %out_c, i512 %gmem2, void %call_ln0, void %call_ln0"   --->   Operation 34 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_4 : Operation 35 [1/1] (0.00ns)   --->   "%ret_ln0 = ret"   --->   Operation 35 'ret' 'ret_ln0' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 4ns, clock uncertainty: 1.08ns.
+
+ <State 1>: 2.6ns
+The critical path consists of the following:
+	wire read on port 'out_r' [9]  (0 ns)
+	'call' operation ('call_ln0') to 'v1_rd_proc5' [35]  (2.6 ns)
+
+ <State 2>: 0ns
+The critical path consists of the following:
+
+ <State 3>: 0ns
+The critical path consists of the following:
+
+ <State 4>: 0ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

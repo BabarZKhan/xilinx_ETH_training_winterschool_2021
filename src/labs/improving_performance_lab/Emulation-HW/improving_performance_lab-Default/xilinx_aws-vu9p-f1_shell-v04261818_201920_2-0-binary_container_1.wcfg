@@ -1,0 +1,946 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <wvobject type="group" fp_name="HLS_Process_Summary_group">
+      <obj_property name="label">HLS Process Summary</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject type="group" fp_name="/emu_wrapper/emu_i/dynamic_region/wide_vadd_1/inst/">
+         <obj_property name="label">/emu_wrapper/emu_i/dynamic_region/wide_vadd_1/inst/</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="group" fp_name="grp_dataflow_in_loop_VITIS_LOOP_88_1_fu_142">
+            <obj_property name="label">grp_dataflow_in_loop_VITIS_LOOP_88_1_fu_142</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="isExpanded"></obj_property>
+            <wvobject type="group" fp_name="/emu_wrapper/emu_i/dynamic_region/wide_vadd_1/inst/grp_dataflow_in_loop_VITIS_LOOP_88_1_fu_142/grp_dataflow_in_loop_VITIS_LOOP_88_1_fu_142">
+               <obj_property name="label">grp_dataflow_in_loop_VITIS_LOOP_88_1_fu_142</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <obj_property name="UseFullPath">true</obj_property>
+               <obj_property name="ElementShortName">grp_dataflow_in_loop_VITIS_LOOP_88_1_fu_142</obj_property>
+               <obj_property name="ObjectShortName">grp_dataflow_in_loop_VITIS_LOOP_88_1_fu_142</obj_property>
+               <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+               <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+               <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+               <obj_property name="CustomSignalColor">turquoise</obj_property>
+               <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+               <obj_property name="Render_Data">/emu_wrapper/emu_i/dynamic_region/wide_vadd_1/inst/grp_dataflow_in_loop_VITIS_LOOP_88_1_fu_142/grp_dataflow_in_loop_VITIS_LOOP_88_1_fu_142.dataflowTxWaveData.Cycles</obj_property>
+               <obj_property name="Value_Data">/emu_wrapper/emu_i/dynamic_region/wide_vadd_1/inst/grp_dataflow_in_loop_VITIS_LOOP_88_1_fu_142/grp_dataflow_in_loop_VITIS_LOOP_88_1_fu_142.dataflowTxWaveData.OutStanding</obj_property>
+               <obj_property name="Detail_Data">/emu_wrapper/emu_i/dynamic_region/wide_vadd_1/inst/grp_dataflow_in_loop_VITIS_LOOP_88_1_fu_142/grp_dataflow_in_loop_VITIS_LOOP_88_1_fu_142.dataflowTxTooltipData</obj_property>
+            </wvobject>
+            <wvobject type="group" fp_name="v1_rd_proc5_U0">
+               <obj_property name="label">v1_rd_proc5_U0</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <obj_property name="isExpanded"></obj_property>
+               <wvobject type="group" fp_name="/emu_wrapper/emu_i/dynamic_region/wide_vadd_1/inst/grp_dataflow_in_loop_VITIS_LOOP_88_1_fu_142/v1_rd_proc5_U0/v1_rd_proc5_U0">
+                  <obj_property name="label">v1_rd_proc5_U0</obj_property>
+                  <obj_property name="DisplayName">label</obj_property>
+                  <obj_property name="UseFullPath">true</obj_property>
+                  <obj_property name="ElementShortName">v1_rd_proc5_U0</obj_property>
+                  <obj_property name="ObjectShortName">v1_rd_proc5_U0</obj_property>
+                  <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+                  <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+                  <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+                  <obj_property name="UseCustomSignalColor">true</obj_property>
+                  <obj_property name="CustomSignalColor">turquoise</obj_property>
+                  <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+                  <obj_property name="Render_Data">/emu_wrapper/emu_i/dynamic_region/wide_vadd_1/inst/grp_dataflow_in_loop_VITIS_LOOP_88_1_fu_142/v1_rd_proc5_U0/v1_rd_proc5_U0.dataflowTxWaveData.Cycles</obj_property>
+                  <obj_property name="Value_Data">/emu_wrapper/emu_i/dynamic_region/wide_vadd_1/inst/grp_dataflow_in_loop_VITIS_LOOP_88_1_fu_142/v1_rd_proc5_U0/v1_rd_proc5_U0.dataflowTxWaveData.OutStanding</obj_property>
+                  <obj_property name="Detail_Data">/emu_wrapper/emu_i/dynamic_region/wide_vadd_1/inst/grp_dataflow_in_loop_VITIS_LOOP_88_1_fu_142/v1_rd_proc5_U0/v1_rd_proc5_U0.dataflowTxTooltipData</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="v2_rd_add_proc_U0">
+               <obj_property name="label">v2_rd_add_proc_U0</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <obj_property name="isExpanded"></obj_property>
+               <wvobject type="group" fp_name="/emu_wrapper/emu_i/dynamic_region/wide_vadd_1/inst/grp_dataflow_in_loop_VITIS_LOOP_88_1_fu_142/v2_rd_add_proc_U0/v2_rd_add_proc_U0">
+                  <obj_property name="label">v2_rd_add_proc_U0</obj_property>
+                  <obj_property name="DisplayName">label</obj_property>
+                  <obj_property name="UseFullPath">true</obj_property>
+                  <obj_property name="ElementShortName">v2_rd_add_proc_U0</obj_property>
+                  <obj_property name="ObjectShortName">v2_rd_add_proc_U0</obj_property>
+                  <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+                  <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+                  <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+                  <obj_property name="UseCustomSignalColor">true</obj_property>
+                  <obj_property name="CustomSignalColor">turquoise</obj_property>
+                  <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+                  <obj_property name="Render_Data">/emu_wrapper/emu_i/dynamic_region/wide_vadd_1/inst/grp_dataflow_in_loop_VITIS_LOOP_88_1_fu_142/v2_rd_add_proc_U0/v2_rd_add_proc_U0.dataflowTxWaveData.Cycles</obj_property>
+                  <obj_property name="Value_Data">/emu_wrapper/emu_i/dynamic_region/wide_vadd_1/inst/grp_dataflow_in_loop_VITIS_LOOP_88_1_fu_142/v2_rd_add_proc_U0/v2_rd_add_proc_U0.dataflowTxWaveData.OutStanding</obj_property>
+                  <obj_property name="Detail_Data">/emu_wrapper/emu_i/dynamic_region/wide_vadd_1/inst/grp_dataflow_in_loop_VITIS_LOOP_88_1_fu_142/v2_rd_add_proc_U0/v2_rd_add_proc_U0.dataflowTxTooltipData</obj_property>
+               </wvobject>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+   </wvobject>
+   <wvobject type="group" fp_name="device_group">
+      <obj_property name="label">Device &quot;xilinx_aws-vu9p-f1_shell-v04261818_201920_2-0&quot;</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject type="group" fp_name="bin_group">
+         <obj_property name="label">Binary Container &quot;binary_container_1&quot;</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="isExpanded"></obj_property>
+         <wvobject type="group" fp_name="kernel_group">
+            <obj_property name="label">Kernel &quot;wide_vadd&quot; 1:1:1</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="isExpanded"></obj_property>
+            <wvobject type="group" fp_name="cu_group">
+               <obj_property name="label">Compute Unit: wide_vadd_1</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <obj_property name="isExpanded"></obj_property>
+               <obj_property name="Description_Data">Activity for compute unit wide_vadd_1</obj_property>
+               <obj_property name="EnumTransactionColorTable">1=blank</obj_property>
+               <obj_property name="EnumTransactionValueTable">1=blank;0=Running</obj_property>
+               <obj_property name="CustomSignalColor">#4DB34D</obj_property>
+               <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+               <obj_property name="Render_Data">/emu_wrapper/emu_i/dynamic_region/wide_vadd_1/inst/ap_idle</obj_property>
+               <wvobject type="vbus" fp_name="stall_vbus">
+                  <obj_property name="label">CU Stalls (%)</obj_property>
+                  <obj_property name="DisplayName">label</obj_property>
+                  <obj_property name="Description_Data">CU Functions that are stalling (%)</obj_property>
+                  <obj_property name="Radix">BITCOUNTRADIX</obj_property>
+                  <obj_property name="SHOWPERCENTCOUNT">true</obj_property>
+                  <obj_property name="ShowWaveText">true</obj_property>
+                  <obj_property name="EnumTransactionColorTable">f=blank</obj_property>
+                  <obj_property name="EnumTransactionValueTable">f=blank</obj_property>
+                  <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+                  <obj_property name="CustomSignalColor">#FF7F27</obj_property>
+                  <obj_property name="UseCustomSignalColor">true</obj_property>
+                  <wvobject db_ref_id="1" type="logic" fp_name="/emu_wrapper/emu_i/dynamic_region/wide_vadd_1/inst/grp_dataflow_in_loop_VITIS_LOOP_88_1_fu_142/v1_rd_proc5_U0/ap_ext_blocking_n">
+                     <obj_property name="label">v1_rd_proc5_U0: External Memory</obj_property>
+                     <obj_property name="Description_Data">Stalls from accessing external memory</obj_property>
+                     <obj_property name="DisplayName">label</obj_property>
+                     <obj_property name="EnumTransactionColorTable">1=blank</obj_property>
+                     <obj_property name="EnumTransactionValueTable">1=blank;0=stall</obj_property>
+                     <obj_property name="ShowWaveText">false</obj_property>
+                     <obj_property name="CustomSignalColor">#FF7F27</obj_property>
+                     <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+                     <obj_property name="UseCustomSignalColor">true</obj_property>
+                  </wvobject>
+                  <wvobject db_ref_id="1" type="logic" fp_name="/emu_wrapper/emu_i/dynamic_region/wide_vadd_1/inst/grp_dataflow_in_loop_VITIS_LOOP_88_1_fu_142/v1_rd_proc5_U0/ap_str_blocking_n">
+                     <obj_property name="label">v1_rd_proc5_U0: External Stream</obj_property>
+                     <obj_property name="Description_Data">Stalls from accessing pipes between compute units</obj_property>
+                     <obj_property name="DisplayName">label</obj_property>
+                     <obj_property name="EnumTransactionColorTable">1=blank</obj_property>
+                     <obj_property name="EnumTransactionValueTable">1=blank;0=stall</obj_property>
+                     <obj_property name="ShowWaveText">false</obj_property>
+                     <obj_property name="CustomSignalColor">#FF7F27</obj_property>
+                     <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+                     <obj_property name="UseCustomSignalColor">true</obj_property>
+                  </wvobject>
+                  <wvobject db_ref_id="1" type="logic" fp_name="/emu_wrapper/emu_i/dynamic_region/wide_vadd_1/inst/grp_dataflow_in_loop_VITIS_LOOP_88_1_fu_142/v2_rd_add_proc_U0/ap_ext_blocking_n">
+                     <obj_property name="label">v2_rd_add_proc_U0: External Memory</obj_property>
+                     <obj_property name="Description_Data">Stalls from accessing external memory</obj_property>
+                     <obj_property name="DisplayName">label</obj_property>
+                     <obj_property name="EnumTransactionColorTable">1=blank</obj_property>
+                     <obj_property name="EnumTransactionValueTable">1=blank;0=stall</obj_property>
+                     <obj_property name="ShowWaveText">false</obj_property>
+                     <obj_property name="CustomSignalColor">#FF7F27</obj_property>
+                     <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+                     <obj_property name="UseCustomSignalColor">true</obj_property>
+                  </wvobject>
+                  <wvobject db_ref_id="1" type="logic" fp_name="/emu_wrapper/emu_i/dynamic_region/wide_vadd_1/inst/grp_dataflow_in_loop_VITIS_LOOP_88_1_fu_142/v2_rd_add_proc_U0/ap_str_blocking_n">
+                     <obj_property name="label">v2_rd_add_proc_U0: External Stream</obj_property>
+                     <obj_property name="Description_Data">Stalls from accessing pipes between compute units</obj_property>
+                     <obj_property name="DisplayName">label</obj_property>
+                     <obj_property name="EnumTransactionColorTable">1=blank</obj_property>
+                     <obj_property name="EnumTransactionValueTable">1=blank;0=stall</obj_property>
+                     <obj_property name="ShowWaveText">false</obj_property>
+                     <obj_property name="CustomSignalColor">#FF7F27</obj_property>
+                     <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+                     <obj_property name="UseCustomSignalColor">true</obj_property>
+                  </wvobject>
+               </wvobject>
+               <wvobject type="group" fp_name="trans_group">
+                  <obj_property name="label">Data Transfers</obj_property>
+                  <obj_property name="DisplayName">label</obj_property>
+                  <obj_property name="isExpanded"></obj_property>
+                  <wvobject type="protoinst" fp_name="/emu_wrapper/emu_i/dynamic_region/wide_vadd_1/m_axi_gmem">
+                  </wvobject>
+                  <wvobject type="protoinst" fp_name="/emu_wrapper/emu_i/dynamic_region/wide_vadd_1/m_axi_gmem1">
+                  </wvobject>
+                  <wvobject type="protoinst" fp_name="/emu_wrapper/emu_i/dynamic_region/wide_vadd_1/m_axi_gmem2">
+                  </wvobject>
+               </wvobject>
+               <wvobject type="group" fp_name="functions">
+                  <obj_property name="label">User Functions</obj_property>
+                  <obj_property name="DisplayName">label</obj_property>
+                  <obj_property name="isExpanded"></obj_property>
+                  <wvobject type="group" fp_name="func_group">
+                     <obj_property name="label">Function: grp_dataflow_in_loop_VITIS_LOOP_88_1_fu_142</obj_property>
+                     <obj_property name="DisplayName">label</obj_property>
+                     <obj_property name="isExpanded"></obj_property>
+                     <obj_property name="Description_Data">Activity for function grp_dataflow_in_loop_VITIS_LOOP_88_1_fu_142</obj_property>
+                     <obj_property name="EnumTransactionColorTable">1=blank</obj_property>
+                     <obj_property name="EnumTransactionValueTable">1=blank;0=Running</obj_property>
+                     <obj_property name="CustomSignalColor">#4DB34D</obj_property>
+                     <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+                     <obj_property name="UseCustomSignalColor">true</obj_property>
+                     <obj_property name="Render_Data">/emu_wrapper/emu_i/dynamic_region/wide_vadd_1/inst/grp_dataflow_in_loop_VITIS_LOOP_88_1_fu_142/ap_idle</obj_property>
+                     <if_functional fp_name="/emu_wrapper/emu_i/dynamic_region/wide_vadd_1/inst/grp_dataflow_in_loop_VITIS_LOOP_88_1_fu_142/grp_dataflow_in_loop_VITIS_LOOP_88_1_fu_142">
+                        <wvobject type="protoinst" fp_name="/emu_wrapper/emu_i/dynamic_region/wide_vadd_1/inst/grp_dataflow_in_loop_VITIS_LOOP_88_1_fu_142/grp_dataflow_in_loop_VITIS_LOOP_88_1_fu_142">
+                           <obj_property name="ElementShortName">Dataflow/Pipeline Activity</obj_property>
+                           <obj_property name="ObjectShortName">Dataflow/Pipeline Activity</obj_property>
+                           <obj_property name="label">Dataflow/Pipeline Activity</obj_property>
+                           <obj_property name="DisplayName">label</obj_property>
+                           <obj_property name="Description_Data">Dataflow/Pipeline Activity for function grp_dataflow_in_loop_VITIS_LOOP_88_1_fu_142</obj_property>
+                        </wvobject>
+                     </if_functional>
+                     <wvobject type="vbus" fp_name="stall_vbus">
+                        <obj_property name="label">Function Stalls</obj_property>
+                        <obj_property name="DisplayName">label</obj_property>
+                        <obj_property name="EnumTransactionColorTable">3=blank</obj_property>
+                        <obj_property name="EnumTransactionValueTable">3=blank;0=stall;1=stall;2=stall</obj_property>
+                        <obj_property name="ShowWaveText">false</obj_property>
+                        <obj_property name="CustomSignalColor">#FF7F27</obj_property>
+                        <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+                        <obj_property name="UseCustomSignalColor">true</obj_property>
+                        <wvobject db_ref_id="1" type="logic" fp_name="/emu_wrapper/emu_i/dynamic_region/wide_vadd_1/inst/grp_dataflow_in_loop_VITIS_LOOP_88_1_fu_142/ap_ext_blocking_n">
+                           <obj_property name="label">External Memory</obj_property>
+                           <obj_property name="DisplayName">label</obj_property>
+                           <obj_property name="EnumTransactionColorTable">1=blank</obj_property>
+                           <obj_property name="EnumTransactionValueTable">1=blank;0=stall</obj_property>
+                           <obj_property name="Description_Data">Stalls from accessing external memory</obj_property>
+                           <obj_property name="ShowWaveText">false</obj_property>
+                           <obj_property name="CustomSignalColor">#FF7F27</obj_property>
+                           <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+                           <obj_property name="UseCustomSignalColor">true</obj_property>
+                        </wvobject>
+                        <wvobject db_ref_id="1" type="logic" fp_name="/emu_wrapper/emu_i/dynamic_region/wide_vadd_1/inst/grp_dataflow_in_loop_VITIS_LOOP_88_1_fu_142/ap_str_blocking_n">
+                           <obj_property name="label">External Stream</obj_property>
+                           <obj_property name="DisplayName">label</obj_property>
+                           <obj_property name="EnumTransactionColorTable">1=blank</obj_property>
+                           <obj_property name="EnumTransactionValueTable">1=blank;0=stall</obj_property>
+                           <obj_property name="Description_Data">Stalls from accessing pipes between compute units</obj_property>
+                           <obj_property name="ShowWaveText">false</obj_property>
+                           <obj_property name="CustomSignalColor">#FF7F27</obj_property>
+                           <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+                           <obj_property name="UseCustomSignalColor">true</obj_property>
+                        </wvobject>
+                     </wvobject>
+                     <wvobject type="group" fp_name="io_group">
+                        <obj_property name="label">Function I/O</obj_property>
+                        <obj_property name="DisplayName">label</obj_property>
+                        <wvobject db_ref_id="1" type="array" fp_name="/emu_wrapper/emu_i/dynamic_region/wide_vadd_1/inst/grp_dataflow_in_loop_VITIS_LOOP_88_1_fu_142/i">
+                           <obj_property name="label">i</obj_property>
+                           <obj_property name="DisplayName">label</obj_property>
+                        </wvobject>
+                        <wvobject db_ref_id="1" type="array" fp_name="/emu_wrapper/emu_i/dynamic_region/wide_vadd_1/inst/grp_dataflow_in_loop_VITIS_LOOP_88_1_fu_142/size">
+                           <obj_property name="label">size</obj_property>
+                           <obj_property name="DisplayName">label</obj_property>
+                        </wvobject>
+                        <wvobject db_ref_id="1" type="array" fp_name="/emu_wrapper/emu_i/dynamic_region/wide_vadd_1/inst/grp_dataflow_in_loop_VITIS_LOOP_88_1_fu_142/in1">
+                           <obj_property name="label">in1</obj_property>
+                           <obj_property name="DisplayName">label</obj_property>
+                        </wvobject>
+                        <wvobject type="group" fp_name="mem_group">
+                           <obj_property name="label">gmem</obj_property>
+                           <obj_property name="DisplayName">label</obj_property>
+                           <obj_property name="isExpanded"></obj_property>
+                           <wvobject type="group" fp_name="addr_group">
+                              <obj_property name="label">Read Address</obj_property>
+                              <obj_property name="DisplayName">label</obj_property>
+                              <obj_property name="isExpanded"></obj_property>
+                              <obj_property name="Description_Data">Read Transactions on function AXI-MM port m_axi_gmem</obj_property>
+                              <wvobject db_ref_id="1" type="array" fp_name="/emu_wrapper/emu_i/dynamic_region/wide_vadd_1/inst/grp_dataflow_in_loop_VITIS_LOOP_88_1_fu_142/m_axi_gmem_ARADDR">
+                                 <obj_property name="label">ARADDR</obj_property>
+                                 <obj_property name="DisplayName">label</obj_property>
+                              </wvobject>
+                              <wvobject db_ref_id="1" type="array" fp_name="/emu_wrapper/emu_i/dynamic_region/wide_vadd_1/inst/grp_dataflow_in_loop_VITIS_LOOP_88_1_fu_142/m_axi_gmem_ARLEN">
+                                 <obj_property name="label">ARLEN</obj_property>
+                                 <obj_property name="DisplayName">label</obj_property>
+                              </wvobject>
+                              <wvobject db_ref_id="1" type="logic" fp_name="/emu_wrapper/emu_i/dynamic_region/wide_vadd_1/inst/grp_dataflow_in_loop_VITIS_LOOP_88_1_fu_142/m_axi_gmem_ARVALID">
+                                 <obj_property name="label">ARVALID</obj_property>
+                                 <obj_property name="DisplayName">label</obj_property>
+                              </wvobject>
+                              <wvobject db_ref_id="1" type="logic" fp_name="/emu_wrapper/emu_i/dynamic_region/wide_vadd_1/inst/grp_dataflow_in_loop_VITIS_LOOP_88_1_fu_142/m_axi_gmem_ARREADY">
+                                 <obj_property name="label">ARREADY</obj_property>
+                                 <obj_property name="DisplayName">label</obj_property>
+                              </wvobject>
+                           </wvobject>
+                           <wvobject type="group" fp_name="data_group">
+                              <obj_property name="label">Read Data</obj_property>
+                              <obj_property name="DisplayName">label</obj_property>
+                              <obj_property name="isExpanded"></obj_property>
+                              <obj_property name="Description_Data">Read Transactions on function AXI-MM port m_axi_gmem</obj_property>
+                              <wvobject db_ref_id="1" type="array" fp_name="/emu_wrapper/emu_i/dynamic_region/wide_vadd_1/inst/grp_dataflow_in_loop_VITIS_LOOP_88_1_fu_142/m_axi_gmem_RDATA">
+                                 <obj_property name="label">RDATA</obj_property>
+                                 <obj_property name="DisplayName">label</obj_property>
+                              </wvobject>
+                              <wvobject db_ref_id="1" type="logic" fp_name="/emu_wrapper/emu_i/dynamic_region/wide_vadd_1/inst/grp_dataflow_in_loop_VITIS_LOOP_88_1_fu_142/m_axi_gmem_RVALID">
+                                 <obj_property name="label">RVALID</obj_property>
+                                 <obj_property name="DisplayName">label</obj_property>
+                              </wvobject>
+                              <wvobject db_ref_id="1" type="logic" fp_name="/emu_wrapper/emu_i/dynamic_region/wide_vadd_1/inst/grp_dataflow_in_loop_VITIS_LOOP_88_1_fu_142/m_axi_gmem_RREADY">
+                                 <obj_property name="label">RREADY</obj_property>
+                                 <obj_property name="DisplayName">label</obj_property>
+                              </wvobject>
+                              <wvobject db_ref_id="1" type="logic" fp_name="/emu_wrapper/emu_i/dynamic_region/wide_vadd_1/inst/grp_dataflow_in_loop_VITIS_LOOP_88_1_fu_142/m_axi_gmem_RLAST">
+                                 <obj_property name="label">RLAST</obj_property>
+                                 <obj_property name="DisplayName">label</obj_property>
+                              </wvobject>
+                           </wvobject>
+                           <wvobject type="group" fp_name="addr_group">
+                              <obj_property name="label">Write Address</obj_property>
+                              <obj_property name="DisplayName">label</obj_property>
+                              <obj_property name="isExpanded"></obj_property>
+                              <obj_property name="Description_Data">Write Transactions on function AXI-MM port m_axi_gmem</obj_property>
+                              <wvobject db_ref_id="1" type="array" fp_name="/emu_wrapper/emu_i/dynamic_region/wide_vadd_1/inst/grp_dataflow_in_loop_VITIS_LOOP_88_1_fu_142/m_axi_gmem_AWADDR">
+                                 <obj_property name="label">AWADDR</obj_property>
+                                 <obj_property name="DisplayName">label</obj_property>
+                              </wvobject>
+                              <wvobject db_ref_id="1" type="array" fp_name="/emu_wrapper/emu_i/dynamic_region/wide_vadd_1/inst/grp_dataflow_in_loop_VITIS_LOOP_88_1_fu_142/m_axi_gmem_AWLEN">
+                                 <obj_property name="label">AWLEN</obj_property>
+                                 <obj_property name="DisplayName">label</obj_property>
+                              </wvobject>
+                              <wvobject db_ref_id="1" type="logic" fp_name="/emu_wrapper/emu_i/dynamic_region/wide_vadd_1/inst/grp_dataflow_in_loop_VITIS_LOOP_88_1_fu_142/m_axi_gmem_AWVALID">
+                                 <obj_property name="label">AWVALID</obj_property>
+                                 <obj_property name="DisplayName">label</obj_property>
+                              </wvobject>
+                              <wvobject db_ref_id="1" type="logic" fp_name="/emu_wrapper/emu_i/dynamic_region/wide_vadd_1/inst/grp_dataflow_in_loop_VITIS_LOOP_88_1_fu_142/m_axi_gmem_AWREADY">
+                                 <obj_property name="label">AWREADY</obj_property>
+                                 <obj_property name="DisplayName">label</obj_property>
+                              </wvobject>
+                           </wvobject>
+                           <wvobject type="group" fp_name="data_group">
+                              <obj_property name="label">Write Data</obj_property>
+                              <obj_property name="DisplayName">label</obj_property>
+                              <obj_property name="isExpanded"></obj_property>
+                              <obj_property name="Description_Data">Write Transactions on function AXI-MM port m_axi_gmem</obj_property>
+                              <wvobject db_ref_id="1" type="array" fp_name="/emu_wrapper/emu_i/dynamic_region/wide_vadd_1/inst/grp_dataflow_in_loop_VITIS_LOOP_88_1_fu_142/m_axi_gmem_WDATA">
+                                 <obj_property name="label">WDATA</obj_property>
+                                 <obj_property name="DisplayName">label</obj_property>
+                              </wvobject>
+                              <wvobject db_ref_id="1" type="logic" fp_name="/emu_wrapper/emu_i/dynamic_region/wide_vadd_1/inst/grp_dataflow_in_loop_VITIS_LOOP_88_1_fu_142/m_axi_gmem_WVALID">
+                                 <obj_property name="label">WVALID</obj_property>
+                                 <obj_property name="DisplayName">label</obj_property>
+                              </wvobject>
+                              <wvobject db_ref_id="1" type="logic" fp_name="/emu_wrapper/emu_i/dynamic_region/wide_vadd_1/inst/grp_dataflow_in_loop_VITIS_LOOP_88_1_fu_142/m_axi_gmem_WREADY">
+                                 <obj_property name="label">WREADY</obj_property>
+                                 <obj_property name="DisplayName">label</obj_property>
+                              </wvobject>
+                              <wvobject db_ref_id="1" type="logic" fp_name="/emu_wrapper/emu_i/dynamic_region/wide_vadd_1/inst/grp_dataflow_in_loop_VITIS_LOOP_88_1_fu_142/m_axi_gmem_WLAST">
+                                 <obj_property name="label">WLAST</obj_property>
+                                 <obj_property name="DisplayName">label</obj_property>
+                              </wvobject>
+                           </wvobject>
+                        </wvobject>
+                        <wvobject db_ref_id="1" type="array" fp_name="/emu_wrapper/emu_i/dynamic_region/wide_vadd_1/inst/grp_dataflow_in_loop_VITIS_LOOP_88_1_fu_142/in2">
+                           <obj_property name="label">in2</obj_property>
+                           <obj_property name="DisplayName">label</obj_property>
+                        </wvobject>
+                        <wvobject type="group" fp_name="mem_group">
+                           <obj_property name="label">gmem1</obj_property>
+                           <obj_property name="DisplayName">label</obj_property>
+                           <obj_property name="isExpanded"></obj_property>
+                           <wvobject type="group" fp_name="addr_group">
+                              <obj_property name="label">Read Address</obj_property>
+                              <obj_property name="DisplayName">label</obj_property>
+                              <obj_property name="isExpanded"></obj_property>
+                              <obj_property name="Description_Data">Read Transactions on function AXI-MM port m_axi_gmem1</obj_property>
+                              <wvobject db_ref_id="1" type="array" fp_name="/emu_wrapper/emu_i/dynamic_region/wide_vadd_1/inst/grp_dataflow_in_loop_VITIS_LOOP_88_1_fu_142/m_axi_gmem1_ARADDR">
+                                 <obj_property name="label">ARADDR</obj_property>
+                                 <obj_property name="DisplayName">label</obj_property>
+                              </wvobject>
+                              <wvobject db_ref_id="1" type="array" fp_name="/emu_wrapper/emu_i/dynamic_region/wide_vadd_1/inst/grp_dataflow_in_loop_VITIS_LOOP_88_1_fu_142/m_axi_gmem1_ARLEN">
+                                 <obj_property name="label">ARLEN</obj_property>
+                                 <obj_property name="DisplayName">label</obj_property>
+                              </wvobject>
+                              <wvobject db_ref_id="1" type="logic" fp_name="/emu_wrapper/emu_i/dynamic_region/wide_vadd_1/inst/grp_dataflow_in_loop_VITIS_LOOP_88_1_fu_142/m_axi_gmem1_ARVALID">
+                                 <obj_property name="label">ARVALID</obj_property>
+                                 <obj_property name="DisplayName">label</obj_property>
+                              </wvobject>
+                              <wvobject db_ref_id="1" type="logic" fp_name="/emu_wrapper/emu_i/dynamic_region/wide_vadd_1/inst/grp_dataflow_in_loop_VITIS_LOOP_88_1_fu_142/m_axi_gmem1_ARREADY">
+                                 <obj_property name="label">ARREADY</obj_property>
+                                 <obj_property name="DisplayName">label</obj_property>
+                              </wvobject>
+                           </wvobject>
+                           <wvobject type="group" fp_name="data_group">
+                              <obj_property name="label">Read Data</obj_property>
+                              <obj_property name="DisplayName">label</obj_property>
+                              <obj_property name="isExpanded"></obj_property>
+                              <obj_property name="Description_Data">Read Transactions on function AXI-MM port m_axi_gmem1</obj_property>
+                              <wvobject db_ref_id="1" type="array" fp_name="/emu_wrapper/emu_i/dynamic_region/wide_vadd_1/inst/grp_dataflow_in_loop_VITIS_LOOP_88_1_fu_142/m_axi_gmem1_RDATA">
+                                 <obj_property name="label">RDATA</obj_property>
+                                 <obj_property name="DisplayName">label</obj_property>
+                              </wvobject>
+                              <wvobject db_ref_id="1" type="logic" fp_name="/emu_wrapper/emu_i/dynamic_region/wide_vadd_1/inst/grp_dataflow_in_loop_VITIS_LOOP_88_1_fu_142/m_axi_gmem1_RVALID">
+                                 <obj_property name="label">RVALID</obj_property>
+                                 <obj_property name="DisplayName">label</obj_property>
+                              </wvobject>
+                              <wvobject db_ref_id="1" type="logic" fp_name="/emu_wrapper/emu_i/dynamic_region/wide_vadd_1/inst/grp_dataflow_in_loop_VITIS_LOOP_88_1_fu_142/m_axi_gmem1_RREADY">
+                                 <obj_property name="label">RREADY</obj_property>
+                                 <obj_property name="DisplayName">label</obj_property>
+                              </wvobject>
+                              <wvobject db_ref_id="1" type="logic" fp_name="/emu_wrapper/emu_i/dynamic_region/wide_vadd_1/inst/grp_dataflow_in_loop_VITIS_LOOP_88_1_fu_142/m_axi_gmem1_RLAST">
+                                 <obj_property name="label">RLAST</obj_property>
+                                 <obj_property name="DisplayName">label</obj_property>
+                              </wvobject>
+                           </wvobject>
+                           <wvobject type="group" fp_name="addr_group">
+                              <obj_property name="label">Write Address</obj_property>
+                              <obj_property name="DisplayName">label</obj_property>
+                              <obj_property name="isExpanded"></obj_property>
+                              <obj_property name="Description_Data">Write Transactions on function AXI-MM port m_axi_gmem1</obj_property>
+                              <wvobject db_ref_id="1" type="array" fp_name="/emu_wrapper/emu_i/dynamic_region/wide_vadd_1/inst/grp_dataflow_in_loop_VITIS_LOOP_88_1_fu_142/m_axi_gmem1_AWADDR">
+                                 <obj_property name="label">AWADDR</obj_property>
+                                 <obj_property name="DisplayName">label</obj_property>
+                              </wvobject>
+                              <wvobject db_ref_id="1" type="array" fp_name="/emu_wrapper/emu_i/dynamic_region/wide_vadd_1/inst/grp_dataflow_in_loop_VITIS_LOOP_88_1_fu_142/m_axi_gmem1_AWLEN">
+                                 <obj_property name="label">AWLEN</obj_property>
+                                 <obj_property name="DisplayName">label</obj_property>
+                              </wvobject>
+                              <wvobject db_ref_id="1" type="logic" fp_name="/emu_wrapper/emu_i/dynamic_region/wide_vadd_1/inst/grp_dataflow_in_loop_VITIS_LOOP_88_1_fu_142/m_axi_gmem1_AWVALID">
+                                 <obj_property name="label">AWVALID</obj_property>
+                                 <obj_property name="DisplayName">label</obj_property>
+                              </wvobject>
+                              <wvobject db_ref_id="1" type="logic" fp_name="/emu_wrapper/emu_i/dynamic_region/wide_vadd_1/inst/grp_dataflow_in_loop_VITIS_LOOP_88_1_fu_142/m_axi_gmem1_AWREADY">
+                                 <obj_property name="label">AWREADY</obj_property>
+                                 <obj_property name="DisplayName">label</obj_property>
+                              </wvobject>
+                           </wvobject>
+                           <wvobject type="group" fp_name="data_group">
+                              <obj_property name="label">Write Data</obj_property>
+                              <obj_property name="DisplayName">label</obj_property>
+                              <obj_property name="isExpanded"></obj_property>
+                              <obj_property name="Description_Data">Write Transactions on function AXI-MM port m_axi_gmem1</obj_property>
+                              <wvobject db_ref_id="1" type="array" fp_name="/emu_wrapper/emu_i/dynamic_region/wide_vadd_1/inst/grp_dataflow_in_loop_VITIS_LOOP_88_1_fu_142/m_axi_gmem1_WDATA">
+                                 <obj_property name="label">WDATA</obj_property>
+                                 <obj_property name="DisplayName">label</obj_property>
+                              </wvobject>
+                              <wvobject db_ref_id="1" type="logic" fp_name="/emu_wrapper/emu_i/dynamic_region/wide_vadd_1/inst/grp_dataflow_in_loop_VITIS_LOOP_88_1_fu_142/m_axi_gmem1_WVALID">
+                                 <obj_property name="label">WVALID</obj_property>
+                                 <obj_property name="DisplayName">label</obj_property>
+                              </wvobject>
+                              <wvobject db_ref_id="1" type="logic" fp_name="/emu_wrapper/emu_i/dynamic_region/wide_vadd_1/inst/grp_dataflow_in_loop_VITIS_LOOP_88_1_fu_142/m_axi_gmem1_WREADY">
+                                 <obj_property name="label">WREADY</obj_property>
+                                 <obj_property name="DisplayName">label</obj_property>
+                              </wvobject>
+                              <wvobject db_ref_id="1" type="logic" fp_name="/emu_wrapper/emu_i/dynamic_region/wide_vadd_1/inst/grp_dataflow_in_loop_VITIS_LOOP_88_1_fu_142/m_axi_gmem1_WLAST">
+                                 <obj_property name="label">WLAST</obj_property>
+                                 <obj_property name="DisplayName">label</obj_property>
+                              </wvobject>
+                           </wvobject>
+                        </wvobject>
+                        <wvobject db_ref_id="1" type="array" fp_name="/emu_wrapper/emu_i/dynamic_region/wide_vadd_1/inst/grp_dataflow_in_loop_VITIS_LOOP_88_1_fu_142/out_r">
+                           <obj_property name="label">out_r</obj_property>
+                           <obj_property name="DisplayName">label</obj_property>
+                        </wvobject>
+                        <wvobject type="group" fp_name="mem_group">
+                           <obj_property name="label">gmem2</obj_property>
+                           <obj_property name="DisplayName">label</obj_property>
+                           <obj_property name="isExpanded"></obj_property>
+                           <wvobject type="group" fp_name="addr_group">
+                              <obj_property name="label">Read Address</obj_property>
+                              <obj_property name="DisplayName">label</obj_property>
+                              <obj_property name="isExpanded"></obj_property>
+                              <obj_property name="Description_Data">Read Transactions on function AXI-MM port m_axi_gmem2</obj_property>
+                              <wvobject db_ref_id="1" type="array" fp_name="/emu_wrapper/emu_i/dynamic_region/wide_vadd_1/inst/grp_dataflow_in_loop_VITIS_LOOP_88_1_fu_142/m_axi_gmem2_ARADDR">
+                                 <obj_property name="label">ARADDR</obj_property>
+                                 <obj_property name="DisplayName">label</obj_property>
+                              </wvobject>
+                              <wvobject db_ref_id="1" type="array" fp_name="/emu_wrapper/emu_i/dynamic_region/wide_vadd_1/inst/grp_dataflow_in_loop_VITIS_LOOP_88_1_fu_142/m_axi_gmem2_ARLEN">
+                                 <obj_property name="label">ARLEN</obj_property>
+                                 <obj_property name="DisplayName">label</obj_property>
+                              </wvobject>
+                              <wvobject db_ref_id="1" type="logic" fp_name="/emu_wrapper/emu_i/dynamic_region/wide_vadd_1/inst/grp_dataflow_in_loop_VITIS_LOOP_88_1_fu_142/m_axi_gmem2_ARVALID">
+                                 <obj_property name="label">ARVALID</obj_property>
+                                 <obj_property name="DisplayName">label</obj_property>
+                              </wvobject>
+                              <wvobject db_ref_id="1" type="logic" fp_name="/emu_wrapper/emu_i/dynamic_region/wide_vadd_1/inst/grp_dataflow_in_loop_VITIS_LOOP_88_1_fu_142/m_axi_gmem2_ARREADY">
+                                 <obj_property name="label">ARREADY</obj_property>
+                                 <obj_property name="DisplayName">label</obj_property>
+                              </wvobject>
+                           </wvobject>
+                           <wvobject type="group" fp_name="data_group">
+                              <obj_property name="label">Read Data</obj_property>
+                              <obj_property name="DisplayName">label</obj_property>
+                              <obj_property name="isExpanded"></obj_property>
+                              <obj_property name="Description_Data">Read Transactions on function AXI-MM port m_axi_gmem2</obj_property>
+                              <wvobject db_ref_id="1" type="array" fp_name="/emu_wrapper/emu_i/dynamic_region/wide_vadd_1/inst/grp_dataflow_in_loop_VITIS_LOOP_88_1_fu_142/m_axi_gmem2_RDATA">
+                                 <obj_property name="label">RDATA</obj_property>
+                                 <obj_property name="DisplayName">label</obj_property>
+                              </wvobject>
+                              <wvobject db_ref_id="1" type="logic" fp_name="/emu_wrapper/emu_i/dynamic_region/wide_vadd_1/inst/grp_dataflow_in_loop_VITIS_LOOP_88_1_fu_142/m_axi_gmem2_RVALID">
+                                 <obj_property name="label">RVALID</obj_property>
+                                 <obj_property name="DisplayName">label</obj_property>
+                              </wvobject>
+                              <wvobject db_ref_id="1" type="logic" fp_name="/emu_wrapper/emu_i/dynamic_region/wide_vadd_1/inst/grp_dataflow_in_loop_VITIS_LOOP_88_1_fu_142/m_axi_gmem2_RREADY">
+                                 <obj_property name="label">RREADY</obj_property>
+                                 <obj_property name="DisplayName">label</obj_property>
+                              </wvobject>
+                              <wvobject db_ref_id="1" type="logic" fp_name="/emu_wrapper/emu_i/dynamic_region/wide_vadd_1/inst/grp_dataflow_in_loop_VITIS_LOOP_88_1_fu_142/m_axi_gmem2_RLAST">
+                                 <obj_property name="label">RLAST</obj_property>
+                                 <obj_property name="DisplayName">label</obj_property>
+                              </wvobject>
+                           </wvobject>
+                           <wvobject type="group" fp_name="addr_group">
+                              <obj_property name="label">Write Address</obj_property>
+                              <obj_property name="DisplayName">label</obj_property>
+                              <obj_property name="isExpanded"></obj_property>
+                              <obj_property name="Description_Data">Write Transactions on function AXI-MM port m_axi_gmem2</obj_property>
+                              <wvobject db_ref_id="1" type="array" fp_name="/emu_wrapper/emu_i/dynamic_region/wide_vadd_1/inst/grp_dataflow_in_loop_VITIS_LOOP_88_1_fu_142/m_axi_gmem2_AWADDR">
+                                 <obj_property name="label">AWADDR</obj_property>
+                                 <obj_property name="DisplayName">label</obj_property>
+                              </wvobject>
+                              <wvobject db_ref_id="1" type="array" fp_name="/emu_wrapper/emu_i/dynamic_region/wide_vadd_1/inst/grp_dataflow_in_loop_VITIS_LOOP_88_1_fu_142/m_axi_gmem2_AWLEN">
+                                 <obj_property name="label">AWLEN</obj_property>
+                                 <obj_property name="DisplayName">label</obj_property>
+                              </wvobject>
+                              <wvobject db_ref_id="1" type="logic" fp_name="/emu_wrapper/emu_i/dynamic_region/wide_vadd_1/inst/grp_dataflow_in_loop_VITIS_LOOP_88_1_fu_142/m_axi_gmem2_AWVALID">
+                                 <obj_property name="label">AWVALID</obj_property>
+                                 <obj_property name="DisplayName">label</obj_property>
+                              </wvobject>
+                              <wvobject db_ref_id="1" type="logic" fp_name="/emu_wrapper/emu_i/dynamic_region/wide_vadd_1/inst/grp_dataflow_in_loop_VITIS_LOOP_88_1_fu_142/m_axi_gmem2_AWREADY">
+                                 <obj_property name="label">AWREADY</obj_property>
+                                 <obj_property name="DisplayName">label</obj_property>
+                              </wvobject>
+                           </wvobject>
+                           <wvobject type="group" fp_name="data_group">
+                              <obj_property name="label">Write Data</obj_property>
+                              <obj_property name="DisplayName">label</obj_property>
+                              <obj_property name="isExpanded"></obj_property>
+                              <obj_property name="Description_Data">Write Transactions on function AXI-MM port m_axi_gmem2</obj_property>
+                              <wvobject db_ref_id="1" type="array" fp_name="/emu_wrapper/emu_i/dynamic_region/wide_vadd_1/inst/grp_dataflow_in_loop_VITIS_LOOP_88_1_fu_142/m_axi_gmem2_WDATA">
+                                 <obj_property name="label">WDATA</obj_property>
+                                 <obj_property name="DisplayName">label</obj_property>
+                              </wvobject>
+                              <wvobject db_ref_id="1" type="logic" fp_name="/emu_wrapper/emu_i/dynamic_region/wide_vadd_1/inst/grp_dataflow_in_loop_VITIS_LOOP_88_1_fu_142/m_axi_gmem2_WVALID">
+                                 <obj_property name="label">WVALID</obj_property>
+                                 <obj_property name="DisplayName">label</obj_property>
+                              </wvobject>
+                              <wvobject db_ref_id="1" type="logic" fp_name="/emu_wrapper/emu_i/dynamic_region/wide_vadd_1/inst/grp_dataflow_in_loop_VITIS_LOOP_88_1_fu_142/m_axi_gmem2_WREADY">
+                                 <obj_property name="label">WREADY</obj_property>
+                                 <obj_property name="DisplayName">label</obj_property>
+                              </wvobject>
+                              <wvobject db_ref_id="1" type="logic" fp_name="/emu_wrapper/emu_i/dynamic_region/wide_vadd_1/inst/grp_dataflow_in_loop_VITIS_LOOP_88_1_fu_142/m_axi_gmem2_WLAST">
+                                 <obj_property name="label">WLAST</obj_property>
+                                 <obj_property name="DisplayName">label</obj_property>
+                              </wvobject>
+                           </wvobject>
+                        </wvobject>
+                     </wvobject>
+                  </wvobject>
+                  <wvobject type="group" fp_name="func_group">
+                     <obj_property name="label">Function: grp_dataflow_in_loop_VITIS_LOOP_88_1_fu_142/v1_rd_proc5_U0</obj_property>
+                     <obj_property name="DisplayName">label</obj_property>
+                     <obj_property name="isExpanded"></obj_property>
+                     <obj_property name="Description_Data">Activity for function grp_dataflow_in_loop_VITIS_LOOP_88_1_fu_142/v1_rd_proc5_U0</obj_property>
+                     <obj_property name="EnumTransactionColorTable">1=blank</obj_property>
+                     <obj_property name="EnumTransactionValueTable">1=blank;0=Running</obj_property>
+                     <obj_property name="CustomSignalColor">#4DB34D</obj_property>
+                     <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+                     <obj_property name="UseCustomSignalColor">true</obj_property>
+                     <obj_property name="Render_Data">/emu_wrapper/emu_i/dynamic_region/wide_vadd_1/inst/grp_dataflow_in_loop_VITIS_LOOP_88_1_fu_142/v1_rd_proc5_U0/ap_idle</obj_property>
+                     <if_functional fp_name="/emu_wrapper/emu_i/dynamic_region/wide_vadd_1/inst/grp_dataflow_in_loop_VITIS_LOOP_88_1_fu_142/v1_rd_proc5_U0/v1_rd_proc5_U0">
+                        <wvobject type="protoinst" fp_name="/emu_wrapper/emu_i/dynamic_region/wide_vadd_1/inst/grp_dataflow_in_loop_VITIS_LOOP_88_1_fu_142/v1_rd_proc5_U0/v1_rd_proc5_U0">
+                           <obj_property name="ElementShortName">Dataflow/Pipeline Activity</obj_property>
+                           <obj_property name="ObjectShortName">Dataflow/Pipeline Activity</obj_property>
+                           <obj_property name="label">Dataflow/Pipeline Activity</obj_property>
+                           <obj_property name="DisplayName">label</obj_property>
+                           <obj_property name="Description_Data">Dataflow/Pipeline Activity for function grp_dataflow_in_loop_VITIS_LOOP_88_1_fu_142/v1_rd_proc5_U0</obj_property>
+                        </wvobject>
+                     </if_functional>
+                     <wvobject type="vbus" fp_name="stall_vbus">
+                        <obj_property name="label">Function Stalls</obj_property>
+                        <obj_property name="DisplayName">label</obj_property>
+                        <obj_property name="EnumTransactionColorTable">3=blank</obj_property>
+                        <obj_property name="EnumTransactionValueTable">3=blank;0=stall;1=stall;2=stall</obj_property>
+                        <obj_property name="ShowWaveText">false</obj_property>
+                        <obj_property name="CustomSignalColor">#FF7F27</obj_property>
+                        <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+                        <obj_property name="UseCustomSignalColor">true</obj_property>
+                        <wvobject db_ref_id="1" type="logic" fp_name="/emu_wrapper/emu_i/dynamic_region/wide_vadd_1/inst/grp_dataflow_in_loop_VITIS_LOOP_88_1_fu_142/v1_rd_proc5_U0/ap_ext_blocking_n">
+                           <obj_property name="label">External Memory</obj_property>
+                           <obj_property name="DisplayName">label</obj_property>
+                           <obj_property name="EnumTransactionColorTable">1=blank</obj_property>
+                           <obj_property name="EnumTransactionValueTable">1=blank;0=stall</obj_property>
+                           <obj_property name="Description_Data">Stalls from accessing external memory</obj_property>
+                           <obj_property name="ShowWaveText">false</obj_property>
+                           <obj_property name="CustomSignalColor">#FF7F27</obj_property>
+                           <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+                           <obj_property name="UseCustomSignalColor">true</obj_property>
+                        </wvobject>
+                        <wvobject db_ref_id="1" type="logic" fp_name="/emu_wrapper/emu_i/dynamic_region/wide_vadd_1/inst/grp_dataflow_in_loop_VITIS_LOOP_88_1_fu_142/v1_rd_proc5_U0/ap_str_blocking_n">
+                           <obj_property name="label">External Stream</obj_property>
+                           <obj_property name="DisplayName">label</obj_property>
+                           <obj_property name="EnumTransactionColorTable">1=blank</obj_property>
+                           <obj_property name="EnumTransactionValueTable">1=blank;0=stall</obj_property>
+                           <obj_property name="Description_Data">Stalls from accessing pipes between compute units</obj_property>
+                           <obj_property name="ShowWaveText">false</obj_property>
+                           <obj_property name="CustomSignalColor">#FF7F27</obj_property>
+                           <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+                           <obj_property name="UseCustomSignalColor">true</obj_property>
+                        </wvobject>
+                     </wvobject>
+                     <wvobject type="group" fp_name="io_group">
+                        <obj_property name="label">Function I/O</obj_property>
+                        <obj_property name="DisplayName">label</obj_property>
+                        <wvobject db_ref_id="1" type="array" fp_name="/emu_wrapper/emu_i/dynamic_region/wide_vadd_1/inst/grp_dataflow_in_loop_VITIS_LOOP_88_1_fu_142/v1_rd_proc5_U0/i">
+                           <obj_property name="label">i</obj_property>
+                           <obj_property name="DisplayName">label</obj_property>
+                        </wvobject>
+                        <wvobject db_ref_id="1" type="array" fp_name="/emu_wrapper/emu_i/dynamic_region/wide_vadd_1/inst/grp_dataflow_in_loop_VITIS_LOOP_88_1_fu_142/v1_rd_proc5_U0/size">
+                           <obj_property name="label">size</obj_property>
+                           <obj_property name="DisplayName">label</obj_property>
+                        </wvobject>
+                        <wvobject db_ref_id="1" type="array" fp_name="/emu_wrapper/emu_i/dynamic_region/wide_vadd_1/inst/grp_dataflow_in_loop_VITIS_LOOP_88_1_fu_142/v1_rd_proc5_U0/in1">
+                           <obj_property name="label">in1</obj_property>
+                           <obj_property name="DisplayName">label</obj_property>
+                        </wvobject>
+                        <wvobject type="group" fp_name="mem_group">
+                           <obj_property name="label">gmem</obj_property>
+                           <obj_property name="DisplayName">label</obj_property>
+                           <obj_property name="isExpanded"></obj_property>
+                           <wvobject type="group" fp_name="addr_group">
+                              <obj_property name="label">Read Address</obj_property>
+                              <obj_property name="DisplayName">label</obj_property>
+                              <obj_property name="isExpanded"></obj_property>
+                              <obj_property name="Description_Data">Read Transactions on function AXI-MM port m_axi_gmem</obj_property>
+                              <wvobject db_ref_id="1" type="array" fp_name="/emu_wrapper/emu_i/dynamic_region/wide_vadd_1/inst/grp_dataflow_in_loop_VITIS_LOOP_88_1_fu_142/v1_rd_proc5_U0/m_axi_gmem_ARADDR">
+                                 <obj_property name="label">ARADDR</obj_property>
+                                 <obj_property name="DisplayName">label</obj_property>
+                              </wvobject>
+                              <wvobject db_ref_id="1" type="array" fp_name="/emu_wrapper/emu_i/dynamic_region/wide_vadd_1/inst/grp_dataflow_in_loop_VITIS_LOOP_88_1_fu_142/v1_rd_proc5_U0/m_axi_gmem_ARLEN">
+                                 <obj_property name="label">ARLEN</obj_property>
+                                 <obj_property name="DisplayName">label</obj_property>
+                              </wvobject>
+                              <wvobject db_ref_id="1" type="logic" fp_name="/emu_wrapper/emu_i/dynamic_region/wide_vadd_1/inst/grp_dataflow_in_loop_VITIS_LOOP_88_1_fu_142/v1_rd_proc5_U0/m_axi_gmem_ARVALID">
+                                 <obj_property name="label">ARVALID</obj_property>
+                                 <obj_property name="DisplayName">label</obj_property>
+                              </wvobject>
+                              <wvobject db_ref_id="1" type="logic" fp_name="/emu_wrapper/emu_i/dynamic_region/wide_vadd_1/inst/grp_dataflow_in_loop_VITIS_LOOP_88_1_fu_142/v1_rd_proc5_U0/m_axi_gmem_ARREADY">
+                                 <obj_property name="label">ARREADY</obj_property>
+                                 <obj_property name="DisplayName">label</obj_property>
+                              </wvobject>
+                           </wvobject>
+                           <wvobject type="group" fp_name="data_group">
+                              <obj_property name="label">Read Data</obj_property>
+                              <obj_property name="DisplayName">label</obj_property>
+                              <obj_property name="isExpanded"></obj_property>
+                              <obj_property name="Description_Data">Read Transactions on function AXI-MM port m_axi_gmem</obj_property>
+                              <wvobject db_ref_id="1" type="array" fp_name="/emu_wrapper/emu_i/dynamic_region/wide_vadd_1/inst/grp_dataflow_in_loop_VITIS_LOOP_88_1_fu_142/v1_rd_proc5_U0/m_axi_gmem_RDATA">
+                                 <obj_property name="label">RDATA</obj_property>
+                                 <obj_property name="DisplayName">label</obj_property>
+                              </wvobject>
+                              <wvobject db_ref_id="1" type="logic" fp_name="/emu_wrapper/emu_i/dynamic_region/wide_vadd_1/inst/grp_dataflow_in_loop_VITIS_LOOP_88_1_fu_142/v1_rd_proc5_U0/m_axi_gmem_RVALID">
+                                 <obj_property name="label">RVALID</obj_property>
+                                 <obj_property name="DisplayName">label</obj_property>
+                              </wvobject>
+                              <wvobject db_ref_id="1" type="logic" fp_name="/emu_wrapper/emu_i/dynamic_region/wide_vadd_1/inst/grp_dataflow_in_loop_VITIS_LOOP_88_1_fu_142/v1_rd_proc5_U0/m_axi_gmem_RREADY">
+                                 <obj_property name="label">RREADY</obj_property>
+                                 <obj_property name="DisplayName">label</obj_property>
+                              </wvobject>
+                              <wvobject db_ref_id="1" type="logic" fp_name="/emu_wrapper/emu_i/dynamic_region/wide_vadd_1/inst/grp_dataflow_in_loop_VITIS_LOOP_88_1_fu_142/v1_rd_proc5_U0/m_axi_gmem_RLAST">
+                                 <obj_property name="label">RLAST</obj_property>
+                                 <obj_property name="DisplayName">label</obj_property>
+                              </wvobject>
+                           </wvobject>
+                           <wvobject type="group" fp_name="addr_group">
+                              <obj_property name="label">Write Address</obj_property>
+                              <obj_property name="DisplayName">label</obj_property>
+                              <obj_property name="isExpanded"></obj_property>
+                              <obj_property name="Description_Data">Write Transactions on function AXI-MM port m_axi_gmem</obj_property>
+                              <wvobject db_ref_id="1" type="array" fp_name="/emu_wrapper/emu_i/dynamic_region/wide_vadd_1/inst/grp_dataflow_in_loop_VITIS_LOOP_88_1_fu_142/v1_rd_proc5_U0/m_axi_gmem_AWADDR">
+                                 <obj_property name="label">AWADDR</obj_property>
+                                 <obj_property name="DisplayName">label</obj_property>
+                              </wvobject>
+                              <wvobject db_ref_id="1" type="array" fp_name="/emu_wrapper/emu_i/dynamic_region/wide_vadd_1/inst/grp_dataflow_in_loop_VITIS_LOOP_88_1_fu_142/v1_rd_proc5_U0/m_axi_gmem_AWLEN">
+                                 <obj_property name="label">AWLEN</obj_property>
+                                 <obj_property name="DisplayName">label</obj_property>
+                              </wvobject>
+                              <wvobject db_ref_id="1" type="logic" fp_name="/emu_wrapper/emu_i/dynamic_region/wide_vadd_1/inst/grp_dataflow_in_loop_VITIS_LOOP_88_1_fu_142/v1_rd_proc5_U0/m_axi_gmem_AWVALID">
+                                 <obj_property name="label">AWVALID</obj_property>
+                                 <obj_property name="DisplayName">label</obj_property>
+                              </wvobject>
+                              <wvobject db_ref_id="1" type="logic" fp_name="/emu_wrapper/emu_i/dynamic_region/wide_vadd_1/inst/grp_dataflow_in_loop_VITIS_LOOP_88_1_fu_142/v1_rd_proc5_U0/m_axi_gmem_AWREADY">
+                                 <obj_property name="label">AWREADY</obj_property>
+                                 <obj_property name="DisplayName">label</obj_property>
+                              </wvobject>
+                           </wvobject>
+                           <wvobject type="group" fp_name="data_group">
+                              <obj_property name="label">Write Data</obj_property>
+                              <obj_property name="DisplayName">label</obj_property>
+                              <obj_property name="isExpanded"></obj_property>
+                              <obj_property name="Description_Data">Write Transactions on function AXI-MM port m_axi_gmem</obj_property>
+                              <wvobject db_ref_id="1" type="array" fp_name="/emu_wrapper/emu_i/dynamic_region/wide_vadd_1/inst/grp_dataflow_in_loop_VITIS_LOOP_88_1_fu_142/v1_rd_proc5_U0/m_axi_gmem_WDATA">
+                                 <obj_property name="label">WDATA</obj_property>
+                                 <obj_property name="DisplayName">label</obj_property>
+                              </wvobject>
+                              <wvobject db_ref_id="1" type="logic" fp_name="/emu_wrapper/emu_i/dynamic_region/wide_vadd_1/inst/grp_dataflow_in_loop_VITIS_LOOP_88_1_fu_142/v1_rd_proc5_U0/m_axi_gmem_WVALID">
+                                 <obj_property name="label">WVALID</obj_property>
+                                 <obj_property name="DisplayName">label</obj_property>
+                              </wvobject>
+                              <wvobject db_ref_id="1" type="logic" fp_name="/emu_wrapper/emu_i/dynamic_region/wide_vadd_1/inst/grp_dataflow_in_loop_VITIS_LOOP_88_1_fu_142/v1_rd_proc5_U0/m_axi_gmem_WREADY">
+                                 <obj_property name="label">WREADY</obj_property>
+                                 <obj_property name="DisplayName">label</obj_property>
+                              </wvobject>
+                              <wvobject db_ref_id="1" type="logic" fp_name="/emu_wrapper/emu_i/dynamic_region/wide_vadd_1/inst/grp_dataflow_in_loop_VITIS_LOOP_88_1_fu_142/v1_rd_proc5_U0/m_axi_gmem_WLAST">
+                                 <obj_property name="label">WLAST</obj_property>
+                                 <obj_property name="DisplayName">label</obj_property>
+                              </wvobject>
+                           </wvobject>
+                        </wvobject>
+                        <wvobject db_ref_id="1" type="array" fp_name="/emu_wrapper/emu_i/dynamic_region/wide_vadd_1/inst/grp_dataflow_in_loop_VITIS_LOOP_88_1_fu_142/v1_rd_proc5_U0/in2">
+                           <obj_property name="label">in2</obj_property>
+                           <obj_property name="DisplayName">label</obj_property>
+                        </wvobject>
+                        <wvobject type="group" fp_name="mem_group">
+                           <obj_property name="label">gmem1</obj_property>
+                           <obj_property name="DisplayName">label</obj_property>
+                           <obj_property name="isExpanded"></obj_property>
+                           <wvobject type="group" fp_name="addr_group">
+                              <obj_property name="label">Read Address</obj_property>
+                              <obj_property name="DisplayName">label</obj_property>
+                              <obj_property name="isExpanded"></obj_property>
+                              <obj_property name="Description_Data">Read Transactions on function AXI-MM port m_axi_gmem1</obj_property>
+                              <wvobject db_ref_id="1" type="array" fp_name="/emu_wrapper/emu_i/dynamic_region/wide_vadd_1/inst/grp_dataflow_in_loop_VITIS_LOOP_88_1_fu_142/v1_rd_proc5_U0/m_axi_gmem1_ARADDR">
+                                 <obj_property name="label">ARADDR</obj_property>
+                                 <obj_property name="DisplayName">label</obj_property>
+                              </wvobject>
+                              <wvobject db_ref_id="1" type="array" fp_name="/emu_wrapper/emu_i/dynamic_region/wide_vadd_1/inst/grp_dataflow_in_loop_VITIS_LOOP_88_1_fu_142/v1_rd_proc5_U0/m_axi_gmem1_ARLEN">
+                                 <obj_property name="label">ARLEN</obj_property>
+                                 <obj_property name="DisplayName">label</obj_property>
+                              </wvobject>
+                              <wvobject db_ref_id="1" type="logic" fp_name="/emu_wrapper/emu_i/dynamic_region/wide_vadd_1/inst/grp_dataflow_in_loop_VITIS_LOOP_88_1_fu_142/v1_rd_proc5_U0/m_axi_gmem1_ARVALID">
+                                 <obj_property name="label">ARVALID</obj_property>
+                                 <obj_property name="DisplayName">label</obj_property>
+                              </wvobject>
+                              <wvobject db_ref_id="1" type="logic" fp_name="/emu_wrapper/emu_i/dynamic_region/wide_vadd_1/inst/grp_dataflow_in_loop_VITIS_LOOP_88_1_fu_142/v1_rd_proc5_U0/m_axi_gmem1_ARREADY">
+                                 <obj_property name="label">ARREADY</obj_property>
+                                 <obj_property name="DisplayName">label</obj_property>
+                              </wvobject>
+                           </wvobject>
+                           <wvobject type="group" fp_name="data_group">
+                              <obj_property name="label">Read Data</obj_property>
+                              <obj_property name="DisplayName">label</obj_property>
+                              <obj_property name="isExpanded"></obj_property>
+                              <obj_property name="Description_Data">Read Transactions on function AXI-MM port m_axi_gmem1</obj_property>
+                              <wvobject db_ref_id="1" type="array" fp_name="/emu_wrapper/emu_i/dynamic_region/wide_vadd_1/inst/grp_dataflow_in_loop_VITIS_LOOP_88_1_fu_142/v1_rd_proc5_U0/m_axi_gmem1_RDATA">
+                                 <obj_property name="label">RDATA</obj_property>
+                                 <obj_property name="DisplayName">label</obj_property>
+                              </wvobject>
+                              <wvobject db_ref_id="1" type="logic" fp_name="/emu_wrapper/emu_i/dynamic_region/wide_vadd_1/inst/grp_dataflow_in_loop_VITIS_LOOP_88_1_fu_142/v1_rd_proc5_U0/m_axi_gmem1_RVALID">
+                                 <obj_property name="label">RVALID</obj_property>
+                                 <obj_property name="DisplayName">label</obj_property>
+                              </wvobject>
+                              <wvobject db_ref_id="1" type="logic" fp_name="/emu_wrapper/emu_i/dynamic_region/wide_vadd_1/inst/grp_dataflow_in_loop_VITIS_LOOP_88_1_fu_142/v1_rd_proc5_U0/m_axi_gmem1_RREADY">
+                                 <obj_property name="label">RREADY</obj_property>
+                                 <obj_property name="DisplayName">label</obj_property>
+                              </wvobject>
+                              <wvobject db_ref_id="1" type="logic" fp_name="/emu_wrapper/emu_i/dynamic_region/wide_vadd_1/inst/grp_dataflow_in_loop_VITIS_LOOP_88_1_fu_142/v1_rd_proc5_U0/m_axi_gmem1_RLAST">
+                                 <obj_property name="label">RLAST</obj_property>
+                                 <obj_property name="DisplayName">label</obj_property>
+                              </wvobject>
+                           </wvobject>
+                           <wvobject type="group" fp_name="addr_group">
+                              <obj_property name="label">Write Address</obj_property>
+                              <obj_property name="DisplayName">label</obj_property>
+                              <obj_property name="isExpanded"></obj_property>
+                              <obj_property name="Description_Data">Write Transactions on function AXI-MM port m_axi_gmem1</obj_property>
+                              <wvobject db_ref_id="1" type="array" fp_name="/emu_wrapper/emu_i/dynamic_region/wide_vadd_1/inst/grp_dataflow_in_loop_VITIS_LOOP_88_1_fu_142/v1_rd_proc5_U0/m_axi_gmem1_AWADDR">
+                                 <obj_property name="label">AWADDR</obj_property>
+                                 <obj_property name="DisplayName">label</obj_property>
+                              </wvobject>
+                              <wvobject db_ref_id="1" type="array" fp_name="/emu_wrapper/emu_i/dynamic_region/wide_vadd_1/inst/grp_dataflow_in_loop_VITIS_LOOP_88_1_fu_142/v1_rd_proc5_U0/m_axi_gmem1_AWLEN">
+                                 <obj_property name="label">AWLEN</obj_property>
+                                 <obj_property name="DisplayName">label</obj_property>
+                              </wvobject>
+                              <wvobject db_ref_id="1" type="logic" fp_name="/emu_wrapper/emu_i/dynamic_region/wide_vadd_1/inst/grp_dataflow_in_loop_VITIS_LOOP_88_1_fu_142/v1_rd_proc5_U0/m_axi_gmem1_AWVALID">
+                                 <obj_property name="label">AWVALID</obj_property>
+                                 <obj_property name="DisplayName">label</obj_property>
+                              </wvobject>
+                              <wvobject db_ref_id="1" type="logic" fp_name="/emu_wrapper/emu_i/dynamic_region/wide_vadd_1/inst/grp_dataflow_in_loop_VITIS_LOOP_88_1_fu_142/v1_rd_proc5_U0/m_axi_gmem1_AWREADY">
+                                 <obj_property name="label">AWREADY</obj_property>
+                                 <obj_property name="DisplayName">label</obj_property>
+                              </wvobject>
+                           </wvobject>
+                           <wvobject type="group" fp_name="data_group">
+                              <obj_property name="label">Write Data</obj_property>
+                              <obj_property name="DisplayName">label</obj_property>
+                              <obj_property name="isExpanded"></obj_property>
+                              <obj_property name="Description_Data">Write Transactions on function AXI-MM port m_axi_gmem1</obj_property>
+                              <wvobject db_ref_id="1" type="array" fp_name="/emu_wrapper/emu_i/dynamic_region/wide_vadd_1/inst/grp_dataflow_in_loop_VITIS_LOOP_88_1_fu_142/v1_rd_proc5_U0/m_axi_gmem1_WDATA">
+                                 <obj_property name="label">WDATA</obj_property>
+                                 <obj_property name="DisplayName">label</obj_property>
+                              </wvobject>
+                              <wvobject db_ref_id="1" type="logic" fp_name="/emu_wrapper/emu_i/dynamic_region/wide_vadd_1/inst/grp_dataflow_in_loop_VITIS_LOOP_88_1_fu_142/v1_rd_proc5_U0/m_axi_gmem1_WVALID">
+                                 <obj_property name="label">WVALID</obj_property>
+                                 <obj_property name="DisplayName">label</obj_property>
+                              </wvobject>
+                              <wvobject db_ref_id="1" type="logic" fp_name="/emu_wrapper/emu_i/dynamic_region/wide_vadd_1/inst/grp_dataflow_in_loop_VITIS_LOOP_88_1_fu_142/v1_rd_proc5_U0/m_axi_gmem1_WREADY">
+                                 <obj_property name="label">WREADY</obj_property>
+                                 <obj_property name="DisplayName">label</obj_property>
+                              </wvobject>
+                              <wvobject db_ref_id="1" type="logic" fp_name="/emu_wrapper/emu_i/dynamic_region/wide_vadd_1/inst/grp_dataflow_in_loop_VITIS_LOOP_88_1_fu_142/v1_rd_proc5_U0/m_axi_gmem1_WLAST">
+                                 <obj_property name="label">WLAST</obj_property>
+                                 <obj_property name="DisplayName">label</obj_property>
+                              </wvobject>
+                           </wvobject>
+                        </wvobject>
+                        <wvobject db_ref_id="1" type="array" fp_name="/emu_wrapper/emu_i/dynamic_region/wide_vadd_1/inst/grp_dataflow_in_loop_VITIS_LOOP_88_1_fu_142/v1_rd_proc5_U0/out_r">
+                           <obj_property name="label">out_r</obj_property>
+                           <obj_property name="DisplayName">label</obj_property>
+                        </wvobject>
+                     </wvobject>
+                  </wvobject>
+                  <wvobject type="group" fp_name="func_group">
+                     <obj_property name="label">Function: grp_dataflow_in_loop_VITIS_LOOP_88_1_fu_142/v2_rd_add_proc_U0</obj_property>
+                     <obj_property name="DisplayName">label</obj_property>
+                     <obj_property name="isExpanded"></obj_property>
+                     <obj_property name="Description_Data">Activity for function grp_dataflow_in_loop_VITIS_LOOP_88_1_fu_142/v2_rd_add_proc_U0</obj_property>
+                     <obj_property name="EnumTransactionColorTable">1=blank</obj_property>
+                     <obj_property name="EnumTransactionValueTable">1=blank;0=Running</obj_property>
+                     <obj_property name="CustomSignalColor">#4DB34D</obj_property>
+                     <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+                     <obj_property name="UseCustomSignalColor">true</obj_property>
+                     <obj_property name="Render_Data">/emu_wrapper/emu_i/dynamic_region/wide_vadd_1/inst/grp_dataflow_in_loop_VITIS_LOOP_88_1_fu_142/v2_rd_add_proc_U0/ap_idle</obj_property>
+                     <if_functional fp_name="/emu_wrapper/emu_i/dynamic_region/wide_vadd_1/inst/grp_dataflow_in_loop_VITIS_LOOP_88_1_fu_142/v2_rd_add_proc_U0/v2_rd_add_proc_U0">
+                        <wvobject type="protoinst" fp_name="/emu_wrapper/emu_i/dynamic_region/wide_vadd_1/inst/grp_dataflow_in_loop_VITIS_LOOP_88_1_fu_142/v2_rd_add_proc_U0/v2_rd_add_proc_U0">
+                           <obj_property name="ElementShortName">Dataflow/Pipeline Activity</obj_property>
+                           <obj_property name="ObjectShortName">Dataflow/Pipeline Activity</obj_property>
+                           <obj_property name="label">Dataflow/Pipeline Activity</obj_property>
+                           <obj_property name="DisplayName">label</obj_property>
+                           <obj_property name="Description_Data">Dataflow/Pipeline Activity for function grp_dataflow_in_loop_VITIS_LOOP_88_1_fu_142/v2_rd_add_proc_U0</obj_property>
+                        </wvobject>
+                     </if_functional>
+                     <wvobject type="vbus" fp_name="stall_vbus">
+                        <obj_property name="label">Function Stalls</obj_property>
+                        <obj_property name="DisplayName">label</obj_property>
+                        <obj_property name="EnumTransactionColorTable">3=blank</obj_property>
+                        <obj_property name="EnumTransactionValueTable">3=blank;0=stall;1=stall;2=stall</obj_property>
+                        <obj_property name="ShowWaveText">false</obj_property>
+                        <obj_property name="CustomSignalColor">#FF7F27</obj_property>
+                        <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+                        <obj_property name="UseCustomSignalColor">true</obj_property>
+                        <wvobject db_ref_id="1" type="logic" fp_name="/emu_wrapper/emu_i/dynamic_region/wide_vadd_1/inst/grp_dataflow_in_loop_VITIS_LOOP_88_1_fu_142/v2_rd_add_proc_U0/ap_ext_blocking_n">
+                           <obj_property name="label">External Memory</obj_property>
+                           <obj_property name="DisplayName">label</obj_property>
+                           <obj_property name="EnumTransactionColorTable">1=blank</obj_property>
+                           <obj_property name="EnumTransactionValueTable">1=blank;0=stall</obj_property>
+                           <obj_property name="Description_Data">Stalls from accessing external memory</obj_property>
+                           <obj_property name="ShowWaveText">false</obj_property>
+                           <obj_property name="CustomSignalColor">#FF7F27</obj_property>
+                           <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+                           <obj_property name="UseCustomSignalColor">true</obj_property>
+                        </wvobject>
+                        <wvobject db_ref_id="1" type="logic" fp_name="/emu_wrapper/emu_i/dynamic_region/wide_vadd_1/inst/grp_dataflow_in_loop_VITIS_LOOP_88_1_fu_142/v2_rd_add_proc_U0/ap_str_blocking_n">
+                           <obj_property name="label">External Stream</obj_property>
+                           <obj_property name="DisplayName">label</obj_property>
+                           <obj_property name="EnumTransactionColorTable">1=blank</obj_property>
+                           <obj_property name="EnumTransactionValueTable">1=blank;0=stall</obj_property>
+                           <obj_property name="Description_Data">Stalls from accessing pipes between compute units</obj_property>
+                           <obj_property name="ShowWaveText">false</obj_property>
+                           <obj_property name="CustomSignalColor">#FF7F27</obj_property>
+                           <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+                           <obj_property name="UseCustomSignalColor">true</obj_property>
+                        </wvobject>
+                     </wvobject>
+                     <wvobject type="group" fp_name="io_group">
+                        <obj_property name="label">Function I/O</obj_property>
+                        <obj_property name="DisplayName">label</obj_property>
+                        <wvobject type="group" fp_name="mem_group">
+                           <obj_property name="label">gmem2</obj_property>
+                           <obj_property name="DisplayName">label</obj_property>
+                           <obj_property name="isExpanded"></obj_property>
+                           <wvobject type="group" fp_name="addr_group">
+                              <obj_property name="label">Read Address</obj_property>
+                              <obj_property name="DisplayName">label</obj_property>
+                              <obj_property name="isExpanded"></obj_property>
+                              <obj_property name="Description_Data">Read Transactions on function AXI-MM port m_axi_gmem2</obj_property>
+                              <wvobject db_ref_id="1" type="array" fp_name="/emu_wrapper/emu_i/dynamic_region/wide_vadd_1/inst/grp_dataflow_in_loop_VITIS_LOOP_88_1_fu_142/v2_rd_add_proc_U0/m_axi_gmem2_ARADDR">
+                                 <obj_property name="label">ARADDR</obj_property>
+                                 <obj_property name="DisplayName">label</obj_property>
+                              </wvobject>
+                              <wvobject db_ref_id="1" type="array" fp_name="/emu_wrapper/emu_i/dynamic_region/wide_vadd_1/inst/grp_dataflow_in_loop_VITIS_LOOP_88_1_fu_142/v2_rd_add_proc_U0/m_axi_gmem2_ARLEN">
+                                 <obj_property name="label">ARLEN</obj_property>
+                                 <obj_property name="DisplayName">label</obj_property>
+                              </wvobject>
+                              <wvobject db_ref_id="1" type="logic" fp_name="/emu_wrapper/emu_i/dynamic_region/wide_vadd_1/inst/grp_dataflow_in_loop_VITIS_LOOP_88_1_fu_142/v2_rd_add_proc_U0/m_axi_gmem2_ARVALID">
+                                 <obj_property name="label">ARVALID</obj_property>
+                                 <obj_property name="DisplayName">label</obj_property>
+                              </wvobject>
+                              <wvobject db_ref_id="1" type="logic" fp_name="/emu_wrapper/emu_i/dynamic_region/wide_vadd_1/inst/grp_dataflow_in_loop_VITIS_LOOP_88_1_fu_142/v2_rd_add_proc_U0/m_axi_gmem2_ARREADY">
+                                 <obj_property name="label">ARREADY</obj_property>
+                                 <obj_property name="DisplayName">label</obj_property>
+                              </wvobject>
+                           </wvobject>
+                           <wvobject type="group" fp_name="data_group">
+                              <obj_property name="label">Read Data</obj_property>
+                              <obj_property name="DisplayName">label</obj_property>
+                              <obj_property name="isExpanded"></obj_property>
+                              <obj_property name="Description_Data">Read Transactions on function AXI-MM port m_axi_gmem2</obj_property>
+                              <wvobject db_ref_id="1" type="array" fp_name="/emu_wrapper/emu_i/dynamic_region/wide_vadd_1/inst/grp_dataflow_in_loop_VITIS_LOOP_88_1_fu_142/v2_rd_add_proc_U0/m_axi_gmem2_RDATA">
+                                 <obj_property name="label">RDATA</obj_property>
+                                 <obj_property name="DisplayName">label</obj_property>
+                              </wvobject>
+                              <wvobject db_ref_id="1" type="logic" fp_name="/emu_wrapper/emu_i/dynamic_region/wide_vadd_1/inst/grp_dataflow_in_loop_VITIS_LOOP_88_1_fu_142/v2_rd_add_proc_U0/m_axi_gmem2_RVALID">
+                                 <obj_property name="label">RVALID</obj_property>
+                                 <obj_property name="DisplayName">label</obj_property>
+                              </wvobject>
+                              <wvobject db_ref_id="1" type="logic" fp_name="/emu_wrapper/emu_i/dynamic_region/wide_vadd_1/inst/grp_dataflow_in_loop_VITIS_LOOP_88_1_fu_142/v2_rd_add_proc_U0/m_axi_gmem2_RREADY">
+                                 <obj_property name="label">RREADY</obj_property>
+                                 <obj_property name="DisplayName">label</obj_property>
+                              </wvobject>
+                              <wvobject db_ref_id="1" type="logic" fp_name="/emu_wrapper/emu_i/dynamic_region/wide_vadd_1/inst/grp_dataflow_in_loop_VITIS_LOOP_88_1_fu_142/v2_rd_add_proc_U0/m_axi_gmem2_RLAST">
+                                 <obj_property name="label">RLAST</obj_property>
+                                 <obj_property name="DisplayName">label</obj_property>
+                              </wvobject>
+                           </wvobject>
+                           <wvobject type="group" fp_name="addr_group">
+                              <obj_property name="label">Write Address</obj_property>
+                              <obj_property name="DisplayName">label</obj_property>
+                              <obj_property name="isExpanded"></obj_property>
+                              <obj_property name="Description_Data">Write Transactions on function AXI-MM port m_axi_gmem2</obj_property>
+                              <wvobject db_ref_id="1" type="array" fp_name="/emu_wrapper/emu_i/dynamic_region/wide_vadd_1/inst/grp_dataflow_in_loop_VITIS_LOOP_88_1_fu_142/v2_rd_add_proc_U0/m_axi_gmem2_AWADDR">
+                                 <obj_property name="label">AWADDR</obj_property>
+                                 <obj_property name="DisplayName">label</obj_property>
+                              </wvobject>
+                              <wvobject db_ref_id="1" type="array" fp_name="/emu_wrapper/emu_i/dynamic_region/wide_vadd_1/inst/grp_dataflow_in_loop_VITIS_LOOP_88_1_fu_142/v2_rd_add_proc_U0/m_axi_gmem2_AWLEN">
+                                 <obj_property name="label">AWLEN</obj_property>
+                                 <obj_property name="DisplayName">label</obj_property>
+                              </wvobject>
+                              <wvobject db_ref_id="1" type="logic" fp_name="/emu_wrapper/emu_i/dynamic_region/wide_vadd_1/inst/grp_dataflow_in_loop_VITIS_LOOP_88_1_fu_142/v2_rd_add_proc_U0/m_axi_gmem2_AWVALID">
+                                 <obj_property name="label">AWVALID</obj_property>
+                                 <obj_property name="DisplayName">label</obj_property>
+                              </wvobject>
+                              <wvobject db_ref_id="1" type="logic" fp_name="/emu_wrapper/emu_i/dynamic_region/wide_vadd_1/inst/grp_dataflow_in_loop_VITIS_LOOP_88_1_fu_142/v2_rd_add_proc_U0/m_axi_gmem2_AWREADY">
+                                 <obj_property name="label">AWREADY</obj_property>
+                                 <obj_property name="DisplayName">label</obj_property>
+                              </wvobject>
+                           </wvobject>
+                           <wvobject type="group" fp_name="data_group">
+                              <obj_property name="label">Write Data</obj_property>
+                              <obj_property name="DisplayName">label</obj_property>
+                              <obj_property name="isExpanded"></obj_property>
+                              <obj_property name="Description_Data">Write Transactions on function AXI-MM port m_axi_gmem2</obj_property>
+                              <wvobject db_ref_id="1" type="array" fp_name="/emu_wrapper/emu_i/dynamic_region/wide_vadd_1/inst/grp_dataflow_in_loop_VITIS_LOOP_88_1_fu_142/v2_rd_add_proc_U0/m_axi_gmem2_WDATA">
+                                 <obj_property name="label">WDATA</obj_property>
+                                 <obj_property name="DisplayName">label</obj_property>
+                              </wvobject>
+                              <wvobject db_ref_id="1" type="logic" fp_name="/emu_wrapper/emu_i/dynamic_region/wide_vadd_1/inst/grp_dataflow_in_loop_VITIS_LOOP_88_1_fu_142/v2_rd_add_proc_U0/m_axi_gmem2_WVALID">
+                                 <obj_property name="label">WVALID</obj_property>
+                                 <obj_property name="DisplayName">label</obj_property>
+                              </wvobject>
+                              <wvobject db_ref_id="1" type="logic" fp_name="/emu_wrapper/emu_i/dynamic_region/wide_vadd_1/inst/grp_dataflow_in_loop_VITIS_LOOP_88_1_fu_142/v2_rd_add_proc_U0/m_axi_gmem2_WREADY">
+                                 <obj_property name="label">WREADY</obj_property>
+                                 <obj_property name="DisplayName">label</obj_property>
+                              </wvobject>
+                              <wvobject db_ref_id="1" type="logic" fp_name="/emu_wrapper/emu_i/dynamic_region/wide_vadd_1/inst/grp_dataflow_in_loop_VITIS_LOOP_88_1_fu_142/v2_rd_add_proc_U0/m_axi_gmem2_WLAST">
+                                 <obj_property name="label">WLAST</obj_property>
+                                 <obj_property name="DisplayName">label</obj_property>
+                              </wvobject>
+                           </wvobject>
+                        </wvobject>
+                     </wvobject>
+                  </wvobject>
+               </wvobject>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+   </wvobject>
+</wave_config>

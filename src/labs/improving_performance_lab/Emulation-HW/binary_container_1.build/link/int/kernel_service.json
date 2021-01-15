@@ -1,0 +1,14 @@
+{
+ "kernels": [],
+ "computeUnits": [
+  {
+   "id": "",
+   "kernelName": "wide_vadd",
+   "cuName": "wide_vadd_1",
+   "baseAddress": "",
+   "instancePath": "/emu_wrapper/emu_i/dynamic_region/wide_vadd_1",
+   "slr": []
+  }
+ ]
+}
+

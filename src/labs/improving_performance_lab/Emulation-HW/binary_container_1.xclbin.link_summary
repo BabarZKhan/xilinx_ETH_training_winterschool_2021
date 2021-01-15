@@ -1,0 +1,1125 @@
+<ENTRY>
+{
+ "thisFile": "/home/centos/workspace/improving_performance_lab/Emulation-HW/binary_container_1.xclbin.link_summary",
+ "connectId": "",
+ "serverToken": "",
+ "timestamp": "0"
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Thu Jan 14 20:07:29 2021",
+ "timestampMillis": "1610654849056",
+ "buildStep": {
+  "cmdId": "0fbfe3d9-95f7-43ed-a2d3-9cdd405dd36f",
+  "name": "v++",
+  "logFile": "/home/centos/workspace/improving_performance_lab/Emulation-HW/binary_container_1.build/link/link.steps.log",
+  "commandLine": "/opt/Xilinx/Vitis/2020.1/bin/unwrapped/lnx64.o/v++ --xp param:compiler.lockFlowCritSlackThreshold=0 --xp vivado_param:hd.routingContainmentAreaExpansion=true --xp vivado_param:hd.supportClockNetCrossDiffReconfigurablePartitions=1 --xp vivado_param:bitstream.enablePR=4123 --xp vivado_param:physynth.ultraRAMOptOutput=false --xp vivado_prop:run.__KERNEL__.{STEPS.SYNTH_DESIGN.ARGS.MAX_URAM_CASCADE_HEIGHT}={1} --xp vivado_param:synth.elaboration.rodinMoreOptions={rt::set_parameter disableOregPackingUram true}  --xp \"vivado_prop:run.__KERNEL__.{STEPS.SYNTH_DESIGN.ARGS.MORE OPTIONS}={-directive sdx_optimization_effort_high}\" --xp \"misc:report=type report_timing_summary name impl_report_timing_summary_route_design_summary steps {route_design} runs {impl_1} options {-max_paths 10}\" --xp \"misc:report=type report_timing_summary name impl_report_timing_summary_post_route_phys_opt_design_summary steps {post_route_phys_opt_design} runs {impl_1} options {-max_paths 10}\" --target hw_emu --link --config common-config.cfg --config binary_container_1-link.cfg -obinary_container_1.xclbin binary_container_1.build/wide_vadd.xo ",
+  "args": [
+   "--xp",
+   "param:compiler.lockFlowCritSlackThreshold=0",
+   "--xp",
+   "vivado_param:hd.routingContainmentAreaExpansion=true",
+   "--xp",
+   "vivado_param:hd.supportClockNetCrossDiffReconfigurablePartitions=1",
+   "--xp",
+   "vivado_param:bitstream.enablePR=4123",
+   "--xp",
+   "vivado_param:physynth.ultraRAMOptOutput=false",
+   "--xp",
+   "vivado_prop:run.__KERNEL__.{STEPS.SYNTH_DESIGN.ARGS.MAX_URAM_CASCADE_HEIGHT}={1}",
+   "--xp",
+   "vivado_param:synth.elaboration.rodinMoreOptions={rt::set_parameter disableOregPackingUram true}",
+   "--target",
+   "hw_emu",
+   "--link",
+   "--config",
+   "common-config.cfg",
+   "--config",
+   "binary_container_1-link.cfg",
+   "-obinary_container_1.xclbin",
+   "binary_container_1.build/wide_vadd.xo"
+  ],
+  "iniFiles": [
+   {
+    "path": "/home/centos/workspace/improving_performance_lab/Emulation-HW/common-config.cfg",
+    "content": "platform=/home/centos/src/project_data/aws-fpga/Vitis/aws_platform/xilinx_aws-vu9p-f1_shell-v04261818_201920_2/xilinx_aws-vu9p-f1_shell-v04261818_201920_2.xpfm\nsave-temps=1\n"
+   },
+   {
+    "path": "/home/centos/workspace/improving_performance_lab/Emulation-HW/binary_container_1-link.cfg",
+    "content": "profile_kernel=exec:wide_vadd:wide_vadd_1:all\nprofile_kernel=data:wide_vadd:wide_vadd_1:in1:all\nprofile_kernel=data:wide_vadd:wide_vadd_1:in2:all\nprofile_kernel=data:wide_vadd:wide_vadd_1:out:all\ndebug=1\nmessageDb=binary_container_1.mdb\ntemp_dir=binary_container_1.build\nreport_dir=binary_container_1.build/reports\nlog_dir=binary_container_1.build/logs\nremote_ip_cache=/home/centos/workspace/ip_cache\n\n[advanced]\nmisc=solution_name=link\n\n[connectivity]\nnk=wide_vadd:1:wide_vadd_1\nslr=wide_vadd_1:SLR2\n"
+   }
+  ],
+  "cwd": "/home/centos/workspace/improving_performance_lab/Emulation-HW"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Jan 14 20:07:29 2021",
+ "timestampMillis": "1610654849057",
+ "status": {
+  "cmdId": "0fbfe3d9-95f7-43ed-a2d3-9cdd405dd36f",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_FlowMetaData",
+ "dateTimestamp": "Thu Jan 14 20:07:43 2021",
+ "timestampMillis": "1610654863566",
+ "buildSummary": {
+  "hardwarePlatform": "xilinx_aws-vu9p-f1_shell-v04261818_201920_2.xpfm",
+  "hardwareDsa": "xilinx_aws-vu9p-f1_shell-v04261818_201920_2.xsa",
+  "platformDirectory": "/home/centos/src/project_data/aws-fpga/Vitis/aws_platform/xilinx_aws-vu9p-f1_shell-v04261818_201920_2",
+  "runtime": "OpenCL",
+  "systemConfig": "Linux",
+  "flow": "BF_LINK",
+  "target": "TT_HW_EMU",
+  "binaryContainer": {
+   "base": {
+    "type": "BT_UKNOWN",
+    "name": "binary_container_1",
+    "file": "/home/centos/workspace/improving_performance_lab/Emulation-HW/binary_container_1.xclbin",
+    "reports": []
+   },
+   "kernels": []
+  },
+  "kernels": [
+   {
+    "base": {
+     "type": "KERNEL",
+     "name": "wide_vadd",
+     "file": "/home/centos/workspace/improving_performance_lab/Emulation-HW/binary_container_1.build/wide_vadd.xo",
+     "reports": []
+    },
+    "sources": [
+     "/home/centos/workspace/improving_performance_lab/Emulation-HW/binary_container_1.build/link/int/xo/wide_vadd/wide_vadd/cpu_sources/wide_vadd_krnl.cpp"
+    ],
+    "psSources": [],
+    "cuNames": [
+     "wide_vadd_1"
+    ],
+    "type": "HLS"
+   }
+  ],
+  "toolVersion": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Thu Jan 14 20:07:43 2021",
+ "timestampMillis": "1610654863711",
+ "buildStep": {
+  "cmdId": "62ae811c-2919-41ed-8402-e818381eff42",
+  "name": "system_link",
+  "logFile": "",
+  "commandLine": "system_link --xo /home/centos/workspace/improving_performance_lab/Emulation-HW/binary_container_1.build/wide_vadd.xo -keep --config /home/centos/workspace/improving_performance_lab/Emulation-HW/binary_container_1.build/link/int/syslinkConfig.ini --xpfm /home/centos/src/project_data/aws-fpga/Vitis/aws_platform/xilinx_aws-vu9p-f1_shell-v04261818_201920_2/xilinx_aws-vu9p-f1_shell-v04261818_201920_2.xpfm --target emu --output_dir /home/centos/workspace/improving_performance_lab/Emulation-HW/binary_container_1.build/link/int --temp_dir /home/centos/workspace/improving_performance_lab/Emulation-HW/binary_container_1.build/link/sys_link",
+  "args": [
+   "--xo",
+   "/home/centos/workspace/improving_performance_lab/Emulation-HW/binary_container_1.build/wide_vadd.xo",
+   "-keep",
+   "--config",
+   "/home/centos/workspace/improving_performance_lab/Emulation-HW/binary_container_1.build/link/int/syslinkConfig.ini",
+   "--xpfm",
+   "/home/centos/src/project_data/aws-fpga/Vitis/aws_platform/xilinx_aws-vu9p-f1_shell-v04261818_201920_2/xilinx_aws-vu9p-f1_shell-v04261818_201920_2.xpfm",
+   "--target",
+   "emu",
+   "--output_dir",
+   "/home/centos/workspace/improving_performance_lab/Emulation-HW/binary_container_1.build/link/int",
+   "--temp_dir",
+   "/home/centos/workspace/improving_performance_lab/Emulation-HW/binary_container_1.build/link/sys_link"
+  ],
+  "iniFiles": [
+   {
+    "path": "/home/centos/workspace/improving_performance_lab/Emulation-HW/binary_container_1.build/link/int/syslinkConfig.ini",
+    "content": "nk=wide_vadd:1:wide_vadd_1\nslr=wide_vadd_1:SLR2\n\n"
+   }
+  ],
+  "cwd": "/home/centos/workspace/improving_performance_lab/Emulation-HW"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Jan 14 20:07:43 2021",
+ "timestampMillis": "1610654863712",
+ "status": {
+  "cmdId": "62ae811c-2919-41ed-8402-e818381eff42",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Jan 14 20:07:57 2021",
+ "timestampMillis": "1610654877796",
+ "status": {
+  "cmdId": "62ae811c-2919-41ed-8402-e818381eff42",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Thu Jan 14 20:07:57 2021",
+ "timestampMillis": "1610654877798",
+ "buildStep": {
+  "cmdId": "0e713b2a-2c5f-4313-972b-577edf077cee",
+  "name": "cf2sw",
+  "logFile": "",
+  "commandLine": "cf2sw -sdsl /home/centos/workspace/improving_performance_lab/Emulation-HW/binary_container_1.build/link/int/sdsl.dat -rtd /home/centos/workspace/improving_performance_lab/Emulation-HW/binary_container_1.build/link/int/cf2sw.rtd -xclbin /home/centos/workspace/improving_performance_lab/Emulation-HW/binary_container_1.build/link/int/xclbin_orig.xml -o /home/centos/workspace/improving_performance_lab/Emulation-HW/binary_container_1.build/link/int/xclbin_orig.1.xml",
+  "args": [
+   "-sdsl",
+   "/home/centos/workspace/improving_performance_lab/Emulation-HW/binary_container_1.build/link/int/sdsl.dat",
+   "-rtd",
+   "/home/centos/workspace/improving_performance_lab/Emulation-HW/binary_container_1.build/link/int/cf2sw.rtd",
+   "-xclbin",
+   "/home/centos/workspace/improving_performance_lab/Emulation-HW/binary_container_1.build/link/int/xclbin_orig.xml",
+   "-o",
+   "/home/centos/workspace/improving_performance_lab/Emulation-HW/binary_container_1.build/link/int/xclbin_orig.1.xml"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/centos/workspace/improving_performance_lab/Emulation-HW"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Jan 14 20:07:57 2021",
+ "timestampMillis": "1610654877799",
+ "status": {
+  "cmdId": "0e713b2a-2c5f-4313-972b-577edf077cee",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Jan 14 20:07:59 2021",
+ "timestampMillis": "1610654879547",
+ "status": {
+  "cmdId": "0e713b2a-2c5f-4313-972b-577edf077cee",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Thu Jan 14 20:07:59 2021",
+ "timestampMillis": "1610654879549",
+ "buildStep": {
+  "cmdId": "d499e8cb-f578-4f5e-a862-69ccded90ac6",
+  "name": "rtd2_system_diagram",
+  "logFile": "",
+  "commandLine": "rtd2SystemDiagram",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/home/centos/workspace/improving_performance_lab/Emulation-HW"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Jan 14 20:07:59 2021",
+ "timestampMillis": "1610654879549",
+ "status": {
+  "cmdId": "d499e8cb-f578-4f5e-a862-69ccded90ac6",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Jan 14 20:08:01 2021",
+ "timestampMillis": "1610654881448",
+ "report": {
+  "path": "/home/centos/workspace/improving_performance_lab/Emulation-HW/binary_container_1.build/link/int/systemDiagramModel.json",
+  "name": "",
+  "fileType": "JSON",
+  "reportType": "SYSTEM_DIAGRAM"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Jan 14 20:08:01 2021",
+ "timestampMillis": "1610654881448",
+ "status": {
+  "cmdId": "d499e8cb-f578-4f5e-a862-69ccded90ac6",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Thu Jan 14 20:08:01 2021",
+ "timestampMillis": "1610654881450",
+ "buildStep": {
+  "cmdId": "2a967964-37df-48c7-84a8-0abd41bb25aa",
+  "name": "vpl",
+  "logFile": "",
+  "commandLine": "vpl -t hw_emu -f /home/centos/src/project_data/aws-fpga/Vitis/aws_platform/xilinx_aws-vu9p-f1_shell-v04261818_201920_2/xilinx_aws-vu9p-f1_shell-v04261818_201920_2.xpfm -g --profile_kernel exec:wide_vadd:wide_vadd_1:all --profile_kernel data:wide_vadd:wide_vadd_1:in1:all --profile_kernel data:wide_vadd:wide_vadd_1:in2:all --profile_kernel data:wide_vadd:wide_vadd_1:out:all --remote_ip_cache /home/centos/workspace/ip_cache -s --output_dir /home/centos/workspace/improving_performance_lab/Emulation-HW/binary_container_1.build/link/int --log_dir /home/centos/workspace/improving_performance_lab/Emulation-HW/binary_container_1.build/logs/link --report_dir /home/centos/workspace/improving_performance_lab/Emulation-HW/binary_container_1.build/reports/link --config /home/centos/workspace/improving_performance_lab/Emulation-HW/binary_container_1.build/link/int/vplConfig.ini -k /home/centos/workspace/improving_performance_lab/Emulation-HW/binary_container_1.build/link/int/kernel_info.dat --webtalk_flag Vitis --temp_dir /home/centos/workspace/improving_performance_lab/Emulation-HW/binary_container_1.build/link --emulation_mode debug_waveform --no-info --iprepo /home/centos/workspace/improving_performance_lab/Emulation-HW/binary_container_1.build/link/int/xo/ip_repo/xilinx_com_hls_wide_vadd_1_0 --messageDb /home/centos/workspace/improving_performance_lab/Emulation-HW/binary_container_1.build/link/run_link/vpl.pb /home/centos/workspace/improving_performance_lab/Emulation-HW/binary_container_1.build/link/int/dr.bd.tcl",
+  "args": [
+   "-t",
+   "hw_emu",
+   "-f",
+   "/home/centos/src/project_data/aws-fpga/Vitis/aws_platform/xilinx_aws-vu9p-f1_shell-v04261818_201920_2/xilinx_aws-vu9p-f1_shell-v04261818_201920_2.xpfm",
+   "-g",
+   "--profile_kernel",
+   "exec:wide_vadd:wide_vadd_1:all",
+   "--profile_kernel",
+   "data:wide_vadd:wide_vadd_1:in1:all",
+   "--profile_kernel",
+   "data:wide_vadd:wide_vadd_1:in2:all",
+   "--profile_kernel",
+   "data:wide_vadd:wide_vadd_1:out:all",
+   "--remote_ip_cache",
+   "/home/centos/workspace/ip_cache",
+   "-s",
+   "--output_dir",
+   "/home/centos/workspace/improving_performance_lab/Emulation-HW/binary_container_1.build/link/int",
+   "--log_dir",
+   "/home/centos/workspace/improving_performance_lab/Emulation-HW/binary_container_1.build/logs/link",
+   "--report_dir",
+   "/home/centos/workspace/improving_performance_lab/Emulation-HW/binary_container_1.build/reports/link",
+   "--config",
+   "/home/centos/workspace/improving_performance_lab/Emulation-HW/binary_container_1.build/link/int/vplConfig.ini",
+   "-k",
+   "/home/centos/workspace/improving_performance_lab/Emulation-HW/binary_container_1.build/link/int/kernel_info.dat",
+   "--webtalk_flag",
+   "Vitis",
+   "--temp_dir",
+   "/home/centos/workspace/improving_performance_lab/Emulation-HW/binary_container_1.build/link",
+   "--emulation_mode",
+   "debug_waveform",
+   "--no-info",
+   "--iprepo",
+   "/home/centos/workspace/improving_performance_lab/Emulation-HW/binary_container_1.build/link/int/xo/ip_repo/xilinx_com_hls_wide_vadd_1_0",
+   "--messageDb",
+   "/home/centos/workspace/improving_performance_lab/Emulation-HW/binary_container_1.build/link/run_link/vpl.pb",
+   "/home/centos/workspace/improving_performance_lab/Emulation-HW/binary_container_1.build/link/int/dr.bd.tcl"
+  ],
+  "iniFiles": [
+   {
+    "path": "/home/centos/workspace/improving_performance_lab/Emulation-HW/binary_container_1.build/link/int/vplConfig.ini",
+    "content": "[advanced]\nparam=compiler.lockFlowCritSlackThreshold=0\nmisc=report=type report_timing_summary name impl_report_timing_summary_route_design_summary steps {route_design} runs {impl_1} options {-max_paths 10}\nmisc=report=type report_timing_summary name impl_report_timing_summary_post_route_phys_opt_design_summary steps {post_route_phys_opt_design} runs {impl_1} options {-max_paths 10}\nparam=compiler.enablePerformanceTrace=1\nmisc=solution_name=link\nparam=hw_emu.enableDebugWaveform=1\nparam=compiler.vppCurrentWorkingDir=/home/centos/workspace/improving_performance_lab/Emulation-HW\nmisc=BinaryName=binary_container_1\n\n[connectivity]\nnk=wide_vadd:1:wide_vadd_1\n\n[vivado]\nparam=hd.routingContainmentAreaExpansion=true\nparam=hd.supportClockNetCrossDiffReconfigurablePartitions=1\nparam=bitstream.enablePR=4123\nparam=physynth.ultraRAMOptOutput=false\nprop=run.__KERNEL__.{STEPS.SYNTH_DESIGN.ARGS.MAX_URAM_CASCADE_HEIGHT}={1}\nparam=synth.elaboration.rodinMoreOptions={rt::set_parameter disableOregPackingUram true}\nprop=run.__KERNEL__.{STEPS.SYNTH_DESIGN.ARGS.MORE OPTIONS}={-directive sdx_optimization_effort_high}\n\n"
+   }
+  ],
+  "cwd": "/home/centos/workspace/improving_performance_lab/Emulation-HW"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Jan 14 20:08:01 2021",
+ "timestampMillis": "1610654881451",
+ "status": {
+  "cmdId": "2a967964-37df-48c7-84a8-0abd41bb25aa",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Thu Jan 14 20:08:04 2021",
+ "timestampMillis": "1610654884098",
+ "buildStep": {
+  "cmdId": "39770bdd-0d10-4b6c-be45-7a6bc2ce1fa9",
+  "name": "vpl",
+  "logFile": "/home/centos/workspace/improving_performance_lab/Emulation-HW/binary_container_1.build/link/link.steps.log",
+  "commandLine": "/opt/Xilinx/Vitis/2020.1/bin/unwrapped/lnx64.o/vpl -t hw_emu -f /home/centos/src/project_data/aws-fpga/Vitis/aws_platform/xilinx_aws-vu9p-f1_shell-v04261818_201920_2/xilinx_aws-vu9p-f1_shell-v04261818_201920_2.xpfm -g --profile_kernel exec:wide_vadd:wide_vadd_1:all --profile_kernel data:wide_vadd:wide_vadd_1:in1:all --profile_kernel data:wide_vadd:wide_vadd_1:in2:all --profile_kernel data:wide_vadd:wide_vadd_1:out:all --remote_ip_cache /home/centos/workspace/ip_cache -s --output_dir /home/centos/workspace/improving_performance_lab/Emulation-HW/binary_container_1.build/link/int --log_dir /home/centos/workspace/improving_performance_lab/Emulation-HW/binary_container_1.build/logs/link --report_dir /home/centos/workspace/improving_performance_lab/Emulation-HW/binary_container_1.build/reports/link --config /home/centos/workspace/improving_performance_lab/Emulation-HW/binary_container_1.build/link/int/vplConfig.ini -k /home/centos/workspace/improving_performance_lab/Emulation-HW/binary_container_1.build/link/int/kernel_info.dat --webtalk_flag Vitis --temp_dir /home/centos/workspace/improving_performance_lab/Emulation-HW/binary_container_1.build/link --emulation_mode debug_waveform --no-info --iprepo /home/centos/workspace/improving_performance_lab/Emulation-HW/binary_container_1.build/link/int/xo/ip_repo/xilinx_com_hls_wide_vadd_1_0 --messageDb /home/centos/workspace/improving_performance_lab/Emulation-HW/binary_container_1.build/link/run_link/vpl.pb /home/centos/workspace/improving_performance_lab/Emulation-HW/binary_container_1.build/link/int/dr.bd.tcl ",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/home/centos/workspace/improving_performance_lab/Emulation-HW/binary_container_1.build/link/run_link"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Jan 14 20:08:04 2021",
+ "timestampMillis": "1610654884098",
+ "status": {
+  "cmdId": "39770bdd-0d10-4b6c-be45-7a6bc2ce1fa9",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_VivadoProject",
+ "dateTimestamp": "Thu Jan 14 20:08:10 2021",
+ "timestampMillis": "1610654890423",
+ "vivadoProject": {
+  "openDir": "/home/centos/workspace/improving_performance_lab/Emulation-HW/binary_container_1.build/link/vivado/vpl",
+  "openScript": "openprj.tcl",
+  "relativeProject": "prj/prj.xpr"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Thu Jan 14 20:08:10 2021",
+ "timestampMillis": "1610654890425",
+ "buildStep": {
+  "cmdId": "cecfb4c5-a677-45b1-a49b-74437926e223",
+  "name": "vivado",
+  "logFile": "/home/centos/workspace/improving_performance_lab/Emulation-HW/binary_container_1.build/link/vivado/vpl/vivado.log",
+  "commandLine": "vivado -log vivado.log -applog -m64 -messageDb vivado.pb -mode batch -source vpl.tcl -notrace",
+  "args": [
+   "-log",
+   "vivado.log",
+   "-applog",
+   " -m64",
+   "-messageDb",
+   "vivado.pb",
+   "-mode",
+   "batch",
+   "-source",
+   "vpl.tcl",
+   "-notrace"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/centos/workspace/improving_performance_lab/Emulation-HW/binary_container_1.build/link/run_link"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Jan 14 20:08:10 2021",
+ "timestampMillis": "1610654890426",
+ "status": {
+  "cmdId": "cecfb4c5-a677-45b1-a49b-74437926e223",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Jan 14 20:14:53 2021",
+ "timestampMillis": "1610655293286",
+ "status": {
+  "cmdId": "cecfb4c5-a677-45b1-a49b-74437926e223",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Jan 14 20:14:53 2021",
+ "timestampMillis": "1610655293442",
+ "status": {
+  "cmdId": "39770bdd-0d10-4b6c-be45-7a6bc2ce1fa9",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Jan 14 20:14:53 2021",
+ "timestampMillis": "1610655293452",
+ "status": {
+  "cmdId": "2a967964-37df-48c7-84a8-0abd41bb25aa",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Thu Jan 14 20:14:53 2021",
+ "timestampMillis": "1610655293454",
+ "buildStep": {
+  "cmdId": "ea5b9186-413f-4bad-875a-57747a42197a",
+  "name": "rtdgen",
+  "logFile": "",
+  "commandLine": "rtdgen",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/home/centos/workspace/improving_performance_lab/Emulation-HW"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Jan 14 20:14:53 2021",
+ "timestampMillis": "1610655293455",
+ "status": {
+  "cmdId": "ea5b9186-413f-4bad-875a-57747a42197a",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Thu Jan 14 20:14:53 2021",
+ "timestampMillis": "1610655293455",
+ "buildStep": {
+  "cmdId": "899ae3c8-2626-49fa-a79a-f82bfc81b4e9",
+  "name": "xrflink",
+  "logFile": "",
+  "commandLine": "/opt/Xilinx/Vitis/2020.1/bin/xrflink -f /home/centos/workspace/improving_performance_lab/Emulation-HW/binary_container_1.build/link/int/consolidated.cf --hls /home/centos/workspace/improving_performance_lab/Emulation-HW/binary_container_1.build/link/int/xo/wide_vadd/wide_vadd/debug/wide_vadd.xrf",
+  "args": [
+   "-f",
+   "/home/centos/workspace/improving_performance_lab/Emulation-HW/binary_container_1.build/link/int/consolidated.cf",
+   "--hls",
+   "/home/centos/workspace/improving_performance_lab/Emulation-HW/binary_container_1.build/link/int/xo/wide_vadd/wide_vadd/debug/wide_vadd.xrf"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/centos/workspace/improving_performance_lab/Emulation-HW"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Jan 14 20:14:53 2021",
+ "timestampMillis": "1610655293456",
+ "status": {
+  "cmdId": "899ae3c8-2626-49fa-a79a-f82bfc81b4e9",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Jan 14 20:14:53 2021",
+ "timestampMillis": "1610655293546",
+ "status": {
+  "cmdId": "899ae3c8-2626-49fa-a79a-f82bfc81b4e9",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Thu Jan 14 20:14:53 2021",
+ "timestampMillis": "1610655293548",
+ "buildStep": {
+  "cmdId": "588c5328-1456-4c26-b344-db927c7ab10e",
+  "name": "gcc",
+  "logFile": "",
+  "commandLine": "/opt/Xilinx/Vitis/2020.1/bin/xcpp -c -g -fPIC /home/centos/workspace/improving_performance_lab/Emulation-HW/binary_container_1.build/link/int/xo/wide_vadd/wide_vadd/cpu_sources/wide_vadd_krnl.cpp -o /home/centos/workspace/improving_performance_lab/Emulation-HW/binary_container_1.build/link/int/xo/wide_vadd/wide_vadd/cpu_sources/wide_vadd_krnl.cpp.o -I/opt/Xilinx/Vivado/2020.1/bin/../include -I/opt/Xilinx/Vitis/2020.1/bin/../include -g -I/home/centos/workspace/improving_performance_lab/src -g",
+  "args": [
+   "-c",
+   "-g",
+   "-fPIC",
+   "/home/centos/workspace/improving_performance_lab/Emulation-HW/binary_container_1.build/link/int/xo/wide_vadd/wide_vadd/cpu_sources/wide_vadd_krnl.cpp",
+   "-o",
+   "/home/centos/workspace/improving_performance_lab/Emulation-HW/binary_container_1.build/link/int/xo/wide_vadd/wide_vadd/cpu_sources/wide_vadd_krnl.cpp.o",
+   "-I/opt/Xilinx/Vivado/2020.1/bin/../include",
+   "-I/opt/Xilinx/Vitis/2020.1/bin/../include",
+   "-g",
+   "-I/home/centos/workspace/improving_performance_lab/src",
+   "-g"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/centos/workspace/improving_performance_lab/Emulation-HW"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Jan 14 20:14:53 2021",
+ "timestampMillis": "1610655293548",
+ "status": {
+  "cmdId": "588c5328-1456-4c26-b344-db927c7ab10e",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Jan 14 20:14:55 2021",
+ "timestampMillis": "1610655295172",
+ "status": {
+  "cmdId": "588c5328-1456-4c26-b344-db927c7ab10e",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Thu Jan 14 20:14:55 2021",
+ "timestampMillis": "1610655295173",
+ "buildStep": {
+  "cmdId": "70e17e0d-9cfc-424d-8549-0eeb98bd7a9c",
+  "name": "ar",
+  "logFile": "",
+  "commandLine": "/opt/Xilinx/Vivado/2020.1/tps/lnx64/binutils-2.26/bin/ar -cr /home/centos/workspace/improving_performance_lab/Emulation-HW/binary_container_1.build/link/int/xo/wide_vadd/wide_vadd/cpu_sources/wide_vadd_krnl.cpp.o.a /home/centos/workspace/improving_performance_lab/Emulation-HW/binary_container_1.build/link/int/xo/wide_vadd/wide_vadd/cpu_sources/wide_vadd_krnl.cpp.o",
+  "args": [
+   "-cr",
+   "/home/centos/workspace/improving_performance_lab/Emulation-HW/binary_container_1.build/link/int/xo/wide_vadd/wide_vadd/cpu_sources/wide_vadd_krnl.cpp.o.a",
+   "/home/centos/workspace/improving_performance_lab/Emulation-HW/binary_container_1.build/link/int/xo/wide_vadd/wide_vadd/cpu_sources/wide_vadd_krnl.cpp.o"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/centos/workspace/improving_performance_lab/Emulation-HW"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Jan 14 20:14:55 2021",
+ "timestampMillis": "1610655295174",
+ "status": {
+  "cmdId": "70e17e0d-9cfc-424d-8549-0eeb98bd7a9c",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Jan 14 20:14:55 2021",
+ "timestampMillis": "1610655295179",
+ "status": {
+  "cmdId": "70e17e0d-9cfc-424d-8549-0eeb98bd7a9c",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Thu Jan 14 20:14:55 2021",
+ "timestampMillis": "1610655295180",
+ "buildStep": {
+  "cmdId": "09180a19-6565-4b07-9c8f-437d8a8bb44f",
+  "name": "g++",
+  "logFile": "/home/centos/workspace/improving_performance_lab/Emulation-HW/binary_container_1.build/link/int/binary_container_1.gpp_so.log",
+  "commandLine": "/opt/Xilinx/Vitis/2020.1/bin/xcpp -Wall -shared -Wl,-whole-archive,-soname,binary_container_1.so -o binary_container_1.so /home/centos/workspace/improving_performance_lab/Emulation-HW/binary_container_1.build/link/int/xo/wide_vadd/wide_vadd/cpu_sources/wide_vadd_krnl.cpp.o.a -Wl,--no-whole-archive",
+  "args": [
+   "-Wall",
+   "-shared",
+   "-Wl,-whole-archive,-soname,binary_container_1.so",
+   "-o",
+   "binary_container_1.so",
+   "/home/centos/workspace/improving_performance_lab/Emulation-HW/binary_container_1.build/link/int/xo/wide_vadd/wide_vadd/cpu_sources/wide_vadd_krnl.cpp.o.a",
+   "-Wl,--no-whole-archive"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/centos/workspace/improving_performance_lab/Emulation-HW"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Jan 14 20:14:55 2021",
+ "timestampMillis": "1610655295181",
+ "status": {
+  "cmdId": "09180a19-6565-4b07-9c8f-437d8a8bb44f",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Jan 14 20:14:55 2021",
+ "timestampMillis": "1610655295256",
+ "status": {
+  "cmdId": "09180a19-6565-4b07-9c8f-437d8a8bb44f",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Thu Jan 14 20:14:55 2021",
+ "timestampMillis": "1610655295257",
+ "buildStep": {
+  "cmdId": "0194b783-b134-436f-a3ee-99486ed61395",
+  "name": "xrflink",
+  "logFile": "",
+  "commandLine": "/opt/Xilinx/Vitis/2020.1/bin/xrflink -f /home/centos/workspace/improving_performance_lab/Emulation-HW/binary_container_1.build/link/int/consolidated.cf --DWARF /home/centos/workspace/improving_performance_lab/Emulation-HW/binary_container_1.build/link/int/binary_container_1.so",
+  "args": [
+   "-f",
+   "/home/centos/workspace/improving_performance_lab/Emulation-HW/binary_container_1.build/link/int/consolidated.cf",
+   "--DWARF",
+   "/home/centos/workspace/improving_performance_lab/Emulation-HW/binary_container_1.build/link/int/binary_container_1.so"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/centos/workspace/improving_performance_lab/Emulation-HW"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Jan 14 20:14:55 2021",
+ "timestampMillis": "1610655295258",
+ "status": {
+  "cmdId": "0194b783-b134-436f-a3ee-99486ed61395",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Jan 14 20:14:55 2021",
+ "timestampMillis": "1610655295349",
+ "status": {
+  "cmdId": "0194b783-b134-436f-a3ee-99486ed61395",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Jan 14 20:14:55 2021",
+ "timestampMillis": "1610655295351",
+ "report": {
+  "path": "/home/centos/workspace/improving_performance_lab/Emulation-HW/binary_container_1.build/link/int/binary_container_1_xml.rtd",
+  "name": "",
+  "fileType": "JSON",
+  "reportType": "XCLBIN_INFO"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Thu Jan 14 20:14:55 2021",
+ "timestampMillis": "1610655295352",
+ "buildStep": {
+  "cmdId": "7fc48777-06cf-4e47-86b4-8eafe9001351",
+  "name": "cf2sw",
+  "logFile": "",
+  "commandLine": "cf2sw -a /home/centos/workspace/improving_performance_lab/Emulation-HW/binary_container_1.build/link/int/address_map.xml -sdsl /home/centos/workspace/improving_performance_lab/Emulation-HW/binary_container_1.build/link/int/sdsl.dat -xclbin /home/centos/workspace/improving_performance_lab/Emulation-HW/binary_container_1.build/link/int/xclbin_orig.xml -rtd /home/centos/workspace/improving_performance_lab/Emulation-HW/binary_container_1.build/link/int/binary_container_1.rtd -o /home/centos/workspace/improving_performance_lab/Emulation-HW/binary_container_1.build/link/int/binary_container_1.xml",
+  "args": [
+   "-a",
+   "/home/centos/workspace/improving_performance_lab/Emulation-HW/binary_container_1.build/link/int/address_map.xml",
+   "-sdsl",
+   "/home/centos/workspace/improving_performance_lab/Emulation-HW/binary_container_1.build/link/int/sdsl.dat",
+   "-xclbin",
+   "/home/centos/workspace/improving_performance_lab/Emulation-HW/binary_container_1.build/link/int/xclbin_orig.xml",
+   "-rtd",
+   "/home/centos/workspace/improving_performance_lab/Emulation-HW/binary_container_1.build/link/int/binary_container_1.rtd",
+   "-o",
+   "/home/centos/workspace/improving_performance_lab/Emulation-HW/binary_container_1.build/link/int/binary_container_1.xml"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/centos/workspace/improving_performance_lab/Emulation-HW"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Jan 14 20:14:55 2021",
+ "timestampMillis": "1610655295353",
+ "status": {
+  "cmdId": "7fc48777-06cf-4e47-86b4-8eafe9001351",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Jan 14 20:14:57 2021",
+ "timestampMillis": "1610655297158",
+ "status": {
+  "cmdId": "7fc48777-06cf-4e47-86b4-8eafe9001351",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Thu Jan 14 20:15:00 2021",
+ "timestampMillis": "1610655300009",
+ "buildStep": {
+  "cmdId": "2dcfeb05-cf58-446e-a5ed-0ea83ebc66c5",
+  "name": "xrflink",
+  "logFile": "",
+  "commandLine": "/opt/Xilinx/Vitis/2020.1/bin/xrflink -f /home/centos/workspace/improving_performance_lab/Emulation-HW/binary_container_1.build/link/int/consolidated.cf --kernel /home/centos/workspace/improving_performance_lab/Emulation-HW/binary_container_1.build/link/int/binary_container_1.xml",
+  "args": [
+   "-f",
+   "/home/centos/workspace/improving_performance_lab/Emulation-HW/binary_container_1.build/link/int/consolidated.cf",
+   "--kernel",
+   "/home/centos/workspace/improving_performance_lab/Emulation-HW/binary_container_1.build/link/int/binary_container_1.xml"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/centos/workspace/improving_performance_lab/Emulation-HW"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Jan 14 20:15:00 2021",
+ "timestampMillis": "1610655300010",
+ "status": {
+  "cmdId": "2dcfeb05-cf58-446e-a5ed-0ea83ebc66c5",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Jan 14 20:15:00 2021",
+ "timestampMillis": "1610655300102",
+ "status": {
+  "cmdId": "2dcfeb05-cf58-446e-a5ed-0ea83ebc66c5",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Thu Jan 14 20:15:00 2021",
+ "timestampMillis": "1610655300103",
+ "buildStep": {
+  "cmdId": "9b8e8dab-daba-41cf-9da4-2f3eeb5980fe",
+  "name": "xrflink",
+  "logFile": "",
+  "commandLine": "/opt/Xilinx/Vitis/2020.1/bin/xrflink -f /home/centos/workspace/improving_performance_lab/Emulation-HW/binary_container_1.build/link/int/consolidated.cf --hierarchy /home/centos/workspace/improving_performance_lab/Emulation-HW/binary_container_1.build/link/int/_kernel_inst_paths.dat",
+  "args": [
+   "-f",
+   "/home/centos/workspace/improving_performance_lab/Emulation-HW/binary_container_1.build/link/int/consolidated.cf",
+   "--hierarchy",
+   "/home/centos/workspace/improving_performance_lab/Emulation-HW/binary_container_1.build/link/int/_kernel_inst_paths.dat"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/centos/workspace/improving_performance_lab/Emulation-HW"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Jan 14 20:15:00 2021",
+ "timestampMillis": "1610655300104",
+ "status": {
+  "cmdId": "9b8e8dab-daba-41cf-9da4-2f3eeb5980fe",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Jan 14 20:15:00 2021",
+ "timestampMillis": "1610655300194",
+ "status": {
+  "cmdId": "9b8e8dab-daba-41cf-9da4-2f3eeb5980fe",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Jan 14 20:15:00 2021",
+ "timestampMillis": "1610655300197",
+ "report": {
+  "path": "/home/centos/workspace/improving_performance_lab/Emulation-HW/binary_container_1.build/link/int/systemDiagramModelSlrBaseAddress.json",
+  "name": "",
+  "fileType": "JSON",
+  "reportType": "SYSTEM_DIAGRAM_PLUS"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Thu Jan 14 20:15:00 2021",
+ "timestampMillis": "1610655300197",
+ "buildStep": {
+  "cmdId": "359bccad-7aeb-469e-8d34-797b743d4915",
+  "name": "rtdgen",
+  "logFile": "",
+  "commandLine": "writeSystemDiagram",
+  "args": [
+   "/home/centos/workspace/improving_performance_lab/Emulation-HW/binary_container_1.build/link/int/binary_container_1.rtd",
+   "/home/centos/workspace/improving_performance_lab/Emulation-HW/binary_container_1.build/link/int/systemDiagramModelSlrBaseAddress.json"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/centos/workspace/improving_performance_lab/Emulation-HW"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Jan 14 20:15:00 2021",
+ "timestampMillis": "1610655300198",
+ "status": {
+  "cmdId": "359bccad-7aeb-469e-8d34-797b743d4915",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Jan 14 20:15:00 2021",
+ "timestampMillis": "1610655300198",
+ "status": {
+  "cmdId": "359bccad-7aeb-469e-8d34-797b743d4915",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Jan 14 20:15:00 2021",
+ "timestampMillis": "1610655300199",
+ "status": {
+  "cmdId": "ea5b9186-413f-4bad-875a-57747a42197a",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Thu Jan 14 20:15:00 2021",
+ "timestampMillis": "1610655300200",
+ "buildStep": {
+  "cmdId": "097e8c8d-1a23-4fb8-a206-993ec9d05991",
+  "name": "xclbinutil",
+  "logFile": "",
+  "commandLine": "xclbinutil --add-section DEBUG_DATA:RAW:/home/centos/workspace/improving_performance_lab/Emulation-HW/binary_container_1.build/link/int/consolidated.cf --add-section DEBUG_IP_LAYOUT:JSON:/home/centos/workspace/improving_performance_lab/Emulation-HW/binary_container_1.build/link/int/debug_ip_layout.rtd --add-section BITSTREAM:RAW:/home/centos/workspace/improving_performance_lab/Emulation-HW/binary_container_1.build/link/int/behav.xse --force --target hw_emu --key-value SYS:dfx_enable:false --add-section :JSON:/home/centos/workspace/improving_performance_lab/Emulation-HW/binary_container_1.build/link/int/binary_container_1.rtd --append-section :JSON:/home/centos/workspace/improving_performance_lab/Emulation-HW/binary_container_1.build/link/int/appendSection.rtd --add-section CLOCK_FREQ_TOPOLOGY:JSON:/home/centos/workspace/improving_performance_lab/Emulation-HW/binary_container_1.build/link/int/binary_container_1_xml.rtd --add-section BUILD_METADATA:JSON:/home/centos/workspace/improving_performance_lab/Emulation-HW/binary_container_1.build/link/int/binary_container_1_build.rtd --add-section EMBEDDED_METADATA:RAW:/home/centos/workspace/improving_performance_lab/Emulation-HW/binary_container_1.build/link/int/binary_container_1.xml --add-section SYSTEM_METADATA:RAW:/home/centos/workspace/improving_performance_lab/Emulation-HW/binary_container_1.build/link/int/systemDiagramModelSlrBaseAddress.json --key-value SYS:PlatformVBNV:xilinx_aws-vu9p-f1_shell-v04261818_201920_2 --output /home/centos/workspace/improving_performance_lab/Emulation-HW/binary_container_1.xclbin",
+  "args": [
+   "--add-section",
+   "DEBUG_DATA:RAW:/home/centos/workspace/improving_performance_lab/Emulation-HW/binary_container_1.build/link/int/consolidated.cf",
+   "--add-section",
+   "DEBUG_IP_LAYOUT:JSON:/home/centos/workspace/improving_performance_lab/Emulation-HW/binary_container_1.build/link/int/debug_ip_layout.rtd",
+   "--add-section",
+   "BITSTREAM:RAW:/home/centos/workspace/improving_performance_lab/Emulation-HW/binary_container_1.build/link/int/behav.xse",
+   "--force",
+   "--target",
+   "hw_emu",
+   "--key-value",
+   "SYS:dfx_enable:false",
+   "--add-section",
+   ":JSON:/home/centos/workspace/improving_performance_lab/Emulation-HW/binary_container_1.build/link/int/binary_container_1.rtd",
+   "--append-section",
+   ":JSON:/home/centos/workspace/improving_performance_lab/Emulation-HW/binary_container_1.build/link/int/appendSection.rtd",
+   "--add-section",
+   "CLOCK_FREQ_TOPOLOGY:JSON:/home/centos/workspace/improving_performance_lab/Emulation-HW/binary_container_1.build/link/int/binary_container_1_xml.rtd",
+   "--add-section",
+   "BUILD_METADATA:JSON:/home/centos/workspace/improving_performance_lab/Emulation-HW/binary_container_1.build/link/int/binary_container_1_build.rtd",
+   "--add-section",
+   "EMBEDDED_METADATA:RAW:/home/centos/workspace/improving_performance_lab/Emulation-HW/binary_container_1.build/link/int/binary_container_1.xml",
+   "--add-section",
+   "SYSTEM_METADATA:RAW:/home/centos/workspace/improving_performance_lab/Emulation-HW/binary_container_1.build/link/int/systemDiagramModelSlrBaseAddress.json",
+   "--key-value",
+   "SYS:PlatformVBNV:xilinx_aws-vu9p-f1_shell-v04261818_201920_2",
+   "--output",
+   "/home/centos/workspace/improving_performance_lab/Emulation-HW/binary_container_1.xclbin"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/centos/workspace/improving_performance_lab/Emulation-HW"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Jan 14 20:15:00 2021",
+ "timestampMillis": "1610655300201",
+ "status": {
+  "cmdId": "097e8c8d-1a23-4fb8-a206-993ec9d05991",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Jan 14 20:15:00 2021",
+ "timestampMillis": "1610655300318",
+ "status": {
+  "cmdId": "097e8c8d-1a23-4fb8-a206-993ec9d05991",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Thu Jan 14 20:15:00 2021",
+ "timestampMillis": "1610655300320",
+ "buildStep": {
+  "cmdId": "bcfe31db-ab73-4cef-a010-970979319f76",
+  "name": "xclbinutilinfo",
+  "logFile": "",
+  "commandLine": "xclbinutil --quiet --force --info /home/centos/workspace/improving_performance_lab/Emulation-HW/binary_container_1.xclbin.info --input /home/centos/workspace/improving_performance_lab/Emulation-HW/binary_container_1.xclbin",
+  "args": [
+   "--quiet",
+   "--force",
+   "--info",
+   "/home/centos/workspace/improving_performance_lab/Emulation-HW/binary_container_1.xclbin.info",
+   "--input",
+   "/home/centos/workspace/improving_performance_lab/Emulation-HW/binary_container_1.xclbin"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/centos/workspace/improving_performance_lab/Emulation-HW"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Jan 14 20:15:00 2021",
+ "timestampMillis": "1610655300320",
+ "status": {
+  "cmdId": "bcfe31db-ab73-4cef-a010-970979319f76",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Jan 14 20:15:00 2021",
+ "timestampMillis": "1610655300693",
+ "status": {
+  "cmdId": "bcfe31db-ab73-4cef-a010-970979319f76",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Thu Jan 14 20:15:00 2021",
+ "timestampMillis": "1610655300694",
+ "buildStep": {
+  "cmdId": "a4fed3d2-fe7f-42b1-b332-cc6186df4331",
+  "name": "generate_sc_driver",
+  "logFile": "",
+  "commandLine": "",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/home/centos/workspace/improving_performance_lab/Emulation-HW"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Jan 14 20:15:00 2021",
+ "timestampMillis": "1610655300695",
+ "status": {
+  "cmdId": "a4fed3d2-fe7f-42b1-b332-cc6186df4331",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Jan 14 20:15:00 2021",
+ "timestampMillis": "1610655300695",
+ "status": {
+  "cmdId": "a4fed3d2-fe7f-42b1-b332-cc6186df4331",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Jan 14 20:15:00 2021",
+ "timestampMillis": "1610655300706",
+ "report": {
+  "path": "/home/centos/workspace/improving_performance_lab/Emulation-HW/binary_container_1.build/reports/link/system_estimate_binary_container_1.xtxt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_SYSTEM_ESTIMATE"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Jan 14 20:15:00 2021",
+ "timestampMillis": "1610655300710",
+ "report": {
+  "path": "/home/centos/workspace/improving_performance_lab/Emulation-HW/guidance.html",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Jan 14 20:15:00 2021",
+ "timestampMillis": "1610655300710",
+ "report": {
+  "path": "/home/centos/workspace/improving_performance_lab/Emulation-HW/guidance.pb",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Jan 14 20:15:00 2021",
+ "timestampMillis": "1610655300711",
+ "report": {
+  "path": "/home/centos/workspace/improving_performance_lab/Emulation-HW/binary_container_1.build/logs/optraceViewer.html",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "OPERATION_TRACE"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Jan 14 20:15:00 2021",
+ "timestampMillis": "1610655300711",
+ "status": {
+  "cmdId": "0fbfe3d9-95f7-43ed-a2d3-9cdd405dd36f",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>

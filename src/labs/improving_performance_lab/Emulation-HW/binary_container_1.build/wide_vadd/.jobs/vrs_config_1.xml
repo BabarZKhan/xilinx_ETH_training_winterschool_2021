@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="0">
+	<Run Id="wide_vadd" LaunchDir="/home/centos/workspace/improving_performance_lab/Emulation-HW/binary_container_1.build/wide_vadd/wide_vadd" FlowId="Build_IP" FromStepId="vitis_hls" ToStepId="vitis_hls"/>
+</Runs>
+

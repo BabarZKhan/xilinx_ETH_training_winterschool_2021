@@ -1,0 +1,1334 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:35 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Thu Jan 14 20:08:13 2021
+# Process ID: 3550
+# Current directory: /home/centos/workspace/improving_performance_lab/Emulation-HW/binary_container_1.build/link/vivado/vpl
+# Command line: vivado -log vivado.log -applog -messageDb vivado.pb -mode batch -source vpl.tcl -notrace
+# Log file: /home/centos/workspace/improving_performance_lab/Emulation-HW/binary_container_1.build/link/vivado/vpl/vivado.log
+# Journal file: /home/centos/workspace/improving_performance_lab/Emulation-HW/binary_container_1.build/link/vivado/vpl/vivado.jou
+#-----------------------------------------------------------
+source vpl.tcl -notrace
+INFO: Dispatch client connection id - 43533
+WARNING: failed to connect to dispatch server - client already initialized
+[20:08:22] Run vpl: Step create_project: Started
+INFO: [OCL_UTIL] current step: vpl.create_project
+Creating Vivado project.
+INFO: [OCL_UTIL] internal step: source .local/hw_platform/emu/dynamic_pre_sys_link.tcl
+INFO: [OCL_UTIL] internal step: create_project -part xcvu9p-flgb2104-2-i -force prj prj
+[20:08:24] Run vpl: Step create_project: Completed
+[20:08:24] Run vpl: Step create_bd: Started
+INFO: [OCL_UTIL] current step: vpl.create_bd
+INFO: [OCL_UTIL] setting ip_repo_paths: .local/hw_platform/emu/user_ip_repo /home/centos/workspace/improving_performance_lab/Emulation-HW/binary_container_1.build/link/int/xo/ip_repo/xilinx_com_hls_wide_vadd_1_0 /opt/Xilinx/Vitis/2020.1/data/cache/xilinx /opt/Xilinx/Vivado/2020.1/data/emulation/hw_em/ip_repo /opt/Xilinx/Vivado/2020.1/data/emulation/hw_em/ip_repo_legacy /opt/Xilinx/Vitis/2020.1/data/ip
+INFO: [OCL_UTIL] internal step: update_ip_catalog
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/centos/workspace/improving_performance_lab/Emulation-HW/binary_container_1.build/link/vivado/vpl/.local/hw_platform/emu/user_ip_repo'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/centos/workspace/improving_performance_lab/Emulation-HW/binary_container_1.build/link/int/xo/ip_repo/xilinx_com_hls_wide_vadd_1_0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/opt/Xilinx/Vitis/2020.1/data/cache/xilinx'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/opt/Xilinx/Vivado/2020.1/data/emulation/hw_em/ip_repo'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/opt/Xilinx/Vivado/2020.1/data/emulation/hw_em/ip_repo_legacy'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/opt/Xilinx/Vitis/2020.1/data/ip'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2020.1/data/ip'.
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'xilinx.com:ip:sdx_memory_subsystem:1.0'. The one found in IP location '/home/centos/workspace/improving_performance_lab/Emulation-HW/binary_container_1.build/link/vivado/vpl/.local/hw_platform/emu/user_ip_repo' will take precedence over the same IP in locations: 
+   /opt/Xilinx/Vivado/2020.1/data/emulation/hw_em/ip_repo_legacy/sim_sdx_memory_subsystem
+   /opt/Xilinx/Vivado/2020.1/data/ip/xilinx/sdx_memory_subsystem_v1_0
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'xilinx.com:ip:sdx_stream_subsystem:1.0'. The one found in IP location '/opt/Xilinx/Vivado/2020.1/data/emulation/hw_em/ip_repo/sim_sdx_stream_subsystem_v1_0' will take precedence over the same IP in the Xilinx installed IP.
+update_ip_catalog: Time (s): cpu = 00:00:06 ; elapsed = 00:00:13 . Memory (MB): peak = 2123.711 ; gain = 0.000 ; free physical = 101164 ; free virtual = 136462
+INFO: [OCL_UTIL] internal step: config_ip_cache -use_cache_location /home/centos/workspace/ip_cache
+INFO: [OCL_UTIL] internal step: import_files -norecurse .local/hw_platform/emu/pfm_dynamic/pfm_dynamic.bd 
+WARNING: [BD 41-1661] One or more IPs have been locked in the design 'pfm_dynamic.bd'. Please run report_ip_status for more details and recommendations on how to fix this issue.
+List of locked IPs:
+pfm_dynamic_to_delete_kernel_ctrl_2_0
+pfm_dynamic_interconnect_axilite_user_2_0
+pfm_dynamic_to_delete_kernel_ctrl_1_0
+pfm_dynamic_user_slr_icn_0
+pfm_dynamic_xlconstant_gnd_0
+pfm_dynamic_to_delete_kernel_ctrl_0_0
+pfm_dynamic_interconnect_axilite_user_0_0
+pfm_dynamic_xbar_0
+pfm_dynamic_interconnect_axilite_user_1_0
+
+WARNING: [IP_Flow 19-2162] IP 'pfm_dynamic_xlconstant_gnd_0' is locked:
+* IP definition 'Constant (1.1)' for IP 'pfm_dynamic_xlconstant_gnd_0' (customized with software release 2019.2) has a different revision in the IP Catalog.
+WARNING: [IP_Flow 19-2162] IP 'pfm_dynamic_xbar_0' is locked:
+* IP definition 'AXI Crossbar (2.1)' for IP 'pfm_dynamic_xbar_0' (customized with software release 2019.2) has a different revision in the IP Catalog.
+WARNING: [IP_Flow 19-2162] IP 'pfm_dynamic_user_slr_icn_0' is locked:
+* IP definition 'AXI Interconnect (2.1)' for IP 'pfm_dynamic_user_slr_icn_0' (customized with software release 2019.2) has a different revision in the IP Catalog.
+WARNING: [IP_Flow 19-2162] IP 'pfm_dynamic_interconnect_axilite_user_0_0' is locked:
+* IP definition 'AXI Interconnect (2.1)' for IP 'pfm_dynamic_interconnect_axilite_user_0_0' (customized with software release 2019.2) has a different revision in the IP Catalog.
+WARNING: [IP_Flow 19-2162] IP 'pfm_dynamic_to_delete_kernel_ctrl_0_0' is locked:
+* IP definition 'AXI GPIO (2.0)' for IP 'pfm_dynamic_to_delete_kernel_ctrl_0_0' (customized with software release 2019.2) has a different revision in the IP Catalog.
+WARNING: [IP_Flow 19-2162] IP 'pfm_dynamic_interconnect_axilite_user_1_0' is locked:
+* IP definition 'AXI Interconnect (2.1)' for IP 'pfm_dynamic_interconnect_axilite_user_1_0' (customized with software release 2019.2) has a different revision in the IP Catalog.
+WARNING: [IP_Flow 19-2162] IP 'pfm_dynamic_to_delete_kernel_ctrl_1_0' is locked:
+* IP definition 'AXI GPIO (2.0)' for IP 'pfm_dynamic_to_delete_kernel_ctrl_1_0' (customized with software release 2019.2) has a different revision in the IP Catalog.
+WARNING: [IP_Flow 19-2162] IP 'pfm_dynamic_interconnect_axilite_user_2_0' is locked:
+* IP definition 'AXI Interconnect (2.1)' for IP 'pfm_dynamic_interconnect_axilite_user_2_0' (customized with software release 2019.2) has a different revision in the IP Catalog.
+WARNING: [IP_Flow 19-2162] IP 'pfm_dynamic_to_delete_kernel_ctrl_2_0' is locked:
+* IP definition 'AXI GPIO (2.0)' for IP 'pfm_dynamic_to_delete_kernel_ctrl_2_0' (customized with software release 2019.2) has a different revision in the IP Catalog.
+import_files: Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 2123.711 ; gain = 0.000 ; free physical = 101013 ; free virtual = 136368
+INFO: [OCL_UTIL] internal step: open_bd_design -auto_upgrade [get_files pfm_dynamic.bd]
+CRITICAL WARNING: [BD 41-1287] Associated interface by name userpf_control_M_AXI_slr1 not found for clock port /dma_pcie_aclk
+CRITICAL WARNING: [BD 41-1287] Associated interface by name userpf_control_M_AXI_slr2 not found for clock port /dma_pcie_aclk
+Adding component instance block -- xilinx.com:ip:sim_clk_gen:1.0 - kernel2_clk
+Adding component instance block -- xilinx.com:ip:sim_clk_gen:1.0 - kernel_clk
+Adding component instance block -- xilinx.com:ip:xtlm_simple_interconnect:1.0 - xtlm_simple_intercon_0
+Adding component instance block -- xilinx.com:ip:xlconcat:2.1 - xlconcat_interrupt
+Adding component instance block -- xilinx.com:ip:xlconcat:2.1 - xlconcat_interrupt_0
+Adding component instance block -- xilinx.com:ip:xlconcat:2.1 - xlconcat_interrupt_1
+Adding component instance block -- xilinx.com:ip:xlconcat:2.1 - xlconcat_interrupt_2
+Adding component instance block -- xilinx.com:ip:xlconcat:2.1 - xlconcat_interrupt_3
+Adding component instance block -- xilinx.com:ip:xlconstant:1.1 - xlconstant_gnd
+Adding component instance block -- xilinx.com:ip:sdx_memory_subsystem:1.0 - memory_subsystem
+Adding component instance block -- xilinx.com:user:sim_ddr:3.0 - sim_ddr_0
+Adding component instance block -- xilinx.com:user:sim_ddr:3.0 - sim_ddr_2
+Adding component instance block -- xilinx.com:user:sim_ddr:3.0 - sim_ddr_3
+Adding component instance block -- xilinx.com:ip:axi_interconnect:2.1 - user_slr_icn
+Adding component instance block -- xilinx.com:ip:axi_crossbar:2.1 - xbar
+Adding component instance block -- xilinx.com:ip:xtlm_simple_interconnect:1.0 - icn_pass_0
+Adding component instance block -- xilinx.com:ip:proc_sys_reset:5.0 - psr_kernel_clk_0
+Adding component instance block -- xilinx.com:ip:proc_sys_reset:5.0 - psr_kernel2_clk_0
+Adding component instance block -- xilinx.com:ip:axi_interconnect:2.1 - interconnect_axilite_user_0
+Adding component instance block -- xilinx.com:ip:axi_gpio:2.0 - to_delete_kernel_ctrl_0
+Adding component instance block -- xilinx.com:ip:xtlm_simple_interconnect:1.0 - icn_pass_1
+Adding component instance block -- xilinx.com:ip:xtlm_simple_interconnect:1.0 - icn_pass_2
+Adding component instance block -- xilinx.com:ip:proc_sys_reset:5.0 - psr_kernel_clk_1
+Adding component instance block -- xilinx.com:ip:proc_sys_reset:5.0 - psr_kernel2_clk_1
+Adding component instance block -- xilinx.com:ip:axi_interconnect:2.1 - interconnect_axilite_user_1
+Adding component instance block -- xilinx.com:ip:axi_gpio:2.0 - to_delete_kernel_ctrl_1
+Adding component instance block -- xilinx.com:ip:xtlm_simple_interconnect:1.0 - icn_pass_3
+Adding component instance block -- xilinx.com:ip:proc_sys_reset:5.0 - psr_kernel_clk_2
+Adding component instance block -- xilinx.com:ip:proc_sys_reset:5.0 - psr_kernel2_clk_2
+Adding component instance block -- xilinx.com:ip:axi_interconnect:2.1 - interconnect_axilite_user_2
+Adding component instance block -- xilinx.com:ip:axi_gpio:2.0 - to_delete_kernel_ctrl_2
+Successfully read diagram <pfm_dynamic> from BD file </home/centos/workspace/improving_performance_lab/Emulation-HW/binary_container_1.build/link/vivado/vpl/prj/prj.srcs/sources_1/bd/pfm_dynamic/pfm_dynamic.bd>
+INFO: [BD 41-1799] The block design contains upgradeable cell(s), automatically upgrading to newest version...
+INFO: [IP_Flow 19-3422] Upgraded pfm_dynamic_user_slr_icn_0 (AXI Interconnect 2.1) from revision 21 to revision 22
+INFO: [IP_Flow 19-3422] Upgraded pfm_dynamic_interconnect_axilite_user_0_0 (AXI Interconnect 2.1) from revision 21 to revision 22
+INFO: [IP_Flow 19-3422] Upgraded pfm_dynamic_interconnect_axilite_user_1_0 (AXI Interconnect 2.1) from revision 21 to revision 22
+INFO: [IP_Flow 19-3422] Upgraded pfm_dynamic_interconnect_axilite_user_2_0 (AXI Interconnect 2.1) from revision 21 to revision 22
+INFO: [BD 41-1799] The block design contains upgradeable cell(s), automatically upgrading to newest version...
+INFO: [IP_Flow 19-3422] Upgraded pfm_dynamic_xlconstant_gnd_0 (Constant 1.1) from revision 6 to revision 7
+INFO: [IP_Flow 19-3422] Upgraded pfm_dynamic_to_delete_kernel_ctrl_0_0 (AXI GPIO 2.0) from revision 22 to revision 23
+INFO: [IP_Flow 19-3422] Upgraded pfm_dynamic_to_delete_kernel_ctrl_1_0 (AXI GPIO 2.0) from revision 22 to revision 23
+INFO: [IP_Flow 19-3422] Upgraded pfm_dynamic_to_delete_kernel_ctrl_2_0 (AXI GPIO 2.0) from revision 22 to revision 23
+Wrote  : </home/centos/workspace/improving_performance_lab/Emulation-HW/binary_container_1.build/link/vivado/vpl/prj/prj.srcs/sources_1/bd/pfm_dynamic/pfm_dynamic.bd> 
+open_bd_design: Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 2187.629 ; gain = 21.055 ; free physical = 100899 ; free virtual = 136254
+INFO: [OCL_UTIL] internal step: report locked IPs
+INFO: [OCL_UTIL] internal step: source .local/dr.bd.tcl
+CRITICAL WARNING: [xilinx.com:ip:sdx_memory_subsystem:1.0-1] pfm_dynamic_memory_subsystem_0: Invalid entry (sim_props) detected in __temp_dsa_info of CONFIG.ADVANCED_PROPERTIES.
+CRITICAL WARNING: [xilinx.com:ip:sdx_memory_subsystem:1.0-1] pfm_dynamic_memory_subsystem_0: Invalid entry (slr_pblock_map) detected in __temp_dsa_info of CONFIG.ADVANCED_PROPERTIES.
+CRITICAL WARNING: [xilinx.com:ip:sdx_memory_subsystem:1.0-1] pfm_dynamic_memory_subsystem_0: Invalid entry (child_pblock_declarations) detected in __temp_dsa_info of CONFIG.ADVANCED_PROPERTIES.
+CRITICAL WARNING: [xilinx.com:ip:sdx_memory_subsystem:1.0-1] pfm_dynamic_memory_subsystem_0: Invalid entry (board_component_slr_map) detected in __temp_dsa_info of CONFIG.ADVANCED_PROPERTIES.
+INFO: [xilinx.com:ip:sdx_memory_subsystem:1.0-1] pfm_dynamic_memory_subsystem_0: Vivado project has no BOARD_PART set.   No DDR4 resources will be generated.
+!!!  (0 , 0) : /S00_AXI
+!!!!
+!!!  (1 , 0) : /S01_AXI
+!!!!
+!!!  (2 , 0) : /S02_AXI
+!!!!
+!!!  (3 , 0) : /S03_AXI
+!!!!
+!!!  (4 , 0) : /S04_AXI
+!!!!
+!!!  (0 , 0) : /S00_AXI
+!!!!
+!!!  (1 , 0) : /S01_AXI
+!!!!
+!!!  (2 , 0) : /S02_AXI
+!!!!
+!!!  (3 , 0) : /S03_AXI
+!!!!
+!!!  (4 , 0) : /S04_AXI
+!!!!
+!!!  (0 , 0) : /S00_AXI
+!!!!
+!!!  (1 , 0) : /S01_AXI
+!!!!
+!!!  (2 , 0) : /S02_AXI
+!!!!
+!!!  (3 , 0) : /S03_AXI
+!!!!
+!!!  (4 , 0) : /S04_AXI
+!!!!
+!!!  (0 , 0) : /S00_AXI
+!!!!
+!!!  (1 , 0) : /S01_AXI
+!!!!
+!!!  (2 , 0) : /S02_AXI
+!!!!
+!!!  (3 , 0) : /S03_AXI
+!!!!
+!!!  (4 , 0) : /S04_AXI
+!!!!
+CRITICAL WARNING: [xilinx.com:ip:sdx_memory_subsystem:1.0-1] pfm_dynamic_memory_subsystem_0: Invalid entry (sim_props) detected in __temp_dsa_info of CONFIG.ADVANCED_PROPERTIES.
+CRITICAL WARNING: [xilinx.com:ip:sdx_memory_subsystem:1.0-1] pfm_dynamic_memory_subsystem_0: Invalid entry (slr_pblock_map) detected in __temp_dsa_info of CONFIG.ADVANCED_PROPERTIES.
+CRITICAL WARNING: [xilinx.com:ip:sdx_memory_subsystem:1.0-1] pfm_dynamic_memory_subsystem_0: Invalid entry (child_pblock_declarations) detected in __temp_dsa_info of CONFIG.ADVANCED_PROPERTIES.
+CRITICAL WARNING: [xilinx.com:ip:sdx_memory_subsystem:1.0-1] pfm_dynamic_memory_subsystem_0: Invalid entry (board_component_slr_map) detected in __temp_dsa_info of CONFIG.ADVANCED_PROPERTIES.
+INFO: [xilinx.com:ip:sdx_memory_subsystem:1.0-1] pfm_dynamic_memory_subsystem_0: Vivado project has no BOARD_PART set.   No DDR4 resources will be generated.
+!!!  (0 , 0) : /S00_AXI
+!!!!
+!!!  (1 , 0) : /S01_AXI
+!!!!
+!!!  (2 , 0) : /S02_AXI
+!!!!
+!!!  (3 , 0) : /S03_AXI
+!!!!
+!!!  (4 , 0) : /S04_AXI
+!!!!
+!!!  (0 , 0) : /S00_AXI
+!!!!
+!!!  (1 , 0) : /S01_AXI
+!!!!
+!!!  (2 , 0) : /S02_AXI
+!!!!
+!!!  (3 , 0) : /S03_AXI
+!!!!
+!!!  (4 , 0) : /S04_AXI
+!!!!
+!!!  (0 , 0) : /S00_AXI
+!!!!
+!!!  (1 , 0) : /S01_AXI
+!!!!
+!!!  (2 , 0) : /S02_AXI
+!!!!
+!!!  (3 , 0) : /S03_AXI
+!!!!
+!!!  (4 , 0) : /S04_AXI
+!!!!
+!!!  (0 , 0) : /S00_AXI
+!!!!
+!!!  (1 , 0) : /S01_AXI
+!!!!
+!!!  (2 , 0) : /S02_AXI
+!!!!
+!!!  (3 , 0) : /S03_AXI
+!!!!
+!!!  (4 , 0) : /S04_AXI
+!!!!
+CRITICAL WARNING: [sdx_memory_subsystem 1-1] Detected multiple mappings of /memory_subsystem/S00_AXI/PLRAM_MEM00 from /memory_subsystem/S00_AXI. This is not currently supported.
+CRITICAL WARNING: [sdx_memory_subsystem 1-1] Detected multiple mappings of /memory_subsystem/S00_AXI/PLRAM_MEM01 from /memory_subsystem/S00_AXI. This is not currently supported.
+CRITICAL WARNING: [sdx_memory_subsystem 1-1] Detected multiple mappings of /memory_subsystem/S00_AXI/PLRAM_MEM02 from /memory_subsystem/S00_AXI. This is not currently supported.
+CRITICAL WARNING: [sdx_memory_subsystem 1-1] Detected multiple mappings of /memory_subsystem/S00_AXI/M00_AXI_MEM00 from /memory_subsystem/S00_AXI. This is not currently supported.
+CRITICAL WARNING: [sdx_memory_subsystem 1-1] Detected multiple mappings of /memory_subsystem/S01_AXI/M01_AXI_MEM00 from /memory_subsystem/S01_AXI. This is not currently supported.
+CRITICAL WARNING: [sdx_memory_subsystem 1-1] Detected multiple mappings of /memory_subsystem/S02_AXI/M02_AXI_MEM00 from /memory_subsystem/S02_AXI. This is not currently supported.
+CRITICAL WARNING: [sdx_memory_subsystem 1-1] Detected multiple mappings of /memory_subsystem/S03_AXI/M03_AXI_MEM00 from /memory_subsystem/S03_AXI. This is not currently supported.
+INFO: [sdx_memory_subsystem 1-1] Mapped memory resource M01_AXI_MEM00 from /memory_subsystem into /wide_vadd_1/m_axi_gmem
+CRITICAL WARNING: [xilinx.com:ip:sdx_memory_subsystem:1.0-1] pfm_dynamic_memory_subsystem_0: Invalid entry (sim_props) detected in __temp_dsa_info of CONFIG.ADVANCED_PROPERTIES.
+CRITICAL WARNING: [xilinx.com:ip:sdx_memory_subsystem:1.0-1] pfm_dynamic_memory_subsystem_0: Invalid entry (slr_pblock_map) detected in __temp_dsa_info of CONFIG.ADVANCED_PROPERTIES.
+CRITICAL WARNING: [xilinx.com:ip:sdx_memory_subsystem:1.0-1] pfm_dynamic_memory_subsystem_0: Invalid entry (child_pblock_declarations) detected in __temp_dsa_info of CONFIG.ADVANCED_PROPERTIES.
+CRITICAL WARNING: [xilinx.com:ip:sdx_memory_subsystem:1.0-1] pfm_dynamic_memory_subsystem_0: Invalid entry (board_component_slr_map) detected in __temp_dsa_info of CONFIG.ADVANCED_PROPERTIES.
+INFO: [xilinx.com:ip:sdx_memory_subsystem:1.0-1] pfm_dynamic_memory_subsystem_0: Vivado project has no BOARD_PART set.   No DDR4 resources will be generated.
+!!!  (0 , 0) : /S00_AXI
+!!!!
+!!!  (1 , 0) : /S01_AXI
+!!!!
+!!!  (2 , 0) : /S02_AXI
+!!!!
+!!!  (3 , 0) : /S03_AXI
+!!!!
+!!!  (4 , 0) : /S04_AXI
+!!!!
+!!!  (5 , 0) : /S05_AXI
+!!!!
+!!!  (0 , 0) : /S00_AXI
+!!!!
+!!!  (1 , 0) : /S01_AXI
+!!!!
+!!!  (2 , 0) : /S02_AXI
+!!!!
+!!!  (3 , 0) : /S03_AXI
+!!!!
+!!!  (4 , 0) : /S04_AXI
+!!!!
+!!!  (5 , 0) : /S05_AXI
+!!!!
+!!!  (0 , 0) : /S00_AXI
+!!!!
+!!!  (1 , 0) : /S01_AXI
+!!!!
+!!!  (2 , 0) : /S02_AXI
+!!!!
+!!!  (3 , 0) : /S03_AXI
+!!!!
+!!!  (4 , 0) : /S04_AXI
+!!!!
+!!!  (5 , 0) : /S05_AXI
+!!!!
+!!!  (0 , 0) : /S00_AXI
+!!!!
+!!!  (1 , 0) : /S01_AXI
+!!!!
+!!!  (2 , 0) : /S02_AXI
+!!!!
+!!!  (3 , 0) : /S03_AXI
+!!!!
+!!!  (4 , 0) : /S04_AXI
+!!!!
+!!!  (5 , 0) : /S05_AXI
+!!!!
+CRITICAL WARNING: [sdx_memory_subsystem 1-1] Detected multiple mappings of /memory_subsystem/S00_AXI/PLRAM_MEM00 from /memory_subsystem/S00_AXI. This is not currently supported.
+CRITICAL WARNING: [sdx_memory_subsystem 1-1] Detected multiple mappings of /memory_subsystem/S00_AXI/PLRAM_MEM01 from /memory_subsystem/S00_AXI. This is not currently supported.
+CRITICAL WARNING: [sdx_memory_subsystem 1-1] Detected multiple mappings of /memory_subsystem/S00_AXI/PLRAM_MEM02 from /memory_subsystem/S00_AXI. This is not currently supported.
+CRITICAL WARNING: [sdx_memory_subsystem 1-1] Detected multiple mappings of /memory_subsystem/S00_AXI/M00_AXI_MEM00 from /memory_subsystem/S00_AXI. This is not currently supported.
+CRITICAL WARNING: [sdx_memory_subsystem 1-1] Detected multiple mappings of /memory_subsystem/S01_AXI/M01_AXI_MEM00 from /memory_subsystem/S01_AXI. This is not currently supported.
+CRITICAL WARNING: [sdx_memory_subsystem 1-1] Detected multiple mappings of /memory_subsystem/S02_AXI/M02_AXI_MEM00 from /memory_subsystem/S02_AXI. This is not currently supported.
+CRITICAL WARNING: [sdx_memory_subsystem 1-1] Detected multiple mappings of /memory_subsystem/S03_AXI/M03_AXI_MEM00 from /memory_subsystem/S03_AXI. This is not currently supported.
+INFO: [sdx_memory_subsystem 1-1] Mapped memory resource M01_AXI_MEM00 from /memory_subsystem into /wide_vadd_1/m_axi_gmem1
+CRITICAL WARNING: [xilinx.com:ip:sdx_memory_subsystem:1.0-1] pfm_dynamic_memory_subsystem_0: Invalid entry (sim_props) detected in __temp_dsa_info of CONFIG.ADVANCED_PROPERTIES.
+CRITICAL WARNING: [xilinx.com:ip:sdx_memory_subsystem:1.0-1] pfm_dynamic_memory_subsystem_0: Invalid entry (slr_pblock_map) detected in __temp_dsa_info of CONFIG.ADVANCED_PROPERTIES.
+CRITICAL WARNING: [xilinx.com:ip:sdx_memory_subsystem:1.0-1] pfm_dynamic_memory_subsystem_0: Invalid entry (child_pblock_declarations) detected in __temp_dsa_info of CONFIG.ADVANCED_PROPERTIES.
+CRITICAL WARNING: [xilinx.com:ip:sdx_memory_subsystem:1.0-1] pfm_dynamic_memory_subsystem_0: Invalid entry (board_component_slr_map) detected in __temp_dsa_info of CONFIG.ADVANCED_PROPERTIES.
+INFO: [xilinx.com:ip:sdx_memory_subsystem:1.0-1] pfm_dynamic_memory_subsystem_0: Vivado project has no BOARD_PART set.   No DDR4 resources will be generated.
+!!!  (0 , 0) : /S00_AXI
+!!!!
+!!!  (1 , 0) : /S01_AXI
+!!!!
+!!!  (2 , 0) : /S02_AXI
+!!!!
+!!!  (3 , 0) : /S03_AXI
+!!!!
+!!!  (4 , 0) : /S04_AXI
+!!!!
+!!!  (5 , 0) : /S05_AXI
+!!!!
+!!!  (6 , 0) : /S06_AXI
+!!!!
+!!!  (0 , 0) : /S00_AXI
+!!!!
+!!!  (1 , 0) : /S01_AXI
+!!!!
+!!!  (2 , 0) : /S02_AXI
+!!!!
+!!!  (3 , 0) : /S03_AXI
+!!!!
+!!!  (4 , 0) : /S04_AXI
+!!!!
+!!!  (5 , 0) : /S05_AXI
+!!!!
+!!!  (6 , 0) : /S06_AXI
+!!!!
+!!!  (0 , 0) : /S00_AXI
+!!!!
+!!!  (1 , 0) : /S01_AXI
+!!!!
+!!!  (2 , 0) : /S02_AXI
+!!!!
+!!!  (3 , 0) : /S03_AXI
+!!!!
+!!!  (4 , 0) : /S04_AXI
+!!!!
+!!!  (5 , 0) : /S05_AXI
+!!!!
+!!!  (6 , 0) : /S06_AXI
+!!!!
+!!!  (0 , 0) : /S00_AXI
+!!!!
+!!!  (1 , 0) : /S01_AXI
+!!!!
+!!!  (2 , 0) : /S02_AXI
+!!!!
+!!!  (3 , 0) : /S03_AXI
+!!!!
+!!!  (4 , 0) : /S04_AXI
+!!!!
+!!!  (5 , 0) : /S05_AXI
+!!!!
+!!!  (6 , 0) : /S06_AXI
+!!!!
+CRITICAL WARNING: [sdx_memory_subsystem 1-1] Detected multiple mappings of /memory_subsystem/S00_AXI/PLRAM_MEM00 from /memory_subsystem/S00_AXI. This is not currently supported.
+CRITICAL WARNING: [sdx_memory_subsystem 1-1] Detected multiple mappings of /memory_subsystem/S00_AXI/PLRAM_MEM01 from /memory_subsystem/S00_AXI. This is not currently supported.
+CRITICAL WARNING: [sdx_memory_subsystem 1-1] Detected multiple mappings of /memory_subsystem/S00_AXI/PLRAM_MEM02 from /memory_subsystem/S00_AXI. This is not currently supported.
+CRITICAL WARNING: [sdx_memory_subsystem 1-1] Detected multiple mappings of /memory_subsystem/S00_AXI/M00_AXI_MEM00 from /memory_subsystem/S00_AXI. This is not currently supported.
+CRITICAL WARNING: [sdx_memory_subsystem 1-1] Detected multiple mappings of /memory_subsystem/S01_AXI/M01_AXI_MEM00 from /memory_subsystem/S01_AXI. This is not currently supported.
+CRITICAL WARNING: [sdx_memory_subsystem 1-1] Detected multiple mappings of /memory_subsystem/S02_AXI/M02_AXI_MEM00 from /memory_subsystem/S02_AXI. This is not currently supported.
+CRITICAL WARNING: [sdx_memory_subsystem 1-1] Detected multiple mappings of /memory_subsystem/S03_AXI/M03_AXI_MEM00 from /memory_subsystem/S03_AXI. This is not currently supported.
+INFO: [sdx_memory_subsystem 1-1] Mapped memory resource M01_AXI_MEM00 from /memory_subsystem into /wide_vadd_1/m_axi_gmem2
+INFO: [OCL_UTIL] internal step: save_bd_design
+Wrote  : </home/centos/workspace/improving_performance_lab/Emulation-HW/binary_container_1.build/link/vivado/vpl/prj/prj.srcs/sources_1/bd/pfm_dynamic/pfm_dynamic.bd> 
+INFO: [OCL_UTIL] internal step: add_files .local/hw_platform/tcl_hooks/slr_floorplan.xdc -fileset [current_fileset -constrset]
+INFO: [OCL_UTIL] set_property USED_IN "implementation" [get_files .local/hw_platform/tcl_hooks/slr_floorplan.xdc]
+INFO: [OCL_UTIL] set_property PROCESSING_ORDER "NORMAL" [get_files .local/hw_platform/tcl_hooks/slr_floorplan.xdc]
+INFO: [OCL_UTIL] internal step: add_files .local/hw_platform/tcl_hooks/cl_synth_aws.xdc -fileset [current_fileset -constrset]
+INFO: [OCL_UTIL] set_property USED_IN "synthesis implementation" [get_files .local/hw_platform/tcl_hooks/cl_synth_aws.xdc]
+INFO: [OCL_UTIL] set_property PROCESSING_ORDER "LATE" [get_files .local/hw_platform/tcl_hooks/cl_synth_aws.xdc]
+INFO: [OCL_UTIL] internal step: add_files .local/hw_platform/tcl_hooks/cl_clocks_aws.xdc -fileset [current_fileset -constrset]
+INFO: [OCL_UTIL] set_property USED_IN "out_of_context synthesis implementation" [get_files .local/hw_platform/tcl_hooks/cl_clocks_aws.xdc]
+INFO: [OCL_UTIL] set_property PROCESSING_ORDER "EARLY" [get_files .local/hw_platform/tcl_hooks/cl_clocks_aws.xdc]
+INFO: [OCL_UTIL] internal step: add_files .local/hw_platform/tcl_hooks/cl_ddr.xdc -fileset [current_fileset -constrset]
+INFO: [OCL_UTIL] set_property USED_IN "synthesis implementation" [get_files .local/hw_platform/tcl_hooks/cl_ddr.xdc]
+INFO: [OCL_UTIL] set_property PROCESSING_ORDER "LATE" [get_files .local/hw_platform/tcl_hooks/cl_ddr.xdc]
+INFO: [OCL_UTIL] internal step: updating kernel clocks
+[20:08:56] Run vpl: Step create_bd: Completed
+[20:08:56] Run vpl: Step update_bd: Started
+INFO: [OCL_UTIL] current step: vpl.update_bd
+INFO: [OCL_UTIL] internal step: inserting profiling and debug cores
+INFO: Platform is not decorated with AXI-Lite and trace masters
+--- DEBUG: Using default values: BUS_SP_TAGS {M00_AXI_MEM00 DDR M01_AXI_MEM00 DDR M02_AXI_MEM00 DDR M03_AXI_MEM00 DDR PLRAM_MEM00 PLRAM PLRAM_MEM01 PLRAM PLRAM_MEM02 PLRAM} BUS_SP_INDICES {M00_AXI_MEM00 0 M01_AXI_MEM00 1 M02_AXI_MEM00 2 M03_AXI_MEM00 3 PLRAM_MEM00 0 PLRAM_MEM01 1 PLRAM_MEM02 2} SLR_ASSIGNMENT SLR0 DEDICATED_MASTER true AXIMM_MASTER xtlm_simple_intercon_0 MONITOR_CLOCK clkwiz_kernel_clk_out1 MONITOR_RESET /kernel_clk/sync_rst AXILITE_INTERCONNECT /slr2/interconnect_axilite_user_2 AXILITE_MASTER /slr2/interconnect_axilite_user_2/M00_AXI TRACE_CLOCK dma_pcie_axi_aclk TRACE_RESET slr0/reset_controllers/psreset_gate_pr_data_interconnect_aresetn
+--- DEBUG: -----------------------------------------------------------
+--- DEBUG: Profile info dict for HW emulation:
+--- DEBUG: NAME profile_monitors FIFO 8192 DATA {{port wide_vadd_1/m_axi_gmem option all mode user} {port wide_vadd_1/m_axi_gmem1 option all mode user} {port wide_vadd_1/m_axi_gmem2 option all mode user}} STALL {} EXEC {{port wide_vadd_1 option all mode user}}
+--- DEBUG: -----------------------------------------------------------
+--- DEBUG: Pin: /wide_vadd_1/m_axi_gmem, Monitors: 1, Addr segs: /wide_vadd_1/Data_m_axi_gmem/SEG_memory_subsystem_M01_AXI_MEM00
+--- DEBUG: Pin: /wide_vadd_1/m_axi_gmem1, Monitors: 1, Addr segs: /wide_vadd_1/Data_m_axi_gmem1/SEG_memory_subsystem_M01_AXI_MEM00
+--- DEBUG: Pin: /wide_vadd_1/m_axi_gmem2, Monitors: 1, Addr segs: /wide_vadd_1/Data_m_axi_gmem2/SEG_memory_subsystem_M01_AXI_MEM00
+--- DEBUG: -----------------------------------------------------------
+--- DEBUG: Automation Dictionary:
+--- DEBUG:   /wide_vadd_1    TYPE exec DETAIL all CLK_SRC /wide_vadd_1/ap_clk RST_SRC /wide_vadd_1/ap_rst_n PRINTABLE_KEY {[get_bd_cells wide_vadd_1]} INS_MODE user
+--- DEBUG:   /wide_vadd_1/m_axi_gmem    TYPE data DETAIL all CLK_SRC /wide_vadd_1/ap_clk RST_SRC /wide_vadd_1/ap_rst_n MEMORY {{DDR[1]}} PRINTABLE_KEY {[get_bd_intf_pins wide_vadd_1/m_axi_gmem]} INS_MODE user
+--- DEBUG:   /wide_vadd_1/m_axi_gmem1    TYPE data DETAIL all CLK_SRC /wide_vadd_1/ap_clk RST_SRC /wide_vadd_1/ap_rst_n MEMORY {{DDR[1]}} PRINTABLE_KEY {[get_bd_intf_pins wide_vadd_1/m_axi_gmem1]} INS_MODE user
+--- DEBUG:   /wide_vadd_1/m_axi_gmem2    TYPE data DETAIL all CLK_SRC /wide_vadd_1/ap_clk RST_SRC /wide_vadd_1/ap_rst_n MEMORY {{DDR[1]}} PRINTABLE_KEY {[get_bd_intf_pins wide_vadd_1/m_axi_gmem2]} INS_MODE user
+--- DEBUG: -----------------------------------------------------------
+INFO: Platform is not decorated with AXI-Lite and trace masters
+--- DEBUG: Getting PCIe settings...
+AXI-Lite: master = /slr2/interconnect_axilite_user_2/M00_AXI, clock = /slr2/interconnect_axilite_user_2/M00_ACLK, reset = /dma_pcie_arst
+AXI Full: master = /xtlm_simple_intercon_0/M04_AXI, clock = /xtlm_simple_intercon_0/m04_axi_aclk, reset = /xtlm_simple_intercon_0/m04_axi_aresetn
+--- DEBUG: -----------------------------------------------------------
+--- DEBUG: Automation Options:
+--- DEBUG:   AIE_TRACE    PACKET_RATE 100 CLK_SELECT default PROFILE_STREAMS false
+--- DEBUG:   SETTINGS    HW_EMU true IS_EMBEDDED false
+--- DEBUG:   AXILITE    MASTER /slr2/interconnect_axilite_user_2/M00_AXI CLK_SRC /slr2/interconnect_axilite_user_2/M00_ACLK RST_SRC /dma_pcie_arst
+--- DEBUG:   TRACE_OFFLOAD    DEPTH 8192 MEM_SPACE FIFO MEM_INDEX 0 SLAVE /memory_subsystem MASTER /xtlm_simple_intercon_0/M04_AXI CLK_SRC /xtlm_simple_intercon_0/m04_axi_aclk RST_SRC /xtlm_simple_intercon_0/m04_axi_aresetn SLR SLR0 DEDICATED true USE_HIERARCHY true FIFO_ADDR_SEG 0x0000008000000000 FIFO_ADDR_RANGE 0x0000000000400000
+--- DEBUG: -----------------------------------------------------------
+--- DPA: Step 1 - Add debug/profile monitors...
+--- DPA: Step 2 - Add trace infrastructure...
+Slave segment '/dpa_hub/S_AXIMM_MAP/S_AXIMM_BLOCK' is being assigned into address space '/data_M_AXI_0' at <0x0_0000_0000 [ 8G ]>.
+Slave segment '/dpa_hub/S_AXIMM_MAP/S_AXIMM_BLOCK' is being assigned into address space '/data_M_AXI_1' at <0x0_0000_0000 [ 8G ]>.
+Slave segment '/dpa_hub/S_AXIMM_MAP/S_AXIMM_BLOCK' is being assigned into address space '/data_M_AXI_2' at <0x0_0000_0000 [ 8G ]>.
+Slave segment '/dpa_hub/S_AXIMM_MAP/S_AXIMM_BLOCK' is being assigned into address space '/data_M_AXI_3' at <0x0_0000_0000 [ 8G ]>.
+Slave segment '/dpa_hub/S_AXIMM_MAP/S_AXIMM_BLOCK' is being assigned into address space '/data_M_AXI_4' at <0x0_0000_0000 [ 8G ]>.
+--- DPA: Step 3 - Add AI engine support...
+--- DPA: Step 4 - Add AXI-Lite control...
+--- DPA: Step 5 - Group IP into System_DPA...
+Wrote  : </home/centos/workspace/improving_performance_lab/Emulation-HW/binary_container_1.build/link/vivado/vpl/prj/prj.srcs/sources_1/bd/pfm_dynamic/pfm_dynamic.bd> 
+apply_bd_automation: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 2187.633 ; gain = 0.000 ; free physical = 100811 ; free virtual = 136168
+Slave segment '/sim_ddr_0/C0_DDR_SAXI/C0_DDR_SAXI_mem' is being assigned into address space '/memory_subsystem/M00_AXI' at <0x40_0000_0000 [ 4G ]>.
+Slave segment '/sim_ddr_2/C0_DDR_SAXI/C0_DDR_SAXI_mem' is being assigned into address space '/memory_subsystem/M02_AXI' at <0x48_0000_0000 [ 4G ]>.
+Slave segment '/sim_ddr_3/C0_DDR_SAXI/C0_DDR_SAXI_mem' is being assigned into address space '/memory_subsystem/M03_AXI' at <0x4C_0000_0000 [ 4G ]>.
+Slave segment '/C0_DDR_MAXI_0/Reg' is being assigned into address space '/memory_subsystem/M01_AXI' at <0x4_0000_0000 [ 64K ]>.
+Slave segment '/System_DPA/dpa_hub/S_AXIFIFO/Reg' is being assigned into address space '/userpf_control_M_AXI' at <0x1E00_0000 [ 64K ]>.
+Slave segment '/System_DPA/dpa_hub/S_AXIHUB/Reg' is being assigned into address space '/userpf_control_M_AXI' at <0x1E01_0000 [ 64K ]>.
+Slave segment '/System_DPA/dpa_mon0/S_AXI/Reg' is being assigned into address space '/userpf_control_M_AXI' at <0x1E02_0000 [ 64K ]>.
+Slave segment '/System_DPA/dpa_mon1/S_AXI/Reg' is being assigned into address space '/userpf_control_M_AXI' at <0x1E03_0000 [ 64K ]>.
+Slave segment '/System_DPA/dpa_mon2/S_AXI/Reg' is being assigned into address space '/userpf_control_M_AXI' at <0x1E04_0000 [ 64K ]>.
+Slave segment '/System_DPA/dpa_mon3/S_AXI/Reg' is being assigned into address space '/userpf_control_M_AXI' at <0x1E05_0000 [ 64K ]>.
+Slave segment '/wide_vadd_1/s_axi_control/Reg' is being assigned into address space '/userpf_control_M_AXI' at <0x1E06_0000 [ 64K ]>.
+INFO: Writing /home/centos/workspace/improving_performance_lab/Emulation-HW/binary_container_1.build/link/int/debug_ip_layout.rtd...
+--- DEBUG: slave doesn't match regular expression (slave: /C0_DDR_MAXI_0/Reg)
+--- DEBUG: slave doesn't match regular expression (slave: /C0_DDR_MAXI_0/Reg)
+--- DEBUG: slave doesn't match regular expression (slave: /C0_DDR_MAXI_0/Reg)
+--- DEBUG: slave doesn't match regular expression (slave: /C0_DDR_MAXI_0/Reg)
+INFO: [OCL_UTIL] internal step: assign_bd_address
+INFO: [OCL_UTIL] internal step: source .local/hw_platform/emu/dynamic_post_sys_link.tcl
+INFO: [OCL_UTIL] bd::util_cmd set_bd_source Vitis [current_bd_design]
+INFO: [OCL_UTIL] internal step: save_bd_design
+Wrote  : </home/centos/workspace/improving_performance_lab/Emulation-HW/binary_container_1.build/link/vivado/vpl/prj/prj.srcs/sources_1/bd/pfm_dynamic/pfm_dynamic.bd> 
+INFO: [OCL_UTIL] internal step: writing address_map.xml
+[20:09:04] Run vpl: Step update_bd: Completed
+[20:09:04] Run vpl: Step generate_target: Started
+INFO: [OCL_UTIL] current step: vpl.generate_target
+INFO: [OCL_UTIL] internal step: generate_target all [get_files pfm_dynamic.bd]
+INFO: [xilinx.com:ip:sdx_memory_subsystem:1.0-1] pfm_dynamic_memory_subsystem_0: Vivado project has no BOARD_PART set.   No DDR4 resources will be generated.
+WARNING: [BD 5-279] Subcore identifier 'xilinx.com:xilinx:xtlm_simple_interconnect:1.0' was not declared as a valid subcore dependency. Please package dependent subcores in the 'elaborate_bd' file group to resolve.
+WARNING: [BD 5-279] Subcore identifier 'xilinx.com:xilinx:xtlm_simple_memory:1.0' was not declared as a valid subcore dependency. Please package dependent subcores in the 'elaborate_bd' file group to resolve.
+WARNING: [BD 5-279] Subcore identifier 'xilinx.com:xilinx:xtlm_simple_memory:1.0' was not declared as a valid subcore dependency. Please package dependent subcores in the 'elaborate_bd' file group to resolve.
+WARNING: [BD 5-279] Subcore identifier 'xilinx.com:xilinx:xtlm_simple_memory:1.0' was not declared as a valid subcore dependency. Please package dependent subcores in the 'elaborate_bd' file group to resolve.
+CRITICAL WARNING: [BD 41-1344] Reset pin /xtlm_simple_intercon_0/s05_axi_aresetn (associated clock /xtlm_simple_intercon_0/s05_axi_aclk) is connected to reset source /aresetn (synchronous to clock source /aclk).
+This may prevent design from meeting timing. Instead it should be connected to reset source /aresetn.
+CRITICAL WARNING: [BD 41-1344] Reset pin /xtlm_simple_intercon_0/s06_axi_aresetn (associated clock /xtlm_simple_intercon_0/s06_axi_aclk) is connected to reset source /aresetn (synchronous to clock source /aclk).
+This may prevent design from meeting timing. Instead it should be connected to reset source /aresetn.
+CRITICAL WARNING: [BD 41-1344] Reset pin /xtlm_simple_intercon_0/s04_axi_aresetn (associated clock /xtlm_simple_intercon_0/s04_axi_aclk) is connected to reset source /aresetn (synchronous to clock source /aclk).
+This may prevent design from meeting timing. Instead it should be connected to reset source /aresetn.
+CRITICAL WARNING: [BD 41-1761] Reset pin '/memory_subsystem/aresetn' is found to be associated with multiple clock pins, which are not compatible w.r.t frequency, phase and clock-domain. This may prevent design from functioning correctly. Please ensure same reset pin is either not associated with different clock pins or all associated clock pins are driven by same or compatible clock source(s). List of associated clock pins:
+/memory_subsystem/aclk
+/memory_subsystem/aclk1
+
+INFO: [xilinx.com:ip:sdx_memory_subsystem:1.0-1] /memory_subsystemNo SLR assignment metadata detected at /sim_ddr_0/C0_DDR_SAXI
+INFO: [xilinx.com:ip:sdx_memory_subsystem:1.0-1] /memory_subsystemNo SLR assignment metadata detected at /C0_DDR_MAXI_0
+INFO: [xilinx.com:ip:sdx_memory_subsystem:1.0-1] /memory_subsystemNo SLR assignment metadata detected at /sim_ddr_2/C0_DDR_SAXI
+INFO: [xilinx.com:ip:sdx_memory_subsystem:1.0-1] /memory_subsystemNo SLR assignment metadata detected at /sim_ddr_3/C0_DDR_SAXI
+WARNING: [BD 41-237] Bus Interface property AWUSER_WIDTH does not match between /System_DPA/dpa_hub/S_AXIMM(0) and /xtlm_simple_intercon_0/M04_AXI(1)
+WARNING: [BD 41-237] Bus Interface property ARUSER_WIDTH does not match between /System_DPA/dpa_hub/S_AXIMM(0) and /xtlm_simple_intercon_0/M04_AXI(1)
+WARNING: [BD 41-237] Bus Interface property WUSER_WIDTH does not match between /System_DPA/dpa_hub/S_AXIMM(0) and /xtlm_simple_intercon_0/M04_AXI(1)
+WARNING: [BD 41-237] Bus Interface property RUSER_WIDTH does not match between /System_DPA/dpa_hub/S_AXIMM(0) and /xtlm_simple_intercon_0/M04_AXI(1)
+WARNING: [BD 41-237] Bus Interface property BUSER_WIDTH does not match between /System_DPA/dpa_hub/S_AXIMM(0) and /xtlm_simple_intercon_0/M04_AXI(1)
+CRITICAL WARNING: [BD 41-237] Bus Interface property SUPPORTS_NARROW_BURST does not match between /sim_ddr_0/C0_DDR_SAXI(0) and /memory_subsystem/M00_AXI(1)
+CRITICAL WARNING: [BD 41-237] Bus Interface property SUPPORTS_NARROW_BURST does not match between /sim_ddr_2/C0_DDR_SAXI(0) and /memory_subsystem/M02_AXI(1)
+CRITICAL WARNING: [BD 41-237] Bus Interface property SUPPORTS_NARROW_BURST does not match between /sim_ddr_3/C0_DDR_SAXI(0) and /memory_subsystem/M03_AXI(1)
+WARNING: [BD 41-927] Following properties on pin /wide_vadd_1/ap_clk have been updated from connected ip, but BD cell '/wide_vadd_1' does not accept parameter changes, so they may not be synchronized with cell properties:
+	FREQ_HZ = 300000000 
+Please resolve any mismatches by directly setting properties on BD cell </wide_vadd_1> to completely resolve these warnings.
+INFO: [IP_Flow 19-5627] Changing parameter ADDR_WIDTH on bus interface /S00_AXI from 39 to 40 due to existing assignment(s) on address space /S00_AXI.
+INFO: [IP_Flow 19-5627] Changing parameter ADDR_WIDTH on bus interface /S02_AXI from 39 to 40 due to existing assignment(s) on address space /S02_AXI.
+INFO: [IP_Flow 19-5627] Changing parameter ADDR_WIDTH on bus interface /S03_AXI from 39 to 40 due to existing assignment(s) on address space /S03_AXI.
+Wrote  : </home/centos/workspace/improving_performance_lab/Emulation-HW/binary_container_1.build/link/vivado/vpl/prj/prj.srcs/sources_1/bd/pfm_dynamic/pfm_dynamic.bd> 
+VHDL Output written to : /home/centos/workspace/improving_performance_lab/Emulation-HW/binary_container_1.build/link/vivado/vpl/prj/prj.srcs/sources_1/bd/pfm_dynamic/synth/pfm_dynamic.v
+WARNING: [BD 41-2182] SYSC NETLISTER : Interface Connection slr2_M01_AXI one endpoint missing or has only monitor connections 
+WARNING: [BD 41-2182] SYSC NETLISTER : Interface Connection wide_vadd_1_m_axi_gmem one endpoint missing or has only monitor connections 
+WARNING: [BD 41-2182] SYSC NETLISTER : Interface Connection wide_vadd_1_m_axi_gmem1 one endpoint missing or has only monitor connections 
+WARNING: [BD 41-2182] SYSC NETLISTER : Interface Connection wide_vadd_1_m_axi_gmem2 one endpoint missing or has only monitor connections 
+VHDL Output written to : /home/centos/workspace/improving_performance_lab/Emulation-HW/binary_container_1.build/link/vivado/vpl/prj/prj.srcs/sources_1/bd/pfm_dynamic/sim/pfm_dynamic.v
+VHDL Output written to : /home/centos/workspace/improving_performance_lab/Emulation-HW/binary_container_1.build/link/vivado/vpl/prj/prj.srcs/sources_1/bd/pfm_dynamic/hdl/pfm_dynamic_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block kernel2_clk .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block kernel_clk .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xtlm_simple_intercon_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block interrupt_concat/xlconcat_interrupt .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block interrupt_concat/xlconcat_interrupt_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block interrupt_concat/xlconcat_interrupt_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block interrupt_concat/xlconcat_interrupt_2 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block interrupt_concat/xlconcat_interrupt_3 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block interrupt_concat/xlconstant_gnd .
+WARNING: [IP_Flow 19-5378] Port width mismatch for bus parameter 'S00_AXI.ADDR_WIDTH'. Logical port width '39' and physical port width '64' do not match.
+WARNING: [IP_Flow 19-5378] Port width mismatch for bus parameter 'S01_AXI.ADDR_WIDTH'. Logical port width '35' and physical port width '64' do not match.
+WARNING: [IP_Flow 19-5378] Port width mismatch for bus parameter 'S02_AXI.ADDR_WIDTH'. Logical port width '39' and physical port width '64' do not match.
+WARNING: [IP_Flow 19-5378] Port width mismatch for bus parameter 'S03_AXI.ADDR_WIDTH'. Logical port width '39' and physical port width '64' do not match.
+WARNING: [IP_Flow 19-5378] Port width mismatch for bus parameter 'S04_AXI.ADDR_WIDTH'. Logical port width '35' and physical port width '64' do not match.
+WARNING: [IP_Flow 19-5378] Port width mismatch for bus parameter 'S05_AXI.ADDR_WIDTH'. Logical port width '35' and physical port width '64' do not match.
+WARNING: [IP_Flow 19-5378] Port width mismatch for bus parameter 'S06_AXI.ADDR_WIDTH'. Logical port width '35' and physical port width '64' do not match.
+Exporting to file /home/centos/workspace/improving_performance_lab/Emulation-HW/binary_container_1.build/link/vivado/vpl/prj/prj.srcs/sources_1/bd/pfm_dynamic/ip/pfm_dynamic_memory_subsystem_0/bd_0/hw_handoff/pfm_dynamic_memory_subsystem_0.hwh
+Generated Block Design Tcl file /home/centos/workspace/improving_performance_lab/Emulation-HW/binary_container_1.build/link/vivado/vpl/prj/prj.srcs/sources_1/bd/pfm_dynamic/ip/pfm_dynamic_memory_subsystem_0/bd_0/hw_handoff/pfm_dynamic_memory_subsystem_0_bd.tcl
+Generated Hardware Definition File /home/centos/workspace/improving_performance_lab/Emulation-HW/binary_container_1.build/link/vivado/vpl/prj/prj.srcs/sources_1/bd/pfm_dynamic/ip/pfm_dynamic_memory_subsystem_0/bd_0/synth/pfm_dynamic_memory_subsystem_0.hwdef
+INFO: [BD 41-1029] Generation completed for the IP Integrator block memory_subsystem .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block sim_ddr_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block sim_ddr_2 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block sim_ddr_3 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block slr0/icn_pass_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block slr0/psr_kernel_clk_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block slr0/psr_kernel2_clk_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block slr0/to_delete_kernel_ctrl_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block slr1/icn_pass_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block slr1/icn_pass_2 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block slr1/psr_kernel_clk_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block slr1/psr_kernel2_clk_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block slr1/to_delete_kernel_ctrl_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block slr2/icn_pass_3 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block slr2/psr_kernel_clk_2 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block slr2/psr_kernel2_clk_2 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block user_slr_icn/xbar .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block slr2/interconnect_axilite_user_2/xbar .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block wide_vadd_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block System_DPA/dpa_ctrl_interconnect/xbar .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block System_DPA/dpa_hub .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block System_DPA/dpa_mon0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block System_DPA/dpa_mon1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block System_DPA/dpa_mon2 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block System_DPA/dpa_mon3 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block slr2/interconnect_axilite_user_2/m01_couplers/m01_regslice .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/centos/workspace/improving_performance_lab/Emulation-HW/binary_container_1.build/link/vivado/vpl/prj/prj.srcs/sources_1/bd/pfm_dynamic/ip/pfm_dynamic_auto_cc_0/pfm_dynamic_auto_cc_0_ooc.xdc'
+WARNING: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'S_AXI'. A default connection has been created.
+WARNING: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'M_AXI'. A default connection has been created.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block slr2/interconnect_axilite_user_2/m01_couplers/auto_cc .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block System_DPA/dpa_ctrl_interconnect/s00_couplers/s00_regslice .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block System_DPA/dpa_ctrl_interconnect/m00_couplers/m00_regslice .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/centos/workspace/improving_performance_lab/Emulation-HW/binary_container_1.build/link/vivado/vpl/prj/prj.srcs/sources_1/bd/pfm_dynamic/ip/pfm_dynamic_auto_cc_1/pfm_dynamic_auto_cc_1_ooc.xdc'
+WARNING: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'S_AXI'. A default connection has been created.
+WARNING: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'M_AXI'. A default connection has been created.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block System_DPA/dpa_ctrl_interconnect/m00_couplers/auto_cc .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block System_DPA/dpa_ctrl_interconnect/m01_couplers/m01_regslice .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/centos/workspace/improving_performance_lab/Emulation-HW/binary_container_1.build/link/vivado/vpl/prj/prj.srcs/sources_1/bd/pfm_dynamic/ip/pfm_dynamic_auto_cc_2/pfm_dynamic_auto_cc_2_ooc.xdc'
+WARNING: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'S_AXI'. A default connection has been created.
+WARNING: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'M_AXI'. A default connection has been created.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block System_DPA/dpa_ctrl_interconnect/m01_couplers/auto_cc .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block System_DPA/dpa_ctrl_interconnect/m02_couplers/m02_regslice .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/centos/workspace/improving_performance_lab/Emulation-HW/binary_container_1.build/link/vivado/vpl/prj/prj.srcs/sources_1/bd/pfm_dynamic/ip/pfm_dynamic_auto_cc_3/pfm_dynamic_auto_cc_3_ooc.xdc'
+WARNING: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'S_AXI'. A default connection has been created.
+WARNING: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'M_AXI'. A default connection has been created.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block System_DPA/dpa_ctrl_interconnect/m02_couplers/auto_cc .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block System_DPA/dpa_ctrl_interconnect/m03_couplers/m03_regslice .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/centos/workspace/improving_performance_lab/Emulation-HW/binary_container_1.build/link/vivado/vpl/prj/prj.srcs/sources_1/bd/pfm_dynamic/ip/pfm_dynamic_auto_cc_4/pfm_dynamic_auto_cc_4_ooc.xdc'
+WARNING: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'S_AXI'. A default connection has been created.
+WARNING: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'M_AXI'. A default connection has been created.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block System_DPA/dpa_ctrl_interconnect/m03_couplers/auto_cc .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block System_DPA/dpa_ctrl_interconnect/m04_couplers/m04_regslice .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/centos/workspace/improving_performance_lab/Emulation-HW/binary_container_1.build/link/vivado/vpl/prj/prj.srcs/sources_1/bd/pfm_dynamic/ip/pfm_dynamic_auto_cc_5/pfm_dynamic_auto_cc_5_ooc.xdc'
+WARNING: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'S_AXI'. A default connection has been created.
+WARNING: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'M_AXI'. A default connection has been created.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block System_DPA/dpa_ctrl_interconnect/m04_couplers/auto_cc .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block System_DPA/dpa_ctrl_interconnect/m05_couplers/m05_regslice .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/centos/workspace/improving_performance_lab/Emulation-HW/binary_container_1.build/link/vivado/vpl/prj/prj.srcs/sources_1/bd/pfm_dynamic/ip/pfm_dynamic_auto_cc_6/pfm_dynamic_auto_cc_6_ooc.xdc'
+WARNING: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'S_AXI'. A default connection has been created.
+WARNING: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'M_AXI'. A default connection has been created.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block System_DPA/dpa_ctrl_interconnect/m05_couplers/auto_cc .
+Exporting to file /home/centos/workspace/improving_performance_lab/Emulation-HW/binary_container_1.build/link/vivado/vpl/prj/prj.srcs/sources_1/bd/pfm_dynamic/hw_handoff/pfm_dynamic.hwh
+Generated Block Design Tcl file /home/centos/workspace/improving_performance_lab/Emulation-HW/binary_container_1.build/link/vivado/vpl/prj/prj.srcs/sources_1/bd/pfm_dynamic/hw_handoff/pfm_dynamic_bd.tcl
+Generated Hardware Definition File /home/centos/workspace/improving_performance_lab/Emulation-HW/binary_container_1.build/link/vivado/vpl/prj/prj.srcs/sources_1/bd/pfm_dynamic/synth/pfm_dynamic.hwdef
+generate_target: Time (s): cpu = 00:00:26 ; elapsed = 00:00:32 . Memory (MB): peak = 2206.535 ; gain = 18.902 ; free physical = 100545 ; free virtual = 135957
+INFO: [OCL_UTIL] internal step: config_ip_cache -export [get_ips -all -of_object [get_files pfm_dynamic.bd]]
+INFO: [OCL_UTIL] internal step: add_files output/pfm_dynamic_ooc_copy.xdc -fileset [current_fileset -constrset]
+INFO: [OCL_UTIL] set_property used_in synthesis implementation out_of_context /home/centos/workspace/improving_performance_lab/Emulation-HW/binary_container_1.build/link/vivado/vpl/output/pfm_dynamic_ooc_copy.xdc
+INFO: [OCL_UTIL] set_property processing_order early /home/centos/workspace/improving_performance_lab/Emulation-HW/binary_container_1.build/link/vivado/vpl/output/pfm_dynamic_ooc_copy.xdc
+[20:09:39] Run vpl: Step generate_target: Completed
+[20:09:39] Run vpl: Step config_hw_emulation: Started
+INFO: [OCL_UTIL] current step: vpl.config_hw_emulation
+INFO: [OCL_UTIL] internal step: import_files /home/centos/workspace/improving_performance_lab/Emulation-HW/binary_container_1.build/link/vivado/vpl/.local/hw_platform/emu/emu/emu.bd
+WARNING: [BD 41-1661] One or more IPs have been locked in the design 'emu.bd'. Please run report_ip_status for more details and recommendations on how to fix this issue.
+List of locked IPs:
+emu_s03_mmu_0
+emu_s00_mmu_0
+emu_auto_pc_1
+emu_s01_mmu_0
+emu_auto_pc_0
+emu_connect_to_es_0
+emu_auto_pc_2
+emu_connect_to_es_cu_0
+emu_s02_mmu_0
+emu_xlconstant_0_0
+emu_xbar_1
+emu_xbar_0
+emu_sim_xdma_0_0
+
+WARNING: [IP_Flow 19-2162] IP 'emu_xbar_0' is locked:
+* IP definition 'AXI Crossbar (2.1)' for IP 'emu_xbar_0' (customized with software release 2019.2) has a different revision in the IP Catalog.
+WARNING: [IP_Flow 19-2162] IP 'emu_connect_to_es_0' is locked:
+* IP definition 'AXI Interconnect (2.1)' for IP 'emu_connect_to_es_0' (customized with software release 2019.2) has a different revision in the IP Catalog.
+WARNING: [IP_Flow 19-2162] IP 'emu_xbar_1' is locked:
+* IP definition 'AXI Crossbar (2.1)' for IP 'emu_xbar_1' (customized with software release 2019.2) has a different revision in the IP Catalog.
+WARNING: [IP_Flow 19-2162] IP 'emu_connect_to_es_cu_0' is locked:
+* IP definition 'AXI Interconnect (2.1)' for IP 'emu_connect_to_es_cu_0' (customized with software release 2019.2) has a different revision in the IP Catalog.
+WARNING: [IP_Flow 19-2162] IP 'emu_xlconstant_0_0' is locked:
+* IP definition 'Constant (1.1)' for IP 'emu_xlconstant_0_0' (customized with software release 2019.2) has a different revision in the IP Catalog.
+WARNING: [IP_Flow 19-2162] IP 'emu_sim_xdma_0_0' is locked:
+* IP definition 'sim_xdma (3.0)' for IP 'emu_sim_xdma_0_0' (customized with software release 2019.2) has a different revision in the IP Catalog.
+WARNING: [IP_Flow 19-2162] IP 'emu_auto_pc_0' is locked:
+* IP definition 'AXI Protocol Converter (2.1)' for IP 'emu_auto_pc_0' (customized with software release 2019.2) has a different revision in the IP Catalog.
+WARNING: [IP_Flow 19-2162] IP 'emu_auto_pc_1' is locked:
+* IP definition 'AXI Protocol Converter (2.1)' for IP 'emu_auto_pc_1' (customized with software release 2019.2) has a different revision in the IP Catalog.
+WARNING: [IP_Flow 19-2162] IP 'emu_auto_pc_2' is locked:
+* IP definition 'AXI Protocol Converter (2.1)' for IP 'emu_auto_pc_2' (customized with software release 2019.2) has a different revision in the IP Catalog.
+WARNING: [IP_Flow 19-2162] IP 'emu_s00_mmu_0' is locked:
+* IP definition 'AXI MMU (2.1)' for IP 'emu_s00_mmu_0' (customized with software release 2019.2) has a different revision in the IP Catalog.
+WARNING: [IP_Flow 19-2162] IP 'emu_s01_mmu_0' is locked:
+* IP definition 'AXI MMU (2.1)' for IP 'emu_s01_mmu_0' (customized with software release 2019.2) has a different revision in the IP Catalog.
+WARNING: [IP_Flow 19-2162] IP 'emu_s02_mmu_0' is locked:
+* IP definition 'AXI MMU (2.1)' for IP 'emu_s02_mmu_0' (customized with software release 2019.2) has a different revision in the IP Catalog.
+WARNING: [IP_Flow 19-2162] IP 'emu_s03_mmu_0' is locked:
+* IP definition 'AXI MMU (2.1)' for IP 'emu_s03_mmu_0' (customized with software release 2019.2) has a different revision in the IP Catalog.
+INFO: [OCL_UTIL] internal step: open_bd_design -auto_upgrade [get_files emu.bd]
+Adding component instance block -- xilinx.com:ip:sim_clk_gen:1.0 - ddr0_ui_clk
+Adding component instance block -- xilinx.com:ip:sim_clk_gen:1.0 - kernel2_clk
+Adding component instance block -- xilinx.com:ip:sim_clk_gen:1.0 - kernel_clk
+Adding component instance block -- xilinx.com:ip:axi_interconnect:2.1 - connect_to_es
+Adding component instance block -- xilinx.com:ip:axi_crossbar:2.1 - xbar
+Adding component instance block -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Adding component instance block -- xilinx.com:ip:axi_interconnect:2.1 - connect_to_es_cu
+Adding component instance block -- xilinx.com:ip:axi_crossbar:2.1 - xbar
+Adding component instance block -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Adding component instance block -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Adding component instance block -- xilinx.com:ip:axi_mmu:2.1 - s00_mmu
+Adding component instance block -- xilinx.com:ip:axi_mmu:2.1 - s01_mmu
+Adding component instance block -- xilinx.com:ip:axi_mmu:2.1 - s02_mmu
+Adding component instance block -- xilinx.com:ip:axi_mmu:2.1 - s03_mmu
+Adding component instance block -- xilinx.com:ip:sim_clk_gen:1.0 - dma_pcie_clk
+Adding component instance block -- xilinx.com:ip:shell_utils_cudma_controller:1.0 - CuDmaController_0
+Adding component instance block -- xilinx.com:ip:axi_intc:4.1 - axi_intc_0
+Adding component instance block -- xilinx.com:ip:shell_utils_cuisr:1.0 - cuisr_0
+Adding component instance block -- xilinx.com:ip:shell_utils_embedded_scheduler_hw:1.0 - embedded_scheduler_hw_0
+Adding component instance block -- xilinx.com:xilinx:sim_embedded_scheduler_sw:2.1 - sim_embedded_scheduler_sw_0
+Adding component instance block -- xilinx.com:ip:xlconcat:2.1 - xlconcat_0
+Adding component instance block -- xilinx.com:ip:xlconstant:1.1 - xlconstant_0
+WARNING: [BD 41-1731] Type mismatch between connected pins: /static_region/embedded_schedular/axi_intc_0/irq(undef) and /static_region/embedded_schedular/sim_embedded_scheduler_sw_0/irq(intr)
+WARNING: [BD 41-1731] Type mismatch between connected pins: /static_region/embedded_schedular/irq_cu(intr) and /static_region/embedded_schedular/embedded_scheduler_hw_0/irq_cu(undef)
+Adding component instance block -- xilinx.com:ip:proc_sys_reset:5.0 - psr_dma_pcie_aclk
+Adding component instance block -- xilinx.com:user:sim_ddr:3.0 - sim_ddr_1
+Adding component instance block -- xilinx.com:ip:xtlm_simple_interconnect:1.0 - icn_pass_0
+Adding component instance block -- xilinx.com:xilinx:sim_xdma:3.0 - sim_xdma_0
+Adding component instance block -- xilinx.com:hls:sim_copy_kernel:1.0 - sim_copy_kernel_0
+Adding component instance block -- xilinx.com:hls:sim_copy_kernel:1.0 - sim_copy_kernel_1
+Adding component instance block -- xilinx.com:hls:sim_copy_kernel:1.0 - sim_copy_kernel_2
+Adding component instance block -- xilinx.com:hls:sim_copy_kernel:1.0 - sim_copy_kernel_3
+Adding component instance block -- xilinx.com:module_ref:pfm_dynamic:1.0 - dynamic_region
+WARNING: [filemgmt 56-157] Reference module object is already added to sub-design.
+Successfully read diagram <emu> from BD file </home/centos/workspace/improving_performance_lab/Emulation-HW/binary_container_1.build/link/vivado/vpl/prj/prj.srcs/sources_1/bd/emu/emu.bd>
+INFO: [BD 41-1799] The block design contains upgradeable cell(s), automatically upgrading to newest version...
+INFO: [IP_Flow 19-3422] Upgraded emu_connect_to_es_0 (AXI Interconnect 2.1) from revision 21 to revision 22
+INFO: [IP_Flow 19-3422] Upgraded emu_connect_to_es_cu_0 (AXI Interconnect 2.1) from revision 21 to revision 22
+INFO: [BD 41-1799] The block design contains upgradeable cell(s), automatically upgrading to newest version...
+INFO: [IP_Flow 19-3422] Upgraded emu_xlconstant_0_0 (Constant 1.1) from revision 6 to revision 7
+INFO: [IP_Flow 19-3422] Upgraded emu_sim_xdma_0_0 (sim_xdma 3.0) from revision 1 to revision 2
+Wrote  : </home/centos/workspace/improving_performance_lab/Emulation-HW/binary_container_1.build/link/vivado/vpl/prj/prj.srcs/sources_1/bd/emu/emu.bd> 
+INFO: [OCL_UTIL] internal step: add_files -norecurse [make_wrapper -top -files [get_files emu.bd ]]
+INFO: [BD 41-1795] Refreshing stale Cell /dynamic_region in block design(emu)...
+CRITICAL WARNING: [BD 41-1356] Slave segment </static_region/sim_copy_kernel_0/s_axi_control/Reg> is not assigned into address space </static_region/embedded_schedular/CuDmaController_0/m_axi_CUDma>. Please use Address Editor to either assign or exclude it.
+CRITICAL WARNING: [BD 41-1356] Slave segment </static_region/sim_copy_kernel_1/s_axi_control/Reg> is not assigned into address space </static_region/embedded_schedular/CuDmaController_0/m_axi_CUDma>. Please use Address Editor to either assign or exclude it.
+CRITICAL WARNING: [BD 41-1356] Slave segment </static_region/sim_copy_kernel_2/s_axi_control/Reg> is not assigned into address space </static_region/embedded_schedular/CuDmaController_0/m_axi_CUDma>. Please use Address Editor to either assign or exclude it.
+CRITICAL WARNING: [BD 41-1356] Slave segment </static_region/sim_copy_kernel_3/s_axi_control/Reg> is not assigned into address space </static_region/embedded_schedular/CuDmaController_0/m_axi_CUDma>. Please use Address Editor to either assign or exclude it.
+CRITICAL WARNING: [BD 41-1356] Slave segment </static_region/sim_copy_kernel_0/s_axi_control/Reg> is not assigned into address space </static_region/embedded_schedular/cuisr_0/m_axi_a>. Please use Address Editor to either assign or exclude it.
+CRITICAL WARNING: [BD 41-1356] Slave segment </static_region/sim_copy_kernel_1/s_axi_control/Reg> is not assigned into address space </static_region/embedded_schedular/cuisr_0/m_axi_a>. Please use Address Editor to either assign or exclude it.
+CRITICAL WARNING: [BD 41-1356] Slave segment </static_region/sim_copy_kernel_2/s_axi_control/Reg> is not assigned into address space </static_region/embedded_schedular/cuisr_0/m_axi_a>. Please use Address Editor to either assign or exclude it.
+CRITICAL WARNING: [BD 41-1356] Slave segment </static_region/sim_copy_kernel_3/s_axi_control/Reg> is not assigned into address space </static_region/embedded_schedular/cuisr_0/m_axi_a>. Please use Address Editor to either assign or exclude it.
+CRITICAL WARNING: [BD 41-1356] Slave segment </static_region/sim_copy_kernel_0/s_axi_control/Reg> is not assigned into address space </static_region/embedded_schedular/sim_embedded_scheduler_sw_0/maxi_lite_mb>. Please use Address Editor to either assign or exclude it.
+CRITICAL WARNING: [BD 41-1356] Slave segment </static_region/sim_copy_kernel_1/s_axi_control/Reg> is not assigned into address space </static_region/embedded_schedular/sim_embedded_scheduler_sw_0/maxi_lite_mb>. Please use Address Editor to either assign or exclude it.
+CRITICAL WARNING: [BD 41-1356] Slave segment </static_region/sim_copy_kernel_2/s_axi_control/Reg> is not assigned into address space </static_region/embedded_schedular/sim_embedded_scheduler_sw_0/maxi_lite_mb>. Please use Address Editor to either assign or exclude it.
+CRITICAL WARNING: [BD 41-1356] Slave segment </static_region/sim_copy_kernel_3/s_axi_control/Reg> is not assigned into address space </static_region/embedded_schedular/sim_embedded_scheduler_sw_0/maxi_lite_mb>. Please use Address Editor to either assign or exclude it.
+CRITICAL WARNING: [BD 41-1356] Slave segment </dynamic_region/data_M_AXI_1/Mem0> is not assigned into address space </static_region/sim_copy_kernel_0/Data_m_axi_gmem>. Please use Address Editor to either assign or exclude it.
+CRITICAL WARNING: [BD 41-1356] Slave segment </dynamic_region/data_M_AXI_1/Mem1> is not assigned into address space </static_region/sim_copy_kernel_0/Data_m_axi_gmem>. Please use Address Editor to either assign or exclude it.
+CRITICAL WARNING: [BD 41-1356] Slave segment </dynamic_region/data_M_AXI_1/Mem2> is not assigned into address space </static_region/sim_copy_kernel_0/Data_m_axi_gmem>. Please use Address Editor to either assign or exclude it.
+CRITICAL WARNING: [BD 41-1356] Slave segment </dynamic_region/data_M_AXI_1/Mem3> is not assigned into address space </static_region/sim_copy_kernel_0/Data_m_axi_gmem>. Please use Address Editor to either assign or exclude it.
+CRITICAL WARNING: [BD 41-1356] Slave segment </dynamic_region/data_M_AXI_1/Mem4> is not assigned into address space </static_region/sim_copy_kernel_0/Data_m_axi_gmem>. Please use Address Editor to either assign or exclude it.
+CRITICAL WARNING: [BD 41-1356] Slave segment </dynamic_region/data_M_AXI_1/Mem5> is not assigned into address space </static_region/sim_copy_kernel_0/Data_m_axi_gmem>. Please use Address Editor to either assign or exclude it.
+CRITICAL WARNING: [BD 41-1356] Slave segment </dynamic_region/data_M_AXI_1/Mem6> is not assigned into address space </static_region/sim_copy_kernel_0/Data_m_axi_gmem>. Please use Address Editor to either assign or exclude it.
+CRITICAL WARNING: [BD 41-1356] Slave segment </dynamic_region/data_M_AXI_1/Mem7> is not assigned into address space </static_region/sim_copy_kernel_0/Data_m_axi_gmem>. Please use Address Editor to either assign or exclude it.
+CRITICAL WARNING: [BD 41-1356] Slave segment </dynamic_region/data_M_AXI_2/Mem0> is not assigned into address space </static_region/sim_copy_kernel_1/Data_m_axi_gmem>. Please use Address Editor to either assign or exclude it.
+CRITICAL WARNING: [BD 41-1356] Slave segment </dynamic_region/data_M_AXI_2/Mem1> is not assigned into address space </static_region/sim_copy_kernel_1/Data_m_axi_gmem>. Please use Address Editor to either assign or exclude it.
+CRITICAL WARNING: [BD 41-1356] Slave segment </dynamic_region/data_M_AXI_2/Mem2> is not assigned into address space </static_region/sim_copy_kernel_1/Data_m_axi_gmem>. Please use Address Editor to either assign or exclude it.
+CRITICAL WARNING: [BD 41-1356] Slave segment </dynamic_region/data_M_AXI_2/Mem3> is not assigned into address space </static_region/sim_copy_kernel_1/Data_m_axi_gmem>. Please use Address Editor to either assign or exclude it.
+CRITICAL WARNING: [BD 41-1356] Slave segment </dynamic_region/data_M_AXI_2/Mem4> is not assigned into address space </static_region/sim_copy_kernel_1/Data_m_axi_gmem>. Please use Address Editor to either assign or exclude it.
+CRITICAL WARNING: [BD 41-1356] Slave segment </dynamic_region/data_M_AXI_2/Mem5> is not assigned into address space </static_region/sim_copy_kernel_1/Data_m_axi_gmem>. Please use Address Editor to either assign or exclude it.
+CRITICAL WARNING: [BD 41-1356] Slave segment </dynamic_region/data_M_AXI_2/Mem6> is not assigned into address space </static_region/sim_copy_kernel_1/Data_m_axi_gmem>. Please use Address Editor to either assign or exclude it.
+CRITICAL WARNING: [BD 41-1356] Slave segment </dynamic_region/data_M_AXI_2/Mem7> is not assigned into address space </static_region/sim_copy_kernel_1/Data_m_axi_gmem>. Please use Address Editor to either assign or exclude it.
+CRITICAL WARNING: [BD 41-1356] Slave segment </dynamic_region/data_M_AXI_3/Mem0> is not assigned into address space </static_region/sim_copy_kernel_2/Data_m_axi_gmem>. Please use Address Editor to either assign or exclude it.
+CRITICAL WARNING: [BD 41-1356] Slave segment </dynamic_region/data_M_AXI_3/Mem1> is not assigned into address space </static_region/sim_copy_kernel_2/Data_m_axi_gmem>. Please use Address Editor to either assign or exclude it.
+CRITICAL WARNING: [BD 41-1356] Slave segment </dynamic_region/data_M_AXI_3/Mem2> is not assigned into address space </static_region/sim_copy_kernel_2/Data_m_axi_gmem>. Please use Address Editor to either assign or exclude it.
+CRITICAL WARNING: [BD 41-1356] Slave segment </dynamic_region/data_M_AXI_3/Mem3> is not assigned into address space </static_region/sim_copy_kernel_2/Data_m_axi_gmem>. Please use Address Editor to either assign or exclude it.
+CRITICAL WARNING: [BD 41-1356] Slave segment </dynamic_region/data_M_AXI_3/Mem4> is not assigned into address space </static_region/sim_copy_kernel_2/Data_m_axi_gmem>. Please use Address Editor to either assign or exclude it.
+CRITICAL WARNING: [BD 41-1356] Slave segment </dynamic_region/data_M_AXI_3/Mem5> is not assigned into address space </static_region/sim_copy_kernel_2/Data_m_axi_gmem>. Please use Address Editor to either assign or exclude it.
+CRITICAL WARNING: [BD 41-1356] Slave segment </dynamic_region/data_M_AXI_3/Mem6> is not assigned into address space </static_region/sim_copy_kernel_2/Data_m_axi_gmem>. Please use Address Editor to either assign or exclude it.
+CRITICAL WARNING: [BD 41-1356] Slave segment </dynamic_region/data_M_AXI_3/Mem7> is not assigned into address space </static_region/sim_copy_kernel_2/Data_m_axi_gmem>. Please use Address Editor to either assign or exclude it.
+CRITICAL WARNING: [BD 41-1356] Slave segment </dynamic_region/data_M_AXI_4/Mem0> is not assigned into address space </static_region/sim_copy_kernel_3/Data_m_axi_gmem>. Please use Address Editor to either assign or exclude it.
+CRITICAL WARNING: [BD 41-1356] Slave segment </dynamic_region/data_M_AXI_4/Mem1> is not assigned into address space </static_region/sim_copy_kernel_3/Data_m_axi_gmem>. Please use Address Editor to either assign or exclude it.
+CRITICAL WARNING: [BD 41-1356] Slave segment </dynamic_region/data_M_AXI_4/Mem2> is not assigned into address space </static_region/sim_copy_kernel_3/Data_m_axi_gmem>. Please use Address Editor to either assign or exclude it.
+CRITICAL WARNING: [BD 41-1356] Slave segment </dynamic_region/data_M_AXI_4/Mem3> is not assigned into address space </static_region/sim_copy_kernel_3/Data_m_axi_gmem>. Please use Address Editor to either assign or exclude it.
+CRITICAL WARNING: [BD 41-1356] Slave segment </dynamic_region/data_M_AXI_4/Mem4> is not assigned into address space </static_region/sim_copy_kernel_3/Data_m_axi_gmem>. Please use Address Editor to either assign or exclude it.
+CRITICAL WARNING: [BD 41-1356] Slave segment </dynamic_region/data_M_AXI_4/Mem5> is not assigned into address space </static_region/sim_copy_kernel_3/Data_m_axi_gmem>. Please use Address Editor to either assign or exclude it.
+CRITICAL WARNING: [BD 41-1356] Slave segment </dynamic_region/data_M_AXI_4/Mem6> is not assigned into address space </static_region/sim_copy_kernel_3/Data_m_axi_gmem>. Please use Address Editor to either assign or exclude it.
+CRITICAL WARNING: [BD 41-1356] Slave segment </dynamic_region/data_M_AXI_4/Mem7> is not assigned into address space </static_region/sim_copy_kernel_3/Data_m_axi_gmem>. Please use Address Editor to either assign or exclude it.
+CRITICAL WARNING: [BD 41-1356] Slave segment </dynamic_region/data_M_AXI_0/Mem0> is not assigned into address space </static_region/sim_xdma_0/M_AXIMM>. Please use Address Editor to either assign or exclude it.
+CRITICAL WARNING: [BD 41-1356] Slave segment </dynamic_region/data_M_AXI_0/Mem1> is not assigned into address space </static_region/sim_xdma_0/M_AXIMM>. Please use Address Editor to either assign or exclude it.
+CRITICAL WARNING: [BD 41-1356] Slave segment </dynamic_region/data_M_AXI_0/Mem2> is not assigned into address space </static_region/sim_xdma_0/M_AXIMM>. Please use Address Editor to either assign or exclude it.
+CRITICAL WARNING: [BD 41-1356] Slave segment </dynamic_region/data_M_AXI_0/Mem3> is not assigned into address space </static_region/sim_xdma_0/M_AXIMM>. Please use Address Editor to either assign or exclude it.
+CRITICAL WARNING: [BD 41-1356] Slave segment </dynamic_region/data_M_AXI_0/Mem4> is not assigned into address space </static_region/sim_xdma_0/M_AXIMM>. Please use Address Editor to either assign or exclude it.
+CRITICAL WARNING: [BD 41-1356] Slave segment </dynamic_region/data_M_AXI_0/Mem5> is not assigned into address space </static_region/sim_xdma_0/M_AXIMM>. Please use Address Editor to either assign or exclude it.
+CRITICAL WARNING: [BD 41-1356] Slave segment </dynamic_region/data_M_AXI_0/Mem6> is not assigned into address space </static_region/sim_xdma_0/M_AXIMM>. Please use Address Editor to either assign or exclude it.
+CRITICAL WARNING: [BD 41-1356] Slave segment </dynamic_region/data_M_AXI_0/Mem7> is not assigned into address space </static_region/sim_xdma_0/M_AXIMM>. Please use Address Editor to either assign or exclude it.
+CRITICAL WARNING: [BD 41-1356] Slave segment </static_region/embedded_schedular/axi_intc_0/S_AXI/Reg> is not assigned into address space </static_region/sim_xdma_0/M_AXICTRL>. Please use Address Editor to either assign or exclude it.
+CRITICAL WARNING: [BD 41-1356] Slave segment </static_region/sim_copy_kernel_0/s_axi_control/Reg> is not assigned into address space </static_region/sim_xdma_0/M_AXICTRL>. Please use Address Editor to either assign or exclude it.
+CRITICAL WARNING: [BD 41-1356] Slave segment </static_region/sim_copy_kernel_1/s_axi_control/Reg> is not assigned into address space </static_region/sim_xdma_0/M_AXICTRL>. Please use Address Editor to either assign or exclude it.
+CRITICAL WARNING: [BD 41-1356] Slave segment </static_region/sim_copy_kernel_2/s_axi_control/Reg> is not assigned into address space </static_region/sim_xdma_0/M_AXICTRL>. Please use Address Editor to either assign or exclude it.
+CRITICAL WARNING: [BD 41-1356] Slave segment </static_region/sim_copy_kernel_3/s_axi_control/Reg> is not assigned into address space </static_region/sim_xdma_0/M_AXICTRL>. Please use Address Editor to either assign or exclude it.
+CRITICAL WARNING: [BD 41-1356] Slave segment </static_region/sim_ddr_1/C0_DDR_SAXI/C0_DDR_SAXI_mem> is not assigned into address space </dynamic_region/C0_DDR_MAXI_0>. Please use Address Editor to either assign or exclude it.
+CRITICAL WARNING: [BD 41-1356] Slave segment </static_region/sim_copy_kernel_0/s_axi_control/Reg> is not assigned into address space </static_region/embedded_schedular/CuDmaController_0/m_axi_CUDma>. Please use Address Editor to either assign or exclude it.
+CRITICAL WARNING: [BD 41-1356] Slave segment </static_region/sim_copy_kernel_1/s_axi_control/Reg> is not assigned into address space </static_region/embedded_schedular/CuDmaController_0/m_axi_CUDma>. Please use Address Editor to either assign or exclude it.
+CRITICAL WARNING: [BD 41-1356] Slave segment </static_region/sim_copy_kernel_2/s_axi_control/Reg> is not assigned into address space </static_region/embedded_schedular/CuDmaController_0/m_axi_CUDma>. Please use Address Editor to either assign or exclude it.
+CRITICAL WARNING: [BD 41-1356] Slave segment </static_region/sim_copy_kernel_3/s_axi_control/Reg> is not assigned into address space </static_region/embedded_schedular/CuDmaController_0/m_axi_CUDma>. Please use Address Editor to either assign or exclude it.
+CRITICAL WARNING: [BD 41-1356] Slave segment </static_region/sim_copy_kernel_0/s_axi_control/Reg> is not assigned into address space </static_region/embedded_schedular/cuisr_0/m_axi_a>. Please use Address Editor to either assign or exclude it.
+CRITICAL WARNING: [BD 41-1356] Slave segment </static_region/sim_copy_kernel_1/s_axi_control/Reg> is not assigned into address space </static_region/embedded_schedular/cuisr_0/m_axi_a>. Please use Address Editor to either assign or exclude it.
+CRITICAL WARNING: [BD 41-1356] Slave segment </static_region/sim_copy_kernel_2/s_axi_control/Reg> is not assigned into address space </static_region/embedded_schedular/cuisr_0/m_axi_a>. Please use Address Editor to either assign or exclude it.
+CRITICAL WARNING: [BD 41-1356] Slave segment </static_region/sim_copy_kernel_3/s_axi_control/Reg> is not assigned into address space </static_region/embedded_schedular/cuisr_0/m_axi_a>. Please use Address Editor to either assign or exclude it.
+CRITICAL WARNING: [BD 41-1356] Slave segment </static_region/sim_copy_kernel_0/s_axi_control/Reg> is not assigned into address space </static_region/embedded_schedular/sim_embedded_scheduler_sw_0/maxi_lite_mb>. Please use Address Editor to either assign or exclude it.
+CRITICAL WARNING: [BD 41-1356] Slave segment </static_region/sim_copy_kernel_1/s_axi_control/Reg> is not assigned into address space </static_region/embedded_schedular/sim_embedded_scheduler_sw_0/maxi_lite_mb>. Please use Address Editor to either assign or exclude it.
+CRITICAL WARNING: [BD 41-1356] Slave segment </static_region/sim_copy_kernel_2/s_axi_control/Reg> is not assigned into address space </static_region/embedded_schedular/sim_embedded_scheduler_sw_0/maxi_lite_mb>. Please use Address Editor to either assign or exclude it.
+CRITICAL WARNING: [BD 41-1356] Slave segment </static_region/sim_copy_kernel_3/s_axi_control/Reg> is not assigned into address space </static_region/embedded_schedular/sim_embedded_scheduler_sw_0/maxi_lite_mb>. Please use Address Editor to either assign or exclude it.
+CRITICAL WARNING: [BD 41-1356] Slave segment </dynamic_region/data_M_AXI_1/Mem0> is not assigned into address space </static_region/sim_copy_kernel_0/Data_m_axi_gmem>. Please use Address Editor to either assign or exclude it.
+CRITICAL WARNING: [BD 41-1356] Slave segment </dynamic_region/data_M_AXI_1/Mem1> is not assigned into address space </static_region/sim_copy_kernel_0/Data_m_axi_gmem>. Please use Address Editor to either assign or exclude it.
+CRITICAL WARNING: [BD 41-1356] Slave segment </dynamic_region/data_M_AXI_1/Mem2> is not assigned into address space </static_region/sim_copy_kernel_0/Data_m_axi_gmem>. Please use Address Editor to either assign or exclude it.
+CRITICAL WARNING: [BD 41-1356] Slave segment </dynamic_region/data_M_AXI_1/Mem3> is not assigned into address space </static_region/sim_copy_kernel_0/Data_m_axi_gmem>. Please use Address Editor to either assign or exclude it.
+CRITICAL WARNING: [BD 41-1356] Slave segment </dynamic_region/data_M_AXI_1/Mem4> is not assigned into address space </static_region/sim_copy_kernel_0/Data_m_axi_gmem>. Please use Address Editor to either assign or exclude it.
+CRITICAL WARNING: [BD 41-1356] Slave segment </dynamic_region/data_M_AXI_1/Mem5> is not assigned into address space </static_region/sim_copy_kernel_0/Data_m_axi_gmem>. Please use Address Editor to either assign or exclude it.
+CRITICAL WARNING: [BD 41-1356] Slave segment </dynamic_region/data_M_AXI_1/Mem6> is not assigned into address space </static_region/sim_copy_kernel_0/Data_m_axi_gmem>. Please use Address Editor to either assign or exclude it.
+CRITICAL WARNING: [BD 41-1356] Slave segment </dynamic_region/data_M_AXI_1/Mem7> is not assigned into address space </static_region/sim_copy_kernel_0/Data_m_axi_gmem>. Please use Address Editor to either assign or exclude it.
+CRITICAL WARNING: [BD 41-1356] Slave segment </dynamic_region/data_M_AXI_2/Mem0> is not assigned into address space </static_region/sim_copy_kernel_1/Data_m_axi_gmem>. Please use Address Editor to either assign or exclude it.
+CRITICAL WARNING: [BD 41-1356] Slave segment </dynamic_region/data_M_AXI_2/Mem1> is not assigned into address space </static_region/sim_copy_kernel_1/Data_m_axi_gmem>. Please use Address Editor to either assign or exclude it.
+CRITICAL WARNING: [BD 41-1356] Slave segment </dynamic_region/data_M_AXI_2/Mem2> is not assigned into address space </static_region/sim_copy_kernel_1/Data_m_axi_gmem>. Please use Address Editor to either assign or exclude it.
+CRITICAL WARNING: [BD 41-1356] Slave segment </dynamic_region/data_M_AXI_2/Mem3> is not assigned into address space </static_region/sim_copy_kernel_1/Data_m_axi_gmem>. Please use Address Editor to either assign or exclude it.
+CRITICAL WARNING: [BD 41-1356] Slave segment </dynamic_region/data_M_AXI_2/Mem4> is not assigned into address space </static_region/sim_copy_kernel_1/Data_m_axi_gmem>. Please use Address Editor to either assign or exclude it.
+CRITICAL WARNING: [BD 41-1356] Slave segment </dynamic_region/data_M_AXI_2/Mem5> is not assigned into address space </static_region/sim_copy_kernel_1/Data_m_axi_gmem>. Please use Address Editor to either assign or exclude it.
+CRITICAL WARNING: [BD 41-1356] Slave segment </dynamic_region/data_M_AXI_2/Mem6> is not assigned into address space </static_region/sim_copy_kernel_1/Data_m_axi_gmem>. Please use Address Editor to either assign or exclude it.
+CRITICAL WARNING: [BD 41-1356] Slave segment </dynamic_region/data_M_AXI_2/Mem7> is not assigned into address space </static_region/sim_copy_kernel_1/Data_m_axi_gmem>. Please use Address Editor to either assign or exclude it.
+CRITICAL WARNING: [BD 41-1356] Slave segment </dynamic_region/data_M_AXI_3/Mem0> is not assigned into address space </static_region/sim_copy_kernel_2/Data_m_axi_gmem>. Please use Address Editor to either assign or exclude it.
+CRITICAL WARNING: [BD 41-1356] Slave segment </dynamic_region/data_M_AXI_3/Mem1> is not assigned into address space </static_region/sim_copy_kernel_2/Data_m_axi_gmem>. Please use Address Editor to either assign or exclude it.
+CRITICAL WARNING: [BD 41-1356] Slave segment </dynamic_region/data_M_AXI_3/Mem2> is not assigned into address space </static_region/sim_copy_kernel_2/Data_m_axi_gmem>. Please use Address Editor to either assign or exclude it.
+CRITICAL WARNING: [BD 41-1356] Slave segment </dynamic_region/data_M_AXI_3/Mem3> is not assigned into address space </static_region/sim_copy_kernel_2/Data_m_axi_gmem>. Please use Address Editor to either assign or exclude it.
+CRITICAL WARNING: [BD 41-1356] Slave segment </dynamic_region/data_M_AXI_3/Mem4> is not assigned into address space </static_region/sim_copy_kernel_2/Data_m_axi_gmem>. Please use Address Editor to either assign or exclude it.
+CRITICAL WARNING: [BD 41-1356] Slave segment </dynamic_region/data_M_AXI_3/Mem5> is not assigned into address space </static_region/sim_copy_kernel_2/Data_m_axi_gmem>. Please use Address Editor to either assign or exclude it.
+CRITICAL WARNING: [BD 41-1356] Slave segment </dynamic_region/data_M_AXI_3/Mem6> is not assigned into address space </static_region/sim_copy_kernel_2/Data_m_axi_gmem>. Please use Address Editor to either assign or exclude it.
+CRITICAL WARNING: [BD 41-1356] Slave segment </dynamic_region/data_M_AXI_3/Mem7> is not assigned into address space </static_region/sim_copy_kernel_2/Data_m_axi_gmem>. Please use Address Editor to either assign or exclude it.
+CRITICAL WARNING: [BD 41-1356] Slave segment </dynamic_region/data_M_AXI_4/Mem0> is not assigned into address space </static_region/sim_copy_kernel_3/Data_m_axi_gmem>. Please use Address Editor to either assign or exclude it.
+CRITICAL WARNING: [BD 41-1356] Slave segment </dynamic_region/data_M_AXI_4/Mem1> is not assigned into address space </static_region/sim_copy_kernel_3/Data_m_axi_gmem>. Please use Address Editor to either assign or exclude it.
+CRITICAL WARNING: [BD 41-1356] Slave segment </dynamic_region/data_M_AXI_4/Mem2> is not assigned into address space </static_region/sim_copy_kernel_3/Data_m_axi_gmem>. Please use Address Editor to either assign or exclude it.
+CRITICAL WARNING: [BD 41-1356] Slave segment </dynamic_region/data_M_AXI_4/Mem3> is not assigned into address space </static_region/sim_copy_kernel_3/Data_m_axi_gmem>. Please use Address Editor to either assign or exclude it.
+CRITICAL WARNING: [BD 41-1356] Slave segment </dynamic_region/data_M_AXI_4/Mem4> is not assigned into address space </static_region/sim_copy_kernel_3/Data_m_axi_gmem>. Please use Address Editor to either assign or exclude it.
+CRITICAL WARNING: [BD 41-1356] Slave segment </dynamic_region/data_M_AXI_4/Mem5> is not assigned into address space </static_region/sim_copy_kernel_3/Data_m_axi_gmem>. Please use Address Editor to either assign or exclude it.
+INFO: [Common 17-14] Message 'BD 41-1356' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+WARNING: [xilinx.com:ip:axi_intc:4.1-7] /static_region/embedded_schedular/axi_intc_0: Interrupts type manual value (0xFFFFFFFC) does not match computed value (0xFFFFFFF8). Please review the manual value or consider using Auto instead.
+WARNING: [xilinx.com:ip:axi_intc:4.1-13] /static_region/embedded_schedular/axi_intc_0: Interrupt output connection Bus is selected, but the interrupt bus interface is not connected to a matching interface. Please consider selecting Single instead.
+CRITICAL WARNING: [BD 41-237] Bus Interface property SUPPORTS_NARROW_BURST does not match between /static_region/sim_ddr_1/C0_DDR_SAXI(0) and /static_region/icn_pass_0/M00_AXI(1)
+CRITICAL WARNING: [BD 41-237] Bus Interface property MAX_BURST_LENGTH does not match between /dynamic_region/data_M_AXI_1(1) and /static_region/sim_copy_kernel_0/m_axi_gmem(256)
+CRITICAL WARNING: [BD 41-237] Bus Interface property MAX_BURST_LENGTH does not match between /dynamic_region/data_M_AXI_2(1) and /static_region/sim_copy_kernel_1/m_axi_gmem(256)
+CRITICAL WARNING: [BD 41-237] Bus Interface property MAX_BURST_LENGTH does not match between /dynamic_region/data_M_AXI_3(1) and /static_region/sim_copy_kernel_2/m_axi_gmem(256)
+CRITICAL WARNING: [BD 41-237] Bus Interface property MAX_BURST_LENGTH does not match between /dynamic_region/data_M_AXI_4(1) and /static_region/sim_copy_kernel_3/m_axi_gmem(256)
+WARNING: [BD 41-237] Bus Interface property AWUSER_WIDTH does not match between /dynamic_region/data_M_AXI_0(0) and /static_region/sim_xdma_0/M_AXIMM(32)
+WARNING: [BD 41-237] Bus Interface property ARUSER_WIDTH does not match between /dynamic_region/data_M_AXI_0(0) and /static_region/sim_xdma_0/M_AXIMM(32)
+WARNING: [BD 41-237] Bus Interface property WUSER_WIDTH does not match between /dynamic_region/data_M_AXI_0(0) and /static_region/sim_xdma_0/M_AXIMM(1)
+WARNING: [BD 41-237] Bus Interface property RUSER_WIDTH does not match between /dynamic_region/data_M_AXI_0(0) and /static_region/sim_xdma_0/M_AXIMM(1)
+WARNING: [BD 41-237] Bus Interface property BUSER_WIDTH does not match between /dynamic_region/data_M_AXI_0(0) and /static_region/sim_xdma_0/M_AXIMM(1)
+CRITICAL WARNING: [BD 41-237] Bus Interface property MAX_BURST_LENGTH does not match between /dynamic_region/data_M_AXI_0(1) and /static_region/sim_xdma_0/M_AXIMM(256)
+WARNING: [BD 41-927] Following properties on pin /static_region/sim_copy_kernel_0/ap_clk have been updated from connected ip, but BD cell '/static_region/sim_copy_kernel_0' does not accept parameter changes, so they may not be synchronized with cell properties:
+	FREQ_HZ = 300000000.0 
+Please resolve any mismatches by directly setting properties on BD cell </static_region/sim_copy_kernel_0> to completely resolve these warnings.
+WARNING: [BD 41-927] Following properties on pin /static_region/sim_copy_kernel_1/ap_clk have been updated from connected ip, but BD cell '/static_region/sim_copy_kernel_1' does not accept parameter changes, so they may not be synchronized with cell properties:
+	FREQ_HZ = 300000000.0 
+Please resolve any mismatches by directly setting properties on BD cell </static_region/sim_copy_kernel_1> to completely resolve these warnings.
+WARNING: [BD 41-927] Following properties on pin /static_region/sim_copy_kernel_2/ap_clk have been updated from connected ip, but BD cell '/static_region/sim_copy_kernel_2' does not accept parameter changes, so they may not be synchronized with cell properties:
+	FREQ_HZ = 300000000.0 
+Please resolve any mismatches by directly setting properties on BD cell </static_region/sim_copy_kernel_2> to completely resolve these warnings.
+WARNING: [BD 41-927] Following properties on pin /static_region/sim_copy_kernel_3/ap_clk have been updated from connected ip, but BD cell '/static_region/sim_copy_kernel_3' does not accept parameter changes, so they may not be synchronized with cell properties:
+	FREQ_HZ = 300000000.0 
+Please resolve any mismatches by directly setting properties on BD cell </static_region/sim_copy_kernel_3> to completely resolve these warnings.
+WARNING: [BD 41-927] Following properties on pin /static_region/embedded_schedular/embedded_scheduler_hw_0/clk have been updated from connected ip, but BD cell '/static_region/embedded_schedular/embedded_scheduler_hw_0' does not accept parameter changes, so they may not be synchronized with cell properties:
+	FREQ_HZ = 300000000.0 
+Please resolve any mismatches by directly setting properties on BD cell </static_region/embedded_schedular/embedded_scheduler_hw_0> to completely resolve these warnings.
+Wrote  : </home/centos/workspace/improving_performance_lab/Emulation-HW/binary_container_1.build/link/vivado/vpl/prj/prj.srcs/sources_1/bd/emu/emu.bd> 
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/static_region/connect_to_es/s01_couplers/auto_pc/s_axi_awlock'(1) to pin: '/static_region/connect_to_es/s01_couplers/S_AXI_awlock'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/static_region/connect_to_es/s01_couplers/auto_pc/s_axi_arlock'(1) to pin: '/static_region/connect_to_es/s01_couplers/S_AXI_arlock'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/static_region/connect_to_es_cu/s01_mmu/s_axi_awlock'(1) to pin: '/static_region/connect_to_es_cu/S01_AXI_awlock'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/static_region/connect_to_es_cu/s01_mmu/s_axi_arlock'(1) to pin: '/static_region/connect_to_es_cu/S01_AXI_arlock'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/static_region/connect_to_es_cu/s02_mmu/s_axi_awlock'(1) to pin: '/static_region/connect_to_es_cu/S02_AXI_awlock'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/static_region/connect_to_es_cu/s02_mmu/s_axi_arlock'(1) to pin: '/static_region/connect_to_es_cu/S02_AXI_arlock'(2) - Only lower order bits will be connected.
+VHDL Output written to : /home/centos/workspace/improving_performance_lab/Emulation-HW/binary_container_1.build/link/vivado/vpl/prj/prj.srcs/sources_1/bd/emu/synth/emu.v
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/static_region/connect_to_es/s01_couplers/auto_pc/s_axi_awlock'(1) to pin: '/static_region/connect_to_es/s01_couplers/S_AXI_awlock'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/static_region/connect_to_es/s01_couplers/auto_pc/s_axi_arlock'(1) to pin: '/static_region/connect_to_es/s01_couplers/S_AXI_arlock'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/static_region/connect_to_es_cu/s01_mmu/s_axi_awlock'(1) to pin: '/static_region/connect_to_es_cu/S01_AXI_awlock'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/static_region/connect_to_es_cu/s01_mmu/s_axi_arlock'(1) to pin: '/static_region/connect_to_es_cu/S01_AXI_arlock'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/static_region/connect_to_es_cu/s02_mmu/s_axi_awlock'(1) to pin: '/static_region/connect_to_es_cu/S02_AXI_awlock'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/static_region/connect_to_es_cu/s02_mmu/s_axi_arlock'(1) to pin: '/static_region/connect_to_es_cu/S02_AXI_arlock'(2) - Only lower order bits will be connected.
+VHDL Output written to : /home/centos/workspace/improving_performance_lab/Emulation-HW/binary_container_1.build/link/vivado/vpl/prj/prj.srcs/sources_1/bd/emu/sim/emu.v
+VHDL Output written to : /home/centos/workspace/improving_performance_lab/Emulation-HW/binary_container_1.build/link/vivado/vpl/prj/prj.srcs/sources_1/bd/emu/hdl/emu_wrapper.v
+make_wrapper: Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 2805.480 ; gain = 66.691 ; free physical = 100382 ; free virtual = 135817
+INFO: [OCL_UTIL] internal step: hw_emu_common_util::generate_simulation_scripts_and_compile
+--- DEBUG: changing the top model to emu_wrapper
+INFO: [BD 41-1799] The block design contains upgradeable cell(s), automatically upgrading to newest version...
+INFO: [IP_Flow 19-1972] Upgraded pfm_dynamic_interconnect_axilite_user_0_0 from AXI Interconnect 2.1 to AXI Interconnect 2.1
+Excluding slave segment /memory_subsystem/S04_AXI/M00_AXI_MEM00 from address space /wide_vadd_1/Data_m_axi_gmem.
+Excluding slave segment /memory_subsystem/S05_AXI/M00_AXI_MEM00 from address space /wide_vadd_1/Data_m_axi_gmem1.
+Excluding slave segment /memory_subsystem/S06_AXI/M00_AXI_MEM00 from address space /wide_vadd_1/Data_m_axi_gmem2.
+Excluding slave segment /memory_subsystem/S04_AXI/M02_AXI_MEM00 from address space /wide_vadd_1/Data_m_axi_gmem.
+Excluding slave segment /memory_subsystem/S05_AXI/M02_AXI_MEM00 from address space /wide_vadd_1/Data_m_axi_gmem1.
+Excluding slave segment /memory_subsystem/S06_AXI/M02_AXI_MEM00 from address space /wide_vadd_1/Data_m_axi_gmem2.
+Excluding slave segment /memory_subsystem/S04_AXI/M03_AXI_MEM00 from address space /wide_vadd_1/Data_m_axi_gmem.
+Excluding slave segment /memory_subsystem/S05_AXI/M03_AXI_MEM00 from address space /wide_vadd_1/Data_m_axi_gmem1.
+Excluding slave segment /memory_subsystem/S06_AXI/M03_AXI_MEM00 from address space /wide_vadd_1/Data_m_axi_gmem2.
+Excluding slave segment /memory_subsystem/S04_AXI/PLRAM_MEM00 from address space /wide_vadd_1/Data_m_axi_gmem.
+Excluding slave segment /memory_subsystem/S05_AXI/PLRAM_MEM00 from address space /wide_vadd_1/Data_m_axi_gmem1.
+Excluding slave segment /memory_subsystem/S06_AXI/PLRAM_MEM00 from address space /wide_vadd_1/Data_m_axi_gmem2.
+Excluding slave segment /memory_subsystem/S04_AXI/PLRAM_MEM01 from address space /wide_vadd_1/Data_m_axi_gmem.
+Excluding slave segment /memory_subsystem/S05_AXI/PLRAM_MEM01 from address space /wide_vadd_1/Data_m_axi_gmem1.
+Excluding slave segment /memory_subsystem/S06_AXI/PLRAM_MEM01 from address space /wide_vadd_1/Data_m_axi_gmem2.
+Excluding slave segment /memory_subsystem/S04_AXI/PLRAM_MEM02 from address space /wide_vadd_1/Data_m_axi_gmem.
+Excluding slave segment /memory_subsystem/S05_AXI/PLRAM_MEM02 from address space /wide_vadd_1/Data_m_axi_gmem1.
+Excluding slave segment /memory_subsystem/S06_AXI/PLRAM_MEM02 from address space /wide_vadd_1/Data_m_axi_gmem2.
+INFO: [IP_Flow 19-1972] Upgraded pfm_dynamic_interconnect_axilite_user_1_0 from AXI Interconnect 2.1 to AXI Interconnect 2.1
+Excluding slave segment /memory_subsystem/S04_AXI/M00_AXI_MEM00 from address space /wide_vadd_1/Data_m_axi_gmem.
+Excluding slave segment /memory_subsystem/S05_AXI/M00_AXI_MEM00 from address space /wide_vadd_1/Data_m_axi_gmem1.
+Excluding slave segment /memory_subsystem/S06_AXI/M00_AXI_MEM00 from address space /wide_vadd_1/Data_m_axi_gmem2.
+Excluding slave segment /memory_subsystem/S04_AXI/M02_AXI_MEM00 from address space /wide_vadd_1/Data_m_axi_gmem.
+Excluding slave segment /memory_subsystem/S05_AXI/M02_AXI_MEM00 from address space /wide_vadd_1/Data_m_axi_gmem1.
+Excluding slave segment /memory_subsystem/S06_AXI/M02_AXI_MEM00 from address space /wide_vadd_1/Data_m_axi_gmem2.
+Excluding slave segment /memory_subsystem/S04_AXI/M03_AXI_MEM00 from address space /wide_vadd_1/Data_m_axi_gmem.
+Excluding slave segment /memory_subsystem/S05_AXI/M03_AXI_MEM00 from address space /wide_vadd_1/Data_m_axi_gmem1.
+Excluding slave segment /memory_subsystem/S06_AXI/M03_AXI_MEM00 from address space /wide_vadd_1/Data_m_axi_gmem2.
+Excluding slave segment /memory_subsystem/S04_AXI/PLRAM_MEM00 from address space /wide_vadd_1/Data_m_axi_gmem.
+Excluding slave segment /memory_subsystem/S05_AXI/PLRAM_MEM00 from address space /wide_vadd_1/Data_m_axi_gmem1.
+Excluding slave segment /memory_subsystem/S06_AXI/PLRAM_MEM00 from address space /wide_vadd_1/Data_m_axi_gmem2.
+Excluding slave segment /memory_subsystem/S04_AXI/PLRAM_MEM01 from address space /wide_vadd_1/Data_m_axi_gmem.
+Excluding slave segment /memory_subsystem/S05_AXI/PLRAM_MEM01 from address space /wide_vadd_1/Data_m_axi_gmem1.
+Excluding slave segment /memory_subsystem/S06_AXI/PLRAM_MEM01 from address space /wide_vadd_1/Data_m_axi_gmem2.
+Excluding slave segment /memory_subsystem/S04_AXI/PLRAM_MEM02 from address space /wide_vadd_1/Data_m_axi_gmem.
+Excluding slave segment /memory_subsystem/S05_AXI/PLRAM_MEM02 from address space /wide_vadd_1/Data_m_axi_gmem1.
+Excluding slave segment /memory_subsystem/S06_AXI/PLRAM_MEM02 from address space /wide_vadd_1/Data_m_axi_gmem2.
+INFO: [IP_Flow 19-1972] Upgraded pfm_dynamic_interconnect_axilite_user_2_0 from AXI Interconnect 2.1 to AXI Interconnect 2.1
+Excluding slave segment /memory_subsystem/S04_AXI/M00_AXI_MEM00 from address space /wide_vadd_1/Data_m_axi_gmem.
+Excluding slave segment /memory_subsystem/S05_AXI/M00_AXI_MEM00 from address space /wide_vadd_1/Data_m_axi_gmem1.
+Excluding slave segment /memory_subsystem/S06_AXI/M00_AXI_MEM00 from address space /wide_vadd_1/Data_m_axi_gmem2.
+Excluding slave segment /memory_subsystem/S04_AXI/M02_AXI_MEM00 from address space /wide_vadd_1/Data_m_axi_gmem.
+Excluding slave segment /memory_subsystem/S05_AXI/M02_AXI_MEM00 from address space /wide_vadd_1/Data_m_axi_gmem1.
+Excluding slave segment /memory_subsystem/S06_AXI/M02_AXI_MEM00 from address space /wide_vadd_1/Data_m_axi_gmem2.
+Excluding slave segment /memory_subsystem/S04_AXI/M03_AXI_MEM00 from address space /wide_vadd_1/Data_m_axi_gmem.
+Excluding slave segment /memory_subsystem/S05_AXI/M03_AXI_MEM00 from address space /wide_vadd_1/Data_m_axi_gmem1.
+Excluding slave segment /memory_subsystem/S06_AXI/M03_AXI_MEM00 from address space /wide_vadd_1/Data_m_axi_gmem2.
+Excluding slave segment /memory_subsystem/S04_AXI/PLRAM_MEM00 from address space /wide_vadd_1/Data_m_axi_gmem.
+Excluding slave segment /memory_subsystem/S05_AXI/PLRAM_MEM00 from address space /wide_vadd_1/Data_m_axi_gmem1.
+Excluding slave segment /memory_subsystem/S06_AXI/PLRAM_MEM00 from address space /wide_vadd_1/Data_m_axi_gmem2.
+Excluding slave segment /memory_subsystem/S04_AXI/PLRAM_MEM01 from address space /wide_vadd_1/Data_m_axi_gmem.
+Excluding slave segment /memory_subsystem/S05_AXI/PLRAM_MEM01 from address space /wide_vadd_1/Data_m_axi_gmem1.
+Excluding slave segment /memory_subsystem/S06_AXI/PLRAM_MEM01 from address space /wide_vadd_1/Data_m_axi_gmem2.
+Excluding slave segment /memory_subsystem/S04_AXI/PLRAM_MEM02 from address space /wide_vadd_1/Data_m_axi_gmem.
+Excluding slave segment /memory_subsystem/S05_AXI/PLRAM_MEM02 from address space /wide_vadd_1/Data_m_axi_gmem1.
+Excluding slave segment /memory_subsystem/S06_AXI/PLRAM_MEM02 from address space /wide_vadd_1/Data_m_axi_gmem2.
+INFO: [IP_Flow 19-1972] Upgraded pfm_dynamic_user_slr_icn_0 from AXI Interconnect 2.1 to AXI Interconnect 2.1
+Excluding slave segment /memory_subsystem/S04_AXI/M00_AXI_MEM00 from address space /wide_vadd_1/Data_m_axi_gmem.
+Excluding slave segment /memory_subsystem/S05_AXI/M00_AXI_MEM00 from address space /wide_vadd_1/Data_m_axi_gmem1.
+Excluding slave segment /memory_subsystem/S06_AXI/M00_AXI_MEM00 from address space /wide_vadd_1/Data_m_axi_gmem2.
+Excluding slave segment /memory_subsystem/S04_AXI/M02_AXI_MEM00 from address space /wide_vadd_1/Data_m_axi_gmem.
+Excluding slave segment /memory_subsystem/S05_AXI/M02_AXI_MEM00 from address space /wide_vadd_1/Data_m_axi_gmem1.
+Excluding slave segment /memory_subsystem/S06_AXI/M02_AXI_MEM00 from address space /wide_vadd_1/Data_m_axi_gmem2.
+Excluding slave segment /memory_subsystem/S04_AXI/M03_AXI_MEM00 from address space /wide_vadd_1/Data_m_axi_gmem.
+Excluding slave segment /memory_subsystem/S05_AXI/M03_AXI_MEM00 from address space /wide_vadd_1/Data_m_axi_gmem1.
+Excluding slave segment /memory_subsystem/S06_AXI/M03_AXI_MEM00 from address space /wide_vadd_1/Data_m_axi_gmem2.
+Excluding slave segment /memory_subsystem/S04_AXI/PLRAM_MEM00 from address space /wide_vadd_1/Data_m_axi_gmem.
+Excluding slave segment /memory_subsystem/S05_AXI/PLRAM_MEM00 from address space /wide_vadd_1/Data_m_axi_gmem1.
+Excluding slave segment /memory_subsystem/S06_AXI/PLRAM_MEM00 from address space /wide_vadd_1/Data_m_axi_gmem2.
+Excluding slave segment /memory_subsystem/S04_AXI/PLRAM_MEM01 from address space /wide_vadd_1/Data_m_axi_gmem.
+Excluding slave segment /memory_subsystem/S05_AXI/PLRAM_MEM01 from address space /wide_vadd_1/Data_m_axi_gmem1.
+Excluding slave segment /memory_subsystem/S06_AXI/PLRAM_MEM01 from address space /wide_vadd_1/Data_m_axi_gmem2.
+Excluding slave segment /memory_subsystem/S04_AXI/PLRAM_MEM02 from address space /wide_vadd_1/Data_m_axi_gmem.
+Excluding slave segment /memory_subsystem/S05_AXI/PLRAM_MEM02 from address space /wide_vadd_1/Data_m_axi_gmem1.
+Excluding slave segment /memory_subsystem/S06_AXI/PLRAM_MEM02 from address space /wide_vadd_1/Data_m_axi_gmem2.
+INFO: [IP_Flow 19-1972] Upgraded pfm_dynamic_dpa_ctrl_interconnect_0 from AXI Interconnect 2.1 to AXI Interconnect 2.1
+Excluding slave segment /memory_subsystem/S04_AXI/M00_AXI_MEM00 from address space /wide_vadd_1/Data_m_axi_gmem.
+Excluding slave segment /memory_subsystem/S05_AXI/M00_AXI_MEM00 from address space /wide_vadd_1/Data_m_axi_gmem1.
+Excluding slave segment /memory_subsystem/S06_AXI/M00_AXI_MEM00 from address space /wide_vadd_1/Data_m_axi_gmem2.
+Excluding slave segment /memory_subsystem/S04_AXI/M02_AXI_MEM00 from address space /wide_vadd_1/Data_m_axi_gmem.
+Excluding slave segment /memory_subsystem/S05_AXI/M02_AXI_MEM00 from address space /wide_vadd_1/Data_m_axi_gmem1.
+Excluding slave segment /memory_subsystem/S06_AXI/M02_AXI_MEM00 from address space /wide_vadd_1/Data_m_axi_gmem2.
+Excluding slave segment /memory_subsystem/S04_AXI/M03_AXI_MEM00 from address space /wide_vadd_1/Data_m_axi_gmem.
+Excluding slave segment /memory_subsystem/S05_AXI/M03_AXI_MEM00 from address space /wide_vadd_1/Data_m_axi_gmem1.
+Excluding slave segment /memory_subsystem/S06_AXI/M03_AXI_MEM00 from address space /wide_vadd_1/Data_m_axi_gmem2.
+Excluding slave segment /memory_subsystem/S04_AXI/PLRAM_MEM00 from address space /wide_vadd_1/Data_m_axi_gmem.
+Excluding slave segment /memory_subsystem/S05_AXI/PLRAM_MEM00 from address space /wide_vadd_1/Data_m_axi_gmem1.
+Excluding slave segment /memory_subsystem/S06_AXI/PLRAM_MEM00 from address space /wide_vadd_1/Data_m_axi_gmem2.
+Excluding slave segment /memory_subsystem/S04_AXI/PLRAM_MEM01 from address space /wide_vadd_1/Data_m_axi_gmem.
+Excluding slave segment /memory_subsystem/S05_AXI/PLRAM_MEM01 from address space /wide_vadd_1/Data_m_axi_gmem1.
+Excluding slave segment /memory_subsystem/S06_AXI/PLRAM_MEM01 from address space /wide_vadd_1/Data_m_axi_gmem2.
+Excluding slave segment /memory_subsystem/S04_AXI/PLRAM_MEM02 from address space /wide_vadd_1/Data_m_axi_gmem.
+Excluding slave segment /memory_subsystem/S05_AXI/PLRAM_MEM02 from address space /wide_vadd_1/Data_m_axi_gmem1.
+Excluding slave segment /memory_subsystem/S06_AXI/PLRAM_MEM02 from address space /wide_vadd_1/Data_m_axi_gmem2.
+Wrote  : </home/centos/workspace/improving_performance_lab/Emulation-HW/binary_container_1.build/link/vivado/vpl/prj/prj.srcs/sources_1/bd/pfm_dynamic/pfm_dynamic.bd> 
+open_bd_design: Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 3105.215 ; gain = 0.000 ; free physical = 100412 ; free virtual = 135822
+INFO: [BD 41-1799] The block design contains upgradeable cell(s), automatically upgrading to newest version...
+INFO: [IP_Flow 19-1972] Upgraded emu_connect_to_es_0 from AXI Interconnect 2.1 to AXI Interconnect 2.1
+INFO: [IP_Flow 19-1972] Upgraded emu_connect_to_es_cu_0 from AXI Interconnect 2.1 to AXI Interconnect 2.1
+Wrote  : </home/centos/workspace/improving_performance_lab/Emulation-HW/binary_container_1.build/link/vivado/vpl/prj/prj.srcs/sources_1/bd/emu/emu.bd> 
+Command: launch_simulation -scripts_only
+INFO: [xilinx.com:ip:sdx_memory_subsystem:1.0-1] pfm_dynamic_memory_subsystem_0: Vivado project has no BOARD_PART set.   No DDR4 resources will be generated.
+WARNING: [BD 5-279] Subcore identifier 'xilinx.com:xilinx:xtlm_simple_interconnect:1.0' was not declared as a valid subcore dependency. Please package dependent subcores in the 'elaborate_bd' file group to resolve.
+WARNING: [BD 5-279] Subcore identifier 'xilinx.com:xilinx:xtlm_simple_memory:1.0' was not declared as a valid subcore dependency. Please package dependent subcores in the 'elaborate_bd' file group to resolve.
+WARNING: [BD 5-279] Subcore identifier 'xilinx.com:xilinx:xtlm_simple_memory:1.0' was not declared as a valid subcore dependency. Please package dependent subcores in the 'elaborate_bd' file group to resolve.
+WARNING: [BD 5-279] Subcore identifier 'xilinx.com:xilinx:xtlm_simple_memory:1.0' was not declared as a valid subcore dependency. Please package dependent subcores in the 'elaborate_bd' file group to resolve.
+CRITICAL WARNING: [BD 41-1344] Reset pin /xtlm_simple_intercon_0/s05_axi_aresetn (associated clock /xtlm_simple_intercon_0/s05_axi_aclk) is connected to reset source /aresetn (synchronous to clock source /aclk).
+This may prevent design from meeting timing. Instead it should be connected to reset source /aresetn.
+CRITICAL WARNING: [BD 41-1344] Reset pin /xtlm_simple_intercon_0/s06_axi_aresetn (associated clock /xtlm_simple_intercon_0/s06_axi_aclk) is connected to reset source /aresetn (synchronous to clock source /aclk).
+This may prevent design from meeting timing. Instead it should be connected to reset source /aresetn.
+CRITICAL WARNING: [BD 41-1344] Reset pin /xtlm_simple_intercon_0/s04_axi_aresetn (associated clock /xtlm_simple_intercon_0/s04_axi_aclk) is connected to reset source /aresetn (synchronous to clock source /aclk).
+This may prevent design from meeting timing. Instead it should be connected to reset source /aresetn.
+CRITICAL WARNING: [BD 41-1761] Reset pin '/memory_subsystem/aresetn' is found to be associated with multiple clock pins, which are not compatible w.r.t frequency, phase and clock-domain. This may prevent design from functioning correctly. Please ensure same reset pin is either not associated with different clock pins or all associated clock pins are driven by same or compatible clock source(s). List of associated clock pins:
+/memory_subsystem/aclk
+/memory_subsystem/aclk1
+
+INFO: [xilinx.com:ip:sdx_memory_subsystem:1.0-1] /memory_subsystemNo SLR assignment metadata detected at /sim_ddr_0/C0_DDR_SAXI
+INFO: [xilinx.com:ip:sdx_memory_subsystem:1.0-1] /memory_subsystemNo SLR assignment metadata detected at /C0_DDR_MAXI_0
+INFO: [xilinx.com:ip:sdx_memory_subsystem:1.0-1] /memory_subsystemNo SLR assignment metadata detected at /sim_ddr_2/C0_DDR_SAXI
+INFO: [xilinx.com:ip:sdx_memory_subsystem:1.0-1] /memory_subsystemNo SLR assignment metadata detected at /sim_ddr_3/C0_DDR_SAXI
+WARNING: [BD 41-237] Bus Interface property AWUSER_WIDTH does not match between /System_DPA/dpa_hub/S_AXIMM(0) and /xtlm_simple_intercon_0/M04_AXI(1)
+WARNING: [BD 41-237] Bus Interface property ARUSER_WIDTH does not match between /System_DPA/dpa_hub/S_AXIMM(0) and /xtlm_simple_intercon_0/M04_AXI(1)
+WARNING: [BD 41-237] Bus Interface property WUSER_WIDTH does not match between /System_DPA/dpa_hub/S_AXIMM(0) and /xtlm_simple_intercon_0/M04_AXI(1)
+WARNING: [BD 41-237] Bus Interface property RUSER_WIDTH does not match between /System_DPA/dpa_hub/S_AXIMM(0) and /xtlm_simple_intercon_0/M04_AXI(1)
+WARNING: [BD 41-237] Bus Interface property BUSER_WIDTH does not match between /System_DPA/dpa_hub/S_AXIMM(0) and /xtlm_simple_intercon_0/M04_AXI(1)
+CRITICAL WARNING: [BD 41-237] Bus Interface property SUPPORTS_NARROW_BURST does not match between /sim_ddr_0/C0_DDR_SAXI(0) and /memory_subsystem/M00_AXI(1)
+CRITICAL WARNING: [BD 41-237] Bus Interface property SUPPORTS_NARROW_BURST does not match between /sim_ddr_2/C0_DDR_SAXI(0) and /memory_subsystem/M02_AXI(1)
+CRITICAL WARNING: [BD 41-237] Bus Interface property SUPPORTS_NARROW_BURST does not match between /sim_ddr_3/C0_DDR_SAXI(0) and /memory_subsystem/M03_AXI(1)
+WARNING: [BD 41-927] Following properties on pin /wide_vadd_1/ap_clk have been updated from connected ip, but BD cell '/wide_vadd_1' does not accept parameter changes, so they may not be synchronized with cell properties:
+	FREQ_HZ = 300000000 
+Please resolve any mismatches by directly setting properties on BD cell </wide_vadd_1> to completely resolve these warnings.
+INFO: [IP_Flow 19-5627] Changing parameter ADDR_WIDTH on bus interface /S00_AXI from 39 to 40 due to existing assignment(s) on address space /S00_AXI.
+INFO: [IP_Flow 19-5627] Changing parameter ADDR_WIDTH on bus interface /S02_AXI from 39 to 40 due to existing assignment(s) on address space /S02_AXI.
+INFO: [IP_Flow 19-5627] Changing parameter ADDR_WIDTH on bus interface /S03_AXI from 39 to 40 due to existing assignment(s) on address space /S03_AXI.
+Wrote  : </home/centos/workspace/improving_performance_lab/Emulation-HW/binary_container_1.build/link/vivado/vpl/prj/prj.srcs/sources_1/bd/pfm_dynamic/pfm_dynamic.bd> 
+VHDL Output written to : /home/centos/workspace/improving_performance_lab/Emulation-HW/binary_container_1.build/link/vivado/vpl/prj/prj.srcs/sources_1/bd/pfm_dynamic/synth/pfm_dynamic.v
+WARNING: [BD 41-2182] SYSC NETLISTER : Interface Connection slr2_M01_AXI one endpoint missing or has only monitor connections 
+WARNING: [BD 41-2182] SYSC NETLISTER : Interface Connection wide_vadd_1_m_axi_gmem one endpoint missing or has only monitor connections 
+WARNING: [BD 41-2182] SYSC NETLISTER : Interface Connection wide_vadd_1_m_axi_gmem1 one endpoint missing or has only monitor connections 
+WARNING: [BD 41-2182] SYSC NETLISTER : Interface Connection wide_vadd_1_m_axi_gmem2 one endpoint missing or has only monitor connections 
+VHDL Output written to : /home/centos/workspace/improving_performance_lab/Emulation-HW/binary_container_1.build/link/vivado/vpl/prj/prj.srcs/sources_1/bd/pfm_dynamic/sim/pfm_dynamic.v
+VHDL Output written to : /home/centos/workspace/improving_performance_lab/Emulation-HW/binary_container_1.build/link/vivado/vpl/prj/prj.srcs/sources_1/bd/pfm_dynamic/hdl/pfm_dynamic_wrapper.v
+Exporting to file /home/centos/workspace/improving_performance_lab/Emulation-HW/binary_container_1.build/link/vivado/vpl/prj/prj.srcs/sources_1/bd/pfm_dynamic/ip/pfm_dynamic_memory_subsystem_0/bd_0/hw_handoff/pfm_dynamic_memory_subsystem_0.hwh
+Generated Block Design Tcl file /home/centos/workspace/improving_performance_lab/Emulation-HW/binary_container_1.build/link/vivado/vpl/prj/prj.srcs/sources_1/bd/pfm_dynamic/ip/pfm_dynamic_memory_subsystem_0/bd_0/hw_handoff/pfm_dynamic_memory_subsystem_0_bd.tcl
+Generated Hardware Definition File /home/centos/workspace/improving_performance_lab/Emulation-HW/binary_container_1.build/link/vivado/vpl/prj/prj.srcs/sources_1/bd/pfm_dynamic/ip/pfm_dynamic_memory_subsystem_0/bd_0/synth/pfm_dynamic_memory_subsystem_0.hwdef
+INFO: [BD 41-1029] Generation completed for the IP Integrator block slr2/interconnect_axilite_user_2/xbar .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block System_DPA/dpa_ctrl_interconnect/xbar .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block user_slr_icn/xbar .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block slr2/interconnect_axilite_user_2/m01_couplers/m01_regslice .
+WARNING: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'S_AXI'. A default connection has been created.
+WARNING: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'M_AXI'. A default connection has been created.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block slr2/interconnect_axilite_user_2/m01_couplers/auto_cc .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block System_DPA/dpa_ctrl_interconnect/s00_couplers/s00_regslice .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block System_DPA/dpa_ctrl_interconnect/m00_couplers/m00_regslice .
+WARNING: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'S_AXI'. A default connection has been created.
+WARNING: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'M_AXI'. A default connection has been created.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block System_DPA/dpa_ctrl_interconnect/m00_couplers/auto_cc .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block System_DPA/dpa_ctrl_interconnect/m01_couplers/m01_regslice .
+WARNING: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'S_AXI'. A default connection has been created.
+WARNING: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'M_AXI'. A default connection has been created.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block System_DPA/dpa_ctrl_interconnect/m01_couplers/auto_cc .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block System_DPA/dpa_ctrl_interconnect/m02_couplers/m02_regslice .
+WARNING: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'S_AXI'. A default connection has been created.
+WARNING: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'M_AXI'. A default connection has been created.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block System_DPA/dpa_ctrl_interconnect/m02_couplers/auto_cc .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block System_DPA/dpa_ctrl_interconnect/m03_couplers/m03_regslice .
+WARNING: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'S_AXI'. A default connection has been created.
+WARNING: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'M_AXI'. A default connection has been created.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block System_DPA/dpa_ctrl_interconnect/m03_couplers/auto_cc .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block System_DPA/dpa_ctrl_interconnect/m04_couplers/m04_regslice .
+WARNING: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'S_AXI'. A default connection has been created.
+WARNING: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'M_AXI'. A default connection has been created.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block System_DPA/dpa_ctrl_interconnect/m04_couplers/auto_cc .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block System_DPA/dpa_ctrl_interconnect/m05_couplers/m05_regslice .
+WARNING: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'S_AXI'. A default connection has been created.
+WARNING: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'M_AXI'. A default connection has been created.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block System_DPA/dpa_ctrl_interconnect/m05_couplers/auto_cc .
+Exporting to file /home/centos/workspace/improving_performance_lab/Emulation-HW/binary_container_1.build/link/vivado/vpl/prj/prj.srcs/sources_1/bd/pfm_dynamic/hw_handoff/pfm_dynamic.hwh
+Generated Block Design Tcl file /home/centos/workspace/improving_performance_lab/Emulation-HW/binary_container_1.build/link/vivado/vpl/prj/prj.srcs/sources_1/bd/pfm_dynamic/hw_handoff/pfm_dynamic_bd.tcl
+Generated Hardware Definition File /home/centos/workspace/improving_performance_lab/Emulation-HW/binary_container_1.build/link/vivado/vpl/prj/prj.srcs/sources_1/bd/pfm_dynamic/synth/pfm_dynamic.hwdef
+INFO: [BD 41-1795] Refreshing stale Cell /dynamic_region in block design(emu)...
+CRITICAL WARNING: [BD 41-1356] Slave segment </static_region/sim_copy_kernel_0/s_axi_control/Reg> is not assigned into address space </static_region/embedded_schedular/CuDmaController_0/m_axi_CUDma>. Please use Address Editor to either assign or exclude it.
+CRITICAL WARNING: [BD 41-1356] Slave segment </static_region/sim_copy_kernel_1/s_axi_control/Reg> is not assigned into address space </static_region/embedded_schedular/CuDmaController_0/m_axi_CUDma>. Please use Address Editor to either assign or exclude it.
+CRITICAL WARNING: [BD 41-1356] Slave segment </static_region/sim_copy_kernel_2/s_axi_control/Reg> is not assigned into address space </static_region/embedded_schedular/CuDmaController_0/m_axi_CUDma>. Please use Address Editor to either assign or exclude it.
+CRITICAL WARNING: [BD 41-1356] Slave segment </static_region/sim_copy_kernel_3/s_axi_control/Reg> is not assigned into address space </static_region/embedded_schedular/CuDmaController_0/m_axi_CUDma>. Please use Address Editor to either assign or exclude it.
+CRITICAL WARNING: [BD 41-1356] Slave segment </static_region/sim_copy_kernel_0/s_axi_control/Reg> is not assigned into address space </static_region/embedded_schedular/cuisr_0/m_axi_a>. Please use Address Editor to either assign or exclude it.
+CRITICAL WARNING: [BD 41-1356] Slave segment </static_region/sim_copy_kernel_1/s_axi_control/Reg> is not assigned into address space </static_region/embedded_schedular/cuisr_0/m_axi_a>. Please use Address Editor to either assign or exclude it.
+CRITICAL WARNING: [BD 41-1356] Slave segment </static_region/sim_copy_kernel_2/s_axi_control/Reg> is not assigned into address space </static_region/embedded_schedular/cuisr_0/m_axi_a>. Please use Address Editor to either assign or exclude it.
+CRITICAL WARNING: [BD 41-1356] Slave segment </static_region/sim_copy_kernel_3/s_axi_control/Reg> is not assigned into address space </static_region/embedded_schedular/cuisr_0/m_axi_a>. Please use Address Editor to either assign or exclude it.
+CRITICAL WARNING: [BD 41-1356] Slave segment </static_region/sim_copy_kernel_0/s_axi_control/Reg> is not assigned into address space </static_region/embedded_schedular/sim_embedded_scheduler_sw_0/maxi_lite_mb>. Please use Address Editor to either assign or exclude it.
+CRITICAL WARNING: [BD 41-1356] Slave segment </static_region/sim_copy_kernel_1/s_axi_control/Reg> is not assigned into address space </static_region/embedded_schedular/sim_embedded_scheduler_sw_0/maxi_lite_mb>. Please use Address Editor to either assign or exclude it.
+CRITICAL WARNING: [BD 41-1356] Slave segment </static_region/sim_copy_kernel_2/s_axi_control/Reg> is not assigned into address space </static_region/embedded_schedular/sim_embedded_scheduler_sw_0/maxi_lite_mb>. Please use Address Editor to either assign or exclude it.
+CRITICAL WARNING: [BD 41-1356] Slave segment </static_region/sim_copy_kernel_3/s_axi_control/Reg> is not assigned into address space </static_region/embedded_schedular/sim_embedded_scheduler_sw_0/maxi_lite_mb>. Please use Address Editor to either assign or exclude it.
+CRITICAL WARNING: [BD 41-1356] Slave segment </dynamic_region/data_M_AXI_1/Mem0> is not assigned into address space </static_region/sim_copy_kernel_0/Data_m_axi_gmem>. Please use Address Editor to either assign or exclude it.
+CRITICAL WARNING: [BD 41-1356] Slave segment </dynamic_region/data_M_AXI_1/Mem1> is not assigned into address space </static_region/sim_copy_kernel_0/Data_m_axi_gmem>. Please use Address Editor to either assign or exclude it.
+CRITICAL WARNING: [BD 41-1356] Slave segment </dynamic_region/data_M_AXI_1/Mem2> is not assigned into address space </static_region/sim_copy_kernel_0/Data_m_axi_gmem>. Please use Address Editor to either assign or exclude it.
+CRITICAL WARNING: [BD 41-1356] Slave segment </dynamic_region/data_M_AXI_1/Mem3> is not assigned into address space </static_region/sim_copy_kernel_0/Data_m_axi_gmem>. Please use Address Editor to either assign or exclude it.
+CRITICAL WARNING: [BD 41-1356] Slave segment </dynamic_region/data_M_AXI_1/Mem4> is not assigned into address space </static_region/sim_copy_kernel_0/Data_m_axi_gmem>. Please use Address Editor to either assign or exclude it.
+CRITICAL WARNING: [BD 41-1356] Slave segment </dynamic_region/data_M_AXI_1/Mem5> is not assigned into address space </static_region/sim_copy_kernel_0/Data_m_axi_gmem>. Please use Address Editor to either assign or exclude it.
+CRITICAL WARNING: [BD 41-1356] Slave segment </dynamic_region/data_M_AXI_1/Mem6> is not assigned into address space </static_region/sim_copy_kernel_0/Data_m_axi_gmem>. Please use Address Editor to either assign or exclude it.
+CRITICAL WARNING: [BD 41-1356] Slave segment </dynamic_region/data_M_AXI_1/Mem7> is not assigned into address space </static_region/sim_copy_kernel_0/Data_m_axi_gmem>. Please use Address Editor to either assign or exclude it.
+CRITICAL WARNING: [BD 41-1356] Slave segment </dynamic_region/data_M_AXI_2/Mem0> is not assigned into address space </static_region/sim_copy_kernel_1/Data_m_axi_gmem>. Please use Address Editor to either assign or exclude it.
+CRITICAL WARNING: [BD 41-1356] Slave segment </dynamic_region/data_M_AXI_2/Mem1> is not assigned into address space </static_region/sim_copy_kernel_1/Data_m_axi_gmem>. Please use Address Editor to either assign or exclude it.
+CRITICAL WARNING: [BD 41-1356] Slave segment </dynamic_region/data_M_AXI_2/Mem2> is not assigned into address space </static_region/sim_copy_kernel_1/Data_m_axi_gmem>. Please use Address Editor to either assign or exclude it.
+CRITICAL WARNING: [BD 41-1356] Slave segment </dynamic_region/data_M_AXI_2/Mem3> is not assigned into address space </static_region/sim_copy_kernel_1/Data_m_axi_gmem>. Please use Address Editor to either assign or exclude it.
+CRITICAL WARNING: [BD 41-1356] Slave segment </dynamic_region/data_M_AXI_2/Mem4> is not assigned into address space </static_region/sim_copy_kernel_1/Data_m_axi_gmem>. Please use Address Editor to either assign or exclude it.
+CRITICAL WARNING: [BD 41-1356] Slave segment </dynamic_region/data_M_AXI_2/Mem5> is not assigned into address space </static_region/sim_copy_kernel_1/Data_m_axi_gmem>. Please use Address Editor to either assign or exclude it.
+CRITICAL WARNING: [BD 41-1356] Slave segment </dynamic_region/data_M_AXI_2/Mem6> is not assigned into address space </static_region/sim_copy_kernel_1/Data_m_axi_gmem>. Please use Address Editor to either assign or exclude it.
+CRITICAL WARNING: [BD 41-1356] Slave segment </dynamic_region/data_M_AXI_2/Mem7> is not assigned into address space </static_region/sim_copy_kernel_1/Data_m_axi_gmem>. Please use Address Editor to either assign or exclude it.
+CRITICAL WARNING: [BD 41-1356] Slave segment </dynamic_region/data_M_AXI_3/Mem0> is not assigned into address space </static_region/sim_copy_kernel_2/Data_m_axi_gmem>. Please use Address Editor to either assign or exclude it.
+CRITICAL WARNING: [BD 41-1356] Slave segment </dynamic_region/data_M_AXI_3/Mem1> is not assigned into address space </static_region/sim_copy_kernel_2/Data_m_axi_gmem>. Please use Address Editor to either assign or exclude it.
+CRITICAL WARNING: [BD 41-1356] Slave segment </dynamic_region/data_M_AXI_3/Mem2> is not assigned into address space </static_region/sim_copy_kernel_2/Data_m_axi_gmem>. Please use Address Editor to either assign or exclude it.
+CRITICAL WARNING: [BD 41-1356] Slave segment </dynamic_region/data_M_AXI_3/Mem3> is not assigned into address space </static_region/sim_copy_kernel_2/Data_m_axi_gmem>. Please use Address Editor to either assign or exclude it.
+CRITICAL WARNING: [BD 41-1356] Slave segment </dynamic_region/data_M_AXI_3/Mem4> is not assigned into address space </static_region/sim_copy_kernel_2/Data_m_axi_gmem>. Please use Address Editor to either assign or exclude it.
+CRITICAL WARNING: [BD 41-1356] Slave segment </dynamic_region/data_M_AXI_3/Mem5> is not assigned into address space </static_region/sim_copy_kernel_2/Data_m_axi_gmem>. Please use Address Editor to either assign or exclude it.
+CRITICAL WARNING: [BD 41-1356] Slave segment </dynamic_region/data_M_AXI_3/Mem6> is not assigned into address space </static_region/sim_copy_kernel_2/Data_m_axi_gmem>. Please use Address Editor to either assign or exclude it.
+CRITICAL WARNING: [BD 41-1356] Slave segment </dynamic_region/data_M_AXI_3/Mem7> is not assigned into address space </static_region/sim_copy_kernel_2/Data_m_axi_gmem>. Please use Address Editor to either assign or exclude it.
+CRITICAL WARNING: [BD 41-1356] Slave segment </dynamic_region/data_M_AXI_4/Mem0> is not assigned into address space </static_region/sim_copy_kernel_3/Data_m_axi_gmem>. Please use Address Editor to either assign or exclude it.
+CRITICAL WARNING: [BD 41-1356] Slave segment </dynamic_region/data_M_AXI_4/Mem1> is not assigned into address space </static_region/sim_copy_kernel_3/Data_m_axi_gmem>. Please use Address Editor to either assign or exclude it.
+CRITICAL WARNING: [BD 41-1356] Slave segment </dynamic_region/data_M_AXI_4/Mem2> is not assigned into address space </static_region/sim_copy_kernel_3/Data_m_axi_gmem>. Please use Address Editor to either assign or exclude it.
+CRITICAL WARNING: [BD 41-1356] Slave segment </dynamic_region/data_M_AXI_4/Mem3> is not assigned into address space </static_region/sim_copy_kernel_3/Data_m_axi_gmem>. Please use Address Editor to either assign or exclude it.
+CRITICAL WARNING: [BD 41-1356] Slave segment </dynamic_region/data_M_AXI_4/Mem4> is not assigned into address space </static_region/sim_copy_kernel_3/Data_m_axi_gmem>. Please use Address Editor to either assign or exclude it.
+CRITICAL WARNING: [BD 41-1356] Slave segment </dynamic_region/data_M_AXI_4/Mem5> is not assigned into address space </static_region/sim_copy_kernel_3/Data_m_axi_gmem>. Please use Address Editor to either assign or exclude it.
+CRITICAL WARNING: [BD 41-1356] Slave segment </dynamic_region/data_M_AXI_4/Mem6> is not assigned into address space </static_region/sim_copy_kernel_3/Data_m_axi_gmem>. Please use Address Editor to either assign or exclude it.
+CRITICAL WARNING: [BD 41-1356] Slave segment </dynamic_region/data_M_AXI_4/Mem7> is not assigned into address space </static_region/sim_copy_kernel_3/Data_m_axi_gmem>. Please use Address Editor to either assign or exclude it.
+CRITICAL WARNING: [BD 41-1356] Slave segment </dynamic_region/data_M_AXI_0/Mem0> is not assigned into address space </static_region/sim_xdma_0/M_AXIMM>. Please use Address Editor to either assign or exclude it.
+CRITICAL WARNING: [BD 41-1356] Slave segment </dynamic_region/data_M_AXI_0/Mem1> is not assigned into address space </static_region/sim_xdma_0/M_AXIMM>. Please use Address Editor to either assign or exclude it.
+CRITICAL WARNING: [BD 41-1356] Slave segment </dynamic_region/data_M_AXI_0/Mem2> is not assigned into address space </static_region/sim_xdma_0/M_AXIMM>. Please use Address Editor to either assign or exclude it.
+CRITICAL WARNING: [BD 41-1356] Slave segment </dynamic_region/data_M_AXI_0/Mem3> is not assigned into address space </static_region/sim_xdma_0/M_AXIMM>. Please use Address Editor to either assign or exclude it.
+CRITICAL WARNING: [BD 41-1356] Slave segment </dynamic_region/data_M_AXI_0/Mem4> is not assigned into address space </static_region/sim_xdma_0/M_AXIMM>. Please use Address Editor to either assign or exclude it.
+CRITICAL WARNING: [BD 41-1356] Slave segment </dynamic_region/data_M_AXI_0/Mem5> is not assigned into address space </static_region/sim_xdma_0/M_AXIMM>. Please use Address Editor to either assign or exclude it.
+CRITICAL WARNING: [BD 41-1356] Slave segment </dynamic_region/data_M_AXI_0/Mem6> is not assigned into address space </static_region/sim_xdma_0/M_AXIMM>. Please use Address Editor to either assign or exclude it.
+CRITICAL WARNING: [BD 41-1356] Slave segment </dynamic_region/data_M_AXI_0/Mem7> is not assigned into address space </static_region/sim_xdma_0/M_AXIMM>. Please use Address Editor to either assign or exclude it.
+CRITICAL WARNING: [BD 41-1356] Slave segment </static_region/embedded_schedular/axi_intc_0/S_AXI/Reg> is not assigned into address space </static_region/sim_xdma_0/M_AXICTRL>. Please use Address Editor to either assign or exclude it.
+CRITICAL WARNING: [BD 41-1356] Slave segment </static_region/sim_copy_kernel_0/s_axi_control/Reg> is not assigned into address space </static_region/sim_xdma_0/M_AXICTRL>. Please use Address Editor to either assign or exclude it.
+CRITICAL WARNING: [BD 41-1356] Slave segment </static_region/sim_copy_kernel_1/s_axi_control/Reg> is not assigned into address space </static_region/sim_xdma_0/M_AXICTRL>. Please use Address Editor to either assign or exclude it.
+CRITICAL WARNING: [BD 41-1356] Slave segment </static_region/sim_copy_kernel_2/s_axi_control/Reg> is not assigned into address space </static_region/sim_xdma_0/M_AXICTRL>. Please use Address Editor to either assign or exclude it.
+CRITICAL WARNING: [BD 41-1356] Slave segment </static_region/sim_copy_kernel_3/s_axi_control/Reg> is not assigned into address space </static_region/sim_xdma_0/M_AXICTRL>. Please use Address Editor to either assign or exclude it.
+CRITICAL WARNING: [BD 41-1356] Slave segment </static_region/sim_ddr_1/C0_DDR_SAXI/C0_DDR_SAXI_mem> is not assigned into address space </dynamic_region/C0_DDR_MAXI_0>. Please use Address Editor to either assign or exclude it.
+CRITICAL WARNING: [BD 41-1356] Slave segment </static_region/sim_copy_kernel_0/s_axi_control/Reg> is not assigned into address space </static_region/embedded_schedular/CuDmaController_0/m_axi_CUDma>. Please use Address Editor to either assign or exclude it.
+CRITICAL WARNING: [BD 41-1356] Slave segment </static_region/sim_copy_kernel_1/s_axi_control/Reg> is not assigned into address space </static_region/embedded_schedular/CuDmaController_0/m_axi_CUDma>. Please use Address Editor to either assign or exclude it.
+CRITICAL WARNING: [BD 41-1356] Slave segment </static_region/sim_copy_kernel_2/s_axi_control/Reg> is not assigned into address space </static_region/embedded_schedular/CuDmaController_0/m_axi_CUDma>. Please use Address Editor to either assign or exclude it.
+CRITICAL WARNING: [BD 41-1356] Slave segment </static_region/sim_copy_kernel_3/s_axi_control/Reg> is not assigned into address space </static_region/embedded_schedular/CuDmaController_0/m_axi_CUDma>. Please use Address Editor to either assign or exclude it.
+CRITICAL WARNING: [BD 41-1356] Slave segment </static_region/sim_copy_kernel_0/s_axi_control/Reg> is not assigned into address space </static_region/embedded_schedular/cuisr_0/m_axi_a>. Please use Address Editor to either assign or exclude it.
+CRITICAL WARNING: [BD 41-1356] Slave segment </static_region/sim_copy_kernel_1/s_axi_control/Reg> is not assigned into address space </static_region/embedded_schedular/cuisr_0/m_axi_a>. Please use Address Editor to either assign or exclude it.
+CRITICAL WARNING: [BD 41-1356] Slave segment </static_region/sim_copy_kernel_2/s_axi_control/Reg> is not assigned into address space </static_region/embedded_schedular/cuisr_0/m_axi_a>. Please use Address Editor to either assign or exclude it.
+CRITICAL WARNING: [BD 41-1356] Slave segment </static_region/sim_copy_kernel_3/s_axi_control/Reg> is not assigned into address space </static_region/embedded_schedular/cuisr_0/m_axi_a>. Please use Address Editor to either assign or exclude it.
+CRITICAL WARNING: [BD 41-1356] Slave segment </static_region/sim_copy_kernel_0/s_axi_control/Reg> is not assigned into address space </static_region/embedded_schedular/sim_embedded_scheduler_sw_0/maxi_lite_mb>. Please use Address Editor to either assign or exclude it.
+CRITICAL WARNING: [BD 41-1356] Slave segment </static_region/sim_copy_kernel_1/s_axi_control/Reg> is not assigned into address space </static_region/embedded_schedular/sim_embedded_scheduler_sw_0/maxi_lite_mb>. Please use Address Editor to either assign or exclude it.
+CRITICAL WARNING: [BD 41-1356] Slave segment </static_region/sim_copy_kernel_2/s_axi_control/Reg> is not assigned into address space </static_region/embedded_schedular/sim_embedded_scheduler_sw_0/maxi_lite_mb>. Please use Address Editor to either assign or exclude it.
+CRITICAL WARNING: [BD 41-1356] Slave segment </static_region/sim_copy_kernel_3/s_axi_control/Reg> is not assigned into address space </static_region/embedded_schedular/sim_embedded_scheduler_sw_0/maxi_lite_mb>. Please use Address Editor to either assign or exclude it.
+CRITICAL WARNING: [BD 41-1356] Slave segment </dynamic_region/data_M_AXI_1/Mem0> is not assigned into address space </static_region/sim_copy_kernel_0/Data_m_axi_gmem>. Please use Address Editor to either assign or exclude it.
+CRITICAL WARNING: [BD 41-1356] Slave segment </dynamic_region/data_M_AXI_1/Mem1> is not assigned into address space </static_region/sim_copy_kernel_0/Data_m_axi_gmem>. Please use Address Editor to either assign or exclude it.
+CRITICAL WARNING: [BD 41-1356] Slave segment </dynamic_region/data_M_AXI_1/Mem2> is not assigned into address space </static_region/sim_copy_kernel_0/Data_m_axi_gmem>. Please use Address Editor to either assign or exclude it.
+CRITICAL WARNING: [BD 41-1356] Slave segment </dynamic_region/data_M_AXI_1/Mem3> is not assigned into address space </static_region/sim_copy_kernel_0/Data_m_axi_gmem>. Please use Address Editor to either assign or exclude it.
+CRITICAL WARNING: [BD 41-1356] Slave segment </dynamic_region/data_M_AXI_1/Mem4> is not assigned into address space </static_region/sim_copy_kernel_0/Data_m_axi_gmem>. Please use Address Editor to either assign or exclude it.
+CRITICAL WARNING: [BD 41-1356] Slave segment </dynamic_region/data_M_AXI_1/Mem5> is not assigned into address space </static_region/sim_copy_kernel_0/Data_m_axi_gmem>. Please use Address Editor to either assign or exclude it.
+CRITICAL WARNING: [BD 41-1356] Slave segment </dynamic_region/data_M_AXI_1/Mem6> is not assigned into address space </static_region/sim_copy_kernel_0/Data_m_axi_gmem>. Please use Address Editor to either assign or exclude it.
+CRITICAL WARNING: [BD 41-1356] Slave segment </dynamic_region/data_M_AXI_1/Mem7> is not assigned into address space </static_region/sim_copy_kernel_0/Data_m_axi_gmem>. Please use Address Editor to either assign or exclude it.
+CRITICAL WARNING: [BD 41-1356] Slave segment </dynamic_region/data_M_AXI_2/Mem0> is not assigned into address space </static_region/sim_copy_kernel_1/Data_m_axi_gmem>. Please use Address Editor to either assign or exclude it.
+CRITICAL WARNING: [BD 41-1356] Slave segment </dynamic_region/data_M_AXI_2/Mem1> is not assigned into address space </static_region/sim_copy_kernel_1/Data_m_axi_gmem>. Please use Address Editor to either assign or exclude it.
+CRITICAL WARNING: [BD 41-1356] Slave segment </dynamic_region/data_M_AXI_2/Mem2> is not assigned into address space </static_region/sim_copy_kernel_1/Data_m_axi_gmem>. Please use Address Editor to either assign or exclude it.
+CRITICAL WARNING: [BD 41-1356] Slave segment </dynamic_region/data_M_AXI_2/Mem3> is not assigned into address space </static_region/sim_copy_kernel_1/Data_m_axi_gmem>. Please use Address Editor to either assign or exclude it.
+CRITICAL WARNING: [BD 41-1356] Slave segment </dynamic_region/data_M_AXI_2/Mem4> is not assigned into address space </static_region/sim_copy_kernel_1/Data_m_axi_gmem>. Please use Address Editor to either assign or exclude it.
+CRITICAL WARNING: [BD 41-1356] Slave segment </dynamic_region/data_M_AXI_2/Mem5> is not assigned into address space </static_region/sim_copy_kernel_1/Data_m_axi_gmem>. Please use Address Editor to either assign or exclude it.
+CRITICAL WARNING: [BD 41-1356] Slave segment </dynamic_region/data_M_AXI_2/Mem6> is not assigned into address space </static_region/sim_copy_kernel_1/Data_m_axi_gmem>. Please use Address Editor to either assign or exclude it.
+CRITICAL WARNING: [BD 41-1356] Slave segment </dynamic_region/data_M_AXI_2/Mem7> is not assigned into address space </static_region/sim_copy_kernel_1/Data_m_axi_gmem>. Please use Address Editor to either assign or exclude it.
+CRITICAL WARNING: [BD 41-1356] Slave segment </dynamic_region/data_M_AXI_3/Mem0> is not assigned into address space </static_region/sim_copy_kernel_2/Data_m_axi_gmem>. Please use Address Editor to either assign or exclude it.
+CRITICAL WARNING: [BD 41-1356] Slave segment </dynamic_region/data_M_AXI_3/Mem1> is not assigned into address space </static_region/sim_copy_kernel_2/Data_m_axi_gmem>. Please use Address Editor to either assign or exclude it.
+CRITICAL WARNING: [BD 41-1356] Slave segment </dynamic_region/data_M_AXI_3/Mem2> is not assigned into address space </static_region/sim_copy_kernel_2/Data_m_axi_gmem>. Please use Address Editor to either assign or exclude it.
+CRITICAL WARNING: [BD 41-1356] Slave segment </dynamic_region/data_M_AXI_3/Mem3> is not assigned into address space </static_region/sim_copy_kernel_2/Data_m_axi_gmem>. Please use Address Editor to either assign or exclude it.
+CRITICAL WARNING: [BD 41-1356] Slave segment </dynamic_region/data_M_AXI_3/Mem4> is not assigned into address space </static_region/sim_copy_kernel_2/Data_m_axi_gmem>. Please use Address Editor to either assign or exclude it.
+CRITICAL WARNING: [BD 41-1356] Slave segment </dynamic_region/data_M_AXI_3/Mem5> is not assigned into address space </static_region/sim_copy_kernel_2/Data_m_axi_gmem>. Please use Address Editor to either assign or exclude it.
+CRITICAL WARNING: [BD 41-1356] Slave segment </dynamic_region/data_M_AXI_3/Mem6> is not assigned into address space </static_region/sim_copy_kernel_2/Data_m_axi_gmem>. Please use Address Editor to either assign or exclude it.
+CRITICAL WARNING: [BD 41-1356] Slave segment </dynamic_region/data_M_AXI_3/Mem7> is not assigned into address space </static_region/sim_copy_kernel_2/Data_m_axi_gmem>. Please use Address Editor to either assign or exclude it.
+CRITICAL WARNING: [BD 41-1356] Slave segment </dynamic_region/data_M_AXI_4/Mem0> is not assigned into address space </static_region/sim_copy_kernel_3/Data_m_axi_gmem>. Please use Address Editor to either assign or exclude it.
+CRITICAL WARNING: [BD 41-1356] Slave segment </dynamic_region/data_M_AXI_4/Mem1> is not assigned into address space </static_region/sim_copy_kernel_3/Data_m_axi_gmem>. Please use Address Editor to either assign or exclude it.
+CRITICAL WARNING: [BD 41-1356] Slave segment </dynamic_region/data_M_AXI_4/Mem2> is not assigned into address space </static_region/sim_copy_kernel_3/Data_m_axi_gmem>. Please use Address Editor to either assign or exclude it.
+CRITICAL WARNING: [BD 41-1356] Slave segment </dynamic_region/data_M_AXI_4/Mem3> is not assigned into address space </static_region/sim_copy_kernel_3/Data_m_axi_gmem>. Please use Address Editor to either assign or exclude it.
+CRITICAL WARNING: [BD 41-1356] Slave segment </dynamic_region/data_M_AXI_4/Mem4> is not assigned into address space </static_region/sim_copy_kernel_3/Data_m_axi_gmem>. Please use Address Editor to either assign or exclude it.
+CRITICAL WARNING: [BD 41-1356] Slave segment </dynamic_region/data_M_AXI_4/Mem5> is not assigned into address space </static_region/sim_copy_kernel_3/Data_m_axi_gmem>. Please use Address Editor to either assign or exclude it.
+INFO: [Common 17-14] Message 'BD 41-1356' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+WARNING: [xilinx.com:ip:axi_intc:4.1-7] /static_region/embedded_schedular/axi_intc_0: Interrupts type manual value (0xFFFFFFFC) does not match computed value (0xFFFFFFF8). Please review the manual value or consider using Auto instead.
+WARNING: [xilinx.com:ip:axi_intc:4.1-13] /static_region/embedded_schedular/axi_intc_0: Interrupt output connection Bus is selected, but the interrupt bus interface is not connected to a matching interface. Please consider selecting Single instead.
+CRITICAL WARNING: [BD 41-237] Bus Interface property SUPPORTS_NARROW_BURST does not match between /static_region/sim_ddr_1/C0_DDR_SAXI(0) and /static_region/icn_pass_0/M00_AXI(1)
+CRITICAL WARNING: [BD 41-237] Bus Interface property MAX_BURST_LENGTH does not match between /dynamic_region/data_M_AXI_1(1) and /static_region/sim_copy_kernel_0/m_axi_gmem(256)
+CRITICAL WARNING: [BD 41-237] Bus Interface property MAX_BURST_LENGTH does not match between /dynamic_region/data_M_AXI_2(1) and /static_region/sim_copy_kernel_1/m_axi_gmem(256)
+CRITICAL WARNING: [BD 41-237] Bus Interface property MAX_BURST_LENGTH does not match between /dynamic_region/data_M_AXI_3(1) and /static_region/sim_copy_kernel_2/m_axi_gmem(256)
+CRITICAL WARNING: [BD 41-237] Bus Interface property MAX_BURST_LENGTH does not match between /dynamic_region/data_M_AXI_4(1) and /static_region/sim_copy_kernel_3/m_axi_gmem(256)
+WARNING: [BD 41-237] Bus Interface property AWUSER_WIDTH does not match between /dynamic_region/data_M_AXI_0(0) and /static_region/sim_xdma_0/M_AXIMM(32)
+WARNING: [BD 41-237] Bus Interface property ARUSER_WIDTH does not match between /dynamic_region/data_M_AXI_0(0) and /static_region/sim_xdma_0/M_AXIMM(32)
+WARNING: [BD 41-237] Bus Interface property WUSER_WIDTH does not match between /dynamic_region/data_M_AXI_0(0) and /static_region/sim_xdma_0/M_AXIMM(1)
+WARNING: [BD 41-237] Bus Interface property RUSER_WIDTH does not match between /dynamic_region/data_M_AXI_0(0) and /static_region/sim_xdma_0/M_AXIMM(1)
+WARNING: [BD 41-237] Bus Interface property BUSER_WIDTH does not match between /dynamic_region/data_M_AXI_0(0) and /static_region/sim_xdma_0/M_AXIMM(1)
+CRITICAL WARNING: [BD 41-237] Bus Interface property MAX_BURST_LENGTH does not match between /dynamic_region/data_M_AXI_0(1) and /static_region/sim_xdma_0/M_AXIMM(256)
+WARNING: [BD 41-927] Following properties on pin /static_region/sim_copy_kernel_0/ap_clk have been updated from connected ip, but BD cell '/static_region/sim_copy_kernel_0' does not accept parameter changes, so they may not be synchronized with cell properties:
+	FREQ_HZ = 300000000.0 
+Please resolve any mismatches by directly setting properties on BD cell </static_region/sim_copy_kernel_0> to completely resolve these warnings.
+WARNING: [BD 41-927] Following properties on pin /static_region/sim_copy_kernel_1/ap_clk have been updated from connected ip, but BD cell '/static_region/sim_copy_kernel_1' does not accept parameter changes, so they may not be synchronized with cell properties:
+	FREQ_HZ = 300000000.0 
+Please resolve any mismatches by directly setting properties on BD cell </static_region/sim_copy_kernel_1> to completely resolve these warnings.
+WARNING: [BD 41-927] Following properties on pin /static_region/sim_copy_kernel_2/ap_clk have been updated from connected ip, but BD cell '/static_region/sim_copy_kernel_2' does not accept parameter changes, so they may not be synchronized with cell properties:
+	FREQ_HZ = 300000000.0 
+Please resolve any mismatches by directly setting properties on BD cell </static_region/sim_copy_kernel_2> to completely resolve these warnings.
+WARNING: [BD 41-927] Following properties on pin /static_region/sim_copy_kernel_3/ap_clk have been updated from connected ip, but BD cell '/static_region/sim_copy_kernel_3' does not accept parameter changes, so they may not be synchronized with cell properties:
+	FREQ_HZ = 300000000.0 
+Please resolve any mismatches by directly setting properties on BD cell </static_region/sim_copy_kernel_3> to completely resolve these warnings.
+WARNING: [BD 41-927] Following properties on pin /static_region/embedded_schedular/embedded_scheduler_hw_0/clk have been updated from connected ip, but BD cell '/static_region/embedded_schedular/embedded_scheduler_hw_0' does not accept parameter changes, so they may not be synchronized with cell properties:
+	FREQ_HZ = 300000000.0 
+Please resolve any mismatches by directly setting properties on BD cell </static_region/embedded_schedular/embedded_scheduler_hw_0> to completely resolve these warnings.
+Wrote  : </home/centos/workspace/improving_performance_lab/Emulation-HW/binary_container_1.build/link/vivado/vpl/prj/prj.srcs/sources_1/bd/emu/emu.bd> 
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/static_region/connect_to_es/s01_couplers/auto_pc/s_axi_awlock'(1) to pin: '/static_region/connect_to_es/s01_couplers/S_AXI_awlock'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/static_region/connect_to_es/s01_couplers/auto_pc/s_axi_arlock'(1) to pin: '/static_region/connect_to_es/s01_couplers/S_AXI_arlock'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/static_region/connect_to_es_cu/s01_mmu/s_axi_awlock'(1) to pin: '/static_region/connect_to_es_cu/S01_AXI_awlock'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/static_region/connect_to_es_cu/s01_mmu/s_axi_arlock'(1) to pin: '/static_region/connect_to_es_cu/S01_AXI_arlock'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/static_region/connect_to_es_cu/s02_mmu/s_axi_awlock'(1) to pin: '/static_region/connect_to_es_cu/S02_AXI_awlock'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/static_region/connect_to_es_cu/s02_mmu/s_axi_arlock'(1) to pin: '/static_region/connect_to_es_cu/S02_AXI_arlock'(2) - Only lower order bits will be connected.
+VHDL Output written to : /home/centos/workspace/improving_performance_lab/Emulation-HW/binary_container_1.build/link/vivado/vpl/prj/prj.srcs/sources_1/bd/emu/synth/emu.v
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/static_region/connect_to_es/s01_couplers/auto_pc/s_axi_awlock'(1) to pin: '/static_region/connect_to_es/s01_couplers/S_AXI_awlock'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/static_region/connect_to_es/s01_couplers/auto_pc/s_axi_arlock'(1) to pin: '/static_region/connect_to_es/s01_couplers/S_AXI_arlock'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/static_region/connect_to_es_cu/s01_mmu/s_axi_awlock'(1) to pin: '/static_region/connect_to_es_cu/S01_AXI_awlock'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/static_region/connect_to_es_cu/s01_mmu/s_axi_arlock'(1) to pin: '/static_region/connect_to_es_cu/S01_AXI_arlock'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/static_region/connect_to_es_cu/s02_mmu/s_axi_awlock'(1) to pin: '/static_region/connect_to_es_cu/S02_AXI_awlock'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/static_region/connect_to_es_cu/s02_mmu/s_axi_arlock'(1) to pin: '/static_region/connect_to_es_cu/S02_AXI_arlock'(2) - Only lower order bits will be connected.
+VHDL Output written to : /home/centos/workspace/improving_performance_lab/Emulation-HW/binary_container_1.build/link/vivado/vpl/prj/prj.srcs/sources_1/bd/emu/sim/emu.v
+VHDL Output written to : /home/centos/workspace/improving_performance_lab/Emulation-HW/binary_container_1.build/link/vivado/vpl/prj/prj.srcs/sources_1/bd/emu/hdl/emu_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block static_region/clk_reset_wizard/ddr0_ui_clk .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block static_region/clk_reset_wizard/kernel2_clk .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block static_region/clk_reset_wizard/kernel_clk .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block static_region/dma_pcie_clk .
+WARNING: [IP_Flow 19-1971] File named "sim/emu_CuDmaController_0_0.v" already exists in file group "xilinx_verilogsimulationwrapper", cannot add it again.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block static_region/embedded_schedular/CuDmaController_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block static_region/embedded_schedular/axi_intc_0 .
+WARNING: [IP_Flow 19-1971] File named "sim/emu_cuisr_0_0.v" already exists in file group "xilinx_verilogsimulationwrapper", cannot add it again.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block static_region/embedded_schedular/cuisr_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block static_region/embedded_schedular/embedded_scheduler_hw_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block static_region/embedded_schedular/sim_embedded_scheduler_sw_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block static_region/embedded_schedular/xlconcat_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block static_region/embedded_schedular/xlconstant_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block static_region/psr_dma_pcie_aclk .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block static_region/sim_ddr_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block static_region/icn_pass_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block static_region/sim_xdma_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block static_region/sim_copy_kernel_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block static_region/sim_copy_kernel_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block static_region/sim_copy_kernel_2 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block static_region/sim_copy_kernel_3 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block static_region/connect_to_es/xbar .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block static_region/connect_to_es_cu/xbar .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block static_region/connect_to_es/s01_couplers/auto_pc .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block static_region/connect_to_es_cu/s01_couplers/auto_pc .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block static_region/connect_to_es_cu/s02_couplers/auto_pc .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block static_region/connect_to_es_cu/s00_mmu .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block static_region/connect_to_es_cu/s01_mmu .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block static_region/connect_to_es_cu/s02_mmu .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block static_region/connect_to_es_cu/s03_mmu .
+Exporting to file /home/centos/workspace/improving_performance_lab/Emulation-HW/binary_container_1.build/link/vivado/vpl/prj/prj.srcs/sources_1/bd/emu/hw_handoff/emu.hwh
+Generated Block Design Tcl file /home/centos/workspace/improving_performance_lab/Emulation-HW/binary_container_1.build/link/vivado/vpl/prj/prj.srcs/sources_1/bd/emu/hw_handoff/emu_bd.tcl
+Generated Hardware Definition File /home/centos/workspace/improving_performance_lab/Emulation-HW/binary_container_1.build/link/vivado/vpl/prj/prj.srcs/sources_1/bd/emu/synth/emu.hwdef
+
+****** Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2020.1 (64-bit)
+  **** SW Build 2902540 on Wed May 27 19:54:35 MDT 2020
+  **** IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source /opt/Xilinx/Vivado/2020.1/scripts/vivado_hls/hls.tcl -notrace
+INFO: [HLS 200-10] Running '/opt/Xilinx/Vivado/2020.1/bin/unwrapped/lnx64.o/vivado_hls'
+INFO: [HLS 200-10] For user 'centos' on host 'ip-172-31-58-45.ec2.internal' (Linux_x86_64 version 3.10.0-1127.10.1.el7.x86_64) on Thu Jan 14 20:11:19 UTC 2021
+INFO: [HLS 200-10] On os "CentOS Linux release 7.7.1908 (Core)"
+INFO: [HLS 200-10] In directory '/home/centos/workspace/improving_performance_lab/Emulation-HW/binary_container_1.build/link/vivado/vpl'
+Sourcing Tcl script '/home/centos/workspace/improving_performance_lab/Emulation-HW/binary_container_1.build/link/vivado/vpl/runhls.tcl'
+INFO: [HLS 200-10] Creating and opening project '/home/centos/workspace/improving_performance_lab/Emulation-HW/binary_container_1.build/link/vivado/vpl/emu_CuDmaController_0_0'.
+INFO: [HLS 200-10] Adding design file '/home/centos/workspace/improving_performance_lab/Emulation-HW/binary_container_1.build/link/vivado/vpl/prj/prj.srcs/sources_1/bd/emu/ip/emu_CuDmaController_0_0/src/shell_utils_cudma_controller.c' to the project
+INFO: [HLS 200-10] Creating and opening solution '/home/centos/workspace/improving_performance_lab/Emulation-HW/binary_container_1.build/link/vivado/vpl/emu_CuDmaController_0_0/prj'.
+INFO: [HLS 200-10] Setting target device to 'xcvu9p-flgb2104-2-i'
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file '/home/centos/workspace/improving_performance_lab/Emulation-HW/binary_container_1.build/link/vivado/vpl/prj/prj.srcs/sources_1/bd/emu/ip/emu_CuDmaController_0_0/src/shell_utils_cudma_controller.c' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:12 ; elapsed = 00:00:11 . Memory (MB): peak = 1528.949 ; gain = 1103.887 ; free physical = 100209 ; free virtual = 135658
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:12 ; elapsed = 00:00:11 . Memory (MB): peak = 1528.949 ; gain = 1103.887 ; free physical = 100209 ; free virtual = 135658
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:13 ; elapsed = 00:00:12 . Memory (MB): peak = 1528.949 ; gain = 1103.887 ; free physical = 100210 ; free virtual = 135658
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 1528.949 ; gain = 1103.887 ; free physical = 100210 ; free virtual = 135658
+INFO: [XFORM 203-11] Balancing expressions in function 'shell_utils_cudma_controller'...3 expression(s) balanced.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 1528.949 ; gain = 1103.887 ; free physical = 100200 ; free virtual = 135649
+WARNING: [XFORM 203-542] Cannot flatten a loop nest 'main_loop' in function 'shell_utils_cudma_controller' : 
+
+the outer loop is not a perfect loop because there is nontrivial logic before entering the inner loop.
+INFO: [HLS 200-444] Inferring multiple bus burst read of variable length on port 'CQDma'. These data requests might be further partitioned to multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.
+INFO: [HLS 200-444] Inferring multiple bus burst write of variable length on port 'CUDma'. These data requests might be further partitioned to multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.
+INFO: [XFORM 203-811] Inferring bus burst read of length 2 on port 'CQDma'.
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:14 ; elapsed = 00:00:13 . Memory (MB): peak = 1528.949 ; gain = 1103.887 ; free physical = 100203 ; free virtual = 135652
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'shell_utils_cudma_controller' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'shell_utils_cudma_controller' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'copyloop'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 13.29 seconds; current allocated memory: 91.809 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.05 seconds; current allocated memory: 92.215 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'shell_utils_cudma_controller' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'shell_utils_cudma_controller/CQDma' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shell_utils_cudma_controller/CUDma' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shell_utils_cudma_controller/CuDmaQueue' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shell_utils_cudma_controller/SlotSize' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shell_utils_cudma_controller/NoOfSlots' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shell_utils_cudma_controller/CqBaseAddress' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'shell_utils_cudma_controller' to 'ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'shell_utils_cudma_controller'.
+INFO: [HLS 200-111]  Elapsed time: 0.04 seconds; current allocated memory: 93.507 MB.
+INFO: [WVHDL 200-304] Encrypting RTL VHDL done.
+INFO: [WVHDL 200-304] Encrypting RTL Verilog done.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:15 ; elapsed = 00:00:14 . Memory (MB): peak = 1528.949 ; gain = 1103.887 ; free physical = 100193 ; free virtual = 135644
+INFO: [VHDL 208-304] Generating VHDL RTL for shell_utils_cudma_controller with prefix emu_CuDmaController_0_0_.
+INFO: [VLOG 209-307] Generating Verilog RTL for shell_utils_cudma_controller with prefix emu_CuDmaController_0_0_.
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+
+****** Vivado v2020.1 (64-bit)
+  **** SW Build 2902540 on Wed May 27 19:54:35 MDT 2020
+  **** IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source run_ippack.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2020.1/data/ip'.
+INFO: [Common 17-206] Exiting Vivado at Thu Jan 14 20:11:48 2021...
+INFO: [HLS 200-112] Total elapsed time: 29.39 seconds; peak allocated memory: 93.507 MB.
+INFO: [Common 17-206] Exiting vivado_hls at Thu Jan 14 20:11:48 2021...
+
+****** Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2020.1 (64-bit)
+  **** SW Build 2902540 on Wed May 27 19:54:35 MDT 2020
+  **** IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source /opt/Xilinx/Vivado/2020.1/scripts/vivado_hls/hls.tcl -notrace
+INFO: [HLS 200-10] Running '/opt/Xilinx/Vivado/2020.1/bin/unwrapped/lnx64.o/vivado_hls'
+INFO: [HLS 200-10] For user 'centos' on host 'ip-172-31-58-45.ec2.internal' (Linux_x86_64 version 3.10.0-1127.10.1.el7.x86_64) on Thu Jan 14 20:11:50 UTC 2021
+INFO: [HLS 200-10] On os "CentOS Linux release 7.7.1908 (Core)"
+INFO: [HLS 200-10] In directory '/home/centos/workspace/improving_performance_lab/Emulation-HW/binary_container_1.build/link/vivado/vpl'
+Sourcing Tcl script '/home/centos/workspace/improving_performance_lab/Emulation-HW/binary_container_1.build/link/vivado/vpl/runhls.tcl'
+INFO: [HLS 200-10] Creating and opening project '/home/centos/workspace/improving_performance_lab/Emulation-HW/binary_container_1.build/link/vivado/vpl/emu_cuisr_0_0'.
+INFO: [HLS 200-10] Adding design file '/home/centos/workspace/improving_performance_lab/Emulation-HW/binary_container_1.build/link/vivado/vpl/prj/prj.srcs/sources_1/bd/emu/ip/emu_cuisr_0_0/src/shell_utils_cuisr.cpp' to the project
+INFO: [HLS 200-10] Creating and opening solution '/home/centos/workspace/improving_performance_lab/Emulation-HW/binary_container_1.build/link/vivado/vpl/emu_cuisr_0_0/prj'.
+INFO: [HLS 200-10] Setting target device to 'xcvu9p-flgb2104-2-i'
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file '/home/centos/workspace/improving_performance_lab/Emulation-HW/binary_container_1.build/link/vivado/vpl/prj/prj.srcs/sources_1/bd/emu/ip/emu_cuisr_0_0/src/shell_utils_cuisr.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1592.945 ; gain = 1167.883 ; free physical = 100225 ; free virtual = 135674
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1592.945 ; gain = 1167.883 ; free physical = 100225 ; free virtual = 135674
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:13 ; elapsed = 00:00:12 . Memory (MB): peak = 1592.945 ; gain = 1167.883 ; free physical = 100217 ; free virtual = 135666
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:13 ; elapsed = 00:00:12 . Memory (MB): peak = 1592.945 ; gain = 1167.883 ; free physical = 100213 ; free virtual = 135661
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 1592.945 ; gain = 1167.883 ; free physical = 100202 ; free virtual = 135651
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 1592.945 ; gain = 1167.883 ; free physical = 100208 ; free virtual = 135657
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'shell_utils_cuisr' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'shell_utils_cuisr' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 12.8 seconds; current allocated memory: 88.779 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0 seconds; current allocated memory: 88.921 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'shell_utils_cuisr' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'shell_utils_cuisr/a' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shell_utils_cuisr/Offset' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'shell_utils_cuisr' to 'ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'shell_utils_cuisr'.
+INFO: [HLS 200-111]  Elapsed time: 0.02 seconds; current allocated memory: 89.489 MB.
+INFO: [WVHDL 200-304] Encrypting RTL VHDL done.
+INFO: [WVHDL 200-304] Encrypting RTL Verilog done.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 1592.945 ; gain = 1167.883 ; free physical = 100201 ; free virtual = 135651
+INFO: [VHDL 208-304] Generating VHDL RTL for shell_utils_cuisr with prefix emu_cuisr_0_0_.
+INFO: [VLOG 209-307] Generating Verilog RTL for shell_utils_cuisr with prefix emu_cuisr_0_0_.
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+
+****** Vivado v2020.1 (64-bit)
+  **** SW Build 2902540 on Wed May 27 19:54:35 MDT 2020
+  **** IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source run_ippack.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2020.1/data/ip'.
+INFO: [Common 17-206] Exiting Vivado at Thu Jan 14 20:12:17 2021...
+INFO: [HLS 200-112] Total elapsed time: 27.32 seconds; peak allocated memory: 89.489 MB.
+INFO: [Common 17-206] Exiting vivado_hls at Thu Jan 14 20:12:18 2021...
+compile_c: Time (s): cpu = 00:01:00 ; elapsed = 00:01:00 . Memory (MB): peak = 3175.535 ; gain = 0.000 ; free physical = 100321 ; free virtual = 135769
+INFO: [Vivado 12-5680] Creating behavioral simulation scripts in '/home/centos/workspace/improving_performance_lab/Emulation-HW/binary_container_1.build/link/vivado/vpl/prj/prj.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File '/opt/Xilinx/Vivado/2020.1/data/xsim/xsim.ini' copied to run dir:'/home/centos/workspace/improving_performance_lab/Emulation-HW/binary_container_1.build/link/vivado/vpl/prj/prj.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-20] The project contains locked or custom IPs. The pre-compiled version of these IPs will not be referenced and the sources from these IP libraries will be compiled locally.
+INFO: [SIM-utils-54] Inspecting design source files for 'emu_wrapper' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-60] Script generated:/home/centos/workspace/improving_performance_lab/Emulation-HW/binary_container_1.build/link/vivado/vpl/prj/prj.sim/sim_1/behav/xsim/compile.sh
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-60] Script generated:/home/centos/workspace/improving_performance_lab/Emulation-HW/binary_container_1.build/link/vivado/vpl/prj/prj.sim/sim_1/behav/xsim/elaborate.sh
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-60] Script generated:/home/centos/workspace/improving_performance_lab/Emulation-HW/binary_container_1.build/link/vivado/vpl/prj/prj.sim/sim_1/behav/xsim/simulate.sh
+launch_simulation: Time (s): cpu = 00:02:22 ; elapsed = 00:02:22 . Memory (MB): peak = 3175.535 ; gain = 70.320 ; free physical = 100314 ; free virtual = 135764
+INFO: [HW_EMU_COMMON_UTIL] compile.sh started
+INFO: [HW_EMU_COMMON_UTIL] compile.sh ended
+INFO: [HW_EMU_COMMON_UTIL] elaborate.sh started
+INFO: [HW_EMU_COMMON_UTIL] elaborate.sh ended
+INFO: [OCL_UTIL] internal step: creating /home/centos/workspace/improving_performance_lab/Emulation-HW/binary_container_1.build/link/int/_kernel_inst_paths.dat
+INFO: [OCL_UTIL] open_bd_design [get_files pfm_dynamic.bd]
+[20:14:52] Run vpl: Step config_hw_emulation: Completed
+INFO: [Common 17-206] Exiting Vivado at Thu Jan 14 20:14:53 2021...

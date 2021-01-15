@@ -1,0 +1,55 @@
+Begin Function 'wide_vadd'
+
+RTL state condition: (1'b1 == ap_CS_fsm_state1)
+# ST_1
+local tmp <bitselect_85> <integer> <> 'bitselect' </home/centos/workspace/improving_performance_lab/src/wide_vadd_krnl.cpp:85>
+tmp /home/centos/workspace/improving_performance_lab/src/wide_vadd_krnl.cpp:85
+reg: tmp_reg_325[0:0] lv
+
+local sub_ln85_1 <sub_85> <integer> <Arithmetic> 'sub' </home/centos/workspace/improving_performance_lab/src/wide_vadd_krnl.cpp:85>
+sub_ln85_1 /home/centos/workspace/improving_performance_lab/src/wide_vadd_krnl.cpp:85
+reg: sub_ln85_1_reg_330[28:0] lv
+
+local trunc_ln85_2 <partselect_85> <integer> <> 'partselect' </home/centos/workspace/improving_performance_lab/src/wide_vadd_krnl.cpp:85>
+trunc_ln85_2 /home/centos/workspace/improving_performance_lab/src/wide_vadd_krnl.cpp:85
+reg: trunc_ln85_2_reg_335[27:0] lv
+
+
+RTL state condition: (1'b1 == ap_CS_fsm_state2)
+# ST_2
+local out_read <read_63> <integer> <> 'read' </home/centos/workspace/improving_performance_lab/src/wide_vadd_krnl.cpp:63>
+out /home/centos/workspace/improving_performance_lab/src/wide_vadd_krnl.cpp:63
+reg: out_read_reg_340[63:0] lv
+
+local in2_read <read_63> <integer> <> 'read' </home/centos/workspace/improving_performance_lab/src/wide_vadd_krnl.cpp:63>
+in2 /home/centos/workspace/improving_performance_lab/src/wide_vadd_krnl.cpp:63
+reg: in2_read_reg_345[63:0] lv
+
+local in1_read <read_63> <integer> <> 'read' </home/centos/workspace/improving_performance_lab/src/wide_vadd_krnl.cpp:63>
+in1 /home/centos/workspace/improving_performance_lab/src/wide_vadd_krnl.cpp:63
+reg: in1_read_reg_350[63:0] lv
+
+local sext_ln88 <sext_88> <integer> <> 'sext' </home/centos/workspace/improving_performance_lab/src/wide_vadd_krnl.cpp:88>
+sext_ln88 /home/centos/workspace/improving_performance_lab/src/wide_vadd_krnl.cpp:88
+reg: sext_ln88_reg_355[63:0] lv
+
+
+RTL state condition: (1'b1 == ap_CS_fsm_state3)
+# ST_3
+local i <phi_97> <integer> <Phi> 'phi' </home/centos/workspace/improving_performance_lab/src/wide_vadd_krnl.cpp:97>
+add_ln97 /home/centos/workspace/improving_performance_lab/src/wide_vadd_krnl.cpp:97
+reg: i_reg_130[63:0] lv
+
+
+RTL state condition: (1'b1 == ap_CS_fsm_state4)
+# ST_4
+local add_ln97 <add_97> <integer> <Arithmetic> 'add' </home/centos/workspace/improving_performance_lab/src/wide_vadd_krnl.cpp:97>
+add_ln97 /home/centos/workspace/improving_performance_lab/src/wide_vadd_krnl.cpp:97
+reg: add_ln97_reg_363[63:0] lv
+
+
+RTL state condition: (1'b1 == ap_CS_fsm_state5)
+# ST_5
+
+End Function 'wide_vadd'
+
