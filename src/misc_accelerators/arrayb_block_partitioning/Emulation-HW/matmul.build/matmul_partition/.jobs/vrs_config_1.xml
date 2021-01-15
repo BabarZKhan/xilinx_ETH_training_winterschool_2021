@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="0">
+	<Run Id="matmul_partition" LaunchDir="/home/centos/workspace/arrayb_block_partitioning/Emulation-HW/matmul.build/matmul_partition/matmul_partition" FlowId="Build_IP" FromStepId="vitis_hls" ToStepId="vitis_hls"/>
+</Runs>
+

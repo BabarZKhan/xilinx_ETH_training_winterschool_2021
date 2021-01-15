@@ -1,0 +1,105 @@
+
+****** Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.1 (64-bit)
+  **** SW Build 2902540 on Wed May 27 19:54:35 MDT 2020
+  **** IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source /opt/Xilinx/Vitis/2020.1/scripts/vitis_hls/hls.tcl -notrace
+INFO: [HLS 200-10] Running '/opt/Xilinx/Vitis/2020.1/bin/unwrapped/lnx64.o/vitis_hls'
+INFO: [HLS 200-10] For user 'centos' on host 'ip-172-31-58-45.ec2.internal' (Linux_x86_64 version 3.10.0-1127.10.1.el7.x86_64) on Fri Jan 15 11:28:17 UTC 2021
+INFO: [HLS 200-10] On os "CentOS Linux release 7.7.1908 (Core)"
+INFO: [HLS 200-10] In directory '/home/centos/workspace/arrayb_block_partitioning/Emulation-HW/matmul.build/matmul_naive/matmul_naive'
+Sourcing Tcl script 'matmul_naive.tcl'
+INFO: [HLS 200-10] Creating and opening project '/home/centos/workspace/arrayb_block_partitioning/Emulation-HW/matmul.build/matmul_naive/matmul_naive/matmul_naive'.
+INFO: [HLS 200-10] Adding design file '/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl' to the project
+INFO: [HLS 200-10] Creating and opening solution '/home/centos/workspace/arrayb_block_partitioning/Emulation-HW/matmul.build/matmul_naive/matmul_naive/matmul_naive/solution'.
+INFO: [HLS 200-1505] Using flow_target 'vitis'
+Resolution: For help on HLS 200-1505 see www.xilinx.com/html_docs/xilinx2020_1/hls-guidance/200-1505.html
+INFO: [HLS 200-435] Setting 'config_flow -target' configuration: config_interface -m_axi_latency=64
+INFO: [HLS 200-435] Setting 'config_flow -target' configuration: config_interface -m_axi_alignment_byte_size=64
+INFO: [HLS 200-435] Setting 'config_flow -target' configuration: config_interface -m_axi_max_widen_bitwidth=512
+INFO: [HLS 200-435] Setting 'config_flow -target' configuration: config_interface -default_slave_interface=s_axilite
+INFO: [HLS 200-435] Setting 'config_flow -target' configuration: config_rtl -register_reset_num=3
+INFO: [HLS 200-10] Setting target device to 'xcvu9p-flgb2104-2-i'
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 4ns.
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 1.08ns.
+INFO: [HLS 200-10] Analyzing design file '/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl' ... 
+INFO: [HLS 200-777] Using interface defaults for 'Vitis' target.
+INFO: [HLS 214-115] Burst read of variable length and bit width 32 has been inferred on port 'gmem' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:39:9)
+INFO: [HLS 214-115] Burst read of variable length and bit width 32 has been inferred on port 'gmem' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:46:9)
+INFO: [HLS 214-115] Burst write of variable length and bit width 32 has been inferred on port 'gmem' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:67:9)
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1530.082 ; gain = 1107.938 ; free physical = 33042 ; free virtual = 136110
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1530.082 ; gain = 1107.938 ; free physical = 33042 ; free virtual = 136110
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1530.082 ; gain = 1107.938 ; free physical = 33039 ; free virtual = 136107
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1530.082 ; gain = 1107.938 ; free physical = 33039 ; free virtual = 136107
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1530.082 ; gain = 1107.938 ; free physical = 33020 ; free virtual = 136088
+WARNING: [HLS 200-960] Cannot flatten loop 'lreorder2' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:54:11) in function 'matmul_naive' the outer loop is not a perfect loop because there is nontrivial logic in the loop latch.
+Resolution: For help on HLS 200-960 see www.xilinx.com/html_docs/xilinx2020_1/hls-guidance/200-960.html
+INFO: [XFORM 203-541] Flattening a loop nest 'lreorder1' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:51:18) in function 'matmul_naive'.
+INFO: [HLS 200-472] Inferring partial write operation for 'A' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:40:10)
+INFO: [HLS 200-472] Inferring partial write operation for 'B' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:47:10)
+INFO: [HLS 200-472] Inferring partial write operation for 'C' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:60:22)
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1530.082 ; gain = 1107.938 ; free physical = 33020 ; free virtual = 136088
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'matmul_naive' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'matmul_naive' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln51) to 3 in order to utilize available DSP registers.
+INFO: [SCHED 204-61] Pipelining loop 'readA'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+INFO: [SCHED 204-61] Pipelining loop 'readB'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+INFO: [SCHED 204-61] Pipelining loop 'lreorder3'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 5.
+INFO: [SCHED 204-61] Pipelining loop 'writeC'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 10.69 seconds; current allocated memory: 106.210 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.7 seconds; current allocated memory: 107.893 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'matmul_naive' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matmul_naive/gmem' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matmul_naive/in1' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matmul_naive/in2' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matmul_naive/out_r' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matmul_naive/dim' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'matmul_naive' to 's_axilite & ap_ctrl_chain'.
+INFO: [RTGEN 206-100] Bundling port 'in1', 'in2', 'out_r', 'dim' and 'return' to AXI-Lite port control.
+INFO: [RTGEN 206-100] Generating core module 'mul_32s_32s_32_2_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_mul_12s_12s_12_4_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'matmul_naive'.
+INFO: [HLS 200-111]  Elapsed time: 0.33 seconds; current allocated memory: 111.162 MB.
+INFO: [RTMG 210-282] Generating pipelined core: 'matmul_naive_mul_32s_32s_32_2_1_Multiplier_0'
+INFO: [RTMG 210-278] Implementing memory 'matmul_naive_A_ram (RAM)' using block RAMs with power-on initialization.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1530.082 ; gain = 1107.938 ; free physical = 33007 ; free virtual = 136080
+INFO: [VHDL 208-304] Generating VHDL RTL for matmul_naive.
+INFO: [VLOG 209-307] Generating Verilog RTL for matmul_naive.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 342.47 MHz
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+
+****** Vivado v2020.1 (64-bit)
+  **** SW Build 2902540 on Wed May 27 19:54:35 MDT 2020
+  **** IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source run_ippack.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2020.1/data/ip'.
+INFO: [Common 17-206] Exiting Vivado at Fri Jan 15 11:28:45 2021...
+INFO: [HLS 200-802] Generated output file matmul_naive/solution/impl/export.zip
+HLS completed successfully
+INFO: [HLS 200-112] Total elapsed time: 28.18 seconds; peak allocated memory: 111.162 MB.
+INFO: [Common 17-206] Exiting vitis_hls at Fri Jan 15 11:28:45 2021...

@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+
+<html>
+<!-- Styles -->
+<style>
+    #chartdiv {
+      width: 100%;
+      height: 1000px;
+    }
+</style>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>OPTraceViewer</title>
+  <script src="https://www.amcharts.com/lib/3/amcharts.js">
+  </script>
+  <script src="https://www.amcharts.com/lib/3/serial.js">
+  </script>
+  <script src="https://www.amcharts.com/lib/3/gantt.js">
+  </script>
+  <script src="https://www.amcharts.com/lib/3/themes/light.js">
+  </script>
+  <script src="https://www.amcharts.com/lib/3/plugins/export/export.min.js">
+  </script>
+  <link rel="stylesheet" href="https://www.amcharts.com/lib/3/plugins/export/export.css" type="text/css" media="all"/>
+
+  <form name="userInputForm" action="javascript:userInputFormCallback()">
+    <fieldset>
+    <legend>Graph Filters:</legend>
+    <table style="width:100%">
+      <col width="50"></col>
+      <col width="20"></col>
+      <col width="60"></col>
+      <tr>
+        <td style="text-align: center"; colspan="3"><input type="number" name="userDurationFilterSecInput" id="userDurationFilterSecInput" value="2" min="0" max="6000" step="1"> sec</td>
+        <td>Filter out run durations lower than this value</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td style="text-align: center"><input type="checkbox" name="userGroupPidSortSelected" id="userGroupPidSortSelected"></td>
+        <td>Group sort by process ID</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td bgcolor="#0099ff"></td>
+        <td style="text-align: center"><input type="checkbox" name="userRollupSelected" id="userRollupSelected"></td>
+        <td>Show rollup entries</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td bgcolor="#8dc49f"></td>
+        <td style="text-align: center"><input type="checkbox" name="userIndividualEntrySelected" id="userIndividualEntrySelected"></td>
+        <td>Show individual entries</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td bgcolor="#cd82ad"></td>
+        <td style="text-align: center"><input type="checkbox" name="userCheckpointEntrySelected" id="userCheckpointEntrySelected"></td>
+        <td>Show checkpoints entry</td>
+      </tr>
+       <tr>
+        <td></td>
+        <td bgcolor="#b9783f"></td>
+        <td style="text-align: center"><input type="checkbox" name="userReportEntrySelected" id="userReportEntrySelected"></td>
+        <td>Show report entry</td>
+      </tr>
+
+    </table>
+    <br>
+    <input name="Submit" type="submit" value="Update Graph">
+    </fieldset>
+  </form> 
+
+  <div id="chartdiv">
+  </div>
+
+  <script>
+  </script>
+
+</head>
+
+
+<body>
+<table id="myDynamicTable" cellpadding="2" cellspacing="2" border="1" onclick="tester()">
+  <tr>
+  <td>Task</td>
+  <td>Start</td>
+  <td>Duration</td>
+  </tr>
+</table>
+<script>
+  // Default User Selected variables
+  var m_secondFilter = 1;
+  var m_groupPidSort = true;
+  var m_showRollup = true;
+  var m_showIndividualEntry = false;
+  var m_showCheckpointEntry = false;
+  var m_showReportEntry = false;
+
+  function SetDefaultUserValues()
+  {
+    document.getElementById("userDurationFilterSecInput").value = m_secondFilter;
+    document.getElementById("userGroupPidSortSelected").checked = m_groupPidSort;
+    document.getElementById("userRollupSelected").checked = m_showRollup;
+    document.getElementById("userIndividualEntrySelected").checked = m_showIndividualEntry;
+    document.getElementById("userCheckpointEntrySelected").checked = m_showCheckpointEntry;
+    document.getElementById("userReportEntrySelected").checked = m_showReportEntry;
+  }
+
+  window.onload = function(){
+    SetDefaultUserValues();
+  }
+
+
+
+
+  // Header
+  var header = "Keyword|pid|Entry|SrcFile|Catagory|TimeStampMSec|Action|Task|Tags|Misc";
+                         
+  // Insert Raw Data Here
+  // Note: Do not change the following signature. 
+  var csvData =    [
+      "[OPTRACE]|1353|22|main|cpp|1610710333537|START|vpl|",
+      "[OPTRACE]|1353|23|runPlatformLinker|cpp|1610710333728|START|runPlatformLinker|",
+      "[OPTRACE]|1353|24|setupBinaryForLink|cpp|1610710333728|START|Create Solution|",
+      "[OPTRACE]|1353|25||cpp|1610710333735|END|Create Solution|",
+      "[OPTRACE]|1353|26|setupBinaryForLink|cpp|1610710333735|START|Add platform|",
+      "[OPTRACE]|1353|27||cpp|1610710338212|END|Add platform|",
+      "[OPTRACE]|1353|28|setupBinaryForLink|cpp|1610710338212|START|Create Binary|",
+      "[OPTRACE]|1353|29||cpp|1610710338213|END|Create Binary|",
+      "[OPTRACE]|1353|30|setupBinaryForLink|cpp|1610710338213|START|Create Kernels|",
+      "[OPTRACE]|1353|31||cpp|1610710338217|END|Create Kernels|",
+      "[OPTRACE]|1353|32|runPlatformLinker|cpp|1610710338227|START|Process Kernels|",
+      "[OPTRACE]|1353|33||cpp|1610710338227|END|Process Kernels|",
+      "[OPTRACE]|1353|34|runPlatformLinker|cpp|1610710338227|START|Process Kernel Debug|",
+      "[OPTRACE]|1353|35||cpp|1610710338227|END|Process Kernel Debug|",
+      "[OPTRACE]|1353|36|runPlatformLinker|cpp|1610710338227|START|Set Kernel Debug|",
+      "[OPTRACE]|1353|37||cpp|1610710338227|END|Set Kernel Debug|",
+      "[OPTRACE]|1353|38|runPlatformLinker|cpp|1610710338227|START|Set Miscellaneous|",
+      "[OPTRACE]|1353|39||cpp|1610710338228|END|Set Miscellaneous|",
+      "[OPTRACE]|1353|40|run|cpp|1610710338228|START|Extract Platform|",
+      "[OPTRACE]|1353|41||cpp|1610710339939|END|Extract Platform|",
+      "[OPTRACE]|1353|42|run|cpp|1610710339939|START|Retrieving Debuggable Kernel|",
+      "[OPTRACE]|1353|43||cpp|1610710339939|END|Retrieving Debuggable Kernel|",
+      "[OPTRACE]|1353|72|runPlatformLinker|cpp|1610710752547|START|Generate Resource Availability Report|",
+      "[OPTRACE]|1353|73||cpp|1610710752548|END|Generate Resource Availability Report|",
+      "[OPTRACE]|1353|74||cpp|1610710752548|END|runPlatformLinker|",
+      "[OPTRACE]|1353|75||cpp|1610710752714|END|vpl|",
+      "[OPTRACE]|1519|44|/home/centos/workspace/arrayb_block_partitioning/Emulation-HW/matmul.build/link/vivado/vpl/vpl.tcl|vivado_impl|1610710352261|START|Implementation|ROLLUP_1",
+      "[OPTRACE]|1519|45|ipirun.tcl|vpl|1610710352289|START|ipirun|ROLLUP_0",
+      "[OPTRACE]|1519|46|ipirun.tcl|vpl|1610710352291|END|ipirun|",
+      "[OPTRACE]|1519|47|ipirun.tcl|vpl|1610710352307|START|Source pre_sys_link Tcl script|",
+      "[OPTRACE]|1519|48|ipirun.tcl|vpl|1610710352308|END|Source pre_sys_link Tcl script|",
+      "[OPTRACE]|1519|49|ipirun.tcl|vpl|1610710352308|START|Create project|",
+      "[OPTRACE]|1519|50|ipirun.tcl|vpl|1610710353514|END|Create project|",
+      "[OPTRACE]|1519|51|ipirun.tcl|vpl|1610710353516|START|Create IP caching environment|",
+      "[OPTRACE]|1519|52|ipirun.tcl|vpl|1610710366563|END|Create IP caching environment|",
+      "[OPTRACE]|1519|53|ipirun.tcl|vpl|1610710366563|START|Import/add dynamic BD|",
+      "[OPTRACE]|1519|54|ipirun.tcl|vpl|1610710377580|END|Import/add dynamic BD|",
+      "[OPTRACE]|1519|55|ipirun.tcl|vpl|1610710377580|START|Open BD and insert kernels|",
+      "[OPTRACE]|1519|56|ipirun.tcl|vpl|1610710385608|END|Open BD and insert kernels|",
+      "[OPTRACE]|1519|57|ipirun.tcl|vpl|1610710385609|START|Add debug/profiling support|",
+      "[OPTRACE]|1519|58|ipirun.tcl|vpl|1610710391460|END|Add debug/profiling support|",
+      "[OPTRACE]|1519|59|ipirun.tcl|vpl|1610710391460|START|IPI address assignments|",
+      "[OPTRACE]|1519|60|ipirun.tcl|vpl|1610710391466|END|IPI address assignments|",
+      "[OPTRACE]|1519|61|ipirun.tcl|vpl|1610710391466|START|Sourcing hardware platform post_sys_link Tcl script|",
+      "[OPTRACE]|1519|62|ipirun.tcl|vpl|1610710392339|END|Sourcing hardware platform post_sys_link Tcl script|",
+      "[OPTRACE]|1519|63|ipirun.tcl|vpl|1610710392344|START|Save BD|",
+      "[OPTRACE]|1519|64|ipirun.tcl|vpl|1610710392876|END|Save BD|",
+      "[OPTRACE]|1519|65|ipirun.tcl|vpl|1610710392877|START|Create address map and debug IP profile files|",
+      "[OPTRACE]|1519|66|ipirun.tcl|vpl|1610710392907|END|Create address map and debug IP profile files|",
+      "[OPTRACE]|1519|67|ipirun.tcl|vpl|1610710392908|START|Generate output products|",
+      "[OPTRACE]|1519|68|ipirun.tcl|vpl|1610710426003|END|Generate output products|",
+      "[OPTRACE]|1519|69|ipirun.tcl|vpl|1610710434569|START|Generate simulation scripts & compile|",
+      "[OPTRACE]|1519|70|ipirun.tcl|vpl|1610710750937|END|Generate simulation scripts & compile|",
+      "[OPTRACE]|1519|71|ipirun.tcl|vpl|1610710752035|END|Implementation|",
+      "[OPTRACE]|587|100|launchAndPostProcess|cpp|1610710763149|START|opt_11|ROLLUP_AUTO",
+      "[OPTRACE]|587|101||cpp|1610710764390|END|opt_11|",
+      "[OPTRACE]|587|102|launchAndPostProcess|cpp|1610710764390|START|llc_12|ROLLUP_AUTO",
+      "[OPTRACE]|587|103||cpp|1610710765644|END|llc_12|",
+      "[OPTRACE]|587|104|launchAndPostProcess|cpp|1610710765645|START|gcc_13|ROLLUP_AUTO",
+      "[OPTRACE]|587|105||cpp|1610710765658|END|gcc_13|",
+      "[OPTRACE]|587|106|launchAndPostProcess|cpp|1610710765658|START|objcopy_14|ROLLUP_AUTO",
+      "[OPTRACE]|587|107||cpp|1610710765663|END|objcopy_14|",
+      "[OPTRACE]|587|108|launchAndPostProcess|cpp|1610710765663|START|ar_15|ROLLUP_AUTO",
+      "[OPTRACE]|587|109||cpp|1610710765667|END|ar_15|",
+      "[OPTRACE]|587|10|run|cpp|1610710312481|START|OCL_LINK|",
+      "[OPTRACE]|587|110|launchAndPostProcess|cpp|1610710765667|START|g++_16|ROLLUP_AUTO",
+      "[OPTRACE]|587|111|launchCf2sw_|cpp|1610710765736|START|Launch cf2sw|",
+      "[OPTRACE]|587|112||cpp|1610710767802|END|Launch cf2sw|",
+      "[OPTRACE]|587|113|launchAndPostProcess|cpp|1610710770814|START|xrflink_17|ROLLUP_AUTO",
+      "[OPTRACE]|587|114||cpp|1610710770914|END|xrflink_17|",
+      "[OPTRACE]|587|115|launchAndPostProcess|cpp|1610710770914|START|xrflink_18|ROLLUP_AUTO",
+      "[OPTRACE]|587|116||cpp|1610710771009|END|xrflink_18|",
+      "[OPTRACE]|587|117|writeSystemDiagram|cpp|1610710771010|START|writeSystemDiagram|",
+      "[OPTRACE]|587|118||cpp|1610710771014|END|writeSystemDiagram|",
+      "[OPTRACE]|587|119||cpp|1610710771015|END|Launch Step: rtdgen|",
+      "[OPTRACE]|587|11|setupBinaryForLink|cpp|1610710312481|START|Create Binary|",
+      "[OPTRACE]|587|120|launchStep_|cpp|1610710771015|START|Launch Step: xclbinutil|",
+      "[OPTRACE]|587|121||cpp|1610710771141|END|Launch Step: xclbinutil|",
+      "[OPTRACE]|587|122|launchStep_|cpp|1610710771141|START|Launch Step: xclbinutilinfo|",
+      "[OPTRACE]|587|123||cpp|1610710771535|END|Launch Step: xclbinutilinfo|",
+      "[OPTRACE]|587|124|launchStep_|cpp|1610710771535|START|Launch Step: generate_sc_driver|",
+      "[OPTRACE]|587|125||cpp|1610710771538|END|Launch Step: generate_sc_driver|",
+      "[OPTRACE]|587|126||cpp|1610710771539|END|OCL_LINK|",
+      "[OPTRACE]|587|127||cpp|1610710771547|END|v++|",
+      "[OPTRACE]|587|12||cpp|1610710312482|END|Create Binary|",
+      "[OPTRACE]|587|13|setupBinaryForLink|cpp|1610710312482|START|Extract Kernels|",
+      "[OPTRACE]|587|14||cpp|1610710312602|END|Extract Kernels|",
+      "[OPTRACE]|587|15|launchStep_|cpp|1610710312728|START|Launch Step: system_link|",
+      "[OPTRACE]|587|16||cpp|1610710327181|END|Launch Step: system_link|",
+      "[OPTRACE]|587|17|launchStep_|cpp|1610710327182|START|Launch Step: cf2sw|",
+      "[OPTRACE]|587|18||cpp|1610710329186|END|Launch Step: cf2sw|",
+      "[OPTRACE]|587|19|launchStep_|cpp|1610710329187|START|Launch Step: rtd2_system_diagram|",
+      "[OPTRACE]|587|1|main|cpp|1610710297700|START|v++|ROLLUP_0",
+      "[OPTRACE]|587|20||cpp|1610710330957|END|Launch Step: rtd2_system_diagram|",
+      "[OPTRACE]|587|21|launchStep_|cpp|1610710330957|START|Launch Step: vpl|",
+      "[OPTRACE]|587|2|run|cpp|1610710297700|START|Validate Kernels|",
+      "[OPTRACE]|587|3||cpp|1610710297992|END|Validate Kernels|",
+      "[OPTRACE]|587|4|prepareProject|cpp|1610710297992|START|Create Solution|",
+      "[OPTRACE]|587|5||cpp|1610710308014|END|Create Solution|",
+      "[OPTRACE]|587|6|prepareProject|cpp|1610710308014|START|Add Device|",
+      "[OPTRACE]|587|76||cpp|1610710752724|END|Launch Step: vpl|",
+      "[OPTRACE]|587|77|launchStep_|cpp|1610710752724|START|Launch Step: rtdgen|",
+      "[OPTRACE]|587|78|launchAndPostProcess|cpp|1610710752726|START|xrflink_0|ROLLUP_AUTO",
+      "[OPTRACE]|587|79||cpp|1610710752849|END|xrflink_0|",
+      "[OPTRACE]|587|7|addDevice|cpp|1610710308015|START|Find & Load Device|",
+      "[OPTRACE]|587|80|launchAndPostProcess|cpp|1610710752849|START|xrflink_1|ROLLUP_AUTO",
+      "[OPTRACE]|587|81||cpp|1610710752945|END|xrflink_1|",
+      "[OPTRACE]|587|82|launchAndPostProcess|cpp|1610710752946|START|clang_2|ROLLUP_AUTO",
+      "[OPTRACE]|587|83||cpp|1610710753335|END|clang_2|",
+      "[OPTRACE]|587|84|launchAndPostProcess|cpp|1610710753336|START|llvm-link_3|ROLLUP_AUTO",
+      "[OPTRACE]|587|85||cpp|1610710754573|END|llvm-link_3|",
+      "[OPTRACE]|587|86|launchAndPostProcess|cpp|1610710756752|START|opt_4|ROLLUP_AUTO",
+      "[OPTRACE]|587|87||cpp|1610710758118|END|opt_4|",
+      "[OPTRACE]|587|88|launchAndPostProcess|cpp|1610710758119|START|llc_5|ROLLUP_AUTO",
+      "[OPTRACE]|587|89||cpp|1610710759385|END|llc_5|",
+      "[OPTRACE]|587|8||cpp|1610710308298|END|Find & Load Device|",
+      "[OPTRACE]|587|90|launchAndPostProcess|cpp|1610710759385|START|gcc_6|ROLLUP_AUTO",
+      "[OPTRACE]|587|91||cpp|1610710759399|END|gcc_6|",
+      "[OPTRACE]|587|92|launchAndPostProcess|cpp|1610710759399|START|objcopy_7|ROLLUP_AUTO",
+      "[OPTRACE]|587|93||cpp|1610710759404|END|objcopy_7|",
+      "[OPTRACE]|587|94|launchAndPostProcess|cpp|1610710759404|START|ar_8|ROLLUP_AUTO",
+      "[OPTRACE]|587|95||cpp|1610710759408|END|ar_8|",
+      "[OPTRACE]|587|96|launchAndPostProcess|cpp|1610710759409|START|clang_9|ROLLUP_AUTO",
+      "[OPTRACE]|587|97||cpp|1610710759619|END|clang_9|",
+      "[OPTRACE]|587|98|launchAndPostProcess|cpp|1610710759619|START|llvm-link_10|ROLLUP_AUTO",
+      "[OPTRACE]|587|99||cpp|1610710760853|END|llvm-link_10|",
+      "[OPTRACE]|587|9||cpp|1610710312468|END|Add Device|"
+      ];
+
+  var legendData = [
+  { "title": "Report Generation",
+    "color": "#b9783f"
+  }, {
+    "title": "Write Checkpoint",
+    "color": "#cd82ad"
+  },
+  {
+    "title": "Incomplete Data",
+    "color": "#cc4748"
+  } ];
+
+  // -- Convert Raw data into something we can use ---------------------------
+  console.log("Convert log data (%s entries) to Javascript 'JSON' objects...", csvData.length);
+  var jsonData = csvArrayToJSON(header, csvData, "|");
+
+  // -- Clean up the JSON objects --------------------------------------------
+  for (var i = 0; i < jsonData.length; i++) {
+    jsonData[i].Action = jsonData[i].Action.toUpperCase();
+    jsonData[i].Tags = jsonData[i].Tags.toUpperCase();
+    jsonData[i].Tags = jsonData[i].Tags.trim();
+    jsonData[i].TimeStampMSec = parseInt(jsonData[i].TimeStampMSec, 10);
+    jsonData[i].pid = parseInt(jsonData[i].pid, 10);
+  }
+
+  // -- Sort JSON array ------------------------------------------------------
+  console.log("Sorting JSON objects (%s objects) according to timestamps...", jsonData.length);
+  jsonData.sort(compareByTimeStamp);
+
+  // Record the PID grouping order
+  var pidOrder = new Map();
+  for (var i = 0; i < jsonData.length; i++) {
+    if (pidOrder.has(jsonData[i].pid) == false) {
+      pidOrder.set(jsonData[i].pid, i);    // Simple ordering (lower is first)
+    }
+  }
+
+  // -- Create secondary data array for the chart data array -----------------
+  console.log("Preparing graph data...");
+
+  // Task limits
+  var m_startTS = 0;      // Earliest Timestamp
+  var m_endTS = 0;        // Latest Timestamp
+
+  if (jsonData.length > 0) {
+    m_startTS = jsonData[0].TimeStampMSec;
+    m_endTS = jsonData[jsonData.length - 1].TimeStampMSec;
+  }
+
+
+  var chartData = [ ];   // Empty JSON array
+
+
+  populateChartData();
+  tableCreate( chartData );
+
+  filterChartEntries();
+
+  // -- Search for "holes"
+  // -- Sort by common PID
+  // -- Create groupings by process
+
+  console.log("done");
+
+  var chart = AmCharts.makeChart("chartdiv", {
+    "type": "gantt",
+    "theme": "light",
+    "titles": [
+    { "text": "OPTrace", "size": 15}],
+    "marginRight": 70,
+    "period": "fff",                                     // X-Axis
+    "balloonDateFormat": "JJ:NN:SS",
+    "columnWidth": 0.5,                                 // Bar thickness
+    "valueAxis": {
+      "type": "numeric",
+      "title": "Time [HH:MM::SS]",
+      "duration": "ss",
+      "durationUnits": { DD: 'd. ', hh: ':', mm: ':', ss: '' },
+    },
+    "brightnessStep": 10,
+    "graph": {
+      "fillAlphas": 1,
+      "labelFunction": barLabelCallBack,
+      "labelText": " ",
+      "labelPosition": "right",
+      "balloonFunction": ballonLabelCallBack,
+      "balloonText": "<p align='left'> Task: [[task]]<br/>Start:[[start]]<br/>End:[[end]]<br/>Duration:[[duration]]</p>",
+      "bulletField": "bullet",
+      "bulletSize": 8
+    },
+    "rotate": true,
+    "categoryField": "category",
+    "segmentsField": "segments",
+    "colorField": "color",
+    "startDate": "2015-01-01 00:00:00",
+    "startField": "start",
+    "endField": "end",
+    "durationField": "duration",
+    "dataProvider": chartData,
+    "valueScrollbar": {
+      "autoGridCount": true
+    },
+    "chartScrollbar": {
+      "enable": true
+    },
+    "chartCursor": {
+      "cursorColor": "#55bb76",
+      "valueBalloonsEnabled": false,
+      "cursorAlpha": 0.1,
+      "valueLineAlpha": 0.5,
+      "valueLineBalloonEnabled": true,
+      "valueLineEnabled": true,
+      "zoomable": true,
+      "valueZoomable": true,
+      "fullWidth": true
+    },
+    "legend": {
+      "data": legendData,
+    },
+    "export": {
+      "enabled": true
+    }
+  });
+
+  // =========================================================================
+  // Call back methods
+  // =========================================================================
+function ballonLabelCallBack( _graphDataItem )
+{
+  var start = _graphDataItem.values.open;
+  var end = _graphDataItem.values.value;
+  var duration = end - start;
+
+  var result = "<p align='left'>Task: " + _graphDataItem.category + "<br/>Start: " + secondsToHHMMSS(start) + "<br/>End: " + secondsToHHMMSS( end ) + "<br/>Duration: " + secondsToHHMMSS( duration ) + "</p>";
+  return result;
+}
+
+
+function barLabelCallBack( _graphDataItem )
+{
+   var duration = _graphDataItem.values.value - _graphDataItem.values.open;
+
+   return secondsToHHMMSS( duration);
+}
+
+
+function userInputFormCallback()
+{
+  // Second filter
+  m_secondFilter = document.getElementById("userDurationFilterSecInput").value;
+  console.log("Setting second filter to: " + m_secondFilter + " seconds");
+
+  // Group PID Sort
+  m_groupPidSort = document.getElementById("userGroupPidSortSelected").checked;
+  console.log("Group PID filter is set to: " + m_groupPidSort);
+
+  // Rollup filter
+  m_showRollup = document.getElementById("userRollupSelected").checked;
+  console.log("Rollup filter is set to: " + m_showRollup);
+
+  // Individual filter
+  m_showIndividualEntry = document.getElementById("userIndividualEntrySelected").checked;
+  console.log("Individual filter is set to: " + m_showIndividualEntry);
+
+  // Checkpoint Report Entries filter
+  m_showCheckpointEntry = document.getElementById("userCheckpointEntrySelected").checked;
+  console.log("Checkpoint Entry filter is set to: " + m_showCheckpointEntry);
+
+  // Checkpoint Report Entries filter
+  m_showReportEntry = document.getElementById("userReportEntrySelected").checked;
+  console.log("Report Entry filter is set to: " + m_showReportEntry);
+
+  populateChartData();
+  filterChartEntries()
+  chart.dataProvider = chartData;
+  chart.validateData();
+}
+
+  // =========================================================================
+  // Utilities
+  // =========================================================================
+
+
+function populateChartData()
+{
+  chartData = [ ];
+  if (m_groupPidSort == false) {
+    jsonData.sort(compareByTimeStamp);
+  } else {
+    jsonData.sort(compareByGroupTimeStamp);
+  }
+
+  for (var i = 0; i < jsonData.length; i++) {
+    var timestamp = parseInt(jsonData[0].TimeStampMSec, 10);
+
+    if (m_startTS > timestamp) m_startTS = timestamp;
+    if (m_endTS < timestamp) m_endTS = timestamp;
+
+    for (var i = 0; i < jsonData.length; i++) {
+      switch (jsonData[i].Action) {
+      case "START":
+        var categoryEntry = { };
+        categoryEntry["category"] = jsonData[i].Task;
+        categoryEntry["pid"] = jsonData[i].pid;
+
+        var segmentEntry = { };
+        // Normalize entry and convert to seconds
+        segmentEntry["start"] = (jsonData[i].TimeStampMSec - m_startTS) / 1000;
+        segmentEntry["color"] = getTaskBarColor(jsonData[i].Tags)
+        segmentEntry["task"] = jsonData[i].Task;
+        segmentEntry["tags"] = jsonData[i].Tags;
+        segmentEntry["duration"] = -1;
+
+        categoryEntry["segments"] = [ ];
+        categoryEntry["segments"].push(segmentEntry);
+        chartData.push(categoryEntry);
+        break;
+
+      case "END":
+        var catagory = findCatagory(jsonData[i].pid, jsonData[i].Task, chartData);
+        if (catagory != null) {
+          var segmentsEntry = catagory.segments[0];
+          segmentsEntry["end"] = (jsonData[i].TimeStampMSec - m_startTS) / 1000;
+          segmentsEntry["duration"] = segmentsEntry.end - segmentsEntry.start;
+        } else {
+          console.log("Null entry found: pid:%s, Task: %s", jsonData[i].pid, jsonData[i].Task);
+        }
+
+        break;
+
+      default:
+        console.log("Default");
+        break;
+      }
+    }
+  }
+}
+
+function filterChartEntries()
+{
+  for(var i = chartData.length - 1; i >= 0; i--) {
+    var segment = chartData[i].segments[0];
+
+    // -- Remove entries less than 1 seconds
+    if ( segment["duration"] == -1) {
+      segment["bullet"] = "xError";
+      segment["color"] = "#cc4748";
+      segment["duration"] = ((m_endTS - m_startTS) / 1000) - segment["start"];
+    } else if (segment["duration"] <  m_secondFilter) {
+      chartData.splice(i, 1);
+      continue;
+    }
+  
+
+    // Filter by tags
+    var bHasRollup = false;
+    var bHasCheckpoint = false;
+    var bHasReport = false;
+
+    var tags = segment["tags"];
+    console.log("Tag: " + tags);
+    if (tags.search(/ROLLUP_/i) != -1) { bHasRollup = true; }
+    if (tags.search(/CHECKPOINT/i) != -1) { bHasCheckpoint = true; }
+    if (tags.search(/REPORT/i) != -1) { bHasReport = true; }
+
+    var bRemoveEntry = false;
+
+    // Remove rollups
+    if ((m_showRollup == false) && (bHasRollup == true)) {
+      bRemoveEntry = true;
+    }
+    
+    // Remove checkpoints    
+    if ((m_showCheckpointEntry == false) && (bHasCheckpoint == true)) {
+      bRemoveEntry = true;
+    }
+
+    // Remove reports
+    if ((m_showReportEntry == false) && (bHasReport == true)) {
+      bRemoveEntry = true;
+    }
+
+    // Remove individual entry
+    if (((m_showIndividualEntry == false) && 
+         ((bHasRollup == false) &&
+          (bHasCheckpoint == false) &&
+          (bHasReport == false)))) {
+      bRemoveEntry = true;
+    }
+
+    if (bRemoveEntry == true) {
+      chartData.splice(i, 1);
+      continue;
+    }
+  }
+
+  console.log("ChartData.length: " + chartData.length);
+}
+
+
+function getTaskBarColor( _tags )
+{
+  if (_tags == null)
+    return "#8dc49f";
+
+  if (_tags.search(/ROLLUP_AUTO/i) != -1){ return "#0099ff"; }
+  if (_tags.search(/ROLLUP_0/i) != -1)   { return "#006699"; }
+  if (_tags.search(/ROLLUP_1/i) != -1)   { return "#009933"; }
+  if (_tags.search(/ROLLUP_2/i) != -1)   { return "#66ccff"; }
+  if (_tags.search(/REPORT/i) != -1)     { return "#b9783f"; }
+  if (_tags.search(/CHECKPOINT/i) != -1) { return "#cd82ad"; }
+
+  return "#8dc49f"
+}
+
+
+function tableCreate( _chartData ){
+    var myTableDiv = document.getElementById("myDynamicTable");
+
+
+    for ( var i = 0; i < _chartData.length; i++) {
+      var tr = myTableDiv.insertRow();
+
+      var td_task = tr.insertCell();
+      td_task.appendChild(document.createTextNode( _chartData[i].category ));
+
+      var segmentEntry = _chartData[i].segments;
+      var td_start = tr.insertCell();
+      td_start.appendChild(document.createTextNode( secondsToHHMMSS(segmentEntry[0].start) ));
+
+      var td_duration = tr.insertCell();
+      td_duration.appendChild(document.createTextNode( secondsToHHMMSS(segmentEntry[0].duration) ));
+
+    }
+}
+
+function secondsToHHMMSS( _seconds )
+{
+  var hours = Math.floor(_seconds / 3600);
+  var minutes = Math.floor(_seconds % 3600 / 60);
+  var seconds = Math.floor(_seconds % 3600 % 60);
+
+  var result = hours + ":" + (minutes < 10 ? "0" : "") + minutes + ":" + (seconds < 10 ? "0" : "") + seconds; 
+
+  return result;
+}
+
+
+  function findCatagory(_pid, _category, _catagoryArray) {
+    for (var i = (_catagoryArray.length - 1); i >= 0; i--) {
+      if (_pid == _catagoryArray[i].pid) {
+        if (_catagoryArray[i].category == _category) {
+          return  _catagoryArray[i];
+        }
+      }
+    }
+    return null;
+  }
+
+
+  // Compares the timestamps between to JSON objects
+  function compareByTimeStamp(_a, _b) {
+    if (_a.TimeStampMSec < _b.TimeStampMSec) return -1;
+    if (_a.TimeStampMSec > _b.TimeStampMSec) return 1;
+
+    if (_a.pid == _b.pid) {
+      if ((_a.Action == "START") && (_b.Action == "END")) return -1;
+      if ((_a.Action == "END") && (_b.Action == "START")) return 1;
+
+      if(_a.Entry < _b.Entry) return -1;
+      if(_a.Entry > _b.Entry) return 1;
+    }
+
+    return 0;
+  }
+
+
+  // Compares the timestamps between to JSON objects
+  function compareByGroupTimeStamp(_a, _b) {
+    if (pidOrder.get(_a.pid) < pidOrder.get(_b.pid)) return -1;
+
+    if (pidOrder.get(_a.pid) > pidOrder.get(_b.pid)) return 1;
+
+    return compareByTimeStamp(_a, _b);
+  }
+
+
+  // Return array of string values, or NULL if CSV string not well formed.
+  function CSVtoArray(_text, _sep) {
+    // Regex expressions
+    var re_valid_default = /^\s*(?:'[^'\\]*(?:\\[\S\s][^'\\]*)*'|"[^"\\]*(?:\\[\S\s][^"\\]*)*"|[^,'"\s\\]*(?:\s+[^,'"\s\\]+)*)\s*(?:,\s*(?:'[^'\\]*(?:\\[\S\s][^'\\]*)*'|"[^"\\]*(?:\\[\S\s][^"\\]*)*"|[^,'"\s\\]*(?:\s+[^,'"\s\\]+)*)\s*)*$/;
+    var re_value_default = /(?!\s*$)\s*(?:'([^'\\]*(?:\\[\S\s][^'\\]*)*)'|"([^"\\]*(?:\\[\S\s][^"\\]*)*)"|([^,'"\s\\]*(?:\s+[^,'"\s\\]+)*))\s*(?:,|$)/g;
+    var re_special_default = /,\s*$/;
+
+    // Algorithm:
+    //   1) Convert regex expression to a string.
+    //   2) Remove leading regex escape character (e.g., '\')
+    //   3) Remove training regex escape character(s) (e.g., '\' or "\g")
+    //   4) Replace the comma (',') character witht he new delimiter character
+    //   5) Build the regex command
+
+    // Check delimiter, if special insert escapes
+    if (_sep == "|") _sep = "\\|";
+
+    var re_valid = new RegExp(re_valid_default.toString().substr(1).slice(0, -1).replace(/,/g, _sep));
+    var re_value = new RegExp(re_value_default.toString().substr(1).slice(0, -2).replace(/,/g, _sep), 'g');
+    var re_special = new RegExp(re_special_default.toString().substr(1).slice(0, -1).replace(/,/g, _sep));
+
+    // Validate the input string to determine if it is well formed
+    if (!re_valid.test(_text)) return null;
+
+    var a = [ ];                     // Initialize array to receive values.
+    _text.replace(re_value,           // "Walk" the string using replace with callback.
+                  function(m0, m1, m2, m3) {
+                      // Remove backslash from \' in single quoted values.
+                      if      (m1 !== undefined) a.push(m1.replace(/\\'/g, "'"));
+                      // Remove backslash from \" in double quoted values.
+                      else if (m2 !== undefined) a.push(m2.replace(/\\"/g, '"'));
+                      else if (m3 !== undefined) a.push(m3);
+                      return ''; // Return empty string.
+                  });
+
+    // Handle special case of empty last value.
+    if (re_special.test(_text)) a.push('');
+
+    return a;
+  };
+
+
+  // Converts the given CSV array & header into a JSON array
+  function csvArrayToJSON(_header, _csvArray, _sep) {
+    var result = [ ];
+    var headers = CSVtoArray(_header, _sep);
+
+    for (var i = 0; i < _csvArray.length; i++) {
+
+      var obj = { };
+      var currentline = CSVtoArray(_csvArray[i], _sep);
+
+      for (var j = 0; j < headers.length; j++) {
+        obj[headers[j]] = currentline[j];
+      }
+
+      result.push(obj);
+
+    }
+
+    return result; //JavaScript object
+  }
+
+
+</script>
+</body>
+
+</html>
+

@@ -1,0 +1,68 @@
+
+****** Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2020.1 (64-bit)
+  **** SW Build 2902540 on Wed May 27 19:54:35 MDT 2020
+  **** IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source /opt/Xilinx/Vivado/2020.1/scripts/vivado_hls/hls.tcl -notrace
+INFO: [HLS 200-10] Running '/opt/Xilinx/Vivado/2020.1/bin/unwrapped/lnx64.o/vivado_hls'
+INFO: [HLS 200-10] For user 'centos' on host 'ip-172-31-58-45.ec2.internal' (Linux_x86_64 version 3.10.0-1127.10.1.el7.x86_64) on Fri Jan 15 11:35:55 UTC 2021
+INFO: [HLS 200-10] On os "CentOS Linux release 7.7.1908 (Core)"
+INFO: [HLS 200-10] In directory '/home/centos/workspace/arrayb_block_partitioning/Emulation-HW/matmul.build/link/vivado/vpl'
+Sourcing Tcl script '/home/centos/workspace/arrayb_block_partitioning/Emulation-HW/matmul.build/link/vivado/vpl/runhls.tcl'
+INFO: [HLS 200-10] Creating and opening project '/home/centos/workspace/arrayb_block_partitioning/Emulation-HW/matmul.build/link/vivado/vpl/emu_cuisr_0_0'.
+INFO: [HLS 200-10] Adding design file '/home/centos/workspace/arrayb_block_partitioning/Emulation-HW/matmul.build/link/vivado/vpl/prj/prj.srcs/sources_1/bd/emu/ip/emu_cuisr_0_0/src/shell_utils_cuisr.cpp' to the project
+INFO: [HLS 200-10] Creating and opening solution '/home/centos/workspace/arrayb_block_partitioning/Emulation-HW/matmul.build/link/vivado/vpl/emu_cuisr_0_0/prj'.
+INFO: [HLS 200-10] Setting target device to 'xcvu9p-flgb2104-2-i'
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file '/home/centos/workspace/arrayb_block_partitioning/Emulation-HW/matmul.build/link/vivado/vpl/prj/prj.srcs/sources_1/bd/emu/ip/emu_cuisr_0_0/src/shell_utils_cuisr.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1528.949 ; gain = 1103.887 ; free physical = 31398 ; free virtual = 135019
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1528.949 ; gain = 1103.887 ; free physical = 31398 ; free virtual = 135019
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:13 ; elapsed = 00:00:12 . Memory (MB): peak = 1528.949 ; gain = 1103.887 ; free physical = 31398 ; free virtual = 135019
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:13 ; elapsed = 00:00:12 . Memory (MB): peak = 1528.949 ; gain = 1103.887 ; free physical = 31398 ; free virtual = 135019
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 1528.949 ; gain = 1103.887 ; free physical = 31390 ; free virtual = 135011
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 1528.949 ; gain = 1103.887 ; free physical = 31395 ; free virtual = 135016
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'shell_utils_cuisr' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'shell_utils_cuisr' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 12.78 seconds; current allocated memory: 88.774 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.01 seconds; current allocated memory: 88.917 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'shell_utils_cuisr' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'shell_utils_cuisr/a' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shell_utils_cuisr/Offset' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'shell_utils_cuisr' to 'ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'shell_utils_cuisr'.
+INFO: [HLS 200-111]  Elapsed time: 0.02 seconds; current allocated memory: 89.469 MB.
+INFO: [WVHDL 200-304] Encrypting RTL VHDL done.
+INFO: [WVHDL 200-304] Encrypting RTL Verilog done.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:14 ; elapsed = 00:00:13 . Memory (MB): peak = 1528.949 ; gain = 1103.887 ; free physical = 31387 ; free virtual = 135009
+INFO: [VHDL 208-304] Generating VHDL RTL for shell_utils_cuisr with prefix emu_cuisr_0_0_.
+INFO: [VLOG 209-307] Generating Verilog RTL for shell_utils_cuisr with prefix emu_cuisr_0_0_.
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+
+****** Vivado v2020.1 (64-bit)
+  **** SW Build 2902540 on Wed May 27 19:54:35 MDT 2020
+  **** IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source run_ippack.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2020.1/data/ip'.
+INFO: [Common 17-206] Exiting Vivado at Fri Jan 15 11:36:22 2021...
+INFO: [HLS 200-112] Total elapsed time: 27.5 seconds; peak allocated memory: 89.469 MB.
+INFO: [Common 17-206] Exiting vivado_hls at Fri Jan 15 11:36:23 2021...

@@ -1,0 +1,2 @@
+performing high-level synthesis for kernel: matmul_naive
+Log file: /home/centos/workspace/arrayb_block_partitioning/Emulation-HW/matmul.build/matmul_naive/matmul_naive/vitis_hls.log

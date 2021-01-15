@@ -1,0 +1,169 @@
+<ENTRY>
+{
+ "thisFile": "/home/centos/workspace/arrayb_block_partitioning/Emulation-SW/matmul.build/matmul_naive.xo.compile_summary",
+ "connectId": "",
+ "serverToken": "",
+ "timestamp": "0"
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Fri Jan 15 11:18:44 2021",
+ "timestampMillis": "1610709524630",
+ "buildStep": {
+  "cmdId": "134d1cab-fe33-477d-983b-705ff6a09dce",
+  "name": "v++",
+  "logFile": "/home/centos/workspace/arrayb_block_partitioning/Emulation-SW/matmul.build/matmul_naive/matmul_naive.steps.log",
+  "commandLine": "/opt/Xilinx/Vitis/2020.1/bin/unwrapped/lnx64.o/v++  --xp \"vivado_prop:run.__KERNEL__.{STEPS.SYNTH_DESIGN.ARGS.MORE OPTIONS}={-directive sdx_optimization_effort_high}\" --xp \"misc:report=type report_timing_summary name impl_report_timing_summary_route_design_summary steps {route_design} runs {impl_1} options {-max_paths 10}\" --xp \"misc:report=type report_timing_summary name impl_report_timing_summary_post_route_phys_opt_design_summary steps {post_route_phys_opt_design} runs {impl_1} options {-max_paths 10}\" --target sw_emu --compile -I../src --config common-config.cfg --config matmul-matmul_naive-compile.cfg -omatmul.build/matmul_naive.xo ../src/matmul.cl ",
+  "args": [
+   "--target",
+   "sw_emu",
+   "--compile",
+   "-I../src",
+   "--config",
+   "common-config.cfg",
+   "--config",
+   "matmul-matmul_naive-compile.cfg",
+   "-omatmul.build/matmul_naive.xo",
+   "../src/matmul.cl"
+  ],
+  "iniFiles": [
+   {
+    "path": "/home/centos/workspace/arrayb_block_partitioning/Emulation-SW/common-config.cfg",
+    "content": "platform=/home/centos/src/project_data/aws-fpga/Vitis/aws_platform/xilinx_aws-vu9p-f1_shell-v04261818_201920_2/xilinx_aws-vu9p-f1_shell-v04261818_201920_2.xpfm\nsave-temps=1\n"
+   },
+   {
+    "path": "/home/centos/workspace/arrayb_block_partitioning/Emulation-SW/matmul-matmul_naive-compile.cfg",
+    "content": "kernel=matmul_naive\ndebug=1\nmessageDb=matmul.build/matmul_naive.mdb\ntemp_dir=matmul.build\nreport_dir=matmul.build/reports\nlog_dir=matmul.build/logs\n\n[advanced]\nmisc=solution_name=matmul_naive\n"
+   }
+  ],
+  "cwd": "/home/centos/workspace/arrayb_block_partitioning/Emulation-SW"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Jan 15 11:18:44 2021",
+ "timestampMillis": "1610709524630",
+ "status": {
+  "cmdId": "134d1cab-fe33-477d-983b-705ff6a09dce",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_FlowMetaData",
+ "dateTimestamp": "Fri Jan 15 11:18:59 2021",
+ "timestampMillis": "1610709539137",
+ "buildSummary": {
+  "hardwarePlatform": "xilinx_aws-vu9p-f1_shell-v04261818_201920_2.xpfm",
+  "hardwareDsa": "xilinx_aws-vu9p-f1_shell-v04261818_201920_2.xsa",
+  "platformDirectory": "/home/centos/src/project_data/aws-fpga/Vitis/aws_platform/xilinx_aws-vu9p-f1_shell-v04261818_201920_2",
+  "runtime": "OpenCL",
+  "systemConfig": "Linux",
+  "flow": "BF_COMPILE",
+  "target": "TT_SW_EMU",
+  "kernels": [
+   {
+    "base": {
+     "type": "KERNEL",
+     "name": "matmul_naive",
+     "file": "/home/centos/workspace/arrayb_block_partitioning/Emulation-SW/matmul.build/matmul_naive.xo",
+     "reports": []
+    },
+    "sources": [
+     "/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl"
+    ],
+    "psSources": [],
+    "cuNames": [],
+    "type": "HLS"
+   }
+  ],
+  "toolVersion": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Fri Jan 15 11:18:59 2021",
+ "timestampMillis": "1610709539141",
+ "buildStep": {
+  "cmdId": "0b48d94f-69a7-40d3-be1d-fe7d2fcb7640",
+  "name": "vitis_hls",
+  "logFile": "/home/centos/workspace/arrayb_block_partitioning/Emulation-SW/matmul.build/matmul_naive/matmul_naive/vitis_hls.log",
+  "commandLine": "vitis_hls -f /home/centos/workspace/arrayb_block_partitioning/Emulation-SW/matmul.build/matmul_naive/matmul_naive/matmul_naive.tcl -messageDb vitis_hls.pb",
+  "args": [
+   "vitis_hls",
+   "-f",
+   "/home/centos/workspace/arrayb_block_partitioning/Emulation-SW/matmul.build/matmul_naive/matmul_naive/matmul_naive.tcl",
+   "-messageDb",
+   "vitis_hls.pb"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/centos/workspace/arrayb_block_partitioning/Emulation-SW"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Jan 15 11:18:59 2021",
+ "timestampMillis": "1610709539142",
+ "status": {
+  "cmdId": "0b48d94f-69a7-40d3-be1d-fe7d2fcb7640",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Jan 15 11:19:05 2021",
+ "timestampMillis": "1610709545888",
+ "status": {
+  "cmdId": "0b48d94f-69a7-40d3-be1d-fe7d2fcb7640",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Jan 15 11:19:05 2021",
+ "timestampMillis": "1610709545898",
+ "report": {
+  "path": "/home/centos/workspace/arrayb_block_partitioning/Emulation-SW/guidance.html",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Jan 15 11:19:05 2021",
+ "timestampMillis": "1610709545898",
+ "report": {
+  "path": "/home/centos/workspace/arrayb_block_partitioning/Emulation-SW/guidance.pb",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Jan 15 11:19:05 2021",
+ "timestampMillis": "1610709545899",
+ "status": {
+  "cmdId": "134d1cab-fe33-477d-983b-705ff6a09dce",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>

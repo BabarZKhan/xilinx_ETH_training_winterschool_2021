@@ -1,0 +1,6 @@
+2021-01-15T11:47:56.15701500255-11:47:56 **** Incremental Build of configuration Emulation-HW for project arrayb_block_partitioning ****
+000-make -j8 incremental 
+000-make: Nothing to be done for `incremental'.
+00255-
+11:47:56 Build Finished (took 71ms)
+

@@ -1,0 +1,176 @@
+Begin Function 'matmul_naive'
+
+RTL state condition: (1'b1 == 1'b1)
+# ST_159
+local result <> <integer> <Phi> 'phi' <>
+result /home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:58
+reg: result_reg_331[31:0] lv
+
+local mul_ln58 <mul_58> <integer> <Arithmetic><MultiCycle> 'mul' </home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:58>
+mul_ln58 /home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:58
+reg: mul_ln58_reg_844[31:0] lv
+
+
+RTL state condition: (1'b1 == ap_CS_fsm_pp0_stage0)
+# ST_75
+local i <phi_39> <integer> <Phi> 'phi' </home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:39>
+add_ln39 /home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:39
+reg: i_reg_254[30:0] lv
+
+local icmp_ln39_1 <icmp_39> <integer> <Comparator> 'icmp' </home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:39>
+icmp_ln39_1 /home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:39
+reg: icmp_ln39_1_reg_713[0:0] lv
+
+local trunc_ln40 <trunc_40> <integer> <> 'trunc' </home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:40>
+trunc_ln40 /home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:40
+reg: trunc_ln40_reg_722[11:0] lv
+
+# ST_76
+local gmem_addr_read <read_40> <integer> <> 'read' </home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:40>
+gmem_addr_read /home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:40
+reg: gmem_addr_read_reg_727[31:0] lv
+
+
+RTL state condition: (1'b1 == ap_CS_fsm_pp1_stage0)
+# ST_148
+local i_1 <phi_46> <integer> <Phi> 'phi' </home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:46>
+add_ln46 /home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:46
+reg: i_1_reg_265[30:0] lv
+
+local icmp_ln46 <icmp_46> <integer> <Comparator> 'icmp' </home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:46>
+icmp_ln46 /home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:46
+reg: icmp_ln46_reg_738[0:0] lv
+
+local trunc_ln47 <trunc_47> <integer> <> 'trunc' </home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:47>
+trunc_ln47 /home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:47
+reg: trunc_ln47_reg_747[11:0] lv
+
+# ST_149
+local gmem_addr_1_read <read_47> <integer> <> 'read' </home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:47>
+gmem_addr_1_read /home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:47
+reg: gmem_addr_1_read_reg_752[31:0] lv
+
+
+RTL state condition: (1'b1 == ap_CS_fsm_pp2_stage0)
+# ST_156
+local k <phi_57> <integer> <Phi> 'phi' </home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:57>
+add_ln57 /home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:57
+reg: k_reg_309[31:0] lv
+
+local phi_mul <phi_58> <integer> <Phi> 'phi' </home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:58>
+add_ln58_2 /home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:58
+reg: phi_mul_reg_320[11:0] lv
+
+local icmp_ln57 <icmp_57> <integer> <Comparator> 'icmp' </home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:57>
+icmp_ln57 /home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:57
+reg: icmp_ln57_reg_810[0:0] lv
+
+# ST_157
+local A_load <load_58> <integer> <ArrayAccess><ArrayLoad><MultiCycle> 'load' </home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:58>
+A_load /home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:58
+reg: A_load_reg_834[31:0] lv
+
+local B_load <load_58> <integer> <ArrayAccess><ArrayLoad><MultiCycle> 'load' </home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:58>
+B_load /home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:58
+reg: B_load_reg_839[31:0] lv
+
+
+RTL state condition: (1'b1 == ap_CS_fsm_pp3_stage0)
+# ST_163
+local i_3 <phi_67> <integer> <Phi> 'phi' </home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:67>
+add_ln67 /home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:67
+reg: i_3_reg_344[30:0] lv
+
+local icmp_ln67 <icmp_67> <integer> <Comparator> 'icmp' </home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:67>
+icmp_ln67 /home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:67
+reg: icmp_ln67_reg_864[0:0] lv
+
+# ST_164
+local C_load <load_68> <integer> <ArrayAccess><ArrayLoad><MultiCycle> 'load' </home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:68>
+C_load /home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:68
+reg: C_load_reg_878[31:0] lv
+
+
+RTL state condition: (1'b1 == ap_CS_fsm_state151)
+# ST_151
+local trunc_ln51 <trunc_51> <integer> <> 'trunc' </home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:51>
+trunc_ln51 /home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:51
+reg: trunc_ln51_reg_757[11:0] lv
+
+local tmp <bitconcatenate_51> <integer> <> 'bitconcatenate' </home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:51>
+tmp /home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:51
+reg: tmp_reg_763[37:0] lv
+
+
+RTL state condition: (1'b1 == ap_CS_fsm_state152)
+# ST_152
+local indvar_flatten <phi_51> <integer> <Phi> 'phi' </home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:51>
+add_ln51 /home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:51
+reg: indvar_flatten_reg_276[37:0] lv
+
+local i_2 <phi_51> <integer> <Phi> 'phi' </home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:51>
+select_ln51_1 /home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:51
+reg: i_2_reg_287[31:0] lv
+
+local j <phi_53> <integer> <Phi> 'phi' </home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:53>
+add_ln53 /home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:53
+reg: j_reg_298[6:0] lv
+
+local add_ln51 <add_51> <integer> <Arithmetic> 'add' </home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:51>
+add_ln51 /home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:51
+reg: add_ln51_reg_771[37:0] lv
+
+local select_ln51 <select_51> <integer> <> 'select' </home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:51>
+select_ln51 /home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:51
+reg: select_ln51_reg_776[6:0] lv
+
+local select_ln51_1 <select_51> <integer> <> 'select' </home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:51>
+select_ln51_1 /home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:51
+reg: select_ln51_1_reg_783[31:0] lv
+
+local gmem_addr_2 <getelementptr_67> <integer> <> 'getelementptr' </home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:67>
+gmem_addr_2 /home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:67
+reg: gmem_addr_2_reg_793[63:0] lv
+
+
+RTL state condition: (1'b1 == ap_CS_fsm_state155)
+# ST_155
+local p_mid <bitconcatenate_51> <integer> <> 'bitconcatenate' </home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:51>
+p_mid /home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:51
+reg: p_mid_reg_799[13:0] lv
+
+local zext_ln53 <zext_53> <integer> <> 'zext' </home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:53>
+zext_ln53 /home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:53
+reg: zext_ln53_reg_805[11:0] lv
+
+
+RTL state condition: (1'b1 == ap_CS_fsm_state162)
+# ST_162
+local trunc_ln67 <trunc_67> <integer> <> 'trunc' </home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:67>
+trunc_ln67 /home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:67
+reg: trunc_ln67_reg_859[30:0] lv
+
+
+RTL state condition: (1'b1 == ap_CS_fsm_state3)
+# ST_3
+local mul <mul_26> <integer> <Arithmetic><MultiCycle> 'mul' </home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:26>
+mul /home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:26
+reg: mul_reg_672[31:0] lv
+
+
+RTL state condition: (1'b1 == ap_CS_fsm_state4)
+# ST_4
+local icmp_ln39 <icmp_39> <integer> <Comparator> 'icmp' </home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:39>
+icmp_ln39 /home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:39
+reg: icmp_ln39_reg_687[0:0] lv
+
+
+RTL state condition: (1'b1 == ap_CS_fsm_state74)
+# ST_74
+local trunc_ln39 <trunc_39> <integer> <> 'trunc' </home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:39>
+trunc_ln39 /home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:39
+reg: trunc_ln39_reg_707[30:0] lv
+
+
+End Function 'matmul_naive'
+

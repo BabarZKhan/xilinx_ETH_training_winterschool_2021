@@ -1,0 +1,6 @@
+matmul_naive_mul_32s_32s_32_2_1
+matmul_naive_mul_mul_12s_12s_12_4_1
+matmul_naive_A
+matmul_naive_control_s_axi
+matmul_naive_gmem_m_axi
+matmul_naive

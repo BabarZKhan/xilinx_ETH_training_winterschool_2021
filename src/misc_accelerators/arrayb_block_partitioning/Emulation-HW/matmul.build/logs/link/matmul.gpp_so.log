@@ -1,0 +1,3 @@
+/home/centos/workspace/arrayb_block_partitioning/Emulation-HW/matmul.build/link/int/matmul_naive/matmul_naive.offline.a(matmul_naive.offline.o):(.rodata+0x0): multiple definition of `c_size'
+/home/centos/workspace/arrayb_block_partitioning/Emulation-HW/matmul.build/link/int/matmul_partition/matmul_partition.offline.a(matmul_partition.offline.o):(.rodata+0x0): first defined here
+collect2: error: ld returned 1 exit status

@@ -1,0 +1,82 @@
+<ENTRY>
+{
+ "thisFile": "/home/centos/workspace/arrayb_block_partitioning/Emulation-SW/v++.package_summary",
+ "connectId": "",
+ "serverToken": "",
+ "timestamp": "0"
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Fri Jan 15 11:20:04 2021",
+ "timestampMillis": "1610709604645",
+ "buildStep": {
+  "cmdId": "60732f37-3840-4fc4-b677-733eaa938fb0",
+  "name": "v++",
+  "logFile": "/home/centos/workspace/arrayb_block_partitioning/Emulation-SW/package.build/package/package.steps.log",
+  "commandLine": "/opt/Xilinx/Vitis/2020.1/bin/unwrapped/lnx64.o/v++  --xp \"vivado_prop:run.__KERNEL__.{STEPS.SYNTH_DESIGN.ARGS.MORE OPTIONS}={-directive sdx_optimization_effort_high}\" --xp \"misc:report=type report_timing_summary name impl_report_timing_summary_route_design_summary steps {route_design} runs {impl_1} options {-max_paths 10}\" --xp \"misc:report=type report_timing_summary name impl_report_timing_summary_post_route_phys_opt_design_summary steps {post_route_phys_opt_design} runs {impl_1} options {-max_paths 10}\" --package --config package.cfg matmul.xclbin ",
+  "args": [
+   "--package",
+   "--config",
+   "package.cfg",
+   "matmul.xclbin"
+  ],
+  "iniFiles": [
+   {
+    "path": "/home/centos/workspace/arrayb_block_partitioning/Emulation-SW/package.cfg",
+    "content": "target=sw_emu\ntemp_dir=package.build\nplatform=/home/centos/src/project_data/aws-fpga/Vitis/aws_platform/xilinx_aws-vu9p-f1_shell-v04261818_201920_2/xilinx_aws-vu9p-f1_shell-v04261818_201920_2.xpfm\n\n[package]\nout_dir=./package\n"
+   }
+  ],
+  "cwd": "/home/centos/workspace/arrayb_block_partitioning/Emulation-SW"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Jan 15 11:20:04 2021",
+ "timestampMillis": "1610709604646",
+ "status": {
+  "cmdId": "60732f37-3840-4fc4-b677-733eaa938fb0",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Jan 15 11:20:19 2021",
+ "timestampMillis": "1610709619410",
+ "report": {
+  "path": "/home/centos/workspace/arrayb_block_partitioning/Emulation-SW/guidance.html",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Jan 15 11:20:19 2021",
+ "timestampMillis": "1610709619410",
+ "report": {
+  "path": "/home/centos/workspace/arrayb_block_partitioning/Emulation-SW/guidance.pb",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Jan 15 11:20:19 2021",
+ "timestampMillis": "1610709619411",
+ "status": {
+  "cmdId": "60732f37-3840-4fc4-b677-733eaa938fb0",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>

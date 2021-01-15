@@ -1,0 +1,22 @@
+{
+ "kernels": [],
+ "computeUnits": [
+  {
+   "id": "",
+   "kernelName": "matmul_naive",
+   "cuName": "matmul_naive_1",
+   "baseAddress": "",
+   "instancePath": "/emu_wrapper/emu_i/dynamic_region/matmul_naive_1",
+   "slr": []
+  },
+  {
+   "id": "",
+   "kernelName": "matmul_partition",
+   "cuName": "matmul_partition_1",
+   "baseAddress": "",
+   "instancePath": "/emu_wrapper/emu_i/dynamic_region/matmul_partition_1",
+   "slr": []
+  }
+ ]
+}
+

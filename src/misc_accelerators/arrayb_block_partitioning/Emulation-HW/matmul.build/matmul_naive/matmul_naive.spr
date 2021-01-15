@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="matmul_naive" dir="">
+  <FileSets>
+    <FileSet Name="kernel_matmul_naive" Type="DesignSrcs">
+      <File Path="/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl"/>
+      <Config/>
+    </FileSet>
+  </FileSets>
+  <Runs/>
+</project>

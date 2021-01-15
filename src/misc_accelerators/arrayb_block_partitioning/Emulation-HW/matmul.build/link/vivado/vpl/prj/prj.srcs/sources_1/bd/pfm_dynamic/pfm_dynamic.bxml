@@ -1,0 +1,500 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Root MajorVersion="0" MinorVersion="39">
+  <CompositeFile CompositeFileTopName="pfm_dynamic" CanBeSetAsTop="false" CanDisplayChildGraph="true">
+    <Description>Composite Fileset</Description>
+    <Generation Name="SYNTHESIS" State="STALE" Timestamp="1610710503"/>
+    <Generation Name="IMPLEMENTATION" State="STALE" Timestamp="1610710503"/>
+    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1610710507"/>
+    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1610710507"/>
+    <FileCollection Name="SOURCES" Type="SOURCES">
+      <File Name="ip/pfm_dynamic_kernel2_clk_0/pfm_dynamic_kernel2_clk_0.xci" Type="IP">
+        <Instance HierarchyPath="kernel2_clk"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="1588104160" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip/pfm_dynamic_kernel_clk_0/pfm_dynamic_kernel_clk_0.xci" Type="IP">
+        <Instance HierarchyPath="kernel_clk"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="1588104160" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip/pfm_dynamic_xtlm_simple_intercon_0_0/pfm_dynamic_xtlm_simple_intercon_0_0.xci" Type="IP">
+        <Instance HierarchyPath="xtlm_simple_intercon_0"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="1588104162" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip/pfm_dynamic_xlconcat_interrupt_0/pfm_dynamic_xlconcat_interrupt_0.xci" Type="IP">
+        <Instance HierarchyPath="interrupt_concat/xlconcat_interrupt"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="1588104160" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip/pfm_dynamic_xlconcat_interrupt_0_0/pfm_dynamic_xlconcat_interrupt_0_0.xci" Type="IP">
+        <Instance HierarchyPath="interrupt_concat/xlconcat_interrupt_0"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="1588104160" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip/pfm_dynamic_xlconcat_interrupt_1_0/pfm_dynamic_xlconcat_interrupt_1_0.xci" Type="IP">
+        <Instance HierarchyPath="interrupt_concat/xlconcat_interrupt_1"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="1588104160" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip/pfm_dynamic_xlconcat_interrupt_2_0/pfm_dynamic_xlconcat_interrupt_2_0.xci" Type="IP">
+        <Instance HierarchyPath="interrupt_concat/xlconcat_interrupt_2"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="1588104160" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip/pfm_dynamic_xlconcat_interrupt_3_0/pfm_dynamic_xlconcat_interrupt_3_0.xci" Type="IP">
+        <Instance HierarchyPath="interrupt_concat/xlconcat_interrupt_3"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="1588104162" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip/pfm_dynamic_xlconstant_gnd_0/pfm_dynamic_xlconstant_gnd_0.xci" Type="IP">
+        <Instance HierarchyPath="interrupt_concat/xlconstant_gnd"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="1588104162" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip/pfm_dynamic_memory_subsystem_0/pfm_dynamic_memory_subsystem_0.xci" Type="IP">
+        <Instance HierarchyPath="memory_subsystem"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="1588104160" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip/pfm_dynamic_sim_ddr_0_0/pfm_dynamic_sim_ddr_0_0.xci" Type="IP">
+        <Instance HierarchyPath="sim_ddr_0"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="1588104160" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip/pfm_dynamic_sim_ddr_2_0/pfm_dynamic_sim_ddr_2_0.xci" Type="IP">
+        <Instance HierarchyPath="sim_ddr_2"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="1588104160" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip/pfm_dynamic_sim_ddr_3_0/pfm_dynamic_sim_ddr_3_0.xci" Type="IP">
+        <Instance HierarchyPath="sim_ddr_3"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="1588104160" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip/pfm_dynamic_user_slr_icn_0/pfm_dynamic_user_slr_icn_0.xci" Type="IP">
+        <Properties IsEditable="false" IsVisible="false" Timestamp="1588104160" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip/pfm_dynamic_icn_pass_0_0/pfm_dynamic_icn_pass_0_0.xci" Type="IP">
+        <Instance HierarchyPath="slr0/icn_pass_0"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="1588104160" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip/pfm_dynamic_psr_kernel_clk_0_0/pfm_dynamic_psr_kernel_clk_0_0.xci" Type="IP">
+        <Instance HierarchyPath="slr0/psr_kernel_clk_0"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="1588104160" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip/pfm_dynamic_psr_kernel2_clk_0_0/pfm_dynamic_psr_kernel2_clk_0_0.xci" Type="IP">
+        <Instance HierarchyPath="slr0/psr_kernel2_clk_0"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="1588104160" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip/pfm_dynamic_interconnect_axilite_user_0_0/pfm_dynamic_interconnect_axilite_user_0_0.xci" Type="IP">
+        <Properties IsEditable="false" IsVisible="false" Timestamp="1588104160" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip/pfm_dynamic_to_delete_kernel_ctrl_0_0/pfm_dynamic_to_delete_kernel_ctrl_0_0.xci" Type="IP">
+        <Instance HierarchyPath="slr0/to_delete_kernel_ctrl_0"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="1588104160" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip/pfm_dynamic_icn_pass_1_0/pfm_dynamic_icn_pass_1_0.xci" Type="IP">
+        <Instance HierarchyPath="slr1/icn_pass_1"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="1588104160" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip/pfm_dynamic_icn_pass_2_0/pfm_dynamic_icn_pass_2_0.xci" Type="IP">
+        <Instance HierarchyPath="slr1/icn_pass_2"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="1588104160" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip/pfm_dynamic_psr_kernel_clk_1_0/pfm_dynamic_psr_kernel_clk_1_0.xci" Type="IP">
+        <Instance HierarchyPath="slr1/psr_kernel_clk_1"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="1588104160" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip/pfm_dynamic_psr_kernel2_clk_1_0/pfm_dynamic_psr_kernel2_clk_1_0.xci" Type="IP">
+        <Instance HierarchyPath="slr1/psr_kernel2_clk_1"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="1588104160" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip/pfm_dynamic_interconnect_axilite_user_1_0/pfm_dynamic_interconnect_axilite_user_1_0.xci" Type="IP">
+        <Properties IsEditable="false" IsVisible="false" Timestamp="1588104160" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip/pfm_dynamic_icn_pass_3_0/pfm_dynamic_icn_pass_3_0.xci" Type="IP">
+        <Instance HierarchyPath="slr2/icn_pass_3"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="1588104160" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip/pfm_dynamic_psr_kernel_clk_2_0/pfm_dynamic_psr_kernel_clk_2_0.xci" Type="IP">
+        <Instance HierarchyPath="slr2/psr_kernel_clk_2"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="1588104160" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip/pfm_dynamic_psr_kernel2_clk_2_0/pfm_dynamic_psr_kernel2_clk_2_0.xci" Type="IP">
+        <Instance HierarchyPath="slr2/psr_kernel2_clk_2"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="1588104160" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip/pfm_dynamic_interconnect_axilite_user_2_0/pfm_dynamic_interconnect_axilite_user_2_0.xci" Type="IP">
+        <Properties IsEditable="false" IsVisible="false" Timestamp="1588104160" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip/pfm_dynamic_to_delete_kernel_ctrl_2_0/pfm_dynamic_to_delete_kernel_ctrl_2_0.xci" Type="IP">
+        <Instance HierarchyPath="slr2/to_delete_kernel_ctrl_2"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="1588104160" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip/pfm_dynamic_matmul_naive_1_0/pfm_dynamic_matmul_naive_1_0.xci" Type="IP">
+        <Instance HierarchyPath="matmul_naive_1"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip/pfm_dynamic_matmul_partition_1_0/pfm_dynamic_matmul_partition_1_0.xci" Type="IP">
+        <Instance HierarchyPath="matmul_partition_1"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip/pfm_dynamic_dpa_ctrl_interconnect_0/pfm_dynamic_dpa_ctrl_interconnect_0.xci" Type="IP">
+        <Properties IsEditable="false" IsVisible="false" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip/pfm_dynamic_dpa_hub_0/pfm_dynamic_dpa_hub_0.xci" Type="IP">
+        <Instance HierarchyPath="System_DPA/dpa_hub"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip/pfm_dynamic_dpa_mon0_0/pfm_dynamic_dpa_mon0_0.xci" Type="IP">
+        <Instance HierarchyPath="System_DPA/dpa_mon0"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip/pfm_dynamic_dpa_mon1_0/pfm_dynamic_dpa_mon1_0.xci" Type="IP">
+        <Instance HierarchyPath="System_DPA/dpa_mon1"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip/pfm_dynamic_dpa_mon2_0/pfm_dynamic_dpa_mon2_0.xci" Type="IP">
+        <Instance HierarchyPath="System_DPA/dpa_mon2"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip/pfm_dynamic_dpa_mon3_0/pfm_dynamic_dpa_mon3_0.xci" Type="IP">
+        <Instance HierarchyPath="System_DPA/dpa_mon3"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="synth/pfm_dynamic.v" Type="Verilog">
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+      </File>
+      <File Name="sim/pfm_dynamic_sci.h" Type="SystemCHeader">
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="sim/pfm_dynamic_sci.cxx" Type="SystemC">
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="sim/pfm_dynamic_sci_stub.sv" Type="SystemVerilog">
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="sim/pfm_dynamic.v" Type="Verilog">
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip/pfm_dynamic_xbar_4/pfm_dynamic_xbar_4.xci" Type="IP">
+        <Instance HierarchyPath="slr1/interconnect_axilite_user_1/xbar"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip/pfm_dynamic_xbar_6/pfm_dynamic_xbar_6.xci" Type="IP">
+        <Instance HierarchyPath="System_DPA/dpa_ctrl_interconnect/xbar"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip/pfm_dynamic_xbar_5/pfm_dynamic_xbar_5.xci" Type="IP">
+        <Instance HierarchyPath="user_slr_icn/xbar"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip/pfm_dynamic_m01_regslice_6/pfm_dynamic_m01_regslice_6.xci" Type="IP">
+        <Instance HierarchyPath="slr1/interconnect_axilite_user_1/m01_couplers/m01_regslice"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip/pfm_dynamic_auto_cc_0/pfm_dynamic_auto_cc_0.xci" Type="IP">
+        <Instance HierarchyPath="slr1/interconnect_axilite_user_1/m01_couplers/auto_cc"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip/pfm_dynamic_m02_regslice_6/pfm_dynamic_m02_regslice_6.xci" Type="IP">
+        <Instance HierarchyPath="slr1/interconnect_axilite_user_1/m02_couplers/m02_regslice"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip/pfm_dynamic_auto_cc_1/pfm_dynamic_auto_cc_1.xci" Type="IP">
+        <Instance HierarchyPath="slr1/interconnect_axilite_user_1/m02_couplers/auto_cc"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip/pfm_dynamic_s00_regslice_0/pfm_dynamic_s00_regslice_0.xci" Type="IP">
+        <Instance HierarchyPath="System_DPA/dpa_ctrl_interconnect/s00_couplers/s00_regslice"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip/pfm_dynamic_m00_regslice_0/pfm_dynamic_m00_regslice_0.xci" Type="IP">
+        <Instance HierarchyPath="System_DPA/dpa_ctrl_interconnect/m00_couplers/m00_regslice"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip/pfm_dynamic_auto_cc_2/pfm_dynamic_auto_cc_2.xci" Type="IP">
+        <Instance HierarchyPath="System_DPA/dpa_ctrl_interconnect/m00_couplers/auto_cc"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip/pfm_dynamic_m01_regslice_7/pfm_dynamic_m01_regslice_7.xci" Type="IP">
+        <Instance HierarchyPath="System_DPA/dpa_ctrl_interconnect/m01_couplers/m01_regslice"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip/pfm_dynamic_auto_cc_3/pfm_dynamic_auto_cc_3.xci" Type="IP">
+        <Instance HierarchyPath="System_DPA/dpa_ctrl_interconnect/m01_couplers/auto_cc"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip/pfm_dynamic_m02_regslice_7/pfm_dynamic_m02_regslice_7.xci" Type="IP">
+        <Instance HierarchyPath="System_DPA/dpa_ctrl_interconnect/m02_couplers/m02_regslice"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip/pfm_dynamic_auto_cc_4/pfm_dynamic_auto_cc_4.xci" Type="IP">
+        <Instance HierarchyPath="System_DPA/dpa_ctrl_interconnect/m02_couplers/auto_cc"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip/pfm_dynamic_m03_regslice_0/pfm_dynamic_m03_regslice_0.xci" Type="IP">
+        <Instance HierarchyPath="System_DPA/dpa_ctrl_interconnect/m03_couplers/m03_regslice"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip/pfm_dynamic_auto_cc_5/pfm_dynamic_auto_cc_5.xci" Type="IP">
+        <Instance HierarchyPath="System_DPA/dpa_ctrl_interconnect/m03_couplers/auto_cc"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip/pfm_dynamic_m04_regslice_0/pfm_dynamic_m04_regslice_0.xci" Type="IP">
+        <Instance HierarchyPath="System_DPA/dpa_ctrl_interconnect/m04_couplers/m04_regslice"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip/pfm_dynamic_auto_cc_6/pfm_dynamic_auto_cc_6.xci" Type="IP">
+        <Instance HierarchyPath="System_DPA/dpa_ctrl_interconnect/m04_couplers/auto_cc"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="pfm_dynamic_ooc.xdc" Type="XDC">
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="OUT_OF_CONTEXT"/>
+      </File>
+      <File Name="hw_handoff/pfm_dynamic.hwh" Type="HwHandoff">
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="HW_HANDOFF"/>
+      </File>
+      <File Name="hw_handoff/pfm_dynamic_bd.tcl">
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="HW_HANDOFF"/>
+      </File>
+      <File Name="synth/pfm_dynamic.hwdef">
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="HW_HANDOFF"/>
+      </File>
+      <File Name="sim/pfm_dynamic.protoinst">
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+    </FileCollection>
+  </CompositeFile>
+</Root>

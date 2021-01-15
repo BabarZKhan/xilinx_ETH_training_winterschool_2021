@@ -1,0 +1,2345 @@
+
+
+================================================================
+== Vitis HLS Report for 'matmul_naive'
+================================================================
+* Date:           Fri Jan 15 11:28:28 2021
+
+* Version:        2020.1 (Build 2902540 on Wed May 27 20:16:15 MDT 2020)
+* Project:        matmul_naive
+* Solution:       solution (Vitis Kernel Flow Target)
+* Product family: virtexuplus
+* Target device:  xcvu9p-flgb2104-2-i
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  | 4.00 ns | 2.920 ns |   1.08 ns  |
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+--------+--------+---------+
+    |  Latency (cycles) |  Latency (absolute) |     Interval    | Pipeline|
+    |   min   |   max   |    min   |    max   |   min  |   max  |   Type  |
+    +---------+---------+----------+----------+--------+--------+---------+
+    |   299015|   311516| 1.196 ms | 1.246 ms |  299016|  311517|   none  |
+    +---------+---------+----------+----------+--------+--------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-----------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                       |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |       Loop Name       |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +-----------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- readA                |     4097|     4097|         3|          1|          1|  4096|    yes   |
+        |- readB                |     4097|     4097|         3|          1|          1|  4096|    yes   |
+        |- lreorder1_lreorder2  |   299008|   299008|        73|          -|          -|  4096|    no    |
+        | + lreorder3           |       67|       67|         5|          1|          1|    64|    yes   |
+        |- writeC               |     4097|     4097|         3|          1|          1|  4096|    yes   |
+        +-----------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 3
+  * Pipeline-1: initiation interval (II) = 1, depth = 3
+  * Pipeline-2: initiation interval (II) = 1, depth = 5
+  * Pipeline-3: initiation interval (II) = 1, depth = 3
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 233
+* Pipeline : 4
+  Pipeline-0 : II = 1, D = 3, States = { 75 76 77 }
+  Pipeline-1 : II = 1, D = 3, States = { 148 149 150 }
+  Pipeline-2 : II = 1, D = 5, States = { 156 157 158 159 160 }
+  Pipeline-3 : II = 1, D = 3, States = { 163 164 165 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 151 
+6 --> 7 
+7 --> 8 
+8 --> 9 
+9 --> 10 
+10 --> 11 
+11 --> 12 
+12 --> 13 
+13 --> 14 
+14 --> 15 
+15 --> 16 
+16 --> 17 
+17 --> 18 
+18 --> 19 
+19 --> 20 
+20 --> 21 
+21 --> 22 
+22 --> 23 
+23 --> 24 
+24 --> 25 
+25 --> 26 
+26 --> 27 
+27 --> 28 
+28 --> 29 
+29 --> 30 
+30 --> 31 
+31 --> 32 
+32 --> 33 
+33 --> 34 
+34 --> 35 
+35 --> 36 
+36 --> 37 
+37 --> 38 
+38 --> 39 
+39 --> 40 
+40 --> 41 
+41 --> 42 
+42 --> 43 
+43 --> 44 
+44 --> 45 
+45 --> 46 
+46 --> 47 
+47 --> 48 
+48 --> 49 
+49 --> 50 
+50 --> 51 
+51 --> 52 
+52 --> 53 
+53 --> 54 
+54 --> 55 
+55 --> 56 
+56 --> 57 
+57 --> 58 
+58 --> 59 
+59 --> 60 
+60 --> 61 
+61 --> 62 
+62 --> 63 
+63 --> 64 
+64 --> 65 
+65 --> 66 
+66 --> 67 
+67 --> 68 
+68 --> 69 
+69 --> 70 
+70 --> 71 
+71 --> 72 
+72 --> 73 
+73 --> 74 
+74 --> 75 
+75 --> 78 76 
+76 --> 77 
+77 --> 75 
+78 --> 79 
+79 --> 80 
+80 --> 81 
+81 --> 82 
+82 --> 83 
+83 --> 84 
+84 --> 85 
+85 --> 86 
+86 --> 87 
+87 --> 88 
+88 --> 89 
+89 --> 90 
+90 --> 91 
+91 --> 92 
+92 --> 93 
+93 --> 94 
+94 --> 95 
+95 --> 96 
+96 --> 97 
+97 --> 98 
+98 --> 99 
+99 --> 100 
+100 --> 101 
+101 --> 102 
+102 --> 103 
+103 --> 104 
+104 --> 105 
+105 --> 106 
+106 --> 107 
+107 --> 108 
+108 --> 109 
+109 --> 110 
+110 --> 111 
+111 --> 112 
+112 --> 113 
+113 --> 114 
+114 --> 115 
+115 --> 116 
+116 --> 117 
+117 --> 118 
+118 --> 119 
+119 --> 120 
+120 --> 121 
+121 --> 122 
+122 --> 123 
+123 --> 124 
+124 --> 125 
+125 --> 126 
+126 --> 127 
+127 --> 128 
+128 --> 129 
+129 --> 130 
+130 --> 131 
+131 --> 132 
+132 --> 133 
+133 --> 134 
+134 --> 135 
+135 --> 136 
+136 --> 137 
+137 --> 138 
+138 --> 139 
+139 --> 140 
+140 --> 141 
+141 --> 142 
+142 --> 143 
+143 --> 144 
+144 --> 145 
+145 --> 146 
+146 --> 147 
+147 --> 148 
+148 --> 151 149 
+149 --> 150 
+150 --> 148 
+151 --> 152 
+152 --> 153 162 233 
+153 --> 154 
+154 --> 155 
+155 --> 156 
+156 --> 157 
+157 --> 158 
+158 --> 159 
+159 --> 161 160 
+160 --> 156 
+161 --> 152 
+162 --> 163 
+163 --> 166 164 
+164 --> 165 
+165 --> 163 
+166 --> 167 
+167 --> 168 
+168 --> 169 
+169 --> 170 
+170 --> 171 
+171 --> 172 
+172 --> 173 
+173 --> 174 
+174 --> 175 
+175 --> 176 
+176 --> 177 
+177 --> 178 
+178 --> 179 
+179 --> 180 
+180 --> 181 
+181 --> 182 
+182 --> 183 
+183 --> 184 
+184 --> 185 
+185 --> 186 
+186 --> 187 
+187 --> 188 
+188 --> 189 
+189 --> 190 
+190 --> 191 
+191 --> 192 
+192 --> 193 
+193 --> 194 
+194 --> 195 
+195 --> 196 
+196 --> 197 
+197 --> 198 
+198 --> 199 
+199 --> 200 
+200 --> 201 
+201 --> 202 
+202 --> 203 
+203 --> 204 
+204 --> 205 
+205 --> 206 
+206 --> 207 
+207 --> 208 
+208 --> 209 
+209 --> 210 
+210 --> 211 
+211 --> 212 
+212 --> 213 
+213 --> 214 
+214 --> 215 
+215 --> 216 
+216 --> 217 
+217 --> 218 
+218 --> 219 
+219 --> 220 
+220 --> 221 
+221 --> 222 
+222 --> 223 
+223 --> 224 
+224 --> 225 
+225 --> 226 
+226 --> 227 
+227 --> 228 
+228 --> 229 
+229 --> 230 
+230 --> 231 
+231 --> 232 
+232 --> 233 
+233 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.00>
+ST_1 : Operation 234 [1/1] (1.00ns)   --->   "%dim_read = read i32 @_ssdm_op_Read.ap_none.i32, i32 %dim" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:26]   --->   Operation 234 'read' 'dim_read' <Predicate = true> <Delay = 1.00> <CoreInst = "s_axilite">   --->   Core 56 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+
+State 2 <SV = 1> <Delay = 2.29>
+ST_2 : Operation 235 [2/2] (2.29ns)   --->   "%mul = mul i32 %dim_read, i32 %dim_read" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:26]   --->   Operation 235 'mul' 'mul' <Predicate = true> <Delay = 2.29> <CoreInst = "Multiplier">   --->   Core 4 'Multiplier' <Latency = 1> <II = 1> <Delay = 2.29> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+
+State 3 <SV = 2> <Delay = 2.29>
+ST_3 : Operation 236 [1/2] (2.29ns)   --->   "%mul = mul i32 %dim_read, i32 %dim_read" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:26]   --->   Operation 236 'mul' 'mul' <Predicate = true> <Delay = 2.29> <CoreInst = "Multiplier">   --->   Core 4 'Multiplier' <Latency = 1> <II = 1> <Delay = 2.29> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+
+State 4 <SV = 3> <Delay = 1.00>
+ST_4 : Operation 237 [1/1] (1.00ns)   --->   "%in1_read = read i64 @_ssdm_op_Read.ap_none.i64, i64 %in1" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:26]   --->   Operation 237 'read' 'in1_read' <Predicate = true> <Delay = 1.00> <CoreInst = "s_axilite">   --->   Core 56 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_4 : Operation 238 [1/1] (0.85ns)   --->   "%icmp_ln39 = icmp_sgt  i32 %mul, i32" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:39]   --->   Operation 238 'icmp' 'icmp_ln39' <Predicate = true> <Delay = 0.85> <CoreInst = "Cmp">   --->   Core 10 'Cmp' <Latency = 0> <II = 1> <Delay = 0.59> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+
+State 5 <SV = 4> <Delay = 2.92>
+ST_5 : Operation 239 [1/1] (0.00ns)   --->   "%spectopmodule_ln0 = spectopmodule void @_ssdm_op_SpecTopModule, void @matmul_naive_str"   --->   Operation 239 'spectopmodule' 'spectopmodule_ln0' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 240 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32, void @empty_8, i32, i32, void @empty_2, i32, i32, void @empty_2, void @empty_2, void @empty_2, i32, i32, i32, i32, void @empty_2, void @empty_2"   --->   Operation 240 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 241 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %gmem, void @empty_12, i32, i32, void @empty_2, i32, i32, void @empty_2, void @empty_2, void @empty_2, i32, i32, i32, i32, void @empty_2, void @empty_2"   --->   Operation 241 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 242 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %gmem"   --->   Operation 242 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 243 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %in1, void @empty_5, i32, i32, void @empty_2, i32, i32, void @empty_3, void @empty_9, void @empty_2, i32, i32, i32, i32, void @empty_2, void @empty_0"   --->   Operation 243 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 244 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %in1, void @empty_14, i32, i32, void @empty_2, i32, i32, void @empty_2, void @empty_2, void @empty_2, i32, i32, i32, i32, void @empty_2, void @empty_0"   --->   Operation 244 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 245 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %in2, void @empty_5, i32, i32, void @empty_2, i32, i32, void @empty_3, void @empty_4, void @empty_2, i32, i32, i32, i32, void @empty_2, void @empty_0"   --->   Operation 245 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 246 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %in2, void @empty_14, i32, i32, void @empty_2, i32, i32, void @empty_2, void @empty_2, void @empty_2, i32, i32, i32, i32, void @empty_2, void @empty_0"   --->   Operation 246 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 247 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %out_r, void @empty_5, i32, i32, void @empty_2, i32, i32, void @empty_3, void @empty_6, void @empty_2, i32, i32, i32, i32, void @empty_2, void @empty_0"   --->   Operation 247 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 248 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %out_r, void @empty_14, i32, i32, void @empty_2, i32, i32, void @empty_2, void @empty_2, void @empty_2, i32, i32, i32, i32, void @empty_2, void @empty_0"   --->   Operation 248 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 249 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %dim"   --->   Operation 249 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 250 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %dim, void @empty_5, i32, i32, void @empty_2, i32, i32, void @empty_3, void @empty_7, void @empty_2, i32, i32, i32, i32, void @empty_2, void @empty_2"   --->   Operation 250 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 251 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %dim, void @empty_14, i32, i32, void @empty_2, i32, i32, void @empty_2, void @empty_2, void @empty_2, i32, i32, i32, i32, void @empty_2, void @empty_2"   --->   Operation 251 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 252 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32, void @empty_5, i32, i32, void @empty_2, i32, i32, void @empty_3, void @empty_2, void @empty_2, i32, i32, i32, i32, void @empty_2, void @empty_2"   --->   Operation 252 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 253 [1/1] (1.00ns)   --->   "%out_r_read = read i64 @_ssdm_op_Read.ap_none.i64, i64 %out_r" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:26]   --->   Operation 253 'read' 'out_r_read' <Predicate = true> <Delay = 1.00> <CoreInst = "s_axilite">   --->   Core 56 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_5 : Operation 254 [1/1] (1.00ns)   --->   "%in2_read = read i64 @_ssdm_op_Read.ap_none.i64, i64 %in2" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:26]   --->   Operation 254 'read' 'in2_read' <Predicate = true> <Delay = 1.00> <CoreInst = "s_axilite">   --->   Core 56 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_5 : Operation 255 [1/1] (0.00ns)   --->   "%br_ln39 = br i1 %icmp_ln39, void %._crit_edge19, void %.lr.ph23" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:39]   --->   Operation 255 'br' 'br_ln39' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 256 [1/1] (0.00ns)   --->   "%trunc_ln = partselect i62 @_ssdm_op_PartSelect.i62.i64.i32.i32, i64 %in1_read, i32, i32" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:39]   --->   Operation 256 'partselect' 'trunc_ln' <Predicate = (icmp_ln39)> <Delay = 0.00>
+ST_5 : Operation 257 [1/1] (0.00ns)   --->   "%sext_ln39 = sext i62 %trunc_ln" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:39]   --->   Operation 257 'sext' 'sext_ln39' <Predicate = (icmp_ln39)> <Delay = 0.00>
+ST_5 : Operation 258 [1/1] (0.00ns)   --->   "%gmem_addr = getelementptr i32 %gmem, i64 %sext_ln39" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:39]   --->   Operation 258 'getelementptr' 'gmem_addr' <Predicate = (icmp_ln39)> <Delay = 0.00>
+ST_5 : Operation 259 [70/70] (2.92ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr, i32 %mul" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:39]   --->   Operation 259 'readreq' 'empty' <Predicate = (icmp_ln39)> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 6 <SV = 5> <Delay = 2.92>
+ST_6 : Operation 260 [69/70] (2.92ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr, i32 %mul" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:39]   --->   Operation 260 'readreq' 'empty' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 7 <SV = 6> <Delay = 2.92>
+ST_7 : Operation 261 [68/70] (2.92ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr, i32 %mul" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:39]   --->   Operation 261 'readreq' 'empty' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 8 <SV = 7> <Delay = 2.92>
+ST_8 : Operation 262 [67/70] (2.92ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr, i32 %mul" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:39]   --->   Operation 262 'readreq' 'empty' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 9 <SV = 8> <Delay = 2.92>
+ST_9 : Operation 263 [66/70] (2.92ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr, i32 %mul" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:39]   --->   Operation 263 'readreq' 'empty' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 10 <SV = 9> <Delay = 2.92>
+ST_10 : Operation 264 [65/70] (2.92ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr, i32 %mul" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:39]   --->   Operation 264 'readreq' 'empty' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 11 <SV = 10> <Delay = 2.92>
+ST_11 : Operation 265 [64/70] (2.92ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr, i32 %mul" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:39]   --->   Operation 265 'readreq' 'empty' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 12 <SV = 11> <Delay = 2.92>
+ST_12 : Operation 266 [63/70] (2.92ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr, i32 %mul" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:39]   --->   Operation 266 'readreq' 'empty' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 13 <SV = 12> <Delay = 2.92>
+ST_13 : Operation 267 [62/70] (2.92ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr, i32 %mul" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:39]   --->   Operation 267 'readreq' 'empty' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 14 <SV = 13> <Delay = 2.92>
+ST_14 : Operation 268 [61/70] (2.92ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr, i32 %mul" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:39]   --->   Operation 268 'readreq' 'empty' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 15 <SV = 14> <Delay = 2.92>
+ST_15 : Operation 269 [60/70] (2.92ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr, i32 %mul" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:39]   --->   Operation 269 'readreq' 'empty' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 16 <SV = 15> <Delay = 2.92>
+ST_16 : Operation 270 [59/70] (2.92ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr, i32 %mul" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:39]   --->   Operation 270 'readreq' 'empty' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 17 <SV = 16> <Delay = 2.92>
+ST_17 : Operation 271 [58/70] (2.92ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr, i32 %mul" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:39]   --->   Operation 271 'readreq' 'empty' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 18 <SV = 17> <Delay = 2.92>
+ST_18 : Operation 272 [57/70] (2.92ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr, i32 %mul" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:39]   --->   Operation 272 'readreq' 'empty' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 19 <SV = 18> <Delay = 2.92>
+ST_19 : Operation 273 [56/70] (2.92ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr, i32 %mul" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:39]   --->   Operation 273 'readreq' 'empty' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 20 <SV = 19> <Delay = 2.92>
+ST_20 : Operation 274 [55/70] (2.92ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr, i32 %mul" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:39]   --->   Operation 274 'readreq' 'empty' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 21 <SV = 20> <Delay = 2.92>
+ST_21 : Operation 275 [54/70] (2.92ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr, i32 %mul" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:39]   --->   Operation 275 'readreq' 'empty' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 22 <SV = 21> <Delay = 2.92>
+ST_22 : Operation 276 [53/70] (2.92ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr, i32 %mul" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:39]   --->   Operation 276 'readreq' 'empty' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 23 <SV = 22> <Delay = 2.92>
+ST_23 : Operation 277 [52/70] (2.92ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr, i32 %mul" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:39]   --->   Operation 277 'readreq' 'empty' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 24 <SV = 23> <Delay = 2.92>
+ST_24 : Operation 278 [51/70] (2.92ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr, i32 %mul" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:39]   --->   Operation 278 'readreq' 'empty' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 25 <SV = 24> <Delay = 2.92>
+ST_25 : Operation 279 [50/70] (2.92ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr, i32 %mul" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:39]   --->   Operation 279 'readreq' 'empty' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 26 <SV = 25> <Delay = 2.92>
+ST_26 : Operation 280 [49/70] (2.92ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr, i32 %mul" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:39]   --->   Operation 280 'readreq' 'empty' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 27 <SV = 26> <Delay = 2.92>
+ST_27 : Operation 281 [48/70] (2.92ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr, i32 %mul" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:39]   --->   Operation 281 'readreq' 'empty' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 28 <SV = 27> <Delay = 2.92>
+ST_28 : Operation 282 [47/70] (2.92ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr, i32 %mul" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:39]   --->   Operation 282 'readreq' 'empty' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 29 <SV = 28> <Delay = 2.92>
+ST_29 : Operation 283 [46/70] (2.92ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr, i32 %mul" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:39]   --->   Operation 283 'readreq' 'empty' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 30 <SV = 29> <Delay = 2.92>
+ST_30 : Operation 284 [45/70] (2.92ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr, i32 %mul" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:39]   --->   Operation 284 'readreq' 'empty' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 31 <SV = 30> <Delay = 2.92>
+ST_31 : Operation 285 [44/70] (2.92ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr, i32 %mul" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:39]   --->   Operation 285 'readreq' 'empty' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 32 <SV = 31> <Delay = 2.92>
+ST_32 : Operation 286 [43/70] (2.92ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr, i32 %mul" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:39]   --->   Operation 286 'readreq' 'empty' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 33 <SV = 32> <Delay = 2.92>
+ST_33 : Operation 287 [42/70] (2.92ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr, i32 %mul" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:39]   --->   Operation 287 'readreq' 'empty' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 34 <SV = 33> <Delay = 2.92>
+ST_34 : Operation 288 [41/70] (2.92ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr, i32 %mul" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:39]   --->   Operation 288 'readreq' 'empty' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 35 <SV = 34> <Delay = 2.92>
+ST_35 : Operation 289 [40/70] (2.92ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr, i32 %mul" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:39]   --->   Operation 289 'readreq' 'empty' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 36 <SV = 35> <Delay = 2.92>
+ST_36 : Operation 290 [39/70] (2.92ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr, i32 %mul" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:39]   --->   Operation 290 'readreq' 'empty' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 37 <SV = 36> <Delay = 2.92>
+ST_37 : Operation 291 [38/70] (2.92ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr, i32 %mul" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:39]   --->   Operation 291 'readreq' 'empty' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 38 <SV = 37> <Delay = 2.92>
+ST_38 : Operation 292 [37/70] (2.92ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr, i32 %mul" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:39]   --->   Operation 292 'readreq' 'empty' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 39 <SV = 38> <Delay = 2.92>
+ST_39 : Operation 293 [36/70] (2.92ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr, i32 %mul" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:39]   --->   Operation 293 'readreq' 'empty' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 40 <SV = 39> <Delay = 2.92>
+ST_40 : Operation 294 [35/70] (2.92ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr, i32 %mul" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:39]   --->   Operation 294 'readreq' 'empty' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 41 <SV = 40> <Delay = 2.92>
+ST_41 : Operation 295 [34/70] (2.92ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr, i32 %mul" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:39]   --->   Operation 295 'readreq' 'empty' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 42 <SV = 41> <Delay = 2.92>
+ST_42 : Operation 296 [33/70] (2.92ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr, i32 %mul" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:39]   --->   Operation 296 'readreq' 'empty' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 43 <SV = 42> <Delay = 2.92>
+ST_43 : Operation 297 [32/70] (2.92ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr, i32 %mul" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:39]   --->   Operation 297 'readreq' 'empty' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 44 <SV = 43> <Delay = 2.92>
+ST_44 : Operation 298 [31/70] (2.92ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr, i32 %mul" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:39]   --->   Operation 298 'readreq' 'empty' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 45 <SV = 44> <Delay = 2.92>
+ST_45 : Operation 299 [30/70] (2.92ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr, i32 %mul" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:39]   --->   Operation 299 'readreq' 'empty' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 46 <SV = 45> <Delay = 2.92>
+ST_46 : Operation 300 [29/70] (2.92ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr, i32 %mul" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:39]   --->   Operation 300 'readreq' 'empty' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 47 <SV = 46> <Delay = 2.92>
+ST_47 : Operation 301 [28/70] (2.92ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr, i32 %mul" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:39]   --->   Operation 301 'readreq' 'empty' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 48 <SV = 47> <Delay = 2.92>
+ST_48 : Operation 302 [27/70] (2.92ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr, i32 %mul" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:39]   --->   Operation 302 'readreq' 'empty' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 49 <SV = 48> <Delay = 2.92>
+ST_49 : Operation 303 [26/70] (2.92ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr, i32 %mul" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:39]   --->   Operation 303 'readreq' 'empty' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 50 <SV = 49> <Delay = 2.92>
+ST_50 : Operation 304 [25/70] (2.92ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr, i32 %mul" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:39]   --->   Operation 304 'readreq' 'empty' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 51 <SV = 50> <Delay = 2.92>
+ST_51 : Operation 305 [24/70] (2.92ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr, i32 %mul" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:39]   --->   Operation 305 'readreq' 'empty' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 52 <SV = 51> <Delay = 2.92>
+ST_52 : Operation 306 [23/70] (2.92ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr, i32 %mul" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:39]   --->   Operation 306 'readreq' 'empty' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 53 <SV = 52> <Delay = 2.92>
+ST_53 : Operation 307 [22/70] (2.92ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr, i32 %mul" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:39]   --->   Operation 307 'readreq' 'empty' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 54 <SV = 53> <Delay = 2.92>
+ST_54 : Operation 308 [21/70] (2.92ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr, i32 %mul" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:39]   --->   Operation 308 'readreq' 'empty' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 55 <SV = 54> <Delay = 2.92>
+ST_55 : Operation 309 [20/70] (2.92ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr, i32 %mul" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:39]   --->   Operation 309 'readreq' 'empty' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 56 <SV = 55> <Delay = 2.92>
+ST_56 : Operation 310 [19/70] (2.92ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr, i32 %mul" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:39]   --->   Operation 310 'readreq' 'empty' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 57 <SV = 56> <Delay = 2.92>
+ST_57 : Operation 311 [18/70] (2.92ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr, i32 %mul" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:39]   --->   Operation 311 'readreq' 'empty' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 58 <SV = 57> <Delay = 2.92>
+ST_58 : Operation 312 [17/70] (2.92ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr, i32 %mul" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:39]   --->   Operation 312 'readreq' 'empty' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 59 <SV = 58> <Delay = 2.92>
+ST_59 : Operation 313 [16/70] (2.92ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr, i32 %mul" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:39]   --->   Operation 313 'readreq' 'empty' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 60 <SV = 59> <Delay = 2.92>
+ST_60 : Operation 314 [15/70] (2.92ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr, i32 %mul" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:39]   --->   Operation 314 'readreq' 'empty' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 61 <SV = 60> <Delay = 2.92>
+ST_61 : Operation 315 [14/70] (2.92ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr, i32 %mul" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:39]   --->   Operation 315 'readreq' 'empty' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 62 <SV = 61> <Delay = 2.92>
+ST_62 : Operation 316 [13/70] (2.92ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr, i32 %mul" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:39]   --->   Operation 316 'readreq' 'empty' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 63 <SV = 62> <Delay = 2.92>
+ST_63 : Operation 317 [12/70] (2.92ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr, i32 %mul" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:39]   --->   Operation 317 'readreq' 'empty' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 64 <SV = 63> <Delay = 2.92>
+ST_64 : Operation 318 [11/70] (2.92ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr, i32 %mul" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:39]   --->   Operation 318 'readreq' 'empty' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 65 <SV = 64> <Delay = 2.92>
+ST_65 : Operation 319 [10/70] (2.92ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr, i32 %mul" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:39]   --->   Operation 319 'readreq' 'empty' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 66 <SV = 65> <Delay = 2.92>
+ST_66 : Operation 320 [9/70] (2.92ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr, i32 %mul" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:39]   --->   Operation 320 'readreq' 'empty' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 67 <SV = 66> <Delay = 2.92>
+ST_67 : Operation 321 [8/70] (2.92ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr, i32 %mul" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:39]   --->   Operation 321 'readreq' 'empty' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 68 <SV = 67> <Delay = 2.92>
+ST_68 : Operation 322 [7/70] (2.92ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr, i32 %mul" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:39]   --->   Operation 322 'readreq' 'empty' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 69 <SV = 68> <Delay = 2.92>
+ST_69 : Operation 323 [6/70] (2.92ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr, i32 %mul" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:39]   --->   Operation 323 'readreq' 'empty' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 70 <SV = 69> <Delay = 2.92>
+ST_70 : Operation 324 [5/70] (2.92ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr, i32 %mul" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:39]   --->   Operation 324 'readreq' 'empty' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 71 <SV = 70> <Delay = 2.92>
+ST_71 : Operation 325 [4/70] (2.92ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr, i32 %mul" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:39]   --->   Operation 325 'readreq' 'empty' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 72 <SV = 71> <Delay = 2.92>
+ST_72 : Operation 326 [3/70] (2.92ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr, i32 %mul" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:39]   --->   Operation 326 'readreq' 'empty' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 73 <SV = 72> <Delay = 2.92>
+ST_73 : Operation 327 [2/70] (2.92ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr, i32 %mul" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:39]   --->   Operation 327 'readreq' 'empty' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 74 <SV = 73> <Delay = 2.92>
+ST_74 : Operation 328 [1/1] (0.00ns)   --->   "%trunc_ln39 = trunc i32 %mul" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:39]   --->   Operation 328 'trunc' 'trunc_ln39' <Predicate = true> <Delay = 0.00>
+ST_74 : Operation 329 [1/70] (2.92ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr, i32 %mul" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:39]   --->   Operation 329 'readreq' 'empty' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_74 : Operation 330 [1/1] (0.60ns)   --->   "%br_ln39 = br void %bb53" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:39]   --->   Operation 330 'br' 'br_ln39' <Predicate = true> <Delay = 0.60>
+
+State 75 <SV = 74> <Delay = 0.87>
+ST_75 : Operation 331 [1/1] (0.00ns)   --->   "%i = phi i31 %add_ln39, void %bb53.split, i31, void %.lr.ph23" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:39]   --->   Operation 331 'phi' 'i' <Predicate = true> <Delay = 0.00>
+ST_75 : Operation 332 [1/1] (0.84ns)   --->   "%icmp_ln39_1 = icmp_eq  i31 %i, i31 %trunc_ln39" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:39]   --->   Operation 332 'icmp' 'icmp_ln39_1' <Predicate = true> <Delay = 0.84> <CoreInst = "Cmp">   --->   Core 10 'Cmp' <Latency = 0> <II = 1> <Delay = 0.59> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_75 : Operation 333 [1/1] (0.87ns)   --->   "%add_ln39 = add i31 %i, i31" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:39]   --->   Operation 333 'add' 'add_ln39' <Predicate = true> <Delay = 0.87> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.70> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_75 : Operation 334 [1/1] (0.00ns)   --->   "%br_ln39 = br i1 %icmp_ln39_1, void %bb53.split, void %.lr.ph18" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:39]   --->   Operation 334 'br' 'br_ln39' <Predicate = true> <Delay = 0.00>
+ST_75 : Operation 335 [1/1] (0.00ns)   --->   "%trunc_ln40 = trunc i31 %i" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:40]   --->   Operation 335 'trunc' 'trunc_ln40' <Predicate = (!icmp_ln39_1)> <Delay = 0.00>
+
+State 76 <SV = 75> <Delay = 2.92>
+ST_76 : Operation 336 [1/1] (2.92ns)   --->   "%gmem_addr_read = read i32 @_ssdm_op_Read.m_axi.p1i32, i32 %gmem_addr, i1 %empty" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:40]   --->   Operation 336 'read' 'gmem_addr_read' <Predicate = (!icmp_ln39_1)> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 77 <SV = 76> <Delay = 1.15>
+ST_77 : Operation 337 [1/1] (0.00ns)   --->   "%specpipeline_ln39 = specpipeline void @_ssdm_op_SpecPipeline, i32, i32, i32, i32, void @empty_2" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:39]   --->   Operation 337 'specpipeline' 'specpipeline_ln39' <Predicate = (!icmp_ln39_1)> <Delay = 0.00>
+ST_77 : Operation 338 [1/1] (0.00ns)   --->   "%speclooptripcount_ln39 = speclooptripcount void @_ssdm_op_SpecLoopTripCount, i64, i64, i64" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:39]   --->   Operation 338 'speclooptripcount' 'speclooptripcount_ln39' <Predicate = (!icmp_ln39_1)> <Delay = 0.00>
+ST_77 : Operation 339 [1/1] (0.00ns)   --->   "%specloopname_ln39 = specloopname void @_ssdm_op_SpecLoopName, void @empty_1" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:39]   --->   Operation 339 'specloopname' 'specloopname_ln39' <Predicate = (!icmp_ln39_1)> <Delay = 0.00>
+ST_77 : Operation 340 [1/1] (0.00ns)   --->   "%zext_ln40 = zext i12 %trunc_ln40" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:40]   --->   Operation 340 'zext' 'zext_ln40' <Predicate = (!icmp_ln39_1)> <Delay = 0.00>
+ST_77 : Operation 341 [1/1] (0.00ns)   --->   "%A_addr = getelementptr i32 %A, i64, i64 %zext_ln40" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:40]   --->   Operation 341 'getelementptr' 'A_addr' <Predicate = (!icmp_ln39_1)> <Delay = 0.00>
+ST_77 : Operation 342 [1/1] (1.15ns)   --->   "%store_ln40 = store i32 %gmem_addr_read, i12 %A_addr" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:40]   --->   Operation 342 'store' 'store_ln40' <Predicate = (!icmp_ln39_1)> <Delay = 1.15> <CoreInst = "RAM">   --->   Core 23 'RAM' <Latency = 1> <II = 1> <Delay = 1.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 4096> <RAM>
+ST_77 : Operation 343 [1/1] (0.00ns)   --->   "%br_ln0 = br void %bb53"   --->   Operation 343 'br' 'br_ln0' <Predicate = (!icmp_ln39_1)> <Delay = 0.00>
+
+State 78 <SV = 75> <Delay = 2.92>
+ST_78 : Operation 344 [1/1] (0.00ns)   --->   "%trunc_ln1 = partselect i62 @_ssdm_op_PartSelect.i62.i64.i32.i32, i64 %in2_read, i32, i32" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:46]   --->   Operation 344 'partselect' 'trunc_ln1' <Predicate = true> <Delay = 0.00>
+ST_78 : Operation 345 [1/1] (0.00ns)   --->   "%sext_ln46 = sext i62 %trunc_ln1" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:46]   --->   Operation 345 'sext' 'sext_ln46' <Predicate = true> <Delay = 0.00>
+ST_78 : Operation 346 [1/1] (0.00ns)   --->   "%gmem_addr_1 = getelementptr i32 %gmem, i64 %sext_ln46" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:46]   --->   Operation 346 'getelementptr' 'gmem_addr_1' <Predicate = true> <Delay = 0.00>
+ST_78 : Operation 347 [70/70] (2.92ns)   --->   "%empty_21 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr_1, i32 %mul, i1 %empty" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:46]   --->   Operation 347 'readreq' 'empty_21' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 79 <SV = 76> <Delay = 2.92>
+ST_79 : Operation 348 [69/70] (2.92ns)   --->   "%empty_21 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr_1, i32 %mul, i1 %empty" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:46]   --->   Operation 348 'readreq' 'empty_21' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 80 <SV = 77> <Delay = 2.92>
+ST_80 : Operation 349 [68/70] (2.92ns)   --->   "%empty_21 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr_1, i32 %mul, i1 %empty" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:46]   --->   Operation 349 'readreq' 'empty_21' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 81 <SV = 78> <Delay = 2.92>
+ST_81 : Operation 350 [67/70] (2.92ns)   --->   "%empty_21 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr_1, i32 %mul, i1 %empty" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:46]   --->   Operation 350 'readreq' 'empty_21' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 82 <SV = 79> <Delay = 2.92>
+ST_82 : Operation 351 [66/70] (2.92ns)   --->   "%empty_21 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr_1, i32 %mul, i1 %empty" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:46]   --->   Operation 351 'readreq' 'empty_21' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 83 <SV = 80> <Delay = 2.92>
+ST_83 : Operation 352 [65/70] (2.92ns)   --->   "%empty_21 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr_1, i32 %mul, i1 %empty" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:46]   --->   Operation 352 'readreq' 'empty_21' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 84 <SV = 81> <Delay = 2.92>
+ST_84 : Operation 353 [64/70] (2.92ns)   --->   "%empty_21 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr_1, i32 %mul, i1 %empty" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:46]   --->   Operation 353 'readreq' 'empty_21' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 85 <SV = 82> <Delay = 2.92>
+ST_85 : Operation 354 [63/70] (2.92ns)   --->   "%empty_21 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr_1, i32 %mul, i1 %empty" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:46]   --->   Operation 354 'readreq' 'empty_21' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 86 <SV = 83> <Delay = 2.92>
+ST_86 : Operation 355 [62/70] (2.92ns)   --->   "%empty_21 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr_1, i32 %mul, i1 %empty" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:46]   --->   Operation 355 'readreq' 'empty_21' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 87 <SV = 84> <Delay = 2.92>
+ST_87 : Operation 356 [61/70] (2.92ns)   --->   "%empty_21 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr_1, i32 %mul, i1 %empty" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:46]   --->   Operation 356 'readreq' 'empty_21' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 88 <SV = 85> <Delay = 2.92>
+ST_88 : Operation 357 [60/70] (2.92ns)   --->   "%empty_21 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr_1, i32 %mul, i1 %empty" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:46]   --->   Operation 357 'readreq' 'empty_21' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 89 <SV = 86> <Delay = 2.92>
+ST_89 : Operation 358 [59/70] (2.92ns)   --->   "%empty_21 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr_1, i32 %mul, i1 %empty" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:46]   --->   Operation 358 'readreq' 'empty_21' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 90 <SV = 87> <Delay = 2.92>
+ST_90 : Operation 359 [58/70] (2.92ns)   --->   "%empty_21 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr_1, i32 %mul, i1 %empty" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:46]   --->   Operation 359 'readreq' 'empty_21' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 91 <SV = 88> <Delay = 2.92>
+ST_91 : Operation 360 [57/70] (2.92ns)   --->   "%empty_21 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr_1, i32 %mul, i1 %empty" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:46]   --->   Operation 360 'readreq' 'empty_21' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 92 <SV = 89> <Delay = 2.92>
+ST_92 : Operation 361 [56/70] (2.92ns)   --->   "%empty_21 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr_1, i32 %mul, i1 %empty" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:46]   --->   Operation 361 'readreq' 'empty_21' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 93 <SV = 90> <Delay = 2.92>
+ST_93 : Operation 362 [55/70] (2.92ns)   --->   "%empty_21 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr_1, i32 %mul, i1 %empty" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:46]   --->   Operation 362 'readreq' 'empty_21' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 94 <SV = 91> <Delay = 2.92>
+ST_94 : Operation 363 [54/70] (2.92ns)   --->   "%empty_21 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr_1, i32 %mul, i1 %empty" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:46]   --->   Operation 363 'readreq' 'empty_21' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 95 <SV = 92> <Delay = 2.92>
+ST_95 : Operation 364 [53/70] (2.92ns)   --->   "%empty_21 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr_1, i32 %mul, i1 %empty" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:46]   --->   Operation 364 'readreq' 'empty_21' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 96 <SV = 93> <Delay = 2.92>
+ST_96 : Operation 365 [52/70] (2.92ns)   --->   "%empty_21 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr_1, i32 %mul, i1 %empty" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:46]   --->   Operation 365 'readreq' 'empty_21' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 97 <SV = 94> <Delay = 2.92>
+ST_97 : Operation 366 [51/70] (2.92ns)   --->   "%empty_21 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr_1, i32 %mul, i1 %empty" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:46]   --->   Operation 366 'readreq' 'empty_21' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 98 <SV = 95> <Delay = 2.92>
+ST_98 : Operation 367 [50/70] (2.92ns)   --->   "%empty_21 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr_1, i32 %mul, i1 %empty" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:46]   --->   Operation 367 'readreq' 'empty_21' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 99 <SV = 96> <Delay = 2.92>
+ST_99 : Operation 368 [49/70] (2.92ns)   --->   "%empty_21 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr_1, i32 %mul, i1 %empty" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:46]   --->   Operation 368 'readreq' 'empty_21' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 100 <SV = 97> <Delay = 2.92>
+ST_100 : Operation 369 [48/70] (2.92ns)   --->   "%empty_21 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr_1, i32 %mul, i1 %empty" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:46]   --->   Operation 369 'readreq' 'empty_21' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 101 <SV = 98> <Delay = 2.92>
+ST_101 : Operation 370 [47/70] (2.92ns)   --->   "%empty_21 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr_1, i32 %mul, i1 %empty" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:46]   --->   Operation 370 'readreq' 'empty_21' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 102 <SV = 99> <Delay = 2.92>
+ST_102 : Operation 371 [46/70] (2.92ns)   --->   "%empty_21 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr_1, i32 %mul, i1 %empty" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:46]   --->   Operation 371 'readreq' 'empty_21' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 103 <SV = 100> <Delay = 2.92>
+ST_103 : Operation 372 [45/70] (2.92ns)   --->   "%empty_21 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr_1, i32 %mul, i1 %empty" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:46]   --->   Operation 372 'readreq' 'empty_21' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 104 <SV = 101> <Delay = 2.92>
+ST_104 : Operation 373 [44/70] (2.92ns)   --->   "%empty_21 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr_1, i32 %mul, i1 %empty" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:46]   --->   Operation 373 'readreq' 'empty_21' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 105 <SV = 102> <Delay = 2.92>
+ST_105 : Operation 374 [43/70] (2.92ns)   --->   "%empty_21 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr_1, i32 %mul, i1 %empty" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:46]   --->   Operation 374 'readreq' 'empty_21' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 106 <SV = 103> <Delay = 2.92>
+ST_106 : Operation 375 [42/70] (2.92ns)   --->   "%empty_21 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr_1, i32 %mul, i1 %empty" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:46]   --->   Operation 375 'readreq' 'empty_21' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 107 <SV = 104> <Delay = 2.92>
+ST_107 : Operation 376 [41/70] (2.92ns)   --->   "%empty_21 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr_1, i32 %mul, i1 %empty" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:46]   --->   Operation 376 'readreq' 'empty_21' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 108 <SV = 105> <Delay = 2.92>
+ST_108 : Operation 377 [40/70] (2.92ns)   --->   "%empty_21 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr_1, i32 %mul, i1 %empty" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:46]   --->   Operation 377 'readreq' 'empty_21' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 109 <SV = 106> <Delay = 2.92>
+ST_109 : Operation 378 [39/70] (2.92ns)   --->   "%empty_21 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr_1, i32 %mul, i1 %empty" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:46]   --->   Operation 378 'readreq' 'empty_21' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 110 <SV = 107> <Delay = 2.92>
+ST_110 : Operation 379 [38/70] (2.92ns)   --->   "%empty_21 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr_1, i32 %mul, i1 %empty" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:46]   --->   Operation 379 'readreq' 'empty_21' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 111 <SV = 108> <Delay = 2.92>
+ST_111 : Operation 380 [37/70] (2.92ns)   --->   "%empty_21 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr_1, i32 %mul, i1 %empty" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:46]   --->   Operation 380 'readreq' 'empty_21' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 112 <SV = 109> <Delay = 2.92>
+ST_112 : Operation 381 [36/70] (2.92ns)   --->   "%empty_21 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr_1, i32 %mul, i1 %empty" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:46]   --->   Operation 381 'readreq' 'empty_21' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 113 <SV = 110> <Delay = 2.92>
+ST_113 : Operation 382 [35/70] (2.92ns)   --->   "%empty_21 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr_1, i32 %mul, i1 %empty" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:46]   --->   Operation 382 'readreq' 'empty_21' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 114 <SV = 111> <Delay = 2.92>
+ST_114 : Operation 383 [34/70] (2.92ns)   --->   "%empty_21 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr_1, i32 %mul, i1 %empty" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:46]   --->   Operation 383 'readreq' 'empty_21' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 115 <SV = 112> <Delay = 2.92>
+ST_115 : Operation 384 [33/70] (2.92ns)   --->   "%empty_21 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr_1, i32 %mul, i1 %empty" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:46]   --->   Operation 384 'readreq' 'empty_21' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 116 <SV = 113> <Delay = 2.92>
+ST_116 : Operation 385 [32/70] (2.92ns)   --->   "%empty_21 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr_1, i32 %mul, i1 %empty" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:46]   --->   Operation 385 'readreq' 'empty_21' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 117 <SV = 114> <Delay = 2.92>
+ST_117 : Operation 386 [31/70] (2.92ns)   --->   "%empty_21 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr_1, i32 %mul, i1 %empty" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:46]   --->   Operation 386 'readreq' 'empty_21' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 118 <SV = 115> <Delay = 2.92>
+ST_118 : Operation 387 [30/70] (2.92ns)   --->   "%empty_21 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr_1, i32 %mul, i1 %empty" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:46]   --->   Operation 387 'readreq' 'empty_21' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 119 <SV = 116> <Delay = 2.92>
+ST_119 : Operation 388 [29/70] (2.92ns)   --->   "%empty_21 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr_1, i32 %mul, i1 %empty" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:46]   --->   Operation 388 'readreq' 'empty_21' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 120 <SV = 117> <Delay = 2.92>
+ST_120 : Operation 389 [28/70] (2.92ns)   --->   "%empty_21 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr_1, i32 %mul, i1 %empty" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:46]   --->   Operation 389 'readreq' 'empty_21' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 121 <SV = 118> <Delay = 2.92>
+ST_121 : Operation 390 [27/70] (2.92ns)   --->   "%empty_21 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr_1, i32 %mul, i1 %empty" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:46]   --->   Operation 390 'readreq' 'empty_21' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 122 <SV = 119> <Delay = 2.92>
+ST_122 : Operation 391 [26/70] (2.92ns)   --->   "%empty_21 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr_1, i32 %mul, i1 %empty" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:46]   --->   Operation 391 'readreq' 'empty_21' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 123 <SV = 120> <Delay = 2.92>
+ST_123 : Operation 392 [25/70] (2.92ns)   --->   "%empty_21 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr_1, i32 %mul, i1 %empty" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:46]   --->   Operation 392 'readreq' 'empty_21' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 124 <SV = 121> <Delay = 2.92>
+ST_124 : Operation 393 [24/70] (2.92ns)   --->   "%empty_21 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr_1, i32 %mul, i1 %empty" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:46]   --->   Operation 393 'readreq' 'empty_21' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 125 <SV = 122> <Delay = 2.92>
+ST_125 : Operation 394 [23/70] (2.92ns)   --->   "%empty_21 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr_1, i32 %mul, i1 %empty" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:46]   --->   Operation 394 'readreq' 'empty_21' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 126 <SV = 123> <Delay = 2.92>
+ST_126 : Operation 395 [22/70] (2.92ns)   --->   "%empty_21 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr_1, i32 %mul, i1 %empty" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:46]   --->   Operation 395 'readreq' 'empty_21' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 127 <SV = 124> <Delay = 2.92>
+ST_127 : Operation 396 [21/70] (2.92ns)   --->   "%empty_21 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr_1, i32 %mul, i1 %empty" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:46]   --->   Operation 396 'readreq' 'empty_21' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 128 <SV = 125> <Delay = 2.92>
+ST_128 : Operation 397 [20/70] (2.92ns)   --->   "%empty_21 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr_1, i32 %mul, i1 %empty" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:46]   --->   Operation 397 'readreq' 'empty_21' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 129 <SV = 126> <Delay = 2.92>
+ST_129 : Operation 398 [19/70] (2.92ns)   --->   "%empty_21 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr_1, i32 %mul, i1 %empty" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:46]   --->   Operation 398 'readreq' 'empty_21' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 130 <SV = 127> <Delay = 2.92>
+ST_130 : Operation 399 [18/70] (2.92ns)   --->   "%empty_21 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr_1, i32 %mul, i1 %empty" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:46]   --->   Operation 399 'readreq' 'empty_21' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 131 <SV = 128> <Delay = 2.92>
+ST_131 : Operation 400 [17/70] (2.92ns)   --->   "%empty_21 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr_1, i32 %mul, i1 %empty" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:46]   --->   Operation 400 'readreq' 'empty_21' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 132 <SV = 129> <Delay = 2.92>
+ST_132 : Operation 401 [16/70] (2.92ns)   --->   "%empty_21 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr_1, i32 %mul, i1 %empty" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:46]   --->   Operation 401 'readreq' 'empty_21' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 133 <SV = 130> <Delay = 2.92>
+ST_133 : Operation 402 [15/70] (2.92ns)   --->   "%empty_21 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr_1, i32 %mul, i1 %empty" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:46]   --->   Operation 402 'readreq' 'empty_21' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 134 <SV = 131> <Delay = 2.92>
+ST_134 : Operation 403 [14/70] (2.92ns)   --->   "%empty_21 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr_1, i32 %mul, i1 %empty" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:46]   --->   Operation 403 'readreq' 'empty_21' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 135 <SV = 132> <Delay = 2.92>
+ST_135 : Operation 404 [13/70] (2.92ns)   --->   "%empty_21 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr_1, i32 %mul, i1 %empty" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:46]   --->   Operation 404 'readreq' 'empty_21' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 136 <SV = 133> <Delay = 2.92>
+ST_136 : Operation 405 [12/70] (2.92ns)   --->   "%empty_21 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr_1, i32 %mul, i1 %empty" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:46]   --->   Operation 405 'readreq' 'empty_21' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 137 <SV = 134> <Delay = 2.92>
+ST_137 : Operation 406 [11/70] (2.92ns)   --->   "%empty_21 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr_1, i32 %mul, i1 %empty" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:46]   --->   Operation 406 'readreq' 'empty_21' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 138 <SV = 135> <Delay = 2.92>
+ST_138 : Operation 407 [10/70] (2.92ns)   --->   "%empty_21 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr_1, i32 %mul, i1 %empty" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:46]   --->   Operation 407 'readreq' 'empty_21' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 139 <SV = 136> <Delay = 2.92>
+ST_139 : Operation 408 [9/70] (2.92ns)   --->   "%empty_21 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr_1, i32 %mul, i1 %empty" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:46]   --->   Operation 408 'readreq' 'empty_21' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 140 <SV = 137> <Delay = 2.92>
+ST_140 : Operation 409 [8/70] (2.92ns)   --->   "%empty_21 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr_1, i32 %mul, i1 %empty" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:46]   --->   Operation 409 'readreq' 'empty_21' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 141 <SV = 138> <Delay = 2.92>
+ST_141 : Operation 410 [7/70] (2.92ns)   --->   "%empty_21 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr_1, i32 %mul, i1 %empty" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:46]   --->   Operation 410 'readreq' 'empty_21' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 142 <SV = 139> <Delay = 2.92>
+ST_142 : Operation 411 [6/70] (2.92ns)   --->   "%empty_21 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr_1, i32 %mul, i1 %empty" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:46]   --->   Operation 411 'readreq' 'empty_21' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 143 <SV = 140> <Delay = 2.92>
+ST_143 : Operation 412 [5/70] (2.92ns)   --->   "%empty_21 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr_1, i32 %mul, i1 %empty" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:46]   --->   Operation 412 'readreq' 'empty_21' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 144 <SV = 141> <Delay = 2.92>
+ST_144 : Operation 413 [4/70] (2.92ns)   --->   "%empty_21 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr_1, i32 %mul, i1 %empty" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:46]   --->   Operation 413 'readreq' 'empty_21' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 145 <SV = 142> <Delay = 2.92>
+ST_145 : Operation 414 [3/70] (2.92ns)   --->   "%empty_21 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr_1, i32 %mul, i1 %empty" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:46]   --->   Operation 414 'readreq' 'empty_21' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 146 <SV = 143> <Delay = 2.92>
+ST_146 : Operation 415 [2/70] (2.92ns)   --->   "%empty_21 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr_1, i32 %mul, i1 %empty" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:46]   --->   Operation 415 'readreq' 'empty_21' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 147 <SV = 144> <Delay = 2.92>
+ST_147 : Operation 416 [1/70] (2.92ns)   --->   "%empty_21 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr_1, i32 %mul, i1 %empty" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:46]   --->   Operation 416 'readreq' 'empty_21' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_147 : Operation 417 [1/1] (0.60ns)   --->   "%br_ln46 = br void %bb51" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:46]   --->   Operation 417 'br' 'br_ln46' <Predicate = true> <Delay = 0.60>
+
+State 148 <SV = 145> <Delay = 0.87>
+ST_148 : Operation 418 [1/1] (0.00ns)   --->   "%i_1 = phi i31 %add_ln46, void %bb51.split, i31, void %.lr.ph18" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:46]   --->   Operation 418 'phi' 'i_1' <Predicate = true> <Delay = 0.00>
+ST_148 : Operation 419 [1/1] (0.84ns)   --->   "%icmp_ln46 = icmp_eq  i31 %i_1, i31 %trunc_ln39" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:46]   --->   Operation 419 'icmp' 'icmp_ln46' <Predicate = true> <Delay = 0.84> <CoreInst = "Cmp">   --->   Core 10 'Cmp' <Latency = 0> <II = 1> <Delay = 0.59> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_148 : Operation 420 [1/1] (0.87ns)   --->   "%add_ln46 = add i31 %i_1, i31" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:46]   --->   Operation 420 'add' 'add_ln46' <Predicate = true> <Delay = 0.87> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.70> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_148 : Operation 421 [1/1] (0.00ns)   --->   "%br_ln46 = br i1 %icmp_ln46, void %bb51.split, void %._crit_edge19.loopexit" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:46]   --->   Operation 421 'br' 'br_ln46' <Predicate = true> <Delay = 0.00>
+ST_148 : Operation 422 [1/1] (0.00ns)   --->   "%trunc_ln47 = trunc i31 %i_1" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:47]   --->   Operation 422 'trunc' 'trunc_ln47' <Predicate = (!icmp_ln46)> <Delay = 0.00>
+
+State 149 <SV = 146> <Delay = 2.92>
+ST_149 : Operation 423 [1/1] (2.92ns)   --->   "%gmem_addr_1_read = read i32 @_ssdm_op_Read.m_axi.p1i32, i32 %gmem_addr_1, i1 %empty, i1 %empty_21" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:47]   --->   Operation 423 'read' 'gmem_addr_1_read' <Predicate = (!icmp_ln46)> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 150 <SV = 147> <Delay = 1.15>
+ST_150 : Operation 424 [1/1] (0.00ns)   --->   "%specpipeline_ln46 = specpipeline void @_ssdm_op_SpecPipeline, i32, i32, i32, i32, void @empty_2" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:46]   --->   Operation 424 'specpipeline' 'specpipeline_ln46' <Predicate = (!icmp_ln46)> <Delay = 0.00>
+ST_150 : Operation 425 [1/1] (0.00ns)   --->   "%speclooptripcount_ln46 = speclooptripcount void @_ssdm_op_SpecLoopTripCount, i64, i64, i64" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:46]   --->   Operation 425 'speclooptripcount' 'speclooptripcount_ln46' <Predicate = (!icmp_ln46)> <Delay = 0.00>
+ST_150 : Operation 426 [1/1] (0.00ns)   --->   "%specloopname_ln46 = specloopname void @_ssdm_op_SpecLoopName, void @empty_13" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:46]   --->   Operation 426 'specloopname' 'specloopname_ln46' <Predicate = (!icmp_ln46)> <Delay = 0.00>
+ST_150 : Operation 427 [1/1] (0.00ns)   --->   "%zext_ln47 = zext i12 %trunc_ln47" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:47]   --->   Operation 427 'zext' 'zext_ln47' <Predicate = (!icmp_ln46)> <Delay = 0.00>
+ST_150 : Operation 428 [1/1] (0.00ns)   --->   "%B_addr = getelementptr i32 %B, i64, i64 %zext_ln47" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:47]   --->   Operation 428 'getelementptr' 'B_addr' <Predicate = (!icmp_ln46)> <Delay = 0.00>
+ST_150 : Operation 429 [1/1] (1.15ns)   --->   "%store_ln47 = store i32 %gmem_addr_1_read, i12 %B_addr" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:47]   --->   Operation 429 'store' 'store_ln47' <Predicate = (!icmp_ln46)> <Delay = 1.15> <CoreInst = "RAM">   --->   Core 23 'RAM' <Latency = 1> <II = 1> <Delay = 1.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 4096> <RAM>
+ST_150 : Operation 430 [1/1] (0.00ns)   --->   "%br_ln0 = br void %bb51"   --->   Operation 430 'br' 'br_ln0' <Predicate = (!icmp_ln46)> <Delay = 0.00>
+
+State 151 <SV = 146> <Delay = 0.60>
+ST_151 : Operation 431 [1/1] (0.00ns)   --->   "%br_ln0 = br void %._crit_edge19"   --->   Operation 431 'br' 'br_ln0' <Predicate = (icmp_ln39)> <Delay = 0.00>
+ST_151 : Operation 432 [1/1] (0.00ns)   --->   "%trunc_ln51 = trunc i32 %dim_read" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:51]   --->   Operation 432 'trunc' 'trunc_ln51' <Predicate = true> <Delay = 0.00>
+ST_151 : Operation 433 [1/1] (0.00ns)   --->   "%tmp = bitconcatenate i38 @_ssdm_op_BitConcatenate.i38.i32.i6, i32 %dim_read, i6" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:51]   --->   Operation 433 'bitconcatenate' 'tmp' <Predicate = true> <Delay = 0.00>
+ST_151 : Operation 434 [1/1] (0.60ns)   --->   "%br_ln51 = br void %.lr.ph7" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:51]   --->   Operation 434 'br' 'br_ln51' <Predicate = true> <Delay = 0.60>
+
+State 152 <SV = 147> <Delay = 1.64>
+ST_152 : Operation 435 [1/1] (0.00ns)   --->   "%indvar_flatten = phi i38, void %._crit_edge19, i38 %add_ln51, void %._crit_edge8" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:51]   --->   Operation 435 'phi' 'indvar_flatten' <Predicate = true> <Delay = 0.00>
+ST_152 : Operation 436 [1/1] (0.00ns)   --->   "%i_2 = phi i32, void %._crit_edge19, i32 %select_ln51_1, void %._crit_edge8" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:51]   --->   Operation 436 'phi' 'i_2' <Predicate = true> <Delay = 0.00>
+ST_152 : Operation 437 [1/1] (0.00ns)   --->   "%j = phi i7, void %._crit_edge19, i7 %add_ln53, void %._crit_edge8" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:53]   --->   Operation 437 'phi' 'j' <Predicate = true> <Delay = 0.00>
+ST_152 : Operation 438 [1/1] (1.00ns)   --->   "%icmp_ln51 = icmp_eq  i38 %indvar_flatten, i38 %tmp" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:51]   --->   Operation 438 'icmp' 'icmp_ln51' <Predicate = true> <Delay = 1.00> <CoreInst = "Cmp">   --->   Core 10 'Cmp' <Latency = 0> <II = 1> <Delay = 0.59> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_152 : Operation 439 [1/1] (0.94ns)   --->   "%add_ln51 = add i38 %indvar_flatten, i38" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:51]   --->   Operation 439 'add' 'add_ln51' <Predicate = true> <Delay = 0.94> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.70> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_152 : Operation 440 [1/1] (0.00ns)   --->   "%br_ln51 = br i1 %icmp_ln51, void %.split, void %._crit_edge14.loopexit" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:51]   --->   Operation 440 'br' 'br_ln51' <Predicate = true> <Delay = 0.00>
+ST_152 : Operation 441 [1/1] (0.59ns)   --->   "%icmp_ln53 = icmp_eq  i7 %j, i7" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:53]   --->   Operation 441 'icmp' 'icmp_ln53' <Predicate = (!icmp_ln51)> <Delay = 0.59> <CoreInst = "Cmp">   --->   Core 10 'Cmp' <Latency = 0> <II = 1> <Delay = 0.59> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_152 : Operation 442 [1/1] (0.30ns)   --->   "%select_ln51 = select i1 %icmp_ln53, i7, i7 %j" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:51]   --->   Operation 442 'select' 'select_ln51' <Predicate = (!icmp_ln51)> <Delay = 0.30> <CoreInst = "Sel">   --->   Core 11 'Sel' <Latency = 0> <II = 1> <Delay = 0.22> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_152 : Operation 443 [1/1] (0.88ns)   --->   "%add_ln51_1 = add i32, i32 %i_2" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:51]   --->   Operation 443 'add' 'add_ln51_1' <Predicate = (!icmp_ln51)> <Delay = 0.88> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.70> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_152 : Operation 444 [1/1] (0.22ns)   --->   "%select_ln51_1 = select i1 %icmp_ln53, i32 %add_ln51_1, i32 %i_2" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:51]   --->   Operation 444 'select' 'select_ln51_1' <Predicate = (!icmp_ln51)> <Delay = 0.22> <CoreInst = "Sel">   --->   Core 11 'Sel' <Latency = 0> <II = 1> <Delay = 0.22> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_152 : Operation 445 [1/1] (0.00ns)   --->   "%trunc_ln51_1 = trunc i32 %select_ln51_1" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:51]   --->   Operation 445 'trunc' 'trunc_ln51_1' <Predicate = (!icmp_ln51)> <Delay = 0.00>
+ST_152 : Operation 446 [4/4] (0.53ns) (root node of the DSP)   --->   "%mul_ln51 = mul i12 %trunc_ln51_1, i12 %trunc_ln51" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:51]   --->   Operation 446 'mul' 'mul_ln51' <Predicate = (!icmp_ln51)> <Delay = 0.53> <CoreInst = "DSP48">   --->   Core 71 'DSP48' <Latency = 3> <II = 1> <Delay = 0.53> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 2> <OutPorts = 1> <Sync> <CReg>
+ST_152 : Operation 447 [1/1] (0.00ns)   --->   "%br_ln67 = br i1 %icmp_ln39, void %._crit_edge, void %.lr.ph" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:67]   --->   Operation 447 'br' 'br_ln67' <Predicate = (icmp_ln51)> <Delay = 0.00>
+ST_152 : Operation 448 [1/1] (0.00ns)   --->   "%trunc_ln5 = partselect i62 @_ssdm_op_PartSelect.i62.i64.i32.i32, i64 %out_r_read, i32, i32" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:67]   --->   Operation 448 'partselect' 'trunc_ln5' <Predicate = (icmp_ln39 & icmp_ln51)> <Delay = 0.00>
+ST_152 : Operation 449 [1/1] (0.00ns)   --->   "%sext_ln67 = sext i62 %trunc_ln5" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:67]   --->   Operation 449 'sext' 'sext_ln67' <Predicate = (icmp_ln39 & icmp_ln51)> <Delay = 0.00>
+ST_152 : Operation 450 [1/1] (0.00ns)   --->   "%gmem_addr_2 = getelementptr i32 %gmem, i64 %sext_ln67" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:67]   --->   Operation 450 'getelementptr' 'gmem_addr_2' <Predicate = (icmp_ln39 & icmp_ln51)> <Delay = 0.00>
+
+State 153 <SV = 148> <Delay = 0.53>
+ST_153 : Operation 451 [3/4] (0.53ns) (root node of the DSP)   --->   "%mul_ln51 = mul i12 %trunc_ln51_1, i12 %trunc_ln51" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:51]   --->   Operation 451 'mul' 'mul_ln51' <Predicate = true> <Delay = 0.53> <CoreInst = "DSP48">   --->   Core 71 'DSP48' <Latency = 3> <II = 1> <Delay = 0.53> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 2> <OutPorts = 1> <Sync> <CReg>
+
+State 154 <SV = 149> <Delay = 0.53>
+ST_154 : Operation 452 [2/4] (0.53ns) (root node of the DSP)   --->   "%mul_ln51 = mul i12 %trunc_ln51_1, i12 %trunc_ln51" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:51]   --->   Operation 452 'mul' 'mul_ln51' <Predicate = true> <Delay = 0.53> <CoreInst = "DSP48">   --->   Core 71 'DSP48' <Latency = 3> <II = 1> <Delay = 0.53> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 2> <OutPorts = 1> <Sync> <CReg>
+
+State 155 <SV = 150> <Delay = 0.60>
+ST_155 : Operation 453 [1/1] (0.00ns)   --->   "%specloopname_ln0 = specloopname void @_ssdm_op_SpecLoopName, void @lreorder1_lreorder2_str"   --->   Operation 453 'specloopname' 'specloopname_ln0' <Predicate = true> <Delay = 0.00>
+ST_155 : Operation 454 [1/1] (0.00ns)   --->   "%speclooptripcount_ln0 = speclooptripcount void @_ssdm_op_SpecLoopTripCount, i64, i64, i64"   --->   Operation 454 'speclooptripcount' 'speclooptripcount_ln0' <Predicate = true> <Delay = 0.00>
+ST_155 : Operation 455 [1/4] (0.00ns) (root node of the DSP)   --->   "%mul_ln51 = mul i12 %trunc_ln51_1, i12 %trunc_ln51" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:51]   --->   Operation 455 'mul' 'mul_ln51' <Predicate = true> <Delay = 0.00> <CoreInst = "DSP48">   --->   Core 71 'DSP48' <Latency = 3> <II = 1> <Delay = 0.53> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 2> <OutPorts = 1> <Sync> <CReg>
+ST_155 : Operation 456 [1/1] (0.00ns)   --->   "%p_mid = bitconcatenate i14 @_ssdm_op_BitConcatenate.i14.i12.i2, i12 %mul_ln51, i2" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:51]   --->   Operation 456 'bitconcatenate' 'p_mid' <Predicate = true> <Delay = 0.00>
+ST_155 : Operation 457 [1/1] (0.00ns)   --->   "%zext_ln53 = zext i7 %select_ln51" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:53]   --->   Operation 457 'zext' 'zext_ln53' <Predicate = true> <Delay = 0.00>
+ST_155 : Operation 458 [1/1] (0.00ns)   --->   "%specloopname_ln54 = specloopname void @_ssdm_op_SpecLoopName, void @empty" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:54]   --->   Operation 458 'specloopname' 'specloopname_ln54' <Predicate = true> <Delay = 0.00>
+ST_155 : Operation 459 [1/1] (0.60ns)   --->   "%br_ln57 = br void %bb49" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:57]   --->   Operation 459 'br' 'br_ln57' <Predicate = true> <Delay = 0.60>
+
+State 156 <SV = 151> <Delay = 1.92>
+ST_156 : Operation 460 [1/1] (0.00ns)   --->   "%k = phi i32 %add_ln57, void %bb49.split, i32, void %.split" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:57]   --->   Operation 460 'phi' 'k' <Predicate = true> <Delay = 0.00>
+ST_156 : Operation 461 [1/1] (0.00ns)   --->   "%phi_mul = phi i12 %add_ln58_2, void %bb49.split, i12, void %.split" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:58]   --->   Operation 461 'phi' 'phi_mul' <Predicate = true> <Delay = 0.00>
+ST_156 : Operation 462 [1/1] (0.85ns)   --->   "%icmp_ln57 = icmp_eq  i32 %k, i32 %dim_read" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:57]   --->   Operation 462 'icmp' 'icmp_ln57' <Predicate = true> <Delay = 0.85> <CoreInst = "Cmp">   --->   Core 10 'Cmp' <Latency = 0> <II = 1> <Delay = 0.59> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_156 : Operation 463 [1/1] (0.88ns)   --->   "%add_ln57 = add i32 %k, i32" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:57]   --->   Operation 463 'add' 'add_ln57' <Predicate = true> <Delay = 0.88> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.70> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_156 : Operation 464 [1/1] (0.00ns)   --->   "%br_ln57 = br i1 %icmp_ln57, void %bb49.split, void %._crit_edge8" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:57]   --->   Operation 464 'br' 'br_ln57' <Predicate = true> <Delay = 0.00>
+ST_156 : Operation 465 [1/1] (0.00ns)   --->   "%trunc_ln57 = trunc i32 %k" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:57]   --->   Operation 465 'trunc' 'trunc_ln57' <Predicate = (!icmp_ln57)> <Delay = 0.00>
+ST_156 : Operation 466 [1/1] (0.00ns)   --->   "%shl_ln1 = bitconcatenate i14 @_ssdm_op_BitConcatenate.i14.i12.i2, i12 %trunc_ln57, i2" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:58]   --->   Operation 466 'bitconcatenate' 'shl_ln1' <Predicate = (!icmp_ln57)> <Delay = 0.00>
+ST_156 : Operation 467 [1/1] (0.76ns)   --->   "%add_ln58 = add i14 %p_mid, i14 %shl_ln1" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:58]   --->   Operation 467 'add' 'add_ln58' <Predicate = (!icmp_ln57)> <Delay = 0.76> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.70> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_156 : Operation 468 [1/1] (0.00ns)   --->   "%lshr_ln1 = partselect i12 @_ssdm_op_PartSelect.i12.i14.i32.i32, i14 %add_ln58, i32, i32" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:58]   --->   Operation 468 'partselect' 'lshr_ln1' <Predicate = (!icmp_ln57)> <Delay = 0.00>
+ST_156 : Operation 469 [1/1] (0.00ns)   --->   "%zext_ln58 = zext i12 %lshr_ln1" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:58]   --->   Operation 469 'zext' 'zext_ln58' <Predicate = (!icmp_ln57)> <Delay = 0.00>
+ST_156 : Operation 470 [1/1] (0.00ns)   --->   "%A_addr_1 = getelementptr i32 %A, i64, i64 %zext_ln58" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:58]   --->   Operation 470 'getelementptr' 'A_addr_1' <Predicate = (!icmp_ln57)> <Delay = 0.00>
+ST_156 : Operation 471 [2/2] (1.15ns)   --->   "%A_load = load i12 %A_addr_1" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:58]   --->   Operation 471 'load' 'A_load' <Predicate = (!icmp_ln57)> <Delay = 1.15> <CoreInst = "RAM">   --->   Core 23 'RAM' <Latency = 1> <II = 1> <Delay = 1.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 4096> <RAM>
+ST_156 : Operation 472 [1/1] (0.74ns)   --->   "%add_ln58_2 = add i12 %trunc_ln51, i12 %phi_mul" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:58]   --->   Operation 472 'add' 'add_ln58_2' <Predicate = (!icmp_ln57)> <Delay = 0.74> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.70> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_156 : Operation 473 [1/1] (0.74ns)   --->   "%add_ln58_1 = add i12 %zext_ln53, i12 %phi_mul" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:58]   --->   Operation 473 'add' 'add_ln58_1' <Predicate = (!icmp_ln57)> <Delay = 0.74> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.70> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_156 : Operation 474 [1/1] (0.00ns)   --->   "%zext_ln58_1 = zext i12 %add_ln58_1" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:58]   --->   Operation 474 'zext' 'zext_ln58_1' <Predicate = (!icmp_ln57)> <Delay = 0.00>
+ST_156 : Operation 475 [1/1] (0.00ns)   --->   "%B_addr_1 = getelementptr i32 %B, i64, i64 %zext_ln58_1" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:58]   --->   Operation 475 'getelementptr' 'B_addr_1' <Predicate = (!icmp_ln57)> <Delay = 0.00>
+ST_156 : Operation 476 [2/2] (1.15ns)   --->   "%B_load = load i12 %B_addr_1" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:58]   --->   Operation 476 'load' 'B_load' <Predicate = (!icmp_ln57)> <Delay = 1.15> <CoreInst = "RAM">   --->   Core 23 'RAM' <Latency = 1> <II = 1> <Delay = 1.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 4096> <RAM>
+
+State 157 <SV = 152> <Delay = 1.15>
+ST_157 : Operation 477 [1/2] (1.15ns)   --->   "%A_load = load i12 %A_addr_1" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:58]   --->   Operation 477 'load' 'A_load' <Predicate = (!icmp_ln57)> <Delay = 1.15> <CoreInst = "RAM">   --->   Core 23 'RAM' <Latency = 1> <II = 1> <Delay = 1.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 4096> <RAM>
+ST_157 : Operation 478 [1/2] (1.15ns)   --->   "%B_load = load i12 %B_addr_1" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:58]   --->   Operation 478 'load' 'B_load' <Predicate = (!icmp_ln57)> <Delay = 1.15> <CoreInst = "RAM">   --->   Core 23 'RAM' <Latency = 1> <II = 1> <Delay = 1.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 4096> <RAM>
+
+State 158 <SV = 153> <Delay = 2.29>
+ST_158 : Operation 479 [2/2] (2.29ns)   --->   "%mul_ln58 = mul i32 %A_load, i32 %B_load" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:58]   --->   Operation 479 'mul' 'mul_ln58' <Predicate = (!icmp_ln57)> <Delay = 2.29> <CoreInst = "Multiplier">   --->   Core 4 'Multiplier' <Latency = 1> <II = 1> <Delay = 2.29> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+
+State 159 <SV = 154> <Delay = 2.29>
+ST_159 : Operation 480 [1/1] (0.00ns)   --->   "%result = phi i32 %result_1, void %bb49.split, i32, void %.split"   --->   Operation 480 'phi' 'result' <Predicate = true> <Delay = 0.00>
+ST_159 : Operation 481 [1/2] (2.29ns)   --->   "%mul_ln58 = mul i32 %A_load, i32 %B_load" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:58]   --->   Operation 481 'mul' 'mul_ln58' <Predicate = (!icmp_ln57)> <Delay = 2.29> <CoreInst = "Multiplier">   --->   Core 4 'Multiplier' <Latency = 1> <II = 1> <Delay = 2.29> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+
+State 160 <SV = 155> <Delay = 0.88>
+ST_160 : Operation 482 [1/1] (0.00ns)   --->   "%specpipeline_ln54 = specpipeline void @_ssdm_op_SpecPipeline, i32, i32, i32, i32, void @empty_2" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:54]   --->   Operation 482 'specpipeline' 'specpipeline_ln54' <Predicate = (!icmp_ln57)> <Delay = 0.00>
+ST_160 : Operation 483 [1/1] (0.00ns)   --->   "%speclooptripcount_ln54 = speclooptripcount void @_ssdm_op_SpecLoopTripCount, i64, i64, i64" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:54]   --->   Operation 483 'speclooptripcount' 'speclooptripcount_ln54' <Predicate = (!icmp_ln57)> <Delay = 0.00>
+ST_160 : Operation 484 [1/1] (0.00ns)   --->   "%specloopname_ln54 = specloopname void @_ssdm_op_SpecLoopName, void @empty_10" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:54]   --->   Operation 484 'specloopname' 'specloopname_ln54' <Predicate = (!icmp_ln57)> <Delay = 0.00>
+ST_160 : Operation 485 [1/1] (0.88ns)   --->   "%result_1 = add i32 %mul_ln58, i32 %result" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:58]   --->   Operation 485 'add' 'result_1' <Predicate = (!icmp_ln57)> <Delay = 0.88> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.70> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_160 : Operation 486 [1/1] (0.00ns)   --->   "%br_ln0 = br void %bb49"   --->   Operation 486 'br' 'br_ln0' <Predicate = (!icmp_ln57)> <Delay = 0.00>
+
+State 161 <SV = 155> <Delay = 1.92>
+ST_161 : Operation 487 [1/1] (0.00ns)   --->   "%trunc_ln60 = trunc i7 %select_ln51" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:60]   --->   Operation 487 'trunc' 'trunc_ln60' <Predicate = true> <Delay = 0.00>
+ST_161 : Operation 488 [1/1] (0.00ns)   --->   "%shl_ln = bitconcatenate i8 @_ssdm_op_BitConcatenate.i8.i6.i2, i6 %trunc_ln60, i2" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:60]   --->   Operation 488 'bitconcatenate' 'shl_ln' <Predicate = true> <Delay = 0.00>
+ST_161 : Operation 489 [1/1] (0.00ns)   --->   "%zext_ln60 = zext i8 %shl_ln" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:60]   --->   Operation 489 'zext' 'zext_ln60' <Predicate = true> <Delay = 0.00>
+ST_161 : Operation 490 [1/1] (0.76ns)   --->   "%add_ln60 = add i14 %p_mid, i14 %zext_ln60" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:60]   --->   Operation 490 'add' 'add_ln60' <Predicate = true> <Delay = 0.76> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.70> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_161 : Operation 491 [1/1] (0.00ns)   --->   "%lshr_ln = partselect i12 @_ssdm_op_PartSelect.i12.i14.i32.i32, i14 %add_ln60, i32, i32" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:60]   --->   Operation 491 'partselect' 'lshr_ln' <Predicate = true> <Delay = 0.00>
+ST_161 : Operation 492 [1/1] (0.00ns)   --->   "%zext_ln60_1 = zext i12 %lshr_ln" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:60]   --->   Operation 492 'zext' 'zext_ln60_1' <Predicate = true> <Delay = 0.00>
+ST_161 : Operation 493 [1/1] (0.00ns)   --->   "%C_addr_1 = getelementptr i32 %C, i64, i64 %zext_ln60_1" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:60]   --->   Operation 493 'getelementptr' 'C_addr_1' <Predicate = true> <Delay = 0.00>
+ST_161 : Operation 494 [1/1] (1.15ns)   --->   "%store_ln60 = store i32 %result, i12 %C_addr_1" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:60]   --->   Operation 494 'store' 'store_ln60' <Predicate = true> <Delay = 1.15> <CoreInst = "RAM">   --->   Core 23 'RAM' <Latency = 1> <II = 1> <Delay = 1.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 4096> <RAM>
+ST_161 : Operation 495 [1/1] (0.70ns)   --->   "%add_ln53 = add i7, i7 %select_ln51" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:53]   --->   Operation 495 'add' 'add_ln53' <Predicate = true> <Delay = 0.70> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.70> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_161 : Operation 496 [1/1] (0.00ns)   --->   "%br_ln0 = br void %.lr.ph7"   --->   Operation 496 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
+
+State 162 <SV = 148> <Delay = 2.92>
+ST_162 : Operation 497 [1/1] (0.00ns)   --->   "%trunc_ln67 = trunc i32 %mul" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:67]   --->   Operation 497 'trunc' 'trunc_ln67' <Predicate = true> <Delay = 0.00>
+ST_162 : Operation 498 [1/1] (2.92ns)   --->   "%empty_22 = writereq i1 @_ssdm_op_WriteReq.m_axi.p1i32, i32 %gmem_addr_2, i32 %mul" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:67]   --->   Operation 498 'writereq' 'empty_22' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_162 : Operation 499 [1/1] (0.60ns)   --->   "%br_ln67 = br void %bb" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:67]   --->   Operation 499 'br' 'br_ln67' <Predicate = true> <Delay = 0.60>
+
+State 163 <SV = 149> <Delay = 1.15>
+ST_163 : Operation 500 [1/1] (0.00ns)   --->   "%i_3 = phi i31 %add_ln67, void %bb.split, i31, void %.lr.ph" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:67]   --->   Operation 500 'phi' 'i_3' <Predicate = true> <Delay = 0.00>
+ST_163 : Operation 501 [1/1] (0.84ns)   --->   "%icmp_ln67 = icmp_eq  i31 %i_3, i31 %trunc_ln67" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:67]   --->   Operation 501 'icmp' 'icmp_ln67' <Predicate = true> <Delay = 0.84> <CoreInst = "Cmp">   --->   Core 10 'Cmp' <Latency = 0> <II = 1> <Delay = 0.59> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_163 : Operation 502 [1/1] (0.87ns)   --->   "%add_ln67 = add i31 %i_3, i31" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:67]   --->   Operation 502 'add' 'add_ln67' <Predicate = true> <Delay = 0.87> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.70> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_163 : Operation 503 [1/1] (0.00ns)   --->   "%br_ln67 = br i1 %icmp_ln67, void %bb.split, void %._crit_edge.loopexit" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:67]   --->   Operation 503 'br' 'br_ln67' <Predicate = true> <Delay = 0.00>
+ST_163 : Operation 504 [1/1] (0.00ns)   --->   "%trunc_ln68 = trunc i31 %i_3" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:68]   --->   Operation 504 'trunc' 'trunc_ln68' <Predicate = (!icmp_ln67)> <Delay = 0.00>
+ST_163 : Operation 505 [1/1] (0.00ns)   --->   "%zext_ln68 = zext i12 %trunc_ln68" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:68]   --->   Operation 505 'zext' 'zext_ln68' <Predicate = (!icmp_ln67)> <Delay = 0.00>
+ST_163 : Operation 506 [1/1] (0.00ns)   --->   "%C_addr = getelementptr i32 %C, i64, i64 %zext_ln68" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:68]   --->   Operation 506 'getelementptr' 'C_addr' <Predicate = (!icmp_ln67)> <Delay = 0.00>
+ST_163 : Operation 507 [2/2] (1.15ns)   --->   "%C_load = load i12 %C_addr" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:68]   --->   Operation 507 'load' 'C_load' <Predicate = (!icmp_ln67)> <Delay = 1.15> <CoreInst = "RAM">   --->   Core 23 'RAM' <Latency = 1> <II = 1> <Delay = 1.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 4096> <RAM>
+
+State 164 <SV = 150> <Delay = 1.15>
+ST_164 : Operation 508 [1/2] (1.15ns)   --->   "%C_load = load i12 %C_addr" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:68]   --->   Operation 508 'load' 'C_load' <Predicate = (!icmp_ln67)> <Delay = 1.15> <CoreInst = "RAM">   --->   Core 23 'RAM' <Latency = 1> <II = 1> <Delay = 1.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 4096> <RAM>
+
+State 165 <SV = 151> <Delay = 2.92>
+ST_165 : Operation 509 [1/1] (0.00ns)   --->   "%specpipeline_ln67 = specpipeline void @_ssdm_op_SpecPipeline, i32, i32, i32, i32, void @empty_2" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:67]   --->   Operation 509 'specpipeline' 'specpipeline_ln67' <Predicate = (!icmp_ln67)> <Delay = 0.00>
+ST_165 : Operation 510 [1/1] (0.00ns)   --->   "%speclooptripcount_ln67 = speclooptripcount void @_ssdm_op_SpecLoopTripCount, i64, i64, i64" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:67]   --->   Operation 510 'speclooptripcount' 'speclooptripcount_ln67' <Predicate = (!icmp_ln67)> <Delay = 0.00>
+ST_165 : Operation 511 [1/1] (0.00ns)   --->   "%specloopname_ln67 = specloopname void @_ssdm_op_SpecLoopName, void @empty_11" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:67]   --->   Operation 511 'specloopname' 'specloopname_ln67' <Predicate = (!icmp_ln67)> <Delay = 0.00>
+ST_165 : Operation 512 [1/1] (2.92ns)   --->   "%write_ln68 = write void @_ssdm_op_Write.m_axi.p1i32, i32 %gmem_addr_2, i32 %C_load, i4, i1 %empty, i1 %empty_21, i1 %empty_22" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:68]   --->   Operation 512 'write' 'write_ln68' <Predicate = (!icmp_ln67)> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_165 : Operation 513 [1/1] (0.00ns)   --->   "%br_ln0 = br void %bb"   --->   Operation 513 'br' 'br_ln0' <Predicate = (!icmp_ln67)> <Delay = 0.00>
+
+State 166 <SV = 150> <Delay = 2.92>
+ST_166 : Operation 514 [68/68] (2.92ns)   --->   "%empty_23 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i32, i32 %gmem_addr_2" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:70]   --->   Operation 514 'writeresp' 'empty_23' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 167 <SV = 151> <Delay = 2.92>
+ST_167 : Operation 515 [67/68] (2.92ns)   --->   "%empty_23 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i32, i32 %gmem_addr_2" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:70]   --->   Operation 515 'writeresp' 'empty_23' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 168 <SV = 152> <Delay = 2.92>
+ST_168 : Operation 516 [66/68] (2.92ns)   --->   "%empty_23 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i32, i32 %gmem_addr_2" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:70]   --->   Operation 516 'writeresp' 'empty_23' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 169 <SV = 153> <Delay = 2.92>
+ST_169 : Operation 517 [65/68] (2.92ns)   --->   "%empty_23 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i32, i32 %gmem_addr_2" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:70]   --->   Operation 517 'writeresp' 'empty_23' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 170 <SV = 154> <Delay = 2.92>
+ST_170 : Operation 518 [64/68] (2.92ns)   --->   "%empty_23 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i32, i32 %gmem_addr_2" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:70]   --->   Operation 518 'writeresp' 'empty_23' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 171 <SV = 155> <Delay = 2.92>
+ST_171 : Operation 519 [63/68] (2.92ns)   --->   "%empty_23 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i32, i32 %gmem_addr_2" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:70]   --->   Operation 519 'writeresp' 'empty_23' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 172 <SV = 156> <Delay = 2.92>
+ST_172 : Operation 520 [62/68] (2.92ns)   --->   "%empty_23 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i32, i32 %gmem_addr_2" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:70]   --->   Operation 520 'writeresp' 'empty_23' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 173 <SV = 157> <Delay = 2.92>
+ST_173 : Operation 521 [61/68] (2.92ns)   --->   "%empty_23 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i32, i32 %gmem_addr_2" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:70]   --->   Operation 521 'writeresp' 'empty_23' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 174 <SV = 158> <Delay = 2.92>
+ST_174 : Operation 522 [60/68] (2.92ns)   --->   "%empty_23 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i32, i32 %gmem_addr_2" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:70]   --->   Operation 522 'writeresp' 'empty_23' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 175 <SV = 159> <Delay = 2.92>
+ST_175 : Operation 523 [59/68] (2.92ns)   --->   "%empty_23 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i32, i32 %gmem_addr_2" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:70]   --->   Operation 523 'writeresp' 'empty_23' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 176 <SV = 160> <Delay = 2.92>
+ST_176 : Operation 524 [58/68] (2.92ns)   --->   "%empty_23 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i32, i32 %gmem_addr_2" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:70]   --->   Operation 524 'writeresp' 'empty_23' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 177 <SV = 161> <Delay = 2.92>
+ST_177 : Operation 525 [57/68] (2.92ns)   --->   "%empty_23 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i32, i32 %gmem_addr_2" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:70]   --->   Operation 525 'writeresp' 'empty_23' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 178 <SV = 162> <Delay = 2.92>
+ST_178 : Operation 526 [56/68] (2.92ns)   --->   "%empty_23 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i32, i32 %gmem_addr_2" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:70]   --->   Operation 526 'writeresp' 'empty_23' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 179 <SV = 163> <Delay = 2.92>
+ST_179 : Operation 527 [55/68] (2.92ns)   --->   "%empty_23 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i32, i32 %gmem_addr_2" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:70]   --->   Operation 527 'writeresp' 'empty_23' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 180 <SV = 164> <Delay = 2.92>
+ST_180 : Operation 528 [54/68] (2.92ns)   --->   "%empty_23 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i32, i32 %gmem_addr_2" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:70]   --->   Operation 528 'writeresp' 'empty_23' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 181 <SV = 165> <Delay = 2.92>
+ST_181 : Operation 529 [53/68] (2.92ns)   --->   "%empty_23 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i32, i32 %gmem_addr_2" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:70]   --->   Operation 529 'writeresp' 'empty_23' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 182 <SV = 166> <Delay = 2.92>
+ST_182 : Operation 530 [52/68] (2.92ns)   --->   "%empty_23 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i32, i32 %gmem_addr_2" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:70]   --->   Operation 530 'writeresp' 'empty_23' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 183 <SV = 167> <Delay = 2.92>
+ST_183 : Operation 531 [51/68] (2.92ns)   --->   "%empty_23 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i32, i32 %gmem_addr_2" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:70]   --->   Operation 531 'writeresp' 'empty_23' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 184 <SV = 168> <Delay = 2.92>
+ST_184 : Operation 532 [50/68] (2.92ns)   --->   "%empty_23 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i32, i32 %gmem_addr_2" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:70]   --->   Operation 532 'writeresp' 'empty_23' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 185 <SV = 169> <Delay = 2.92>
+ST_185 : Operation 533 [49/68] (2.92ns)   --->   "%empty_23 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i32, i32 %gmem_addr_2" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:70]   --->   Operation 533 'writeresp' 'empty_23' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 186 <SV = 170> <Delay = 2.92>
+ST_186 : Operation 534 [48/68] (2.92ns)   --->   "%empty_23 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i32, i32 %gmem_addr_2" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:70]   --->   Operation 534 'writeresp' 'empty_23' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 187 <SV = 171> <Delay = 2.92>
+ST_187 : Operation 535 [47/68] (2.92ns)   --->   "%empty_23 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i32, i32 %gmem_addr_2" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:70]   --->   Operation 535 'writeresp' 'empty_23' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 188 <SV = 172> <Delay = 2.92>
+ST_188 : Operation 536 [46/68] (2.92ns)   --->   "%empty_23 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i32, i32 %gmem_addr_2" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:70]   --->   Operation 536 'writeresp' 'empty_23' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 189 <SV = 173> <Delay = 2.92>
+ST_189 : Operation 537 [45/68] (2.92ns)   --->   "%empty_23 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i32, i32 %gmem_addr_2" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:70]   --->   Operation 537 'writeresp' 'empty_23' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 190 <SV = 174> <Delay = 2.92>
+ST_190 : Operation 538 [44/68] (2.92ns)   --->   "%empty_23 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i32, i32 %gmem_addr_2" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:70]   --->   Operation 538 'writeresp' 'empty_23' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 191 <SV = 175> <Delay = 2.92>
+ST_191 : Operation 539 [43/68] (2.92ns)   --->   "%empty_23 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i32, i32 %gmem_addr_2" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:70]   --->   Operation 539 'writeresp' 'empty_23' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 192 <SV = 176> <Delay = 2.92>
+ST_192 : Operation 540 [42/68] (2.92ns)   --->   "%empty_23 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i32, i32 %gmem_addr_2" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:70]   --->   Operation 540 'writeresp' 'empty_23' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 193 <SV = 177> <Delay = 2.92>
+ST_193 : Operation 541 [41/68] (2.92ns)   --->   "%empty_23 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i32, i32 %gmem_addr_2" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:70]   --->   Operation 541 'writeresp' 'empty_23' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 194 <SV = 178> <Delay = 2.92>
+ST_194 : Operation 542 [40/68] (2.92ns)   --->   "%empty_23 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i32, i32 %gmem_addr_2" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:70]   --->   Operation 542 'writeresp' 'empty_23' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 195 <SV = 179> <Delay = 2.92>
+ST_195 : Operation 543 [39/68] (2.92ns)   --->   "%empty_23 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i32, i32 %gmem_addr_2" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:70]   --->   Operation 543 'writeresp' 'empty_23' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 196 <SV = 180> <Delay = 2.92>
+ST_196 : Operation 544 [38/68] (2.92ns)   --->   "%empty_23 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i32, i32 %gmem_addr_2" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:70]   --->   Operation 544 'writeresp' 'empty_23' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 197 <SV = 181> <Delay = 2.92>
+ST_197 : Operation 545 [37/68] (2.92ns)   --->   "%empty_23 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i32, i32 %gmem_addr_2" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:70]   --->   Operation 545 'writeresp' 'empty_23' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 198 <SV = 182> <Delay = 2.92>
+ST_198 : Operation 546 [36/68] (2.92ns)   --->   "%empty_23 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i32, i32 %gmem_addr_2" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:70]   --->   Operation 546 'writeresp' 'empty_23' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 199 <SV = 183> <Delay = 2.92>
+ST_199 : Operation 547 [35/68] (2.92ns)   --->   "%empty_23 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i32, i32 %gmem_addr_2" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:70]   --->   Operation 547 'writeresp' 'empty_23' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 200 <SV = 184> <Delay = 2.92>
+ST_200 : Operation 548 [34/68] (2.92ns)   --->   "%empty_23 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i32, i32 %gmem_addr_2" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:70]   --->   Operation 548 'writeresp' 'empty_23' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 201 <SV = 185> <Delay = 2.92>
+ST_201 : Operation 549 [33/68] (2.92ns)   --->   "%empty_23 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i32, i32 %gmem_addr_2" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:70]   --->   Operation 549 'writeresp' 'empty_23' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 202 <SV = 186> <Delay = 2.92>
+ST_202 : Operation 550 [32/68] (2.92ns)   --->   "%empty_23 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i32, i32 %gmem_addr_2" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:70]   --->   Operation 550 'writeresp' 'empty_23' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 203 <SV = 187> <Delay = 2.92>
+ST_203 : Operation 551 [31/68] (2.92ns)   --->   "%empty_23 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i32, i32 %gmem_addr_2" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:70]   --->   Operation 551 'writeresp' 'empty_23' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 204 <SV = 188> <Delay = 2.92>
+ST_204 : Operation 552 [30/68] (2.92ns)   --->   "%empty_23 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i32, i32 %gmem_addr_2" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:70]   --->   Operation 552 'writeresp' 'empty_23' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 205 <SV = 189> <Delay = 2.92>
+ST_205 : Operation 553 [29/68] (2.92ns)   --->   "%empty_23 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i32, i32 %gmem_addr_2" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:70]   --->   Operation 553 'writeresp' 'empty_23' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 206 <SV = 190> <Delay = 2.92>
+ST_206 : Operation 554 [28/68] (2.92ns)   --->   "%empty_23 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i32, i32 %gmem_addr_2" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:70]   --->   Operation 554 'writeresp' 'empty_23' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 207 <SV = 191> <Delay = 2.92>
+ST_207 : Operation 555 [27/68] (2.92ns)   --->   "%empty_23 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i32, i32 %gmem_addr_2" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:70]   --->   Operation 555 'writeresp' 'empty_23' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 208 <SV = 192> <Delay = 2.92>
+ST_208 : Operation 556 [26/68] (2.92ns)   --->   "%empty_23 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i32, i32 %gmem_addr_2" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:70]   --->   Operation 556 'writeresp' 'empty_23' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 209 <SV = 193> <Delay = 2.92>
+ST_209 : Operation 557 [25/68] (2.92ns)   --->   "%empty_23 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i32, i32 %gmem_addr_2" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:70]   --->   Operation 557 'writeresp' 'empty_23' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 210 <SV = 194> <Delay = 2.92>
+ST_210 : Operation 558 [24/68] (2.92ns)   --->   "%empty_23 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i32, i32 %gmem_addr_2" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:70]   --->   Operation 558 'writeresp' 'empty_23' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 211 <SV = 195> <Delay = 2.92>
+ST_211 : Operation 559 [23/68] (2.92ns)   --->   "%empty_23 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i32, i32 %gmem_addr_2" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:70]   --->   Operation 559 'writeresp' 'empty_23' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 212 <SV = 196> <Delay = 2.92>
+ST_212 : Operation 560 [22/68] (2.92ns)   --->   "%empty_23 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i32, i32 %gmem_addr_2" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:70]   --->   Operation 560 'writeresp' 'empty_23' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 213 <SV = 197> <Delay = 2.92>
+ST_213 : Operation 561 [21/68] (2.92ns)   --->   "%empty_23 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i32, i32 %gmem_addr_2" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:70]   --->   Operation 561 'writeresp' 'empty_23' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 214 <SV = 198> <Delay = 2.92>
+ST_214 : Operation 562 [20/68] (2.92ns)   --->   "%empty_23 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i32, i32 %gmem_addr_2" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:70]   --->   Operation 562 'writeresp' 'empty_23' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 215 <SV = 199> <Delay = 2.92>
+ST_215 : Operation 563 [19/68] (2.92ns)   --->   "%empty_23 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i32, i32 %gmem_addr_2" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:70]   --->   Operation 563 'writeresp' 'empty_23' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 216 <SV = 200> <Delay = 2.92>
+ST_216 : Operation 564 [18/68] (2.92ns)   --->   "%empty_23 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i32, i32 %gmem_addr_2" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:70]   --->   Operation 564 'writeresp' 'empty_23' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 217 <SV = 201> <Delay = 2.92>
+ST_217 : Operation 565 [17/68] (2.92ns)   --->   "%empty_23 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i32, i32 %gmem_addr_2" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:70]   --->   Operation 565 'writeresp' 'empty_23' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 218 <SV = 202> <Delay = 2.92>
+ST_218 : Operation 566 [16/68] (2.92ns)   --->   "%empty_23 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i32, i32 %gmem_addr_2" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:70]   --->   Operation 566 'writeresp' 'empty_23' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 219 <SV = 203> <Delay = 2.92>
+ST_219 : Operation 567 [15/68] (2.92ns)   --->   "%empty_23 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i32, i32 %gmem_addr_2" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:70]   --->   Operation 567 'writeresp' 'empty_23' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 220 <SV = 204> <Delay = 2.92>
+ST_220 : Operation 568 [14/68] (2.92ns)   --->   "%empty_23 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i32, i32 %gmem_addr_2" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:70]   --->   Operation 568 'writeresp' 'empty_23' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 221 <SV = 205> <Delay = 2.92>
+ST_221 : Operation 569 [13/68] (2.92ns)   --->   "%empty_23 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i32, i32 %gmem_addr_2" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:70]   --->   Operation 569 'writeresp' 'empty_23' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 222 <SV = 206> <Delay = 2.92>
+ST_222 : Operation 570 [12/68] (2.92ns)   --->   "%empty_23 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i32, i32 %gmem_addr_2" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:70]   --->   Operation 570 'writeresp' 'empty_23' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 223 <SV = 207> <Delay = 2.92>
+ST_223 : Operation 571 [11/68] (2.92ns)   --->   "%empty_23 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i32, i32 %gmem_addr_2" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:70]   --->   Operation 571 'writeresp' 'empty_23' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 224 <SV = 208> <Delay = 2.92>
+ST_224 : Operation 572 [10/68] (2.92ns)   --->   "%empty_23 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i32, i32 %gmem_addr_2" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:70]   --->   Operation 572 'writeresp' 'empty_23' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 225 <SV = 209> <Delay = 2.92>
+ST_225 : Operation 573 [9/68] (2.92ns)   --->   "%empty_23 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i32, i32 %gmem_addr_2" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:70]   --->   Operation 573 'writeresp' 'empty_23' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 226 <SV = 210> <Delay = 2.92>
+ST_226 : Operation 574 [8/68] (2.92ns)   --->   "%empty_23 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i32, i32 %gmem_addr_2" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:70]   --->   Operation 574 'writeresp' 'empty_23' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 227 <SV = 211> <Delay = 2.92>
+ST_227 : Operation 575 [7/68] (2.92ns)   --->   "%empty_23 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i32, i32 %gmem_addr_2" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:70]   --->   Operation 575 'writeresp' 'empty_23' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 228 <SV = 212> <Delay = 2.92>
+ST_228 : Operation 576 [6/68] (2.92ns)   --->   "%empty_23 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i32, i32 %gmem_addr_2" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:70]   --->   Operation 576 'writeresp' 'empty_23' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 229 <SV = 213> <Delay = 2.92>
+ST_229 : Operation 577 [5/68] (2.92ns)   --->   "%empty_23 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i32, i32 %gmem_addr_2" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:70]   --->   Operation 577 'writeresp' 'empty_23' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 230 <SV = 214> <Delay = 2.92>
+ST_230 : Operation 578 [4/68] (2.92ns)   --->   "%empty_23 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i32, i32 %gmem_addr_2" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:70]   --->   Operation 578 'writeresp' 'empty_23' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 231 <SV = 215> <Delay = 2.92>
+ST_231 : Operation 579 [3/68] (2.92ns)   --->   "%empty_23 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i32, i32 %gmem_addr_2" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:70]   --->   Operation 579 'writeresp' 'empty_23' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 232 <SV = 216> <Delay = 2.92>
+ST_232 : Operation 580 [2/68] (2.92ns)   --->   "%empty_23 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i32, i32 %gmem_addr_2" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:70]   --->   Operation 580 'writeresp' 'empty_23' <Predicate = true> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 233 <SV = 217> <Delay = 2.92>
+ST_233 : Operation 581 [1/68] (2.92ns)   --->   "%empty_23 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i32, i32 %gmem_addr_2" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:70]   --->   Operation 581 'writeresp' 'empty_23' <Predicate = (icmp_ln39)> <Delay = 2.92> <CoreInst = "m_axi">   --->   Core 55 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_233 : Operation 582 [1/1] (0.00ns)   --->   "%br_ln70 = br void %._crit_edge" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:70]   --->   Operation 582 'br' 'br_ln70' <Predicate = (icmp_ln39)> <Delay = 0.00>
+ST_233 : Operation 583 [1/1] (0.00ns)   --->   "%ret_ln70 = ret" [/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:70]   --->   Operation 583 'ret' 'ret_ln70' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 4ns, clock uncertainty: 1.08ns.
+
+ <State 1>: 1ns
+The critical path consists of the following:
+	wire read on port 'dim' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:26) [24]  (1 ns)
+
+ <State 2>: 2.29ns
+The critical path consists of the following:
+	'mul' operation ('mul', /home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:26) [28]  (2.29 ns)
+
+ <State 3>: 2.29ns
+The critical path consists of the following:
+	'mul' operation ('mul', /home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:26) [28]  (2.29 ns)
+
+ <State 4>: 1ns
+The critical path consists of the following:
+	wire read on port 'in1' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:26) [27]  (1 ns)
+
+ <State 5>: 2.92ns
+The critical path consists of the following:
+	'getelementptr' operation ('gmem_addr', /home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:39) [35]  (0 ns)
+	bus request on port 'gmem' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:39) [36]  (2.92 ns)
+
+ <State 6>: 2.92ns
+The critical path consists of the following:
+	bus request on port 'gmem' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:39) [36]  (2.92 ns)
+
+ <State 7>: 2.92ns
+The critical path consists of the following:
+	bus request on port 'gmem' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:39) [36]  (2.92 ns)
+
+ <State 8>: 2.92ns
+The critical path consists of the following:
+	bus request on port 'gmem' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:39) [36]  (2.92 ns)
+
+ <State 9>: 2.92ns
+The critical path consists of the following:
+	bus request on port 'gmem' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:39) [36]  (2.92 ns)
+
+ <State 10>: 2.92ns
+The critical path consists of the following:
+	bus request on port 'gmem' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:39) [36]  (2.92 ns)
+
+ <State 11>: 2.92ns
+The critical path consists of the following:
+	bus request on port 'gmem' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:39) [36]  (2.92 ns)
+
+ <State 12>: 2.92ns
+The critical path consists of the following:
+	bus request on port 'gmem' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:39) [36]  (2.92 ns)
+
+ <State 13>: 2.92ns
+The critical path consists of the following:
+	bus request on port 'gmem' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:39) [36]  (2.92 ns)
+
+ <State 14>: 2.92ns
+The critical path consists of the following:
+	bus request on port 'gmem' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:39) [36]  (2.92 ns)
+
+ <State 15>: 2.92ns
+The critical path consists of the following:
+	bus request on port 'gmem' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:39) [36]  (2.92 ns)
+
+ <State 16>: 2.92ns
+The critical path consists of the following:
+	bus request on port 'gmem' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:39) [36]  (2.92 ns)
+
+ <State 17>: 2.92ns
+The critical path consists of the following:
+	bus request on port 'gmem' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:39) [36]  (2.92 ns)
+
+ <State 18>: 2.92ns
+The critical path consists of the following:
+	bus request on port 'gmem' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:39) [36]  (2.92 ns)
+
+ <State 19>: 2.92ns
+The critical path consists of the following:
+	bus request on port 'gmem' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:39) [36]  (2.92 ns)
+
+ <State 20>: 2.92ns
+The critical path consists of the following:
+	bus request on port 'gmem' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:39) [36]  (2.92 ns)
+
+ <State 21>: 2.92ns
+The critical path consists of the following:
+	bus request on port 'gmem' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:39) [36]  (2.92 ns)
+
+ <State 22>: 2.92ns
+The critical path consists of the following:
+	bus request on port 'gmem' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:39) [36]  (2.92 ns)
+
+ <State 23>: 2.92ns
+The critical path consists of the following:
+	bus request on port 'gmem' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:39) [36]  (2.92 ns)
+
+ <State 24>: 2.92ns
+The critical path consists of the following:
+	bus request on port 'gmem' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:39) [36]  (2.92 ns)
+
+ <State 25>: 2.92ns
+The critical path consists of the following:
+	bus request on port 'gmem' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:39) [36]  (2.92 ns)
+
+ <State 26>: 2.92ns
+The critical path consists of the following:
+	bus request on port 'gmem' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:39) [36]  (2.92 ns)
+
+ <State 27>: 2.92ns
+The critical path consists of the following:
+	bus request on port 'gmem' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:39) [36]  (2.92 ns)
+
+ <State 28>: 2.92ns
+The critical path consists of the following:
+	bus request on port 'gmem' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:39) [36]  (2.92 ns)
+
+ <State 29>: 2.92ns
+The critical path consists of the following:
+	bus request on port 'gmem' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:39) [36]  (2.92 ns)
+
+ <State 30>: 2.92ns
+The critical path consists of the following:
+	bus request on port 'gmem' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:39) [36]  (2.92 ns)
+
+ <State 31>: 2.92ns
+The critical path consists of the following:
+	bus request on port 'gmem' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:39) [36]  (2.92 ns)
+
+ <State 32>: 2.92ns
+The critical path consists of the following:
+	bus request on port 'gmem' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:39) [36]  (2.92 ns)
+
+ <State 33>: 2.92ns
+The critical path consists of the following:
+	bus request on port 'gmem' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:39) [36]  (2.92 ns)
+
+ <State 34>: 2.92ns
+The critical path consists of the following:
+	bus request on port 'gmem' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:39) [36]  (2.92 ns)
+
+ <State 35>: 2.92ns
+The critical path consists of the following:
+	bus request on port 'gmem' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:39) [36]  (2.92 ns)
+
+ <State 36>: 2.92ns
+The critical path consists of the following:
+	bus request on port 'gmem' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:39) [36]  (2.92 ns)
+
+ <State 37>: 2.92ns
+The critical path consists of the following:
+	bus request on port 'gmem' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:39) [36]  (2.92 ns)
+
+ <State 38>: 2.92ns
+The critical path consists of the following:
+	bus request on port 'gmem' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:39) [36]  (2.92 ns)
+
+ <State 39>: 2.92ns
+The critical path consists of the following:
+	bus request on port 'gmem' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:39) [36]  (2.92 ns)
+
+ <State 40>: 2.92ns
+The critical path consists of the following:
+	bus request on port 'gmem' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:39) [36]  (2.92 ns)
+
+ <State 41>: 2.92ns
+The critical path consists of the following:
+	bus request on port 'gmem' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:39) [36]  (2.92 ns)
+
+ <State 42>: 2.92ns
+The critical path consists of the following:
+	bus request on port 'gmem' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:39) [36]  (2.92 ns)
+
+ <State 43>: 2.92ns
+The critical path consists of the following:
+	bus request on port 'gmem' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:39) [36]  (2.92 ns)
+
+ <State 44>: 2.92ns
+The critical path consists of the following:
+	bus request on port 'gmem' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:39) [36]  (2.92 ns)
+
+ <State 45>: 2.92ns
+The critical path consists of the following:
+	bus request on port 'gmem' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:39) [36]  (2.92 ns)
+
+ <State 46>: 2.92ns
+The critical path consists of the following:
+	bus request on port 'gmem' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:39) [36]  (2.92 ns)
+
+ <State 47>: 2.92ns
+The critical path consists of the following:
+	bus request on port 'gmem' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:39) [36]  (2.92 ns)
+
+ <State 48>: 2.92ns
+The critical path consists of the following:
+	bus request on port 'gmem' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:39) [36]  (2.92 ns)
+
+ <State 49>: 2.92ns
+The critical path consists of the following:
+	bus request on port 'gmem' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:39) [36]  (2.92 ns)
+
+ <State 50>: 2.92ns
+The critical path consists of the following:
+	bus request on port 'gmem' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:39) [36]  (2.92 ns)
+
+ <State 51>: 2.92ns
+The critical path consists of the following:
+	bus request on port 'gmem' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:39) [36]  (2.92 ns)
+
+ <State 52>: 2.92ns
+The critical path consists of the following:
+	bus request on port 'gmem' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:39) [36]  (2.92 ns)
+
+ <State 53>: 2.92ns
+The critical path consists of the following:
+	bus request on port 'gmem' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:39) [36]  (2.92 ns)
+
+ <State 54>: 2.92ns
+The critical path consists of the following:
+	bus request on port 'gmem' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:39) [36]  (2.92 ns)
+
+ <State 55>: 2.92ns
+The critical path consists of the following:
+	bus request on port 'gmem' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:39) [36]  (2.92 ns)
+
+ <State 56>: 2.92ns
+The critical path consists of the following:
+	bus request on port 'gmem' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:39) [36]  (2.92 ns)
+
+ <State 57>: 2.92ns
+The critical path consists of the following:
+	bus request on port 'gmem' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:39) [36]  (2.92 ns)
+
+ <State 58>: 2.92ns
+The critical path consists of the following:
+	bus request on port 'gmem' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:39) [36]  (2.92 ns)
+
+ <State 59>: 2.92ns
+The critical path consists of the following:
+	bus request on port 'gmem' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:39) [36]  (2.92 ns)
+
+ <State 60>: 2.92ns
+The critical path consists of the following:
+	bus request on port 'gmem' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:39) [36]  (2.92 ns)
+
+ <State 61>: 2.92ns
+The critical path consists of the following:
+	bus request on port 'gmem' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:39) [36]  (2.92 ns)
+
+ <State 62>: 2.92ns
+The critical path consists of the following:
+	bus request on port 'gmem' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:39) [36]  (2.92 ns)
+
+ <State 63>: 2.92ns
+The critical path consists of the following:
+	bus request on port 'gmem' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:39) [36]  (2.92 ns)
+
+ <State 64>: 2.92ns
+The critical path consists of the following:
+	bus request on port 'gmem' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:39) [36]  (2.92 ns)
+
+ <State 65>: 2.92ns
+The critical path consists of the following:
+	bus request on port 'gmem' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:39) [36]  (2.92 ns)
+
+ <State 66>: 2.92ns
+The critical path consists of the following:
+	bus request on port 'gmem' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:39) [36]  (2.92 ns)
+
+ <State 67>: 2.92ns
+The critical path consists of the following:
+	bus request on port 'gmem' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:39) [36]  (2.92 ns)
+
+ <State 68>: 2.92ns
+The critical path consists of the following:
+	bus request on port 'gmem' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:39) [36]  (2.92 ns)
+
+ <State 69>: 2.92ns
+The critical path consists of the following:
+	bus request on port 'gmem' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:39) [36]  (2.92 ns)
+
+ <State 70>: 2.92ns
+The critical path consists of the following:
+	bus request on port 'gmem' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:39) [36]  (2.92 ns)
+
+ <State 71>: 2.92ns
+The critical path consists of the following:
+	bus request on port 'gmem' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:39) [36]  (2.92 ns)
+
+ <State 72>: 2.92ns
+The critical path consists of the following:
+	bus request on port 'gmem' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:39) [36]  (2.92 ns)
+
+ <State 73>: 2.92ns
+The critical path consists of the following:
+	bus request on port 'gmem' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:39) [36]  (2.92 ns)
+
+ <State 74>: 2.92ns
+The critical path consists of the following:
+	bus request on port 'gmem' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:39) [36]  (2.92 ns)
+
+ <State 75>: 0.874ns
+The critical path consists of the following:
+	'phi' operation ('i', /home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:39) with incoming values : ('add_ln39', /home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:39) [39]  (0 ns)
+	'add' operation ('add_ln39', /home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:39) [41]  (0.874 ns)
+
+ <State 76>: 2.92ns
+The critical path consists of the following:
+	bus read on port 'gmem' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:40) [47]  (2.92 ns)
+
+ <State 77>: 1.16ns
+The critical path consists of the following:
+	'getelementptr' operation ('A_addr', /home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:40) [50]  (0 ns)
+	'store' operation ('store_ln40', /home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:40) of variable 'gmem_addr_read', /home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:40 on array 'A' [51]  (1.16 ns)
+
+ <State 78>: 2.92ns
+The critical path consists of the following:
+	'getelementptr' operation ('gmem_addr_1', /home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:46) [56]  (0 ns)
+	bus request on port 'gmem' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:46) [57]  (2.92 ns)
+
+ <State 79>: 2.92ns
+The critical path consists of the following:
+	bus request on port 'gmem' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:46) [57]  (2.92 ns)
+
+ <State 80>: 2.92ns
+The critical path consists of the following:
+	bus request on port 'gmem' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:46) [57]  (2.92 ns)
+
+ <State 81>: 2.92ns
+The critical path consists of the following:
+	bus request on port 'gmem' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:46) [57]  (2.92 ns)
+
+ <State 82>: 2.92ns
+The critical path consists of the following:
+	bus request on port 'gmem' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:46) [57]  (2.92 ns)
+
+ <State 83>: 2.92ns
+The critical path consists of the following:
+	bus request on port 'gmem' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:46) [57]  (2.92 ns)
+
+ <State 84>: 2.92ns
+The critical path consists of the following:
+	bus request on port 'gmem' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:46) [57]  (2.92 ns)
+
+ <State 85>: 2.92ns
+The critical path consists of the following:
+	bus request on port 'gmem' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:46) [57]  (2.92 ns)
+
+ <State 86>: 2.92ns
+The critical path consists of the following:
+	bus request on port 'gmem' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:46) [57]  (2.92 ns)
+
+ <State 87>: 2.92ns
+The critical path consists of the following:
+	bus request on port 'gmem' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:46) [57]  (2.92 ns)
+
+ <State 88>: 2.92ns
+The critical path consists of the following:
+	bus request on port 'gmem' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:46) [57]  (2.92 ns)
+
+ <State 89>: 2.92ns
+The critical path consists of the following:
+	bus request on port 'gmem' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:46) [57]  (2.92 ns)
+
+ <State 90>: 2.92ns
+The critical path consists of the following:
+	bus request on port 'gmem' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:46) [57]  (2.92 ns)
+
+ <State 91>: 2.92ns
+The critical path consists of the following:
+	bus request on port 'gmem' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:46) [57]  (2.92 ns)
+
+ <State 92>: 2.92ns
+The critical path consists of the following:
+	bus request on port 'gmem' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:46) [57]  (2.92 ns)
+
+ <State 93>: 2.92ns
+The critical path consists of the following:
+	bus request on port 'gmem' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:46) [57]  (2.92 ns)
+
+ <State 94>: 2.92ns
+The critical path consists of the following:
+	bus request on port 'gmem' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:46) [57]  (2.92 ns)
+
+ <State 95>: 2.92ns
+The critical path consists of the following:
+	bus request on port 'gmem' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:46) [57]  (2.92 ns)
+
+ <State 96>: 2.92ns
+The critical path consists of the following:
+	bus request on port 'gmem' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:46) [57]  (2.92 ns)
+
+ <State 97>: 2.92ns
+The critical path consists of the following:
+	bus request on port 'gmem' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:46) [57]  (2.92 ns)
+
+ <State 98>: 2.92ns
+The critical path consists of the following:
+	bus request on port 'gmem' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:46) [57]  (2.92 ns)
+
+ <State 99>: 2.92ns
+The critical path consists of the following:
+	bus request on port 'gmem' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:46) [57]  (2.92 ns)
+
+ <State 100>: 2.92ns
+The critical path consists of the following:
+	bus request on port 'gmem' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:46) [57]  (2.92 ns)
+
+ <State 101>: 2.92ns
+The critical path consists of the following:
+	bus request on port 'gmem' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:46) [57]  (2.92 ns)
+
+ <State 102>: 2.92ns
+The critical path consists of the following:
+	bus request on port 'gmem' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:46) [57]  (2.92 ns)
+
+ <State 103>: 2.92ns
+The critical path consists of the following:
+	bus request on port 'gmem' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:46) [57]  (2.92 ns)
+
+ <State 104>: 2.92ns
+The critical path consists of the following:
+	bus request on port 'gmem' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:46) [57]  (2.92 ns)
+
+ <State 105>: 2.92ns
+The critical path consists of the following:
+	bus request on port 'gmem' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:46) [57]  (2.92 ns)
+
+ <State 106>: 2.92ns
+The critical path consists of the following:
+	bus request on port 'gmem' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:46) [57]  (2.92 ns)
+
+ <State 107>: 2.92ns
+The critical path consists of the following:
+	bus request on port 'gmem' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:46) [57]  (2.92 ns)
+
+ <State 108>: 2.92ns
+The critical path consists of the following:
+	bus request on port 'gmem' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:46) [57]  (2.92 ns)
+
+ <State 109>: 2.92ns
+The critical path consists of the following:
+	bus request on port 'gmem' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:46) [57]  (2.92 ns)
+
+ <State 110>: 2.92ns
+The critical path consists of the following:
+	bus request on port 'gmem' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:46) [57]  (2.92 ns)
+
+ <State 111>: 2.92ns
+The critical path consists of the following:
+	bus request on port 'gmem' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:46) [57]  (2.92 ns)
+
+ <State 112>: 2.92ns
+The critical path consists of the following:
+	bus request on port 'gmem' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:46) [57]  (2.92 ns)
+
+ <State 113>: 2.92ns
+The critical path consists of the following:
+	bus request on port 'gmem' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:46) [57]  (2.92 ns)
+
+ <State 114>: 2.92ns
+The critical path consists of the following:
+	bus request on port 'gmem' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:46) [57]  (2.92 ns)
+
+ <State 115>: 2.92ns
+The critical path consists of the following:
+	bus request on port 'gmem' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:46) [57]  (2.92 ns)
+
+ <State 116>: 2.92ns
+The critical path consists of the following:
+	bus request on port 'gmem' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:46) [57]  (2.92 ns)
+
+ <State 117>: 2.92ns
+The critical path consists of the following:
+	bus request on port 'gmem' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:46) [57]  (2.92 ns)
+
+ <State 118>: 2.92ns
+The critical path consists of the following:
+	bus request on port 'gmem' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:46) [57]  (2.92 ns)
+
+ <State 119>: 2.92ns
+The critical path consists of the following:
+	bus request on port 'gmem' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:46) [57]  (2.92 ns)
+
+ <State 120>: 2.92ns
+The critical path consists of the following:
+	bus request on port 'gmem' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:46) [57]  (2.92 ns)
+
+ <State 121>: 2.92ns
+The critical path consists of the following:
+	bus request on port 'gmem' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:46) [57]  (2.92 ns)
+
+ <State 122>: 2.92ns
+The critical path consists of the following:
+	bus request on port 'gmem' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:46) [57]  (2.92 ns)
+
+ <State 123>: 2.92ns
+The critical path consists of the following:
+	bus request on port 'gmem' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:46) [57]  (2.92 ns)
+
+ <State 124>: 2.92ns
+The critical path consists of the following:
+	bus request on port 'gmem' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:46) [57]  (2.92 ns)
+
+ <State 125>: 2.92ns
+The critical path consists of the following:
+	bus request on port 'gmem' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:46) [57]  (2.92 ns)
+
+ <State 126>: 2.92ns
+The critical path consists of the following:
+	bus request on port 'gmem' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:46) [57]  (2.92 ns)
+
+ <State 127>: 2.92ns
+The critical path consists of the following:
+	bus request on port 'gmem' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:46) [57]  (2.92 ns)
+
+ <State 128>: 2.92ns
+The critical path consists of the following:
+	bus request on port 'gmem' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:46) [57]  (2.92 ns)
+
+ <State 129>: 2.92ns
+The critical path consists of the following:
+	bus request on port 'gmem' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:46) [57]  (2.92 ns)
+
+ <State 130>: 2.92ns
+The critical path consists of the following:
+	bus request on port 'gmem' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:46) [57]  (2.92 ns)
+
+ <State 131>: 2.92ns
+The critical path consists of the following:
+	bus request on port 'gmem' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:46) [57]  (2.92 ns)
+
+ <State 132>: 2.92ns
+The critical path consists of the following:
+	bus request on port 'gmem' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:46) [57]  (2.92 ns)
+
+ <State 133>: 2.92ns
+The critical path consists of the following:
+	bus request on port 'gmem' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:46) [57]  (2.92 ns)
+
+ <State 134>: 2.92ns
+The critical path consists of the following:
+	bus request on port 'gmem' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:46) [57]  (2.92 ns)
+
+ <State 135>: 2.92ns
+The critical path consists of the following:
+	bus request on port 'gmem' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:46) [57]  (2.92 ns)
+
+ <State 136>: 2.92ns
+The critical path consists of the following:
+	bus request on port 'gmem' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:46) [57]  (2.92 ns)
+
+ <State 137>: 2.92ns
+The critical path consists of the following:
+	bus request on port 'gmem' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:46) [57]  (2.92 ns)
+
+ <State 138>: 2.92ns
+The critical path consists of the following:
+	bus request on port 'gmem' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:46) [57]  (2.92 ns)
+
+ <State 139>: 2.92ns
+The critical path consists of the following:
+	bus request on port 'gmem' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:46) [57]  (2.92 ns)
+
+ <State 140>: 2.92ns
+The critical path consists of the following:
+	bus request on port 'gmem' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:46) [57]  (2.92 ns)
+
+ <State 141>: 2.92ns
+The critical path consists of the following:
+	bus request on port 'gmem' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:46) [57]  (2.92 ns)
+
+ <State 142>: 2.92ns
+The critical path consists of the following:
+	bus request on port 'gmem' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:46) [57]  (2.92 ns)
+
+ <State 143>: 2.92ns
+The critical path consists of the following:
+	bus request on port 'gmem' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:46) [57]  (2.92 ns)
+
+ <State 144>: 2.92ns
+The critical path consists of the following:
+	bus request on port 'gmem' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:46) [57]  (2.92 ns)
+
+ <State 145>: 2.92ns
+The critical path consists of the following:
+	bus request on port 'gmem' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:46) [57]  (2.92 ns)
+
+ <State 146>: 2.92ns
+The critical path consists of the following:
+	bus request on port 'gmem' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:46) [57]  (2.92 ns)
+
+ <State 147>: 2.92ns
+The critical path consists of the following:
+	bus request on port 'gmem' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:46) [57]  (2.92 ns)
+
+ <State 148>: 0.874ns
+The critical path consists of the following:
+	'phi' operation ('i', /home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:46) with incoming values : ('add_ln46', /home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:46) [60]  (0 ns)
+	'add' operation ('add_ln46', /home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:46) [62]  (0.874 ns)
+
+ <State 149>: 2.92ns
+The critical path consists of the following:
+	bus read on port 'gmem' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:47) [68]  (2.92 ns)
+
+ <State 150>: 1.16ns
+The critical path consists of the following:
+	'getelementptr' operation ('B_addr', /home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:47) [71]  (0 ns)
+	'store' operation ('store_ln47', /home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:47) of variable 'gmem_addr_1_read', /home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:47 on array 'B' [72]  (1.16 ns)
+
+ <State 151>: 0.603ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation ('indvar_flatten', /home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:51) with incoming values : ('add_ln51', /home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:51) [81]  (0.603 ns)
+
+ <State 152>: 1.64ns
+The critical path consists of the following:
+	'phi' operation ('i', /home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:51) with incoming values : ('select_ln51_1', /home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:51) [82]  (0 ns)
+	'add' operation ('add_ln51_1', /home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:51) [92]  (0.88 ns)
+	'select' operation ('select_ln51_1', /home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:51) [93]  (0.227 ns)
+	'mul' operation of DSP[95] ('mul_ln51', /home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:51) [95]  (0.535 ns)
+
+ <State 153>: 0.535ns
+The critical path consists of the following:
+	'mul' operation of DSP[95] ('mul_ln51', /home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:51) [95]  (0.535 ns)
+
+ <State 154>: 0.535ns
+The critical path consists of the following:
+	'mul' operation of DSP[95] ('mul_ln51', /home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:51) [95]  (0.535 ns)
+
+ <State 155>: 0.603ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation ('k', /home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:57) with incoming values : ('add_ln57', /home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:57) [101]  (0.603 ns)
+
+ <State 156>: 1.92ns
+The critical path consists of the following:
+	'phi' operation ('k', /home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:57) with incoming values : ('add_ln57', /home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:57) [101]  (0 ns)
+	'add' operation ('add_ln58', /home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:58) [113]  (0.765 ns)
+	'getelementptr' operation ('A_addr_1', /home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:58) [116]  (0 ns)
+	'load' operation ('A_load', /home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:58) on array 'A' [117]  (1.16 ns)
+
+ <State 157>: 1.16ns
+The critical path consists of the following:
+	'load' operation ('A_load', /home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:58) on array 'A' [117]  (1.16 ns)
+
+ <State 158>: 2.29ns
+The critical path consists of the following:
+	'mul' operation ('mul_ln58', /home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:58) [123]  (2.29 ns)
+
+ <State 159>: 2.29ns
+The critical path consists of the following:
+	'mul' operation ('mul_ln58', /home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:58) [123]  (2.29 ns)
+
+ <State 160>: 0.88ns
+The critical path consists of the following:
+	'add' operation ('result', /home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:58) [124]  (0.88 ns)
+
+ <State 161>: 1.92ns
+The critical path consists of the following:
+	'add' operation ('add_ln60', /home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:60) [130]  (0.765 ns)
+	'getelementptr' operation ('C_addr_1', /home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:60) [133]  (0 ns)
+	'store' operation ('store_ln60', /home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:60) of variable 'result' on array 'C' [134]  (1.16 ns)
+
+ <State 162>: 2.92ns
+The critical path consists of the following:
+	bus request on port 'gmem' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:67) [144]  (2.92 ns)
+
+ <State 163>: 1.16ns
+The critical path consists of the following:
+	'phi' operation ('i', /home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:67) with incoming values : ('add_ln67', /home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:67) [147]  (0 ns)
+	'getelementptr' operation ('C_addr', /home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:68) [157]  (0 ns)
+	'load' operation ('C_load', /home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:68) on array 'C' [158]  (1.16 ns)
+
+ <State 164>: 1.16ns
+The critical path consists of the following:
+	'load' operation ('C_load', /home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:68) on array 'C' [158]  (1.16 ns)
+
+ <State 165>: 2.92ns
+The critical path consists of the following:
+	bus write on port 'gmem' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:68) [159]  (2.92 ns)
+
+ <State 166>: 2.92ns
+The critical path consists of the following:
+	bus access on port 'gmem' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:70) [162]  (2.92 ns)
+
+ <State 167>: 2.92ns
+The critical path consists of the following:
+	bus access on port 'gmem' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:70) [162]  (2.92 ns)
+
+ <State 168>: 2.92ns
+The critical path consists of the following:
+	bus access on port 'gmem' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:70) [162]  (2.92 ns)
+
+ <State 169>: 2.92ns
+The critical path consists of the following:
+	bus access on port 'gmem' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:70) [162]  (2.92 ns)
+
+ <State 170>: 2.92ns
+The critical path consists of the following:
+	bus access on port 'gmem' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:70) [162]  (2.92 ns)
+
+ <State 171>: 2.92ns
+The critical path consists of the following:
+	bus access on port 'gmem' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:70) [162]  (2.92 ns)
+
+ <State 172>: 2.92ns
+The critical path consists of the following:
+	bus access on port 'gmem' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:70) [162]  (2.92 ns)
+
+ <State 173>: 2.92ns
+The critical path consists of the following:
+	bus access on port 'gmem' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:70) [162]  (2.92 ns)
+
+ <State 174>: 2.92ns
+The critical path consists of the following:
+	bus access on port 'gmem' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:70) [162]  (2.92 ns)
+
+ <State 175>: 2.92ns
+The critical path consists of the following:
+	bus access on port 'gmem' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:70) [162]  (2.92 ns)
+
+ <State 176>: 2.92ns
+The critical path consists of the following:
+	bus access on port 'gmem' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:70) [162]  (2.92 ns)
+
+ <State 177>: 2.92ns
+The critical path consists of the following:
+	bus access on port 'gmem' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:70) [162]  (2.92 ns)
+
+ <State 178>: 2.92ns
+The critical path consists of the following:
+	bus access on port 'gmem' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:70) [162]  (2.92 ns)
+
+ <State 179>: 2.92ns
+The critical path consists of the following:
+	bus access on port 'gmem' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:70) [162]  (2.92 ns)
+
+ <State 180>: 2.92ns
+The critical path consists of the following:
+	bus access on port 'gmem' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:70) [162]  (2.92 ns)
+
+ <State 181>: 2.92ns
+The critical path consists of the following:
+	bus access on port 'gmem' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:70) [162]  (2.92 ns)
+
+ <State 182>: 2.92ns
+The critical path consists of the following:
+	bus access on port 'gmem' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:70) [162]  (2.92 ns)
+
+ <State 183>: 2.92ns
+The critical path consists of the following:
+	bus access on port 'gmem' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:70) [162]  (2.92 ns)
+
+ <State 184>: 2.92ns
+The critical path consists of the following:
+	bus access on port 'gmem' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:70) [162]  (2.92 ns)
+
+ <State 185>: 2.92ns
+The critical path consists of the following:
+	bus access on port 'gmem' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:70) [162]  (2.92 ns)
+
+ <State 186>: 2.92ns
+The critical path consists of the following:
+	bus access on port 'gmem' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:70) [162]  (2.92 ns)
+
+ <State 187>: 2.92ns
+The critical path consists of the following:
+	bus access on port 'gmem' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:70) [162]  (2.92 ns)
+
+ <State 188>: 2.92ns
+The critical path consists of the following:
+	bus access on port 'gmem' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:70) [162]  (2.92 ns)
+
+ <State 189>: 2.92ns
+The critical path consists of the following:
+	bus access on port 'gmem' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:70) [162]  (2.92 ns)
+
+ <State 190>: 2.92ns
+The critical path consists of the following:
+	bus access on port 'gmem' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:70) [162]  (2.92 ns)
+
+ <State 191>: 2.92ns
+The critical path consists of the following:
+	bus access on port 'gmem' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:70) [162]  (2.92 ns)
+
+ <State 192>: 2.92ns
+The critical path consists of the following:
+	bus access on port 'gmem' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:70) [162]  (2.92 ns)
+
+ <State 193>: 2.92ns
+The critical path consists of the following:
+	bus access on port 'gmem' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:70) [162]  (2.92 ns)
+
+ <State 194>: 2.92ns
+The critical path consists of the following:
+	bus access on port 'gmem' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:70) [162]  (2.92 ns)
+
+ <State 195>: 2.92ns
+The critical path consists of the following:
+	bus access on port 'gmem' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:70) [162]  (2.92 ns)
+
+ <State 196>: 2.92ns
+The critical path consists of the following:
+	bus access on port 'gmem' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:70) [162]  (2.92 ns)
+
+ <State 197>: 2.92ns
+The critical path consists of the following:
+	bus access on port 'gmem' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:70) [162]  (2.92 ns)
+
+ <State 198>: 2.92ns
+The critical path consists of the following:
+	bus access on port 'gmem' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:70) [162]  (2.92 ns)
+
+ <State 199>: 2.92ns
+The critical path consists of the following:
+	bus access on port 'gmem' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:70) [162]  (2.92 ns)
+
+ <State 200>: 2.92ns
+The critical path consists of the following:
+	bus access on port 'gmem' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:70) [162]  (2.92 ns)
+
+ <State 201>: 2.92ns
+The critical path consists of the following:
+	bus access on port 'gmem' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:70) [162]  (2.92 ns)
+
+ <State 202>: 2.92ns
+The critical path consists of the following:
+	bus access on port 'gmem' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:70) [162]  (2.92 ns)
+
+ <State 203>: 2.92ns
+The critical path consists of the following:
+	bus access on port 'gmem' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:70) [162]  (2.92 ns)
+
+ <State 204>: 2.92ns
+The critical path consists of the following:
+	bus access on port 'gmem' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:70) [162]  (2.92 ns)
+
+ <State 205>: 2.92ns
+The critical path consists of the following:
+	bus access on port 'gmem' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:70) [162]  (2.92 ns)
+
+ <State 206>: 2.92ns
+The critical path consists of the following:
+	bus access on port 'gmem' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:70) [162]  (2.92 ns)
+
+ <State 207>: 2.92ns
+The critical path consists of the following:
+	bus access on port 'gmem' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:70) [162]  (2.92 ns)
+
+ <State 208>: 2.92ns
+The critical path consists of the following:
+	bus access on port 'gmem' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:70) [162]  (2.92 ns)
+
+ <State 209>: 2.92ns
+The critical path consists of the following:
+	bus access on port 'gmem' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:70) [162]  (2.92 ns)
+
+ <State 210>: 2.92ns
+The critical path consists of the following:
+	bus access on port 'gmem' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:70) [162]  (2.92 ns)
+
+ <State 211>: 2.92ns
+The critical path consists of the following:
+	bus access on port 'gmem' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:70) [162]  (2.92 ns)
+
+ <State 212>: 2.92ns
+The critical path consists of the following:
+	bus access on port 'gmem' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:70) [162]  (2.92 ns)
+
+ <State 213>: 2.92ns
+The critical path consists of the following:
+	bus access on port 'gmem' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:70) [162]  (2.92 ns)
+
+ <State 214>: 2.92ns
+The critical path consists of the following:
+	bus access on port 'gmem' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:70) [162]  (2.92 ns)
+
+ <State 215>: 2.92ns
+The critical path consists of the following:
+	bus access on port 'gmem' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:70) [162]  (2.92 ns)
+
+ <State 216>: 2.92ns
+The critical path consists of the following:
+	bus access on port 'gmem' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:70) [162]  (2.92 ns)
+
+ <State 217>: 2.92ns
+The critical path consists of the following:
+	bus access on port 'gmem' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:70) [162]  (2.92 ns)
+
+ <State 218>: 2.92ns
+The critical path consists of the following:
+	bus access on port 'gmem' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:70) [162]  (2.92 ns)
+
+ <State 219>: 2.92ns
+The critical path consists of the following:
+	bus access on port 'gmem' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:70) [162]  (2.92 ns)
+
+ <State 220>: 2.92ns
+The critical path consists of the following:
+	bus access on port 'gmem' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:70) [162]  (2.92 ns)
+
+ <State 221>: 2.92ns
+The critical path consists of the following:
+	bus access on port 'gmem' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:70) [162]  (2.92 ns)
+
+ <State 222>: 2.92ns
+The critical path consists of the following:
+	bus access on port 'gmem' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:70) [162]  (2.92 ns)
+
+ <State 223>: 2.92ns
+The critical path consists of the following:
+	bus access on port 'gmem' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:70) [162]  (2.92 ns)
+
+ <State 224>: 2.92ns
+The critical path consists of the following:
+	bus access on port 'gmem' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:70) [162]  (2.92 ns)
+
+ <State 225>: 2.92ns
+The critical path consists of the following:
+	bus access on port 'gmem' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:70) [162]  (2.92 ns)
+
+ <State 226>: 2.92ns
+The critical path consists of the following:
+	bus access on port 'gmem' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:70) [162]  (2.92 ns)
+
+ <State 227>: 2.92ns
+The critical path consists of the following:
+	bus access on port 'gmem' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:70) [162]  (2.92 ns)
+
+ <State 228>: 2.92ns
+The critical path consists of the following:
+	bus access on port 'gmem' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:70) [162]  (2.92 ns)
+
+ <State 229>: 2.92ns
+The critical path consists of the following:
+	bus access on port 'gmem' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:70) [162]  (2.92 ns)
+
+ <State 230>: 2.92ns
+The critical path consists of the following:
+	bus access on port 'gmem' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:70) [162]  (2.92 ns)
+
+ <State 231>: 2.92ns
+The critical path consists of the following:
+	bus access on port 'gmem' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:70) [162]  (2.92 ns)
+
+ <State 232>: 2.92ns
+The critical path consists of the following:
+	bus access on port 'gmem' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:70) [162]  (2.92 ns)
+
+ <State 233>: 2.92ns
+The critical path consists of the following:
+	bus access on port 'gmem' (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:70) [162]  (2.92 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+	State 14
+	State 15
+	State 16
+	State 17
+	State 18
+	State 19
+	State 20
+	State 21
+	State 22
+	State 23
+	State 24
+	State 25
+	State 26
+	State 27
+	State 28
+	State 29
+	State 30
+	State 31
+	State 32
+	State 33
+	State 34
+	State 35
+	State 36
+	State 37
+	State 38
+	State 39
+	State 40
+	State 41
+	State 42
+	State 43
+	State 44
+	State 45
+	State 46
+	State 47
+	State 48
+	State 49
+	State 50
+	State 51
+	State 52
+	State 53
+	State 54
+	State 55
+	State 56
+	State 57
+	State 58
+	State 59
+	State 60
+	State 61
+	State 62
+	State 63
+	State 64
+	State 65
+	State 66
+	State 67
+	State 68
+	State 69
+	State 70
+	State 71
+	State 72
+	State 73
+	State 74
+	State 75
+	State 76
+	State 77
+	State 78
+	State 79
+	State 80
+	State 81
+	State 82
+	State 83
+	State 84
+	State 85
+	State 86
+	State 87
+	State 88
+	State 89
+	State 90
+	State 91
+	State 92
+	State 93
+	State 94
+	State 95
+	State 96
+	State 97
+	State 98
+	State 99
+	State 100
+	State 101
+	State 102
+	State 103
+	State 104
+	State 105
+	State 106
+	State 107
+	State 108
+	State 109
+	State 110
+	State 111
+	State 112
+	State 113
+	State 114
+	State 115
+	State 116
+	State 117
+	State 118
+	State 119
+	State 120
+	State 121
+	State 122
+	State 123
+	State 124
+	State 125
+	State 126
+	State 127
+	State 128
+	State 129
+	State 130
+	State 131
+	State 132
+	State 133
+	State 134
+	State 135
+	State 136
+	State 137
+	State 138
+	State 139
+	State 140
+	State 141
+	State 142
+	State 143
+	State 144
+	State 145
+	State 146
+	State 147
+	State 148
+	State 149
+	State 150
+	State 151
+	State 152
+	State 153
+	State 154
+	State 155
+	State 156
+	State 157
+	State 158
+	State 159
+	State 160
+	State 161
+	State 162
+	State 163
+	State 164
+	State 165
+	State 166
+	State 167
+	State 168
+	State 169
+	State 170
+	State 171
+	State 172
+	State 173
+	State 174
+	State 175
+	State 176
+	State 177
+	State 178
+	State 179
+	State 180
+	State 181
+	State 182
+	State 183
+	State 184
+	State 185
+	State 186
+	State 187
+	State 188
+	State 189
+	State 190
+	State 191
+	State 192
+	State 193
+	State 194
+	State 195
+	State 196
+	State 197
+	State 198
+	State 199
+	State 200
+	State 201
+	State 202
+	State 203
+	State 204
+	State 205
+	State 206
+	State 207
+	State 208
+	State 209
+	State 210
+	State 211
+	State 212
+	State 213
+	State 214
+	State 215
+	State 216
+	State 217
+	State 218
+	State 219
+	State 220
+	State 221
+	State 222
+	State 223
+	State 224
+	State 225
+	State 226
+	State 227
+	State 228
+	State 229
+	State 230
+	State 231
+	State 232
+	State 233
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

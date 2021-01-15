@@ -1,0 +1,8 @@
+matmul_partition_mul_32s_32s_32_2_1
+matmul_partition_mul_32ns_32ns_64_2_1
+matmul_partition_mux_6464_32_1_1
+matmul_partition_C
+matmul_partition_A_0
+matmul_partition_control_s_axi
+matmul_partition_gmem_m_axi
+matmul_partition

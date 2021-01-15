@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Messages>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1312" tag="" content="Analyzing design file &apos;/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl&apos; ..." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-777]" key="HLS 200-777" tag="" content="Using interface defaults for &apos;Vitis&apos; target." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 214-129]" key="HLS 214-129" tag="" content="Unrolled all 64 iterations of the loop &apos;lreorder3&apos; (/home/centos/workspace/arrayb_block_partitioning/src/matmul.cl:123:13)" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-1494]" key="HLS 200-1494" tag="" content="Copying CPU target BC file to /home/centos/workspace/arrayb_block_partitioning/Emulation-SW/matmul.build/matmul_partition/matmul_partition/matmul_partition/solution/kernel.sw_emu.bc" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_965" tag="" content="Finished Linking Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1530.082 ; gain = 1107.938 ; free physical = 33103 ; free virtual = 136136" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_965" tag="" content="Finished Checking Pragmas Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1530.082 ; gain = 1107.938 ; free physical = 33103 ; free virtual = 136136" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-1493]" key="HLS 200-1493" tag="" content="Running only source code synthesis checks, skipping scheduling and RTL generation." resolution=""/>
+</Messages>
