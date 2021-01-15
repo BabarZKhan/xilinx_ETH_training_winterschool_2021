@@ -1,0 +1,171 @@
+<ENTRY>
+{
+ "thisFile": "/home/centos/workspace/canny_vision/Emulation-SW/krnl_canny.build/canny_accel.xo.compile_summary",
+ "connectId": "",
+ "serverToken": "",
+ "timestamp": "0"
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Fri Jan 15 12:12:37 2021",
+ "timestampMillis": "1610712757387",
+ "buildStep": {
+  "cmdId": "32bcdeea-3309-465f-afd8-b6fb13d171bf",
+  "name": "v++",
+  "logFile": "/home/centos/workspace/canny_vision/Emulation-SW/krnl_canny.build/canny_accel/canny_accel.steps.log",
+  "commandLine": "/opt/Xilinx/Vitis/2020.1/bin/unwrapped/lnx64.o/v++  --xp \"vivado_prop:run.__KERNEL__.{STEPS.SYNTH_DESIGN.ARGS.MORE OPTIONS}={-directive sdx_optimization_effort_high}\" --xp \"misc:report=type report_timing_summary name impl_report_timing_summary_route_design_summary steps {route_design} runs {impl_1} options {-max_paths 10}\" --xp \"misc:report=type report_timing_summary name impl_report_timing_summary_post_route_phys_opt_design_summary steps {post_route_phys_opt_design} runs {impl_1} options {-max_paths 10}\" --target sw_emu --compile -I../src --config common-config.cfg --config krnl_canny-canny_accel-compile.cfg -I/home/centos/workspace/canny_vision/libs/xf_opencv/L1/include -I/home/centos/workspace/canny_vision/src/build -okrnl_canny.build/canny_accel.xo ../src/xf_canny_accel.cpp ",
+  "args": [
+   "--target",
+   "sw_emu",
+   "--compile",
+   "-I../src",
+   "--config",
+   "common-config.cfg",
+   "--config",
+   "krnl_canny-canny_accel-compile.cfg",
+   "-I/home/centos/workspace/canny_vision/libs/xf_opencv/L1/include",
+   "-I/home/centos/workspace/canny_vision/src/build",
+   "-okrnl_canny.build/canny_accel.xo",
+   "../src/xf_canny_accel.cpp"
+  ],
+  "iniFiles": [
+   {
+    "path": "/home/centos/workspace/canny_vision/Emulation-SW/common-config.cfg",
+    "content": "platform=/home/centos/src/project_data/aws-fpga/Vitis/aws_platform/xilinx_aws-vu9p-f1_shell-v04261818_201920_2/xilinx_aws-vu9p-f1_shell-v04261818_201920_2.xpfm\nsave-temps=1\n"
+   },
+   {
+    "path": "/home/centos/workspace/canny_vision/Emulation-SW/krnl_canny-canny_accel-compile.cfg",
+    "content": "kernel=canny_accel\ndebug=1\nmessageDb=krnl_canny.build/canny_accel.mdb\ntemp_dir=krnl_canny.build\nreport_dir=krnl_canny.build/reports\nlog_dir=krnl_canny.build/logs\n\n[advanced]\nmisc=solution_name=canny_accel\n"
+   }
+  ],
+  "cwd": "/home/centos/workspace/canny_vision/Emulation-SW"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Jan 15 12:12:37 2021",
+ "timestampMillis": "1610712757388",
+ "status": {
+  "cmdId": "32bcdeea-3309-465f-afd8-b6fb13d171bf",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_FlowMetaData",
+ "dateTimestamp": "Fri Jan 15 12:12:52 2021",
+ "timestampMillis": "1610712772253",
+ "buildSummary": {
+  "hardwarePlatform": "xilinx_aws-vu9p-f1_shell-v04261818_201920_2.xpfm",
+  "hardwareDsa": "xilinx_aws-vu9p-f1_shell-v04261818_201920_2.xsa",
+  "platformDirectory": "/home/centos/src/project_data/aws-fpga/Vitis/aws_platform/xilinx_aws-vu9p-f1_shell-v04261818_201920_2",
+  "runtime": "OpenCL",
+  "systemConfig": "Linux",
+  "flow": "BF_COMPILE",
+  "target": "TT_SW_EMU",
+  "kernels": [
+   {
+    "base": {
+     "type": "KERNEL",
+     "name": "canny_accel",
+     "file": "/home/centos/workspace/canny_vision/Emulation-SW/krnl_canny.build/canny_accel.xo",
+     "reports": []
+    },
+    "sources": [
+     "/home/centos/workspace/canny_vision/src/xf_canny_accel.cpp"
+    ],
+    "psSources": [],
+    "cuNames": [],
+    "type": "HLS"
+   }
+  ],
+  "toolVersion": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Fri Jan 15 12:12:52 2021",
+ "timestampMillis": "1610712772257",
+ "buildStep": {
+  "cmdId": "cd05d712-4b5e-448d-9d84-6e9d538cd55a",
+  "name": "vitis_hls",
+  "logFile": "/home/centos/workspace/canny_vision/Emulation-SW/krnl_canny.build/canny_accel/canny_accel/vitis_hls.log",
+  "commandLine": "vitis_hls -f /home/centos/workspace/canny_vision/Emulation-SW/krnl_canny.build/canny_accel/canny_accel/canny_accel.tcl -messageDb vitis_hls.pb",
+  "args": [
+   "vitis_hls",
+   "-f",
+   "/home/centos/workspace/canny_vision/Emulation-SW/krnl_canny.build/canny_accel/canny_accel/canny_accel.tcl",
+   "-messageDb",
+   "vitis_hls.pb"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/centos/workspace/canny_vision/Emulation-SW"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Jan 15 12:12:52 2021",
+ "timestampMillis": "1610712772258",
+ "status": {
+  "cmdId": "cd05d712-4b5e-448d-9d84-6e9d538cd55a",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Jan 15 12:13:58 2021",
+ "timestampMillis": "1610712838673",
+ "status": {
+  "cmdId": "cd05d712-4b5e-448d-9d84-6e9d538cd55a",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Jan 15 12:13:58 2021",
+ "timestampMillis": "1610712838682",
+ "report": {
+  "path": "/home/centos/workspace/canny_vision/Emulation-SW/guidance.html",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Jan 15 12:13:58 2021",
+ "timestampMillis": "1610712838682",
+ "report": {
+  "path": "/home/centos/workspace/canny_vision/Emulation-SW/guidance.pb",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Jan 15 12:13:58 2021",
+ "timestampMillis": "1610712838683",
+ "status": {
+  "cmdId": "32bcdeea-3309-465f-afd8-b6fb13d171bf",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>

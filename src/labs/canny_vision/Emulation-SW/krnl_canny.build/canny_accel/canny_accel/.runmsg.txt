@@ -1,0 +1,2 @@
+performing high-level synthesis for kernel: canny_accel
+Log file: /home/centos/workspace/canny_vision/Emulation-SW/krnl_canny.build/canny_accel/canny_accel/vitis_hls.log
