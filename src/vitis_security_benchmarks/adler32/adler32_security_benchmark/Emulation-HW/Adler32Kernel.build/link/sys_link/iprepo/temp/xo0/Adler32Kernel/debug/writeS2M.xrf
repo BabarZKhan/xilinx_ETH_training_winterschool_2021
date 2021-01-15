@@ -1,0 +1,47 @@
+Begin Function 'writeS2M'
+
+RTL state condition: (1'b1 == ap_CS_fsm_pp0_stage0)
+# ST_3
+local i <phi_63> <integer> <Phi> 'phi' </home/centos/workspace/adler32_security_benchmark/src/kernel/adler32_kernel.cpp:54->/home/centos/workspace/adler32_security_benchmark/src/kernel/adler32_kernel.cpp:63>
+add_ln54 /home/centos/workspace/adler32_security_benchmark/src/kernel/adler32_kernel.cpp:54
+add_ln54 /home/centos/workspace/adler32_security_benchmark/src/kernel/adler32_kernel.cpp:63
+reg: i_reg_111[30:0] lv
+
+local icmp_ln54_1 <icmp_63> <integer> <Comparator> 'icmp' </home/centos/workspace/adler32_security_benchmark/src/kernel/adler32_kernel.cpp:54->/home/centos/workspace/adler32_security_benchmark/src/kernel/adler32_kernel.cpp:63>
+icmp_ln54_1 /home/centos/workspace/adler32_security_benchmark/src/kernel/adler32_kernel.cpp:54
+icmp_ln54_1 /home/centos/workspace/adler32_security_benchmark/src/kernel/adler32_kernel.cpp:63
+reg: icmp_ln54_1_reg_183[0:0] lv
+
+# ST_4
+local inStrm_read <read_145> <integer> <FifoRead> 'read' </opt/Xilinx/Vitis/2020.1/common/technology/autopilot/hls_stream_39.h:145>
+inStrm_read /opt/Xilinx/Vitis/2020.1/common/technology/autopilot/hls_stream_39.h:145
+reg: inStrm_read_reg_192[31:0] lv
+
+
+RTL state condition: (1'b1 == ap_CS_fsm_state1)
+# ST_1
+local n_read <read_53> <integer> <FifoRead> 'read' </home/centos/workspace/adler32_security_benchmark/src/kernel/adler32_kernel.cpp:53>
+n /home/centos/workspace/adler32_security_benchmark/src/kernel/adler32_kernel.cpp:53
+reg: n_read_reg_162[31:0] lv
+
+local icmp_ln54 <icmp_63> <integer> <Comparator> 'icmp' </home/centos/workspace/adler32_security_benchmark/src/kernel/adler32_kernel.cpp:54->/home/centos/workspace/adler32_security_benchmark/src/kernel/adler32_kernel.cpp:63>
+icmp_ln54 /home/centos/workspace/adler32_security_benchmark/src/kernel/adler32_kernel.cpp:54
+icmp_ln54 /home/centos/workspace/adler32_security_benchmark/src/kernel/adler32_kernel.cpp:63
+reg: icmp_ln54_reg_168[0:0] lv
+
+local gmem3_addr <getelementptr_63> <integer> <> 'getelementptr' </home/centos/workspace/adler32_security_benchmark/src/kernel/adler32_kernel.cpp:54->/home/centos/workspace/adler32_security_benchmark/src/kernel/adler32_kernel.cpp:63>
+gmem3_addr /home/centos/workspace/adler32_security_benchmark/src/kernel/adler32_kernel.cpp:54
+gmem3_addr /home/centos/workspace/adler32_security_benchmark/src/kernel/adler32_kernel.cpp:63
+reg: gmem3_addr_reg_172[63:0] lv
+
+
+RTL state condition: (1'b1 == ap_CS_fsm_state2)
+# ST_2
+local trunc_ln54 <trunc_63> <integer> <> 'trunc' </home/centos/workspace/adler32_security_benchmark/src/kernel/adler32_kernel.cpp:54->/home/centos/workspace/adler32_security_benchmark/src/kernel/adler32_kernel.cpp:63>
+trunc_ln54 /home/centos/workspace/adler32_security_benchmark/src/kernel/adler32_kernel.cpp:54
+trunc_ln54 /home/centos/workspace/adler32_security_benchmark/src/kernel/adler32_kernel.cpp:63
+reg: trunc_ln54_reg_178[30:0] lv
+
+
+End Function 'writeS2M'
+

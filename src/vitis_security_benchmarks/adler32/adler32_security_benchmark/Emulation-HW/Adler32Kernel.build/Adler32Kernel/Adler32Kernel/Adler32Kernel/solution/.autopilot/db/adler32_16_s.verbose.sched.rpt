@@ -1,0 +1,518 @@
+
+
+================================================================
+== Vitis HLS Report for 'adler32_16_s'
+================================================================
+* Date:           Thu Jan 14 21:55:37 2021
+
+* Version:        2020.1 (Build 2902540 on Wed May 27 20:16:15 MDT 2020)
+* Project:        Adler32Kernel
+* Solution:       solution (Vitis Kernel Flow Target)
+* Product family: virtexuplus
+* Target device:  xcvu9p-flgb2104-2-i
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+-----------+------------+
+    |  Clock |  Target | Estimated | Uncertainty|
+    +--------+---------+-----------+------------+
+    |ap_clk  | 4.00 ns | 42.940 ns |   1.08 ns  |
+    +--------+---------+-----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        ?|        ?|         ?|         ?|    ?|    ?|   none  |
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +---------------------+---------+---------+-----------+-----------+-----------+--------+----------+
+        |                     |  Latency (cycles) | Iteration |  Initiation Interval  |  Trip  |          |
+        |      Loop Name      |   min   |   max   |  Latency  |  achieved |   target  |  Count | Pipelined|
+        +---------------------+---------+---------+-----------+-----------+-----------+--------+----------+
+        |- VITIS_LOOP_84_1    |        ?|        ?| 115 ~ 130 |          -|          -|       ?|    no    |
+        | + VITIS_LOOP_92_2   |      107|      107|          9|          1|          1|     100|    yes   |
+        | + VITIS_LOOP_131_6  |        3|       18|          5|          1|          1| 0 ~ 15 |    yes   |
+        +---------------------+---------+---------+-----------+-----------+-----------+--------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 9
+  * Pipeline-1: initiation interval (II) = 1, depth = 5
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 18
+* Pipeline : 2
+  Pipeline-0 : II = 1, D = 9, States = { 3 4 5 6 7 8 9 10 11 }
+  Pipeline-1 : II = 1, D = 5, States = { 13 14 15 16 17 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 12 5 
+5 --> 6 
+6 --> 7 
+7 --> 8 
+8 --> 9 
+9 --> 10 
+10 --> 11 
+11 --> 3 
+12 --> 13 
+13 --> 14 
+14 --> 15 
+15 --> 16 
+16 --> 18 17 
+17 --> 13 
+18 --> 2 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.46>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i1 %endOutStrm, void @empty_5, i32, i32, void @empty_3, i32, i32, void @empty_3, void @empty_3, void @empty_3, i32, i32, i32, i32, void @empty_3, void @empty_3"   --->   Operation 19 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %outStrm, void @empty_5, i32, i32, void @empty_3, i32, i32, void @empty_3, void @empty_3, void @empty_3, i32, i32, i32, i32, void @empty_3, void @empty_3"   --->   Operation 20 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i1 %endInLenStrm, void @empty_5, i32, i32, void @empty_3, i32, i32, void @empty_3, void @empty_3, void @empty_3, i32, i32, i32, i32, void @empty_3, void @empty_3"   --->   Operation 21 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %adlerStrm, void @empty_5, i32, i32, void @empty_3, i32, i32, void @empty_3, void @empty_3, void @empty_3, i32, i32, i32, i32, void @empty_3, void @empty_3"   --->   Operation 22 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 23 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %inLenStrm, void @empty_5, i32, i32, void @empty_3, i32, i32, void @empty_3, void @empty_3, void @empty_3, i32, i32, i32, i32, void @empty_3, void @empty_3"   --->   Operation 23 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 24 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i128 %inStrm, void @empty_5, i32, i32, void @empty_3, i32, i32, void @empty_3, void @empty_3, void @empty_3, i32, i32, i32, i32, void @empty_3, void @empty_3"   --->   Operation 24 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 25 [1/1] (1.46ns)   --->   "%tmp_2 = read i1 @_ssdm_op_Read.ap_fifo.volatile.i1P, i1 %endInLenStrm" [/opt/Xilinx/Vitis/2020.1/common/technology/autopilot/hls_stream_39.h:145]   --->   Operation 25 'read' 'tmp_2' <Predicate = true> <Delay = 1.46> <CoreInst = "FIFO_SRL">   --->   Core 21 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.55> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 1> <Depth = 16> <FIFO>
+ST_1 : Operation 26 [1/1] (0.60ns)   --->   "%br_ln84 = br void" [/home/centos/workspace/adler32_security_benchmark/libs/xf_security/L1/include/xf_security/adler32.hpp:84]   --->   Operation 26 'br' 'br_ln84' <Predicate = true> <Delay = 0.60>
+
+State 2 <SV = 1> <Delay = 1.76>
+ST_2 : Operation 27 [1/1] (0.00ns)   --->   "%empty = phi i128, void, i128 %empty_42, void %._crit_edge619.loopexit" [/opt/Xilinx/Vitis/2020.1/common/technology/autopilot/hls_stream_39.h:145]   --->   Operation 27 'phi' 'empty' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 28 [1/1] (0.00ns)   --->   "%e_1 = phi i1 %tmp_2, void, i1 %tmp_3, void %._crit_edge619.loopexit"   --->   Operation 28 'phi' 'e_1' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 29 [1/1] (0.00ns)   --->   "%br_ln84 = br i1 %e_1, void %.lr.ph, void" [/home/centos/workspace/adler32_security_benchmark/libs/xf_security/L1/include/xf_security/adler32.hpp:84]   --->   Operation 29 'br' 'br_ln84' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 30 [1/1] (0.00ns)   --->   "%specloopname_ln0 = specloopname void @_ssdm_op_SpecLoopName, void @empty_8" [/opt/Xilinx/Vitis/2020.1/common/technology/autopilot/hls_stream_39.h:0]   --->   Operation 30 'specloopname' 'specloopname_ln0' <Predicate = (!e_1)> <Delay = 0.00>
+ST_2 : Operation 31 [1/1] (1.46ns)   --->   "%adlerStrm_read = read i32 @_ssdm_op_Read.ap_fifo.volatile.i32P, i32 %adlerStrm" [/opt/Xilinx/Vitis/2020.1/common/technology/autopilot/hls_stream_39.h:145]   --->   Operation 31 'read' 'adlerStrm_read' <Predicate = (!e_1)> <Delay = 1.46> <CoreInst = "FIFO_SRL">   --->   Core 21 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.55> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 16> <FIFO>
+ST_2 : Operation 32 [1/1] (0.00ns)   --->   "%trunc_ln0 = trunc i32 %adlerStrm_read" [/opt/Xilinx/Vitis/2020.1/common/technology/autopilot/hls_stream_39.h:0]   --->   Operation 32 'trunc' 'trunc_ln0' <Predicate = (!e_1)> <Delay = 0.00>
+ST_2 : Operation 33 [1/1] (1.46ns)   --->   "%inLenStrm_read = read i32 @_ssdm_op_Read.ap_fifo.volatile.i32P, i32 %inLenStrm" [/opt/Xilinx/Vitis/2020.1/common/technology/autopilot/hls_stream_39.h:145]   --->   Operation 33 'read' 'inLenStrm_read' <Predicate = (!e_1)> <Delay = 1.46> <CoreInst = "FIFO_SRL">   --->   Core 21 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.55> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 16> <FIFO>
+ST_2 : Operation 34 [1/1] (0.00ns)   --->   "%trunc_ln0_1 = trunc i32 %inLenStrm_read" [/opt/Xilinx/Vitis/2020.1/common/technology/autopilot/hls_stream_39.h:0]   --->   Operation 34 'trunc' 'trunc_ln0_1' <Predicate = (!e_1)> <Delay = 0.00>
+ST_2 : Operation 35 [1/1] (1.46ns)   --->   "%tmp_3 = read i1 @_ssdm_op_Read.ap_fifo.volatile.i1P, i1 %endInLenStrm, i1 %tmp_2" [/opt/Xilinx/Vitis/2020.1/common/technology/autopilot/hls_stream_39.h:145]   --->   Operation 35 'read' 'tmp_3' <Predicate = (!e_1)> <Delay = 1.46> <CoreInst = "FIFO_SRL">   --->   Core 21 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.55> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 1> <Depth = 16> <FIFO>
+ST_2 : Operation 36 [1/1] (0.00ns)   --->   "%zext_ln1501 = zext i16 %trunc_ln0"   --->   Operation 36 'zext' 'zext_ln1501' <Predicate = (!e_1)> <Delay = 0.00>
+ST_2 : Operation 37 [1/1] (0.00ns)   --->   "%lshr_ln = partselect i16 @_ssdm_op_PartSelect.i16.i32.i32.i32, i32 %adlerStrm_read, i32, i32"   --->   Operation 37 'partselect' 'lshr_ln' <Predicate = (!e_1)> <Delay = 0.00>
+ST_2 : Operation 38 [1/1] (0.00ns)   --->   "%zext_ln1501_1 = zext i16 %lshr_ln"   --->   Operation 38 'zext' 'zext_ln1501_1' <Predicate = (!e_1)> <Delay = 0.00>
+ST_2 : Operation 39 [1/1] (0.00ns)   --->   "%div_i_i_cast = partselect i28 @_ssdm_op_PartSelect.i28.i32.i32.i32, i32 %inLenStrm_read, i32, i32" [/opt/Xilinx/Vitis/2020.1/common/technology/autopilot/hls_stream_39.h:145]   --->   Operation 39 'partselect' 'div_i_i_cast' <Predicate = (!e_1)> <Delay = 0.00>
+ST_2 : Operation 40 [1/1] (0.60ns)   --->   "%br_ln92 = br void" [/home/centos/workspace/adler32_security_benchmark/libs/xf_security/L1/include/xf_security/adler32.hpp:92]   --->   Operation 40 'br' 'br_ln92' <Predicate = (!e_1)> <Delay = 0.60>
+ST_2 : Operation 41 [1/1] (1.46ns)   --->   "%write_ln167 = write void @_ssdm_op_Write.ap_fifo.volatile.i1P, i1 %endOutStrm, i1" [/opt/Xilinx/Vitis/2020.1/common/technology/autopilot/hls_stream_39.h:167]   --->   Operation 41 'write' 'write_ln167' <Predicate = (e_1)> <Delay = 1.46> <CoreInst = "FIFO_SRL">   --->   Core 21 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.55> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 1> <Depth = 16> <FIFO>
+ST_2 : Operation 42 [1/1] (0.00ns)   --->   "%ret_ln146 = ret" [/home/centos/workspace/adler32_security_benchmark/libs/xf_security/L1/include/xf_security/adler32.hpp:146]   --->   Operation 42 'ret' 'ret_ln146' <Predicate = (e_1)> <Delay = 0.00>
+
+State 3 <SV = 2> <Delay = 0.85>
+ST_3 : Operation 43 [1/1] (0.00ns)   --->   "%empty_40 = phi i28, void %.lr.ph, i28 %add_ln695_20, void %.loopexit"   --->   Operation 43 'phi' 'empty_40' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 44 [1/1] (0.81ns)   --->   "%icmp_ln92 = icmp_eq  i28 %empty_40, i28 %div_i_i_cast" [/home/centos/workspace/adler32_security_benchmark/libs/xf_security/L1/include/xf_security/adler32.hpp:92]   --->   Operation 44 'icmp' 'icmp_ln92' <Predicate = true> <Delay = 0.81> <CoreInst = "Cmp">   --->   Core 10 'Cmp' <Latency = 0> <II = 1> <Delay = 0.85> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 45 [1/1] (0.85ns)   --->   "%add_ln695_20 = add i28 %empty_40, i28"   --->   Operation 45 'add' 'add_ln695_20' <Predicate = true> <Delay = 0.85> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.88> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 46 [1/1] (0.00ns)   --->   "%br_ln92 = br i1 %icmp_ln92, void %.split34, void %._crit_edge.loopexit.preheader" [/home/centos/workspace/adler32_security_benchmark/libs/xf_security/L1/include/xf_security/adler32.hpp:92]   --->   Operation 46 'br' 'br_ln92' <Predicate = true> <Delay = 0.00>
+
+State 4 <SV = 3> <Delay = 2.85>
+ST_4 : Operation 47 [1/1] (0.00ns)   --->   "%empty_41 = phi i32 %zext_ln1501, void %.lr.ph, i32 %select_ln128, void %.loopexit"   --->   Operation 47 'phi' 'empty_41' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 48 [1/1] (0.00ns)   --->   "%conv3_i461577 = phi i32 %zext_ln1501_1, void %.lr.ph, i32 %conv3_i462, void %.loopexit"   --->   Operation 48 'phi' 'conv3_i461577' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 49 [1/1] (0.00ns)   --->   "%p_phi = phi i128 %empty, void %.lr.ph, i128 %p_Val2_s, void %.loopexit"   --->   Operation 49 'phi' 'p_phi' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 50 [1/1] (1.43ns)   --->   "%p_Val2_s = read i128 @_ssdm_op_Read.ap_fifo.volatile.i128P, i128 %inStrm" [/opt/Xilinx/Vitis/2020.1/common/technology/autopilot/hls_stream_39.h:145]   --->   Operation 50 'read' 'p_Val2_s' <Predicate = (!icmp_ln92)> <Delay = 1.43> <CoreInst = "FIFO">   --->   Core 18 'FIFO' <Latency = 0> <II = 1> <Delay = 1.43> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 128> <Depth = 16> <FIFO>
+ST_4 : Operation 51 [1/1] (0.00ns)   --->   "%trunc_ln674 = trunc i128 %p_Val2_s"   --->   Operation 51 'trunc' 'trunc_ln674' <Predicate = (!icmp_ln92)> <Delay = 0.00>
+ST_4 : Operation 52 [1/1] (0.00ns)   --->   "%zext_ln674 = zext i8 %trunc_ln674"   --->   Operation 52 'zext' 'zext_ln674' <Predicate = (!icmp_ln92)> <Delay = 0.00>
+ST_4 : Operation 53 [1/1] (0.00ns)   --->   "%p_Result_1_1 = partselect i8 @_ssdm_op_PartSelect.i8.i128.i32.i32, i128 %p_Val2_s, i32, i32"   --->   Operation 53 'partselect' 'p_Result_1_1' <Predicate = (!icmp_ln92)> <Delay = 0.00>
+ST_4 : Operation 54 [1/1] (0.00ns)   --->   "%zext_ln695_2 = zext i8 %p_Result_1_1"   --->   Operation 54 'zext' 'zext_ln695_2' <Predicate = (!icmp_ln92)> <Delay = 0.00>
+ST_4 : Operation 55 [1/1] (0.70ns)   --->   "%add_ln695 = add i9 %zext_ln674, i9 %zext_ln695_2"   --->   Operation 55 'add' 'add_ln695' <Predicate = (!icmp_ln92)> <Delay = 0.70> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.88> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 56 [1/1] (0.00ns)   --->   "%zext_ln674_1 = zext i9 %add_ln695"   --->   Operation 56 'zext' 'zext_ln674_1' <Predicate = (!icmp_ln92)> <Delay = 0.00>
+ST_4 : Operation 57 [1/1] (0.00ns)   --->   "%p_Result_3_2 = partselect i8 @_ssdm_op_PartSelect.i8.i128.i32.i32, i128 %p_Val2_s, i32, i32"   --->   Operation 57 'partselect' 'p_Result_3_2' <Predicate = (!icmp_ln92)> <Delay = 0.00>
+ST_4 : Operation 58 [1/1] (0.00ns)   --->   "%zext_ln695_3 = zext i8 %p_Result_3_2"   --->   Operation 58 'zext' 'zext_ln695_3' <Predicate = (!icmp_ln92)> <Delay = 0.00>
+ST_4 : Operation 59 [1/1] (0.71ns)   --->   "%add_ln695_3 = add i10 %zext_ln674_1, i10 %zext_ln695_3"   --->   Operation 59 'add' 'add_ln695_3' <Predicate = (!icmp_ln92)> <Delay = 0.71> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.88> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 60 [1/1] (0.00ns)   --->   "%p_Result_4_3 = partselect i8 @_ssdm_op_PartSelect.i8.i128.i32.i32, i128 %p_Val2_s, i32, i32"   --->   Operation 60 'partselect' 'p_Result_4_3' <Predicate = (!icmp_ln92)> <Delay = 0.00>
+ST_4 : Operation 61 [1/1] (0.00ns)   --->   "%p_Result_5_4 = partselect i8 @_ssdm_op_PartSelect.i8.i128.i32.i32, i128 %p_Val2_s, i32, i32"   --->   Operation 61 'partselect' 'p_Result_5_4' <Predicate = (!icmp_ln92)> <Delay = 0.00>
+ST_4 : Operation 62 [1/1] (0.00ns)   --->   "%p_Result_6_5 = partselect i8 @_ssdm_op_PartSelect.i8.i128.i32.i32, i128 %p_Val2_s, i32, i32"   --->   Operation 62 'partselect' 'p_Result_6_5' <Predicate = (!icmp_ln92)> <Delay = 0.00>
+ST_4 : Operation 63 [1/1] (0.00ns)   --->   "%p_Result_7_6 = partselect i8 @_ssdm_op_PartSelect.i8.i128.i32.i32, i128 %p_Val2_s, i32, i32"   --->   Operation 63 'partselect' 'p_Result_7_6' <Predicate = (!icmp_ln92)> <Delay = 0.00>
+ST_4 : Operation 64 [1/1] (0.00ns)   --->   "%p_Result_8_7 = partselect i8 @_ssdm_op_PartSelect.i8.i128.i32.i32, i128 %p_Val2_s, i32, i32"   --->   Operation 64 'partselect' 'p_Result_8_7' <Predicate = (!icmp_ln92)> <Delay = 0.00>
+ST_4 : Operation 65 [1/1] (0.00ns)   --->   "%p_Result_9_8 = partselect i8 @_ssdm_op_PartSelect.i8.i128.i32.i32, i128 %p_Val2_s, i32, i32"   --->   Operation 65 'partselect' 'p_Result_9_8' <Predicate = (!icmp_ln92)> <Delay = 0.00>
+ST_4 : Operation 66 [1/1] (0.00ns)   --->   "%p_Result_10_9 = partselect i8 @_ssdm_op_PartSelect.i8.i128.i32.i32, i128 %p_Val2_s, i32, i32"   --->   Operation 66 'partselect' 'p_Result_10_9' <Predicate = (!icmp_ln92)> <Delay = 0.00>
+ST_4 : Operation 67 [1/1] (0.00ns)   --->   "%p_Result_11_s = partselect i8 @_ssdm_op_PartSelect.i8.i128.i32.i32, i128 %p_Val2_s, i32, i32"   --->   Operation 67 'partselect' 'p_Result_11_s' <Predicate = (!icmp_ln92)> <Delay = 0.00>
+ST_4 : Operation 68 [1/1] (0.00ns)   --->   "%p_Result_12_s = partselect i8 @_ssdm_op_PartSelect.i8.i128.i32.i32, i128 %p_Val2_s, i32, i32"   --->   Operation 68 'partselect' 'p_Result_12_s' <Predicate = (!icmp_ln92)> <Delay = 0.00>
+ST_4 : Operation 69 [1/1] (0.00ns)   --->   "%p_Result_13_s = partselect i8 @_ssdm_op_PartSelect.i8.i128.i32.i32, i128 %p_Val2_s, i32, i32"   --->   Operation 69 'partselect' 'p_Result_13_s' <Predicate = (!icmp_ln92)> <Delay = 0.00>
+ST_4 : Operation 70 [1/1] (0.00ns)   --->   "%p_Result_14_s = partselect i8 @_ssdm_op_PartSelect.i8.i128.i32.i32, i128 %p_Val2_s, i32, i32"   --->   Operation 70 'partselect' 'p_Result_14_s' <Predicate = (!icmp_ln92)> <Delay = 0.00>
+ST_4 : Operation 71 [1/1] (0.00ns)   --->   "%p_Result_15_s = partselect i8 @_ssdm_op_PartSelect.i8.i128.i32.i32, i128 %p_Val2_s, i32, i32"   --->   Operation 71 'partselect' 'p_Result_15_s' <Predicate = (!icmp_ln92)> <Delay = 0.00>
+ST_4 : Operation 72 [1/1] (0.00ns)   --->   "%p_Result_16_s = partselect i8 @_ssdm_op_PartSelect.i8.i128.i32.i32, i128 %p_Val2_s, i32, i32"   --->   Operation 72 'partselect' 'p_Result_16_s' <Predicate = (!icmp_ln92)> <Delay = 0.00>
+ST_4 : Operation 73 [1/1] (0.00ns)   --->   "%zext_ln215 = zext i8 %trunc_ln674"   --->   Operation 73 'zext' 'zext_ln215' <Predicate = (!icmp_ln92)> <Delay = 0.00>
+ST_4 : Operation 74 [1/1] (0.71ns)   --->   "%add_ln1350 = add i10 %zext_ln674_1, i10 %zext_ln215"   --->   Operation 74 'add' 'add_ln1350' <Predicate = (!icmp_ln92)> <Delay = 0.71> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.88> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+
+State 5 <SV = 4> <Delay = 2.92>
+ST_5 : Operation 75 [1/1] (0.00ns)   --->   "%zext_ln695_4 = zext i8 %p_Result_4_3"   --->   Operation 75 'zext' 'zext_ln695_4' <Predicate = (!icmp_ln92)> <Delay = 0.00>
+ST_5 : Operation 76 [1/1] (0.72ns)   --->   "%add_ln695_4 = add i10 %add_ln695_3, i10 %zext_ln695_4"   --->   Operation 76 'add' 'add_ln695_4' <Predicate = (!icmp_ln92)> <Delay = 0.72> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.88> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 77 [1/1] (0.00ns)   --->   "%zext_ln674_2 = zext i10 %add_ln695_4"   --->   Operation 77 'zext' 'zext_ln674_2' <Predicate = (!icmp_ln92)> <Delay = 0.00>
+ST_5 : Operation 78 [1/1] (0.00ns)   --->   "%zext_ln695_5 = zext i8 %p_Result_5_4"   --->   Operation 78 'zext' 'zext_ln695_5' <Predicate = (!icmp_ln92)> <Delay = 0.00>
+ST_5 : Operation 79 [1/1] (0.72ns)   --->   "%add_ln695_5 = add i11 %zext_ln674_2, i11 %zext_ln695_5"   --->   Operation 79 'add' 'add_ln695_5' <Predicate = (!icmp_ln92)> <Delay = 0.72> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.88> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 80 [1/1] (0.00ns)   --->   "%zext_ln695_6 = zext i8 %p_Result_6_5"   --->   Operation 80 'zext' 'zext_ln695_6' <Predicate = (!icmp_ln92)> <Delay = 0.00>
+ST_5 : Operation 81 [1/1] (0.73ns)   --->   "%add_ln695_6 = add i11 %add_ln695_5, i11 %zext_ln695_6"   --->   Operation 81 'add' 'add_ln695_6' <Predicate = (!icmp_ln92)> <Delay = 0.73> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.88> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 82 [1/1] (0.00ns)   --->   "%zext_ln695_7 = zext i8 %p_Result_7_6"   --->   Operation 82 'zext' 'zext_ln695_7' <Predicate = (!icmp_ln92)> <Delay = 0.00>
+ST_5 : Operation 83 [1/1] (0.73ns)   --->   "%add_ln695_7 = add i11 %add_ln695_6, i11 %zext_ln695_7"   --->   Operation 83 'add' 'add_ln695_7' <Predicate = (!icmp_ln92)> <Delay = 0.73> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.88> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 84 [1/1] (0.00ns)   --->   "%zext_ln215_1 = zext i10 %add_ln695_3"   --->   Operation 84 'zext' 'zext_ln215_1' <Predicate = (!icmp_ln92)> <Delay = 0.00>
+ST_5 : Operation 85 [1/1] (0.72ns)   --->   "%add_ln1350_1 = add i11 %zext_ln674_2, i11 %zext_ln215_1"   --->   Operation 85 'add' 'add_ln1350_1' <Predicate = (!icmp_ln92)> <Delay = 0.72> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.88> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 86 [1/1] (0.00ns)   --->   "%zext_ln215_2 = zext i11 %add_ln695_5"   --->   Operation 86 'zext' 'zext_ln215_2' <Predicate = (!icmp_ln92)> <Delay = 0.00>
+ST_5 : Operation 87 [1/1] (0.00ns)   --->   "%zext_ln1350 = zext i11 %add_ln695_6"   --->   Operation 87 'zext' 'zext_ln1350' <Predicate = (!icmp_ln92)> <Delay = 0.00>
+ST_5 : Operation 88 [1/1] (0.73ns)   --->   "%add_ln1350_2 = add i12 %zext_ln1350, i12 %zext_ln215_2"   --->   Operation 88 'add' 'add_ln1350_2' <Predicate = (!icmp_ln92)> <Delay = 0.73> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.88> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 89 [1/1] (0.00ns)   --->   "%zext_ln215_12 = zext i10 %add_ln1350"   --->   Operation 89 'zext' 'zext_ln215_12' <Predicate = (!icmp_ln92)> <Delay = 0.00>
+ST_5 : Operation 90 [1/1] (0.00ns)   --->   "%zext_ln1350_1 = zext i11 %add_ln1350_1"   --->   Operation 90 'zext' 'zext_ln1350_1' <Predicate = (!icmp_ln92)> <Delay = 0.00>
+ST_5 : Operation 91 [1/1] (0.73ns)   --->   "%add_ln1350_8 = add i12 %zext_ln1350_1, i12 %zext_ln215_12"   --->   Operation 91 'add' 'add_ln1350_8' <Predicate = (!icmp_ln92)> <Delay = 0.73> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.88> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+
+State 6 <SV = 5> <Delay = 2.21>
+ST_6 : Operation 92 [1/1] (0.00ns)   --->   "%zext_ln695_8 = zext i8 %p_Result_8_7"   --->   Operation 92 'zext' 'zext_ln695_8' <Predicate = (!icmp_ln92)> <Delay = 0.00>
+ST_6 : Operation 93 [1/1] (0.73ns)   --->   "%add_ln695_8 = add i11 %add_ln695_7, i11 %zext_ln695_8"   --->   Operation 93 'add' 'add_ln695_8' <Predicate = (!icmp_ln92)> <Delay = 0.73> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.88> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 94 [1/1] (0.00ns)   --->   "%zext_ln674_3 = zext i11 %add_ln695_8"   --->   Operation 94 'zext' 'zext_ln674_3' <Predicate = (!icmp_ln92)> <Delay = 0.00>
+ST_6 : Operation 95 [1/1] (0.00ns)   --->   "%zext_ln695_9 = zext i8 %p_Result_9_8"   --->   Operation 95 'zext' 'zext_ln695_9' <Predicate = (!icmp_ln92)> <Delay = 0.00>
+ST_6 : Operation 96 [1/1] (0.73ns)   --->   "%add_ln695_9 = add i12 %zext_ln674_3, i12 %zext_ln695_9"   --->   Operation 96 'add' 'add_ln695_9' <Predicate = (!icmp_ln92)> <Delay = 0.73> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.88> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 97 [1/1] (0.00ns)   --->   "%zext_ln695_10 = zext i8 %p_Result_10_9"   --->   Operation 97 'zext' 'zext_ln695_10' <Predicate = (!icmp_ln92)> <Delay = 0.00>
+ST_6 : Operation 98 [1/1] (0.74ns)   --->   "%add_ln695_10 = add i12 %add_ln695_9, i12 %zext_ln695_10"   --->   Operation 98 'add' 'add_ln695_10' <Predicate = (!icmp_ln92)> <Delay = 0.74> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.88> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 99 [1/1] (0.00ns)   --->   "%zext_ln215_3 = zext i11 %add_ln695_7"   --->   Operation 99 'zext' 'zext_ln215_3' <Predicate = (!icmp_ln92)> <Delay = 0.00>
+ST_6 : Operation 100 [1/1] (0.73ns)   --->   "%add_ln1350_3 = add i12 %zext_ln674_3, i12 %zext_ln215_3"   --->   Operation 100 'add' 'add_ln1350_3' <Predicate = (!icmp_ln92)> <Delay = 0.73> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.88> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 101 [1/1] (0.00ns)   --->   "%zext_ln215_13 = zext i12 %add_ln1350_2"   --->   Operation 101 'zext' 'zext_ln215_13' <Predicate = (!icmp_ln92)> <Delay = 0.00>
+ST_6 : Operation 102 [1/1] (0.00ns)   --->   "%zext_ln1350_2 = zext i12 %add_ln1350_3"   --->   Operation 102 'zext' 'zext_ln1350_2' <Predicate = (!icmp_ln92)> <Delay = 0.00>
+ST_6 : Operation 103 [1/1] (0.74ns)   --->   "%add_ln1350_9 = add i13 %zext_ln1350_2, i13 %zext_ln215_13"   --->   Operation 103 'add' 'add_ln1350_9' <Predicate = (!icmp_ln92)> <Delay = 0.74> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.88> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+
+State 7 <SV = 6> <Delay = 2.23>
+ST_7 : Operation 104 [1/1] (0.00ns)   --->   "%zext_ln695_11 = zext i8 %p_Result_11_s"   --->   Operation 104 'zext' 'zext_ln695_11' <Predicate = (!icmp_ln92)> <Delay = 0.00>
+ST_7 : Operation 105 [1/1] (0.74ns)   --->   "%add_ln695_11 = add i12 %add_ln695_10, i12 %zext_ln695_11"   --->   Operation 105 'add' 'add_ln695_11' <Predicate = (!icmp_ln92)> <Delay = 0.74> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.88> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 106 [1/1] (0.00ns)   --->   "%zext_ln695_12 = zext i8 %p_Result_12_s"   --->   Operation 106 'zext' 'zext_ln695_12' <Predicate = (!icmp_ln92)> <Delay = 0.00>
+ST_7 : Operation 107 [1/1] (0.74ns)   --->   "%add_ln695_12 = add i12 %add_ln695_11, i12 %zext_ln695_12"   --->   Operation 107 'add' 'add_ln695_12' <Predicate = (!icmp_ln92)> <Delay = 0.74> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.88> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 108 [1/1] (0.00ns)   --->   "%zext_ln695_13 = zext i8 %p_Result_13_s"   --->   Operation 108 'zext' 'zext_ln695_13' <Predicate = (!icmp_ln92)> <Delay = 0.00>
+ST_7 : Operation 109 [1/1] (0.74ns)   --->   "%add_ln695_13 = add i12 %add_ln695_12, i12 %zext_ln695_13"   --->   Operation 109 'add' 'add_ln695_13' <Predicate = (!icmp_ln92)> <Delay = 0.74> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.88> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 110 [1/1] (0.00ns)   --->   "%zext_ln215_4 = zext i12 %add_ln695_9"   --->   Operation 110 'zext' 'zext_ln215_4' <Predicate = (!icmp_ln92)> <Delay = 0.00>
+ST_7 : Operation 111 [1/1] (0.00ns)   --->   "%zext_ln215_5 = zext i12 %add_ln695_10"   --->   Operation 111 'zext' 'zext_ln215_5' <Predicate = (!icmp_ln92)> <Delay = 0.00>
+ST_7 : Operation 112 [1/1] (0.74ns)   --->   "%add_ln1350_4 = add i13 %zext_ln215_5, i13 %zext_ln215_4"   --->   Operation 112 'add' 'add_ln1350_4' <Predicate = (!icmp_ln92)> <Delay = 0.74> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.88> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 113 [1/1] (0.00ns)   --->   "%zext_ln215_6 = zext i12 %add_ln695_11"   --->   Operation 113 'zext' 'zext_ln215_6' <Predicate = (!icmp_ln92)> <Delay = 0.00>
+ST_7 : Operation 114 [1/1] (0.00ns)   --->   "%zext_ln215_7 = zext i12 %add_ln695_12"   --->   Operation 114 'zext' 'zext_ln215_7' <Predicate = (!icmp_ln92)> <Delay = 0.00>
+ST_7 : Operation 115 [1/1] (0.74ns)   --->   "%add_ln1350_5 = add i13 %zext_ln215_7, i13 %zext_ln215_6"   --->   Operation 115 'add' 'add_ln1350_5' <Predicate = (!icmp_ln92)> <Delay = 0.74> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.88> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 116 [1/1] (0.00ns)   --->   "%zext_ln215_18 = zext i12 %add_ln1350_8"   --->   Operation 116 'zext' 'zext_ln215_18' <Predicate = (!icmp_ln92)> <Delay = 0.00>
+ST_7 : Operation 117 [1/1] (0.00ns)   --->   "%zext_ln1350_3 = zext i13 %add_ln1350_9"   --->   Operation 117 'zext' 'zext_ln1350_3' <Predicate = (!icmp_ln92)> <Delay = 0.00>
+ST_7 : Operation 118 [1/1] (0.75ns)   --->   "%add_ln1350_12 = add i14 %zext_ln1350_3, i14 %zext_ln215_18"   --->   Operation 118 'add' 'add_ln1350_12' <Predicate = (!icmp_ln92)> <Delay = 0.75> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.88> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+
+State 8 <SV = 7> <Delay = 2.23>
+ST_8 : Operation 119 [1/1] (0.00ns)   --->   "%zext_ln695_14 = zext i8 %p_Result_14_s"   --->   Operation 119 'zext' 'zext_ln695_14' <Predicate = (!icmp_ln92)> <Delay = 0.00>
+ST_8 : Operation 120 [1/1] (0.74ns)   --->   "%add_ln695_14 = add i12 %add_ln695_13, i12 %zext_ln695_14"   --->   Operation 120 'add' 'add_ln695_14' <Predicate = (!icmp_ln92)> <Delay = 0.74> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.88> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 121 [1/1] (0.00ns)   --->   "%zext_ln695_15 = zext i8 %p_Result_15_s"   --->   Operation 121 'zext' 'zext_ln695_15' <Predicate = (!icmp_ln92)> <Delay = 0.00>
+ST_8 : Operation 122 [1/1] (0.74ns)   --->   "%add_ln695_15 = add i12 %add_ln695_14, i12 %zext_ln695_15"   --->   Operation 122 'add' 'add_ln695_15' <Predicate = (!icmp_ln92)> <Delay = 0.74> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.88> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 123 [1/1] (0.00ns)   --->   "%zext_ln695_16 = zext i8 %p_Result_16_s"   --->   Operation 123 'zext' 'zext_ln695_16' <Predicate = (!icmp_ln92)> <Delay = 0.00>
+ST_8 : Operation 124 [1/1] (0.74ns)   --->   "%add_ln695_16 = add i12 %add_ln695_15, i12 %zext_ln695_16"   --->   Operation 124 'add' 'add_ln695_16' <Predicate = (!icmp_ln92)> <Delay = 0.74> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.88> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 125 [1/1] (0.00ns)   --->   "%zext_ln215_8 = zext i12 %add_ln695_13"   --->   Operation 125 'zext' 'zext_ln215_8' <Predicate = (!icmp_ln92)> <Delay = 0.00>
+ST_8 : Operation 126 [1/1] (0.00ns)   --->   "%zext_ln215_9 = zext i12 %add_ln695_14"   --->   Operation 126 'zext' 'zext_ln215_9' <Predicate = (!icmp_ln92)> <Delay = 0.00>
+ST_8 : Operation 127 [1/1] (0.74ns)   --->   "%add_ln1350_6 = add i13 %zext_ln215_9, i13 %zext_ln215_8"   --->   Operation 127 'add' 'add_ln1350_6' <Predicate = (!icmp_ln92)> <Delay = 0.74> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.88> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 128 [1/1] (0.00ns)   --->   "%zext_ln215_14 = zext i13 %add_ln1350_4"   --->   Operation 128 'zext' 'zext_ln215_14' <Predicate = (!icmp_ln92)> <Delay = 0.00>
+ST_8 : Operation 129 [1/1] (0.00ns)   --->   "%zext_ln215_15 = zext i13 %add_ln1350_5"   --->   Operation 129 'zext' 'zext_ln215_15' <Predicate = (!icmp_ln92)> <Delay = 0.00>
+ST_8 : Operation 130 [1/1] (0.75ns)   --->   "%add_ln1350_10 = add i14 %zext_ln215_15, i14 %zext_ln215_14"   --->   Operation 130 'add' 'add_ln1350_10' <Predicate = (!icmp_ln92)> <Delay = 0.75> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.88> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+
+State 9 <SV = 8> <Delay = 2.26>
+ST_9 : Operation 131 [1/1] (0.00ns)   --->   "%shl_ln695 = shl i32 %empty_41, i32"   --->   Operation 131 'shl' 'shl_ln695' <Predicate = (!icmp_ln92)> <Delay = 0.00>
+ST_9 : Operation 132 [1/1] (0.00ns)   --->   "%zext_ln215_10 = zext i12 %add_ln695_15"   --->   Operation 132 'zext' 'zext_ln215_10' <Predicate = (!icmp_ln92)> <Delay = 0.00>
+ST_9 : Operation 133 [1/1] (0.00ns)   --->   "%zext_ln215_11 = zext i12 %add_ln695_16"   --->   Operation 133 'zext' 'zext_ln215_11' <Predicate = (!icmp_ln92)> <Delay = 0.00>
+ST_9 : Operation 134 [1/1] (0.74ns)   --->   "%add_ln1350_7 = add i13 %zext_ln215_11, i13 %zext_ln215_10"   --->   Operation 134 'add' 'add_ln1350_7' <Predicate = (!icmp_ln92)> <Delay = 0.74> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.88> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 135 [1/1] (0.00ns)   --->   "%zext_ln215_16 = zext i13 %add_ln1350_6"   --->   Operation 135 'zext' 'zext_ln215_16' <Predicate = (!icmp_ln92)> <Delay = 0.00>
+ST_9 : Operation 136 [1/1] (0.00ns)   --->   "%zext_ln215_17 = zext i13 %add_ln1350_7"   --->   Operation 136 'zext' 'zext_ln215_17' <Predicate = (!icmp_ln92)> <Delay = 0.00>
+ST_9 : Operation 137 [1/1] (0.75ns)   --->   "%add_ln1350_11 = add i14 %zext_ln215_17, i14 %zext_ln215_16"   --->   Operation 137 'add' 'add_ln1350_11' <Predicate = (!icmp_ln92)> <Delay = 0.75> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.88> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 138 [1/1] (0.00ns)   --->   "%zext_ln215_19 = zext i14 %add_ln1350_10"   --->   Operation 138 'zext' 'zext_ln215_19' <Predicate = (!icmp_ln92)> <Delay = 0.00>
+ST_9 : Operation 139 [1/1] (0.00ns)   --->   "%zext_ln215_20 = zext i14 %add_ln1350_11"   --->   Operation 139 'zext' 'zext_ln215_20' <Predicate = (!icmp_ln92)> <Delay = 0.00>
+ST_9 : Operation 140 [1/1] (0.76ns)   --->   "%add_ln1350_13 = add i15 %zext_ln215_20, i15 %zext_ln215_19"   --->   Operation 140 'add' 'add_ln1350_13' <Predicate = (!icmp_ln92)> <Delay = 0.76> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.88> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 141 [1/1] (0.00ns)   --->   "%zext_ln695_1 = zext i12 %add_ln695_16"   --->   Operation 141 'zext' 'zext_ln695_1' <Predicate = (!icmp_ln92)> <Delay = 0.00>
+ST_9 : Operation 142 [1/1] (0.88ns)   --->   "%add_ln695_19 = add i32 %empty_41, i32 %zext_ln695_1"   --->   Operation 142 'add' 'add_ln695_19' <Predicate = (!icmp_ln92)> <Delay = 0.88> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.88> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 143 [1/1] (0.85ns)   --->   "%icmp_ln886_3 = icmp_ugt  i32 %add_ln695_19, i32"   --->   Operation 143 'icmp' 'icmp_ln886_3' <Predicate = (!icmp_ln92)> <Delay = 0.85> <CoreInst = "Cmp">   --->   Core 10 'Cmp' <Latency = 0> <II = 1> <Delay = 0.85> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 144 [1/1] (0.88ns)   --->   "%add_ln696_2 = add i32 %add_ln695_19, i32"   --->   Operation 144 'add' 'add_ln696_2' <Predicate = (!icmp_ln92)> <Delay = 0.88> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.88> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 145 [1/1] (0.22ns)   --->   "%select_ln128 = select i1 %icmp_ln886_3, i32 %add_ln696_2, i32 %add_ln695_19" [/home/centos/workspace/adler32_security_benchmark/libs/xf_security/L1/include/xf_security/adler32.hpp:128]   --->   Operation 145 'select' 'select_ln128' <Predicate = (!icmp_ln92)> <Delay = 0.22> <CoreInst = "Sel">   --->   Core 11 'Sel' <Latency = 0> <II = 1> <Delay = 0.22> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+
+State 10 <SV = 9> <Delay = 42.9>
+ST_10 : Operation 146 [1/1] (0.00ns)   --->   "%specpipeline_ln0 = specpipeline void @_ssdm_op_SpecPipeline, i32, i32, i32, i32, void @empty_3" [/opt/Xilinx/Vitis/2020.1/common/technology/autopilot/hls_stream_39.h:0]   --->   Operation 146 'specpipeline' 'specpipeline_ln0' <Predicate = (!icmp_ln92)> <Delay = 0.00>
+ST_10 : Operation 147 [1/1] (0.00ns)   --->   "%speclooptripcount_ln0 = speclooptripcount void @_ssdm_op_SpecLoopTripCount, i64, i64, i64" [/opt/Xilinx/Vitis/2020.1/common/technology/autopilot/hls_stream_39.h:0]   --->   Operation 147 'speclooptripcount' 'speclooptripcount_ln0' <Predicate = (!icmp_ln92)> <Delay = 0.00>
+ST_10 : Operation 148 [1/1] (0.00ns)   --->   "%specloopname_ln0 = specloopname void @_ssdm_op_SpecLoopName, void @empty_21" [/opt/Xilinx/Vitis/2020.1/common/technology/autopilot/hls_stream_39.h:0]   --->   Operation 148 'specloopname' 'specloopname_ln0' <Predicate = (!icmp_ln92)> <Delay = 0.00>
+ST_10 : Operation 149 [1/1] (0.00ns)   --->   "%zext_ln215_21 = zext i14 %add_ln1350_12"   --->   Operation 149 'zext' 'zext_ln215_21' <Predicate = (!icmp_ln92)> <Delay = 0.00>
+ST_10 : Operation 150 [1/1] (0.00ns)   --->   "%zext_ln215_22 = zext i15 %add_ln1350_13"   --->   Operation 150 'zext' 'zext_ln215_22' <Predicate = (!icmp_ln92)> <Delay = 0.00>
+ST_10 : Operation 151 [1/1] (0.77ns)   --->   "%add_ln1350_14 = add i16 %zext_ln215_22, i16 %zext_ln215_21"   --->   Operation 151 'add' 'add_ln1350_14' <Predicate = (!icmp_ln92)> <Delay = 0.77> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.88> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 152 [1/1] (0.00ns)   --->   "%zext_ln695 = zext i16 %add_ln1350_14"   --->   Operation 152 'zext' 'zext_ln695' <Predicate = (!icmp_ln92)> <Delay = 0.00>
+ST_10 : Operation 153 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%add_ln695_18 = add i32 %shl_ln695, i32 %zext_ln695"   --->   Operation 153 'add' 'add_ln695_18' <Predicate = (!icmp_ln92)> <Delay = 0.00> <CoreInst = "TAddSub">   --->   Core 3 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.36> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync>
+ST_10 : Operation 154 [1/1] (0.73ns) (root node of TernaryAdder)   --->   "%add_ln695_17 = add i32 %add_ln695_18, i32 %conv3_i461577"   --->   Operation 154 'add' 'add_ln695_17' <Predicate = (!icmp_ln92)> <Delay = 0.73> <CoreInst = "TAddSub">   --->   Core 3 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.36> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync>
+ST_10 : Operation 155 [1/1] (0.85ns)   --->   "%icmp_ln886_2 = icmp_ult  i32 %add_ln695_17, i32"   --->   Operation 155 'icmp' 'icmp_ln886_2' <Predicate = (!icmp_ln92)> <Delay = 0.85> <CoreInst = "Cmp">   --->   Core 10 'Cmp' <Latency = 0> <II = 1> <Delay = 0.85> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 156 [1/1] (0.93ns)   --->   "%br_ln121 = br i1 %icmp_ln886_2, void, void %.split32.1" [/home/centos/workspace/adler32_security_benchmark/libs/xf_security/L1/include/xf_security/adler32.hpp:121]   --->   Operation 156 'br' 'br_ln121' <Predicate = (!icmp_ln92)> <Delay = 0.93>
+ST_10 : Operation 157 [1/1] (0.85ns)   --->   "%icmp_ln886_4 = icmp_ult  i32 %add_ln695_17, i32"   --->   Operation 157 'icmp' 'icmp_ln886_4' <Predicate = (!icmp_ln92 & icmp_ln886_2)> <Delay = 0.85> <CoreInst = "Cmp">   --->   Core 10 'Cmp' <Latency = 0> <II = 1> <Delay = 0.85> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 158 [1/1] (0.93ns)   --->   "%br_ln121 = br i1 %icmp_ln886_4, void, void %.split32.2" [/home/centos/workspace/adler32_security_benchmark/libs/xf_security/L1/include/xf_security/adler32.hpp:121]   --->   Operation 158 'br' 'br_ln121' <Predicate = (!icmp_ln92 & icmp_ln886_2)> <Delay = 0.93>
+ST_10 : Operation 159 [1/1] (0.85ns)   --->   "%icmp_ln886_5 = icmp_ult  i32 %add_ln695_17, i32"   --->   Operation 159 'icmp' 'icmp_ln886_5' <Predicate = (!icmp_ln92 & icmp_ln886_2 & icmp_ln886_4)> <Delay = 0.85> <CoreInst = "Cmp">   --->   Core 10 'Cmp' <Latency = 0> <II = 1> <Delay = 0.85> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 160 [1/1] (0.93ns)   --->   "%br_ln121 = br i1 %icmp_ln886_5, void, void %.split32.3" [/home/centos/workspace/adler32_security_benchmark/libs/xf_security/L1/include/xf_security/adler32.hpp:121]   --->   Operation 160 'br' 'br_ln121' <Predicate = (!icmp_ln92 & icmp_ln886_2 & icmp_ln886_4)> <Delay = 0.93>
+ST_10 : Operation 161 [1/1] (0.85ns)   --->   "%icmp_ln886_6 = icmp_ult  i32 %add_ln695_17, i32"   --->   Operation 161 'icmp' 'icmp_ln886_6' <Predicate = (!icmp_ln92 & icmp_ln886_2 & icmp_ln886_4 & icmp_ln886_5)> <Delay = 0.85> <CoreInst = "Cmp">   --->   Core 10 'Cmp' <Latency = 0> <II = 1> <Delay = 0.85> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 162 [1/1] (0.93ns)   --->   "%br_ln121 = br i1 %icmp_ln886_6, void, void %.split32.4" [/home/centos/workspace/adler32_security_benchmark/libs/xf_security/L1/include/xf_security/adler32.hpp:121]   --->   Operation 162 'br' 'br_ln121' <Predicate = (!icmp_ln92 & icmp_ln886_2 & icmp_ln886_4 & icmp_ln886_5)> <Delay = 0.93>
+ST_10 : Operation 163 [1/1] (0.85ns)   --->   "%icmp_ln886_7 = icmp_ult  i32 %add_ln695_17, i32"   --->   Operation 163 'icmp' 'icmp_ln886_7' <Predicate = (!icmp_ln92 & icmp_ln886_2 & icmp_ln886_4 & icmp_ln886_5 & icmp_ln886_6)> <Delay = 0.85> <CoreInst = "Cmp">   --->   Core 10 'Cmp' <Latency = 0> <II = 1> <Delay = 0.85> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 164 [1/1] (0.93ns)   --->   "%br_ln121 = br i1 %icmp_ln886_7, void, void %.split32.5" [/home/centos/workspace/adler32_security_benchmark/libs/xf_security/L1/include/xf_security/adler32.hpp:121]   --->   Operation 164 'br' 'br_ln121' <Predicate = (!icmp_ln92 & icmp_ln886_2 & icmp_ln886_4 & icmp_ln886_5 & icmp_ln886_6)> <Delay = 0.93>
+ST_10 : Operation 165 [1/1] (0.85ns)   --->   "%icmp_ln886_8 = icmp_ult  i32 %add_ln695_17, i32"   --->   Operation 165 'icmp' 'icmp_ln886_8' <Predicate = (!icmp_ln92 & icmp_ln886_2 & icmp_ln886_4 & icmp_ln886_5 & icmp_ln886_6 & icmp_ln886_7)> <Delay = 0.85> <CoreInst = "Cmp">   --->   Core 10 'Cmp' <Latency = 0> <II = 1> <Delay = 0.85> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 166 [1/1] (0.93ns)   --->   "%br_ln121 = br i1 %icmp_ln886_8, void, void %.split32.6" [/home/centos/workspace/adler32_security_benchmark/libs/xf_security/L1/include/xf_security/adler32.hpp:121]   --->   Operation 166 'br' 'br_ln121' <Predicate = (!icmp_ln92 & icmp_ln886_2 & icmp_ln886_4 & icmp_ln886_5 & icmp_ln886_6 & icmp_ln886_7)> <Delay = 0.93>
+ST_10 : Operation 167 [1/1] (0.85ns)   --->   "%icmp_ln886_9 = icmp_ult  i32 %add_ln695_17, i32"   --->   Operation 167 'icmp' 'icmp_ln886_9' <Predicate = (!icmp_ln92 & icmp_ln886_2 & icmp_ln886_4 & icmp_ln886_5 & icmp_ln886_6 & icmp_ln886_7 & icmp_ln886_8)> <Delay = 0.85> <CoreInst = "Cmp">   --->   Core 10 'Cmp' <Latency = 0> <II = 1> <Delay = 0.85> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 168 [1/1] (0.93ns)   --->   "%br_ln121 = br i1 %icmp_ln886_9, void, void %.split32.7" [/home/centos/workspace/adler32_security_benchmark/libs/xf_security/L1/include/xf_security/adler32.hpp:121]   --->   Operation 168 'br' 'br_ln121' <Predicate = (!icmp_ln92 & icmp_ln886_2 & icmp_ln886_4 & icmp_ln886_5 & icmp_ln886_6 & icmp_ln886_7 & icmp_ln886_8)> <Delay = 0.93>
+ST_10 : Operation 169 [1/1] (0.85ns)   --->   "%icmp_ln886_10 = icmp_ult  i32 %add_ln695_17, i32"   --->   Operation 169 'icmp' 'icmp_ln886_10' <Predicate = (!icmp_ln92 & icmp_ln886_2 & icmp_ln886_4 & icmp_ln886_5 & icmp_ln886_6 & icmp_ln886_7 & icmp_ln886_8 & icmp_ln886_9)> <Delay = 0.85> <CoreInst = "Cmp">   --->   Core 10 'Cmp' <Latency = 0> <II = 1> <Delay = 0.85> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 170 [1/1] (0.93ns)   --->   "%br_ln121 = br i1 %icmp_ln886_10, void, void %.split32.8" [/home/centos/workspace/adler32_security_benchmark/libs/xf_security/L1/include/xf_security/adler32.hpp:121]   --->   Operation 170 'br' 'br_ln121' <Predicate = (!icmp_ln92 & icmp_ln886_2 & icmp_ln886_4 & icmp_ln886_5 & icmp_ln886_6 & icmp_ln886_7 & icmp_ln886_8 & icmp_ln886_9)> <Delay = 0.93>
+ST_10 : Operation 171 [1/1] (0.85ns)   --->   "%icmp_ln886_11 = icmp_ult  i32 %add_ln695_17, i32"   --->   Operation 171 'icmp' 'icmp_ln886_11' <Predicate = (!icmp_ln92 & icmp_ln886_2 & icmp_ln886_4 & icmp_ln886_5 & icmp_ln886_6 & icmp_ln886_7 & icmp_ln886_8 & icmp_ln886_9 & icmp_ln886_10)> <Delay = 0.85> <CoreInst = "Cmp">   --->   Core 10 'Cmp' <Latency = 0> <II = 1> <Delay = 0.85> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 172 [1/1] (0.93ns)   --->   "%br_ln121 = br i1 %icmp_ln886_11, void, void %.split32.9" [/home/centos/workspace/adler32_security_benchmark/libs/xf_security/L1/include/xf_security/adler32.hpp:121]   --->   Operation 172 'br' 'br_ln121' <Predicate = (!icmp_ln92 & icmp_ln886_2 & icmp_ln886_4 & icmp_ln886_5 & icmp_ln886_6 & icmp_ln886_7 & icmp_ln886_8 & icmp_ln886_9 & icmp_ln886_10)> <Delay = 0.93>
+ST_10 : Operation 173 [1/1] (0.85ns)   --->   "%icmp_ln886_12 = icmp_ult  i32 %add_ln695_17, i32"   --->   Operation 173 'icmp' 'icmp_ln886_12' <Predicate = (!icmp_ln92 & icmp_ln886_2 & icmp_ln886_4 & icmp_ln886_5 & icmp_ln886_6 & icmp_ln886_7 & icmp_ln886_8 & icmp_ln886_9 & icmp_ln886_10 & icmp_ln886_11)> <Delay = 0.85> <CoreInst = "Cmp">   --->   Core 10 'Cmp' <Latency = 0> <II = 1> <Delay = 0.85> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 174 [1/1] (0.93ns)   --->   "%br_ln121 = br i1 %icmp_ln886_12, void, void %.split32.10" [/home/centos/workspace/adler32_security_benchmark/libs/xf_security/L1/include/xf_security/adler32.hpp:121]   --->   Operation 174 'br' 'br_ln121' <Predicate = (!icmp_ln92 & icmp_ln886_2 & icmp_ln886_4 & icmp_ln886_5 & icmp_ln886_6 & icmp_ln886_7 & icmp_ln886_8 & icmp_ln886_9 & icmp_ln886_10 & icmp_ln886_11)> <Delay = 0.93>
+ST_10 : Operation 175 [1/1] (0.85ns)   --->   "%icmp_ln886_13 = icmp_ult  i32 %add_ln695_17, i32"   --->   Operation 175 'icmp' 'icmp_ln886_13' <Predicate = (!icmp_ln92 & icmp_ln886_2 & icmp_ln886_4 & icmp_ln886_5 & icmp_ln886_6 & icmp_ln886_7 & icmp_ln886_8 & icmp_ln886_9 & icmp_ln886_10 & icmp_ln886_11 & icmp_ln886_12)> <Delay = 0.85> <CoreInst = "Cmp">   --->   Core 10 'Cmp' <Latency = 0> <II = 1> <Delay = 0.85> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 176 [1/1] (0.93ns)   --->   "%br_ln121 = br i1 %icmp_ln886_13, void, void %.split32.11" [/home/centos/workspace/adler32_security_benchmark/libs/xf_security/L1/include/xf_security/adler32.hpp:121]   --->   Operation 176 'br' 'br_ln121' <Predicate = (!icmp_ln92 & icmp_ln886_2 & icmp_ln886_4 & icmp_ln886_5 & icmp_ln886_6 & icmp_ln886_7 & icmp_ln886_8 & icmp_ln886_9 & icmp_ln886_10 & icmp_ln886_11 & icmp_ln886_12)> <Delay = 0.93>
+ST_10 : Operation 177 [1/1] (0.85ns)   --->   "%icmp_ln886_14 = icmp_ult  i32 %add_ln695_17, i32"   --->   Operation 177 'icmp' 'icmp_ln886_14' <Predicate = (!icmp_ln92 & icmp_ln886_2 & icmp_ln886_4 & icmp_ln886_5 & icmp_ln886_6 & icmp_ln886_7 & icmp_ln886_8 & icmp_ln886_9 & icmp_ln886_10 & icmp_ln886_11 & icmp_ln886_12 & icmp_ln886_13)> <Delay = 0.85> <CoreInst = "Cmp">   --->   Core 10 'Cmp' <Latency = 0> <II = 1> <Delay = 0.85> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 178 [1/1] (0.93ns)   --->   "%br_ln121 = br i1 %icmp_ln886_14, void, void %.split32.12" [/home/centos/workspace/adler32_security_benchmark/libs/xf_security/L1/include/xf_security/adler32.hpp:121]   --->   Operation 178 'br' 'br_ln121' <Predicate = (!icmp_ln92 & icmp_ln886_2 & icmp_ln886_4 & icmp_ln886_5 & icmp_ln886_6 & icmp_ln886_7 & icmp_ln886_8 & icmp_ln886_9 & icmp_ln886_10 & icmp_ln886_11 & icmp_ln886_12 & icmp_ln886_13)> <Delay = 0.93>
+ST_10 : Operation 179 [1/1] (0.85ns)   --->   "%icmp_ln886_15 = icmp_ult  i32 %add_ln695_17, i32"   --->   Operation 179 'icmp' 'icmp_ln886_15' <Predicate = (!icmp_ln92 & icmp_ln886_2 & icmp_ln886_4 & icmp_ln886_5 & icmp_ln886_6 & icmp_ln886_7 & icmp_ln886_8 & icmp_ln886_9 & icmp_ln886_10 & icmp_ln886_11 & icmp_ln886_12 & icmp_ln886_13 & icmp_ln886_14)> <Delay = 0.85> <CoreInst = "Cmp">   --->   Core 10 'Cmp' <Latency = 0> <II = 1> <Delay = 0.85> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 180 [1/1] (0.93ns)   --->   "%br_ln121 = br i1 %icmp_ln886_15, void, void %.split32.13" [/home/centos/workspace/adler32_security_benchmark/libs/xf_security/L1/include/xf_security/adler32.hpp:121]   --->   Operation 180 'br' 'br_ln121' <Predicate = (!icmp_ln92 & icmp_ln886_2 & icmp_ln886_4 & icmp_ln886_5 & icmp_ln886_6 & icmp_ln886_7 & icmp_ln886_8 & icmp_ln886_9 & icmp_ln886_10 & icmp_ln886_11 & icmp_ln886_12 & icmp_ln886_13 & icmp_ln886_14)> <Delay = 0.93>
+ST_10 : Operation 181 [1/1] (0.85ns)   --->   "%icmp_ln886_16 = icmp_ult  i32 %add_ln695_17, i32"   --->   Operation 181 'icmp' 'icmp_ln886_16' <Predicate = (!icmp_ln92 & icmp_ln886_2 & icmp_ln886_4 & icmp_ln886_5 & icmp_ln886_6 & icmp_ln886_7 & icmp_ln886_8 & icmp_ln886_9 & icmp_ln886_10 & icmp_ln886_11 & icmp_ln886_12 & icmp_ln886_13 & icmp_ln886_14 & icmp_ln886_15)> <Delay = 0.85> <CoreInst = "Cmp">   --->   Core 10 'Cmp' <Latency = 0> <II = 1> <Delay = 0.85> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 182 [1/1] (0.93ns)   --->   "%br_ln121 = br i1 %icmp_ln886_16, void, void %.split32.14" [/home/centos/workspace/adler32_security_benchmark/libs/xf_security/L1/include/xf_security/adler32.hpp:121]   --->   Operation 182 'br' 'br_ln121' <Predicate = (!icmp_ln92 & icmp_ln886_2 & icmp_ln886_4 & icmp_ln886_5 & icmp_ln886_6 & icmp_ln886_7 & icmp_ln886_8 & icmp_ln886_9 & icmp_ln886_10 & icmp_ln886_11 & icmp_ln886_12 & icmp_ln886_13 & icmp_ln886_14 & icmp_ln886_15)> <Delay = 0.93>
+ST_10 : Operation 183 [1/1] (0.85ns)   --->   "%icmp_ln886_17 = icmp_ult  i32 %add_ln695_17, i32"   --->   Operation 183 'icmp' 'icmp_ln886_17' <Predicate = (!icmp_ln92 & icmp_ln886_2 & icmp_ln886_4 & icmp_ln886_5 & icmp_ln886_6 & icmp_ln886_7 & icmp_ln886_8 & icmp_ln886_9 & icmp_ln886_10 & icmp_ln886_11 & icmp_ln886_12 & icmp_ln886_13 & icmp_ln886_14 & icmp_ln886_15 & icmp_ln886_16)> <Delay = 0.85> <CoreInst = "Cmp">   --->   Core 10 'Cmp' <Latency = 0> <II = 1> <Delay = 0.85> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 184 [1/1] (0.93ns)   --->   "%br_ln121 = br i1 %icmp_ln886_17, void, void %.split32.15" [/home/centos/workspace/adler32_security_benchmark/libs/xf_security/L1/include/xf_security/adler32.hpp:121]   --->   Operation 184 'br' 'br_ln121' <Predicate = (!icmp_ln92 & icmp_ln886_2 & icmp_ln886_4 & icmp_ln886_5 & icmp_ln886_6 & icmp_ln886_7 & icmp_ln886_8 & icmp_ln886_9 & icmp_ln886_10 & icmp_ln886_11 & icmp_ln886_12 & icmp_ln886_13 & icmp_ln886_14 & icmp_ln886_15 & icmp_ln886_16)> <Delay = 0.93>
+ST_10 : Operation 185 [1/1] (0.85ns)   --->   "%icmp_ln886_18 = icmp_ult  i32 %add_ln695_17, i32"   --->   Operation 185 'icmp' 'icmp_ln886_18' <Predicate = (!icmp_ln92 & icmp_ln886_2 & icmp_ln886_4 & icmp_ln886_5 & icmp_ln886_6 & icmp_ln886_7 & icmp_ln886_8 & icmp_ln886_9 & icmp_ln886_10 & icmp_ln886_11 & icmp_ln886_12 & icmp_ln886_13 & icmp_ln886_14 & icmp_ln886_15 & icmp_ln886_16 & icmp_ln886_17)> <Delay = 0.85> <CoreInst = "Cmp">   --->   Core 10 'Cmp' <Latency = 0> <II = 1> <Delay = 0.85> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 186 [1/1] (0.93ns)   --->   "%br_ln121 = br i1 %icmp_ln886_18, void, void %.split32.16" [/home/centos/workspace/adler32_security_benchmark/libs/xf_security/L1/include/xf_security/adler32.hpp:121]   --->   Operation 186 'br' 'br_ln121' <Predicate = (!icmp_ln92 & icmp_ln886_2 & icmp_ln886_4 & icmp_ln886_5 & icmp_ln886_6 & icmp_ln886_7 & icmp_ln886_8 & icmp_ln886_9 & icmp_ln886_10 & icmp_ln886_11 & icmp_ln886_12 & icmp_ln886_13 & icmp_ln886_14 & icmp_ln886_15 & icmp_ln886_16 & icmp_ln886_17)> <Delay = 0.93>
+ST_10 : Operation 187 [1/1] (0.85ns)   --->   "%icmp_ln886_19 = icmp_ult  i32 %add_ln695_17, i32"   --->   Operation 187 'icmp' 'icmp_ln886_19' <Predicate = (!icmp_ln92 & icmp_ln886_2 & icmp_ln886_4 & icmp_ln886_5 & icmp_ln886_6 & icmp_ln886_7 & icmp_ln886_8 & icmp_ln886_9 & icmp_ln886_10 & icmp_ln886_11 & icmp_ln886_12 & icmp_ln886_13 & icmp_ln886_14 & icmp_ln886_15 & icmp_ln886_16 & icmp_ln886_17 & icmp_ln886_18)> <Delay = 0.85> <CoreInst = "Cmp">   --->   Core 10 'Cmp' <Latency = 0> <II = 1> <Delay = 0.85> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 188 [1/1] (0.93ns)   --->   "%br_ln121 = br i1 %icmp_ln886_19, void, void %.loopexit" [/home/centos/workspace/adler32_security_benchmark/libs/xf_security/L1/include/xf_security/adler32.hpp:121]   --->   Operation 188 'br' 'br_ln121' <Predicate = (!icmp_ln92 & icmp_ln886_2 & icmp_ln886_4 & icmp_ln886_5 & icmp_ln886_6 & icmp_ln886_7 & icmp_ln886_8 & icmp_ln886_9 & icmp_ln886_10 & icmp_ln886_11 & icmp_ln886_12 & icmp_ln886_13 & icmp_ln886_14 & icmp_ln886_15 & icmp_ln886_16 & icmp_ln886_17 & icmp_ln886_18)> <Delay = 0.93>
+
+State 11 <SV = 10> <Delay = 4.00>
+ST_11 : Operation 189 [1/1] (0.00ns) (grouped into LUT with out node sub_ln696)   --->   "%zext_ln886_lcssa = phi i21, void %.split34, i21, void %.split32.1, i21, void %.split32.2, i21, void %.split32.3, i21, void %.split32.4, i21, void %.split32.5, i21, void %.split32.6, i21, void %.split32.7, i21, void %.split32.8, i21, void %.split32.9, i21, void %.split32.10, i21, void %.split32.11, i21, void %.split32.12, i21, void %.split32.13, i21, void %.split32.14, i21, void %.split32.15, i21, void %.split32.16"   --->   Operation 189 'phi' 'zext_ln886_lcssa' <Predicate = (!icmp_ln92 & !icmp_ln886_19) | (!icmp_ln92 & !icmp_ln886_18) | (!icmp_ln92 & !icmp_ln886_17) | (!icmp_ln92 & !icmp_ln886_16) | (!icmp_ln92 & !icmp_ln886_15) | (!icmp_ln92 & !icmp_ln886_14) | (!icmp_ln92 & !icmp_ln886_13) | (!icmp_ln92 & !icmp_ln886_12) | (!icmp_ln92 & !icmp_ln886_11) | (!icmp_ln92 & !icmp_ln886_10) | (!icmp_ln92 & !icmp_ln886_9) | (!icmp_ln92 & !icmp_ln886_8) | (!icmp_ln92 & !icmp_ln886_7) | (!icmp_ln92 & !icmp_ln886_6) | (!icmp_ln92 & !icmp_ln886_5) | (!icmp_ln92 & !icmp_ln886_4) | (!icmp_ln92 & !icmp_ln886_2)> <Delay = 0.00>
+ST_11 : Operation 190 [1/1] (0.00ns) (grouped into LUT with out node sub_ln696)   --->   "%zext_ln696 = zext i21 %zext_ln886_lcssa"   --->   Operation 190 'zext' 'zext_ln696' <Predicate = (!icmp_ln92 & !icmp_ln886_19) | (!icmp_ln92 & !icmp_ln886_18) | (!icmp_ln92 & !icmp_ln886_17) | (!icmp_ln92 & !icmp_ln886_16) | (!icmp_ln92 & !icmp_ln886_15) | (!icmp_ln92 & !icmp_ln886_14) | (!icmp_ln92 & !icmp_ln886_13) | (!icmp_ln92 & !icmp_ln886_12) | (!icmp_ln92 & !icmp_ln886_11) | (!icmp_ln92 & !icmp_ln886_10) | (!icmp_ln92 & !icmp_ln886_9) | (!icmp_ln92 & !icmp_ln886_8) | (!icmp_ln92 & !icmp_ln886_7) | (!icmp_ln92 & !icmp_ln886_6) | (!icmp_ln92 & !icmp_ln886_5) | (!icmp_ln92 & !icmp_ln886_4) | (!icmp_ln92 & !icmp_ln886_2)> <Delay = 0.00>
+ST_11 : Operation 191 [1/1] (0.88ns) (out node of the LUT)   --->   "%sub_ln696 = sub i32 %add_ln695_17, i32 %zext_ln696"   --->   Operation 191 'sub' 'sub_ln696' <Predicate = (!icmp_ln92 & !icmp_ln886_19) | (!icmp_ln92 & !icmp_ln886_18) | (!icmp_ln92 & !icmp_ln886_17) | (!icmp_ln92 & !icmp_ln886_16) | (!icmp_ln92 & !icmp_ln886_15) | (!icmp_ln92 & !icmp_ln886_14) | (!icmp_ln92 & !icmp_ln886_13) | (!icmp_ln92 & !icmp_ln886_12) | (!icmp_ln92 & !icmp_ln886_11) | (!icmp_ln92 & !icmp_ln886_10) | (!icmp_ln92 & !icmp_ln886_9) | (!icmp_ln92 & !icmp_ln886_8) | (!icmp_ln92 & !icmp_ln886_7) | (!icmp_ln92 & !icmp_ln886_6) | (!icmp_ln92 & !icmp_ln886_5) | (!icmp_ln92 & !icmp_ln886_4) | (!icmp_ln92 & !icmp_ln886_2)> <Delay = 0.88> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.88> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 192 [1/1] (0.60ns)   --->   "%br_ln123 = br void %.loopexit" [/home/centos/workspace/adler32_security_benchmark/libs/xf_security/L1/include/xf_security/adler32.hpp:123]   --->   Operation 192 'br' 'br_ln123' <Predicate = (!icmp_ln92 & !icmp_ln886_19) | (!icmp_ln92 & !icmp_ln886_18) | (!icmp_ln92 & !icmp_ln886_17) | (!icmp_ln92 & !icmp_ln886_16) | (!icmp_ln92 & !icmp_ln886_15) | (!icmp_ln92 & !icmp_ln886_14) | (!icmp_ln92 & !icmp_ln886_13) | (!icmp_ln92 & !icmp_ln886_12) | (!icmp_ln92 & !icmp_ln886_11) | (!icmp_ln92 & !icmp_ln886_10) | (!icmp_ln92 & !icmp_ln886_9) | (!icmp_ln92 & !icmp_ln886_8) | (!icmp_ln92 & !icmp_ln886_7) | (!icmp_ln92 & !icmp_ln886_6) | (!icmp_ln92 & !icmp_ln886_5) | (!icmp_ln92 & !icmp_ln886_4) | (!icmp_ln92 & !icmp_ln886_2)> <Delay = 0.60>
+ST_11 : Operation 193 [1/1] (0.00ns)   --->   "%conv3_i462 = phi i32 %sub_ln696, void, i32 %add_ln695_17, void %.split32.16"   --->   Operation 193 'phi' 'conv3_i462' <Predicate = (!icmp_ln92)> <Delay = 0.00>
+ST_11 : Operation 194 [1/1] (0.00ns)   --->   "%br_ln0 = br void"   --->   Operation 194 'br' 'br_ln0' <Predicate = (!icmp_ln92)> <Delay = 0.00>
+
+State 12 <SV = 4> <Delay = 0.60>
+ST_12 : Operation 195 [1/1] (0.60ns)   --->   "%br_ln882 = br void %._crit_edge.loopexit"   --->   Operation 195 'br' 'br_ln882' <Predicate = true> <Delay = 0.60>
+
+State 13 <SV = 5> <Delay = 0.95>
+ST_13 : Operation 196 [1/1] (0.00ns)   --->   "%j = phi i4 %j_1, void %.split37._crit_edge, i4, void %._crit_edge.loopexit.preheader"   --->   Operation 196 'phi' 'j' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 197 [1/1] (0.65ns)   --->   "%icmp_ln882 = icmp_eq  i4 %j, i4 %trunc_ln0_1"   --->   Operation 197 'icmp' 'icmp_ln882' <Predicate = true> <Delay = 0.65> <CoreInst = "Cmp">   --->   Core 10 'Cmp' <Latency = 0> <II = 1> <Delay = 0.85> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_13 : Operation 198 [1/1] (0.70ns)   --->   "%j_1 = add i4 %j, i4" [/home/centos/workspace/adler32_security_benchmark/libs/xf_security/L1/include/xf_security/adler32.hpp:131]   --->   Operation 198 'add' 'j_1' <Predicate = true> <Delay = 0.70> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.88> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_13 : Operation 199 [1/1] (0.00ns)   --->   "%br_ln131 = br i1 %icmp_ln882, void %.split37, void %._crit_edge619.loopexit" [/home/centos/workspace/adler32_security_benchmark/libs/xf_security/L1/include/xf_security/adler32.hpp:131]   --->   Operation 199 'br' 'br_ln131' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 200 [1/1] (0.65ns)   --->   "%icmp_ln134 = icmp_eq  i4 %j, i4" [/home/centos/workspace/adler32_security_benchmark/libs/xf_security/L1/include/xf_security/adler32.hpp:134]   --->   Operation 200 'icmp' 'icmp_ln134' <Predicate = (!icmp_ln882)> <Delay = 0.65> <CoreInst = "Cmp">   --->   Core 10 'Cmp' <Latency = 0> <II = 1> <Delay = 0.85> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_13 : Operation 201 [1/1] (0.00ns)   --->   "%shl_ln2 = bitconcatenate i7 @_ssdm_op_BitConcatenate.i7.i4.i3, i4 %j, i3" [/home/centos/workspace/adler32_security_benchmark/libs/xf_security/L1/include/xf_security/adler32.hpp:135]   --->   Operation 201 'bitconcatenate' 'shl_ln2' <Predicate = (!icmp_ln882)> <Delay = 0.00>
+
+State 14 <SV = 6> <Delay = 1.43>
+ST_14 : Operation 202 [1/1] (1.43ns)   --->   "%inData = read i128 @_ssdm_op_Read.ap_fifo.volatile.i128P, i128 %inStrm" [/opt/Xilinx/Vitis/2020.1/common/technology/autopilot/hls_stream_39.h:145]   --->   Operation 202 'read' 'inData' <Predicate = (!icmp_ln882 & icmp_ln134)> <Delay = 1.43> <CoreInst = "FIFO">   --->   Core 18 'FIFO' <Latency = 0> <II = 1> <Delay = 1.43> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 128> <Depth = 16> <FIFO>
+ST_14 : Operation 203 [1/1] (0.60ns)   --->   "%br_ln134 = br void %.split37._crit_edge" [/home/centos/workspace/adler32_security_benchmark/libs/xf_security/L1/include/xf_security/adler32.hpp:134]   --->   Operation 203 'br' 'br_ln134' <Predicate = (!icmp_ln882 & icmp_ln134)> <Delay = 0.60>
+
+State 15 <SV = 7> <Delay = 1.77>
+ST_15 : Operation 204 [1/1] (0.00ns)   --->   "%empty_42 = phi i128 %p_Val2_1, void %.split37._crit_edge, i128 %p_phi, void %._crit_edge.loopexit.preheader"   --->   Operation 204 'phi' 'empty_42' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 205 [1/1] (0.00ns)   --->   "%specpipeline_ln131 = specpipeline void @_ssdm_op_SpecPipeline, i32, i32, i32, i32, void @empty_3" [/home/centos/workspace/adler32_security_benchmark/libs/xf_security/L1/include/xf_security/adler32.hpp:131]   --->   Operation 205 'specpipeline' 'specpipeline_ln131' <Predicate = (!icmp_ln882)> <Delay = 0.00>
+ST_15 : Operation 206 [1/1] (0.00ns)   --->   "%specloopname_ln131 = specloopname void @_ssdm_op_SpecLoopName, void @empty" [/home/centos/workspace/adler32_security_benchmark/libs/xf_security/L1/include/xf_security/adler32.hpp:131]   --->   Operation 206 'specloopname' 'specloopname_ln131' <Predicate = (!icmp_ln882)> <Delay = 0.00>
+ST_15 : Operation 207 [1/1] (0.60ns)   --->   "%br_ln134 = br i1 %icmp_ln134, void %.split37._crit_edge, void" [/home/centos/workspace/adler32_security_benchmark/libs/xf_security/L1/include/xf_security/adler32.hpp:134]   --->   Operation 207 'br' 'br_ln134' <Predicate = (!icmp_ln882)> <Delay = 0.60>
+ST_15 : Operation 208 [1/1] (0.00ns)   --->   "%p_Val2_1 = phi i128 %inData, void, i128 %empty_42, void %.split37"   --->   Operation 208 'phi' 'p_Val2_1' <Predicate = (!icmp_ln882)> <Delay = 0.00>
+ST_15 : Operation 209 [1/1] (0.00ns)   --->   "%or_ln135 = or i7 %shl_ln2, i7" [/home/centos/workspace/adler32_security_benchmark/libs/xf_security/L1/include/xf_security/adler32.hpp:135]   --->   Operation 209 'or' 'or_ln135' <Predicate = (!icmp_ln882)> <Delay = 0.00>
+ST_15 : Operation 210 [1/1] (0.59ns)   --->   "%icmp_ln674 = icmp_ugt  i7 %shl_ln2, i7 %or_ln135"   --->   Operation 210 'icmp' 'icmp_ln674' <Predicate = (!icmp_ln882)> <Delay = 0.59> <CoreInst = "Cmp">   --->   Core 10 'Cmp' <Latency = 0> <II = 1> <Delay = 0.85> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_15 : Operation 211 [1/1] (0.00ns)   --->   "%zext_ln674_4 = zext i7 %shl_ln2"   --->   Operation 211 'zext' 'zext_ln674_4' <Predicate = (!icmp_ln882)> <Delay = 0.00>
+ST_15 : Operation 212 [1/1] (0.00ns)   --->   "%zext_ln674_5 = zext i7 %or_ln135"   --->   Operation 212 'zext' 'zext_ln674_5' <Predicate = (!icmp_ln882)> <Delay = 0.00>
+ST_15 : Operation 213 [1/1] (0.00ns) (grouped into LUT with out node lshr_ln674)   --->   "%tmp = partselect i128 @llvm.part.select.i128, i128 %p_Val2_1, i32, i32"   --->   Operation 213 'partselect' 'tmp' <Predicate = (!icmp_ln882)> <Delay = 0.00>
+ST_15 : Operation 214 [1/1] (0.70ns)   --->   "%sub_ln674 = sub i8 %zext_ln674_4, i8 %zext_ln674_5"   --->   Operation 214 'sub' 'sub_ln674' <Predicate = (!icmp_ln882)> <Delay = 0.70> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.88> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_15 : Operation 215 [1/1] (0.00ns) (grouped into LUT with out node lshr_ln674)   --->   "%xor_ln674 = xor i8 %zext_ln674_4, i8"   --->   Operation 215 'xor' 'xor_ln674' <Predicate = (!icmp_ln882)> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 12 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.30> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_15 : Operation 216 [1/1] (0.70ns)   --->   "%sub_ln674_3 = sub i8 %zext_ln674_5, i8 %zext_ln674_4"   --->   Operation 216 'sub' 'sub_ln674_3' <Predicate = (!icmp_ln882)> <Delay = 0.70> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.88> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_15 : Operation 217 [1/1] (0.00ns) (grouped into LUT with out node sub_ln674_4)   --->   "%select_ln674 = select i1 %icmp_ln674, i8 %sub_ln674, i8 %sub_ln674_3"   --->   Operation 217 'select' 'select_ln674' <Predicate = (!icmp_ln882)> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 11 'Sel' <Latency = 0> <II = 1> <Delay = 0.22> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_15 : Operation 218 [1/1] (0.00ns) (grouped into LUT with out node lshr_ln674)   --->   "%select_ln674_3 = select i1 %icmp_ln674, i128 %tmp, i128 %p_Val2_1"   --->   Operation 218 'select' 'select_ln674_3' <Predicate = (!icmp_ln882)> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 11 'Sel' <Latency = 0> <II = 1> <Delay = 0.22> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_15 : Operation 219 [1/1] (0.00ns) (grouped into LUT with out node lshr_ln674)   --->   "%select_ln674_4 = select i1 %icmp_ln674, i8 %xor_ln674, i8 %zext_ln674_4"   --->   Operation 219 'select' 'select_ln674_4' <Predicate = (!icmp_ln882)> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 11 'Sel' <Latency = 0> <II = 1> <Delay = 0.22> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_15 : Operation 220 [1/1] (0.70ns) (out node of the LUT)   --->   "%sub_ln674_4 = sub i8, i8 %select_ln674"   --->   Operation 220 'sub' 'sub_ln674_4' <Predicate = (!icmp_ln882)> <Delay = 0.70> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.88> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_15 : Operation 221 [1/1] (0.00ns) (grouped into LUT with out node lshr_ln674)   --->   "%zext_ln674_6 = zext i8 %select_ln674_4"   --->   Operation 221 'zext' 'zext_ln674_6' <Predicate = (!icmp_ln882)> <Delay = 0.00>
+ST_15 : Operation 222 [1/1] (1.17ns) (out node of the LUT)   --->   "%lshr_ln674 = lshr i128 %select_ln674_3, i128 %zext_ln674_6"   --->   Operation 222 'lshr' 'lshr_ln674' <Predicate = (!icmp_ln882)> <Delay = 1.17> <CoreInst = "Shift">   --->   Core 13 'Shift' <Latency = 0> <II = 1> <Delay = 0.70> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
+
+State 16 <SV = 8> <Delay = 1.98>
+ST_16 : Operation 223 [1/1] (0.00ns)   --->   "%conv3_i_i474614 = phi i32 %select_ln136, void %.split37._crit_edge, i32 %empty_41, void %._crit_edge.loopexit.preheader" [/home/centos/workspace/adler32_security_benchmark/libs/xf_security/L1/include/xf_security/adler32.hpp:136]   --->   Operation 223 'phi' 'conv3_i_i474614' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 224 [1/1] (0.00ns)   --->   "%add_i13476613 = phi i32 %select_ln138, void %.split37._crit_edge, i32 %conv3_i461577, void %._crit_edge.loopexit.preheader" [/home/centos/workspace/adler32_security_benchmark/libs/xf_security/L1/include/xf_security/adler32.hpp:138]   --->   Operation 224 'phi' 'add_i13476613' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 225 [1/1] (0.00ns)   --->   "%speclooptripcount_ln0 = speclooptripcount void @_ssdm_op_SpecLoopTripCount, i64, i64, i64"   --->   Operation 225 'speclooptripcount' 'speclooptripcount_ln0' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 226 [1/1] (0.00ns) (grouped into LUT with out node add_ln695_1)   --->   "%zext_ln674_7 = zext i8 %sub_ln674_4"   --->   Operation 226 'zext' 'zext_ln674_7' <Predicate = (!icmp_ln882)> <Delay = 0.00>
+ST_16 : Operation 227 [1/1] (0.00ns) (grouped into LUT with out node add_ln695_1)   --->   "%lshr_ln674_2 = lshr i128, i128 %zext_ln674_7"   --->   Operation 227 'lshr' 'lshr_ln674_2' <Predicate = (!icmp_ln882)> <Delay = 0.00> <CoreInst = "Shift">   --->   Core 13 'Shift' <Latency = 0> <II = 1> <Delay = 0.70> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 228 [1/1] (0.00ns) (grouped into LUT with out node add_ln695_1)   --->   "%p_Result_s = and i128 %lshr_ln674, i128 %lshr_ln674_2"   --->   Operation 228 'and' 'p_Result_s' <Predicate = (!icmp_ln882)> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 12 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.30> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 229 [1/1] (0.00ns) (grouped into LUT with out node add_ln695_1)   --->   "%trunc_ln695 = trunc i128 %p_Result_s"   --->   Operation 229 'trunc' 'trunc_ln695' <Predicate = (!icmp_ln882)> <Delay = 0.00>
+ST_16 : Operation 230 [1/1] (0.88ns) (out node of the LUT)   --->   "%add_ln695_1 = add i32 %trunc_ln695, i32 %conv3_i_i474614"   --->   Operation 230 'add' 'add_ln695_1' <Predicate = (!icmp_ln882)> <Delay = 0.88> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.88> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 231 [1/1] (0.85ns)   --->   "%icmp_ln886 = icmp_ugt  i32 %add_ln695_1, i32"   --->   Operation 231 'icmp' 'icmp_ln886' <Predicate = (!icmp_ln882)> <Delay = 0.85> <CoreInst = "Cmp">   --->   Core 10 'Cmp' <Latency = 0> <II = 1> <Delay = 0.85> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 232 [1/1] (0.88ns)   --->   "%add_ln696 = add i32, i32 %add_ln695_1"   --->   Operation 232 'add' 'add_ln696' <Predicate = (!icmp_ln882)> <Delay = 0.88> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.88> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 233 [1/1] (0.22ns)   --->   "%select_ln136 = select i1 %icmp_ln886, i32 %add_ln696, i32 %add_ln695_1" [/home/centos/workspace/adler32_security_benchmark/libs/xf_security/L1/include/xf_security/adler32.hpp:136]   --->   Operation 233 'select' 'select_ln136' <Predicate = (!icmp_ln882)> <Delay = 0.22> <CoreInst = "Sel">   --->   Core 11 'Sel' <Latency = 0> <II = 1> <Delay = 0.22> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+
+State 17 <SV = 9> <Delay = 1.98>
+ST_17 : Operation 234 [1/1] (0.88ns)   --->   "%add_ln695_2 = add i32 %select_ln136, i32 %add_i13476613"   --->   Operation 234 'add' 'add_ln695_2' <Predicate = (!icmp_ln882)> <Delay = 0.88> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.88> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_17 : Operation 235 [1/1] (0.85ns)   --->   "%icmp_ln886_1 = icmp_ugt  i32 %add_ln695_2, i32"   --->   Operation 235 'icmp' 'icmp_ln886_1' <Predicate = (!icmp_ln882)> <Delay = 0.85> <CoreInst = "Cmp">   --->   Core 10 'Cmp' <Latency = 0> <II = 1> <Delay = 0.85> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_17 : Operation 236 [1/1] (0.88ns)   --->   "%add_ln696_1 = add i32, i32 %add_ln695_2"   --->   Operation 236 'add' 'add_ln696_1' <Predicate = (!icmp_ln882)> <Delay = 0.88> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.88> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_17 : Operation 237 [1/1] (0.22ns)   --->   "%select_ln138 = select i1 %icmp_ln886_1, i32 %add_ln696_1, i32 %add_ln695_2" [/home/centos/workspace/adler32_security_benchmark/libs/xf_security/L1/include/xf_security/adler32.hpp:138]   --->   Operation 237 'select' 'select_ln138' <Predicate = (!icmp_ln882)> <Delay = 0.22> <CoreInst = "Sel">   --->   Core 11 'Sel' <Latency = 0> <II = 1> <Delay = 0.22> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_17 : Operation 238 [1/1] (0.00ns)   --->   "%br_ln0 = br void %._crit_edge.loopexit"   --->   Operation 238 'br' 'br_ln0' <Predicate = (!icmp_ln882)> <Delay = 0.00>
+
+State 18 <SV = 9> <Delay = 2.34>
+ST_18 : Operation 239 [1/1] (0.00ns) (grouped into LUT with out node add_ln211)   --->   "%shl_ln1501 = shl i32 %add_i13476613, i32"   --->   Operation 239 'shl' 'shl_ln1501' <Predicate = true> <Delay = 0.00>
+ST_18 : Operation 240 [1/1] (0.88ns) (out node of the LUT)   --->   "%add_ln211 = add i32 %shl_ln1501, i32 %conv3_i_i474614"   --->   Operation 240 'add' 'add_ln211' <Predicate = true> <Delay = 0.88> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.88> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_18 : Operation 241 [1/1] (1.46ns)   --->   "%write_ln167 = write void @_ssdm_op_Write.ap_fifo.volatile.i32P, i32 %outStrm, i32 %add_ln211" [/opt/Xilinx/Vitis/2020.1/common/technology/autopilot/hls_stream_39.h:167]   --->   Operation 241 'write' 'write_ln167' <Predicate = true> <Delay = 1.46> <CoreInst = "FIFO_SRL">   --->   Core 21 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.55> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 16> <FIFO>
+ST_18 : Operation 242 [1/1] (1.46ns)   --->   "%write_ln167 = write void @_ssdm_op_Write.ap_fifo.volatile.i1P, i1 %endOutStrm, i1" [/opt/Xilinx/Vitis/2020.1/common/technology/autopilot/hls_stream_39.h:167]   --->   Operation 242 'write' 'write_ln167' <Predicate = true> <Delay = 1.46> <CoreInst = "FIFO_SRL">   --->   Core 21 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.55> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 1> <Depth = 16> <FIFO>
+ST_18 : Operation 243 [1/1] (0.00ns)   --->   "%br_ln84 = br void" [/home/centos/workspace/adler32_security_benchmark/libs/xf_security/L1/include/xf_security/adler32.hpp:84]   --->   Operation 243 'br' 'br_ln84' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 4ns, clock uncertainty: 1.08ns.
+
+ <State 1>: 1.46ns
+The critical path consists of the following:
+	fifo read on port 'endInLenStrm' (/opt/Xilinx/Vitis/2020.1/common/technology/autopilot/hls_stream_39.h:145) [13]  (1.46 ns)
+
+ <State 2>: 1.76ns
+The critical path consists of the following:
+	fifo write on port 'endOutStrm' (/opt/Xilinx/Vitis/2020.1/common/technology/autopilot/hls_stream_39.h:167) [259]  (1.46 ns)
+	blocking operation 0.3 ns on control path)
+
+ <State 3>: 0.856ns
+The critical path consists of the following:
+	'phi' operation ('empty_40') with incoming values : ('add_ln695_20') [32]  (0 ns)
+	'add' operation ('add_ln695_20') [37]  (0.856 ns)
+
+ <State 4>: 2.86ns
+The critical path consists of the following:
+	fifo read on port 'inStrm' (/opt/Xilinx/Vitis/2020.1/common/technology/autopilot/hls_stream_39.h:145) [43]  (1.44 ns)
+	'add' operation ('add_ln695') [48]  (0.705 ns)
+	'add' operation ('add_ln695_3') [52]  (0.715 ns)
+
+ <State 5>: 2.92ns
+The critical path consists of the following:
+	'add' operation ('add_ln695_4') [55]  (0.725 ns)
+	'add' operation ('add_ln695_5') [59]  (0.725 ns)
+	'add' operation ('add_ln695_6') [62]  (0.735 ns)
+	'add' operation ('add_ln695_7') [65]  (0.735 ns)
+
+ <State 6>: 2.21ns
+The critical path consists of the following:
+	'add' operation ('add_ln695_8') [68]  (0.735 ns)
+	'add' operation ('add_ln695_9') [72]  (0.735 ns)
+	'add' operation ('add_ln695_10') [75]  (0.745 ns)
+
+ <State 7>: 2.23ns
+The critical path consists of the following:
+	'add' operation ('add_ln695_11') [78]  (0.745 ns)
+	'add' operation ('add_ln695_12') [81]  (0.745 ns)
+	'add' operation ('add_ln695_13') [84]  (0.745 ns)
+
+ <State 8>: 2.23ns
+The critical path consists of the following:
+	'add' operation ('add_ln695_14') [87]  (0.745 ns)
+	'add' operation ('add_ln695_15') [90]  (0.745 ns)
+	'add' operation ('add_ln695_16') [93]  (0.745 ns)
+
+ <State 9>: 2.27ns
+The critical path consists of the following:
+	'add' operation ('add_ln1350_7') [115]  (0.745 ns)
+	'add' operation ('add_ln1350_11') [127]  (0.755 ns)
+	'add' operation ('add_ln1350_13') [133]  (0.765 ns)
+
+ <State 10>: 42.9ns
+The critical path consists of the following:
+	'add' operation ('add_ln1350_14') [136]  (0.775 ns)
+	'add' operation ('add_ln695_18') [138]  (0 ns)
+	'add' operation ('add_ln695_17') [139]  (0.731 ns)
+	'icmp' operation ('icmp_ln886_9') [158]  (0.859 ns)
+	multiplexor before 'phi' operation ('zext_ln886_lcssa') [191]  (0.933 ns)
+	blocking operation 39.6 ns on control path)
+
+ <State 11>: 4.01ns
+The critical path consists of the following:
+	'phi' operation ('zext_ln886_lcssa') [191]  (0 ns)
+	'sub' operation ('sub_ln696') [193]  (0.88 ns)
+	multiplexor before 'phi' operation ('conv3_i462') with incoming values : ('add_ln695_17') ('sub_ln696') [196]  (0.603 ns)
+	'phi' operation ('conv3_i462') with incoming values : ('add_ln695_17') ('sub_ln696') [196]  (0 ns)
+	'phi' operation ('conv3_i461577') with incoming values : ('zext_ln1501_1') ('add_ln695_17') ('sub_ln696') [34]  (0 ns)
+	'add' operation ('add_ln695_17') [139]  (0.731 ns)
+	'icmp' operation ('icmp_ln886_9') [158]  (0.859 ns)
+	multiplexor before 'phi' operation ('zext_ln886_lcssa') [191]  (0.933 ns)
+
+ <State 12>: 0.603ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation ('__Val2__') with incoming values : ('__Val2__', /opt/Xilinx/Vitis/2020.1/common/technology/autopilot/hls_stream_39.h:145) ('inData', /opt/Xilinx/Vitis/2020.1/common/technology/autopilot/hls_stream_39.h:145) [206]  (0.603 ns)
+
+ <State 13>: 0.956ns
+The critical path consists of the following:
+	'phi' operation ('j') with incoming values : ('j', /home/centos/workspace/adler32_security_benchmark/libs/xf_security/L1/include/xf_security/adler32.hpp:131) [207]  (0 ns)
+	'add' operation ('j', /home/centos/workspace/adler32_security_benchmark/libs/xf_security/L1/include/xf_security/adler32.hpp:131) [212]  (0.708 ns)
+	blocking operation 0.248 ns on control path)
+
+ <State 14>: 1.44ns
+The critical path consists of the following:
+	fifo read on port 'inStrm' (/opt/Xilinx/Vitis/2020.1/common/technology/autopilot/hls_stream_39.h:145) [220]  (1.44 ns)
+
+ <State 15>: 1.78ns
+The critical path consists of the following:
+	'phi' operation ('__Val2__') with incoming values : ('__Val2__', /opt/Xilinx/Vitis/2020.1/common/technology/autopilot/hls_stream_39.h:145) ('inData', /opt/Xilinx/Vitis/2020.1/common/technology/autopilot/hls_stream_39.h:145) [206]  (0 ns)
+	multiplexor before 'phi' operation ('inData') with incoming values : ('__Val2__', /opt/Xilinx/Vitis/2020.1/common/technology/autopilot/hls_stream_39.h:145) ('inData', /opt/Xilinx/Vitis/2020.1/common/technology/autopilot/hls_stream_39.h:145) [223]  (0.603 ns)
+	'phi' operation ('inData') with incoming values : ('__Val2__', /opt/Xilinx/Vitis/2020.1/common/technology/autopilot/hls_stream_39.h:145) ('inData', /opt/Xilinx/Vitis/2020.1/common/technology/autopilot/hls_stream_39.h:145) [223]  (0 ns)
+	'select' operation ('select_ln674_3') [234]  (0 ns)
+	'lshr' operation ('lshr_ln674') [239]  (1.18 ns)
+
+ <State 16>: 1.99ns
+The critical path consists of the following:
+	'phi' operation ('conv3_i_i474614', /home/centos/workspace/adler32_security_benchmark/libs/xf_security/L1/include/xf_security/adler32.hpp:136) with incoming values : ('zext_ln1501') ('select_ln128', /home/centos/workspace/adler32_security_benchmark/libs/xf_security/L1/include/xf_security/adler32.hpp:128) ('select_ln136', /home/centos/workspace/adler32_security_benchmark/libs/xf_security/L1/include/xf_security/adler32.hpp:136) [208]  (0 ns)
+	'add' operation ('add_ln695_1') [243]  (0.88 ns)
+	'add' operation ('add_ln696') [245]  (0.88 ns)
+	'select' operation ('select_ln136', /home/centos/workspace/adler32_security_benchmark/libs/xf_security/L1/include/xf_security/adler32.hpp:136) [246]  (0.227 ns)
+
+ <State 17>: 1.99ns
+The critical path consists of the following:
+	'add' operation ('add_ln695_2') [247]  (0.88 ns)
+	'add' operation ('add_ln696_1') [249]  (0.88 ns)
+	'select' operation ('select_ln138', /home/centos/workspace/adler32_security_benchmark/libs/xf_security/L1/include/xf_security/adler32.hpp:138) [250]  (0.227 ns)
+
+ <State 18>: 2.34ns
+The critical path consists of the following:
+	'shl' operation ('shl_ln1501') [253]  (0 ns)
+	'add' operation ('add_ln211') [254]  (0.88 ns)
+	fifo write on port 'outStrm' (/opt/Xilinx/Vitis/2020.1/common/technology/autopilot/hls_stream_39.h:167) [255]  (1.46 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+	State 14
+	State 15
+	State 16
+	State 17
+	State 18
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

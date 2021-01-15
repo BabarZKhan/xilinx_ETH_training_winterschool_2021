@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="0">
+	<Run Id="Adler32Kernel" LaunchDir="/home/centos/workspace/adler32_security_benchmark/Emulation-HW/Adler32Kernel.build/Adler32Kernel/Adler32Kernel" FlowId="Build_IP" FromStepId="vitis_hls" ToStepId="vitis_hls"/>
+</Runs>
+

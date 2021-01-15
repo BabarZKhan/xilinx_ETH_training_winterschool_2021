@@ -1,0 +1,964 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="Adler32Kernel.wdb" id="1">
+         <top_modules>
+            <top_module name="apa_Adler32Kernel_top" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0ns"></ZoomStartTime>
+      <ZoomEndTime time="2000ns"></ZoomEndTime>
+      <Cursor1Time time="0ns"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="257"></NameColumnWidth>
+      <ValueColumnWidth column_width="84"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="2" />
+   <wvobject type="group" fp_name="HLS Process Summary Group">
+      <obj_property name="label">HLS Process Summary</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="group" fp_name="/apatb_Adler32Kernel_top/AESL_inst_Adler32Kernel//AESL_inst_Adler32Kernel_activity">
+         <obj_property name="label">AESL_inst_Adler32Kernel_activity</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="UseFullPath">true</obj_property>
+         <obj_property name="ElementShortName">AESL_inst_Adler32Kernel_activity</obj_property>
+         <obj_property name="ObjectShortName">AESL_inst_Adler32Kernel_activity</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+         <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+         <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+         <obj_property name="CustomSignalColor">turquoise</obj_property>
+         <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+         <obj_property name="Render_Data">/apatb_Adler32Kernel_top/AESL_inst_Adler32Kernel//AESL_inst_Adler32Kernel_activity.dataflowTxWaveData.Cycles</obj_property>
+         <obj_property name="Value_Data">/apatb_Adler32Kernel_top/AESL_inst_Adler32Kernel//AESL_inst_Adler32Kernel_activity.dataflowTxWaveData.OutStanding</obj_property>
+         <obj_property name="Detail_Data">/apatb_Adler32Kernel_top/AESL_inst_Adler32Kernel//AESL_inst_Adler32Kernel_activity.dataflowTxTooltipData</obj_property>
+         <wvobject type="group" fp_name="/apatb_Adler32Kernel_top/AESL_inst_Adler32Kernel/Adler32Kernel_entry3_U0/Adler32Kernel_entry3_U0_activity">
+            <obj_property name="label">Adler32Kernel_entry3_U0_activity</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="UseFullPath">true</obj_property>
+            <obj_property name="ElementShortName">Adler32Kernel_entry3_U0_activity</obj_property>
+            <obj_property name="ObjectShortName">Adler32Kernel_entry3_U0_activity</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+            <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+            <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+            <obj_property name="UseCustomSignalColor">true</obj_property>
+            <obj_property name="CustomSignalColor">turquoise</obj_property>
+            <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+            <obj_property name="Render_Data">/apatb_Adler32Kernel_top/AESL_inst_Adler32Kernel/Adler32Kernel_entry3_U0/Adler32Kernel_entry3_U0_activity.dataflowTxWaveData.Cycles</obj_property>
+            <obj_property name="Value_Data">/apatb_Adler32Kernel_top/AESL_inst_Adler32Kernel/Adler32Kernel_entry3_U0/Adler32Kernel_entry3_U0_activity.dataflowTxWaveData.OutStanding</obj_property>
+            <obj_property name="Detail_Data">/apatb_Adler32Kernel_top/AESL_inst_Adler32Kernel/Adler32Kernel_entry3_U0/Adler32Kernel_entry3_U0_activity.dataflowTxTooltipData</obj_property>
+         </wvobject>
+         <wvobject type="group" fp_name="/apatb_Adler32Kernel_top/AESL_inst_Adler32Kernel/readLenM2S_U0/readLenM2S_U0_activity">
+            <obj_property name="label">readLenM2S_U0_activity</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="UseFullPath">true</obj_property>
+            <obj_property name="ElementShortName">readLenM2S_U0_activity</obj_property>
+            <obj_property name="ObjectShortName">readLenM2S_U0_activity</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+            <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+            <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+            <obj_property name="UseCustomSignalColor">true</obj_property>
+            <obj_property name="CustomSignalColor">turquoise</obj_property>
+            <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+            <obj_property name="Render_Data">/apatb_Adler32Kernel_top/AESL_inst_Adler32Kernel/readLenM2S_U0/readLenM2S_U0_activity.dataflowTxWaveData.Cycles</obj_property>
+            <obj_property name="Value_Data">/apatb_Adler32Kernel_top/AESL_inst_Adler32Kernel/readLenM2S_U0/readLenM2S_U0_activity.dataflowTxWaveData.OutStanding</obj_property>
+            <obj_property name="Detail_Data">/apatb_Adler32Kernel_top/AESL_inst_Adler32Kernel/readLenM2S_U0/readLenM2S_U0_activity.dataflowTxTooltipData</obj_property>
+         </wvobject>
+         <wvobject type="group" fp_name="/apatb_Adler32Kernel_top/AESL_inst_Adler32Kernel/readDataM2S_U0/readDataM2S_U0_activity">
+            <obj_property name="label">readDataM2S_U0_activity</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="UseFullPath">true</obj_property>
+            <obj_property name="ElementShortName">readDataM2S_U0_activity</obj_property>
+            <obj_property name="ObjectShortName">readDataM2S_U0_activity</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+            <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+            <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+            <obj_property name="UseCustomSignalColor">true</obj_property>
+            <obj_property name="CustomSignalColor">turquoise</obj_property>
+            <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+            <obj_property name="Render_Data">/apatb_Adler32Kernel_top/AESL_inst_Adler32Kernel/readDataM2S_U0/readDataM2S_U0_activity.dataflowTxWaveData.Cycles</obj_property>
+            <obj_property name="Value_Data">/apatb_Adler32Kernel_top/AESL_inst_Adler32Kernel/readDataM2S_U0/readDataM2S_U0_activity.dataflowTxWaveData.OutStanding</obj_property>
+            <obj_property name="Detail_Data">/apatb_Adler32Kernel_top/AESL_inst_Adler32Kernel/readDataM2S_U0/readDataM2S_U0_activity.dataflowTxTooltipData</obj_property>
+         </wvobject>
+         <wvobject type="group" fp_name="/apatb_Adler32Kernel_top/AESL_inst_Adler32Kernel/splitStrm_U0/splitStrm_U0_activity">
+            <obj_property name="label">splitStrm_U0_activity</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="UseFullPath">true</obj_property>
+            <obj_property name="ElementShortName">splitStrm_U0_activity</obj_property>
+            <obj_property name="ObjectShortName">splitStrm_U0_activity</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+            <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+            <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+            <obj_property name="UseCustomSignalColor">true</obj_property>
+            <obj_property name="CustomSignalColor">turquoise</obj_property>
+            <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+            <obj_property name="Render_Data">/apatb_Adler32Kernel_top/AESL_inst_Adler32Kernel/splitStrm_U0/splitStrm_U0_activity.dataflowTxWaveData.Cycles</obj_property>
+            <obj_property name="Value_Data">/apatb_Adler32Kernel_top/AESL_inst_Adler32Kernel/splitStrm_U0/splitStrm_U0_activity.dataflowTxWaveData.OutStanding</obj_property>
+            <obj_property name="Detail_Data">/apatb_Adler32Kernel_top/AESL_inst_Adler32Kernel/splitStrm_U0/splitStrm_U0_activity.dataflowTxTooltipData</obj_property>
+         </wvobject>
+         <wvobject type="group" fp_name="/apatb_Adler32Kernel_top/AESL_inst_Adler32Kernel/adler32_16_U0/adler32_16_U0_activity">
+            <obj_property name="label">adler32_16_U0_activity</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="UseFullPath">true</obj_property>
+            <obj_property name="ElementShortName">adler32_16_U0_activity</obj_property>
+            <obj_property name="ObjectShortName">adler32_16_U0_activity</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+            <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+            <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+            <obj_property name="UseCustomSignalColor">true</obj_property>
+            <obj_property name="CustomSignalColor">turquoise</obj_property>
+            <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+            <obj_property name="Render_Data">/apatb_Adler32Kernel_top/AESL_inst_Adler32Kernel/adler32_16_U0/adler32_16_U0_activity.dataflowTxWaveData.Cycles</obj_property>
+            <obj_property name="Value_Data">/apatb_Adler32Kernel_top/AESL_inst_Adler32Kernel/adler32_16_U0/adler32_16_U0_activity.dataflowTxWaveData.OutStanding</obj_property>
+            <obj_property name="Detail_Data">/apatb_Adler32Kernel_top/AESL_inst_Adler32Kernel/adler32_16_U0/adler32_16_U0_activity.dataflowTxTooltipData</obj_property>
+         </wvobject>
+         <wvobject type="group" fp_name="/apatb_Adler32Kernel_top/AESL_inst_Adler32Kernel/writeS2M_U0/writeS2M_U0_activity">
+            <obj_property name="label">writeS2M_U0_activity</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="UseFullPath">true</obj_property>
+            <obj_property name="ElementShortName">writeS2M_U0_activity</obj_property>
+            <obj_property name="ObjectShortName">writeS2M_U0_activity</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+            <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+            <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+            <obj_property name="UseCustomSignalColor">true</obj_property>
+            <obj_property name="CustomSignalColor">turquoise</obj_property>
+            <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+            <obj_property name="Render_Data">/apatb_Adler32Kernel_top/AESL_inst_Adler32Kernel/writeS2M_U0/writeS2M_U0_activity.dataflowTxWaveData.Cycles</obj_property>
+            <obj_property name="Value_Data">/apatb_Adler32Kernel_top/AESL_inst_Adler32Kernel/writeS2M_U0/writeS2M_U0_activity.dataflowTxWaveData.OutStanding</obj_property>
+            <obj_property name="Detail_Data">/apatb_Adler32Kernel_top/AESL_inst_Adler32Kernel/writeS2M_U0/writeS2M_U0_activity.dataflowTxTooltipData</obj_property>
+         </wvobject>
+      </wvobject>
+   </wvobject>
+   <wvobject type="protoinst" fp_name="/apatb_Adler32Kernel_top/AESL_inst_Adler32Kernel//AESL_inst_Adler32Kernel_activity">
+      <obj_property name="ElementShortName">AESL_inst_Adler32Kernel_activity</obj_property>
+      <obj_property name="ObjectShortName">AESL_inst_Adler32Kernel_activity</obj_property>
+   </wvobject>
+   <wvobject type="group" fp_name="AESL_inst_Adler32Kernel_group">
+      <obj_property name="label">AESL_inst_Adler32Kernel</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="protoinst" fp_name="/apatb_Adler32Kernel_top/AESL_inst_Adler32Kernel/Adler32Kernel_entry3_U0/Adler32Kernel_entry3_U0_activity">
+         <obj_property name="ElementShortName">Adler32Kernel_entry3_U0_activity</obj_property>
+         <obj_property name="ObjectShortName">Adler32Kernel_entry3_U0_activity</obj_property>
+      </wvobject>
+      <wvobject type="protoinst" fp_name="/apatb_Adler32Kernel_top/AESL_inst_Adler32Kernel/readLenM2S_U0/readLenM2S_U0_activity">
+         <obj_property name="ElementShortName">readLenM2S_U0_activity</obj_property>
+         <obj_property name="ObjectShortName">readLenM2S_U0_activity</obj_property>
+      </wvobject>
+      <wvobject type="protoinst" fp_name="/apatb_Adler32Kernel_top/AESL_inst_Adler32Kernel/readDataM2S_U0/readDataM2S_U0_activity">
+         <obj_property name="ElementShortName">readDataM2S_U0_activity</obj_property>
+         <obj_property name="ObjectShortName">readDataM2S_U0_activity</obj_property>
+      </wvobject>
+      <wvobject type="protoinst" fp_name="/apatb_Adler32Kernel_top/AESL_inst_Adler32Kernel/splitStrm_U0/splitStrm_U0_activity">
+         <obj_property name="ElementShortName">splitStrm_U0_activity</obj_property>
+         <obj_property name="ObjectShortName">splitStrm_U0_activity</obj_property>
+      </wvobject>
+      <wvobject type="protoinst" fp_name="/apatb_Adler32Kernel_top/AESL_inst_Adler32Kernel/adler32_16_U0/adler32_16_U0_activity">
+         <obj_property name="ElementShortName">adler32_16_U0_activity</obj_property>
+         <obj_property name="ObjectShortName">adler32_16_U0_activity</obj_property>
+      </wvobject>
+      <wvobject type="protoinst" fp_name="/apatb_Adler32Kernel_top/AESL_inst_Adler32Kernel/writeS2M_U0/writeS2M_U0_activity">
+         <obj_property name="ElementShortName">writeS2M_U0_activity</obj_property>
+         <obj_property name="ObjectShortName">writeS2M_U0_activity</obj_property>
+      </wvobject>
+      <wvobject type="group" fp_name="AESL_inst_Adler32Kernel_Handshake_group">
+         <obj_property name="label">Block-level handshake</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="logic" fp_name="/apatb_Adler32Kernel_top/AESL_inst_Adler32Kernel/ap_start">
+            <obj_property name="ElementShortName">ap_start</obj_property>
+            <obj_property name="ObjectShortName">ap_start</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/apatb_Adler32Kernel_top/AESL_inst_Adler32Kernel/ap_ready">
+            <obj_property name="ElementShortName">ap_ready</obj_property>
+            <obj_property name="ObjectShortName">ap_ready</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/apatb_Adler32Kernel_top/AESL_inst_Adler32Kernel/ap_done">
+            <obj_property name="ElementShortName">ap_done</obj_property>
+            <obj_property name="ObjectShortName">ap_done</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/apatb_Adler32Kernel_top/AESL_inst_Adler32Kernel/ap_continue">
+            <obj_property name="ElementShortName">ap_continue</obj_property>
+            <obj_property name="ObjectShortName">ap_continue</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="Adler32Kernel_entry3_U0_group">
+         <obj_property name="label">Adler32Kernel_entry3_U0</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="group" fp_name="Adler32Kernel_entry3_U0_Input_group">
+            <obj_property name="label">Input Channels</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+         </wvobject>
+         <wvobject type="group" fp_name="Adler32Kernel_entry3_U0_Handshake_group">
+            <obj_property name="label">Block-level handshake</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_Adler32Kernel_top/AESL_inst_Adler32Kernel/Adler32Kernel_entry3_U0/ap_start">
+               <obj_property name="ElementShortName">ap_start</obj_property>
+               <obj_property name="ObjectShortName">ap_start</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_Adler32Kernel_top/AESL_inst_Adler32Kernel/Adler32Kernel_entry3_U0/real_start">
+               <obj_property name="ElementShortName">real_start</obj_property>
+               <obj_property name="ObjectShortName">real_start</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_Adler32Kernel_top/AESL_inst_Adler32Kernel/Adler32Kernel_entry3_U0/ap_ready">
+               <obj_property name="ElementShortName">ap_ready</obj_property>
+               <obj_property name="ObjectShortName">ap_ready</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_Adler32Kernel_top/AESL_inst_Adler32Kernel/Adler32Kernel_entry3_U0/ap_done">
+               <obj_property name="ElementShortName">ap_done</obj_property>
+               <obj_property name="ObjectShortName">ap_done</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_Adler32Kernel_top/AESL_inst_Adler32Kernel/Adler32Kernel_entry3_U0/ap_continue">
+               <obj_property name="ElementShortName">ap_continue</obj_property>
+               <obj_property name="ObjectShortName">ap_continue</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="Adler32Kernel_entry3_U0_Output_group">
+            <obj_property name="label">Output Channels</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="group" fp_name="num_out_group">
+               <obj_property name="label">num_out(num_c_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_Adler32Kernel_top/AESL_inst_Adler32Kernel/Adler32Kernel_entry3_U0/num_out_blk_n">
+                  <obj_property name="ElementShortName">num_out_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">num_out_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_Adler32Kernel_top/AESL_inst_Adler32Kernel/Adler32Kernel_entry3_U0/num_out_din">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_Adler32Kernel_top/AESL_inst_Adler32Kernel/Adler32Kernel_entry3_U0/num_out_full_n">
+                  <obj_property name="ElementShortName">num_out_full_n</obj_property>
+                  <obj_property name="ObjectShortName">num_out_full_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_Adler32Kernel_top/AESL_inst_Adler32Kernel/Adler32Kernel_entry3_U0/num_out_write">
+                  <obj_property name="ElementShortName">num_out_write</obj_property>
+                  <obj_property name="ObjectShortName">num_out_write</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="num_out1_group">
+               <obj_property name="label">num_out1(num_c13_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_Adler32Kernel_top/AESL_inst_Adler32Kernel/Adler32Kernel_entry3_U0/num_out1_blk_n">
+                  <obj_property name="ElementShortName">num_out1_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">num_out1_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_Adler32Kernel_top/AESL_inst_Adler32Kernel/Adler32Kernel_entry3_U0/num_out1_din">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_Adler32Kernel_top/AESL_inst_Adler32Kernel/Adler32Kernel_entry3_U0/num_out1_full_n">
+                  <obj_property name="ElementShortName">num_out1_full_n</obj_property>
+                  <obj_property name="ObjectShortName">num_out1_full_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_Adler32Kernel_top/AESL_inst_Adler32Kernel/Adler32Kernel_entry3_U0/num_out1_write">
+                  <obj_property name="ElementShortName">num_out1_write</obj_property>
+                  <obj_property name="ObjectShortName">num_out1_write</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="size_out_group">
+               <obj_property name="label">size_out(size_c_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_Adler32Kernel_top/AESL_inst_Adler32Kernel/Adler32Kernel_entry3_U0/size_out_blk_n">
+                  <obj_property name="ElementShortName">size_out_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">size_out_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_Adler32Kernel_top/AESL_inst_Adler32Kernel/Adler32Kernel_entry3_U0/size_out_din">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_Adler32Kernel_top/AESL_inst_Adler32Kernel/Adler32Kernel_entry3_U0/size_out_full_n">
+                  <obj_property name="ElementShortName">size_out_full_n</obj_property>
+                  <obj_property name="ObjectShortName">size_out_full_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_Adler32Kernel_top/AESL_inst_Adler32Kernel/Adler32Kernel_entry3_U0/size_out_write">
+                  <obj_property name="ElementShortName">size_out_write</obj_property>
+                  <obj_property name="ObjectShortName">size_out_write</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="len_out_group">
+               <obj_property name="label">len_out(len_c_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_Adler32Kernel_top/AESL_inst_Adler32Kernel/Adler32Kernel_entry3_U0/len_out_blk_n">
+                  <obj_property name="ElementShortName">len_out_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">len_out_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_Adler32Kernel_top/AESL_inst_Adler32Kernel/Adler32Kernel_entry3_U0/len_out_din">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_Adler32Kernel_top/AESL_inst_Adler32Kernel/Adler32Kernel_entry3_U0/len_out_full_n">
+                  <obj_property name="ElementShortName">len_out_full_n</obj_property>
+                  <obj_property name="ObjectShortName">len_out_full_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_Adler32Kernel_top/AESL_inst_Adler32Kernel/Adler32Kernel_entry3_U0/len_out_write">
+                  <obj_property name="ElementShortName">len_out_write</obj_property>
+                  <obj_property name="ObjectShortName">len_out_write</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="adler_out_group">
+               <obj_property name="label">adler_out(adler_c_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_Adler32Kernel_top/AESL_inst_Adler32Kernel/Adler32Kernel_entry3_U0/adler_out_blk_n">
+                  <obj_property name="ElementShortName">adler_out_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">adler_out_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_Adler32Kernel_top/AESL_inst_Adler32Kernel/Adler32Kernel_entry3_U0/adler_out_din">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_Adler32Kernel_top/AESL_inst_Adler32Kernel/Adler32Kernel_entry3_U0/adler_out_full_n">
+                  <obj_property name="ElementShortName">adler_out_full_n</obj_property>
+                  <obj_property name="ObjectShortName">adler_out_full_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_Adler32Kernel_top/AESL_inst_Adler32Kernel/Adler32Kernel_entry3_U0/adler_out_write">
+                  <obj_property name="ElementShortName">adler_out_write</obj_property>
+                  <obj_property name="ObjectShortName">adler_out_write</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="inData_out_group">
+               <obj_property name="label">inData_out(inData_c_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_Adler32Kernel_top/AESL_inst_Adler32Kernel/Adler32Kernel_entry3_U0/inData_out_blk_n">
+                  <obj_property name="ElementShortName">inData_out_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">inData_out_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_Adler32Kernel_top/AESL_inst_Adler32Kernel/Adler32Kernel_entry3_U0/inData_out_din">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_Adler32Kernel_top/AESL_inst_Adler32Kernel/Adler32Kernel_entry3_U0/inData_out_full_n">
+                  <obj_property name="ElementShortName">inData_out_full_n</obj_property>
+                  <obj_property name="ObjectShortName">inData_out_full_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_Adler32Kernel_top/AESL_inst_Adler32Kernel/Adler32Kernel_entry3_U0/inData_out_write">
+                  <obj_property name="ElementShortName">inData_out_write</obj_property>
+                  <obj_property name="ObjectShortName">inData_out_write</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="adler32Result_out_group">
+               <obj_property name="label">adler32Result_out(adler32Result_c_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_Adler32Kernel_top/AESL_inst_Adler32Kernel/Adler32Kernel_entry3_U0/adler32Result_out_blk_n">
+                  <obj_property name="ElementShortName">adler32Result_out_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">adler32Result_out_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_Adler32Kernel_top/AESL_inst_Adler32Kernel/Adler32Kernel_entry3_U0/adler32Result_out_din">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_Adler32Kernel_top/AESL_inst_Adler32Kernel/Adler32Kernel_entry3_U0/adler32Result_out_full_n">
+                  <obj_property name="ElementShortName">adler32Result_out_full_n</obj_property>
+                  <obj_property name="ObjectShortName">adler32Result_out_full_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_Adler32Kernel_top/AESL_inst_Adler32Kernel/Adler32Kernel_entry3_U0/adler32Result_out_write">
+                  <obj_property name="ElementShortName">adler32Result_out_write</obj_property>
+                  <obj_property name="ObjectShortName">adler32Result_out_write</obj_property>
+               </wvobject>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="readLenM2S_U0_group">
+         <obj_property name="label">readLenM2S_U0</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="group" fp_name="readLenM2S_U0_Input_group">
+            <obj_property name="label">Input Channels</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="group" fp_name="n_group">
+               <obj_property name="label">n(num_c_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_Adler32Kernel_top/AESL_inst_Adler32Kernel/readLenM2S_U0/n_blk_n">
+                  <obj_property name="ElementShortName">n_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">n_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_Adler32Kernel_top/AESL_inst_Adler32Kernel/readLenM2S_U0/n_dout">
+                  <obj_property name="ElementShortName">n_dout[31:0]</obj_property>
+                  <obj_property name="ObjectShortName">n_dout[31:0]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_Adler32Kernel_top/AESL_inst_Adler32Kernel/readLenM2S_U0/n_empty_n">
+                  <obj_property name="ElementShortName">n_empty_n</obj_property>
+                  <obj_property name="ObjectShortName">n_empty_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_Adler32Kernel_top/AESL_inst_Adler32Kernel/readLenM2S_U0/n_read">
+                  <obj_property name="ElementShortName">n_read</obj_property>
+                  <obj_property name="ObjectShortName">n_read</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="inData_group">
+               <obj_property name="label">inData(len_c_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_Adler32Kernel_top/AESL_inst_Adler32Kernel/readLenM2S_U0/inData_blk_n">
+                  <obj_property name="ElementShortName">inData_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">inData_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_Adler32Kernel_top/AESL_inst_Adler32Kernel/readLenM2S_U0/inData_dout">
+                  <obj_property name="ElementShortName">inData_dout[63:0]</obj_property>
+                  <obj_property name="ObjectShortName">inData_dout[63:0]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_Adler32Kernel_top/AESL_inst_Adler32Kernel/readLenM2S_U0/inData_empty_n">
+                  <obj_property name="ElementShortName">inData_empty_n</obj_property>
+                  <obj_property name="ObjectShortName">inData_empty_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_Adler32Kernel_top/AESL_inst_Adler32Kernel/readLenM2S_U0/inData_read">
+                  <obj_property name="ElementShortName">inData_read</obj_property>
+                  <obj_property name="ObjectShortName">inData_read</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="inData2_group">
+               <obj_property name="label">inData2(adler_c_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_Adler32Kernel_top/AESL_inst_Adler32Kernel/readLenM2S_U0/inData2_blk_n">
+                  <obj_property name="ElementShortName">inData2_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">inData2_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_Adler32Kernel_top/AESL_inst_Adler32Kernel/readLenM2S_U0/inData2_dout">
+                  <obj_property name="ElementShortName">inData2_dout[63:0]</obj_property>
+                  <obj_property name="ObjectShortName">inData2_dout[63:0]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_Adler32Kernel_top/AESL_inst_Adler32Kernel/readLenM2S_U0/inData2_empty_n">
+                  <obj_property name="ElementShortName">inData2_empty_n</obj_property>
+                  <obj_property name="ObjectShortName">inData2_empty_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_Adler32Kernel_top/AESL_inst_Adler32Kernel/readLenM2S_U0/inData2_read">
+                  <obj_property name="ElementShortName">inData2_read</obj_property>
+                  <obj_property name="ObjectShortName">inData2_read</obj_property>
+               </wvobject>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="readLenM2S_U0_Handshake_group">
+            <obj_property name="label">Block-level handshake</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_Adler32Kernel_top/AESL_inst_Adler32Kernel/readLenM2S_U0/ap_start">
+               <obj_property name="ElementShortName">ap_start</obj_property>
+               <obj_property name="ObjectShortName">ap_start</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_Adler32Kernel_top/AESL_inst_Adler32Kernel/readLenM2S_U0/real_start">
+               <obj_property name="ElementShortName">real_start</obj_property>
+               <obj_property name="ObjectShortName">real_start</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_Adler32Kernel_top/AESL_inst_Adler32Kernel/readLenM2S_U0/ap_ready">
+               <obj_property name="ElementShortName">ap_ready</obj_property>
+               <obj_property name="ObjectShortName">ap_ready</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_Adler32Kernel_top/AESL_inst_Adler32Kernel/readLenM2S_U0/ap_done">
+               <obj_property name="ElementShortName">ap_done</obj_property>
+               <obj_property name="ObjectShortName">ap_done</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_Adler32Kernel_top/AESL_inst_Adler32Kernel/readLenM2S_U0/ap_continue">
+               <obj_property name="ElementShortName">ap_continue</obj_property>
+               <obj_property name="ObjectShortName">ap_continue</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="readLenM2S_U0_Output_group">
+            <obj_property name="label">Output Channels</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="group" fp_name="outDataStrm_group">
+               <obj_property name="label">outDataStrm(lenStrm_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_Adler32Kernel_top/AESL_inst_Adler32Kernel/readLenM2S_U0/outDataStrm_blk_n">
+                  <obj_property name="ElementShortName">outDataStrm_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">outDataStrm_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_Adler32Kernel_top/AESL_inst_Adler32Kernel/readLenM2S_U0/outDataStrm_din">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_Adler32Kernel_top/AESL_inst_Adler32Kernel/readLenM2S_U0/outDataStrm_full_n">
+                  <obj_property name="ElementShortName">outDataStrm_full_n</obj_property>
+                  <obj_property name="ObjectShortName">outDataStrm_full_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_Adler32Kernel_top/AESL_inst_Adler32Kernel/readLenM2S_U0/outDataStrm_write">
+                  <obj_property name="ElementShortName">outDataStrm_write</obj_property>
+                  <obj_property name="ObjectShortName">outDataStrm_write</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="outData2Strm_group">
+               <obj_property name="label">outData2Strm(adlerStrm_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_Adler32Kernel_top/AESL_inst_Adler32Kernel/readLenM2S_U0/outData2Strm_blk_n">
+                  <obj_property name="ElementShortName">outData2Strm_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">outData2Strm_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_Adler32Kernel_top/AESL_inst_Adler32Kernel/readLenM2S_U0/outData2Strm_din">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_Adler32Kernel_top/AESL_inst_Adler32Kernel/readLenM2S_U0/outData2Strm_full_n">
+                  <obj_property name="ElementShortName">outData2Strm_full_n</obj_property>
+                  <obj_property name="ObjectShortName">outData2Strm_full_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_Adler32Kernel_top/AESL_inst_Adler32Kernel/readLenM2S_U0/outData2Strm_write">
+                  <obj_property name="ElementShortName">outData2Strm_write</obj_property>
+                  <obj_property name="ObjectShortName">outData2Strm_write</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="outEndStrm_group">
+               <obj_property name="label">outEndStrm(endStrm_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_Adler32Kernel_top/AESL_inst_Adler32Kernel/readLenM2S_U0/outEndStrm_blk_n">
+                  <obj_property name="ElementShortName">outEndStrm_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">outEndStrm_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_Adler32Kernel_top/AESL_inst_Adler32Kernel/readLenM2S_U0/outEndStrm_din">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_Adler32Kernel_top/AESL_inst_Adler32Kernel/readLenM2S_U0/outEndStrm_full_n">
+                  <obj_property name="ElementShortName">outEndStrm_full_n</obj_property>
+                  <obj_property name="ObjectShortName">outEndStrm_full_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_Adler32Kernel_top/AESL_inst_Adler32Kernel/readLenM2S_U0/outEndStrm_write">
+                  <obj_property name="ElementShortName">outEndStrm_write</obj_property>
+                  <obj_property name="ObjectShortName">outEndStrm_write</obj_property>
+               </wvobject>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="readDataM2S_U0_group">
+         <obj_property name="label">readDataM2S_U0</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="group" fp_name="readDataM2S_U0_Input_group">
+            <obj_property name="label">Input Channels</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="group" fp_name="n_group">
+               <obj_property name="label">n(size_c_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_Adler32Kernel_top/AESL_inst_Adler32Kernel/readDataM2S_U0/n_blk_n">
+                  <obj_property name="ElementShortName">n_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">n_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_Adler32Kernel_top/AESL_inst_Adler32Kernel/readDataM2S_U0/n_dout">
+                  <obj_property name="ElementShortName">n_dout[31:0]</obj_property>
+                  <obj_property name="ObjectShortName">n_dout[31:0]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_Adler32Kernel_top/AESL_inst_Adler32Kernel/readDataM2S_U0/n_empty_n">
+                  <obj_property name="ElementShortName">n_empty_n</obj_property>
+                  <obj_property name="ObjectShortName">n_empty_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_Adler32Kernel_top/AESL_inst_Adler32Kernel/readDataM2S_U0/n_read">
+                  <obj_property name="ElementShortName">n_read</obj_property>
+                  <obj_property name="ObjectShortName">n_read</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="inData_group">
+               <obj_property name="label">inData(inData_c_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_Adler32Kernel_top/AESL_inst_Adler32Kernel/readDataM2S_U0/inData_blk_n">
+                  <obj_property name="ElementShortName">inData_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">inData_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_Adler32Kernel_top/AESL_inst_Adler32Kernel/readDataM2S_U0/inData_dout">
+                  <obj_property name="ElementShortName">inData_dout[63:0]</obj_property>
+                  <obj_property name="ObjectShortName">inData_dout[63:0]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_Adler32Kernel_top/AESL_inst_Adler32Kernel/readDataM2S_U0/inData_empty_n">
+                  <obj_property name="ElementShortName">inData_empty_n</obj_property>
+                  <obj_property name="ObjectShortName">inData_empty_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_Adler32Kernel_top/AESL_inst_Adler32Kernel/readDataM2S_U0/inData_read">
+                  <obj_property name="ElementShortName">inData_read</obj_property>
+                  <obj_property name="ObjectShortName">inData_read</obj_property>
+               </wvobject>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="readDataM2S_U0_Handshake_group">
+            <obj_property name="label">Block-level handshake</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_Adler32Kernel_top/AESL_inst_Adler32Kernel/readDataM2S_U0/ap_start">
+               <obj_property name="ElementShortName">ap_start</obj_property>
+               <obj_property name="ObjectShortName">ap_start</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_Adler32Kernel_top/AESL_inst_Adler32Kernel/readDataM2S_U0/real_start">
+               <obj_property name="ElementShortName">real_start</obj_property>
+               <obj_property name="ObjectShortName">real_start</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_Adler32Kernel_top/AESL_inst_Adler32Kernel/readDataM2S_U0/ap_ready">
+               <obj_property name="ElementShortName">ap_ready</obj_property>
+               <obj_property name="ObjectShortName">ap_ready</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_Adler32Kernel_top/AESL_inst_Adler32Kernel/readDataM2S_U0/ap_done">
+               <obj_property name="ElementShortName">ap_done</obj_property>
+               <obj_property name="ObjectShortName">ap_done</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_Adler32Kernel_top/AESL_inst_Adler32Kernel/readDataM2S_U0/ap_continue">
+               <obj_property name="ElementShortName">ap_continue</obj_property>
+               <obj_property name="ObjectShortName">ap_continue</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="readDataM2S_U0_Output_group">
+            <obj_property name="label">Output Channels</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="group" fp_name="outDataStrm_group">
+               <obj_property name="label">outDataStrm(data512Strm_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_Adler32Kernel_top/AESL_inst_Adler32Kernel/readDataM2S_U0/outDataStrm_blk_n">
+                  <obj_property name="ElementShortName">outDataStrm_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">outDataStrm_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_Adler32Kernel_top/AESL_inst_Adler32Kernel/readDataM2S_U0/outDataStrm_din">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_Adler32Kernel_top/AESL_inst_Adler32Kernel/readDataM2S_U0/outDataStrm_full_n">
+                  <obj_property name="ElementShortName">outDataStrm_full_n</obj_property>
+                  <obj_property name="ObjectShortName">outDataStrm_full_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_Adler32Kernel_top/AESL_inst_Adler32Kernel/readDataM2S_U0/outDataStrm_write">
+                  <obj_property name="ElementShortName">outDataStrm_write</obj_property>
+                  <obj_property name="ObjectShortName">outDataStrm_write</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="n_out_group">
+               <obj_property name="label">n_out(size_c14_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_Adler32Kernel_top/AESL_inst_Adler32Kernel/readDataM2S_U0/n_out_blk_n">
+                  <obj_property name="ElementShortName">n_out_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">n_out_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_Adler32Kernel_top/AESL_inst_Adler32Kernel/readDataM2S_U0/n_out_din">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_Adler32Kernel_top/AESL_inst_Adler32Kernel/readDataM2S_U0/n_out_full_n">
+                  <obj_property name="ElementShortName">n_out_full_n</obj_property>
+                  <obj_property name="ObjectShortName">n_out_full_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_Adler32Kernel_top/AESL_inst_Adler32Kernel/readDataM2S_U0/n_out_write">
+                  <obj_property name="ElementShortName">n_out_write</obj_property>
+                  <obj_property name="ObjectShortName">n_out_write</obj_property>
+               </wvobject>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="splitStrm_U0_group">
+         <obj_property name="label">splitStrm_U0</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="group" fp_name="splitStrm_U0_Input_group">
+            <obj_property name="label">Input Channels</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="group" fp_name="inStrm_group">
+               <obj_property name="label">inStrm(data512Strm_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_Adler32Kernel_top/AESL_inst_Adler32Kernel/splitStrm_U0/inStrm_blk_n">
+                  <obj_property name="ElementShortName">inStrm_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">inStrm_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_Adler32Kernel_top/AESL_inst_Adler32Kernel/splitStrm_U0/inStrm_dout">
+                  <obj_property name="ElementShortName">inStrm_dout[511:0]</obj_property>
+                  <obj_property name="ObjectShortName">inStrm_dout[511:0]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_Adler32Kernel_top/AESL_inst_Adler32Kernel/splitStrm_U0/inStrm_empty_n">
+                  <obj_property name="ElementShortName">inStrm_empty_n</obj_property>
+                  <obj_property name="ObjectShortName">inStrm_empty_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_Adler32Kernel_top/AESL_inst_Adler32Kernel/splitStrm_U0/inStrm_read">
+                  <obj_property name="ElementShortName">inStrm_read</obj_property>
+                  <obj_property name="ObjectShortName">inStrm_read</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="n_group">
+               <obj_property name="label">n(size_c14_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_Adler32Kernel_top/AESL_inst_Adler32Kernel/splitStrm_U0/n_blk_n">
+                  <obj_property name="ElementShortName">n_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">n_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_Adler32Kernel_top/AESL_inst_Adler32Kernel/splitStrm_U0/n_dout">
+                  <obj_property name="ElementShortName">n_dout[31:0]</obj_property>
+                  <obj_property name="ObjectShortName">n_dout[31:0]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_Adler32Kernel_top/AESL_inst_Adler32Kernel/splitStrm_U0/n_empty_n">
+                  <obj_property name="ElementShortName">n_empty_n</obj_property>
+                  <obj_property name="ObjectShortName">n_empty_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_Adler32Kernel_top/AESL_inst_Adler32Kernel/splitStrm_U0/n_read">
+                  <obj_property name="ElementShortName">n_read</obj_property>
+                  <obj_property name="ObjectShortName">n_read</obj_property>
+               </wvobject>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="splitStrm_U0_Handshake_group">
+            <obj_property name="label">Block-level handshake</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_Adler32Kernel_top/AESL_inst_Adler32Kernel/splitStrm_U0/ap_start">
+               <obj_property name="ElementShortName">ap_start</obj_property>
+               <obj_property name="ObjectShortName">ap_start</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_Adler32Kernel_top/AESL_inst_Adler32Kernel/splitStrm_U0/ap_ready">
+               <obj_property name="ElementShortName">ap_ready</obj_property>
+               <obj_property name="ObjectShortName">ap_ready</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_Adler32Kernel_top/AESL_inst_Adler32Kernel/splitStrm_U0/ap_done">
+               <obj_property name="ElementShortName">ap_done</obj_property>
+               <obj_property name="ObjectShortName">ap_done</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_Adler32Kernel_top/AESL_inst_Adler32Kernel/splitStrm_U0/ap_continue">
+               <obj_property name="ElementShortName">ap_continue</obj_property>
+               <obj_property name="ObjectShortName">ap_continue</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="splitStrm_U0_Output_group">
+            <obj_property name="label">Output Channels</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="group" fp_name="outStrm_group">
+               <obj_property name="label">outStrm(dataStrm_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_Adler32Kernel_top/AESL_inst_Adler32Kernel/splitStrm_U0/outStrm_blk_n">
+                  <obj_property name="ElementShortName">outStrm_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">outStrm_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_Adler32Kernel_top/AESL_inst_Adler32Kernel/splitStrm_U0/outStrm_din">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_Adler32Kernel_top/AESL_inst_Adler32Kernel/splitStrm_U0/outStrm_full_n">
+                  <obj_property name="ElementShortName">outStrm_full_n</obj_property>
+                  <obj_property name="ObjectShortName">outStrm_full_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_Adler32Kernel_top/AESL_inst_Adler32Kernel/splitStrm_U0/outStrm_write">
+                  <obj_property name="ElementShortName">outStrm_write</obj_property>
+                  <obj_property name="ObjectShortName">outStrm_write</obj_property>
+               </wvobject>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="adler32_16_U0_group">
+         <obj_property name="label">adler32_16_U0</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="group" fp_name="adler32_16_U0_Input_group">
+            <obj_property name="label">Input Channels</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="group" fp_name="adlerStrm_group">
+               <obj_property name="label">adlerStrm(adlerStrm_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_Adler32Kernel_top/AESL_inst_Adler32Kernel/adler32_16_U0/adlerStrm_blk_n">
+                  <obj_property name="ElementShortName">adlerStrm_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">adlerStrm_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_Adler32Kernel_top/AESL_inst_Adler32Kernel/adler32_16_U0/adlerStrm_dout">
+                  <obj_property name="ElementShortName">adlerStrm_dout[31:0]</obj_property>
+                  <obj_property name="ObjectShortName">adlerStrm_dout[31:0]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_Adler32Kernel_top/AESL_inst_Adler32Kernel/adler32_16_U0/adlerStrm_empty_n">
+                  <obj_property name="ElementShortName">adlerStrm_empty_n</obj_property>
+                  <obj_property name="ObjectShortName">adlerStrm_empty_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_Adler32Kernel_top/AESL_inst_Adler32Kernel/adler32_16_U0/adlerStrm_read">
+                  <obj_property name="ElementShortName">adlerStrm_read</obj_property>
+                  <obj_property name="ObjectShortName">adlerStrm_read</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="inStrm_group">
+               <obj_property name="label">inStrm(dataStrm_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_Adler32Kernel_top/AESL_inst_Adler32Kernel/adler32_16_U0/inStrm_blk_n">
+                  <obj_property name="ElementShortName">inStrm_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">inStrm_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_Adler32Kernel_top/AESL_inst_Adler32Kernel/adler32_16_U0/inStrm_dout">
+                  <obj_property name="ElementShortName">inStrm_dout[127:0]</obj_property>
+                  <obj_property name="ObjectShortName">inStrm_dout[127:0]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_Adler32Kernel_top/AESL_inst_Adler32Kernel/adler32_16_U0/inStrm_empty_n">
+                  <obj_property name="ElementShortName">inStrm_empty_n</obj_property>
+                  <obj_property name="ObjectShortName">inStrm_empty_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_Adler32Kernel_top/AESL_inst_Adler32Kernel/adler32_16_U0/inStrm_read">
+                  <obj_property name="ElementShortName">inStrm_read</obj_property>
+                  <obj_property name="ObjectShortName">inStrm_read</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="inLenStrm_group">
+               <obj_property name="label">inLenStrm(lenStrm_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_Adler32Kernel_top/AESL_inst_Adler32Kernel/adler32_16_U0/inLenStrm_blk_n">
+                  <obj_property name="ElementShortName">inLenStrm_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">inLenStrm_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_Adler32Kernel_top/AESL_inst_Adler32Kernel/adler32_16_U0/inLenStrm_dout">
+                  <obj_property name="ElementShortName">inLenStrm_dout[31:0]</obj_property>
+                  <obj_property name="ObjectShortName">inLenStrm_dout[31:0]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_Adler32Kernel_top/AESL_inst_Adler32Kernel/adler32_16_U0/inLenStrm_empty_n">
+                  <obj_property name="ElementShortName">inLenStrm_empty_n</obj_property>
+                  <obj_property name="ObjectShortName">inLenStrm_empty_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_Adler32Kernel_top/AESL_inst_Adler32Kernel/adler32_16_U0/inLenStrm_read">
+                  <obj_property name="ElementShortName">inLenStrm_read</obj_property>
+                  <obj_property name="ObjectShortName">inLenStrm_read</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="endInLenStrm_group">
+               <obj_property name="label">endInLenStrm(endStrm_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_Adler32Kernel_top/AESL_inst_Adler32Kernel/adler32_16_U0/endInLenStrm_blk_n">
+                  <obj_property name="ElementShortName">endInLenStrm_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">endInLenStrm_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_Adler32Kernel_top/AESL_inst_Adler32Kernel/adler32_16_U0/endInLenStrm_dout">
+                  <obj_property name="ElementShortName">endInLenStrm_dout[0:0]</obj_property>
+                  <obj_property name="ObjectShortName">endInLenStrm_dout[0:0]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_Adler32Kernel_top/AESL_inst_Adler32Kernel/adler32_16_U0/endInLenStrm_empty_n">
+                  <obj_property name="ElementShortName">endInLenStrm_empty_n</obj_property>
+                  <obj_property name="ObjectShortName">endInLenStrm_empty_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_Adler32Kernel_top/AESL_inst_Adler32Kernel/adler32_16_U0/endInLenStrm_read">
+                  <obj_property name="ElementShortName">endInLenStrm_read</obj_property>
+                  <obj_property name="ObjectShortName">endInLenStrm_read</obj_property>
+               </wvobject>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="adler32_16_U0_Handshake_group">
+            <obj_property name="label">Block-level handshake</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_Adler32Kernel_top/AESL_inst_Adler32Kernel/adler32_16_U0/ap_start">
+               <obj_property name="ElementShortName">ap_start</obj_property>
+               <obj_property name="ObjectShortName">ap_start</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_Adler32Kernel_top/AESL_inst_Adler32Kernel/adler32_16_U0/ap_ready">
+               <obj_property name="ElementShortName">ap_ready</obj_property>
+               <obj_property name="ObjectShortName">ap_ready</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_Adler32Kernel_top/AESL_inst_Adler32Kernel/adler32_16_U0/ap_done">
+               <obj_property name="ElementShortName">ap_done</obj_property>
+               <obj_property name="ObjectShortName">ap_done</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_Adler32Kernel_top/AESL_inst_Adler32Kernel/adler32_16_U0/ap_continue">
+               <obj_property name="ElementShortName">ap_continue</obj_property>
+               <obj_property name="ObjectShortName">ap_continue</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="adler32_16_U0_Output_group">
+            <obj_property name="label">Output Channels</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="group" fp_name="outStrm_group">
+               <obj_property name="label">outStrm(adler32Strm_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_Adler32Kernel_top/AESL_inst_Adler32Kernel/adler32_16_U0/outStrm_blk_n">
+                  <obj_property name="ElementShortName">outStrm_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">outStrm_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_Adler32Kernel_top/AESL_inst_Adler32Kernel/adler32_16_U0/outStrm_din">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_Adler32Kernel_top/AESL_inst_Adler32Kernel/adler32_16_U0/outStrm_full_n">
+                  <obj_property name="ElementShortName">outStrm_full_n</obj_property>
+                  <obj_property name="ObjectShortName">outStrm_full_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_Adler32Kernel_top/AESL_inst_Adler32Kernel/adler32_16_U0/outStrm_write">
+                  <obj_property name="ElementShortName">outStrm_write</obj_property>
+                  <obj_property name="ObjectShortName">outStrm_write</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="endOutStrm_group">
+               <obj_property name="label">endOutStrm(adler32EndStrm_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_Adler32Kernel_top/AESL_inst_Adler32Kernel/adler32_16_U0/endOutStrm_blk_n">
+                  <obj_property name="ElementShortName">endOutStrm_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">endOutStrm_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_Adler32Kernel_top/AESL_inst_Adler32Kernel/adler32_16_U0/endOutStrm_din">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_Adler32Kernel_top/AESL_inst_Adler32Kernel/adler32_16_U0/endOutStrm_full_n">
+                  <obj_property name="ElementShortName">endOutStrm_full_n</obj_property>
+                  <obj_property name="ObjectShortName">endOutStrm_full_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_Adler32Kernel_top/AESL_inst_Adler32Kernel/adler32_16_U0/endOutStrm_write">
+                  <obj_property name="ElementShortName">endOutStrm_write</obj_property>
+                  <obj_property name="ObjectShortName">endOutStrm_write</obj_property>
+               </wvobject>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="writeS2M_U0_group">
+         <obj_property name="label">writeS2M_U0</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="group" fp_name="writeS2M_U0_Input_group">
+            <obj_property name="label">Input Channels</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="group" fp_name="inStrm_group">
+               <obj_property name="label">inStrm(adler32Strm_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_Adler32Kernel_top/AESL_inst_Adler32Kernel/writeS2M_U0/inStrm_blk_n">
+                  <obj_property name="ElementShortName">inStrm_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">inStrm_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_Adler32Kernel_top/AESL_inst_Adler32Kernel/writeS2M_U0/inStrm_dout">
+                  <obj_property name="ElementShortName">inStrm_dout[31:0]</obj_property>
+                  <obj_property name="ObjectShortName">inStrm_dout[31:0]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_Adler32Kernel_top/AESL_inst_Adler32Kernel/writeS2M_U0/inStrm_empty_n">
+                  <obj_property name="ElementShortName">inStrm_empty_n</obj_property>
+                  <obj_property name="ObjectShortName">inStrm_empty_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_Adler32Kernel_top/AESL_inst_Adler32Kernel/writeS2M_U0/inStrm_read">
+                  <obj_property name="ElementShortName">inStrm_read</obj_property>
+                  <obj_property name="ObjectShortName">inStrm_read</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="endStrm_group">
+               <obj_property name="label">endStrm(adler32EndStrm_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_Adler32Kernel_top/AESL_inst_Adler32Kernel/writeS2M_U0/endStrm_blk_n">
+                  <obj_property name="ElementShortName">endStrm_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">endStrm_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_Adler32Kernel_top/AESL_inst_Adler32Kernel/writeS2M_U0/endStrm_dout">
+                  <obj_property name="ElementShortName">endStrm_dout[0:0]</obj_property>
+                  <obj_property name="ObjectShortName">endStrm_dout[0:0]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_Adler32Kernel_top/AESL_inst_Adler32Kernel/writeS2M_U0/endStrm_empty_n">
+                  <obj_property name="ElementShortName">endStrm_empty_n</obj_property>
+                  <obj_property name="ObjectShortName">endStrm_empty_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_Adler32Kernel_top/AESL_inst_Adler32Kernel/writeS2M_U0/endStrm_read">
+                  <obj_property name="ElementShortName">endStrm_read</obj_property>
+                  <obj_property name="ObjectShortName">endStrm_read</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="n_group">
+               <obj_property name="label">n(num_c13_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_Adler32Kernel_top/AESL_inst_Adler32Kernel/writeS2M_U0/n_blk_n">
+                  <obj_property name="ElementShortName">n_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">n_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_Adler32Kernel_top/AESL_inst_Adler32Kernel/writeS2M_U0/n_dout">
+                  <obj_property name="ElementShortName">n_dout[31:0]</obj_property>
+                  <obj_property name="ObjectShortName">n_dout[31:0]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_Adler32Kernel_top/AESL_inst_Adler32Kernel/writeS2M_U0/n_empty_n">
+                  <obj_property name="ElementShortName">n_empty_n</obj_property>
+                  <obj_property name="ObjectShortName">n_empty_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_Adler32Kernel_top/AESL_inst_Adler32Kernel/writeS2M_U0/n_read">
+                  <obj_property name="ElementShortName">n_read</obj_property>
+                  <obj_property name="ObjectShortName">n_read</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="adler32Result_group">
+               <obj_property name="label">adler32Result(adler32Result_c_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_Adler32Kernel_top/AESL_inst_Adler32Kernel/writeS2M_U0/adler32Result_blk_n">
+                  <obj_property name="ElementShortName">adler32Result_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">adler32Result_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_Adler32Kernel_top/AESL_inst_Adler32Kernel/writeS2M_U0/adler32Result_dout">
+                  <obj_property name="ElementShortName">adler32Result_dout[63:0]</obj_property>
+                  <obj_property name="ObjectShortName">adler32Result_dout[63:0]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_Adler32Kernel_top/AESL_inst_Adler32Kernel/writeS2M_U0/adler32Result_empty_n">
+                  <obj_property name="ElementShortName">adler32Result_empty_n</obj_property>
+                  <obj_property name="ObjectShortName">adler32Result_empty_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_Adler32Kernel_top/AESL_inst_Adler32Kernel/writeS2M_U0/adler32Result_read">
+                  <obj_property name="ElementShortName">adler32Result_read</obj_property>
+                  <obj_property name="ObjectShortName">adler32Result_read</obj_property>
+               </wvobject>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="writeS2M_U0_Handshake_group">
+            <obj_property name="label">Block-level handshake</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_Adler32Kernel_top/AESL_inst_Adler32Kernel/writeS2M_U0/ap_start">
+               <obj_property name="ElementShortName">ap_start</obj_property>
+               <obj_property name="ObjectShortName">ap_start</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_Adler32Kernel_top/AESL_inst_Adler32Kernel/writeS2M_U0/ap_ready">
+               <obj_property name="ElementShortName">ap_ready</obj_property>
+               <obj_property name="ObjectShortName">ap_ready</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_Adler32Kernel_top/AESL_inst_Adler32Kernel/writeS2M_U0/ap_done">
+               <obj_property name="ElementShortName">ap_done</obj_property>
+               <obj_property name="ObjectShortName">ap_done</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_Adler32Kernel_top/AESL_inst_Adler32Kernel/writeS2M_U0/ap_continue">
+               <obj_property name="ElementShortName">ap_continue</obj_property>
+               <obj_property name="ObjectShortName">ap_continue</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="writeS2M_U0_Output_group">
+            <obj_property name="label">Output Channels</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+         </wvobject>
+      </wvobject>
+   </wvobject>
+</wave_config>

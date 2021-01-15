@@ -1,0 +1,201 @@
+
+
+================================================================
+== Vitis HLS Report for 'splitStrm'
+================================================================
+* Date:           Thu Jan 14 21:55:37 2021
+
+* Version:        2020.1 (Build 2902540 on Wed May 27 20:16:15 MDT 2020)
+* Project:        Adler32Kernel
+* Solution:       solution (Vitis Kernel Flow Target)
+* Product family: virtexuplus
+* Target device:  xcvu9p-flgb2104-2-i
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  | 4.00 ns | 2.776 ns |   1.08 ns  |
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        ?|        ?|         ?|         ?|    ?|    ?|   none  |
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                   |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |     Loop Name     |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- VITIS_LOOP_28_1  |        ?|        ?|         4|          1|          1|     ?|    yes   |
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 4
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 6
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 4, States = { 2 3 4 5 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 6 3 
+3 --> 4 
+4 --> 5 
+5 --> 2 
+6 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.45>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%p_Val2_s = alloca i32"   --->   Operation 7 'alloca' 'p_Val2_s' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i512 %inStrm, void @empty_5, i32, i32, void @empty_3, i32, i32, void @empty_3, void @empty_3, void @empty_3, i32, i32, i32, i32, void @empty_3, void @empty_3"   --->   Operation 8 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i128 %outStrm, void @empty_5, i32, i32, void @empty_3, i32, i32, void @empty_3, void @empty_3, void @empty_3, i32, i32, i32, i32, void @empty_3, void @empty_3"   --->   Operation 9 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %n, void @ap_fifo_str, i32, i32, void @p_str, i32, i32, void @p_str, void @p_str, void @p_str, i32, i32, i32, i32, void @p_str, void @ScalarProp_str"   --->   Operation 10 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (1.45ns)   --->   "%n_read = read i32 @_ssdm_op_Read.ap_fifo.i32P, i32 %n" [/home/centos/workspace/adler32_security_benchmark/src/kernel/adler32_kernel.cpp:26]   --->   Operation 11 'read' 'n_read' <Predicate = true> <Delay = 1.45> <CoreInst = "FIFO_SRL">   --->   Core 21 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.45> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 2> <FIFO>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i128 %outStrm, void @empty_5, i32, i32, void @empty_3, i32, i32, void @empty_3, void @empty_3, void @empty_3, i32, i32, i32, i32, void @empty_3, void @empty_3"   --->   Operation 12 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i512 %inStrm, void @empty_5, i32, i32, void @empty_3, i32, i32, void @empty_3, void @empty_3, void @empty_3, i32, i32, i32, i32, void @empty_3, void @empty_3"   --->   Operation 13 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.60ns)   --->   "%br_ln28 = br void" [/home/centos/workspace/adler32_security_benchmark/src/kernel/adler32_kernel.cpp:28->/home/centos/workspace/adler32_security_benchmark/src/kernel/adler32_kernel.cpp:63]   --->   Operation 14 'br' 'br_ln28' <Predicate = true> <Delay = 0.60>
+
+State 2 <SV = 1> <Delay = 1.15>
+ST_2 : Operation 15 [1/1] (0.00ns)   --->   "%i = phi i31, void %entry, i31 %i_1, void %.split._crit_edge.i"   --->   Operation 15 'phi' 'i' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 16 [1/1] (0.00ns)   --->   "%zext_ln28 = zext i31 %i" [/home/centos/workspace/adler32_security_benchmark/src/kernel/adler32_kernel.cpp:28->/home/centos/workspace/adler32_security_benchmark/src/kernel/adler32_kernel.cpp:63]   --->   Operation 16 'zext' 'zext_ln28' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 17 [1/1] (0.85ns)   --->   "%icmp_ln28 = icmp_slt  i32 %zext_ln28, i32 %n_read" [/home/centos/workspace/adler32_security_benchmark/src/kernel/adler32_kernel.cpp:28->/home/centos/workspace/adler32_security_benchmark/src/kernel/adler32_kernel.cpp:63]   --->   Operation 17 'icmp' 'icmp_ln28' <Predicate = true> <Delay = 0.85> <CoreInst = "Cmp">   --->   Core 10 'Cmp' <Latency = 0> <II = 1> <Delay = 0.59> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 18 [1/1] (0.87ns)   --->   "%i_1 = add i31 %i, i31" [/home/centos/workspace/adler32_security_benchmark/src/kernel/adler32_kernel.cpp:28->/home/centos/workspace/adler32_security_benchmark/src/kernel/adler32_kernel.cpp:63]   --->   Operation 18 'add' 'i_1' <Predicate = true> <Delay = 0.87> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.72> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 19 [1/1] (0.00ns)   --->   "%br_ln28 = br i1 %icmp_ln28, void %.exit, void %.split.i" [/home/centos/workspace/adler32_security_benchmark/src/kernel/adler32_kernel.cpp:28->/home/centos/workspace/adler32_security_benchmark/src/kernel/adler32_kernel.cpp:63]   --->   Operation 19 'br' 'br_ln28' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 20 [1/1] (0.00ns)   --->   "%offset = trunc i31 %i" [/home/centos/workspace/adler32_security_benchmark/src/kernel/adler32_kernel.cpp:28->/home/centos/workspace/adler32_security_benchmark/src/kernel/adler32_kernel.cpp:63]   --->   Operation 20 'trunc' 'offset' <Predicate = (icmp_ln28)> <Delay = 0.00>
+ST_2 : Operation 21 [1/1] (0.00ns)   --->   "%specpipeline_ln28 = specpipeline void @_ssdm_op_SpecPipeline, i32, i32, i32, i32, void @empty_3" [/home/centos/workspace/adler32_security_benchmark/src/kernel/adler32_kernel.cpp:28->/home/centos/workspace/adler32_security_benchmark/src/kernel/adler32_kernel.cpp:63]   --->   Operation 21 'specpipeline' 'specpipeline_ln28' <Predicate = (icmp_ln28)> <Delay = 0.00>
+ST_2 : Operation 22 [1/1] (0.00ns)   --->   "%specloopname_ln28 = specloopname void @_ssdm_op_SpecLoopName, void @empty_11" [/home/centos/workspace/adler32_security_benchmark/src/kernel/adler32_kernel.cpp:28->/home/centos/workspace/adler32_security_benchmark/src/kernel/adler32_kernel.cpp:63]   --->   Operation 22 'specloopname' 'specloopname_ln28' <Predicate = (icmp_ln28)> <Delay = 0.00>
+ST_2 : Operation 23 [1/1] (0.34ns)   --->   "%icmp_ln31 = icmp_eq  i2 %offset, i2" [/home/centos/workspace/adler32_security_benchmark/src/kernel/adler32_kernel.cpp:31->/home/centos/workspace/adler32_security_benchmark/src/kernel/adler32_kernel.cpp:63]   --->   Operation 23 'icmp' 'icmp_ln31' <Predicate = (icmp_ln28)> <Delay = 0.34> <CoreInst = "Cmp">   --->   Core 10 'Cmp' <Latency = 0> <II = 1> <Delay = 0.59> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 24 [1/1] (0.00ns)   --->   "%br_ln31 = br i1 %icmp_ln31, void %.split._crit_edge.i, void" [/home/centos/workspace/adler32_security_benchmark/src/kernel/adler32_kernel.cpp:31->/home/centos/workspace/adler32_security_benchmark/src/kernel/adler32_kernel.cpp:63]   --->   Operation 24 'br' 'br_ln31' <Predicate = (icmp_ln28)> <Delay = 0.00>
+
+State 3 <SV = 2> <Delay = 1.46>
+ST_3 : Operation 25 [1/1] (1.46ns)   --->   "%tmp = read i512 @_ssdm_op_Read.ap_fifo.volatile.i512P, i512 %inStrm" [/opt/Xilinx/Vitis/2020.1/common/technology/autopilot/hls_stream_39.h:145]   --->   Operation 25 'read' 'tmp' <Predicate = (icmp_ln31)> <Delay = 1.46> <CoreInst = "FIFO">   --->   Core 18 'FIFO' <Latency = 0> <II = 1> <Delay = 1.57> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 512> <Depth = 64> <FIFO>
+ST_3 : Operation 26 [1/1] (0.00ns)   --->   "%store_ln33 = store i512 %tmp, i512 %p_Val2_s" [/home/centos/workspace/adler32_security_benchmark/src/kernel/adler32_kernel.cpp:33->/home/centos/workspace/adler32_security_benchmark/src/kernel/adler32_kernel.cpp:63]   --->   Operation 26 'store' 'store_ln33' <Predicate = (icmp_ln31)> <Delay = 0.00>
+ST_3 : Operation 27 [1/1] (0.00ns)   --->   "%br_ln33 = br void %.split._crit_edge.i" [/home/centos/workspace/adler32_security_benchmark/src/kernel/adler32_kernel.cpp:33->/home/centos/workspace/adler32_security_benchmark/src/kernel/adler32_kernel.cpp:63]   --->   Operation 27 'br' 'br_ln33' <Predicate = (icmp_ln31)> <Delay = 0.00>
+
+State 4 <SV = 3> <Delay = 2.77>
+ST_4 : Operation 28 [1/1] (0.00ns)   --->   "%p_Val2_1 = load i512 %p_Val2_s, void %store_ln33"   --->   Operation 28 'load' 'p_Val2_1' <Predicate = (icmp_ln28)> <Delay = 0.00>
+ST_4 : Operation 29 [1/1] (0.00ns)   --->   "%shl_ln = bitconcatenate i9 @_ssdm_op_BitConcatenate.i9.i2.i7, i2 %offset, i7" [/home/centos/workspace/adler32_security_benchmark/src/kernel/adler32_kernel.cpp:34->/home/centos/workspace/adler32_security_benchmark/src/kernel/adler32_kernel.cpp:63]   --->   Operation 29 'bitconcatenate' 'shl_ln' <Predicate = (icmp_ln28)> <Delay = 0.00>
+ST_4 : Operation 30 [1/1] (0.00ns)   --->   "%or_ln34 = or i9 %shl_ln, i9" [/home/centos/workspace/adler32_security_benchmark/src/kernel/adler32_kernel.cpp:34->/home/centos/workspace/adler32_security_benchmark/src/kernel/adler32_kernel.cpp:63]   --->   Operation 30 'or' 'or_ln34' <Predicate = (icmp_ln28)> <Delay = 0.00>
+ST_4 : Operation 31 [1/1] (0.59ns)   --->   "%icmp_ln674 = icmp_ugt  i9 %shl_ln, i9 %or_ln34"   --->   Operation 31 'icmp' 'icmp_ln674' <Predicate = (icmp_ln28)> <Delay = 0.59> <CoreInst = "Cmp">   --->   Core 10 'Cmp' <Latency = 0> <II = 1> <Delay = 0.59> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 32 [1/1] (0.00ns)   --->   "%zext_ln674 = zext i9 %shl_ln"   --->   Operation 32 'zext' 'zext_ln674' <Predicate = (icmp_ln28)> <Delay = 0.00>
+ST_4 : Operation 33 [1/1] (0.00ns)   --->   "%zext_ln674_1 = zext i9 %or_ln34"   --->   Operation 33 'zext' 'zext_ln674_1' <Predicate = (icmp_ln28)> <Delay = 0.00>
+ST_4 : Operation 34 [1/1] (0.00ns) (grouped into LUT with out node lshr_ln674)   --->   "%tmp_1 = partselect i512 @llvm.part.select.i512, i512 %p_Val2_1, i32, i32"   --->   Operation 34 'partselect' 'tmp_1' <Predicate = (icmp_ln28)> <Delay = 0.00>
+ST_4 : Operation 35 [1/1] (0.71ns)   --->   "%sub_ln674 = sub i10 %zext_ln674, i10 %zext_ln674_1"   --->   Operation 35 'sub' 'sub_ln674' <Predicate = (icmp_ln28)> <Delay = 0.71> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.72> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 36 [1/1] (0.00ns) (grouped into LUT with out node lshr_ln674)   --->   "%xor_ln674 = xor i10 %zext_ln674, i10"   --->   Operation 36 'xor' 'xor_ln674' <Predicate = (icmp_ln28)> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 12 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.29> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 37 [1/1] (0.71ns)   --->   "%sub_ln674_1 = sub i10 %zext_ln674_1, i10 %zext_ln674"   --->   Operation 37 'sub' 'sub_ln674_1' <Predicate = (icmp_ln28)> <Delay = 0.71> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.72> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 38 [1/1] (0.00ns) (grouped into LUT with out node sub_ln674_2)   --->   "%select_ln674 = select i1 %icmp_ln674, i10 %sub_ln674, i10 %sub_ln674_1"   --->   Operation 38 'select' 'select_ln674' <Predicate = (icmp_ln28)> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 11 'Sel' <Latency = 0> <II = 1> <Delay = 0.30> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_4 : Operation 39 [1/1] (0.00ns) (grouped into LUT with out node lshr_ln674)   --->   "%select_ln674_1 = select i1 %icmp_ln674, i512 %tmp_1, i512 %p_Val2_1"   --->   Operation 39 'select' 'select_ln674_1' <Predicate = (icmp_ln28)> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 11 'Sel' <Latency = 0> <II = 1> <Delay = 0.30> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_4 : Operation 40 [1/1] (0.00ns) (grouped into LUT with out node lshr_ln674)   --->   "%select_ln674_2 = select i1 %icmp_ln674, i10 %xor_ln674, i10 %zext_ln674"   --->   Operation 40 'select' 'select_ln674_2' <Predicate = (icmp_ln28)> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 11 'Sel' <Latency = 0> <II = 1> <Delay = 0.30> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_4 : Operation 41 [1/1] (0.72ns) (out node of the LUT)   --->   "%sub_ln674_2 = sub i10, i10 %select_ln674"   --->   Operation 41 'sub' 'sub_ln674_2' <Predicate = (icmp_ln28)> <Delay = 0.72> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.72> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 42 [1/1] (0.00ns) (grouped into LUT with out node lshr_ln674)   --->   "%zext_ln674_2 = zext i10 %select_ln674_2"   --->   Operation 42 'zext' 'zext_ln674_2' <Predicate = (icmp_ln28)> <Delay = 0.00>
+ST_4 : Operation 43 [1/1] (0.00ns) (grouped into LUT with out node p_Result_s)   --->   "%zext_ln674_3 = zext i10 %sub_ln674_2"   --->   Operation 43 'zext' 'zext_ln674_3' <Predicate = (icmp_ln28)> <Delay = 0.00>
+ST_4 : Operation 44 [1/1] (1.44ns) (out node of the LUT)   --->   "%lshr_ln674 = lshr i512 %select_ln674_1, i512 %zext_ln674_2"   --->   Operation 44 'lshr' 'lshr_ln674' <Predicate = (icmp_ln28)> <Delay = 1.44> <CoreInst = "Shift">   --->   Core 13 'Shift' <Latency = 0> <II = 1> <Delay = 0.74> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 45 [1/1] (0.00ns) (grouped into LUT with out node p_Result_s)   --->   "%lshr_ln674_1 = lshr i512, i512 %zext_ln674_3"   --->   Operation 45 'lshr' 'lshr_ln674_1' <Predicate = (icmp_ln28)> <Delay = 0.00> <CoreInst = "Shift">   --->   Core 13 'Shift' <Latency = 0> <II = 1> <Delay = 0.74> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 46 [1/1] (0.74ns) (out node of the LUT)   --->   "%p_Result_s = and i512 %lshr_ln674, i512 %lshr_ln674_1"   --->   Operation 46 'and' 'p_Result_s' <Predicate = (icmp_ln28)> <Delay = 0.74> <CoreInst = "LogicGate">   --->   Core 12 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.29> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 47 [1/1] (0.00ns)   --->   "%trunc_ln358 = trunc i512 %p_Result_s"   --->   Operation 47 'trunc' 'trunc_ln358' <Predicate = (icmp_ln28)> <Delay = 0.00>
+
+State 5 <SV = 4> <Delay = 1.43>
+ST_5 : Operation 48 [1/1] (1.43ns)   --->   "%write_ln167 = write void @_ssdm_op_Write.ap_fifo.volatile.i128P, i128 %outStrm, i128 %trunc_ln358" [/opt/Xilinx/Vitis/2020.1/common/technology/autopilot/hls_stream_39.h:167]   --->   Operation 48 'write' 'write_ln167' <Predicate = (icmp_ln28)> <Delay = 1.43> <CoreInst = "FIFO">   --->   Core 18 'FIFO' <Latency = 0> <II = 1> <Delay = 1.43> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 128> <Depth = 16> <FIFO>
+ST_5 : Operation 49 [1/1] (0.00ns)   --->   "%br_ln0 = br void"   --->   Operation 49 'br' 'br_ln0' <Predicate = (icmp_ln28)> <Delay = 0.00>
+
+State 6 <SV = 2> <Delay = 0.00>
+ST_6 : Operation 50 [1/1] (0.00ns)   --->   "%ret_ln63 = ret" [/home/centos/workspace/adler32_security_benchmark/src/kernel/adler32_kernel.cpp:63]   --->   Operation 50 'ret' 'ret_ln63' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 4ns, clock uncertainty: 1.08ns.
+
+ <State 1>: 1.46ns
+The critical path consists of the following:
+	fifo read on port 'n' (/home/centos/workspace/adler32_security_benchmark/src/kernel/adler32_kernel.cpp:26) [8]  (1.46 ns)
+
+ <State 2>: 1.15ns
+The critical path consists of the following:
+	'phi' operation ('i') with incoming values : ('i', /home/centos/workspace/adler32_security_benchmark/src/kernel/adler32_kernel.cpp:28->/home/centos/workspace/adler32_security_benchmark/src/kernel/adler32_kernel.cpp:63) [13]  (0 ns)
+	'add' operation ('i', /home/centos/workspace/adler32_security_benchmark/src/kernel/adler32_kernel.cpp:28->/home/centos/workspace/adler32_security_benchmark/src/kernel/adler32_kernel.cpp:63) [16]  (0.874 ns)
+	blocking operation 0.278 ns on control path)
+
+ <State 3>: 1.46ns
+The critical path consists of the following:
+	fifo read on port 'inStrm' (/opt/Xilinx/Vitis/2020.1/common/technology/autopilot/hls_stream_39.h:145) [25]  (1.46 ns)
+
+ <State 4>: 2.78ns
+The critical path consists of the following:
+	'icmp' operation ('icmp_ln674') [32]  (0.593 ns)
+	'select' operation ('select_ln674_1') [40]  (0 ns)
+	'lshr' operation ('lshr_ln674') [45]  (1.44 ns)
+	'and' operation ('__Result__') [47]  (0.74 ns)
+
+ <State 5>: 1.44ns
+The critical path consists of the following:
+	fifo write on port 'outStrm' (/opt/Xilinx/Vitis/2020.1/common/technology/autopilot/hls_stream_39.h:167) [49]  (1.44 ns)
+
+ <State 6>: 0ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

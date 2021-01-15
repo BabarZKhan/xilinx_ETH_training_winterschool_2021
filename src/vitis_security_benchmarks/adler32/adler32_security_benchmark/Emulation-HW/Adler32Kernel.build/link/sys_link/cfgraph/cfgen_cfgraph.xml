@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+<cf:model cf:cpu="x86" cf:partition="0" cf:prefix="p_0_" cf:name="dr" xd:type="design" xmlns:xd="http://www.xilinx.com/xd" xmlns:cf="http://www.xilinx.com/connections">
+  <cf:block cf:name="hwblk_Adler32Kernel">
+    <cf:port cf:name="s_axi_control" cf:portType="stream" cf:direction="in"/>
+    <cf:port cf:name="num" cf:portType="stream" cf:direction="in"/>
+    <cf:port cf:name="size" cf:portType="stream" cf:direction="in"/>
+    <cf:port cf:name="len" cf:portType="stream" cf:direction="in"/>
+    <cf:port cf:name="adler" cf:portType="stream" cf:direction="in"/>
+    <cf:port cf:name="inData" cf:portType="stream" cf:direction="in"/>
+    <cf:port cf:name="adler32Result" cf:portType="stream" cf:direction="in"/>
+  </cf:block>
+  <cf:block cf:name="swblk_Adler32Kernel">
+    <cf:port cf:name="s_axi_control" cf:portType="stream" cf:direction="out"/>
+    <cf:port cf:name="num" cf:portType="stream" cf:direction="out"/>
+    <cf:port cf:name="size" cf:portType="stream" cf:direction="out"/>
+    <cf:port cf:name="len" cf:portType="stream" cf:direction="out"/>
+    <cf:port cf:name="adler" cf:portType="stream" cf:direction="out"/>
+    <cf:port cf:name="inData" cf:portType="stream" cf:direction="out"/>
+    <cf:port cf:name="adler32Result" cf:portType="stream" cf:direction="out"/>
+  </cf:block>
+  <cf:comp cf:name="shell-v04261818" xd:componentRef="shell-v04261818" xd:clockId="0"/>
+  <cf:comp cf:name="Adler32Kernel_1" xd:componentRef="Adler32Kernel" xd:clockId="0">
+    <cf:parameter cf:name="SLR_ASSIGNMENTS" cf:value="SLR0"/>
+  </cf:comp>
+  <cf:instance cf:name="hwinst_Adler32Kernel_1" cf:blockName="hwblk_Adler32Kernel" cf:compName="Adler32Kernel_1">
+    <cf:portMap cf:blockPort="s_axi_control" cf:compPort="s_axi_control" xd:register="0x0"/>
+    <cf:portMap cf:blockPort="num" cf:compPort="s_axi_control" xd:register="0x10"/>
+    <cf:portMap cf:blockPort="size" cf:compPort="s_axi_control" xd:register="0x18"/>
+    <cf:portMap cf:blockPort="len" cf:compPort="m_axi_gmem0" cf:ctrlPort="s_axi_control" xd:register="0x20"/>
+    <cf:portMap cf:blockPort="adler" cf:compPort="m_axi_gmem1" cf:ctrlPort="s_axi_control" xd:register="0x2C"/>
+    <cf:portMap cf:blockPort="inData" cf:compPort="m_axi_gmem2" cf:ctrlPort="s_axi_control" xd:register="0x38"/>
+    <cf:portMap cf:blockPort="adler32Result" cf:compPort="m_axi_gmem3" cf:ctrlPort="s_axi_control" xd:register="0x44"/>
+  </cf:instance>
+  <cf:instance cf:name="swinst_Adler32Kernel_1" cf:blockName="swblk_Adler32Kernel" cf:compName="shell-v04261818">
+    <cf:portMap cf:blockPort="s_axi_control" cf:compPort="slr0/interconnect_axilite_user_0_M01_AXI"/>
+    <cf:portMap cf:blockPort="num" cf:compPort="slr0/interconnect_axilite_user_0_M01_AXI"/>
+    <cf:portMap cf:blockPort="size" cf:compPort="slr0/interconnect_axilite_user_0_M01_AXI"/>
+    <cf:portMap cf:blockPort="len" cf:compPort="memory_subsystem" cf:ctrlPort="slr0/interconnect_axilite_user_0_M01_AXI" cf:sptag="DDR[0]"/>
+    <cf:portMap cf:blockPort="adler" cf:compPort="memory_subsystem" cf:ctrlPort="slr0/interconnect_axilite_user_0_M01_AXI" cf:sptag="DDR[0]"/>
+    <cf:portMap cf:blockPort="inData" cf:compPort="memory_subsystem" cf:ctrlPort="slr0/interconnect_axilite_user_0_M01_AXI" cf:sptag="DDR[0]"/>
+    <cf:portMap cf:blockPort="adler32Result" cf:compPort="memory_subsystem" cf:ctrlPort="slr0/interconnect_axilite_user_0_M01_AXI" cf:sptag="DDR[0]"/>
+  </cf:instance>
+  <cf:connection cf:srcInst="swinst_Adler32Kernel_1" cf:srcPort="s_axi_control" cf:dstInst="hwinst_Adler32Kernel_1" cf:dstPort="s_axi_control">
+    <cf:dataMover cf:compName="shell-v04261818" cf:softwareLib="axi_lite"/>
+  </cf:connection>
+  <cf:connection cf:srcInst="swinst_Adler32Kernel_1" cf:srcPort="num" cf:dstInst="hwinst_Adler32Kernel_1" cf:dstPort="num">
+    <cf:dataMover cf:compName="shell-v04261818" cf:softwareLib="axi_lite"/>
+  </cf:connection>
+  <cf:connection cf:srcInst="swinst_Adler32Kernel_1" cf:srcPort="size" cf:dstInst="hwinst_Adler32Kernel_1" cf:dstPort="size">
+    <cf:dataMover cf:compName="shell-v04261818" cf:softwareLib="axi_lite"/>
+  </cf:connection>
+  <cf:connection cf:srcInst="swinst_Adler32Kernel_1" cf:srcPort="len" cf:dstInst="hwinst_Adler32Kernel_1" cf:dstPort="len">
+    <cf:dataMover cf:compName="Adler32Kernel_1" cf:softwareLib="zero_copy"/>
+  </cf:connection>
+  <cf:connection cf:srcInst="swinst_Adler32Kernel_1" cf:srcPort="adler" cf:dstInst="hwinst_Adler32Kernel_1" cf:dstPort="adler">
+    <cf:dataMover cf:compName="Adler32Kernel_1" cf:softwareLib="zero_copy"/>
+  </cf:connection>
+  <cf:connection cf:srcInst="swinst_Adler32Kernel_1" cf:srcPort="inData" cf:dstInst="hwinst_Adler32Kernel_1" cf:dstPort="inData">
+    <cf:dataMover cf:compName="Adler32Kernel_1" cf:softwareLib="zero_copy"/>
+  </cf:connection>
+  <cf:connection cf:srcInst="swinst_Adler32Kernel_1" cf:srcPort="adler32Result" cf:dstInst="hwinst_Adler32Kernel_1" cf:dstPort="adler32Result">
+    <cf:dataMover cf:compName="Adler32Kernel_1" cf:softwareLib="zero_copy"/>
+  </cf:connection>
+</cf:model>

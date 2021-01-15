@@ -1,0 +1,46 @@
+Begin Function 'readDataM2S'
+
+RTL state condition: (1'b1 == ap_CS_fsm_pp0_stage0)
+# ST_41
+local i <phi_63> <integer> <Phi> 'phi' </home/centos/workspace/adler32_security_benchmark/src/kernel/adler32_kernel.cpp:20->/home/centos/workspace/adler32_security_benchmark/src/kernel/adler32_kernel.cpp:63>
+add_ln20 /home/centos/workspace/adler32_security_benchmark/src/kernel/adler32_kernel.cpp:20
+add_ln20 /home/centos/workspace/adler32_security_benchmark/src/kernel/adler32_kernel.cpp:63
+reg: i_reg_108[31:0] lv
+
+local icmp_ln20_1 <icmp_63> <integer> <Comparator> 'icmp' </home/centos/workspace/adler32_security_benchmark/src/kernel/adler32_kernel.cpp:20->/home/centos/workspace/adler32_security_benchmark/src/kernel/adler32_kernel.cpp:63>
+icmp_ln20_1 /home/centos/workspace/adler32_security_benchmark/src/kernel/adler32_kernel.cpp:20
+icmp_ln20_1 /home/centos/workspace/adler32_security_benchmark/src/kernel/adler32_kernel.cpp:63
+reg: icmp_ln20_1_reg_251[0:0] lv
+
+# ST_42
+local gmem2_addr_read <read_167> <integer> <> 'read' </opt/Xilinx/Vitis/2020.1/common/technology/autopilot/hls_stream_39.h:167>
+gmem2_addr_read /opt/Xilinx/Vitis/2020.1/common/technology/autopilot/hls_stream_39.h:167
+reg: gmem2_addr_read_reg_260[511:0] lv
+
+
+RTL state condition: (1'b1 == ap_CS_fsm_state1)
+# ST_1
+local n_read <read_19> <integer> <FifoRead> 'read' </home/centos/workspace/adler32_security_benchmark/src/kernel/adler32_kernel.cpp:19>
+n /home/centos/workspace/adler32_security_benchmark/src/kernel/adler32_kernel.cpp:19
+reg: n_read_reg_218[31:0] lv
+
+local inData_read <read_19> <integer> <FifoRead> 'read' </home/centos/workspace/adler32_security_benchmark/src/kernel/adler32_kernel.cpp:19>
+inData /home/centos/workspace/adler32_security_benchmark/src/kernel/adler32_kernel.cpp:19
+reg: inData_read_reg_225[63:0] lv
+
+
+RTL state condition: (1'b1 == ap_CS_fsm_state2)
+# ST_2
+local sext_ln20 <sext_63> <integer> <> 'sext' </home/centos/workspace/adler32_security_benchmark/src/kernel/adler32_kernel.cpp:20->/home/centos/workspace/adler32_security_benchmark/src/kernel/adler32_kernel.cpp:63>
+sext_ln20 /home/centos/workspace/adler32_security_benchmark/src/kernel/adler32_kernel.cpp:20
+sext_ln20 /home/centos/workspace/adler32_security_benchmark/src/kernel/adler32_kernel.cpp:63
+reg: sext_ln20_reg_230[31:0] lv
+
+local trunc_ln <partselect_63> <integer> <> 'partselect' </home/centos/workspace/adler32_security_benchmark/src/kernel/adler32_kernel.cpp:20->/home/centos/workspace/adler32_security_benchmark/src/kernel/adler32_kernel.cpp:63>
+trunc_ln /home/centos/workspace/adler32_security_benchmark/src/kernel/adler32_kernel.cpp:20
+trunc_ln /home/centos/workspace/adler32_security_benchmark/src/kernel/adler32_kernel.cpp:63
+reg: trunc_ln_reg_240[57:0] lv
+
+
+End Function 'readDataM2S'
+

@@ -1,0 +1,310 @@
+Begin Function 'adler32<16>'
+
+RTL state condition: (1'b1 == 1'b1)
+# ST_5
+local add_ln695_7 <> <integer> <Arithmetic> 'add' <>
+add_ln695_7 /opt/Xilinx/Vitis/2020.1/common/technology/autopilot/ap_int_base.h:695
+reg: add_ln695_7_reg_1466[10:0] lv
+
+local add_ln1350_2 <> <integer> <Arithmetic> 'add' <>
+add_ln1350_2 /opt/Xilinx/Vitis/2020.1/common/technology/autopilot/ap_int_base.h:1350
+reg: add_ln1350_2_reg_1472[11:0] lv
+
+local add_ln1350_8 <> <integer> <Arithmetic> 'add' <>
+add_ln1350_8 /opt/Xilinx/Vitis/2020.1/common/technology/autopilot/ap_int_base.h:1350
+reg: add_ln1350_8_reg_1477[11:0] lv
+
+# ST_6
+local add_ln695_9 <> <integer> <Arithmetic> 'add' <>
+add_ln695_9 /opt/Xilinx/Vitis/2020.1/common/technology/autopilot/ap_int_base.h:695
+reg: add_ln695_9_reg_1482[11:0] lv
+
+local add_ln695_10 <> <integer> <Arithmetic> 'add' <>
+add_ln695_10 /opt/Xilinx/Vitis/2020.1/common/technology/autopilot/ap_int_base.h:695
+reg: add_ln695_10_reg_1487[11:0] lv
+
+local add_ln1350_9 <> <integer> <Arithmetic> 'add' <>
+add_ln1350_9 /opt/Xilinx/Vitis/2020.1/common/technology/autopilot/ap_int_base.h:1350
+reg: add_ln1350_9_reg_1493[12:0] lv
+
+# ST_7
+local add_ln695_13 <> <integer> <Arithmetic> 'add' <>
+add_ln695_13 /opt/Xilinx/Vitis/2020.1/common/technology/autopilot/ap_int_base.h:695
+reg: add_ln695_13_reg_1498[11:0] lv
+
+local add_ln1350_4 <> <integer> <Arithmetic> 'add' <>
+add_ln1350_4 /opt/Xilinx/Vitis/2020.1/common/technology/autopilot/ap_int_base.h:1350
+reg: add_ln1350_4_reg_1504[12:0] lv
+
+local add_ln1350_5 <> <integer> <Arithmetic> 'add' <>
+add_ln1350_5 /opt/Xilinx/Vitis/2020.1/common/technology/autopilot/ap_int_base.h:1350
+reg: add_ln1350_5_reg_1509[12:0] lv
+
+local add_ln1350_12 <> <integer> <Arithmetic> 'add' <>
+add_ln1350_12 /opt/Xilinx/Vitis/2020.1/common/technology/autopilot/ap_int_base.h:1350
+reg: add_ln1350_12_reg_1514[13:0] lv
+
+# ST_8
+local add_ln695_15 <> <integer> <Arithmetic> 'add' <>
+add_ln695_15 /opt/Xilinx/Vitis/2020.1/common/technology/autopilot/ap_int_base.h:695
+reg: add_ln695_15_reg_1519[11:0] lv
+
+local add_ln695_16 <> <integer> <Arithmetic> 'add' <>
+add_ln695_16 /opt/Xilinx/Vitis/2020.1/common/technology/autopilot/ap_int_base.h:695
+reg: add_ln695_16_reg_1524[11:0] lv
+
+local add_ln1350_6 <> <integer> <Arithmetic> 'add' <>
+add_ln1350_6 /opt/Xilinx/Vitis/2020.1/common/technology/autopilot/ap_int_base.h:1350
+reg: add_ln1350_6_reg_1530[12:0] lv
+
+local add_ln1350_10 <> <integer> <Arithmetic> 'add' <>
+add_ln1350_10 /opt/Xilinx/Vitis/2020.1/common/technology/autopilot/ap_int_base.h:1350
+reg: add_ln1350_10_reg_1535[13:0] lv
+
+# ST_9
+local shl_ln695 <> <integer> <Shift> 'shl' <>
+shl_ln695 /opt/Xilinx/Vitis/2020.1/common/technology/autopilot/ap_int_base.h:695
+reg: shl_ln695_reg_1540[31:0] lv
+
+local add_ln1350_13 <> <integer> <Arithmetic> 'add' <>
+add_ln1350_13 /opt/Xilinx/Vitis/2020.1/common/technology/autopilot/ap_int_base.h:1350
+reg: add_ln1350_13_reg_1545[14:0] lv
+
+local select_ln128 <select_128> <integer> <> 'select' </home/centos/workspace/adler32_security_benchmark/libs/xf_security/L1/include/xf_security/adler32.hpp:128>
+select_ln128 /home/centos/workspace/adler32_security_benchmark/libs/xf_security/L1/include/xf_security/adler32.hpp:128
+reg: select_ln128_reg_1550[31:0] lv
+
+# ST_10
+local add_ln695_17 <> <integer> <Arithmetic> 'add' <>
+add_ln695_17 /opt/Xilinx/Vitis/2020.1/common/technology/autopilot/ap_int_base.h:695
+reg: add_ln695_17_reg_1555[31:0] lv
+
+local icmp_ln886_2 <> <integer> <Comparator> 'icmp' <>
+icmp_ln886_2 /opt/Xilinx/Vitis/2020.1/common/technology/autopilot/ap_int_base.h:886
+reg: icmp_ln886_2_reg_1561[0:0] lv
+
+local icmp_ln886_4 <> <integer> <Comparator> 'icmp' <>
+icmp_ln886_4 /opt/Xilinx/Vitis/2020.1/common/technology/autopilot/ap_int_base.h:886
+reg: icmp_ln886_4_reg_1565[0:0] lv
+
+local icmp_ln886_5 <> <integer> <Comparator> 'icmp' <>
+icmp_ln886_5 /opt/Xilinx/Vitis/2020.1/common/technology/autopilot/ap_int_base.h:886
+reg: icmp_ln886_5_reg_1569[0:0] lv
+
+local icmp_ln886_6 <> <integer> <Comparator> 'icmp' <>
+icmp_ln886_6 /opt/Xilinx/Vitis/2020.1/common/technology/autopilot/ap_int_base.h:886
+reg: icmp_ln886_6_reg_1573[0:0] lv
+
+local icmp_ln886_7 <> <integer> <Comparator> 'icmp' <>
+icmp_ln886_7 /opt/Xilinx/Vitis/2020.1/common/technology/autopilot/ap_int_base.h:886
+reg: icmp_ln886_7_reg_1577[0:0] lv
+
+local icmp_ln886_8 <> <integer> <Comparator> 'icmp' <>
+icmp_ln886_8 /opt/Xilinx/Vitis/2020.1/common/technology/autopilot/ap_int_base.h:886
+reg: icmp_ln886_8_reg_1581[0:0] lv
+
+local icmp_ln886_9 <> <integer> <Comparator> 'icmp' <>
+icmp_ln886_9 /opt/Xilinx/Vitis/2020.1/common/technology/autopilot/ap_int_base.h:886
+reg: icmp_ln886_9_reg_1585[0:0] lv
+
+local icmp_ln886_10 <> <integer> <Comparator> 'icmp' <>
+icmp_ln886_10 /opt/Xilinx/Vitis/2020.1/common/technology/autopilot/ap_int_base.h:886
+reg: icmp_ln886_10_reg_1589[0:0] lv
+
+local icmp_ln886_11 <> <integer> <Comparator> 'icmp' <>
+icmp_ln886_11 /opt/Xilinx/Vitis/2020.1/common/technology/autopilot/ap_int_base.h:886
+reg: icmp_ln886_11_reg_1593[0:0] lv
+
+local icmp_ln886_12 <> <integer> <Comparator> 'icmp' <>
+icmp_ln886_12 /opt/Xilinx/Vitis/2020.1/common/technology/autopilot/ap_int_base.h:886
+reg: icmp_ln886_12_reg_1597[0:0] lv
+
+local icmp_ln886_13 <> <integer> <Comparator> 'icmp' <>
+icmp_ln886_13 /opt/Xilinx/Vitis/2020.1/common/technology/autopilot/ap_int_base.h:886
+reg: icmp_ln886_13_reg_1601[0:0] lv
+
+local icmp_ln886_14 <> <integer> <Comparator> 'icmp' <>
+icmp_ln886_14 /opt/Xilinx/Vitis/2020.1/common/technology/autopilot/ap_int_base.h:886
+reg: icmp_ln886_14_reg_1605[0:0] lv
+
+local icmp_ln886_15 <> <integer> <Comparator> 'icmp' <>
+icmp_ln886_15 /opt/Xilinx/Vitis/2020.1/common/technology/autopilot/ap_int_base.h:886
+reg: icmp_ln886_15_reg_1609[0:0] lv
+
+local icmp_ln886_16 <> <integer> <Comparator> 'icmp' <>
+icmp_ln886_16 /opt/Xilinx/Vitis/2020.1/common/technology/autopilot/ap_int_base.h:886
+reg: icmp_ln886_16_reg_1613[0:0] lv
+
+local icmp_ln886_17 <> <integer> <Comparator> 'icmp' <>
+icmp_ln886_17 /opt/Xilinx/Vitis/2020.1/common/technology/autopilot/ap_int_base.h:886
+reg: icmp_ln886_17_reg_1617[0:0] lv
+
+local icmp_ln886_18 <> <integer> <Comparator> 'icmp' <>
+icmp_ln886_18 /opt/Xilinx/Vitis/2020.1/common/technology/autopilot/ap_int_base.h:886
+reg: icmp_ln886_18_reg_1621[0:0] lv
+
+local icmp_ln886_19 <> <integer> <Comparator> 'icmp' <>
+icmp_ln886_19 /opt/Xilinx/Vitis/2020.1/common/technology/autopilot/ap_int_base.h:886
+reg: icmp_ln886_19_reg_1625[0:0] lv
+
+# ST_15
+local empty_42 <> <integer> <Phi> 'phi' <>
+reg: empty_42_reg_415[127:0] lv
+
+local p_Val2_1 <> <integer> <Phi> 'phi' <>
+reg: p_Val2_1_reg_427[127:0] lv
+
+local sub_ln674_4 <> <integer> <Arithmetic> 'sub' <>
+sub_ln674_4 /opt/Xilinx/Vitis/2020.1/common/technology/autopilot/ap_int_ref.h:674
+reg: sub_ln674_4_reg_1654[7:0] lv
+
+local lshr_ln674 <> <integer> <Shift> 'lshr' <>
+lshr_ln674 /opt/Xilinx/Vitis/2020.1/common/technology/autopilot/ap_int_ref.h:674
+reg: lshr_ln674_reg_1659[127:0] lv
+
+# ST_16
+local conv3_i_i474614 <phi_136> <integer> <Phi> 'phi' </home/centos/workspace/adler32_security_benchmark/libs/xf_security/L1/include/xf_security/adler32.hpp:136>
+select_ln136 /home/centos/workspace/adler32_security_benchmark/libs/xf_security/L1/include/xf_security/adler32.hpp:136
+reg: conv3_i_i474614_reg_439[31:0] lv
+
+local add_i13476613 <phi_138> <integer> <Phi> 'phi' </home/centos/workspace/adler32_security_benchmark/libs/xf_security/L1/include/xf_security/adler32.hpp:138>
+select_ln138 /home/centos/workspace/adler32_security_benchmark/libs/xf_security/L1/include/xf_security/adler32.hpp:138
+reg: add_i13476613_reg_450[31:0] lv
+
+local select_ln136 <select_136> <integer> <> 'select' </home/centos/workspace/adler32_security_benchmark/libs/xf_security/L1/include/xf_security/adler32.hpp:136>
+select_ln136 /home/centos/workspace/adler32_security_benchmark/libs/xf_security/L1/include/xf_security/adler32.hpp:136
+reg: select_ln136_reg_1664[31:0] lv
+
+
+RTL state condition: (1'b1 == ap_CS_fsm_pp0_stage0)
+# ST_3
+local empty_40 <> <integer> <Phi> 'phi' <>
+add_ln695_20 /opt/Xilinx/Vitis/2020.1/common/technology/autopilot/ap_int_base.h:695
+reg: empty_40_reg_278[27:0] lv
+
+local icmp_ln92 <icmp_92> <integer> <Comparator> 'icmp' </home/centos/workspace/adler32_security_benchmark/libs/xf_security/L1/include/xf_security/adler32.hpp:92>
+icmp_ln92 /home/centos/workspace/adler32_security_benchmark/libs/xf_security/L1/include/xf_security/adler32.hpp:92
+reg: icmp_ln92_reg_1376[0:0] lv
+
+# ST_4
+local empty_41 <> <integer> <Phi> 'phi' <>
+select_ln128 /home/centos/workspace/adler32_security_benchmark/libs/xf_security/L1/include/xf_security/adler32.hpp:128
+reg: empty_41_reg_289[31:0] lv
+
+local conv3_i461577 <> <integer> <Phi> 'phi' <>
+conv3_i462 /opt/Xilinx/Vitis/2020.1/common/technology/autopilot/ap_int_base.h:696
+conv3_i462 /opt/Xilinx/Vitis/2020.1/common/technology/autopilot/ap_int_base.h:695
+reg: conv3_i461577_reg_299[31:0] lv
+
+local p_phi <> <integer> <Phi> 'phi' <>
+p_Val2_s /opt/Xilinx/Vitis/2020.1/common/technology/autopilot/hls_stream_39.h:145
+reg: p_phi_reg_309[127:0] lv
+
+local p_Val2_s <read_145> <integer> <FifoRead> 'read' </opt/Xilinx/Vitis/2020.1/common/technology/autopilot/hls_stream_39.h:145>
+p_Val2_s /opt/Xilinx/Vitis/2020.1/common/technology/autopilot/hls_stream_39.h:145
+reg: p_Val2_s_reg_1385[127:0] lv
+
+local add_ln695_3 <> <integer> <Arithmetic> 'add' <>
+add_ln695_3 /opt/Xilinx/Vitis/2020.1/common/technology/autopilot/ap_int_base.h:695
+reg: add_ln695_3_reg_1390[9:0] lv
+
+local p_Result_4_3 <> <integer> <> 'partselect' <>
+p_Result_4_3 /opt/Xilinx/Vitis/2020.1/common/technology/autopilot/ap_int_ref.h:674
+reg: p_Result_4_3_reg_1396[7:0] lv
+
+local p_Result_5_4 <> <integer> <> 'partselect' <>
+p_Result_5_4 /opt/Xilinx/Vitis/2020.1/common/technology/autopilot/ap_int_ref.h:674
+reg: p_Result_5_4_reg_1401[7:0] lv
+
+local p_Result_6_5 <> <integer> <> 'partselect' <>
+p_Result_6_5 /opt/Xilinx/Vitis/2020.1/common/technology/autopilot/ap_int_ref.h:674
+reg: p_Result_6_5_reg_1406[7:0] lv
+
+local p_Result_7_6 <> <integer> <> 'partselect' <>
+p_Result_7_6 /opt/Xilinx/Vitis/2020.1/common/technology/autopilot/ap_int_ref.h:674
+reg: p_Result_7_6_reg_1411[7:0] lv
+
+local p_Result_8_7 <> <integer> <> 'partselect' <>
+p_Result_8_7 /opt/Xilinx/Vitis/2020.1/common/technology/autopilot/ap_int_ref.h:674
+reg: p_Result_8_7_reg_1416[7:0] lv
+
+local p_Result_9_8 <> <integer> <> 'partselect' <>
+p_Result_9_8 /opt/Xilinx/Vitis/2020.1/common/technology/autopilot/ap_int_ref.h:674
+reg: p_Result_9_8_reg_1421[7:0] lv
+
+local p_Result_10_9 <> <integer> <> 'partselect' <>
+p_Result_10_9 /opt/Xilinx/Vitis/2020.1/common/technology/autopilot/ap_int_ref.h:674
+reg: p_Result_10_9_reg_1426[7:0] lv
+
+local p_Result_11_s <> <integer> <> 'partselect' <>
+p_Result_11_s /opt/Xilinx/Vitis/2020.1/common/technology/autopilot/ap_int_ref.h:674
+reg: p_Result_11_s_reg_1431[7:0] lv
+
+local p_Result_12_s <> <integer> <> 'partselect' <>
+p_Result_12_s /opt/Xilinx/Vitis/2020.1/common/technology/autopilot/ap_int_ref.h:674
+reg: p_Result_12_s_reg_1436[7:0] lv
+
+local p_Result_13_s <> <integer> <> 'partselect' <>
+p_Result_13_s /opt/Xilinx/Vitis/2020.1/common/technology/autopilot/ap_int_ref.h:674
+reg: p_Result_13_s_reg_1441[7:0] lv
+
+local p_Result_14_s <> <integer> <> 'partselect' <>
+p_Result_14_s /opt/Xilinx/Vitis/2020.1/common/technology/autopilot/ap_int_ref.h:674
+reg: p_Result_14_s_reg_1446[7:0] lv
+
+local p_Result_15_s <> <integer> <> 'partselect' <>
+p_Result_15_s /opt/Xilinx/Vitis/2020.1/common/technology/autopilot/ap_int_ref.h:674
+reg: p_Result_15_s_reg_1451[7:0] lv
+
+local p_Result_16_s <> <integer> <> 'partselect' <>
+p_Result_16_s /opt/Xilinx/Vitis/2020.1/common/technology/autopilot/ap_int_ref.h:674
+reg: p_Result_16_s_reg_1456[7:0] lv
+
+local add_ln1350 <> <integer> <Arithmetic> 'add' <>
+add_ln1350 /opt/Xilinx/Vitis/2020.1/common/technology/autopilot/ap_int_base.h:1350
+reg: add_ln1350_reg_1461[9:0] lv
+
+
+RTL state condition: (1'b1 == ap_CS_fsm_pp1_stage0)
+# ST_13
+local j <> <integer> <Phi> 'phi' <>
+j /home/centos/workspace/adler32_security_benchmark/libs/xf_security/L1/include/xf_security/adler32.hpp:131
+reg: j_reg_404[3:0] lv
+
+local icmp_ln882 <> <integer> <Comparator> 'icmp' <>
+icmp_ln882 /opt/Xilinx/Vitis/2020.1/common/technology/autopilot/ap_int_base.h:882
+reg: icmp_ln882_reg_1629[0:0] lv
+
+local icmp_ln134 <icmp_134> <integer> <Comparator> 'icmp' </home/centos/workspace/adler32_security_benchmark/libs/xf_security/L1/include/xf_security/adler32.hpp:134>
+icmp_ln134 /home/centos/workspace/adler32_security_benchmark/libs/xf_security/L1/include/xf_security/adler32.hpp:134
+reg: icmp_ln134_reg_1638[0:0] lv
+
+local shl_ln2 <bitconcatenate_135> <integer> <> 'bitconcatenate' </home/centos/workspace/adler32_security_benchmark/libs/xf_security/L1/include/xf_security/adler32.hpp:135>
+shl_ln2 /home/centos/workspace/adler32_security_benchmark/libs/xf_security/L1/include/xf_security/adler32.hpp:135
+reg: shl_ln2_reg_1642[6:0] lv
+
+
+RTL state condition: (1'b1 == ap_CS_fsm_state2)
+# ST_2
+local empty <phi_145> <integer> <Phi> 'phi' </opt/Xilinx/Vitis/2020.1/common/technology/autopilot/hls_stream_39.h:145>
+reg: empty_reg_256[127:0] lv
+
+local e_1 <> <integer> <Phi> 'phi' <>
+tmp /opt/Xilinx/Vitis/2020.1/common/technology/autopilot/hls_stream_39.h:145
+reg: e_1_reg_268[0:0] lv
+
+local trunc_ln0_1 <trunc_0> <integer> <> 'trunc' </opt/Xilinx/Vitis/2020.1/common/technology/autopilot/hls_stream_39.h:0>
+trunc_ln0_1 /opt/Xilinx/Vitis/2020.1/common/technology/autopilot/hls_stream_39.h:0
+reg: trunc_ln0_1_reg_1351[3:0] lv
+
+local tmp_3 <read_145> <integer> <FifoRead> 'read' </opt/Xilinx/Vitis/2020.1/common/technology/autopilot/hls_stream_39.h:145>
+tmp /opt/Xilinx/Vitis/2020.1/common/technology/autopilot/hls_stream_39.h:145
+reg: tmp_3_reg_1356[0:0] lv
+
+local div_i_i_cast <partselect_145> <integer> <> 'partselect' </opt/Xilinx/Vitis/2020.1/common/technology/autopilot/hls_stream_39.h:145>
+div_i_i_cast /opt/Xilinx/Vitis/2020.1/common/technology/autopilot/hls_stream_39.h:145
+reg: div_i_i_cast_reg_1371[27:0] lv
+
+
+End Function 'adler32<16>'
+

@@ -1,0 +1,14 @@
+{
+ "kernels": [],
+ "computeUnits": [
+  {
+   "id": "",
+   "kernelName": "Adler32Kernel",
+   "cuName": "Adler32Kernel_1",
+   "baseAddress": "",
+   "instancePath": "/emu_wrapper/emu_i/dynamic_region/Adler32Kernel_1",
+   "slr": []
+  }
+ ]
+}
+

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="ASCII"?>
+<openclProject:OpenCLProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:openclProject="http://www.xilinx.com/openclproject" name="adler32_security_benchmark" location="/home/centos/workspace/adler32_security_benchmark" platform="/home/centos/src/project_data/aws-fpga/Vitis/aws_platform/xilinx_aws-vu9p-f1_shell-v04261818_201920_2/xilinx_aws-vu9p-f1_shell-v04261818_201920_2.xpfm" platformUID="xilinx:aws-vu9p-f1:shell-v04261818:201920.2(custom)" systemProject="adler32_security_benchmark_system" sysConfig="config0_0" cpu="x86" cpuInstance="x86" os="Linux">
+  <configuration name="Emulation-SW" id="com.xilinx.accelerated.config.sw_emu.574727671">
+    <configBuildOptions xsi:type="openclProject:OpenCLOptions" kernelDebug="true">
+      <binaryContainers name="Adler32Kernel">
+        <kernels name="Adler32Kernel" sourceFile="src/kernel/adler32_kernel.cpp">
+          <computeUnits name="Adler32Kernel_1" slr="SLR0">
+            <args name="len" master="true" memory="DDR[0]" profileAll="true"/>
+            <args name="adler" master="true" memory="DDR[0]" profileAll="true"/>
+            <args name="inData" master="true" memory="DDR[0]" profileAll="true"/>
+            <args name="adler32Result" master="true" memory="DDR[0]" profileAll="true"/>
+          </computeUnits>
+          <args name="len" master="true"/>
+          <args name="adler" master="true"/>
+          <args name="inData" master="true"/>
+          <args name="adler32Result" master="true"/>
+        </kernels>
+      </binaryContainers>
+    </configBuildOptions>
+    <lastBuildOptions xsi:type="openclProject:OpenCLOptions" kernelDebug="true">
+      <binaryContainers name="Adler32Kernel">
+        <kernels name="Adler32Kernel" sourceFile="src/kernel/adler32_kernel.cpp">
+          <computeUnits name="Adler32Kernel_1" slr="SLR0">
+            <args name="len" master="true" memory="HBM[0]"/>
+            <args name="adler" master="true" memory="HBM[0]"/>
+            <args name="inData" master="true" memory="HBM[8]"/>
+            <args name="adler32Result" master="true" memory="HBM[0]"/>
+          </computeUnits>
+          <args name="len" master="true"/>
+          <args name="adler" master="true"/>
+          <args name="inData" master="true"/>
+          <args name="adler32Result" master="true"/>
+        </kernels>
+      </binaryContainers>
+    </lastBuildOptions>
+  </configuration>
+  <configuration name="Emulation-HW" id="com.xilinx.accelerated.config.hw_emu.602502029">
+    <configBuildOptions xsi:type="openclProject:OpenCLOptions" kernelDebug="true" target="hw_emu">
+      <binaryContainers name="Adler32Kernel">
+        <kernels name="Adler32Kernel" sourceFile="src/kernel/adler32_kernel.cpp">
+          <computeUnits name="Adler32Kernel_1" slr="SLR0">
+            <args name="len" master="true" memory="DDR[0]" profileAll="true"/>
+            <args name="adler" master="true" memory="DDR[0]" profileAll="true"/>
+            <args name="inData" master="true" memory="DDR[0]" profileAll="true"/>
+            <args name="adler32Result" master="true" memory="DDR[0]" profileAll="true"/>
+          </computeUnits>
+          <args name="len" master="true"/>
+          <args name="adler" master="true"/>
+          <args name="inData" master="true"/>
+          <args name="adler32Result" master="true"/>
+        </kernels>
+      </binaryContainers>
+    </configBuildOptions>
+    <lastBuildOptions xsi:type="openclProject:OpenCLOptions" kernelDebug="true" target="hw_emu">
+      <binaryContainers name="Adler32Kernel">
+        <kernels name="Adler32Kernel" sourceFile="src/kernel/adler32_kernel.cpp">
+          <computeUnits name="Adler32Kernel_1" slr="SLR0">
+            <args name="len" master="true" memory="DDR[0]" profileAll="true"/>
+            <args name="adler" master="true" memory="DDR[0]" profileAll="true"/>
+            <args name="inData" master="true" memory="DDR[0]" profileAll="true"/>
+            <args name="adler32Result" master="true" memory="DDR[0]" profileAll="true"/>
+          </computeUnits>
+          <args name="len" master="true"/>
+          <args name="adler" master="true"/>
+          <args name="inData" master="true"/>
+          <args name="adler32Result" master="true"/>
+        </kernels>
+      </binaryContainers>
+    </lastBuildOptions>
+  </configuration>
+  <configuration name="Hardware" id="com.xilinx.accelerated.config.hw.1302193754" dirty="true">
+    <configBuildOptions xsi:type="openclProject:OpenCLOptions" target="hw">
+      <binaryContainers name="Adler32Kernel">
+        <kernels name="Adler32Kernel" sourceFile="src/kernel/adler32_kernel.cpp">
+          <computeUnits name="Adler32Kernel_1" slr="SLR0">
+            <args name="len" master="true" memory="DDR[0]" profileAll="true"/>
+            <args name="adler" master="true" memory="DDR[0]" profileAll="true"/>
+            <args name="inData" master="true" memory="DDR[0]" profileAll="true"/>
+            <args name="adler32Result" master="true" memory="DDR[0]" profileAll="true"/>
+          </computeUnits>
+          <args name="len" master="true"/>
+          <args name="adler" master="true"/>
+          <args name="inData" master="true"/>
+          <args name="adler32Result" master="true"/>
+        </kernels>
+      </binaryContainers>
+    </configBuildOptions>
+  </configuration>
+</openclProject:OpenCLProject>

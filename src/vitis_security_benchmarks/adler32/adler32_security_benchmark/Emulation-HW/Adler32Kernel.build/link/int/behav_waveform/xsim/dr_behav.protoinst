@@ -1,0 +1,81 @@
+{
+  "version": "1.0",
+  "modules": {
+      "Adler32Kernel": {
+      "proto_instances": {
+        "adler32_16_U0/adler32_16_U0": {
+          "silent": true,
+          "interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
+          "ports": {
+            "AP_CLK": { "actual": "ap_clk"},
+            "AP_RESET": { "actual": "ap_rst"},
+            "AP_START": { "actual": "ap_start"},
+            "AP_DONE": { "actual": "ap_done"},
+            "AP_CONTINUE": { "actual": "ap_continue", "optional":true },
+            "AP_READY": { "actual": "ap_ready", "optional":true }
+          }
+        },
+        "splitStrm_U0/splitStrm_U0": {
+          "silent": true,
+          "interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
+          "ports": {
+            "AP_CLK": { "actual": "ap_clk"},
+            "AP_RESET": { "actual": "ap_rst"},
+            "AP_START": { "actual": "ap_start"},
+            "AP_DONE": { "actual": "ap_done"},
+            "AP_CONTINUE": { "actual": "ap_continue", "optional":true },
+            "AP_READY": { "actual": "ap_ready", "optional":true }
+          }
+        },
+        "readDataM2S_U0/readDataM2S_U0": {
+          "silent": true,
+          "interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
+          "ports": {
+            "AP_CLK": { "actual": "ap_clk"},
+            "AP_RESET": { "actual": "ap_rst"},
+            "AP_START": { "actual": "ap_start"},
+            "AP_DONE": { "actual": "ap_done"},
+            "AP_CONTINUE": { "actual": "ap_continue", "optional":true },
+            "AP_READY": { "actual": "ap_ready", "optional":true }
+          }
+        },
+        "readLenM2S_U0/readLenM2S_U0": {
+          "silent": true,
+          "interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
+          "ports": {
+            "AP_CLK": { "actual": "ap_clk"},
+            "AP_RESET": { "actual": "ap_rst"},
+            "AP_START": { "actual": "ap_start"},
+            "AP_DONE": { "actual": "ap_done"},
+            "AP_CONTINUE": { "actual": "ap_continue", "optional":true },
+            "AP_READY": { "actual": "ap_ready", "optional":true }
+          }
+        },
+        "writeS2M_U0/writeS2M_U0": {
+          "silent": true,
+          "interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
+          "ports": {
+            "AP_CLK": { "actual": "ap_clk"},
+            "AP_RESET": { "actual": "ap_rst"},
+            "AP_START": { "actual": "ap_start"},
+            "AP_DONE": { "actual": "ap_done"},
+            "AP_CONTINUE": { "actual": "ap_continue", "optional":true },
+            "AP_READY": { "actual": "ap_ready", "optional":true }
+          }
+        },
+        "Adler32Kernel_entry3_U0/Adler32Kernel_entry3_U0": {
+          "silent": true,
+          "interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
+          "ports": {
+            "AP_CLK": { "actual": "ap_clk"},
+            "AP_RESET": { "actual": "ap_rst"},
+            "AP_START": { "actual": "ap_start"},
+            "AP_DONE": { "actual": "ap_done"},
+            "AP_CONTINUE": { "actual": "ap_continue", "optional":true },
+            "AP_READY": { "actual": "ap_ready", "optional":true }
+          }
+        }
+      }
+    }
+  }
+}

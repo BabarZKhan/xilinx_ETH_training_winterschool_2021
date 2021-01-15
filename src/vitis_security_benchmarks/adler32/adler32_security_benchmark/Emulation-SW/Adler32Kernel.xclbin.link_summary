@@ -1,0 +1,569 @@
+<ENTRY>
+{
+ "thisFile": "/home/centos/workspace/adler32_security_benchmark/Emulation-SW/Adler32Kernel.xclbin.link_summary",
+ "connectId": "",
+ "serverToken": "",
+ "timestamp": "0"
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Thu Jan 14 21:50:09 2021",
+ "timestampMillis": "1610661009816",
+ "buildStep": {
+  "cmdId": "43b3ac78-5016-45c3-90fe-7e2a20972bf4",
+  "name": "v++",
+  "logFile": "/home/centos/workspace/adler32_security_benchmark/Emulation-SW/Adler32Kernel.build/link/link.steps.log",
+  "commandLine": "/opt/Xilinx/Vitis/2020.1/bin/unwrapped/lnx64.o/v++ --xp param:compiler.lockFlowCritSlackThreshold=0 --xp vivado_param:hd.routingContainmentAreaExpansion=true --xp vivado_param:hd.supportClockNetCrossDiffReconfigurablePartitions=1 --xp vivado_param:bitstream.enablePR=4123 --xp vivado_param:physynth.ultraRAMOptOutput=false --xp vivado_prop:run.__KERNEL__.{STEPS.SYNTH_DESIGN.ARGS.MAX_URAM_CASCADE_HEIGHT}={1} --xp vivado_param:synth.elaboration.rodinMoreOptions={rt::set_parameter disableOregPackingUram true}  --xp \"vivado_prop:run.__KERNEL__.{STEPS.SYNTH_DESIGN.ARGS.MORE OPTIONS}={-directive sdx_optimization_effort_high}\" --xp \"misc:report=type report_timing_summary name impl_report_timing_summary_route_design_summary steps {route_design} runs {impl_1} options {-max_paths 10}\" --xp \"misc:report=type report_timing_summary name impl_report_timing_summary_post_route_phys_opt_design_summary steps {post_route_phys_opt_design} runs {impl_1} options {-max_paths 10}\" --target sw_emu --link --config common-config.cfg --config Adler32Kernel-link.cfg -oAdler32Kernel.xclbin Adler32Kernel.build/Adler32Kernel.xo ",
+  "args": [
+   "--xp",
+   "param:compiler.lockFlowCritSlackThreshold=0",
+   "--xp",
+   "vivado_param:hd.routingContainmentAreaExpansion=true",
+   "--xp",
+   "vivado_param:hd.supportClockNetCrossDiffReconfigurablePartitions=1",
+   "--xp",
+   "vivado_param:bitstream.enablePR=4123",
+   "--xp",
+   "vivado_param:physynth.ultraRAMOptOutput=false",
+   "--xp",
+   "vivado_prop:run.__KERNEL__.{STEPS.SYNTH_DESIGN.ARGS.MAX_URAM_CASCADE_HEIGHT}={1}",
+   "--xp",
+   "vivado_param:synth.elaboration.rodinMoreOptions={rt::set_parameter disableOregPackingUram true}",
+   "--target",
+   "sw_emu",
+   "--link",
+   "--config",
+   "common-config.cfg",
+   "--config",
+   "Adler32Kernel-link.cfg",
+   "-oAdler32Kernel.xclbin",
+   "Adler32Kernel.build/Adler32Kernel.xo"
+  ],
+  "iniFiles": [
+   {
+    "path": "/home/centos/workspace/adler32_security_benchmark/Emulation-SW/common-config.cfg",
+    "content": "platform=/home/centos/src/project_data/aws-fpga/Vitis/aws_platform/xilinx_aws-vu9p-f1_shell-v04261818_201920_2/xilinx_aws-vu9p-f1_shell-v04261818_201920_2.xpfm\nsave-temps=1\n"
+   },
+   {
+    "path": "/home/centos/workspace/adler32_security_benchmark/Emulation-SW/Adler32Kernel-link.cfg",
+    "content": "debug=1\nmessageDb=Adler32Kernel.mdb\ntemp_dir=Adler32Kernel.build\nreport_dir=Adler32Kernel.build/reports\nlog_dir=Adler32Kernel.build/logs\nremote_ip_cache=/home/centos/workspace/ip_cache\n\n[advanced]\nmisc=solution_name=link\n\n[connectivity]\nnk=Adler32Kernel:1:Adler32Kernel_1\nsp=Adler32Kernel_1.len:HBM[0]\nsp=Adler32Kernel_1.adler:HBM[0]\nsp=Adler32Kernel_1.inData:HBM[8]\nsp=Adler32Kernel_1.adler32Result:HBM[0]\nslr=Adler32Kernel_1:SLR0\n"
+   }
+  ],
+  "cwd": "/home/centos/workspace/adler32_security_benchmark/Emulation-SW"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Jan 14 21:50:09 2021",
+ "timestampMillis": "1610661009817",
+ "status": {
+  "cmdId": "43b3ac78-5016-45c3-90fe-7e2a20972bf4",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_FlowMetaData",
+ "dateTimestamp": "Thu Jan 14 21:50:24 2021",
+ "timestampMillis": "1610661024257",
+ "buildSummary": {
+  "hardwarePlatform": "xilinx_aws-vu9p-f1_shell-v04261818_201920_2.xpfm",
+  "hardwareDsa": "xilinx_aws-vu9p-f1_shell-v04261818_201920_2.xsa",
+  "platformDirectory": "/home/centos/src/project_data/aws-fpga/Vitis/aws_platform/xilinx_aws-vu9p-f1_shell-v04261818_201920_2",
+  "runtime": "OpenCL",
+  "systemConfig": "Linux",
+  "flow": "BF_LINK",
+  "target": "TT_SW_EMU",
+  "binaryContainer": {
+   "base": {
+    "type": "BT_UKNOWN",
+    "name": "Adler32Kernel",
+    "file": "/home/centos/workspace/adler32_security_benchmark/Emulation-SW/Adler32Kernel.xclbin",
+    "reports": []
+   },
+   "kernels": []
+  },
+  "kernels": [
+   {
+    "base": {
+     "type": "KERNEL",
+     "name": "Adler32Kernel",
+     "file": "/home/centos/workspace/adler32_security_benchmark/Emulation-SW/Adler32Kernel.build/Adler32Kernel.xo",
+     "reports": []
+    },
+    "sources": [
+     "/home/centos/workspace/adler32_security_benchmark/Emulation-SW/Adler32Kernel.build/link/int/xo/Adler32Kernel/Adler32Kernel/cpu_sources/adler32_kernel.cpp"
+    ],
+    "psSources": [],
+    "cuNames": [
+     "Adler32Kernel_1"
+    ],
+    "type": "HLS"
+   }
+  ],
+  "toolVersion": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Thu Jan 14 21:50:24 2021",
+ "timestampMillis": "1610661024263",
+ "buildStep": {
+  "cmdId": "44d2cff5-707f-42c0-893f-a643f015fbdc",
+  "name": "regiongen",
+  "logFile": "/home/centos/workspace/adler32_security_benchmark/Emulation-SW/Adler32Kernel.build/link/int/Adler32Kernel_regiongen.log",
+  "commandLine": "/opt/Xilinx/Vitis/2020.1/bin/../runtime/bin/regiongen_new -v -m /home/centos/workspace/adler32_security_benchmark/Emulation-SW/Adler32Kernel.build/link/int/Adler32Kernel.xml -t alg -o xcl_top",
+  "args": [
+   "-v",
+   "-m",
+   "/home/centos/workspace/adler32_security_benchmark/Emulation-SW/Adler32Kernel.build/link/int/Adler32Kernel.xml",
+   "-t",
+   "alg",
+   "-o",
+   "xcl_top"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/centos/workspace/adler32_security_benchmark/Emulation-SW"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Jan 14 21:50:24 2021",
+ "timestampMillis": "1610661024264",
+ "status": {
+  "cmdId": "44d2cff5-707f-42c0-893f-a643f015fbdc",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Jan 14 21:50:26 2021",
+ "timestampMillis": "1610661026090",
+ "status": {
+  "cmdId": "44d2cff5-707f-42c0-893f-a643f015fbdc",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Thu Jan 14 21:50:26 2021",
+ "timestampMillis": "1610661026092",
+ "buildStep": {
+  "cmdId": "a86286e1-7d2e-4645-991b-b22467edf72b",
+  "name": "gcc",
+  "logFile": "/home/centos/workspace/adler32_security_benchmark/Emulation-SW/Adler32Kernel.build/link/int/Adler32Kernel/Adler32Kernel_kernel_gcc.log",
+  "commandLine": "/opt/Xilinx/Vivado/2020.1/tps/lnx64/gcc-6.2.0/bin/gcc -I . -I /opt/Xilinx/Vitis/2020.1/bin/../include -I /opt/Xilinx/Vitis/2020.1/bin/../lnx64/tools/auto_cc/include -I /opt/Xilinx/Vitis/2020.1/bin/../common/technology/autopilot/opencl -I /opt/Xilinx/Vitis/2020.1/bin/../common/technology/autopilot/opencl -std=c++11 -g -I /home/centos/workspace/adler32_security_benchmark/src/kernel -I /home/centos/workspace/adler32_security_benchmark/libs/xf_security/L1/include -I /home/centos/workspace/adler32_security_benchmark/libs/xf_security/L1/include -I /home/centos/workspace/adler32_security_benchmark/src/kernel -g -fPIC -g -c -DHLS_STREAM_THREAD_SAFE -MD -MT obj/adler32_kernel.o -MP -MF obj/adler32_kernel.Cd /home/centos/workspace/adler32_security_benchmark/Emulation-SW/Adler32Kernel.build/link/int/xo/Adler32Kernel/Adler32Kernel/cpu_sources/adler32_kernel.cpp -o obj/adler32_kernel.o",
+  "args": [
+   "-I",
+   ".",
+   "-I",
+   "/opt/Xilinx/Vitis/2020.1/bin/../include",
+   "-I",
+   "/opt/Xilinx/Vitis/2020.1/bin/../lnx64/tools/auto_cc/include",
+   "-I",
+   "/opt/Xilinx/Vitis/2020.1/bin/../common/technology/autopilot/opencl",
+   "-I",
+   "/opt/Xilinx/Vitis/2020.1/bin/../common/technology/autopilot/opencl",
+   "-std=c++11",
+   "-g",
+   "-I",
+   "/home/centos/workspace/adler32_security_benchmark/src/kernel",
+   "-I",
+   "/home/centos/workspace/adler32_security_benchmark/libs/xf_security/L1/include",
+   "-I",
+   "/home/centos/workspace/adler32_security_benchmark/libs/xf_security/L1/include",
+   "-I",
+   "/home/centos/workspace/adler32_security_benchmark/src/kernel",
+   "-g",
+   "-fPIC",
+   "-g",
+   "-c",
+   "-DHLS_STREAM_THREAD_SAFE",
+   "-MD",
+   "-MT",
+   "obj/adler32_kernel.o",
+   "-MP",
+   "-MF",
+   "obj/adler32_kernel.Cd",
+   "/home/centos/workspace/adler32_security_benchmark/Emulation-SW/Adler32Kernel.build/link/int/xo/Adler32Kernel/Adler32Kernel/cpu_sources/adler32_kernel.cpp",
+   "-o",
+   "obj/adler32_kernel.o"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/centos/workspace/adler32_security_benchmark/Emulation-SW"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Jan 14 21:50:26 2021",
+ "timestampMillis": "1610661026093",
+ "status": {
+  "cmdId": "a86286e1-7d2e-4645-991b-b22467edf72b",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Jan 14 21:50:33 2021",
+ "timestampMillis": "1610661033813",
+ "status": {
+  "cmdId": "a86286e1-7d2e-4645-991b-b22467edf72b",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Thu Jan 14 21:50:33 2021",
+ "timestampMillis": "1610661033814",
+ "buildStep": {
+  "cmdId": "fa88c541-25d3-49f8-bb7c-43c0a0366a4d",
+  "name": "ar",
+  "logFile": "/home/centos/workspace/adler32_security_benchmark/Emulation-SW/Adler32Kernel.build/link/int/Adler32Kernel/Adler32Kernel_ar.log",
+  "commandLine": "/opt/Xilinx/Vivado/2020.1/tps/lnx64/binutils-2.26/bin/ar -cr /home/centos/workspace/adler32_security_benchmark/Emulation-SW/Adler32Kernel.build/link/int/Adler32Kernel/Adler32Kernel.csim_cu.a /home/centos/workspace/adler32_security_benchmark/Emulation-SW/Adler32Kernel.build/link/int/Adler32Kernel/obj/adler32_kernel.o",
+  "args": [
+   "-cr",
+   "/home/centos/workspace/adler32_security_benchmark/Emulation-SW/Adler32Kernel.build/link/int/Adler32Kernel/Adler32Kernel.csim_cu.a",
+   "/home/centos/workspace/adler32_security_benchmark/Emulation-SW/Adler32Kernel.build/link/int/Adler32Kernel/obj/adler32_kernel.o"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/centos/workspace/adler32_security_benchmark/Emulation-SW"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Jan 14 21:50:33 2021",
+ "timestampMillis": "1610661033815",
+ "status": {
+  "cmdId": "fa88c541-25d3-49f8-bb7c-43c0a0366a4d",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Jan 14 21:50:33 2021",
+ "timestampMillis": "1610661033828",
+ "status": {
+  "cmdId": "fa88c541-25d3-49f8-bb7c-43c0a0366a4d",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Thu Jan 14 21:50:33 2021",
+ "timestampMillis": "1610661033829",
+ "buildStep": {
+  "cmdId": "7027ec19-9f02-4964-bb6a-65a342dc512b",
+  "name": "g++",
+  "logFile": "/home/centos/workspace/adler32_security_benchmark/Emulation-SW/Adler32Kernel.build/link/int/Adler32Kernel_xcl_top_gpp.log",
+  "commandLine": "/opt/Xilinx/Vivado/2020.1/tps/lnx64/gcc-6.2.0/bin/g++ -I . -I /opt/Xilinx/Vitis/2020.1/bin/../include -I /opt/Xilinx/Vitis/2020.1/bin/../common/technology/autopilot/opencl -I /opt/Xilinx/Vitis/2020.1/bin/../common/technology/autopilot/opencl -I /opt/Xilinx/Vitis/2020.1/bin/../data/emulation/include -I /opt/Xilinx/Vitis/2020.1/bin/../lnx64/tools/auto_cc/include -fPIC -g -DHLS_STREAM_THREAD_SAFE -std=c++11 -fpermissive -c -MD -MT obj/xcl_top.o -MP -MF obj/xcl_top.CXXd xcl_top.cpp -o obj/xcl_top.o",
+  "args": [
+   "-I",
+   ".",
+   "-I",
+   "/opt/Xilinx/Vitis/2020.1/bin/../include",
+   "-I",
+   "/opt/Xilinx/Vitis/2020.1/bin/../common/technology/autopilot/opencl",
+   "-I",
+   "/opt/Xilinx/Vitis/2020.1/bin/../common/technology/autopilot/opencl",
+   "-I",
+   "/opt/Xilinx/Vitis/2020.1/bin/../data/emulation/include",
+   "-I",
+   "/opt/Xilinx/Vitis/2020.1/bin/../lnx64/tools/auto_cc/include",
+   "-fPIC",
+   "-g",
+   "-DHLS_STREAM_THREAD_SAFE",
+   "-std=c++11",
+   "-fpermissive",
+   "-c",
+   "-MD",
+   "-MT",
+   "obj/xcl_top.o",
+   "-MP",
+   "-MF",
+   "obj/xcl_top.CXXd",
+   "xcl_top.cpp",
+   "-o",
+   "obj/xcl_top.o"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/centos/workspace/adler32_security_benchmark/Emulation-SW"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Jan 14 21:50:33 2021",
+ "timestampMillis": "1610661033830",
+ "status": {
+  "cmdId": "7027ec19-9f02-4964-bb6a-65a342dc512b",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Jan 14 21:50:35 2021",
+ "timestampMillis": "1610661035432",
+ "status": {
+  "cmdId": "7027ec19-9f02-4964-bb6a-65a342dc512b",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Thu Jan 14 21:50:35 2021",
+ "timestampMillis": "1610661035433",
+ "buildStep": {
+  "cmdId": "6f16d869-a721-406b-a803-59ac86733b17",
+  "name": "g++",
+  "logFile": "/home/centos/workspace/adler32_security_benchmark/Emulation-SW/Adler32Kernel.build/link/int/Adler32Kernel_top_gpp.log",
+  "commandLine": "/opt/Xilinx/Vivado/2020.1/tps/lnx64/gcc-6.2.0/bin/g++ -fPIC -DHLS_STREAM_THREAD_SAFE -std=c++11 -Wall -shared -Wl,--whole-archive,-soname,Adler32Kernel.so -o Adler32Kernel.so Adler32Kernel/Adler32Kernel.csim_cu.a obj/xcl_top.o -Wl,--no-whole-archive -Wl,--as-needed -L /opt/Xilinx/Vitis/2020.1/bin/../lib/lnx64.o -lhlsmathsim -L /opt/Xilinx/Vitis/2020.1/bin/../lnx64/tools/fpo_v7_0 -lgmp -lmpfr -lIp_floating_point_v7_0_bitacc_cmodel -Wl,-rpath,/opt/Xilinx/Vitis/2020.1/bin/../lnx64/tools/fpo_v7_0 -L /opt/Xilinx/Vitis/2020.1/bin/../lnx64/tools/fft_v9_1 -lIp_xfft_v9_1_bitacc_cmodel -L /opt/Xilinx/Vitis/2020.1/bin/../lnx64/tools/fir_v7_0 -lgmp -lIp_fir_compiler_v7_2_bitacc_cmodel -L /opt/Xilinx/Vitis/2020.1/bin/../lnx64/lib/csim -lhlsmc++-GCC46",
+  "args": [
+   "-fPIC",
+   "-DHLS_STREAM_THREAD_SAFE",
+   "-std=c++11",
+   "-Wall",
+   "-shared",
+   "-Wl,--whole-archive,-soname,Adler32Kernel.so",
+   "-o",
+   "Adler32Kernel.so",
+   "Adler32Kernel/Adler32Kernel.csim_cu.a",
+   "obj/xcl_top.o",
+   "-Wl,--no-whole-archive",
+   "-Wl,--as-needed",
+   "-L",
+   "/opt/Xilinx/Vitis/2020.1/bin/../lib/lnx64.o",
+   "-lhlsmathsim",
+   "-L",
+   "/opt/Xilinx/Vitis/2020.1/bin/../lnx64/tools/fpo_v7_0",
+   "-lgmp",
+   "-lmpfr",
+   "-lIp_floating_point_v7_0_bitacc_cmodel",
+   "-Wl,-rpath,/opt/Xilinx/Vitis/2020.1/bin/../lnx64/tools/fpo_v7_0",
+   "-L",
+   "/opt/Xilinx/Vitis/2020.1/bin/../lnx64/tools/fft_v9_1",
+   "-lIp_xfft_v9_1_bitacc_cmodel",
+   "-L",
+   "/opt/Xilinx/Vitis/2020.1/bin/../lnx64/tools/fir_v7_0",
+   "-lgmp",
+   "-lIp_fir_compiler_v7_2_bitacc_cmodel",
+   "-L",
+   "/opt/Xilinx/Vitis/2020.1/bin/../lnx64/lib/csim",
+   "-lhlsmc++-GCC46"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/centos/workspace/adler32_security_benchmark/Emulation-SW"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Jan 14 21:50:35 2021",
+ "timestampMillis": "1610661035434",
+ "status": {
+  "cmdId": "6f16d869-a721-406b-a803-59ac86733b17",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Jan 14 21:50:35 2021",
+ "timestampMillis": "1610661035584",
+ "status": {
+  "cmdId": "6f16d869-a721-406b-a803-59ac86733b17",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Jan 14 21:50:35 2021",
+ "timestampMillis": "1610661035585",
+ "report": {
+  "path": "/home/centos/workspace/adler32_security_benchmark/Emulation-SW/Adler32Kernel.build/link/int/Adler32Kernel_xml.rtd",
+  "name": "",
+  "fileType": "JSON",
+  "reportType": "XCLBIN_INFO"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Thu Jan 14 21:50:35 2021",
+ "timestampMillis": "1610661035587",
+ "buildStep": {
+  "cmdId": "bce78d7a-8f12-490f-9409-c40db30ace0d",
+  "name": "xclbinutil",
+  "logFile": "/home/centos/workspace/adler32_security_benchmark/Emulation-SW/Adler32Kernel.build/link/int/Adler32Kernel_xclbinutil.log",
+  "commandLine": "/opt/Xilinx/Vitis/2020.1/bin/xclbinutil --add-section BITSTREAM:RAW:/home/centos/workspace/adler32_security_benchmark/Emulation-SW/Adler32Kernel.build/link/int/Adler32Kernel.so --force --target sw_emu --add-section CLOCK_FREQ_TOPOLOGY:JSON:/home/centos/workspace/adler32_security_benchmark/Emulation-SW/Adler32Kernel.build/link/int/Adler32Kernel_xml.rtd --add-section BUILD_METADATA:JSON:/home/centos/workspace/adler32_security_benchmark/Emulation-SW/Adler32Kernel.build/link/int/Adler32Kernel_build.rtd --add-section EMBEDDED_METADATA:RAW:/home/centos/workspace/adler32_security_benchmark/Emulation-SW/Adler32Kernel.build/link/int/Adler32Kernel.xml --add-section DEBUG_DATA:RAW:/dev/null --output /home/centos/workspace/adler32_security_benchmark/Emulation-SW/Adler32Kernel.xclbin",
+  "args": [
+   "--add-section",
+   "BITSTREAM:RAW:/home/centos/workspace/adler32_security_benchmark/Emulation-SW/Adler32Kernel.build/link/int/Adler32Kernel.so",
+   "--force",
+   "--target",
+   "sw_emu",
+   "--add-section",
+   "CLOCK_FREQ_TOPOLOGY:JSON:/home/centos/workspace/adler32_security_benchmark/Emulation-SW/Adler32Kernel.build/link/int/Adler32Kernel_xml.rtd",
+   "--add-section",
+   "BUILD_METADATA:JSON:/home/centos/workspace/adler32_security_benchmark/Emulation-SW/Adler32Kernel.build/link/int/Adler32Kernel_build.rtd",
+   "--add-section",
+   "EMBEDDED_METADATA:RAW:/home/centos/workspace/adler32_security_benchmark/Emulation-SW/Adler32Kernel.build/link/int/Adler32Kernel.xml",
+   "--add-section",
+   "DEBUG_DATA:RAW:/dev/null",
+   "--output",
+   "/home/centos/workspace/adler32_security_benchmark/Emulation-SW/Adler32Kernel.xclbin"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/centos/workspace/adler32_security_benchmark/Emulation-SW"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Jan 14 21:50:35 2021",
+ "timestampMillis": "1610661035588",
+ "status": {
+  "cmdId": "bce78d7a-8f12-490f-9409-c40db30ace0d",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Jan 14 21:50:35 2021",
+ "timestampMillis": "1610661035675",
+ "status": {
+  "cmdId": "bce78d7a-8f12-490f-9409-c40db30ace0d",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Thu Jan 14 21:50:35 2021",
+ "timestampMillis": "1610661035676",
+ "buildStep": {
+  "cmdId": "37f43d0e-7a02-446e-aa67-219acf3ad432",
+  "name": "xclbinutil",
+  "logFile": "/home/centos/workspace/adler32_security_benchmark/Emulation-SW/Adler32Kernel.xclbin.info",
+  "commandLine": "/opt/Xilinx/Vitis/2020.1/bin/xclbinutil --quiet --info --input /home/centos/workspace/adler32_security_benchmark/Emulation-SW/Adler32Kernel.xclbin",
+  "args": [
+   "--quiet",
+   "--info",
+   "--input",
+   "/home/centos/workspace/adler32_security_benchmark/Emulation-SW/Adler32Kernel.xclbin"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/centos/workspace/adler32_security_benchmark/Emulation-SW"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Jan 14 21:50:35 2021",
+ "timestampMillis": "1610661035677",
+ "status": {
+  "cmdId": "37f43d0e-7a02-446e-aa67-219acf3ad432",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Jan 14 21:50:35 2021",
+ "timestampMillis": "1610661035774",
+ "status": {
+  "cmdId": "37f43d0e-7a02-446e-aa67-219acf3ad432",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Jan 14 21:50:35 2021",
+ "timestampMillis": "1610661035778",
+ "report": {
+  "path": "/home/centos/workspace/adler32_security_benchmark/Emulation-SW/guidance.html",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Jan 14 21:50:35 2021",
+ "timestampMillis": "1610661035778",
+ "report": {
+  "path": "/home/centos/workspace/adler32_security_benchmark/Emulation-SW/guidance.pb",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Jan 14 21:50:35 2021",
+ "timestampMillis": "1610661035779",
+ "report": {
+  "path": "/home/centos/workspace/adler32_security_benchmark/Emulation-SW/Adler32Kernel.build/logs/optraceViewer.html",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "OPERATION_TRACE"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Jan 14 21:50:35 2021",
+ "timestampMillis": "1610661035780",
+ "status": {
+  "cmdId": "43b3ac78-5016-45c3-90fe-7e2a20972bf4",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>

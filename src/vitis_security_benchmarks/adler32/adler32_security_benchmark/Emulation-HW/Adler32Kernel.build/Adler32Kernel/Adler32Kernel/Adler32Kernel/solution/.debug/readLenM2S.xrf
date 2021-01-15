@@ -1,0 +1,51 @@
+Begin Function 'readLenM2S'
+
+RTL state condition: (1'b1 == ap_CS_fsm_pp0_stage0)
+# ST_40
+local i <phi_63> <integer> <Phi> 'phi' </home/centos/workspace/adler32_security_benchmark/src/kernel/adler32_kernel.cpp:44->/home/centos/workspace/adler32_security_benchmark/src/kernel/adler32_kernel.cpp:63>
+add_ln44 /home/centos/workspace/adler32_security_benchmark/src/kernel/adler32_kernel.cpp:44
+add_ln44 /home/centos/workspace/adler32_security_benchmark/src/kernel/adler32_kernel.cpp:63
+reg: i_reg_141[30:0] lv
+
+local icmp_ln44_1 <icmp_63> <integer> <Comparator> 'icmp' </home/centos/workspace/adler32_security_benchmark/src/kernel/adler32_kernel.cpp:44->/home/centos/workspace/adler32_security_benchmark/src/kernel/adler32_kernel.cpp:63>
+icmp_ln44_1 /home/centos/workspace/adler32_security_benchmark/src/kernel/adler32_kernel.cpp:44
+icmp_ln44_1 /home/centos/workspace/adler32_security_benchmark/src/kernel/adler32_kernel.cpp:63
+reg: icmp_ln44_1_reg_240[0:0] lv
+
+# ST_41
+local gmem0_addr_read <read_167> <integer> <> 'read' </opt/Xilinx/Vitis/2020.1/common/technology/autopilot/hls_stream_39.h:167>
+gmem0_addr_read /opt/Xilinx/Vitis/2020.1/common/technology/autopilot/hls_stream_39.h:167
+reg: gmem0_addr_read_reg_249[31:0] lv
+
+local gmem1_addr_read <read_167> <integer> <> 'read' </opt/Xilinx/Vitis/2020.1/common/technology/autopilot/hls_stream_39.h:167>
+gmem1_addr_read /opt/Xilinx/Vitis/2020.1/common/technology/autopilot/hls_stream_39.h:167
+reg: gmem1_addr_read_reg_254[31:0] lv
+
+
+RTL state condition: (1'b1 == ap_CS_fsm_state1)
+# ST_1
+local n_read <read_38> <integer> <FifoRead> 'read' </home/centos/workspace/adler32_security_benchmark/src/kernel/adler32_kernel.cpp:38>
+n /home/centos/workspace/adler32_security_benchmark/src/kernel/adler32_kernel.cpp:38
+reg: n_read_reg_212[31:0] lv
+
+local gmem0_addr <getelementptr_63> <integer> <> 'getelementptr' </home/centos/workspace/adler32_security_benchmark/src/kernel/adler32_kernel.cpp:44->/home/centos/workspace/adler32_security_benchmark/src/kernel/adler32_kernel.cpp:63>
+gmem0_addr /home/centos/workspace/adler32_security_benchmark/src/kernel/adler32_kernel.cpp:44
+gmem0_addr /home/centos/workspace/adler32_security_benchmark/src/kernel/adler32_kernel.cpp:63
+reg: gmem0_addr_reg_223[63:0] lv
+
+local gmem1_addr <getelementptr_63> <integer> <> 'getelementptr' </home/centos/workspace/adler32_security_benchmark/src/kernel/adler32_kernel.cpp:44->/home/centos/workspace/adler32_security_benchmark/src/kernel/adler32_kernel.cpp:63>
+gmem1_addr /home/centos/workspace/adler32_security_benchmark/src/kernel/adler32_kernel.cpp:44
+gmem1_addr /home/centos/workspace/adler32_security_benchmark/src/kernel/adler32_kernel.cpp:63
+reg: gmem1_addr_reg_229[63:0] lv
+
+
+RTL state condition: (1'b1 == ap_CS_fsm_state2)
+# ST_2
+local trunc_ln44 <trunc_63> <integer> <> 'trunc' </home/centos/workspace/adler32_security_benchmark/src/kernel/adler32_kernel.cpp:44->/home/centos/workspace/adler32_security_benchmark/src/kernel/adler32_kernel.cpp:63>
+trunc_ln44 /home/centos/workspace/adler32_security_benchmark/src/kernel/adler32_kernel.cpp:44
+trunc_ln44 /home/centos/workspace/adler32_security_benchmark/src/kernel/adler32_kernel.cpp:63
+reg: trunc_ln44_reg_235[30:0] lv
+
+
+End Function 'readLenM2S'
+

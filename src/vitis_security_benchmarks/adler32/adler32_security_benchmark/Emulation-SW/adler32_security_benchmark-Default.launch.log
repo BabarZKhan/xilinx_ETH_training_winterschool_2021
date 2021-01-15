@@ -1,0 +1,15 @@
+
+--------------------- Adler32 -----------------
+Found Platform
+Platform Name: Xilinx
+Found Device=xilinx_aws-vu9p-f1_shell-v04261818_201920_2
+INFO: Importing ../Adler32Kernel.xclbin
+Loading: '../Adler32Kernel.xclbin'
+kernel has been created
+kernel start------
+kernel end------
+Execution time 489.837ms
+Write DDR Execution time 0.865536 ms
+Kernel Execution time 487.903 ms
+Read DDR Execution time 0.142098 ms
+Total Execution time 489.195 ms

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="Adler32Kernel" dir="">
+  <FileSets>
+    <FileSet Name="kernel_Adler32Kernel" Type="DesignSrcs">
+      <File Path="/home/centos/workspace/adler32_security_benchmark/src/kernel/adler32_kernel.cpp"/>
+      <Config/>
+    </FileSet>
+  </FileSets>
+  <Runs/>
+</project>

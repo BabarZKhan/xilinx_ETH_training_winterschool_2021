@@ -1,0 +1,41 @@
+Begin Function 'splitStrm'
+
+RTL state condition: (1'b1 == 1'b1)
+# ST_4
+local trunc_ln358 <> <integer> <> 'trunc' <>
+trunc_ln358 /opt/Xilinx/Vitis/2020.1/common/technology/autopilot/ap_int_base.h:358
+reg: trunc_ln358_reg_269[127:0] lv
+
+
+RTL state condition: (1'b1 == ap_CS_fsm_pp0_stage0)
+# ST_2
+local i <> <integer> <Phi> 'phi' <>
+i /home/centos/workspace/adler32_security_benchmark/src/kernel/adler32_kernel.cpp:28
+i_1 /home/centos/workspace/adler32_security_benchmark/src/kernel/adler32_kernel.cpp:63
+reg: i_reg_81[30:0] lv
+
+local icmp_ln28 <icmp_63> <integer> <Comparator> 'icmp' </home/centos/workspace/adler32_security_benchmark/src/kernel/adler32_kernel.cpp:28->/home/centos/workspace/adler32_security_benchmark/src/kernel/adler32_kernel.cpp:63>
+icmp_ln28 /home/centos/workspace/adler32_security_benchmark/src/kernel/adler32_kernel.cpp:28
+icmp_ln28 /home/centos/workspace/adler32_security_benchmark/src/kernel/adler32_kernel.cpp:63
+reg: icmp_ln28_reg_251[0:0] lv
+
+local offset <trunc_63> <integer> <> 'trunc' </home/centos/workspace/adler32_security_benchmark/src/kernel/adler32_kernel.cpp:28->/home/centos/workspace/adler32_security_benchmark/src/kernel/adler32_kernel.cpp:63>
+offset /home/centos/workspace/adler32_security_benchmark/src/kernel/adler32_kernel.cpp:28
+offset /home/centos/workspace/adler32_security_benchmark/src/kernel/adler32_kernel.cpp:63
+reg: offset_reg_260[1:0] lv
+
+local icmp_ln31 <icmp_63> <integer> <Comparator> 'icmp' </home/centos/workspace/adler32_security_benchmark/src/kernel/adler32_kernel.cpp:31->/home/centos/workspace/adler32_security_benchmark/src/kernel/adler32_kernel.cpp:63>
+icmp_ln31 /home/centos/workspace/adler32_security_benchmark/src/kernel/adler32_kernel.cpp:31
+icmp_ln31 /home/centos/workspace/adler32_security_benchmark/src/kernel/adler32_kernel.cpp:63
+reg: icmp_ln31_reg_265[0:0] lv
+
+
+RTL state condition: (1'b1 == ap_CS_fsm_state1)
+# ST_1
+local n_read <read_26> <integer> <FifoRead> 'read' </home/centos/workspace/adler32_security_benchmark/src/kernel/adler32_kernel.cpp:26>
+n /home/centos/workspace/adler32_security_benchmark/src/kernel/adler32_kernel.cpp:26
+reg: n_read_reg_246[31:0] lv
+
+
+End Function 'splitStrm'
+

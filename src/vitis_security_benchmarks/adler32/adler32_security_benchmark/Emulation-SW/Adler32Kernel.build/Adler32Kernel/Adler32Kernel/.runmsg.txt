@@ -1,0 +1,2 @@
+performing high-level synthesis for kernel: Adler32Kernel
+Log file: /home/centos/workspace/adler32_security_benchmark/Emulation-SW/Adler32Kernel.build/Adler32Kernel/Adler32Kernel/vitis_hls.log

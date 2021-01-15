@@ -1,0 +1,251 @@
+
+
+================================================================
+== Vitis HLS Report for 'Adler32Kernel'
+================================================================
+* Date:           Thu Jan 14 21:55:38 2021
+
+* Version:        2020.1 (Build 2902540 on Wed May 27 20:16:15 MDT 2020)
+* Project:        Adler32Kernel
+* Solution:       solution (Vitis Kernel Flow Target)
+* Product family: virtexuplus
+* Target device:  xcvu9p-flgb2104-2-i
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+-----------+------------+
+    |  Clock |  Target | Estimated | Uncertainty|
+    +--------+---------+-----------+------------+
+    |ap_clk  | 4.00 ns | 42.940 ns |   1.08 ns  |
+    +--------+---------+-----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+----------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline |
+    |   min   |   max   |    min   |    max   | min | max |   Type   |
+    +---------+---------+----------+----------+-----+-----+----------+
+    |        ?|        ?|         ?|         ?|    ?|    ?| dataflow |
+    +---------+---------+----------+----------+-----+-----+----------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 9
+* Pipeline : 0
+* Dataflow Pipeline: 1
+  DF-Pipeline-0: Size = 9, States = { 1 2 3 4 5 6 7 8 9 }
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 7 
+7 --> 8 
+8 --> 9 
+9 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 2.46>
+ST_1 : Operation 10 [1/1] (1.00ns)   --->   "%adler32Result_read = read i64 @_ssdm_op_Read.s_axilite.i64, i64 %adler32Result" [/home/centos/workspace/adler32_security_benchmark/src/kernel/adler32_kernel.cpp:63]   --->   Operation 10 'read' 'adler32Result_read' <Predicate = true> <Delay = 1.00> <CoreInst = "s_axilite">   --->   Core 56 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_1 : Operation 11 [1/1] (1.00ns)   --->   "%inData_read = read i64 @_ssdm_op_Read.s_axilite.i64, i64 %inData" [/home/centos/workspace/adler32_security_benchmark/src/kernel/adler32_kernel.cpp:63]   --->   Operation 11 'read' 'inData_read' <Predicate = true> <Delay = 1.00> <CoreInst = "s_axilite">   --->   Core 56 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_1 : Operation 12 [1/1] (1.00ns)   --->   "%adler_read = read i64 @_ssdm_op_Read.s_axilite.i64, i64 %adler" [/home/centos/workspace/adler32_security_benchmark/src/kernel/adler32_kernel.cpp:63]   --->   Operation 12 'read' 'adler_read' <Predicate = true> <Delay = 1.00> <CoreInst = "s_axilite">   --->   Core 56 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_1 : Operation 13 [1/1] (1.00ns)   --->   "%len_read = read i64 @_ssdm_op_Read.s_axilite.i64, i64 %len" [/home/centos/workspace/adler32_security_benchmark/src/kernel/adler32_kernel.cpp:63]   --->   Operation 13 'read' 'len_read' <Predicate = true> <Delay = 1.00> <CoreInst = "s_axilite">   --->   Core 56 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_1 : Operation 14 [1/1] (1.00ns)   --->   "%size_read = read i32 @_ssdm_op_Read.ap_none.i32, i32 %size" [/home/centos/workspace/adler32_security_benchmark/src/kernel/adler32_kernel.cpp:63]   --->   Operation 14 'read' 'size_read' <Predicate = true> <Delay = 1.00> <CoreInst = "s_axilite">   --->   Core 56 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_1 : Operation 15 [1/1] (1.00ns)   --->   "%num_read = read i32 @_ssdm_op_Read.ap_none.i32, i32 %num" [/home/centos/workspace/adler32_security_benchmark/src/kernel/adler32_kernel.cpp:63]   --->   Operation 15 'read' 'num_read' <Predicate = true> <Delay = 1.00> <CoreInst = "s_axilite">   --->   Core 56 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%size_c14 = alloca i64" [/home/centos/workspace/adler32_security_benchmark/src/kernel/adler32_kernel.cpp:63]   --->   Operation 16 'alloca' 'size_c14' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 21 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.45> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 2> <FIFO>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%adler32Result_c = alloca i64" [/home/centos/workspace/adler32_security_benchmark/src/kernel/adler32_kernel.cpp:63]   --->   Operation 17 'alloca' 'adler32Result_c' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 21 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.47> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 64> <Depth = 5> <FIFO>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%inData_c = alloca i64" [/home/centos/workspace/adler32_security_benchmark/src/kernel/adler32_kernel.cpp:63]   --->   Operation 18 'alloca' 'inData_c' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 21 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.45> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 64> <Depth = 2> <FIFO>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%adler_c = alloca i64" [/home/centos/workspace/adler32_security_benchmark/src/kernel/adler32_kernel.cpp:63]   --->   Operation 19 'alloca' 'adler_c' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 21 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.45> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 64> <Depth = 2> <FIFO>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%len_c = alloca i64" [/home/centos/workspace/adler32_security_benchmark/src/kernel/adler32_kernel.cpp:63]   --->   Operation 20 'alloca' 'len_c' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 21 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.45> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 64> <Depth = 2> <FIFO>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%size_c = alloca i64" [/home/centos/workspace/adler32_security_benchmark/src/kernel/adler32_kernel.cpp:63]   --->   Operation 21 'alloca' 'size_c' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 21 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.45> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 2> <FIFO>
+ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%num_c13 = alloca i64" [/home/centos/workspace/adler32_security_benchmark/src/kernel/adler32_kernel.cpp:63]   --->   Operation 22 'alloca' 'num_c13' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 21 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.47> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 5> <FIFO>
+ST_1 : Operation 23 [1/1] (0.00ns)   --->   "%num_c = alloca i64" [/home/centos/workspace/adler32_security_benchmark/src/kernel/adler32_kernel.cpp:63]   --->   Operation 23 'alloca' 'num_c' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 21 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.45> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 2> <FIFO>
+ST_1 : Operation 24 [1/1] (0.00ns)   --->   "%data512Strm = alloca i64" [/home/centos/workspace/adler32_security_benchmark/src/kernel/adler32_kernel.cpp:80]   --->   Operation 24 'alloca' 'data512Strm' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO">   --->   Core 18 'FIFO' <Latency = 0> <II = 1> <Delay = 1.57> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 512> <Depth = 64> <FIFO>
+ST_1 : Operation 25 [1/1] (0.00ns)   --->   "%dataStrm = alloca i64" [/home/centos/workspace/adler32_security_benchmark/src/kernel/adler32_kernel.cpp:81]   --->   Operation 25 'alloca' 'dataStrm' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO">   --->   Core 18 'FIFO' <Latency = 0> <II = 1> <Delay = 1.43> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 128> <Depth = 16> <FIFO>
+ST_1 : Operation 26 [1/1] (0.00ns)   --->   "%lenStrm = alloca i64" [/home/centos/workspace/adler32_security_benchmark/src/kernel/adler32_kernel.cpp:82]   --->   Operation 26 'alloca' 'lenStrm' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 21 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.55> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 16> <FIFO>
+ST_1 : Operation 27 [1/1] (0.00ns)   --->   "%adlerStrm = alloca i64" [/home/centos/workspace/adler32_security_benchmark/src/kernel/adler32_kernel.cpp:83]   --->   Operation 27 'alloca' 'adlerStrm' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 21 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.55> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 16> <FIFO>
+ST_1 : Operation 28 [1/1] (0.00ns)   --->   "%endStrm = alloca i64" [/home/centos/workspace/adler32_security_benchmark/src/kernel/adler32_kernel.cpp:84]   --->   Operation 28 'alloca' 'endStrm' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 21 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.55> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 1> <Depth = 16> <FIFO>
+ST_1 : Operation 29 [1/1] (0.00ns)   --->   "%adler32Strm = alloca i64" [/home/centos/workspace/adler32_security_benchmark/src/kernel/adler32_kernel.cpp:86]   --->   Operation 29 'alloca' 'adler32Strm' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 21 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.55> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 16> <FIFO>
+ST_1 : Operation 30 [1/1] (0.00ns)   --->   "%adler32EndStrm = alloca i64" [/home/centos/workspace/adler32_security_benchmark/src/kernel/adler32_kernel.cpp:87]   --->   Operation 30 'alloca' 'adler32EndStrm' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 21 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.55> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 1> <Depth = 16> <FIFO>
+ST_1 : Operation 31 [1/1] (1.46ns)   --->   "%call_ln63 = call void @Adler32Kernel.entry3, i32 %num_read, i32 %size_read, i64 %len_read, i64 %adler_read, i64 %inData_read, i64 %adler32Result_read, i32 %num_c, i32 %num_c13, i32 %size_c, i64 %len_c, i64 %adler_c, i64 %inData_c, i64 %adler32Result_c" [/home/centos/workspace/adler32_security_benchmark/src/kernel/adler32_kernel.cpp:63]   --->   Operation 31 'call' 'call_ln63' <Predicate = true> <Delay = 1.46> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 2 <SV = 1> <Delay = 0.00>
+ST_2 : Operation 32 [2/2] (0.00ns)   --->   "%call_ln96 = call void @readLenM2S, i32 %gmem0, i32 %gmem1, i32 %lenStrm, i32 %adlerStrm, i1 %endStrm, i32 %num_c, i64 %len_c, i64 %adler_c, void %call_ln63, void %call_ln63" [/home/centos/workspace/adler32_security_benchmark/src/kernel/adler32_kernel.cpp:96]   --->   Operation 32 'call' 'call_ln96' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_2 : Operation 33 [2/2] (0.00ns)   --->   "%call_ln97 = call void @readDataM2S, i512 %gmem2, i512 %data512Strm, i32 %size_c, i64 %inData_c, i32 %size_c14, void %call_ln63" [/home/centos/workspace/adler32_security_benchmark/src/kernel/adler32_kernel.cpp:97]   --->   Operation 33 'call' 'call_ln97' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 3 <SV = 2> <Delay = 0.00>
+ST_3 : Operation 34 [1/2] (0.00ns)   --->   "%call_ln96 = call void @readLenM2S, i32 %gmem0, i32 %gmem1, i32 %lenStrm, i32 %adlerStrm, i1 %endStrm, i32 %num_c, i64 %len_c, i64 %adler_c, void %call_ln63, void %call_ln63" [/home/centos/workspace/adler32_security_benchmark/src/kernel/adler32_kernel.cpp:96]   --->   Operation 34 'call' 'call_ln96' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_3 : Operation 35 [1/2] (0.00ns)   --->   "%call_ln97 = call void @readDataM2S, i512 %gmem2, i512 %data512Strm, i32 %size_c, i64 %inData_c, i32 %size_c14, void %call_ln63" [/home/centos/workspace/adler32_security_benchmark/src/kernel/adler32_kernel.cpp:97]   --->   Operation 35 'call' 'call_ln97' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 4 <SV = 3> <Delay = 0.00>
+ST_4 : Operation 36 [2/2] (0.00ns)   --->   "%call_ln98 = call void @splitStrm, i512 %data512Strm, i128 %dataStrm, i32 %size_c14, void %call_ln97" [/home/centos/workspace/adler32_security_benchmark/src/kernel/adler32_kernel.cpp:98]   --->   Operation 36 'call' 'call_ln98' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 5 <SV = 4> <Delay = 0.00>
+ST_5 : Operation 37 [1/2] (0.00ns)   --->   "%call_ln98 = call void @splitStrm, i512 %data512Strm, i128 %dataStrm, i32 %size_c14, void %call_ln97" [/home/centos/workspace/adler32_security_benchmark/src/kernel/adler32_kernel.cpp:98]   --->   Operation 37 'call' 'call_ln98' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 6 <SV = 5> <Delay = 0.00>
+ST_6 : Operation 38 [2/2] (0.00ns)   --->   "%call_ln99 = call void @adler32<16>, i32 %adlerStrm, i128 %dataStrm, i32 %lenStrm, i1 %endStrm, i32 %adler32Strm, i1 %adler32EndStrm, void %call_ln98, void %call_ln96, void %call_ln96" [/home/centos/workspace/adler32_security_benchmark/src/kernel/adler32_kernel.cpp:99]   --->   Operation 38 'call' 'call_ln99' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 7 <SV = 6> <Delay = 0.00>
+ST_7 : Operation 39 [1/2] (0.00ns)   --->   "%call_ln99 = call void @adler32<16>, i32 %adlerStrm, i128 %dataStrm, i32 %lenStrm, i1 %endStrm, i32 %adler32Strm, i1 %adler32EndStrm, void %call_ln98, void %call_ln96, void %call_ln96" [/home/centos/workspace/adler32_security_benchmark/src/kernel/adler32_kernel.cpp:99]   --->   Operation 39 'call' 'call_ln99' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 8 <SV = 7> <Delay = 0.00>
+ST_8 : Operation 40 [2/2] (0.00ns)   --->   "%call_ln100 = call void @writeS2M, i32 %adler32Strm, i1 %adler32EndStrm, i32 %gmem3, i32 %num_c13, i64 %adler32Result_c, void %call_ln99, void %call_ln99" [/home/centos/workspace/adler32_security_benchmark/src/kernel/adler32_kernel.cpp:100]   --->   Operation 40 'call' 'call_ln100' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 9 <SV = 8> <Delay = 0.00>
+ST_9 : Operation 41 [1/1] (0.00ns)   --->   "%specdataflowpipeline_ln0 = specdataflowpipeline void @_ssdm_op_SpecDataflowPipeline, i32, i32, void @empty_3"   --->   Operation 41 'specdataflowpipeline' 'specdataflowpipeline_ln0' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 42 [1/1] (0.00ns)   --->   "%spectopmodule_ln0 = spectopmodule void @_ssdm_op_SpecTopModule, void @empty_13"   --->   Operation 42 'spectopmodule' 'spectopmodule_ln0' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 43 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32, void @empty_2, i32, i32, void @empty_3, i32, i32, void @empty_3, void @empty_3, void @empty_3, i32, i32, i32, i32, void @empty_3, void @empty_3"   --->   Operation 43 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 44 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %gmem0, void @empty_4, i32, i32, void @empty_3, i32, i32, void @empty_3, void @empty_3, void @empty_3, i32, i32, i32, i32, void @empty_3, void @empty_3"   --->   Operation 44 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 45 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %gmem0"   --->   Operation 45 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 46 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %gmem1, void @empty_4, i32, i32, void @empty_3, i32, i32, void @empty_3, void @empty_3, void @empty_3, i32, i32, i32, i32, void @empty_3, void @empty_3"   --->   Operation 46 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 47 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %gmem1"   --->   Operation 47 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 48 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i512 %gmem2, void @empty_4, i32, i32, void @empty_3, i32, i32, void @empty_3, void @empty_3, void @empty_3, i32, i32, i32, i32, void @empty_3, void @empty_3"   --->   Operation 48 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 49 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i512 %gmem2"   --->   Operation 49 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 50 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %gmem3, void @empty_4, i32, i32, void @empty_3, i32, i32, void @empty_3, void @empty_3, void @empty_3, i32, i32, i32, i32, void @empty_3, void @empty_3"   --->   Operation 50 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 51 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %gmem3"   --->   Operation 51 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 52 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %num"   --->   Operation 52 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 53 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %num, void @empty_15, i32, i32, void @empty_3, i32, i32, void @empty_16, void @empty_17, void @empty_3, i32, i32, i32, i32, void @empty_3, void @empty_3"   --->   Operation 53 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 54 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %num, void @empty_9, i32, i32, void @empty_3, i32, i32, void @empty_3, void @empty_3, void @empty_3, i32, i32, i32, i32, void @empty_3, void @empty_3"   --->   Operation 54 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 55 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %size"   --->   Operation 55 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 56 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %size, void @empty_15, i32, i32, void @empty_3, i32, i32, void @empty_16, void @empty_20, void @empty_3, i32, i32, i32, i32, void @empty_3, void @empty_3"   --->   Operation 56 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 57 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %size, void @empty_9, i32, i32, void @empty_3, i32, i32, void @empty_3, void @empty_3, void @empty_3, i32, i32, i32, i32, void @empty_3, void @empty_3"   --->   Operation 57 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 58 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %len, void @empty_15, i32, i32, void @empty_3, i32, i32, void @empty_16, void @empty_19, void @empty_3, i32, i32, i32, i32, void @empty_3, void @empty_0"   --->   Operation 58 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 59 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %len, void @empty_18, i32, i32, void @empty_3, i32, i32, void @empty_3, void @empty_3, void @empty_3, i32, i32, i32, i32, void @empty_3, void @empty_0"   --->   Operation 59 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 60 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %adler, void @empty_15, i32, i32, void @empty_3, i32, i32, void @empty_16, void @empty_12, void @empty_3, i32, i32, i32, i32, void @empty_3, void @empty_0"   --->   Operation 60 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 61 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %adler, void @empty_18, i32, i32, void @empty_3, i32, i32, void @empty_3, void @empty_3, void @empty_3, i32, i32, i32, i32, void @empty_3, void @empty_0"   --->   Operation 61 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 62 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %inData, void @empty_15, i32, i32, void @empty_3, i32, i32, void @empty_16, void @empty_14, void @empty_3, i32, i32, i32, i32, void @empty_3, void @empty_0"   --->   Operation 62 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 63 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %inData, void @empty_18, i32, i32, void @empty_3, i32, i32, void @empty_3, void @empty_3, void @empty_3, i32, i32, i32, i32, void @empty_3, void @empty_0"   --->   Operation 63 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 64 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %adler32Result, void @empty_15, i32, i32, void @empty_3, i32, i32, void @empty_16, void @empty_6, void @empty_3, i32, i32, i32, i32, void @empty_3, void @empty_0"   --->   Operation 64 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 65 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %adler32Result, void @empty_18, i32, i32, void @empty_3, i32, i32, void @empty_3, void @empty_3, void @empty_3, i32, i32, i32, i32, void @empty_3, void @empty_0"   --->   Operation 65 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 66 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32, void @empty_15, i32, i32, void @empty_3, i32, i32, void @empty_16, void @empty_3, void @empty_3, i32, i32, i32, i32, void @empty_3, void @empty_3"   --->   Operation 66 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 67 [1/1] (0.00ns)   --->   "%empty = specchannel i32 @_ssdm_op_SpecChannel, void @data512Strm_str, i32, void @p_str, void @p_str, i32, i32, i512 %data512Strm, i512 %data512Strm"   --->   Operation 67 'specchannel' 'empty' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 68 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i512 %data512Strm, void @empty_5, i32, i32, void @empty_3, i32, i32, void @empty_3, void @empty_3, void @empty_3, i32, i32, i32, i32, void @empty_3, void @empty_3"   --->   Operation 68 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 69 [1/1] (0.00ns)   --->   "%empty_57 = specchannel i32 @_ssdm_op_SpecChannel, void @dataStrm_str, i32, void @p_str, void @p_str, i32, i32, i128 %dataStrm, i128 %dataStrm"   --->   Operation 69 'specchannel' 'empty_57' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 70 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i128 %dataStrm, void @empty_5, i32, i32, void @empty_3, i32, i32, void @empty_3, void @empty_3, void @empty_3, i32, i32, i32, i32, void @empty_3, void @empty_3"   --->   Operation 70 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 71 [1/1] (0.00ns)   --->   "%empty_58 = specchannel i32 @_ssdm_op_SpecChannel, void @lenStrm_str, i32, void @p_str, void @p_str, i32, i32, i32 %lenStrm, i32 %lenStrm"   --->   Operation 71 'specchannel' 'empty_58' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 72 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %lenStrm, void @empty_5, i32, i32, void @empty_3, i32, i32, void @empty_3, void @empty_3, void @empty_3, i32, i32, i32, i32, void @empty_3, void @empty_3"   --->   Operation 72 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 73 [1/1] (0.00ns)   --->   "%empty_59 = specchannel i32 @_ssdm_op_SpecChannel, void @adlerStrm_str, i32, void @p_str, void @p_str, i32, i32, i32 %adlerStrm, i32 %adlerStrm"   --->   Operation 73 'specchannel' 'empty_59' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 74 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %adlerStrm, void @empty_5, i32, i32, void @empty_3, i32, i32, void @empty_3, void @empty_3, void @empty_3, i32, i32, i32, i32, void @empty_3, void @empty_3"   --->   Operation 74 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 75 [1/1] (0.00ns)   --->   "%empty_60 = specchannel i32 @_ssdm_op_SpecChannel, void @endStrm_str, i32, void @p_str, void @p_str, i32, i32, i1 %endStrm, i1 %endStrm"   --->   Operation 75 'specchannel' 'empty_60' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 76 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i1 %endStrm, void @empty_5, i32, i32, void @empty_3, i32, i32, void @empty_3, void @empty_3, void @empty_3, i32, i32, i32, i32, void @empty_3, void @empty_3"   --->   Operation 76 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 77 [1/1] (0.00ns)   --->   "%empty_61 = specchannel i32 @_ssdm_op_SpecChannel, void @adler32Strm_str, i32, void @p_str, void @p_str, i32, i32, i32 %adler32Strm, i32 %adler32Strm"   --->   Operation 77 'specchannel' 'empty_61' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 78 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %adler32Strm, void @empty_5, i32, i32, void @empty_3, i32, i32, void @empty_3, void @empty_3, void @empty_3, i32, i32, i32, i32, void @empty_3, void @empty_3"   --->   Operation 78 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 79 [1/1] (0.00ns)   --->   "%empty_62 = specchannel i32 @_ssdm_op_SpecChannel, void @adler32EndStrm_str, i32, void @p_str, void @p_str, i32, i32, i1 %adler32EndStrm, i1 %adler32EndStrm"   --->   Operation 79 'specchannel' 'empty_62' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 80 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i1 %adler32EndStrm, void @empty_5, i32, i32, void @empty_3, i32, i32, void @empty_3, void @empty_3, void @empty_3, i32, i32, i32, i32, void @empty_3, void @empty_3"   --->   Operation 80 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 81 [1/1] (0.00ns)   --->   "%empty_63 = specchannel i32 @_ssdm_op_SpecChannel, void @num_c_str, i32, void @p_str, void @p_str, i32, i32, i32 %num_c, i32 %num_c" [/home/centos/workspace/adler32_security_benchmark/src/kernel/adler32_kernel.cpp:63]   --->   Operation 81 'specchannel' 'empty_63' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 82 [1/1] (0.00ns)   --->   "%specinterface_ln63 = specinterface void @_ssdm_op_SpecInterface, i32 %num_c, void @ap_fifo_str, i32, i32, void @p_str, i32, i32, void @p_str, void @p_str, void @p_str, i32, i32, i32, i32, void @p_str, void @p_str" [/home/centos/workspace/adler32_security_benchmark/src/kernel/adler32_kernel.cpp:63]   --->   Operation 82 'specinterface' 'specinterface_ln63' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 83 [1/1] (0.00ns)   --->   "%empty_64 = specchannel i32 @_ssdm_op_SpecChannel, void @num_c13_str, i32, void @p_str, void @p_str, i32, i32, i32 %num_c13, i32 %num_c13" [/home/centos/workspace/adler32_security_benchmark/src/kernel/adler32_kernel.cpp:63]   --->   Operation 83 'specchannel' 'empty_64' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 84 [1/1] (0.00ns)   --->   "%specinterface_ln63 = specinterface void @_ssdm_op_SpecInterface, i32 %num_c13, void @ap_fifo_str, i32, i32, void @p_str, i32, i32, void @p_str, void @p_str, void @p_str, i32, i32, i32, i32, void @p_str, void @p_str" [/home/centos/workspace/adler32_security_benchmark/src/kernel/adler32_kernel.cpp:63]   --->   Operation 84 'specinterface' 'specinterface_ln63' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 85 [1/1] (0.00ns)   --->   "%empty_65 = specchannel i32 @_ssdm_op_SpecChannel, void @size_c_str, i32, void @p_str, void @p_str, i32, i32, i32 %size_c, i32 %size_c" [/home/centos/workspace/adler32_security_benchmark/src/kernel/adler32_kernel.cpp:63]   --->   Operation 85 'specchannel' 'empty_65' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 86 [1/1] (0.00ns)   --->   "%specinterface_ln63 = specinterface void @_ssdm_op_SpecInterface, i32 %size_c, void @ap_fifo_str, i32, i32, void @p_str, i32, i32, void @p_str, void @p_str, void @p_str, i32, i32, i32, i32, void @p_str, void @p_str" [/home/centos/workspace/adler32_security_benchmark/src/kernel/adler32_kernel.cpp:63]   --->   Operation 86 'specinterface' 'specinterface_ln63' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 87 [1/1] (0.00ns)   --->   "%empty_66 = specchannel i32 @_ssdm_op_SpecChannel, void @len_c_str, i32, void @p_str, void @p_str, i32, i32, i64 %len_c, i64 %len_c" [/home/centos/workspace/adler32_security_benchmark/src/kernel/adler32_kernel.cpp:63]   --->   Operation 87 'specchannel' 'empty_66' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 88 [1/1] (0.00ns)   --->   "%specinterface_ln63 = specinterface void @_ssdm_op_SpecInterface, i64 %len_c, void @ap_fifo_str, i32, i32, void @p_str, i32, i32, void @p_str, void @p_str, void @p_str, i32, i32, i32, i32, void @p_str, void @p_str" [/home/centos/workspace/adler32_security_benchmark/src/kernel/adler32_kernel.cpp:63]   --->   Operation 88 'specinterface' 'specinterface_ln63' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 89 [1/1] (0.00ns)   --->   "%empty_67 = specchannel i32 @_ssdm_op_SpecChannel, void @adler_c_str, i32, void @p_str, void @p_str, i32, i32, i64 %adler_c, i64 %adler_c" [/home/centos/workspace/adler32_security_benchmark/src/kernel/adler32_kernel.cpp:63]   --->   Operation 89 'specchannel' 'empty_67' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 90 [1/1] (0.00ns)   --->   "%specinterface_ln63 = specinterface void @_ssdm_op_SpecInterface, i64 %adler_c, void @ap_fifo_str, i32, i32, void @p_str, i32, i32, void @p_str, void @p_str, void @p_str, i32, i32, i32, i32, void @p_str, void @p_str" [/home/centos/workspace/adler32_security_benchmark/src/kernel/adler32_kernel.cpp:63]   --->   Operation 90 'specinterface' 'specinterface_ln63' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 91 [1/1] (0.00ns)   --->   "%empty_68 = specchannel i32 @_ssdm_op_SpecChannel, void @inData_c_str, i32, void @p_str, void @p_str, i32, i32, i64 %inData_c, i64 %inData_c" [/home/centos/workspace/adler32_security_benchmark/src/kernel/adler32_kernel.cpp:63]   --->   Operation 91 'specchannel' 'empty_68' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 92 [1/1] (0.00ns)   --->   "%specinterface_ln63 = specinterface void @_ssdm_op_SpecInterface, i64 %inData_c, void @ap_fifo_str, i32, i32, void @p_str, i32, i32, void @p_str, void @p_str, void @p_str, i32, i32, i32, i32, void @p_str, void @p_str" [/home/centos/workspace/adler32_security_benchmark/src/kernel/adler32_kernel.cpp:63]   --->   Operation 92 'specinterface' 'specinterface_ln63' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 93 [1/1] (0.00ns)   --->   "%empty_69 = specchannel i32 @_ssdm_op_SpecChannel, void @adler32Result_c_str, i32, void @p_str, void @p_str, i32, i32, i64 %adler32Result_c, i64 %adler32Result_c" [/home/centos/workspace/adler32_security_benchmark/src/kernel/adler32_kernel.cpp:63]   --->   Operation 93 'specchannel' 'empty_69' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 94 [1/1] (0.00ns)   --->   "%specinterface_ln63 = specinterface void @_ssdm_op_SpecInterface, i64 %adler32Result_c, void @ap_fifo_str, i32, i32, void @p_str, i32, i32, void @p_str, void @p_str, void @p_str, i32, i32, i32, i32, void @p_str, void @p_str" [/home/centos/workspace/adler32_security_benchmark/src/kernel/adler32_kernel.cpp:63]   --->   Operation 94 'specinterface' 'specinterface_ln63' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 95 [1/1] (0.00ns)   --->   "%empty_70 = specchannel i32 @_ssdm_op_SpecChannel, void @size_c14_str, i32, void @p_str, void @p_str, i32, i32, i32 %size_c14, i32 %size_c14" [/home/centos/workspace/adler32_security_benchmark/src/kernel/adler32_kernel.cpp:63]   --->   Operation 95 'specchannel' 'empty_70' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 96 [1/1] (0.00ns)   --->   "%specinterface_ln63 = specinterface void @_ssdm_op_SpecInterface, i32 %size_c14, void @ap_fifo_str, i32, i32, void @p_str, i32, i32, void @p_str, void @p_str, void @p_str, i32, i32, i32, i32, void @p_str, void @p_str" [/home/centos/workspace/adler32_security_benchmark/src/kernel/adler32_kernel.cpp:63]   --->   Operation 96 'specinterface' 'specinterface_ln63' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 97 [1/2] (0.00ns)   --->   "%call_ln100 = call void @writeS2M, i32 %adler32Strm, i1 %adler32EndStrm, i32 %gmem3, i32 %num_c13, i64 %adler32Result_c, void %call_ln99, void %call_ln99" [/home/centos/workspace/adler32_security_benchmark/src/kernel/adler32_kernel.cpp:100]   --->   Operation 97 'call' 'call_ln100' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_9 : Operation 98 [1/1] (0.00ns)   --->   "%ret_ln101 = ret" [/home/centos/workspace/adler32_security_benchmark/src/kernel/adler32_kernel.cpp:101]   --->   Operation 98 'ret' 'ret_ln101' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 4ns, clock uncertainty: 1.08ns.
+
+ <State 1>: 2.46ns
+The critical path consists of the following:
+	s_axi read on port 'adler32Result' (/home/centos/workspace/adler32_security_benchmark/src/kernel/adler32_kernel.cpp:63) [11]  (1 ns)
+	'call' operation ('call_ln63', /home/centos/workspace/adler32_security_benchmark/src/kernel/adler32_kernel.cpp:63) to 'Adler32Kernel.entry3' [86]  (1.46 ns)
+
+ <State 2>: 0ns
+The critical path consists of the following:
+
+ <State 3>: 0ns
+The critical path consists of the following:
+
+ <State 4>: 0ns
+The critical path consists of the following:
+
+ <State 5>: 0ns
+The critical path consists of the following:
+
+ <State 6>: 0ns
+The critical path consists of the following:
+
+ <State 7>: 0ns
+The critical path consists of the following:
+
+ <State 8>: 0ns
+The critical path consists of the following:
+
+ <State 9>: 0ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

@@ -1,0 +1,174 @@
+
+
+================================================================
+== Vitis HLS Report for 'Adler32Kernel_entry3'
+================================================================
+* Date:           Thu Jan 14 21:55:39 2021
+
+* Version:        2020.1 (Build 2902540 on Wed May 27 20:16:15 MDT 2020)
+* Project:        Adler32Kernel
+* Solution:       solution (Vitis Kernel Flow Target)
+* Product family: virtexuplus
+* Target device:  xcvu9p-flgb2104-2-i
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  | 4.00 ns | 1.460 ns |   1.08 ns  |
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        0|        0|   0 ns   |   0 ns   |    0|    0|   none  |
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++---------------------+---------+------+---------+---------+-----+
+|         Name        | BRAM_18K|  DSP |    FF   |   LUT   | URAM|
++---------------------+---------+------+---------+---------+-----+
+|DSP                  |        -|     -|        -|        -|    -|
+|Expression           |        -|     -|        0|       10|    -|
+|FIFO                 |        -|     -|        -|        -|    -|
+|Instance             |        -|     -|        -|        -|    -|
+|Memory               |        -|     -|        -|        -|    -|
+|Multiplexer          |        -|     -|        -|       81|    -|
+|Register             |        -|     -|        3|        -|    -|
++---------------------+---------+------+---------+---------+-----+
+|Total                |        0|     0|        3|       91|    0|
++---------------------+---------+------+---------+---------+-----+
+|Available SLR        |     1440|  2280|   788160|   394080|  320|
++---------------------+---------+------+---------+---------+-----+
+|Utilization SLR (%)  |        0|     0|    ~0   |    ~0   |    0|
++---------------------+---------+------+---------+---------+-----+
+|Available            |     4320|  6840|  2364480|  1182240|  960|
++---------------------+---------+------+---------+---------+-----+
+|Utilization (%)      |        0|     0|    ~0   |    ~0   |    0|
++---------------------+---------+------+---------+---------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +-----------------------+----------+----+---+----+------------+------------+
+    |     Variable Name     | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +-----------------------+----------+----+---+----+------------+------------+
+    |ap_ext_blocking_n      |    and   |   0|  0|   2|           2|           2|
+    |ap_int_blocking_cur_n  |    and   |   0|  0|   2|           1|           1|
+    |ap_int_blocking_n      |    and   |   0|  0|   2|           1|           2|
+    |ap_str_blocking_n      |    and   |   0|  0|   2|           2|           2|
+    |ap_block_state1        |    or    |   0|  0|   2|           1|           1|
+    +-----------------------+----------+----+---+----+------------+------------+
+    |Total                  |          |   0|  0|  10|           7|           8|
+    +-----------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-------------------------+----+-----------+-----+-----------+
+    |           Name          | LUT| Input Size| Bits| Total Bits|
+    +-------------------------+----+-----------+-----+-----------+
+    |adler32Result_out_blk_n  |   9|          2|    1|          2|
+    |adler_out_blk_n          |   9|          2|    1|          2|
+    |ap_done                  |   9|          2|    1|          2|
+    |inData_out_blk_n         |   9|          2|    1|          2|
+    |len_out_blk_n            |   9|          2|    1|          2|
+    |num_out1_blk_n           |   9|          2|    1|          2|
+    |num_out_blk_n            |   9|          2|    1|          2|
+    |real_start               |   9|          2|    1|          2|
+    |size_out_blk_n           |   9|          2|    1|          2|
+    +-------------------------+----+-----------+-----+-----------+
+    |Total                    |  81|         18|    9|         18|
+    +-------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +----------------+---+----+-----+-----------+
+    |      Name      | FF| LUT| Bits| Const Bits|
+    +----------------+---+----+-----+-----------+
+    |ap_CS_fsm       |  1|   0|    1|          0|
+    |ap_done_reg     |  1|   0|    1|          0|
+    |start_once_reg  |  1|   0|    1|          0|
+    +----------------+---+----+-----+-----------+
+    |Total           |  3|   0|    3|          0|
+    +----------------+---+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++--------------------------+-----+-----+------------+----------------------+--------------+
+|         RTL Ports        | Dir | Bits|  Protocol  |     Source Object    |    C Type    |
++--------------------------+-----+-----+------------+----------------------+--------------+
+|ap_clk                    |  in |    1| ap_ctrl_hs | Adler32Kernel.entry3 | return value |
+|ap_rst                    |  in |    1| ap_ctrl_hs | Adler32Kernel.entry3 | return value |
+|ap_start                  |  in |    1| ap_ctrl_hs | Adler32Kernel.entry3 | return value |
+|start_full_n              |  in |    1| ap_ctrl_hs | Adler32Kernel.entry3 | return value |
+|ap_done                   | out |    1| ap_ctrl_hs | Adler32Kernel.entry3 | return value |
+|ap_continue               |  in |    1| ap_ctrl_hs | Adler32Kernel.entry3 | return value |
+|ap_idle                   | out |    1| ap_ctrl_hs | Adler32Kernel.entry3 | return value |
+|ap_ready                  | out |    1| ap_ctrl_hs | Adler32Kernel.entry3 | return value |
+|start_out                 | out |    1| ap_ctrl_hs | Adler32Kernel.entry3 | return value |
+|start_write               | out |    1| ap_ctrl_hs | Adler32Kernel.entry3 | return value |
+|ap_ext_blocking_n         | out |    1| ap_ctrl_hs | Adler32Kernel.entry3 | return value |
+|ap_str_blocking_n         | out |    1| ap_ctrl_hs | Adler32Kernel.entry3 | return value |
+|ap_int_blocking_n         | out |    1| ap_ctrl_hs | Adler32Kernel.entry3 | return value |
+|num                       |  in |   32|   ap_none  |          num         |    scalar    |
+|size                      |  in |   32|   ap_none  |         size         |    scalar    |
+|len                       |  in |   64|   ap_none  |          len         |    scalar    |
+|adler                     |  in |   64|   ap_none  |         adler        |    scalar    |
+|inData                    |  in |   64|   ap_none  |        inData        |    scalar    |
+|adler32Result             |  in |   64|   ap_none  |     adler32Result    |    scalar    |
+|num_out_din               | out |   32|   ap_fifo  |        num_out       |    pointer   |
+|num_out_full_n            |  in |    1|   ap_fifo  |        num_out       |    pointer   |
+|num_out_write             | out |    1|   ap_fifo  |        num_out       |    pointer   |
+|num_out1_din              | out |   32|   ap_fifo  |       num_out1       |    pointer   |
+|num_out1_full_n           |  in |    1|   ap_fifo  |       num_out1       |    pointer   |
+|num_out1_write            | out |    1|   ap_fifo  |       num_out1       |    pointer   |
+|size_out_din              | out |   32|   ap_fifo  |       size_out       |    pointer   |
+|size_out_full_n           |  in |    1|   ap_fifo  |       size_out       |    pointer   |
+|size_out_write            | out |    1|   ap_fifo  |       size_out       |    pointer   |
+|len_out_din               | out |   64|   ap_fifo  |        len_out       |    pointer   |
+|len_out_full_n            |  in |    1|   ap_fifo  |        len_out       |    pointer   |
+|len_out_write             | out |    1|   ap_fifo  |        len_out       |    pointer   |
+|adler_out_din             | out |   64|   ap_fifo  |       adler_out      |    pointer   |
+|adler_out_full_n          |  in |    1|   ap_fifo  |       adler_out      |    pointer   |
+|adler_out_write           | out |    1|   ap_fifo  |       adler_out      |    pointer   |
+|inData_out_din            | out |   64|   ap_fifo  |      inData_out      |    pointer   |
+|inData_out_full_n         |  in |    1|   ap_fifo  |      inData_out      |    pointer   |
+|inData_out_write          | out |    1|   ap_fifo  |      inData_out      |    pointer   |
+|adler32Result_out_din     | out |   64|   ap_fifo  |   adler32Result_out  |    pointer   |
+|adler32Result_out_full_n  |  in |    1|   ap_fifo  |   adler32Result_out  |    pointer   |
+|adler32Result_out_write   | out |    1|   ap_fifo  |   adler32Result_out  |    pointer   |
++--------------------------+-----+-----+------------+----------------------+--------------+
+

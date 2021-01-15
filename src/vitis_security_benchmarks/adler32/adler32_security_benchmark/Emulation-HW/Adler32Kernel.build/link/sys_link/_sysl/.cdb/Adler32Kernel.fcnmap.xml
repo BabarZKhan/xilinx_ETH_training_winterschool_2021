@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xd:repository xmlns:xd="http://www.xilinx.com/xd">
+    <xd:fcnMap xd:fcnName="Adler32Kernel" xd:type="hls_opencl" xd:clockId="0" xd:flow="explicit" xd:componentRef="Adler32Kernel">
+        <xd:interrupt xd:busInterfaceRef="interrupt"/>
+        <xd:ctrlReg xd:busInterface="s_axi_control" xd:portInterfaceType="axilite" xd:name="control" xd:type="ap_ctrl_chain" xd:offset="0x0"/>
+        <xd:arg xd:name="num" xd:swRootName="num" xd:dataWidth="32" xd:offset="0x10" xd:portInterfaceType="axilite" xd:direction="in" xd:id="0" xd:busInterfaceRef="s_axi_control"/>
+        <xd:arg xd:name="size" xd:swRootName="size" xd:dataWidth="32" xd:offset="0x18" xd:portInterfaceType="axilite" xd:direction="in" xd:id="1" xd:busInterfaceRef="s_axi_control"/>
+        <xd:arg xd:name="len" xd:swRootName="len" xd:dataWidth="64" xd:offset="0x20" xd:portInterfaceType="axilite" xd:direction="in" xd:id="2" xd:busInterfaceRef="s_axi_control" xd:aximmMasterRef="m_axi_gmem0" xd:aximmMasterDirection="inout" xd:aximmMasterDataWidth="64"/>
+        <xd:arg xd:name="adler" xd:swRootName="adler" xd:dataWidth="64" xd:offset="0x2C" xd:portInterfaceType="axilite" xd:direction="in" xd:id="3" xd:busInterfaceRef="s_axi_control" xd:aximmMasterRef="m_axi_gmem1" xd:aximmMasterDirection="inout" xd:aximmMasterDataWidth="64"/>
+        <xd:arg xd:name="inData" xd:swRootName="inData" xd:dataWidth="64" xd:offset="0x38" xd:portInterfaceType="axilite" xd:direction="in" xd:id="4" xd:busInterfaceRef="s_axi_control" xd:aximmMasterRef="m_axi_gmem2" xd:aximmMasterDirection="inout" xd:aximmMasterDataWidth="64"/>
+        <xd:arg xd:name="adler32Result" xd:swRootName="adler32Result" xd:dataWidth="64" xd:offset="0x44" xd:portInterfaceType="axilite" xd:direction="in" xd:id="5" xd:busInterfaceRef="s_axi_control" xd:aximmMasterRef="m_axi_gmem3" xd:aximmMasterDirection="inout" xd:aximmMasterDataWidth="64"/>
+    </xd:fcnMap>
+</xd:repository>

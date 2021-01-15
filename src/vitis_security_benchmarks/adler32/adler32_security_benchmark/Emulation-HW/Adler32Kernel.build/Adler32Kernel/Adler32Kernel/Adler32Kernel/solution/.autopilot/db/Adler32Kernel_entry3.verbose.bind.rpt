@@ -1,0 +1,681 @@
+
+
+================================================================
+== Vitis HLS Report for 'Adler32Kernel_entry3'
+================================================================
+* Date:           Thu Jan 14 21:55:37 2021
+
+* Version:        2020.1 (Build 2902540 on Wed May 27 20:16:15 MDT 2020)
+* Project:        Adler32Kernel
+* Solution:       solution (Vitis Kernel Flow Target)
+* Product family: virtexuplus
+* Target device:  xcvu9p-flgb2104-2-i
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  | 4.00 ns | 1.460 ns |   1.08 ns  |
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        0|        0|   0 ns   |   0 ns   |    0|    0|   none  |
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 0
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 1
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.46>
+ST_1 : Operation 2 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %num_out, void @ap_fifo_str, i32, i32, void @p_str, i32, i32, void @p_str, void @p_str, void @p_str, i32, i32, i32, i32, void @p_str, void @ScalarProp_str"   --->   Operation 2 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 3 [1/1] (0.00ns)   --->   "%adler32Result_read = read i64 @_ssdm_op_Read.ap_auto.i64, i64 %adler32Result"   --->   Operation 3 'read' 'adler32Result_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 4 [1/1] (0.00ns)   --->   "%inData_read = read i64 @_ssdm_op_Read.ap_auto.i64, i64 %inData"   --->   Operation 4 'read' 'inData_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%adler_read = read i64 @_ssdm_op_Read.ap_auto.i64, i64 %adler"   --->   Operation 5 'read' 'adler_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%len_read = read i64 @_ssdm_op_Read.ap_auto.i64, i64 %len"   --->   Operation 6 'read' 'len_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%size_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %size"   --->   Operation 7 'read' 'size_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%num_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %num"   --->   Operation 8 'read' 'num_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (1.45ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_fifo.i32P, i32 %num_out, i32 %num_read"   --->   Operation 9 'write' 'write_ln0' <Predicate = true> <Delay = 1.45> <CoreInst = "FIFO_SRL">   --->   Core 21 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.45> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 2> <FIFO>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %num_out1, void @ap_fifo_str, i32, i32, void @p_str, i32, i32, void @p_str, void @p_str, void @p_str, i32, i32, i32, i32, void @p_str, void @ScalarProp_str"   --->   Operation 10 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (1.46ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_fifo.i32P, i32 %num_out1, i32 %num_read"   --->   Operation 11 'write' 'write_ln0' <Predicate = true> <Delay = 1.46> <CoreInst = "FIFO_SRL">   --->   Core 21 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.47> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 5> <FIFO>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %size_out, void @ap_fifo_str, i32, i32, void @p_str, i32, i32, void @p_str, void @p_str, void @p_str, i32, i32, i32, i32, void @p_str, void @ScalarProp_str"   --->   Operation 12 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (1.45ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_fifo.i32P, i32 %size_out, i32 %size_read"   --->   Operation 13 'write' 'write_ln0' <Predicate = true> <Delay = 1.45> <CoreInst = "FIFO_SRL">   --->   Core 21 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.45> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 2> <FIFO>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %len_out, void @ap_fifo_str, i32, i32, void @p_str, i32, i32, void @p_str, void @p_str, void @p_str, i32, i32, i32, i32, void @p_str, void @ScalarProp_str"   --->   Operation 14 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (1.45ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_fifo.i64P, i64 %len_out, i64 %len_read"   --->   Operation 15 'write' 'write_ln0' <Predicate = true> <Delay = 1.45> <CoreInst = "FIFO_SRL">   --->   Core 21 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.45> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 64> <Depth = 2> <FIFO>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %adler_out, void @ap_fifo_str, i32, i32, void @p_str, i32, i32, void @p_str, void @p_str, void @p_str, i32, i32, i32, i32, void @p_str, void @ScalarProp_str"   --->   Operation 16 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (1.45ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_fifo.i64P, i64 %adler_out, i64 %adler_read"   --->   Operation 17 'write' 'write_ln0' <Predicate = true> <Delay = 1.45> <CoreInst = "FIFO_SRL">   --->   Core 21 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.45> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 64> <Depth = 2> <FIFO>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %inData_out, void @ap_fifo_str, i32, i32, void @p_str, i32, i32, void @p_str, void @p_str, void @p_str, i32, i32, i32, i32, void @p_str, void @ScalarProp_str"   --->   Operation 18 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 19 [1/1] (1.45ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_fifo.i64P, i64 %inData_out, i64 %inData_read"   --->   Operation 19 'write' 'write_ln0' <Predicate = true> <Delay = 1.45> <CoreInst = "FIFO_SRL">   --->   Core 21 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.45> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 64> <Depth = 2> <FIFO>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %adler32Result_out, void @ap_fifo_str, i32, i32, void @p_str, i32, i32, void @p_str, void @p_str, void @p_str, i32, i32, i32, i32, void @p_str, void @ScalarProp_str"   --->   Operation 20 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 21 [1/1] (1.46ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_fifo.i64P, i64 %adler32Result_out, i64 %adler32Result_read"   --->   Operation 21 'write' 'write_ln0' <Predicate = true> <Delay = 1.46> <CoreInst = "FIFO_SRL">   --->   Core 21 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.47> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 64> <Depth = 5> <FIFO>
+ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%ret_ln0 = ret"   --->   Operation 22 'ret' 'ret_ln0' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+STG Binding: 
+---------------- STG Properties BEGIN ----------------
+- Is combinational: 0
+- Is one-state seq: 1
+- Is datapath-only: 0
+- Is pipelined: 0
+- Is top level: 0
+Port [ Return ] is wired: 1; IO mode=ap_ctrl_hs:ce=0
+Port [ num]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ size]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ len]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ adler]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ inData]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ adler32Result]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ num_out]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=3; pingpong=0; private_global=0; IO mode=ap_fifo:ce=0
+Port [ num_out1]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=3; pingpong=0; private_global=0; IO mode=ap_fifo:ce=0
+Port [ size_out]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=3; pingpong=0; private_global=0; IO mode=ap_fifo:ce=0
+Port [ len_out]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=3; pingpong=0; private_global=0; IO mode=ap_fifo:ce=0
+Port [ adler_out]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=3; pingpong=0; private_global=0; IO mode=ap_fifo:ce=0
+Port [ inData_out]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=3; pingpong=0; private_global=0; IO mode=ap_fifo:ce=0
+Port [ adler32Result_out]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=3; pingpong=0; private_global=0; IO mode=ap_fifo:ce=0
+---------------- STG Properties END ------------------
+
+---------------- Datapath Model BEGIN ----------------
+
+<LifeTime>
+<method=bitvector/>
+specinterface_ln0  (specinterface) [ 00]
+adler32Result_read (read         ) [ 00]
+inData_read        (read         ) [ 00]
+adler_read         (read         ) [ 00]
+len_read           (read         ) [ 00]
+size_read          (read         ) [ 00]
+num_read           (read         ) [ 00]
+write_ln0          (write        ) [ 00]
+specinterface_ln0  (specinterface) [ 00]
+write_ln0          (write        ) [ 00]
+specinterface_ln0  (specinterface) [ 00]
+write_ln0          (write        ) [ 00]
+specinterface_ln0  (specinterface) [ 00]
+write_ln0          (write        ) [ 00]
+specinterface_ln0  (specinterface) [ 00]
+write_ln0          (write        ) [ 00]
+specinterface_ln0  (specinterface) [ 00]
+write_ln0          (write        ) [ 00]
+specinterface_ln0  (specinterface) [ 00]
+write_ln0          (write        ) [ 00]
+ret_ln0            (ret          ) [ 00]
+</LifeTime>
+
+<model>
+
+<comp_list>
+<comp id="0" class="1000" name="num">
+<pin_list>
+<pin id="1" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="num"/></StgValue>
+</bind>
+</comp>
+
+<comp id="2" class="1000" name="size">
+<pin_list>
+<pin id="3" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="size"/></StgValue>
+</bind>
+</comp>
+
+<comp id="4" class="1000" name="len">
+<pin_list>
+<pin id="5" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="len"/></StgValue>
+</bind>
+</comp>
+
+<comp id="6" class="1000" name="adler">
+<pin_list>
+<pin id="7" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="adler"/></StgValue>
+</bind>
+</comp>
+
+<comp id="8" class="1000" name="inData">
+<pin_list>
+<pin id="9" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="inData"/></StgValue>
+</bind>
+</comp>
+
+<comp id="10" class="1000" name="adler32Result">
+<pin_list>
+<pin id="11" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="adler32Result"/></StgValue>
+</bind>
+</comp>
+
+<comp id="12" class="1000" name="num_out">
+<pin_list>
+<pin id="13" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="num_out"/></StgValue>
+</bind>
+</comp>
+
+<comp id="14" class="1000" name="num_out1">
+<pin_list>
+<pin id="15" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="num_out1"/></StgValue>
+</bind>
+</comp>
+
+<comp id="16" class="1000" name="size_out">
+<pin_list>
+<pin id="17" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="size_out"/></StgValue>
+</bind>
+</comp>
+
+<comp id="18" class="1000" name="len_out">
+<pin_list>
+<pin id="19" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="len_out"/></StgValue>
+</bind>
+</comp>
+
+<comp id="20" class="1000" name="adler_out">
+<pin_list>
+<pin id="21" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="adler_out"/></StgValue>
+</bind>
+</comp>
+
+<comp id="22" class="1000" name="inData_out">
+<pin_list>
+<pin id="23" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="inData_out"/></StgValue>
+</bind>
+</comp>
+
+<comp id="24" class="1000" name="adler32Result_out">
+<pin_list>
+<pin id="25" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="adler32Result_out"/></StgValue>
+</bind>
+</comp>
+
+<comp id="26" class="1001" name="const_26">
+<pin_list>
+<pin id="27" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_SpecInterface"/></StgValue>
+</bind>
+</comp>
+
+<comp id="28" class="1001" name="const_28">
+<pin_list>
+<pin id="29" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="ap_fifo_str"/></StgValue>
+</bind>
+</comp>
+
+<comp id="30" class="1001" name="const_30">
+<pin_list>
+<pin id="31" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="32" class="1001" name="const_32">
+<pin_list>
+<pin id="33" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="p_str"/></StgValue>
+</bind>
+</comp>
+
+<comp id="34" class="1001" name="const_34">
+<pin_list>
+<pin id="35" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="36" class="1001" name="const_36">
+<pin_list>
+<pin id="37" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="38" class="1001" name="const_38">
+<pin_list>
+<pin id="39" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="ScalarProp_str"/></StgValue>
+</bind>
+</comp>
+
+<comp id="40" class="1001" name="const_40">
+<pin_list>
+<pin id="41" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_Read.ap_auto.i64"/></StgValue>
+</bind>
+</comp>
+
+<comp id="42" class="1001" name="const_42">
+<pin_list>
+<pin id="43" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_Read.ap_auto.i32"/></StgValue>
+</bind>
+</comp>
+
+<comp id="44" class="1001" name="const_44">
+<pin_list>
+<pin id="45" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_Write.ap_fifo.i32P"/></StgValue>
+</bind>
+</comp>
+
+<comp id="46" class="1001" name="const_46">
+<pin_list>
+<pin id="47" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_Write.ap_fifo.i64P"/></StgValue>
+</bind>
+</comp>
+
+<comp id="48" class="1004" name="adler32Result_read_read_fu_48">
+<pin_list>
+<pin id="49" dir="0" index="0" bw="64" slack="0"/>
+<pin id="50" dir="0" index="1" bw="64" slack="0"/>
+<pin id="51" dir="1" index="2" bw="64" slack="0"/>
+</pin_list>
+<bind>
+<opcode="read(1150) " fcode="read"/>
+<opset="adler32Result_read/1 "/>
+</bind>
+</comp>
+
+<comp id="54" class="1004" name="inData_read_read_fu_54">
+<pin_list>
+<pin id="55" dir="0" index="0" bw="64" slack="0"/>
+<pin id="56" dir="0" index="1" bw="64" slack="0"/>
+<pin id="57" dir="1" index="2" bw="64" slack="0"/>
+</pin_list>
+<bind>
+<opcode="read(1150) " fcode="read"/>
+<opset="inData_read/1 "/>
+</bind>
+</comp>
+
+<comp id="60" class="1004" name="adler_read_read_fu_60">
+<pin_list>
+<pin id="61" dir="0" index="0" bw="64" slack="0"/>
+<pin id="62" dir="0" index="1" bw="64" slack="0"/>
+<pin id="63" dir="1" index="2" bw="64" slack="0"/>
+</pin_list>
+<bind>
+<opcode="read(1150) " fcode="read"/>
+<opset="adler_read/1 "/>
+</bind>
+</comp>
+
+<comp id="66" class="1004" name="len_read_read_fu_66">
+<pin_list>
+<pin id="67" dir="0" index="0" bw="64" slack="0"/>
+<pin id="68" dir="0" index="1" bw="64" slack="0"/>
+<pin id="69" dir="1" index="2" bw="64" slack="0"/>
+</pin_list>
+<bind>
+<opcode="read(1150) " fcode="read"/>
+<opset="len_read/1 "/>
+</bind>
+</comp>
+
+<comp id="72" class="1004" name="size_read_read_fu_72">
+<pin_list>
+<pin id="73" dir="0" index="0" bw="32" slack="0"/>
+<pin id="74" dir="0" index="1" bw="32" slack="0"/>
+<pin id="75" dir="1" index="2" bw="32" slack="0"/>
+</pin_list>
+<bind>
+<opcode="read(1150) " fcode="read"/>
+<opset="size_read/1 "/>
+</bind>
+</comp>
+
+<comp id="78" class="1004" name="num_read_read_fu_78">
+<pin_list>
+<pin id="79" dir="0" index="0" bw="32" slack="0"/>
+<pin id="80" dir="0" index="1" bw="32" slack="0"/>
+<pin id="81" dir="1" index="2" bw="32" slack="0"/>
+</pin_list>
+<bind>
+<opcode="read(1150) " fcode="read"/>
+<opset="num_read/1 "/>
+</bind>
+</comp>
+
+<comp id="84" class="1004" name="write_ln0_write_fu_84">
+<pin_list>
+<pin id="85" dir="0" index="0" bw="0" slack="0"/>
+<pin id="86" dir="0" index="1" bw="32" slack="0"/>
+<pin id="87" dir="0" index="2" bw="32" slack="0"/>
+<pin id="88" dir="1" index="3" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="write(1151) " fcode="write"/>
+<opset="write_ln0/1 "/>
+</bind>
+</comp>
+
+<comp id="92" class="1004" name="write_ln0_write_fu_92">
+<pin_list>
+<pin id="93" dir="0" index="0" bw="0" slack="0"/>
+<pin id="94" dir="0" index="1" bw="32" slack="0"/>
+<pin id="95" dir="0" index="2" bw="32" slack="0"/>
+<pin id="96" dir="1" index="3" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="write(1151) " fcode="write"/>
+<opset="write_ln0/1 "/>
+</bind>
+</comp>
+
+<comp id="100" class="1004" name="write_ln0_write_fu_100">
+<pin_list>
+<pin id="101" dir="0" index="0" bw="0" slack="0"/>
+<pin id="102" dir="0" index="1" bw="32" slack="0"/>
+<pin id="103" dir="0" index="2" bw="32" slack="0"/>
+<pin id="104" dir="1" index="3" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="write(1151) " fcode="write"/>
+<opset="write_ln0/1 "/>
+</bind>
+</comp>
+
+<comp id="108" class="1004" name="write_ln0_write_fu_108">
+<pin_list>
+<pin id="109" dir="0" index="0" bw="0" slack="0"/>
+<pin id="110" dir="0" index="1" bw="64" slack="0"/>
+<pin id="111" dir="0" index="2" bw="64" slack="0"/>
+<pin id="112" dir="1" index="3" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="write(1151) " fcode="write"/>
+<opset="write_ln0/1 "/>
+</bind>
+</comp>
+
+<comp id="116" class="1004" name="write_ln0_write_fu_116">
+<pin_list>
+<pin id="117" dir="0" index="0" bw="0" slack="0"/>
+<pin id="118" dir="0" index="1" bw="64" slack="0"/>
+<pin id="119" dir="0" index="2" bw="64" slack="0"/>
+<pin id="120" dir="1" index="3" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="write(1151) " fcode="write"/>
+<opset="write_ln0/1 "/>
+</bind>
+</comp>
+
+<comp id="124" class="1004" name="write_ln0_write_fu_124">
+<pin_list>
+<pin id="125" dir="0" index="0" bw="0" slack="0"/>
+<pin id="126" dir="0" index="1" bw="64" slack="0"/>
+<pin id="127" dir="0" index="2" bw="64" slack="0"/>
+<pin id="128" dir="1" index="3" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="write(1151) " fcode="write"/>
+<opset="write_ln0/1 "/>
+</bind>
+</comp>
+
+<comp id="132" class="1004" name="write_ln0_write_fu_132">
+<pin_list>
+<pin id="133" dir="0" index="0" bw="0" slack="0"/>
+<pin id="134" dir="0" index="1" bw="64" slack="0"/>
+<pin id="135" dir="0" index="2" bw="64" slack="0"/>
+<pin id="136" dir="1" index="3" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="write(1151) " fcode="write"/>
+<opset="write_ln0/1 "/>
+</bind>
+</comp>
+
+</comp_list>
+
+<net_list>
+<net id="52"><net_src comp="40" pin="0"/><net_sink comp="48" pin=0"/></net>
+
+<net id="53"><net_src comp="10" pin="0"/><net_sink comp="48" pin=1"/></net>
+
+<net id="58"><net_src comp="40" pin="0"/><net_sink comp="54" pin=0"/></net>
+
+<net id="59"><net_src comp="8" pin="0"/><net_sink comp="54" pin=1"/></net>
+
+<net id="64"><net_src comp="40" pin="0"/><net_sink comp="60" pin=0"/></net>
+
+<net id="65"><net_src comp="6" pin="0"/><net_sink comp="60" pin=1"/></net>
+
+<net id="70"><net_src comp="40" pin="0"/><net_sink comp="66" pin=0"/></net>
+
+<net id="71"><net_src comp="4" pin="0"/><net_sink comp="66" pin=1"/></net>
+
+<net id="76"><net_src comp="42" pin="0"/><net_sink comp="72" pin=0"/></net>
+
+<net id="77"><net_src comp="2" pin="0"/><net_sink comp="72" pin=1"/></net>
+
+<net id="82"><net_src comp="42" pin="0"/><net_sink comp="78" pin=0"/></net>
+
+<net id="83"><net_src comp="0" pin="0"/><net_sink comp="78" pin=1"/></net>
+
+<net id="89"><net_src comp="44" pin="0"/><net_sink comp="84" pin=0"/></net>
+
+<net id="90"><net_src comp="12" pin="0"/><net_sink comp="84" pin=1"/></net>
+
+<net id="91"><net_src comp="78" pin="2"/><net_sink comp="84" pin=2"/></net>
+
+<net id="97"><net_src comp="44" pin="0"/><net_sink comp="92" pin=0"/></net>
+
+<net id="98"><net_src comp="14" pin="0"/><net_sink comp="92" pin=1"/></net>
+
+<net id="99"><net_src comp="78" pin="2"/><net_sink comp="92" pin=2"/></net>
+
+<net id="105"><net_src comp="44" pin="0"/><net_sink comp="100" pin=0"/></net>
+
+<net id="106"><net_src comp="16" pin="0"/><net_sink comp="100" pin=1"/></net>
+
+<net id="107"><net_src comp="72" pin="2"/><net_sink comp="100" pin=2"/></net>
+
+<net id="113"><net_src comp="46" pin="0"/><net_sink comp="108" pin=0"/></net>
+
+<net id="114"><net_src comp="18" pin="0"/><net_sink comp="108" pin=1"/></net>
+
+<net id="115"><net_src comp="66" pin="2"/><net_sink comp="108" pin=2"/></net>
+
+<net id="121"><net_src comp="46" pin="0"/><net_sink comp="116" pin=0"/></net>
+
+<net id="122"><net_src comp="20" pin="0"/><net_sink comp="116" pin=1"/></net>
+
+<net id="123"><net_src comp="60" pin="2"/><net_sink comp="116" pin=2"/></net>
+
+<net id="129"><net_src comp="46" pin="0"/><net_sink comp="124" pin=0"/></net>
+
+<net id="130"><net_src comp="22" pin="0"/><net_sink comp="124" pin=1"/></net>
+
+<net id="131"><net_src comp="54" pin="2"/><net_sink comp="124" pin=2"/></net>
+
+<net id="137"><net_src comp="46" pin="0"/><net_sink comp="132" pin=0"/></net>
+
+<net id="138"><net_src comp="24" pin="0"/><net_sink comp="132" pin=1"/></net>
+
+<net id="139"><net_src comp="48" pin="2"/><net_sink comp="132" pin=2"/></net>
+
+</net_list>
+
+</model> 
+---------------- Datapath Model END ------------------
+
+* FSMD analyzer results:
+  - Output states:
+	Port: num_out | {1 }
+	Port: num_out1 | {1 }
+	Port: size_out | {1 }
+	Port: len_out | {1 }
+	Port: adler_out | {1 }
+	Port: inData_out | {1 }
+	Port: adler32Result_out | {1 }
+ - Input state : 
+	Port: Adler32Kernel.entry3 : num | {1 }
+	Port: Adler32Kernel.entry3 : size | {1 }
+	Port: Adler32Kernel.entry3 : len | {1 }
+	Port: Adler32Kernel.entry3 : adler | {1 }
+	Port: Adler32Kernel.entry3 : inData | {1 }
+	Port: Adler32Kernel.entry3 : adler32Result | {1 }
+  - Chain level:
+	State 1
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+
+* Functional unit list:
+|----------|-------------------------------|
+| Operation|        Functional Unit        |
+|----------|-------------------------------|
+|          | adler32Result_read_read_fu_48 |
+|          |     inData_read_read_fu_54    |
+|   read   |     adler_read_read_fu_60     |
+|          |      len_read_read_fu_66      |
+|          |      size_read_read_fu_72     |
+|          |      num_read_read_fu_78      |
+|----------|-------------------------------|
+|          |     write_ln0_write_fu_84     |
+|          |     write_ln0_write_fu_92     |
+|          |     write_ln0_write_fu_100    |
+|   write  |     write_ln0_write_fu_108    |
+|          |     write_ln0_write_fu_116    |
+|          |     write_ln0_write_fu_124    |
+|          |     write_ln0_write_fu_132    |
+|----------|-------------------------------|
+|   Total  |                               |
+|----------|-------------------------------|
+
+Memories:
+N/A
+
+* Register list:
+N/A
+
+* Multiplexer (MUX) list: 
+|--------|------|------|------|--------|
+|  Comp  |  Pin | Size |  BW  | S x BW |
+|--------|------|------|------|--------|
+|  Total |      |      |      |    0   |
+|--------|------|------|------|--------|
+
+
+
+* Summary:
++-----------+
+|           |
++-----------+
+|  Function |
+|   Memory  |
+|Multiplexer|
+|  Register |
++-----------+
+|   Total   |
++-----------+

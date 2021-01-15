@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:35 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Thu Jan 14 21:56:52 2021
+# Process ID: 5584
+# Current directory: /home/centos/workspace/adler32_security_benchmark/Emulation-HW/Adler32Kernel.build/link/vivado/vpl
+# Command line: vivado -log vivado.log -applog -messageDb vivado.pb -mode batch -source vpl.tcl -notrace
+# Log file: /home/centos/workspace/adler32_security_benchmark/Emulation-HW/Adler32Kernel.build/link/vivado/vpl/vivado.log
+# Journal file: /home/centos/workspace/adler32_security_benchmark/Emulation-HW/Adler32Kernel.build/link/vivado/vpl/vivado.jou
+#-----------------------------------------------------------
+source vpl.tcl -notrace

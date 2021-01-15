@@ -1,0 +1,1017 @@
+2021-01-14T21:54:14.67433200255-21:54:14 **** Incremental Build of configuration Emulation-HW for project adler32_security_benchmark ****
+000-make -j8 incremental 
+000-/opt/Xilinx/Vitis/2020.1/bin/v++ --target hw_emu --compile -I"../src/kernel" --config common-config.cfg --config Adler32Kernel-Adler32Kernel-compile.cfg -I/home/centos/workspace/adler32_security_benchmark/libs/xf_security/L1/include -I/home/centos/workspace/adler32_security_benchmark/libs/xf_security/L1/include -I/home/centos/workspace/adler32_security_benchmark/src/kernel -o"Adler32Kernel.build/Adler32Kernel.xo" "../src/kernel/adler32_kernel.cpp"
+000-Option Map File Used: '/opt/Xilinx/Vitis/2020.1/data/vitis/vpp/optMap.xml'
+000-
+000-****** v++ v2020.1 (64-bit)
+000-  **** SW Build 2902540 on Wed May 27 19:54:35 MDT 2020
+000-    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+000-
+000-INFO: [v++ 60-1306] Additional information associated with this v++ compile can be found at:
+000-	Reports: /home/centos/workspace/adler32_security_benchmark/Emulation-HW/Adler32Kernel.build/reports/Adler32Kernel
+000-	Log files: /home/centos/workspace/adler32_security_benchmark/Emulation-HW/Adler32Kernel.build/logs/Adler32Kernel
+000-INFO: [v++ 60-1657] Initializing dispatch client.
+000-Running Dispatch Server on port:40725
+000-INFO: [v++ 60-1548] Creating build summary session with primary output /home/centos/workspace/adler32_security_benchmark/Emulation-HW/Adler32Kernel.build/Adler32Kernel.xo.compile_summary, at Thu Jan 14 21:54:27 2021
+000-INFO: [v++ 60-1316] Initiating connection to rulecheck server, at Thu Jan 14 21:54:27 2021
+000-INFO: [v++ 60-895]   Target platform: /home/centos/src/project_data/aws-fpga/Vitis/aws_platform/xilinx_aws-vu9p-f1_shell-v04261818_201920_2/xilinx_aws-vu9p-f1_shell-v04261818_201920_2.xpfm
+000-INFO: [v++ 60-1578]   This platform contains Xilinx Shell Archive '/home/centos/src/project_data/aws-fpga/Vitis/aws_platform/xilinx_aws-vu9p-f1_shell-v04261818_201920_2/hw/xilinx_aws-vu9p-f1_shell-v04261818_201920_2.xsa'
+000-INFO: [v++ 60-585] Compiling for hardware emulation target
+000-INFO: [v++ 60-423]   Target device: xilinx_aws-vu9p-f1_shell-v04261818_201920_2
+000-INFO: [v++ 60-242] Creating kernel: 'Adler32Kernel'
+000-
+000-===>The following messages were generated while  performing high-level synthesis for kernel: Adler32Kernel Log file: /home/centos/workspace/adler32_security_benchmark/Emulation-HW/Adler32Kernel.build/Adler32Kernel/Adler32Kernel/vitis_hls.log :
+000-INFO: [v++ 204-61] Pipelining loop 'VITIS_LOOP_44_1'.
+000-INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+000-INFO: [v++ 204-61] Pipelining loop 'VITIS_LOOP_20_1'.
+000-INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+000-INFO: [v++ 204-61] Pipelining loop 'VITIS_LOOP_28_1'.
+000-INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 4.
+000-INFO: [v++ 204-61] Pipelining loop 'VITIS_LOOP_92_2'.
+000-INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 9.
+000-INFO: [v++ 204-61] Pipelining loop 'VITIS_LOOP_131_6'.
+000-INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 5.
+000-INFO: [v++ 204-61] Pipelining loop 'VITIS_LOOP_54_1'.
+000-INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+000-INFO: [v++ 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
+000-INFO: [v++ 200-789] **** Estimated Fmax: 23.29 MHz
+000-INFO: [v++ 60-594] Finished kernel compilation
+000-INFO: [v++ 60-244] Generating system estimate report...
+000-INFO: [v++ 60-1092] Generated system estimate report: /home/centos/workspace/adler32_security_benchmark/Emulation-HW/Adler32Kernel.build/reports/Adler32Kernel/system_estimate_Adler32Kernel.xtxt
+000-Add Instance adler32_16_s adler32_16_U0 226
+000-Add Instance splitStrm splitStrm_U0 236
+000-Add Instance readDataM2S readDataM2S_U0 243
+000-Add Instance readLenM2S readLenM2S_U0 253
+000-Add Instance writeS2M writeS2M_U0 267
+000-Add Instance Adler32Kernel_entry3 Adler32Kernel_entry3_U0 277
+000-INFO: [v++ 60-586] Created Adler32Kernel.build/Adler32Kernel.xo
+000-INFO: [v++ 60-2343] Use the vitis_analyzer tool to visualize and navigate the relevant reports. Run the following command. 
+000-    vitis_analyzer /home/centos/workspace/adler32_security_benchmark/Emulation-HW/Adler32Kernel.build/Adler32Kernel.xo.compile_summary 
+000-INFO: [v++ 60-791] Total elapsed time: 0h 1m 46s
+000-INFO: [v++ 60-1653] Closing dispatch client.
+000-/opt/Xilinx/Vitis/2020.1/bin/v++ --target hw_emu --link --config common-config.cfg --config Adler32Kernel-link.cfg -o"Adler32Kernel.xclbin" Adler32Kernel.build/Adler32Kernel.xo
+000-Option Map File Used: '/opt/Xilinx/Vitis/2020.1/data/vitis/vpp/optMap.xml'
+000-
+000-****** v++ v2020.1 (64-bit)
+000-  **** SW Build 2902540 on Wed May 27 19:54:35 MDT 2020
+000-    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+000-
+000-INFO: [v++ 60-897] Reading --xp value from platform: param:compiler.lockFlowCritSlackThreshold=0
+000-INFO: [v++ 60-897] Reading --xp value from platform: vivado_param:hd.routingContainmentAreaExpansion=true
+000-INFO: [v++ 60-897] Reading --xp value from platform: vivado_param:hd.supportClockNetCrossDiffReconfigurablePartitions=1
+000-INFO: [v++ 60-897] Reading --xp value from platform: vivado_param:bitstream.enablePR=4123
+000-INFO: [v++ 60-897] Reading --xp value from platform: vivado_param:physynth.ultraRAMOptOutput=false
+000-INFO: [v++ 60-897] Reading --xp value from platform: vivado_prop:run.__KERNEL__.{STEPS.SYNTH_DESIGN.ARGS.MAX_URAM_CASCADE_HEIGHT}={1}
+000-INFO: [v++ 60-897] Reading --xp value from platform: vivado_param:synth.elaboration.rodinMoreOptions={rt::set_parameter disableOregPackingUram true}
+000-WARNING: [v++ 60-642] Invalid or deprecated parameter name: compiler.lockFlowCritSlackThreshold
+000-INFO: [v++ 60-1306] Additional information associated with this v++ link can be found at:
+000-	Reports: /home/centos/workspace/adler32_security_benchmark/Emulation-HW/Adler32Kernel.build/reports/link
+000-	Log files: /home/centos/workspace/adler32_security_benchmark/Emulation-HW/Adler32Kernel.build/logs/link
+000-INFO: [v++ 60-1657] Initializing dispatch client.
+000-Running Dispatch Server on port:35102
+000-INFO: [v++ 60-1548] Creating build summary session with primary output /home/centos/workspace/adler32_security_benchmark/Emulation-HW/Adler32Kernel.xclbin.link_summary, at Thu Jan 14 21:56:17 2021
+000-INFO: [v++ 60-1316] Initiating connection to rulecheck server, at Thu Jan 14 21:56:17 2021
+000-INFO: [v++ 60-895]   Target platform: /home/centos/src/project_data/aws-fpga/Vitis/aws_platform/xilinx_aws-vu9p-f1_shell-v04261818_201920_2/xilinx_aws-vu9p-f1_shell-v04261818_201920_2.xpfm
+000-INFO: [v++ 60-1578]   This platform contains Xilinx Shell Archive '/home/centos/src/project_data/aws-fpga/Vitis/aws_platform/xilinx_aws-vu9p-f1_shell-v04261818_201920_2/hw/xilinx_aws-vu9p-f1_shell-v04261818_201920_2.xsa'
+000-INFO: [v++ 60-629] Linking for hardware emulation target
+000-INFO: [v++ 60-423]   Target device: xilinx_aws-vu9p-f1_shell-v04261818_201920_2
+000-INFO: [v++ 60-1332] Run 'run_link' status: Not started
+000-INFO: [v++ 60-1443] [21:56:22] Run run_link: Step system_link: Started
+000-INFO: [v++ 60-1453] Command Line: system_link --xo /home/centos/workspace/adler32_security_benchmark/Emulation-HW/Adler32Kernel.build/Adler32Kernel.xo -keep --config /home/centos/workspace/adler32_security_benchmark/Emulation-HW/Adler32Kernel.build/link/int/syslinkConfig.ini --xpfm /home/centos/src/project_data/aws-fpga/Vitis/aws_platform/xilinx_aws-vu9p-f1_shell-v04261818_201920_2/xilinx_aws-vu9p-f1_shell-v04261818_201920_2.xpfm --target emu --output_dir /home/centos/workspace/adler32_security_benchmark/Emulation-HW/Adler32Kernel.build/link/int --temp_dir /home/centos/workspace/adler32_security_benchmark/Emulation-HW/Adler32Kernel.build/link/sys_link
+000-INFO: [v++ 60-1454] Run Directory: /home/centos/workspace/adler32_security_benchmark/Emulation-HW/Adler32Kernel.build/link/run_link
+000-INFO: [SYSTEM_LINK 60-1316] Initiating connection to rulecheck server, at Thu Jan 14 21:56:24 2021
+000-INFO: [SYSTEM_LINK 82-70] Extracting xo v3 file /home/centos/workspace/adler32_security_benchmark/Emulation-HW/Adler32Kernel.build/Adler32Kernel.xo
+000-INFO: [SYSTEM_LINK 82-53] Creating IP database /home/centos/workspace/adler32_security_benchmark/Emulation-HW/Adler32Kernel.build/link/sys_link/_sysl/.cdb/xd_ip_db.xml
+000-INFO: [SYSTEM_LINK 82-38] [21:56:24] build_xd_ip_db started: /opt/Xilinx/Vitis/2020.1/bin/build_xd_ip_db -ip_search 0  -sds-pf /home/centos/workspace/adler32_security_benchmark/Emulation-HW/Adler32Kernel.build/link/sys_link/emu/xilinx_aws-vu9p-f1_shell-v04261818_201920_1_emu.hpfm -clkid 0 -ip /home/centos/workspace/adler32_security_benchmark/Emulation-HW/Adler32Kernel.build/link/sys_link/iprepo/xilinx_com_hls_Adler32Kernel_1_0,Adler32Kernel -o /home/centos/workspace/adler32_security_benchmark/Emulation-HW/Adler32Kernel.build/link/sys_link/_sysl/.cdb/xd_ip_db.xml
+000-INFO: [SYSTEM_LINK 82-37] [21:56:28] build_xd_ip_db finished successfully
+000-Time (s): cpu = 00:00:05 ; elapsed = 00:00:04 . Memory (MB): peak = 1303.055 ; gain = 0.000 ; free physical = 93426 ; free virtual = 136174
+000-INFO: [SYSTEM_LINK 82-51] Create system connectivity graph
+000-INFO: [SYSTEM_LINK 82-102] Applying explicit connections to the system connectivity graph: /home/centos/workspace/adler32_security_benchmark/Emulation-HW/Adler32Kernel.build/link/sys_link/cfgraph/cfgen_cfgraph.xml
+000-INFO: [SYSTEM_LINK 82-38] [21:56:28] cfgen started: /opt/Xilinx/Vitis/2020.1/bin/cfgen  -nk Adler32Kernel:1:Adler32Kernel_1 -slr Adler32Kernel_1:SLR0 -sp Adler32Kernel_1.len:DDR[0] -sp Adler32Kernel_1.adler:DDR[0] -sp Adler32Kernel_1.inData:DDR[0] -sp Adler32Kernel_1.adler32Result:DDR[0] -dmclkid 0 -r /home/centos/workspace/adler32_security_benchmark/Emulation-HW/Adler32Kernel.build/link/sys_link/_sysl/.cdb/xd_ip_db.xml -o /home/centos/workspace/adler32_security_benchmark/Emulation-HW/Adler32Kernel.build/link/sys_link/cfgraph/cfgen_cfgraph.xml
+000-INFO: [CFGEN 83-0] Kernel Specs: 
+000-INFO: [CFGEN 83-0]   kernel: Adler32Kernel, num: 1  {Adler32Kernel_1}
+000-INFO: [CFGEN 83-0] Port Specs: 
+000-INFO: [CFGEN 83-0]   kernel: Adler32Kernel_1, k_port: len, sptag: DDR[0]
+000-INFO: [CFGEN 83-0]   kernel: Adler32Kernel_1, k_port: adler, sptag: DDR[0]
+000-INFO: [CFGEN 83-0]   kernel: Adler32Kernel_1, k_port: inData, sptag: DDR[0]
+000-INFO: [CFGEN 83-0]   kernel: Adler32Kernel_1, k_port: adler32Result, sptag: DDR[0]
+000-INFO: [CFGEN 83-0] SLR Specs: 
+000-INFO: [CFGEN 83-0]   instance: Adler32Kernel_1, SLR: SLR0
+000-INFO: [CFGEN 83-2228] Creating mapping for argument Adler32Kernel_1.len to DDR[0] for directive Adler32Kernel_1.len:DDR[0]
+000-INFO: [CFGEN 83-2228] Creating mapping for argument Adler32Kernel_1.adler to DDR[0] for directive Adler32Kernel_1.adler:DDR[0]
+000-INFO: [CFGEN 83-2228] Creating mapping for argument Adler32Kernel_1.inData to DDR[0] for directive Adler32Kernel_1.inData:DDR[0]
+000-INFO: [CFGEN 83-2228] Creating mapping for argument Adler32Kernel_1.adler32Result to DDR[0] for directive Adler32Kernel_1.adler32Result:DDR[0]
+000-INFO: [SYSTEM_LINK 82-37] [21:56:33] cfgen finished successfully
+000-Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1303.055 ; gain = 0.000 ; free physical = 93425 ; free virtual = 136173
+000-INFO: [SYSTEM_LINK 82-52] Create top-level block diagram
+000-INFO: [SYSTEM_LINK 82-38] [21:56:33] cf2bd started: /opt/Xilinx/Vitis/2020.1/bin/cf2bd  --linux --trace_buffer 1024 --input_file /home/centos/workspace/adler32_security_benchmark/Emulation-HW/Adler32Kernel.build/link/sys_link/cfgraph/cfgen_cfgraph.xml --ip_db /home/centos/workspace/adler32_security_benchmark/Emulation-HW/Adler32Kernel.build/link/sys_link/_sysl/.cdb/xd_ip_db.xml --cf_name dr --working_dir /home/centos/workspace/adler32_security_benchmark/Emulation-HW/Adler32Kernel.build/link/sys_link/_sysl/.xsd --temp_dir /home/centos/workspace/adler32_security_benchmark/Emulation-HW/Adler32Kernel.build/link/sys_link --output_dir /home/centos/workspace/adler32_security_benchmark/Emulation-HW/Adler32Kernel.build/link/int --target_bd emu/pfm_dynamic/pfm_dynamic.bd
+000-INFO: [CF2BD 82-31] Launching cf2xd: cf2xd -linux -trace-buffer 1024 -i /home/centos/workspace/adler32_security_benchmark/Emulation-HW/Adler32Kernel.build/link/sys_link/cfgraph/cfgen_cfgraph.xml -r /home/centos/workspace/adler32_security_benchmark/Emulation-HW/Adler32Kernel.build/link/sys_link/_sysl/.cdb/xd_ip_db.xml -o dr.xml
+000-INFO: [CF2BD 82-28] cf2xd finished successfully
+000-INFO: [CF2BD 82-31] Launching cf_xsd: cf_xsd -disable-address-gen -bd emu/pfm_dynamic/pfm_dynamic.bd -dn dr -dp /home/centos/workspace/adler32_security_benchmark/Emulation-HW/Adler32Kernel.build/link/sys_link/_sysl/.xsd
+000-INFO: [CF2BD 82-28] cf_xsd finished successfully
+000-INFO: [SYSTEM_LINK 82-37] [21:56:36] cf2bd finished successfully
+000-Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1303.055 ; gain = 0.000 ; free physical = 93417 ; free virtual = 136170
+000-INFO: [v++ 60-1441] [21:56:36] Run run_link: Step system_link: Completed
+000-Time (s): cpu = 00:00:15 ; elapsed = 00:00:14 . Memory (MB): peak = 1335.516 ; gain = 0.000 ; free physical = 93455 ; free virtual = 136207
+000-INFO: [v++ 60-1443] [21:56:36] Run run_link: Step cf2sw: Started
+000-INFO: [v++ 60-1453] Command Line: cf2sw -sdsl /home/centos/workspace/adler32_security_benchmark/Emulation-HW/Adler32Kernel.build/link/int/sdsl.dat -rtd /home/centos/workspace/adler32_security_benchmark/Emulation-HW/Adler32Kernel.build/link/int/cf2sw.rtd -xclbin /home/centos/workspace/adler32_security_benchmark/Emulation-HW/Adler32Kernel.build/link/int/xclbin_orig.xml -o /home/centos/workspace/adler32_security_benchmark/Emulation-HW/Adler32Kernel.build/link/int/xclbin_orig.1.xml
+000-INFO: [v++ 60-1454] Run Directory: /home/centos/workspace/adler32_security_benchmark/Emulation-HW/Adler32Kernel.build/link/run_link
+000-INFO: [v++ 60-1441] [21:56:38] Run run_link: Step cf2sw: Completed
+000-Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1335.516 ; gain = 0.000 ; free physical = 93456 ; free virtual = 136209
+000-INFO: [v++ 60-1443] [21:56:38] Run run_link: Step rtd2_system_diagram: Started
+000-INFO: [v++ 60-1453] Command Line: rtd2SystemDiagram
+000-INFO: [v++ 60-1454] Run Directory: /home/centos/workspace/adler32_security_benchmark/Emulation-HW/Adler32Kernel.build/link/run_link
+000-INFO: [v++ 60-1441] [21:56:40] Run run_link: Step rtd2_system_diagram: Completed
+000-Time (s): cpu = 00:00:00 ; elapsed = 00:00:02 . Memory (MB): peak = 1335.516 ; gain = 0.000 ; free physical = 92794 ; free virtual = 135547
+000-INFO: [v++ 60-1443] [21:56:40] Run run_link: Step vpl: Started
+000-INFO: [v++ 60-1453] Command Line: vpl -t hw_emu -f /home/centos/src/project_data/aws-fpga/Vitis/aws_platform/xilinx_aws-vu9p-f1_shell-v04261818_201920_2/xilinx_aws-vu9p-f1_shell-v04261818_201920_2.xpfm -g --profile_kernel data:Adler32Kernel:Adler32Kernel_1:len:all --profile_kernel data:Adler32Kernel:Adler32Kernel_1:adler:all --profile_kernel data:Adler32Kernel:Adler32Kernel_1:inData:all --profile_kernel data:Adler32Kernel:Adler32Kernel_1:adler32Result:all --remote_ip_cache /home/centos/workspace/ip_cache -s --output_dir /home/centos/workspace/adler32_security_benchmark/Emulation-HW/Adler32Kernel.build/link/int --log_dir /home/centos/workspace/adler32_security_benchmark/Emulation-HW/Adler32Kernel.build/logs/link --report_dir /home/centos/workspace/adler32_security_benchmark/Emulation-HW/Adler32Kernel.build/reports/link --config /home/centos/workspace/adler32_security_benchmark/Emulation-HW/Adler32Kernel.build/link/int/vplConfig.ini -k /home/centos/workspace/adler32_security_benchmark/Emulation-HW/Adler32Kernel.build/link/int/kernel_info.dat --webtalk_flag Vitis --temp_dir /home/centos/workspace/adler32_security_benchmark/Emulation-HW/Adler32Kernel.build/link --emulation_mode debug_waveform --no-info --iprepo /home/centos/workspace/adler32_security_benchmark/Emulation-HW/Adler32Kernel.build/link/int/xo/ip_repo/xilinx_com_hls_Adler32Kernel_1_0 --messageDb /home/centos/workspace/adler32_security_benchmark/Emulation-HW/Adler32Kernel.build/link/run_link/vpl.pb /home/centos/workspace/adler32_security_benchmark/Emulation-HW/Adler32Kernel.build/link/int/dr.bd.tcl
+000-INFO: [v++ 60-1454] Run Directory: /home/centos/workspace/adler32_security_benchmark/Emulation-HW/Adler32Kernel.build/link/run_link
+000-
+000-****** vpl v2020.1 (64-bit)
+000-  **** SW Build 2902540 on Wed May 27 19:54:35 MDT 2020
+000-    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+000-
+000-INFO: [VPL 60-839] Read in kernel information from file '/home/centos/workspace/adler32_security_benchmark/Emulation-HW/Adler32Kernel.build/link/int/kernel_info.dat'.
+000-WARNING: [VPL 60-642] Invalid or deprecated parameter name: compiler.lockFlowCritSlackThreshold
+000-INFO: [VPL 60-423]   Target device: xilinx_aws-vu9p-f1_shell-v04261818_201920_2
+000-INFO: [VPL 60-1032] Extracting hardware platform to /home/centos/workspace/adler32_security_benchmark/Emulation-HW/Adler32Kernel.build/link/vivado/vpl/.local/hw_platform
+000-[21:57:02] Run vpl: Step create_project: Started
+000-Creating Vivado project.
+000-[21:57:03] Run vpl: Step create_project: Completed
+000-[21:57:03] Run vpl: Step create_bd: Started
+000-[21:57:38] Run vpl: Step create_bd: Completed
+000-[21:57:38] Run vpl: Step update_bd: Started
+000-[21:57:47] Run vpl: Step update_bd: Completed
+000-[21:57:47] Run vpl: Step generate_target: Started
+000-[21:58:28] Run vpl: Step generate_target: Completed
+000-[21:58:28] Run vpl: Step config_hw_emulation: Started
+000-[21:59:44] Run vpl: Step config_hw_emulation: RUNNING...
+000-[22:00:59] Run vpl: Step config_hw_emulation: RUNNING...
+000-[22:02:14] Run vpl: Step config_hw_emulation: RUNNING...
+000-[22:03:30] Run vpl: Step config_hw_emulation: RUNNING...
+000-[22:03:54] Run vpl: Step config_hw_emulation: Completed
+000-[22:03:54] Run vpl: FINISHED. Run Status: config_hw_emulation Complete!
+000-INFO: [v++ 60-1441] [22:03:54] Run run_link: Step vpl: Completed
+000-Time (s): cpu = 00:00:11 ; elapsed = 00:07:15 . Memory (MB): peak = 1335.516 ; gain = 0.000 ; free physical = 91940 ; free virtual = 135591
+000-INFO: [v++ 60-1443] [22:03:54] Run run_link: Step rtdgen: Started
+000-INFO: [v++ 60-1453] Command Line: rtdgen
+000-INFO: [v++ 60-1454] Run Directory: /home/centos/workspace/adler32_security_benchmark/Emulation-HW/Adler32Kernel.build/link/run_link
+000-INFO: [v++ 60-991] clock name 'clk_main_a0' (clock ID '') is being mapped to clock name 'clk_main_a0' in the xclbin
+000-INFO: [v++ 60-1453] Command Line: cf2sw -a /home/centos/workspace/adler32_security_benchmark/Emulation-HW/Adler32Kernel.build/link/int/address_map.xml -sdsl /home/centos/workspace/adler32_security_benchmark/Emulation-HW/Adler32Kernel.build/link/int/sdsl.dat -xclbin /home/centos/workspace/adler32_security_benchmark/Emulation-HW/Adler32Kernel.build/link/int/xclbin_orig.xml -rtd /home/centos/workspace/adler32_security_benchmark/Emulation-HW/Adler32Kernel.build/link/int/Adler32Kernel.rtd -o /home/centos/workspace/adler32_security_benchmark/Emulation-HW/Adler32Kernel.build/link/int/Adler32Kernel.xml
+000-INFO: [v++ 60-1652] Cf2sw returned exit code: 0
+000-INFO: [v++ 60-2311] HPISystemDiagram::writeSystemDiagramAfterRunningVivado, rtdInputFilePath: /home/centos/workspace/adler32_security_benchmark/Emulation-HW/Adler32Kernel.build/link/int/Adler32Kernel.rtd
+000-INFO: [v++ 60-2312] HPISystemDiagram::writeSystemDiagramAfterRunningVivado, systemDiagramOutputFilePath: /home/centos/workspace/adler32_security_benchmark/Emulation-HW/Adler32Kernel.build/link/int/systemDiagramModelSlrBaseAddress.json
+000-INFO: [v++ 60-1618] Launching 
+000-INFO: [v++ 60-1441] [22:04:07] Run run_link: Step rtdgen: Completed
+000-Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 1335.516 ; gain = 0.000 ; free physical = 92459 ; free virtual = 136147
+000-INFO: [v++ 60-1443] [22:04:07] Run run_link: Step xclbinutil: Started
+000-INFO: [v++ 60-1453] Command Line: xclbinutil --add-section DEBUG_DATA:RAW:/home/centos/workspace/adler32_security_benchmark/Emulation-HW/Adler32Kernel.build/link/int/consolidated.cf --add-section DEBUG_IP_LAYOUT:JSON:/home/centos/workspace/adler32_security_benchmark/Emulation-HW/Adler32Kernel.build/link/int/debug_ip_layout.rtd --add-section BITSTREAM:RAW:/home/centos/workspace/adler32_security_benchmark/Emulation-HW/Adler32Kernel.build/link/int/behav.xse --force --target hw_emu --key-value SYS:dfx_enable:false --add-section :JSON:/home/centos/workspace/adler32_security_benchmark/Emulation-HW/Adler32Kernel.build/link/int/Adler32Kernel.rtd --append-section :JSON:/home/centos/workspace/adler32_security_benchmark/Emulation-HW/Adler32Kernel.build/link/int/appendSection.rtd --add-section CLOCK_FREQ_TOPOLOGY:JSON:/home/centos/workspace/adler32_security_benchmark/Emulation-HW/Adler32Kernel.build/link/int/Adler32Kernel_xml.rtd --add-section BUILD_METADATA:JSON:/home/centos/workspace/adler32_security_benchmark/Emulation-HW/Adler32Kernel.build/link/int/Adler32Kernel_build.rtd --add-section EMBEDDED_METADATA:RAW:/home/centos/workspace/adler32_security_benchmark/Emulation-HW/Adler32Kernel.build/link/int/Adler32Kernel.xml --add-section SYSTEM_METADATA:RAW:/home/centos/workspace/adler32_security_benchmark/Emulation-HW/Adler32Kernel.build/link/int/systemDiagramModelSlrBaseAddress.json --key-value SYS:PlatformVBNV:xilinx_aws-vu9p-f1_shell-v04261818_201920_2 --output /home/centos/workspace/adler32_security_benchmark/Emulation-HW/Adler32Kernel.xclbin
+000-INFO: [v++ 60-1454] Run Directory: /home/centos/workspace/adler32_security_benchmark/Emulation-HW/Adler32Kernel.build/link/run_link
+000-XRT Build Version: 2.6.0 (2020.1)
+000-       Build Date: 2020-07-09 15:20:59
+000-          Hash ID: 12115fd4054cb46a5ade62fafa74c523f59116e6
+000-Creating a default 'in-memory' xclbin image.
+000-
+000-Section: 'DEBUG_DATA'(4) was successfully added.
+000-Size   : 1635907 bytes
+000-Format : RAW
+000-File   : '/home/centos/workspace/adler32_security_benchmark/Emulation-HW/Adler32Kernel.build/link/int/consolidated.cf'
+000-
+000-Section: 'DEBUG_IP_LAYOUT'(9) was successfully added.
+000-Size   : 1160 bytes
+000-Format : JSON
+000-File   : '/home/centos/workspace/adler32_security_benchmark/Emulation-HW/Adler32Kernel.build/link/int/debug_ip_layout.rtd'
+000-
+000-Section: 'BITSTREAM'(0) was successfully added.
+000-Size   : 30630453 bytes
+000-Format : RAW
+000-File   : '/home/centos/workspace/adler32_security_benchmark/Emulation-HW/Adler32Kernel.build/link/int/behav.xse'
+000-
+000-Section: 'MEM_TOPOLOGY'(6) was successfully added.
+000-Format : JSON
+000-File   : 'mem_topology'
+000-
+000-Section: 'IP_LAYOUT'(8) was successfully added.
+000-Format : JSON
+000-File   : 'ip_layout'
+000-
+000-Section: 'CONNECTIVITY'(7) was successfully added.
+000-Format : JSON
+000-File   : 'connectivity'
+000-WARNING: Skipping CLOCK_FREQ_TOPOLOGY section for count size is zero.
+000-WARNING: Section 'CLOCK_FREQ_TOPOLOGY' content is empty.  No data in the given JSON file.
+000-
+000-Section: 'CLOCK_FREQ_TOPOLOGY'(11) was empty.  No action taken.
+000-Format : JSON
+000-File   : '/home/centos/workspace/adler32_security_benchmark/Emulation-HW/Adler32Kernel.build/link/int/Adler32Kernel_xml.rtd'
+000-
+000-Section: 'BUILD_METADATA'(14) was successfully added.
+000-Size   : 2773 bytes
+000-Format : JSON
+000-File   : '/home/centos/workspace/adler32_security_benchmark/Emulation-HW/Adler32Kernel.build/link/int/Adler32Kernel_build.rtd'
+000-
+000-Section: 'EMBEDDED_METADATA'(2) was successfully added.
+000-Size   : 5516 bytes
+000-Format : RAW
+000-File   : '/home/centos/workspace/adler32_security_benchmark/Emulation-HW/Adler32Kernel.build/link/int/Adler32Kernel.xml'
+000-
+000-Section: 'SYSTEM_METADATA'(22) was successfully added.
+000-Size   : 6898 bytes
+000-Format : RAW
+000-File   : '/home/centos/workspace/adler32_security_benchmark/Emulation-HW/Adler32Kernel.build/link/int/systemDiagramModelSlrBaseAddress.json'
+000-
+000-Section: 'PARTITION_METADATA'(20) was successfully appended to.
+000-Format : JSON
+000-File   : 'partition_metadata'
+000-Successfully wrote (32291875 bytes) to the output file: /home/centos/workspace/adler32_security_benchmark/Emulation-HW/Adler32Kernel.xclbin
+000-Leaving xclbinutil.
+000-INFO: [v++ 60-1441] [22:04:08] Run run_link: Step xclbinutil: Completed
+000-Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.12 . Memory (MB): peak = 1335.516 ; gain = 0.000 ; free physical = 92428 ; free virtual = 136146
+000-INFO: [v++ 60-1443] [22:04:08] Run run_link: Step xclbinutilinfo: Started
+000-INFO: [v++ 60-1453] Command Line: xclbinutil --quiet --force --info /home/centos/workspace/adler32_security_benchmark/Emulation-HW/Adler32Kernel.xclbin.info --input /home/centos/workspace/adler32_security_benchmark/Emulation-HW/Adler32Kernel.xclbin
+000-INFO: [v++ 60-1454] Run Directory: /home/centos/workspace/adler32_security_benchmark/Emulation-HW/Adler32Kernel.build/link/run_link
+000-INFO: [v++ 60-1441] [22:04:08] Run run_link: Step xclbinutilinfo: Completed
+000-Time (s): cpu = 00:00:00.34 ; elapsed = 00:00:00.40 . Memory (MB): peak = 1335.516 ; gain = 0.000 ; free physical = 92427 ; free virtual = 136146
+000-INFO: [v++ 60-1443] [22:04:08] Run run_link: Step generate_sc_driver: Started
+000-INFO: [v++ 60-1453] Command Line: 
+000-INFO: [v++ 60-1454] Run Directory: /home/centos/workspace/adler32_security_benchmark/Emulation-HW/Adler32Kernel.build/link/run_link
+000-INFO: [v++ 60-1441] [22:04:08] Run run_link: Step generate_sc_driver: Completed
+000-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1335.516 ; gain = 0.000 ; free physical = 92427 ; free virtual = 136146
+000-INFO: [v++ 60-244] Generating system estimate report...
+000-INFO: [v++ 60-1092] Generated system estimate report: /home/centos/workspace/adler32_security_benchmark/Emulation-HW/Adler32Kernel.build/reports/link/system_estimate_Adler32Kernel.xtxt
+000-INFO: [v++ 60-586] Created Adler32Kernel.xclbin
+000-INFO: [v++ 60-1307] Run completed. Additional information can be found in:
+000-	Steps Log File: /home/centos/workspace/adler32_security_benchmark/Emulation-HW/Adler32Kernel.build/logs/link/link.steps.log
+000-
+000-INFO: [v++ 60-2343] Use the vitis_analyzer tool to visualize and navigate the relevant reports. Run the following command. 
+000-    vitis_analyzer /home/centos/workspace/adler32_security_benchmark/Emulation-HW/Adler32Kernel.xclbin.link_summary 
+000-INFO: [v++ 60-791] Total elapsed time: 0h 8m 1s
+000-INFO: [v++ 60-1653] Closing dispatch client.
+000-g++ -std=c++0x -DVITIS_PLATFORM=xilinx_aws-vu9p-f1_shell-v04261818_201920_2 -D__USE_XOPEN2K8 -I/home/centos/workspace/adler32_security_benchmark/libs/xf_security/ext/xcl2 -I/home/centos/workspace/adler32_security_benchmark/libs/xf_security/L1/include -I/home/centos/workspace/adler32_security_benchmark/src/host -I/home/centos/workspace/adler32_security_benchmark/src/kernel -I/home/centos/workspace/adler32_security_benchmark/libs/xf_security/ext/xcl2 -I/opt/xilinx/xrt/include/ -I/opt/Xilinx/Vivado/2020.1/include/ -O0 -g -Wall -O3  -c -fmessage-length=0 -o "libs/xf_security/ext/xcl2/xcl2.o" "../libs/xf_security/ext/xcl2/xcl2.cpp"
+000-g++ -std=c++0x -DVITIS_PLATFORM=xilinx_aws-vu9p-f1_shell-v04261818_201920_2 -D__USE_XOPEN2K8 -I/home/centos/workspace/adler32_security_benchmark/libs/xf_security/ext/xcl2 -I/home/centos/workspace/adler32_security_benchmark/libs/xf_security/L1/include -I/home/centos/workspace/adler32_security_benchmark/src/host -I/home/centos/workspace/adler32_security_benchmark/src/kernel -I/home/centos/workspace/adler32_security_benchmark/libs/xf_security/ext/xcl2 -I/opt/xilinx/xrt/include/ -I/opt/Xilinx/Vivado/2020.1/include/ -O0 -g -Wall -O3  -c -fmessage-length=0 -o "src/host/main.o" "../src/host/main.cpp"
+000-In file included from /opt/Xilinx/Vivado/2020.1/include/hls_hotbm_apfixed.h:45:0,
+000-                 from /opt/Xilinx/Vivado/2020.1/include/hls_math.h:1057,
+000-                 from /home/centos/workspace/adler32_security_benchmark/libs/xf_security/L1/include/xf_security/adler32.hpp:29,
+000-                 from /home/centos/workspace/adler32_security_benchmark/src/kernel/adler32_kernel.hpp:22,
+000-                 from ../src/host/main.cpp:21:
+000/adler32_security_benchmark/Emulation-HW245-1-1ignoring #pragma HLS inline [-Wunknown-pragmas]1-/opt/Xilinx/Vivado/2020.1/include/utils/x_hls_utils.h:245:0: warning: ignoring #pragma HLS inline [-Wunknown-pragmas]
+000- #pragma HLS inline off
+000- ^
+000/adler32_security_benchmark/Emulation-HW246-1-1ignoring #pragma HLS INTERFACE [-Wunknown-pragmas]1-/opt/Xilinx/Vivado/2020.1/include/utils/x_hls_utils.h:246:0: warning: ignoring #pragma HLS INTERFACE [-Wunknown-pragmas]
+000- #pragma HLS INTERFACE ap_none port=return register
+000- ^
+000-In file included from /opt/Xilinx/Vivado/2020.1/include/hls_math.h:1057:0,
+000-                 from /home/centos/workspace/adler32_security_benchmark/libs/xf_security/L1/include/xf_security/adler32.hpp:29,
+000-                 from /home/centos/workspace/adler32_security_benchmark/src/kernel/adler32_kernel.hpp:22,
+000-                 from ../src/host/main.cpp:21:
+000/adler32_security_benchmark/Emulation-HW116-1-1ignoring #pragma HLS array_partition [-Wunknown-pragmas]1-/opt/Xilinx/Vivado/2020.1/include/hls_hotbm_apfixed.h:116:0: warning: ignoring #pragma HLS array_partition [-Wunknown-pragmas]
+000- #pragma HLS array_partition variable=swap_table complete
+000- ^
+000/adler32_security_benchmark/Emulation-HW117-1-1ignoring #pragma HLS RESOURCE [-Wunknown-pragmas]1-/opt/Xilinx/Vivado/2020.1/include/hls_hotbm_apfixed.h:117:0: warning: ignoring #pragma HLS RESOURCE [-Wunknown-pragmas]
+000- #pragma HLS RESOURCE variable=fourth_order_double::sin_cos_K0 core=ROM_1P_LUTRAM
+000- ^
+000/adler32_security_benchmark/Emulation-HW118-1-1ignoring #pragma HLS RESOURCE [-Wunknown-pragmas]1-/opt/Xilinx/Vivado/2020.1/include/hls_hotbm_apfixed.h:118:0: warning: ignoring #pragma HLS RESOURCE [-Wunknown-pragmas]
+000- #pragma HLS RESOURCE variable=fourth_order_double::sin_cos_K1 core=ROM_1P_LUTRAM
+000- ^
+000/adler32_security_benchmark/Emulation-HW119-1-1ignoring #pragma HLS RESOURCE [-Wunknown-pragmas]1-/opt/Xilinx/Vivado/2020.1/include/hls_hotbm_apfixed.h:119:0: warning: ignoring #pragma HLS RESOURCE [-Wunknown-pragmas]
+000- #pragma HLS RESOURCE variable=fourth_order_double::sin_cos_K2 core=ROM_1P_LUTRAM
+000- ^
+000/adler32_security_benchmark/Emulation-HW120-1-1ignoring #pragma HLS RESOURCE [-Wunknown-pragmas]1-/opt/Xilinx/Vivado/2020.1/include/hls_hotbm_apfixed.h:120:0: warning: ignoring #pragma HLS RESOURCE [-Wunknown-pragmas]
+000- #pragma HLS RESOURCE variable=fourth_order_double::sin_cos_K3 core=ROM_1P_LUTRAM
+000- ^
+000/adler32_security_benchmark/Emulation-HW121-1-1ignoring #pragma HLS RESOURCE [-Wunknown-pragmas]1-/opt/Xilinx/Vivado/2020.1/include/hls_hotbm_apfixed.h:121:0: warning: ignoring #pragma HLS RESOURCE [-Wunknown-pragmas]
+000- #pragma HLS RESOURCE variable=fourth_order_double::sin_cos_K4 core=ROM_1P_LUTRAM
+000- ^
+000/adler32_security_benchmark/Emulation-HW150-1-1ignoring #pragma HLS RESOURCE [-Wunknown-pragmas]1-/opt/Xilinx/Vivado/2020.1/include/hls_hotbm_apfixed.h:150:0: warning: ignoring #pragma HLS RESOURCE [-Wunknown-pragmas]
+000- #pragma HLS RESOURCE variable=fourth_order_double::cos_K0 core=ROM_1P_LUTRAM
+000- ^
+000/adler32_security_benchmark/Emulation-HW151-1-1ignoring #pragma HLS RESOURCE [-Wunknown-pragmas]1-/opt/Xilinx/Vivado/2020.1/include/hls_hotbm_apfixed.h:151:0: warning: ignoring #pragma HLS RESOURCE [-Wunknown-pragmas]
+000- #pragma HLS RESOURCE variable=fourth_order_double::cos_K1 core=ROM_1P_LUTRAM
+000- ^
+000/adler32_security_benchmark/Emulation-HW152-1-1ignoring #pragma HLS RESOURCE [-Wunknown-pragmas]1-/opt/Xilinx/Vivado/2020.1/include/hls_hotbm_apfixed.h:152:0: warning: ignoring #pragma HLS RESOURCE [-Wunknown-pragmas]
+000- #pragma HLS RESOURCE variable=fourth_order_double::cos_K2 core=ROM_1P_LUTRAM
+000- ^
+000/adler32_security_benchmark/Emulation-HW153-1-1ignoring #pragma HLS RESOURCE [-Wunknown-pragmas]1-/opt/Xilinx/Vivado/2020.1/include/hls_hotbm_apfixed.h:153:0: warning: ignoring #pragma HLS RESOURCE [-Wunknown-pragmas]
+000- #pragma HLS RESOURCE variable=fourth_order_double::cos_K3 core=ROM_1P_LUTRAM
+000- ^
+000/adler32_security_benchmark/Emulation-HW154-1-1ignoring #pragma HLS RESOURCE [-Wunknown-pragmas]1-/opt/Xilinx/Vivado/2020.1/include/hls_hotbm_apfixed.h:154:0: warning: ignoring #pragma HLS RESOURCE [-Wunknown-pragmas]
+000- #pragma HLS RESOURCE variable=fourth_order_double::cos_K4 core=ROM_1P_LUTRAM
+000- ^
+000/adler32_security_benchmark/Emulation-HW155-1-1ignoring #pragma HLS RESOURCE [-Wunknown-pragmas]1-/opt/Xilinx/Vivado/2020.1/include/hls_hotbm_apfixed.h:155:0: warning: ignoring #pragma HLS RESOURCE [-Wunknown-pragmas]
+000- #pragma HLS RESOURCE variable=fourth_order_double::sin_K0 core=ROM_1P_LUTRAM
+000- ^
+000/adler32_security_benchmark/Emulation-HW156-1-1ignoring #pragma HLS RESOURCE [-Wunknown-pragmas]1-/opt/Xilinx/Vivado/2020.1/include/hls_hotbm_apfixed.h:156:0: warning: ignoring #pragma HLS RESOURCE [-Wunknown-pragmas]
+000- #pragma HLS RESOURCE variable=fourth_order_double::sin_K1 core=ROM_1P_LUTRAM
+000- ^
+000/adler32_security_benchmark/Emulation-HW157-1-1ignoring #pragma HLS RESOURCE [-Wunknown-pragmas]1-/opt/Xilinx/Vivado/2020.1/include/hls_hotbm_apfixed.h:157:0: warning: ignoring #pragma HLS RESOURCE [-Wunknown-pragmas]
+000- #pragma HLS RESOURCE variable=fourth_order_double::sin_K2 core=ROM_1P_LUTRAM
+000- ^
+000/adler32_security_benchmark/Emulation-HW158-1-1ignoring #pragma HLS RESOURCE [-Wunknown-pragmas]1-/opt/Xilinx/Vivado/2020.1/include/hls_hotbm_apfixed.h:158:0: warning: ignoring #pragma HLS RESOURCE [-Wunknown-pragmas]
+000- #pragma HLS RESOURCE variable=fourth_order_double::sin_K3 core=ROM_1P_LUTRAM
+000- ^
+000/adler32_security_benchmark/Emulation-HW159-1-1ignoring #pragma HLS RESOURCE [-Wunknown-pragmas]1-/opt/Xilinx/Vivado/2020.1/include/hls_hotbm_apfixed.h:159:0: warning: ignoring #pragma HLS RESOURCE [-Wunknown-pragmas]
+000- #pragma HLS RESOURCE variable=fourth_order_double::sin_K4 core=ROM_1P_LUTRAM
+000- ^
+000/adler32_security_benchmark/Emulation-HW206-1-1ignoring #pragma HLS array_partition [-Wunknown-pragmas]1-/opt/Xilinx/Vivado/2020.1/include/hls_hotbm_apfixed.h:206:0: warning: ignoring #pragma HLS array_partition [-Wunknown-pragmas]
+000- #pragma HLS array_partition variable=swap_table complete
+000- ^
+000/adler32_security_benchmark/Emulation-HW207-1-1ignoring #pragma HLS RESOURCE [-Wunknown-pragmas]1-/opt/Xilinx/Vivado/2020.1/include/hls_hotbm_apfixed.h:207:0: warning: ignoring #pragma HLS RESOURCE [-Wunknown-pragmas]
+000- #pragma HLS RESOURCE variable=second_order_float::sin_cos_K0 core=ROM_1P_LUTRAM
+000- ^
+000/adler32_security_benchmark/Emulation-HW208-1-1ignoring #pragma HLS RESOURCE [-Wunknown-pragmas]1-/opt/Xilinx/Vivado/2020.1/include/hls_hotbm_apfixed.h:208:0: warning: ignoring #pragma HLS RESOURCE [-Wunknown-pragmas]
+000- #pragma HLS RESOURCE variable=second_order_float::sin_cos_K1 core=ROM_1P_LUTRAM
+000- ^
+000/adler32_security_benchmark/Emulation-HW209-1-1ignoring #pragma HLS RESOURCE [-Wunknown-pragmas]1-/opt/Xilinx/Vivado/2020.1/include/hls_hotbm_apfixed.h:209:0: warning: ignoring #pragma HLS RESOURCE [-Wunknown-pragmas]
+000- #pragma HLS RESOURCE variable=second_order_float::sin_cos_K2 core=ROM_1P_LUTRAM
+000- ^
+000/adler32_security_benchmark/Emulation-HW235-1-1ignoring #pragma HLS RESOURCE [-Wunknown-pragmas]1-/opt/Xilinx/Vivado/2020.1/include/hls_hotbm_apfixed.h:235:0: warning: ignoring #pragma HLS RESOURCE [-Wunknown-pragmas]
+000- #pragma HLS RESOURCE variable=second_order_float::cos_K0 core=ROM_1P_LUTRAM
+000- ^
+000/adler32_security_benchmark/Emulation-HW236-1-1ignoring #pragma HLS RESOURCE [-Wunknown-pragmas]1-/opt/Xilinx/Vivado/2020.1/include/hls_hotbm_apfixed.h:236:0: warning: ignoring #pragma HLS RESOURCE [-Wunknown-pragmas]
+000- #pragma HLS RESOURCE variable=second_order_float::cos_K1 core=ROM_1P_LUTRAM
+000- ^
+000/adler32_security_benchmark/Emulation-HW237-1-1ignoring #pragma HLS RESOURCE [-Wunknown-pragmas]1-/opt/Xilinx/Vivado/2020.1/include/hls_hotbm_apfixed.h:237:0: warning: ignoring #pragma HLS RESOURCE [-Wunknown-pragmas]
+000- #pragma HLS RESOURCE variable=second_order_float::cos_K2 core=ROM_1P_LUTRAM
+000- ^
+000/adler32_security_benchmark/Emulation-HW238-1-1ignoring #pragma HLS RESOURCE [-Wunknown-pragmas]1-/opt/Xilinx/Vivado/2020.1/include/hls_hotbm_apfixed.h:238:0: warning: ignoring #pragma HLS RESOURCE [-Wunknown-pragmas]
+000- #pragma HLS RESOURCE variable=second_order_float::sin_K0 core=ROM_1P_LUTRAM
+000- ^
+000/adler32_security_benchmark/Emulation-HW239-1-1ignoring #pragma HLS RESOURCE [-Wunknown-pragmas]1-/opt/Xilinx/Vivado/2020.1/include/hls_hotbm_apfixed.h:239:0: warning: ignoring #pragma HLS RESOURCE [-Wunknown-pragmas]
+000- #pragma HLS RESOURCE variable=second_order_float::sin_K1 core=ROM_1P_LUTRAM
+000- ^
+000/adler32_security_benchmark/Emulation-HW240-1-1ignoring #pragma HLS RESOURCE [-Wunknown-pragmas]1-/opt/Xilinx/Vivado/2020.1/include/hls_hotbm_apfixed.h:240:0: warning: ignoring #pragma HLS RESOURCE [-Wunknown-pragmas]
+000- #pragma HLS RESOURCE variable=second_order_float::sin_K2 core=ROM_1P_LUTRAM
+000- ^
+000/adler32_security_benchmark/Emulation-HW274-1-1ignoring #pragma HLS RESOURCE [-Wunknown-pragmas]1-/opt/Xilinx/Vivado/2020.1/include/hls_hotbm_apfixed.h:274:0: warning: ignoring #pragma HLS RESOURCE [-Wunknown-pragmas]
+000- #pragma HLS RESOURCE variable=first_order_fixed_16::sin_cos_K0 core=ROM_1P_LUTRAM
+000- ^
+000/adler32_security_benchmark/Emulation-HW275-1-1ignoring #pragma HLS RESOURCE [-Wunknown-pragmas]1-/opt/Xilinx/Vivado/2020.1/include/hls_hotbm_apfixed.h:275:0: warning: ignoring #pragma HLS RESOURCE [-Wunknown-pragmas]
+000- #pragma HLS RESOURCE variable=first_order_fixed_16::sin_cos_K1 core=ROM_1P_LUTRAM
+000- ^
+000/adler32_security_benchmark/Emulation-HW302-1-1ignoring #pragma HLS array_partition [-Wunknown-pragmas]1-/opt/Xilinx/Vivado/2020.1/include/hls_hotbm_apfixed.h:302:0: warning: ignoring #pragma HLS array_partition [-Wunknown-pragmas]
+000- #pragma HLS array_partition variable=swap_table complete
+000- ^
+000/adler32_security_benchmark/Emulation-HW303-1-1ignoring #pragma HLS array_partition [-Wunknown-pragmas]1-/opt/Xilinx/Vivado/2020.1/include/hls_hotbm_apfixed.h:303:0: warning: ignoring #pragma HLS array_partition [-Wunknown-pragmas]
+000- #pragma HLS array_partition variable=neg_sin_table complete
+000- ^
+000/adler32_security_benchmark/Emulation-HW304-1-1ignoring #pragma HLS array_partition [-Wunknown-pragmas]1-/opt/Xilinx/Vivado/2020.1/include/hls_hotbm_apfixed.h:304:0: warning: ignoring #pragma HLS array_partition [-Wunknown-pragmas]
+000- #pragma HLS array_partition variable=neg_cos_table complete
+000- ^
+000/adler32_security_benchmark/Emulation-HW373-1-1ignoring #pragma HLS array_partition [-Wunknown-pragmas]1-/opt/Xilinx/Vivado/2020.1/include/hls_hotbm_apfixed.h:373:0: warning: ignoring #pragma HLS array_partition [-Wunknown-pragmas]
+000- #pragma HLS array_partition variable=swap_table complete
+000- ^
+000/adler32_security_benchmark/Emulation-HW374-1-1ignoring #pragma HLS array_partition [-Wunknown-pragmas]1-/opt/Xilinx/Vivado/2020.1/include/hls_hotbm_apfixed.h:374:0: warning: ignoring #pragma HLS array_partition [-Wunknown-pragmas]
+000- #pragma HLS array_partition variable=neg_sin_table complete
+000- ^
+000/adler32_security_benchmark/Emulation-HW375-1-1ignoring #pragma HLS array_partition [-Wunknown-pragmas]1-/opt/Xilinx/Vivado/2020.1/include/hls_hotbm_apfixed.h:375:0: warning: ignoring #pragma HLS array_partition [-Wunknown-pragmas]
+000- #pragma HLS array_partition variable=neg_cos_table complete
+000- ^
+000/adler32_security_benchmark/Emulation-HW443-1-1ignoring #pragma HLS array_partition [-Wunknown-pragmas]1-/opt/Xilinx/Vivado/2020.1/include/hls_hotbm_apfixed.h:443:0: warning: ignoring #pragma HLS array_partition [-Wunknown-pragmas]
+000- #pragma HLS array_partition variable=neg_sin_table complete
+000- ^
+000/adler32_security_benchmark/Emulation-HW444-1-1ignoring #pragma HLS array_partition [-Wunknown-pragmas]1-/opt/Xilinx/Vivado/2020.1/include/hls_hotbm_apfixed.h:444:0: warning: ignoring #pragma HLS array_partition [-Wunknown-pragmas]
+000- #pragma HLS array_partition variable=neg_cos_table complete
+000- ^
+000-In file included from /opt/Xilinx/Vivado/2020.1/include/hls_math.h:1058:0,
+000-                 from /home/centos/workspace/adler32_security_benchmark/libs/xf_security/L1/include/xf_security/adler32.hpp:29,
+000-                 from /home/centos/workspace/adler32_security_benchmark/src/kernel/adler32_kernel.hpp:22,
+000-                 from ../src/host/main.cpp:21:
+000/adler32_security_benchmark/Emulation-HW88-1-1ignoring #pragma HLS pipeline [-Wunknown-pragmas]1-/opt/Xilinx/Vivado/2020.1/include/hls_cordic_apfixed.h:88:0: warning: ignoring #pragma HLS pipeline [-Wunknown-pragmas]
+000- #pragma HLS pipeline      
+000- ^
+000/adler32_security_benchmark/Emulation-HW146-1-1ignoring #pragma HLS pipeline [-Wunknown-pragmas]1-/opt/Xilinx/Vivado/2020.1/include/hls_cordic_apfixed.h:146:0: warning: ignoring #pragma HLS pipeline [-Wunknown-pragmas]
+000- #pragma HLS pipeline II=5
+000- ^
+000/adler32_security_benchmark/Emulation-HW149-1-1ignoring #pragma HLS pipeline [-Wunknown-pragmas]1-/opt/Xilinx/Vivado/2020.1/include/hls_cordic_apfixed.h:149:0: warning: ignoring #pragma HLS pipeline [-Wunknown-pragmas]
+000- #pragma HLS pipeline II=3
+000- ^
+000/adler32_security_benchmark/Emulation-HW152-1-1ignoring #pragma HLS pipeline [-Wunknown-pragmas]1-/opt/Xilinx/Vivado/2020.1/include/hls_cordic_apfixed.h:152:0: warning: ignoring #pragma HLS pipeline [-Wunknown-pragmas]
+000- #pragma HLS pipeline II=1
+000- ^
+000/adler32_security_benchmark/Emulation-HW155-1-1ignoring #pragma HLS pipeline [-Wunknown-pragmas]1-/opt/Xilinx/Vivado/2020.1/include/hls_cordic_apfixed.h:155:0: warning: ignoring #pragma HLS pipeline [-Wunknown-pragmas]
+000- #pragma HLS pipeline II=4
+000- ^
+000/adler32_security_benchmark/Emulation-HW316-1-1ignoring #pragma HLS UNROLL [-Wunknown-pragmas]1-/opt/Xilinx/Vivado/2020.1/include/hls_cordic_apfixed.h:316:0: warning: ignoring #pragma HLS UNROLL [-Wunknown-pragmas]
+000- #pragma HLS UNROLL
+000- ^
+000/adler32_security_benchmark/Emulation-HW476-1-1ignoring #pragma HLS UNROLL [-Wunknown-pragmas]1-/opt/Xilinx/Vivado/2020.1/include/hls_cordic_apfixed.h:476:0: warning: ignoring #pragma HLS UNROLL [-Wunknown-pragmas]
+000- #pragma HLS UNROLL
+000- ^
+000/adler32_security_benchmark/Emulation-HW654-1-1ignoring #pragma HLS UNROLL [-Wunknown-pragmas]1-/opt/Xilinx/Vivado/2020.1/include/hls_cordic_apfixed.h:654:0: warning: ignoring #pragma HLS UNROLL [-Wunknown-pragmas]
+000- #pragma HLS UNROLL
+000- ^
+000/adler32_security_benchmark/Emulation-HW658-1-1ignoring #pragma HLS UNROLL [-Wunknown-pragmas]1-/opt/Xilinx/Vivado/2020.1/include/hls_cordic_apfixed.h:658:0: warning: ignoring #pragma HLS UNROLL [-Wunknown-pragmas]
+000- #pragma HLS UNROLL
+000- ^
+000/adler32_security_benchmark/Emulation-HW865-1-1ignoring #pragma HLS UNROLL [-Wunknown-pragmas]1-/opt/Xilinx/Vivado/2020.1/include/hls_cordic_apfixed.h:865:0: warning: ignoring #pragma HLS UNROLL [-Wunknown-pragmas]
+000- #pragma HLS UNROLL
+000- ^
+000/adler32_security_benchmark/Emulation-HW884-1-1ignoring #pragma HLS UNROLL [-Wunknown-pragmas]1-/opt/Xilinx/Vivado/2020.1/include/hls_cordic_apfixed.h:884:0: warning: ignoring #pragma HLS UNROLL [-Wunknown-pragmas]
+000- #pragma HLS UNROLL
+000- ^
+000-In file included from /opt/Xilinx/Vivado/2020.1/include/hls_math.h:1059:0,
+000-                 from /home/centos/workspace/adler32_security_benchmark/libs/xf_security/L1/include/xf_security/adler32.hpp:29,
+000-                 from /home/centos/workspace/adler32_security_benchmark/src/kernel/adler32_kernel.hpp:22,
+000-                 from ../src/host/main.cpp:21:
+000/adler32_security_benchmark/Emulation-HW41-1-1ignoring #pragma HLS pipeline [-Wunknown-pragmas]1-/opt/Xilinx/Vivado/2020.1/include/hls_exp_apfixed.h:41:0: warning: ignoring #pragma HLS pipeline [-Wunknown-pragmas]
+000- #pragma HLS pipeline
+000- ^
+000-In file included from /opt/Xilinx/Vivado/2020.1/include/hls_math.h:1059:0,
+000-                 from /home/centos/workspace/adler32_security_benchmark/libs/xf_security/L1/include/xf_security/adler32.hpp:29,
+000-                 from /home/centos/workspace/adler32_security_benchmark/src/kernel/adler32_kernel.hpp:22,
+000-                 from ../src/host/main.cpp:21:
+000/adler32_security_benchmark/Emulation-HW94-1-1ignoring #pragma unroll  [-Wunknown-pragmas]1-/opt/Xilinx/Vivado/2020.1/include/hls_exp_apfixed.h:94:0: warning: ignoring #pragma unroll  [-Wunknown-pragmas]
+000-             #pragma unroll
+000- ^
+000/adler32_security_benchmark/Emulation-HW100-1-1ignoring #pragma unroll  [-Wunknown-pragmas]1-/opt/Xilinx/Vivado/2020.1/include/hls_exp_apfixed.h:100:0: warning: ignoring #pragma unroll  [-Wunknown-pragmas]
+000-                 #pragma unroll
+000- ^
+000/adler32_security_benchmark/Emulation-HW103-1-1ignoring #pragma unroll  [-Wunknown-pragmas]1-/opt/Xilinx/Vivado/2020.1/include/hls_exp_apfixed.h:103:0: warning: ignoring #pragma unroll  [-Wunknown-pragmas]
+000-                 #pragma unroll
+000- ^
+000/adler32_security_benchmark/Emulation-HW169-1-1ignoring #pragma unroll  [-Wunknown-pragmas]1-/opt/Xilinx/Vivado/2020.1/include/hls_exp_apfixed.h:169:0: warning: ignoring #pragma unroll  [-Wunknown-pragmas]
+000-             #pragma unroll
+000- ^
+000/adler32_security_benchmark/Emulation-HW175-1-1ignoring #pragma unroll  [-Wunknown-pragmas]1-/opt/Xilinx/Vivado/2020.1/include/hls_exp_apfixed.h:175:0: warning: ignoring #pragma unroll  [-Wunknown-pragmas]
+000-                 #pragma unroll
+000- ^
+000/adler32_security_benchmark/Emulation-HW178-1-1ignoring #pragma unroll  [-Wunknown-pragmas]1-/opt/Xilinx/Vivado/2020.1/include/hls_exp_apfixed.h:178:0: warning: ignoring #pragma unroll  [-Wunknown-pragmas]
+000-                 #pragma unroll
+000- ^
+000/adler32_security_benchmark/Emulation-HW192-1-1ignoring #pragma unroll  [-Wunknown-pragmas]1-/opt/Xilinx/Vivado/2020.1/include/hls_exp_apfixed.h:192:0: warning: ignoring #pragma unroll  [-Wunknown-pragmas]
+000-         #pragma unroll
+000- ^
+000/adler32_security_benchmark/Emulation-HW199-1-1ignoring #pragma unroll  [-Wunknown-pragmas]1-/opt/Xilinx/Vivado/2020.1/include/hls_exp_apfixed.h:199:0: warning: ignoring #pragma unroll  [-Wunknown-pragmas]
+000-                 #pragma unroll
+000- ^
+000/adler32_security_benchmark/Emulation-HW262-1-1ignoring #pragma unroll  [-Wunknown-pragmas]1-/opt/Xilinx/Vivado/2020.1/include/hls_exp_apfixed.h:262:0: warning: ignoring #pragma unroll  [-Wunknown-pragmas]
+000-             #pragma unroll
+000- ^
+000/adler32_security_benchmark/Emulation-HW268-1-1ignoring #pragma unroll  [-Wunknown-pragmas]1-/opt/Xilinx/Vivado/2020.1/include/hls_exp_apfixed.h:268:0: warning: ignoring #pragma unroll  [-Wunknown-pragmas]
+000-                 #pragma unroll
+000- ^
+000/adler32_security_benchmark/Emulation-HW271-1-1ignoring #pragma unroll  [-Wunknown-pragmas]1-/opt/Xilinx/Vivado/2020.1/include/hls_exp_apfixed.h:271:0: warning: ignoring #pragma unroll  [-Wunknown-pragmas]
+000-                 #pragma unroll
+000- ^
+000/adler32_security_benchmark/Emulation-HW285-1-1ignoring #pragma unroll  [-Wunknown-pragmas]1-/opt/Xilinx/Vivado/2020.1/include/hls_exp_apfixed.h:285:0: warning: ignoring #pragma unroll  [-Wunknown-pragmas]
+000-         #pragma unroll
+000- ^
+000/adler32_security_benchmark/Emulation-HW292-1-1ignoring #pragma unroll  [-Wunknown-pragmas]1-/opt/Xilinx/Vivado/2020.1/include/hls_exp_apfixed.h:292:0: warning: ignoring #pragma unroll  [-Wunknown-pragmas]
+000-                 #pragma unroll
+000- ^
+000/adler32_security_benchmark/Emulation-HW519-1-1ignoring #pragma unroll  [-Wunknown-pragmas]1-/opt/Xilinx/Vivado/2020.1/include/hls_exp_apfixed.h:519:0: warning: ignoring #pragma unroll  [-Wunknown-pragmas]
+000-             #pragma unroll
+000- ^
+000/adler32_security_benchmark/Emulation-HW525-1-1ignoring #pragma unroll  [-Wunknown-pragmas]1-/opt/Xilinx/Vivado/2020.1/include/hls_exp_apfixed.h:525:0: warning: ignoring #pragma unroll  [-Wunknown-pragmas]
+000-                 #pragma unroll
+000- ^
+000/adler32_security_benchmark/Emulation-HW528-1-1ignoring #pragma unroll  [-Wunknown-pragmas]1-/opt/Xilinx/Vivado/2020.1/include/hls_exp_apfixed.h:528:0: warning: ignoring #pragma unroll  [-Wunknown-pragmas]
+000-                 #pragma unroll
+000- ^
+000/adler32_security_benchmark/Emulation-HW537-1-1ignoring #pragma unroll  [-Wunknown-pragmas]1-/opt/Xilinx/Vivado/2020.1/include/hls_exp_apfixed.h:537:0: warning: ignoring #pragma unroll  [-Wunknown-pragmas]
+000-         #pragma unroll
+000- ^
+000/adler32_security_benchmark/Emulation-HW540-1-1ignoring #pragma unroll  [-Wunknown-pragmas]1-/opt/Xilinx/Vivado/2020.1/include/hls_exp_apfixed.h:540:0: warning: ignoring #pragma unroll  [-Wunknown-pragmas]
+000-         #pragma unroll
+000- ^
+000/adler32_security_benchmark/Emulation-HW549-1-1ignoring #pragma unroll  [-Wunknown-pragmas]1-/opt/Xilinx/Vivado/2020.1/include/hls_exp_apfixed.h:549:0: warning: ignoring #pragma unroll  [-Wunknown-pragmas]
+000-         #pragma unroll
+000- ^
+000/adler32_security_benchmark/Emulation-HW556-1-1ignoring #pragma unroll  [-Wunknown-pragmas]1-/opt/Xilinx/Vivado/2020.1/include/hls_exp_apfixed.h:556:0: warning: ignoring #pragma unroll  [-Wunknown-pragmas]
+000-                 #pragma unroll
+000- ^
+000/adler32_security_benchmark/Emulation-HW915-1-1ignoring #pragma unroll  [-Wunknown-pragmas]1-/opt/Xilinx/Vivado/2020.1/include/hls_exp_apfixed.h:915:0: warning: ignoring #pragma unroll  [-Wunknown-pragmas]
+000-             #pragma unroll
+000- ^
+000/adler32_security_benchmark/Emulation-HW921-1-1ignoring #pragma unroll  [-Wunknown-pragmas]1-/opt/Xilinx/Vivado/2020.1/include/hls_exp_apfixed.h:921:0: warning: ignoring #pragma unroll  [-Wunknown-pragmas]
+000-                 #pragma unroll
+000- ^
+000/adler32_security_benchmark/Emulation-HW924-1-1ignoring #pragma unroll  [-Wunknown-pragmas]1-/opt/Xilinx/Vivado/2020.1/include/hls_exp_apfixed.h:924:0: warning: ignoring #pragma unroll  [-Wunknown-pragmas]
+000-                 #pragma unroll
+000- ^
+000/adler32_security_benchmark/Emulation-HW938-1-1ignoring #pragma HLS pipeline [-Wunknown-pragmas]1-/opt/Xilinx/Vivado/2020.1/include/hls_exp_apfixed.h:938:0: warning: ignoring #pragma HLS pipeline [-Wunknown-pragmas]
+000- #pragma HLS pipeline
+000- ^
+000/adler32_security_benchmark/Emulation-HW1039-1-1ignoring #pragma unroll  [-Wunknown-pragmas]1-/opt/Xilinx/Vivado/2020.1/include/hls_exp_apfixed.h:1039:0: warning: ignoring #pragma unroll  [-Wunknown-pragmas]
+000-             #pragma unroll
+000- ^
+000/adler32_security_benchmark/Emulation-HW1045-1-1ignoring #pragma unroll  [-Wunknown-pragmas]1-/opt/Xilinx/Vivado/2020.1/include/hls_exp_apfixed.h:1045:0: warning: ignoring #pragma unroll  [-Wunknown-pragmas]
+000-                 #pragma unroll
+000- ^
+000/adler32_security_benchmark/Emulation-HW1048-1-1ignoring #pragma unroll  [-Wunknown-pragmas]1-/opt/Xilinx/Vivado/2020.1/include/hls_exp_apfixed.h:1048:0: warning: ignoring #pragma unroll  [-Wunknown-pragmas]
+000-                 #pragma unroll
+000- ^
+000/adler32_security_benchmark/Emulation-HW1134-1-1ignoring #pragma unroll  [-Wunknown-pragmas]1-/opt/Xilinx/Vivado/2020.1/include/hls_exp_apfixed.h:1134:0: warning: ignoring #pragma unroll  [-Wunknown-pragmas]
+000-             #pragma unroll
+000- ^
+000/adler32_security_benchmark/Emulation-HW1140-1-1ignoring #pragma unroll  [-Wunknown-pragmas]1-/opt/Xilinx/Vivado/2020.1/include/hls_exp_apfixed.h:1140:0: warning: ignoring #pragma unroll  [-Wunknown-pragmas]
+000-                 #pragma unroll
+000- ^
+000/adler32_security_benchmark/Emulation-HW1143-1-1ignoring #pragma unroll  [-Wunknown-pragmas]1-/opt/Xilinx/Vivado/2020.1/include/hls_exp_apfixed.h:1143:0: warning: ignoring #pragma unroll  [-Wunknown-pragmas]
+000-                 #pragma unroll
+000- ^
+000/adler32_security_benchmark/Emulation-HW1161-1-1ignoring #pragma unroll  [-Wunknown-pragmas]1-/opt/Xilinx/Vivado/2020.1/include/hls_exp_apfixed.h:1161:0: warning: ignoring #pragma unroll  [-Wunknown-pragmas]
+000-         #pragma unroll
+000- ^
+000/adler32_security_benchmark/Emulation-HW1167-1-1ignoring #pragma unroll  [-Wunknown-pragmas]1-/opt/Xilinx/Vivado/2020.1/include/hls_exp_apfixed.h:1167:0: warning: ignoring #pragma unroll  [-Wunknown-pragmas]
+000-                 #pragma unroll
+000- ^
+000/adler32_security_benchmark/Emulation-HW1281-1-1ignoring #pragma unroll  [-Wunknown-pragmas]1-/opt/Xilinx/Vivado/2020.1/include/hls_exp_apfixed.h:1281:0: warning: ignoring #pragma unroll  [-Wunknown-pragmas]
+000-             #pragma unroll
+000- ^
+000/adler32_security_benchmark/Emulation-HW1287-1-1ignoring #pragma unroll  [-Wunknown-pragmas]1-/opt/Xilinx/Vivado/2020.1/include/hls_exp_apfixed.h:1287:0: warning: ignoring #pragma unroll  [-Wunknown-pragmas]
+000-                 #pragma unroll
+000- ^
+000/adler32_security_benchmark/Emulation-HW1290-1-1ignoring #pragma unroll  [-Wunknown-pragmas]1-/opt/Xilinx/Vivado/2020.1/include/hls_exp_apfixed.h:1290:0: warning: ignoring #pragma unroll  [-Wunknown-pragmas]
+000-                 #pragma unroll
+000- ^
+000/adler32_security_benchmark/Emulation-HW1309-1-1ignoring #pragma unroll  [-Wunknown-pragmas]1-/opt/Xilinx/Vivado/2020.1/include/hls_exp_apfixed.h:1309:0: warning: ignoring #pragma unroll  [-Wunknown-pragmas]
+000-         #pragma unroll
+000- ^
+000/adler32_security_benchmark/Emulation-HW1316-1-1ignoring #pragma unroll  [-Wunknown-pragmas]1-/opt/Xilinx/Vivado/2020.1/include/hls_exp_apfixed.h:1316:0: warning: ignoring #pragma unroll  [-Wunknown-pragmas]
+000-                 #pragma unroll
+000- ^
+000/adler32_security_benchmark/Emulation-HW1576-1-1ignoring #pragma unroll  [-Wunknown-pragmas]1-/opt/Xilinx/Vivado/2020.1/include/hls_exp_apfixed.h:1576:0: warning: ignoring #pragma unroll  [-Wunknown-pragmas]
+000-             #pragma unroll
+000- ^
+000/adler32_security_benchmark/Emulation-HW1582-1-1ignoring #pragma unroll  [-Wunknown-pragmas]1-/opt/Xilinx/Vivado/2020.1/include/hls_exp_apfixed.h:1582:0: warning: ignoring #pragma unroll  [-Wunknown-pragmas]
+000-                 #pragma unroll
+000- ^
+000/adler32_security_benchmark/Emulation-HW1585-1-1ignoring #pragma unroll  [-Wunknown-pragmas]1-/opt/Xilinx/Vivado/2020.1/include/hls_exp_apfixed.h:1585:0: warning: ignoring #pragma unroll  [-Wunknown-pragmas]
+000-                 #pragma unroll
+000- ^
+000/adler32_security_benchmark/Emulation-HW1608-1-1ignoring #pragma unroll  [-Wunknown-pragmas]1-/opt/Xilinx/Vivado/2020.1/include/hls_exp_apfixed.h:1608:0: warning: ignoring #pragma unroll  [-Wunknown-pragmas]
+000-         #pragma unroll
+000- ^
+000/adler32_security_benchmark/Emulation-HW1614-1-1ignoring #pragma unroll  [-Wunknown-pragmas]1-/opt/Xilinx/Vivado/2020.1/include/hls_exp_apfixed.h:1614:0: warning: ignoring #pragma unroll  [-Wunknown-pragmas]
+000-                 #pragma unroll
+000- ^
+000/adler32_security_benchmark/Emulation-HW2042-1-1ignoring #pragma unroll  [-Wunknown-pragmas]1-/opt/Xilinx/Vivado/2020.1/include/hls_exp_apfixed.h:2042:0: warning: ignoring #pragma unroll  [-Wunknown-pragmas]
+000-             #pragma unroll
+000- ^
+000/adler32_security_benchmark/Emulation-HW2048-1-1ignoring #pragma unroll  [-Wunknown-pragmas]1-/opt/Xilinx/Vivado/2020.1/include/hls_exp_apfixed.h:2048:0: warning: ignoring #pragma unroll  [-Wunknown-pragmas]
+000-                 #pragma unroll
+000- ^
+000/adler32_security_benchmark/Emulation-HW2051-1-1ignoring #pragma unroll  [-Wunknown-pragmas]1-/opt/Xilinx/Vivado/2020.1/include/hls_exp_apfixed.h:2051:0: warning: ignoring #pragma unroll  [-Wunknown-pragmas]
+000-                 #pragma unroll
+000- ^
+000/adler32_security_benchmark/Emulation-HW2180-1-1ignoring #pragma unroll  [-Wunknown-pragmas]1-/opt/Xilinx/Vivado/2020.1/include/hls_exp_apfixed.h:2180:0: warning: ignoring #pragma unroll  [-Wunknown-pragmas]
+000-             #pragma unroll
+000- ^
+000/adler32_security_benchmark/Emulation-HW2187-1-1ignoring #pragma unroll  [-Wunknown-pragmas]1-/opt/Xilinx/Vivado/2020.1/include/hls_exp_apfixed.h:2187:0: warning: ignoring #pragma unroll  [-Wunknown-pragmas]
+000-                 #pragma unroll
+000- ^
+000/adler32_security_benchmark/Emulation-HW2191-1-1ignoring #pragma unroll  [-Wunknown-pragmas]1-/opt/Xilinx/Vivado/2020.1/include/hls_exp_apfixed.h:2191:0: warning: ignoring #pragma unroll  [-Wunknown-pragmas]
+000-                 #pragma unroll
+000- ^
+000/adler32_security_benchmark/Emulation-HW2238-1-1ignoring #pragma unroll  [-Wunknown-pragmas]1-/opt/Xilinx/Vivado/2020.1/include/hls_exp_apfixed.h:2238:0: warning: ignoring #pragma unroll  [-Wunknown-pragmas]
+000-             #pragma unroll
+000- ^
+000/adler32_security_benchmark/Emulation-HW2245-1-1ignoring #pragma unroll  [-Wunknown-pragmas]1-/opt/Xilinx/Vivado/2020.1/include/hls_exp_apfixed.h:2245:0: warning: ignoring #pragma unroll  [-Wunknown-pragmas]
+000-                 #pragma unroll
+000- ^
+000/adler32_security_benchmark/Emulation-HW2249-1-1ignoring #pragma unroll  [-Wunknown-pragmas]1-/opt/Xilinx/Vivado/2020.1/include/hls_exp_apfixed.h:2249:0: warning: ignoring #pragma unroll  [-Wunknown-pragmas]
+000-                 #pragma unroll
+000- ^
+000/adler32_security_benchmark/Emulation-HW2267-1-1ignoring #pragma unroll  [-Wunknown-pragmas]1-/opt/Xilinx/Vivado/2020.1/include/hls_exp_apfixed.h:2267:0: warning: ignoring #pragma unroll  [-Wunknown-pragmas]
+000-         #pragma unroll
+000- ^
+000/adler32_security_benchmark/Emulation-HW2322-1-1ignoring #pragma unroll  [-Wunknown-pragmas]1-/opt/Xilinx/Vivado/2020.1/include/hls_exp_apfixed.h:2322:0: warning: ignoring #pragma unroll  [-Wunknown-pragmas]
+000-             #pragma unroll
+000- ^
+000/adler32_security_benchmark/Emulation-HW2329-1-1ignoring #pragma unroll  [-Wunknown-pragmas]1-/opt/Xilinx/Vivado/2020.1/include/hls_exp_apfixed.h:2329:0: warning: ignoring #pragma unroll  [-Wunknown-pragmas]
+000-                 #pragma unroll
+000- ^
+000/adler32_security_benchmark/Emulation-HW2333-1-1ignoring #pragma unroll  [-Wunknown-pragmas]1-/opt/Xilinx/Vivado/2020.1/include/hls_exp_apfixed.h:2333:0: warning: ignoring #pragma unroll  [-Wunknown-pragmas]
+000-                 #pragma unroll
+000- ^
+000/adler32_security_benchmark/Emulation-HW2351-1-1ignoring #pragma unroll  [-Wunknown-pragmas]1-/opt/Xilinx/Vivado/2020.1/include/hls_exp_apfixed.h:2351:0: warning: ignoring #pragma unroll  [-Wunknown-pragmas]
+000-         #pragma unroll
+000- ^
+000/adler32_security_benchmark/Emulation-HW2440-1-1ignoring #pragma unroll  [-Wunknown-pragmas]1-/opt/Xilinx/Vivado/2020.1/include/hls_exp_apfixed.h:2440:0: warning: ignoring #pragma unroll  [-Wunknown-pragmas]
+000-             #pragma unroll
+000- ^
+000/adler32_security_benchmark/Emulation-HW2447-1-1ignoring #pragma unroll  [-Wunknown-pragmas]1-/opt/Xilinx/Vivado/2020.1/include/hls_exp_apfixed.h:2447:0: warning: ignoring #pragma unroll  [-Wunknown-pragmas]
+000-                 #pragma unroll
+000- ^
+000/adler32_security_benchmark/Emulation-HW2451-1-1ignoring #pragma unroll  [-Wunknown-pragmas]1-/opt/Xilinx/Vivado/2020.1/include/hls_exp_apfixed.h:2451:0: warning: ignoring #pragma unroll  [-Wunknown-pragmas]
+000-                 #pragma unroll
+000- ^
+000/adler32_security_benchmark/Emulation-HW2461-1-1ignoring #pragma unroll  [-Wunknown-pragmas]1-/opt/Xilinx/Vivado/2020.1/include/hls_exp_apfixed.h:2461:0: warning: ignoring #pragma unroll  [-Wunknown-pragmas]
+000-         #pragma unroll
+000- ^
+000/adler32_security_benchmark/Emulation-HW2465-1-1ignoring #pragma unroll  [-Wunknown-pragmas]1-/opt/Xilinx/Vivado/2020.1/include/hls_exp_apfixed.h:2465:0: warning: ignoring #pragma unroll  [-Wunknown-pragmas]
+000-         #pragma unroll
+000- ^
+000/adler32_security_benchmark/Emulation-HW2476-1-1ignoring #pragma unroll  [-Wunknown-pragmas]1-/opt/Xilinx/Vivado/2020.1/include/hls_exp_apfixed.h:2476:0: warning: ignoring #pragma unroll  [-Wunknown-pragmas]
+000-         #pragma unroll
+000- ^
+000/adler32_security_benchmark/Emulation-HW2484-1-1ignoring #pragma unroll  [-Wunknown-pragmas]1-/opt/Xilinx/Vivado/2020.1/include/hls_exp_apfixed.h:2484:0: warning: ignoring #pragma unroll  [-Wunknown-pragmas]
+000-                 #pragma unroll
+000- ^
+000/adler32_security_benchmark/Emulation-HW2809-1-1ignoring #pragma unroll  [-Wunknown-pragmas]1-/opt/Xilinx/Vivado/2020.1/include/hls_exp_apfixed.h:2809:0: warning: ignoring #pragma unroll  [-Wunknown-pragmas]
+000-             #pragma unroll
+000- ^
+000/adler32_security_benchmark/Emulation-HW2816-1-1ignoring #pragma unroll  [-Wunknown-pragmas]1-/opt/Xilinx/Vivado/2020.1/include/hls_exp_apfixed.h:2816:0: warning: ignoring #pragma unroll  [-Wunknown-pragmas]
+000-                 #pragma unroll
+000- ^
+000/adler32_security_benchmark/Emulation-HW2820-1-1ignoring #pragma unroll  [-Wunknown-pragmas]1-/opt/Xilinx/Vivado/2020.1/include/hls_exp_apfixed.h:2820:0: warning: ignoring #pragma unroll  [-Wunknown-pragmas]
+000-                 #pragma unroll
+000- ^
+000/adler32_security_benchmark/Emulation-HW2908-1-1ignoring #pragma unroll  [-Wunknown-pragmas]1-/opt/Xilinx/Vivado/2020.1/include/hls_exp_apfixed.h:2908:0: warning: ignoring #pragma unroll  [-Wunknown-pragmas]
+000-    #pragma unroll
+000- ^
+000/adler32_security_benchmark/Emulation-HW2915-1-1ignoring #pragma unroll  [-Wunknown-pragmas]1-/opt/Xilinx/Vivado/2020.1/include/hls_exp_apfixed.h:2915:0: warning: ignoring #pragma unroll  [-Wunknown-pragmas]
+000-     #pragma unroll
+000- ^
+000/adler32_security_benchmark/Emulation-HW2933-1-1ignoring #pragma unroll  [-Wunknown-pragmas]1-/opt/Xilinx/Vivado/2020.1/include/hls_exp_apfixed.h:2933:0: warning: ignoring #pragma unroll  [-Wunknown-pragmas]
+000-   #pragma unroll
+000- ^
+000/adler32_security_benchmark/Emulation-HW2965-1-1ignoring #pragma unroll  [-Wunknown-pragmas]1-/opt/Xilinx/Vivado/2020.1/include/hls_exp_apfixed.h:2965:0: warning: ignoring #pragma unroll  [-Wunknown-pragmas]
+000-    #pragma unroll
+000- ^
+000/adler32_security_benchmark/Emulation-HW2972-1-1ignoring #pragma unroll  [-Wunknown-pragmas]1-/opt/Xilinx/Vivado/2020.1/include/hls_exp_apfixed.h:2972:0: warning: ignoring #pragma unroll  [-Wunknown-pragmas]
+000-     #pragma unroll
+000- ^
+000/adler32_security_benchmark/Emulation-HW2976-1-1ignoring #pragma unroll  [-Wunknown-pragmas]1-/opt/Xilinx/Vivado/2020.1/include/hls_exp_apfixed.h:2976:0: warning: ignoring #pragma unroll  [-Wunknown-pragmas]
+000-     #pragma unroll
+000- ^
+000/adler32_security_benchmark/Emulation-HW2991-1-1ignoring #pragma unroll  [-Wunknown-pragmas]1-/opt/Xilinx/Vivado/2020.1/include/hls_exp_apfixed.h:2991:0: warning: ignoring #pragma unroll  [-Wunknown-pragmas]
+000-   #pragma unroll
+000- ^
+000/adler32_security_benchmark/Emulation-HW3041-1-1ignoring #pragma unroll  [-Wunknown-pragmas]1-/opt/Xilinx/Vivado/2020.1/include/hls_exp_apfixed.h:3041:0: warning: ignoring #pragma unroll  [-Wunknown-pragmas]
+000-    #pragma unroll
+000- ^
+000/adler32_security_benchmark/Emulation-HW3048-1-1ignoring #pragma unroll  [-Wunknown-pragmas]1-/opt/Xilinx/Vivado/2020.1/include/hls_exp_apfixed.h:3048:0: warning: ignoring #pragma unroll  [-Wunknown-pragmas]
+000-     #pragma unroll
+000- ^
+000/adler32_security_benchmark/Emulation-HW3052-1-1ignoring #pragma unroll  [-Wunknown-pragmas]1-/opt/Xilinx/Vivado/2020.1/include/hls_exp_apfixed.h:3052:0: warning: ignoring #pragma unroll  [-Wunknown-pragmas]
+000-     #pragma unroll
+000- ^
+000/adler32_security_benchmark/Emulation-HW3067-1-1ignoring #pragma unroll  [-Wunknown-pragmas]1-/opt/Xilinx/Vivado/2020.1/include/hls_exp_apfixed.h:3067:0: warning: ignoring #pragma unroll  [-Wunknown-pragmas]
+000-   #pragma unroll
+000- ^
+000/adler32_security_benchmark/Emulation-HW3204-1-1ignoring #pragma unroll  [-Wunknown-pragmas]1-/opt/Xilinx/Vivado/2020.1/include/hls_exp_apfixed.h:3204:0: warning: ignoring #pragma unroll  [-Wunknown-pragmas]
+000-    #pragma unroll
+000- ^
+000/adler32_security_benchmark/Emulation-HW3211-1-1ignoring #pragma unroll  [-Wunknown-pragmas]1-/opt/Xilinx/Vivado/2020.1/include/hls_exp_apfixed.h:3211:0: warning: ignoring #pragma unroll  [-Wunknown-pragmas]
+000-     #pragma unroll
+000- ^
+000/adler32_security_benchmark/Emulation-HW3215-1-1ignoring #pragma unroll  [-Wunknown-pragmas]1-/opt/Xilinx/Vivado/2020.1/include/hls_exp_apfixed.h:3215:0: warning: ignoring #pragma unroll  [-Wunknown-pragmas]
+000-     #pragma unroll
+000- ^
+000/adler32_security_benchmark/Emulation-HW3230-1-1ignoring #pragma unroll  [-Wunknown-pragmas]1-/opt/Xilinx/Vivado/2020.1/include/hls_exp_apfixed.h:3230:0: warning: ignoring #pragma unroll  [-Wunknown-pragmas]
+000-   #pragma unroll
+000- ^
+000/adler32_security_benchmark/Emulation-HW3390-1-1ignoring #pragma unroll  [-Wunknown-pragmas]1-/opt/Xilinx/Vivado/2020.1/include/hls_exp_apfixed.h:3390:0: warning: ignoring #pragma unroll  [-Wunknown-pragmas]
+000-    #pragma unroll
+000- ^
+000/adler32_security_benchmark/Emulation-HW3397-1-1ignoring #pragma unroll  [-Wunknown-pragmas]1-/opt/Xilinx/Vivado/2020.1/include/hls_exp_apfixed.h:3397:0: warning: ignoring #pragma unroll  [-Wunknown-pragmas]
+000-     #pragma unroll
+000- ^
+000/adler32_security_benchmark/Emulation-HW3401-1-1ignoring #pragma unroll  [-Wunknown-pragmas]1-/opt/Xilinx/Vivado/2020.1/include/hls_exp_apfixed.h:3401:0: warning: ignoring #pragma unroll  [-Wunknown-pragmas]
+000-     #pragma unroll
+000- ^
+000-In file included from /opt/Xilinx/Vivado/2020.1/include/hls_math.h:1060:0,
+000-                 from /home/centos/workspace/adler32_security_benchmark/libs/xf_security/L1/include/xf_security/adler32.hpp:29,
+000-                 from /home/centos/workspace/adler32_security_benchmark/src/kernel/adler32_kernel.hpp:22,
+000-                 from ../src/host/main.cpp:21:
+000/adler32_security_benchmark/Emulation-HW500-1-1ignoring #pragma HLS pipeline [-Wunknown-pragmas]1-/opt/Xilinx/Vivado/2020.1/include/hls_log_apfixed.h:500:0: warning: ignoring #pragma HLS pipeline [-Wunknown-pragmas]
+000- #pragma HLS pipeline
+000- ^
+000/adler32_security_benchmark/Emulation-HW728-1-1ignoring #pragma unroll  [-Wunknown-pragmas]1-/opt/Xilinx/Vivado/2020.1/include/hls_log_apfixed.h:728:0: warning: ignoring #pragma unroll  [-Wunknown-pragmas]
+000-             #pragma unroll
+000- ^
+000/adler32_security_benchmark/Emulation-HW817-1-1ignoring #pragma HLS pipeline [-Wunknown-pragmas]1-/opt/Xilinx/Vivado/2020.1/include/hls_log_apfixed.h:817:0: warning: ignoring #pragma HLS pipeline [-Wunknown-pragmas]
+000- #pragma HLS pipeline
+000- ^
+000/adler32_security_benchmark/Emulation-HW946-1-1ignoring #pragma unroll  [-Wunknown-pragmas]1-/opt/Xilinx/Vivado/2020.1/include/hls_log_apfixed.h:946:0: warning: ignoring #pragma unroll  [-Wunknown-pragmas]
+000-             #pragma unroll
+000- ^
+000/adler32_security_benchmark/Emulation-HW1093-1-1ignoring #pragma HLS pipeline [-Wunknown-pragmas]1-/opt/Xilinx/Vivado/2020.1/include/hls_log_apfixed.h:1093:0: warning: ignoring #pragma HLS pipeline [-Wunknown-pragmas]
+000- #pragma HLS pipeline
+000- ^
+000/adler32_security_benchmark/Emulation-HW1370-1-1ignoring #pragma unroll  [-Wunknown-pragmas]1-/opt/Xilinx/Vivado/2020.1/include/hls_log_apfixed.h:1370:0: warning: ignoring #pragma unroll  [-Wunknown-pragmas]
+000-             #pragma unroll
+000- ^
+000-In file included from /opt/Xilinx/Vivado/2020.1/include/hls_math.h:1061:0,
+000-                 from /home/centos/workspace/adler32_security_benchmark/libs/xf_security/L1/include/xf_security/adler32.hpp:29,
+000-                 from /home/centos/workspace/adler32_security_benchmark/src/kernel/adler32_kernel.hpp:22,
+000-                 from ../src/host/main.cpp:21:
+000/adler32_security_benchmark/Emulation-HW44-1-1ignoring #pragma HLS pipeline [-Wunknown-pragmas]1-/opt/Xilinx/Vivado/2020.1/include/hls_sqrt_apfixed.h:44:0: warning: ignoring #pragma HLS pipeline [-Wunknown-pragmas]
+000- #pragma HLS pipeline
+000- ^
+000-In file included from /opt/Xilinx/Vivado/2020.1/include/hls_math.h:1061:0,
+000-                 from /home/centos/workspace/adler32_security_benchmark/libs/xf_security/L1/include/xf_security/adler32.hpp:29,
+000-                 from /home/centos/workspace/adler32_security_benchmark/src/kernel/adler32_kernel.hpp:22,
+000-                 from ../src/host/main.cpp:21:
+000/adler32_security_benchmark/Emulation-HW266-1-1ignoring #pragma unroll  [-Wunknown-pragmas]1-/opt/Xilinx/Vivado/2020.1/include/hls_sqrt_apfixed.h:266:0: warning: ignoring #pragma unroll  [-Wunknown-pragmas]
+000-         #pragma unroll
+000- ^
+000/adler32_security_benchmark/Emulation-HW294-1-1ignoring #pragma unroll  [-Wunknown-pragmas]1-/opt/Xilinx/Vivado/2020.1/include/hls_sqrt_apfixed.h:294:0: warning: ignoring #pragma unroll  [-Wunknown-pragmas]
+000-         #pragma unroll
+000- ^
+000/adler32_security_benchmark/Emulation-HW393-1-1ignoring #pragma HLS pipeline [-Wunknown-pragmas]1-/opt/Xilinx/Vivado/2020.1/include/hls_sqrt_apfixed.h:393:0: warning: ignoring #pragma HLS pipeline [-Wunknown-pragmas]
+000- #pragma HLS pipeline
+000- ^
+000/adler32_security_benchmark/Emulation-HW440-1-1ignoring #pragma HLS pipeline [-Wunknown-pragmas]1-/opt/Xilinx/Vivado/2020.1/include/hls_sqrt_apfixed.h:440:0: warning: ignoring #pragma HLS pipeline [-Wunknown-pragmas]
+000- #pragma HLS pipeline
+000- ^
+000-In file included from /opt/Xilinx/Vivado/2020.1/include/hls_math.h:1062:0,
+000-                 from /home/centos/workspace/adler32_security_benchmark/libs/xf_security/L1/include/xf_security/adler32.hpp:29,
+000-                 from /home/centos/workspace/adler32_security_benchmark/src/kernel/adler32_kernel.hpp:22,
+000-                 from ../src/host/main.cpp:21:
+000/adler32_security_benchmark/Emulation-HW40-1-1ignoring #pragma HLS pipeline [-Wunknown-pragmas]1-/opt/Xilinx/Vivado/2020.1/include/hls_round_copysign_apfixed.h:40:0: warning: ignoring #pragma HLS pipeline [-Wunknown-pragmas]
+000- #pragma HLS pipeline
+000- ^
+000/adler32_security_benchmark/Emulation-HW57-1-1ignoring #pragma HLS pipeline [-Wunknown-pragmas]1-/opt/Xilinx/Vivado/2020.1/include/hls_round_copysign_apfixed.h:57:0: warning: ignoring #pragma HLS pipeline [-Wunknown-pragmas]
+000- #pragma HLS pipeline
+000- ^
+000/adler32_security_benchmark/Emulation-HW117-1-1ignoring #pragma HLS pipeline [-Wunknown-pragmas]1-/opt/Xilinx/Vivado/2020.1/include/hls_round_copysign_apfixed.h:117:0: warning: ignoring #pragma HLS pipeline [-Wunknown-pragmas]
+000- #pragma HLS pipeline
+000- ^
+000/adler32_security_benchmark/Emulation-HW201-1-1ignoring #pragma HLS pipeline [-Wunknown-pragmas]1-/opt/Xilinx/Vivado/2020.1/include/hls_round_copysign_apfixed.h:201:0: warning: ignoring #pragma HLS pipeline [-Wunknown-pragmas]
+000- #pragma HLS pipeline
+000- ^
+000/adler32_security_benchmark/Emulation-HW237-1-1ignoring #pragma HLS pipeline [-Wunknown-pragmas]1-/opt/Xilinx/Vivado/2020.1/include/hls_round_copysign_apfixed.h:237:0: warning: ignoring #pragma HLS pipeline [-Wunknown-pragmas]
+000- #pragma HLS pipeline
+000- ^
+000-In file included from /opt/Xilinx/Vivado/2020.1/include/hls_math.h:1063:0,
+000-                 from /home/centos/workspace/adler32_security_benchmark/libs/xf_security/L1/include/xf_security/adler32.hpp:29,
+000-                 from /home/centos/workspace/adler32_security_benchmark/src/kernel/adler32_kernel.hpp:22,
+000-                 from ../src/host/main.cpp:21:
+000/adler32_security_benchmark/Emulation-HW74-1-1ignoring #pragma unroll  [-Wunknown-pragmas]1-/opt/Xilinx/Vivado/2020.1/include/hls_pow_apfixed.h:74:0: warning: ignoring #pragma unroll  [-Wunknown-pragmas]
+000-             #pragma unroll
+000- ^
+000/adler32_security_benchmark/Emulation-HW133-1-1ignoring #pragma unroll  [-Wunknown-pragmas]1-/opt/Xilinx/Vivado/2020.1/include/hls_pow_apfixed.h:133:0: warning: ignoring #pragma unroll  [-Wunknown-pragmas]
+000-     #pragma unroll
+000- ^
+000/adler32_security_benchmark/Emulation-HW146-1-1ignoring #pragma unroll  [-Wunknown-pragmas]1-/opt/Xilinx/Vivado/2020.1/include/hls_pow_apfixed.h:146:0: warning: ignoring #pragma unroll  [-Wunknown-pragmas]
+000-             #pragma unroll
+000- ^
+000/adler32_security_benchmark/Emulation-HW176-1-1ignoring #pragma unroll  [-Wunknown-pragmas]1-/opt/Xilinx/Vivado/2020.1/include/hls_pow_apfixed.h:176:0: warning: ignoring #pragma unroll  [-Wunknown-pragmas]
+000-             #pragma unroll
+000- ^
+000/adler32_security_benchmark/Emulation-HW304-1-1ignoring #pragma HLS unroll [-Wunknown-pragmas]1-/opt/Xilinx/Vivado/2020.1/include/hls_pow_apfixed.h:304:0: warning: ignoring #pragma HLS unroll [-Wunknown-pragmas]
+000-            #pragma HLS unroll
+000- ^
+000/adler32_security_benchmark/Emulation-HW324-1-1ignoring #pragma hls unroll [-Wunknown-pragmas]1-/opt/Xilinx/Vivado/2020.1/include/hls_pow_apfixed.h:324:0: warning: ignoring #pragma hls unroll [-Wunknown-pragmas]
+000-                #pragma hls unroll
+000- ^
+000/adler32_security_benchmark/Emulation-HW338-1-1ignoring #pragma HLS unroll [-Wunknown-pragmas]1-/opt/Xilinx/Vivado/2020.1/include/hls_pow_apfixed.h:338:0: warning: ignoring #pragma HLS unroll [-Wunknown-pragmas]
+000-                    #pragma HLS unroll
+000- ^
+000/adler32_security_benchmark/Emulation-HW456-1-1ignoring #pragma hls unroll [-Wunknown-pragmas]1-/opt/Xilinx/Vivado/2020.1/include/hls_pow_apfixed.h:456:0: warning: ignoring #pragma hls unroll [-Wunknown-pragmas]
+000-            #pragma hls unroll
+000- ^
+000/adler32_security_benchmark/Emulation-HW470-1-1ignoring #pragma HLS unroll [-Wunknown-pragmas]1-/opt/Xilinx/Vivado/2020.1/include/hls_pow_apfixed.h:470:0: warning: ignoring #pragma HLS unroll [-Wunknown-pragmas]
+000-               #pragma HLS unroll
+000- ^
+000-In file included from /opt/Xilinx/Vivado/2020.1/include/hls_math.h:1064:0,
+000-                 from /home/centos/workspace/adler32_security_benchmark/libs/xf_security/L1/include/xf_security/adler32.hpp:29,
+000-                 from /home/centos/workspace/adler32_security_benchmark/src/kernel/adler32_kernel.hpp:22,
+000-                 from ../src/host/main.cpp:21:
+000/adler32_security_benchmark/Emulation-HW49-1-1ignoring #pragma HLS PIPELINE [-Wunknown-pragmas]1-/opt/Xilinx/Vivado/2020.1/include/hls_diff_apfixed.h:49:0: warning: ignoring #pragma HLS PIPELINE [-Wunknown-pragmas]
+000-     #pragma HLS PIPELINE II=1
+000- ^
+000/adler32_security_benchmark/Emulation-HW59-1-1ignoring #pragma UNROLL  [-Wunknown-pragmas]1-/opt/Xilinx/Vivado/2020.1/include/hls_diff_apfixed.h:59:0: warning: ignoring #pragma UNROLL  [-Wunknown-pragmas]
+000-             #pragma UNROLL        
+000- ^
+000/adler32_security_benchmark/Emulation-HW189-1-1ignoring #pragma HLS PIPELINE [-Wunknown-pragmas]1-/opt/Xilinx/Vivado/2020.1/include/hls_diff_apfixed.h:189:0: warning: ignoring #pragma HLS PIPELINE [-Wunknown-pragmas]
+000-     #pragma HLS PIPELINE II=1
+000- ^
+000/adler32_security_benchmark/Emulation-HW209-1-1ignoring #pragma UNROLL  [-Wunknown-pragmas]1-/opt/Xilinx/Vivado/2020.1/include/hls_diff_apfixed.h:209:0: warning: ignoring #pragma UNROLL  [-Wunknown-pragmas]
+000-             #pragma UNROLL        
+000- ^
+000/adler32_security_benchmark/Emulation-HW255-1-1ignoring #pragma HLS PIPELINE [-Wunknown-pragmas]1-/opt/Xilinx/Vivado/2020.1/include/hls_diff_apfixed.h:255:0: warning: ignoring #pragma HLS PIPELINE [-Wunknown-pragmas]
+000-     #pragma HLS PIPELINE II=1
+000- ^
+000/adler32_security_benchmark/Emulation-HW274-1-1ignoring #pragma UNROLL  [-Wunknown-pragmas]1-/opt/Xilinx/Vivado/2020.1/include/hls_diff_apfixed.h:274:0: warning: ignoring #pragma UNROLL  [-Wunknown-pragmas]
+000-             #pragma UNROLL        
+000- ^
+000-In file included from /opt/Xilinx/Vivado/2020.1/include/hls_math.h:1066:0,
+000-                 from /home/centos/workspace/adler32_security_benchmark/libs/xf_security/L1/include/xf_security/adler32.hpp:29,
+000-                 from /home/centos/workspace/adler32_security_benchmark/src/kernel/adler32_kernel.hpp:22,
+000-                 from ../src/host/main.cpp:21:
+000/adler32_security_benchmark/Emulation-HW72-1-1ignoring #pragma HLS pipeline [-Wunknown-pragmas]1-/opt/Xilinx/Vivado/2020.1/include/hls_frexp_apfixed.h:72:0: warning: ignoring #pragma HLS pipeline [-Wunknown-pragmas]
+000-     #pragma HLS pipeline II=1
+000- ^
+000-In file included from /opt/Xilinx/Vivado/2020.1/include/hls_math.h:1068:0,
+000-                 from /home/centos/workspace/adler32_security_benchmark/libs/xf_security/L1/include/xf_security/adler32.hpp:29,
+000-                 from /home/centos/workspace/adler32_security_benchmark/src/kernel/adler32_kernel.hpp:22,
+000-                 from ../src/host/main.cpp:21:
+000/adler32_security_benchmark/Emulation-HW43-1-1ignoring #pragma HLS pipeline [-Wunknown-pragmas]1-/opt/Xilinx/Vivado/2020.1/include/hls_isequal_isnotequal_apfixed.h:43:0: warning: ignoring #pragma HLS pipeline [-Wunknown-pragmas]
+000- #pragma HLS pipeline
+000- ^
+000/adler32_security_benchmark/Emulation-HW51-1-1ignoring #pragma HLS pipeline [-Wunknown-pragmas]1-/opt/Xilinx/Vivado/2020.1/include/hls_isequal_isnotequal_apfixed.h:51:0: warning: ignoring #pragma HLS pipeline [-Wunknown-pragmas]
+000- #pragma HLS pipeline
+000- ^
+000/adler32_security_benchmark/Emulation-HW59-1-1ignoring #pragma HLS pipeline [-Wunknown-pragmas]1-/opt/Xilinx/Vivado/2020.1/include/hls_isequal_isnotequal_apfixed.h:59:0: warning: ignoring #pragma HLS pipeline [-Wunknown-pragmas]
+000- #pragma HLS pipeline
+000- ^
+000/adler32_security_benchmark/Emulation-HW67-1-1ignoring #pragma HLS pipeline [-Wunknown-pragmas]1-/opt/Xilinx/Vivado/2020.1/include/hls_isequal_isnotequal_apfixed.h:67:0: warning: ignoring #pragma HLS pipeline [-Wunknown-pragmas]
+000- #pragma HLS pipeline
+000- ^
+000/adler32_security_benchmark/Emulation-HW75-1-1ignoring #pragma HLS pipeline [-Wunknown-pragmas]1-/opt/Xilinx/Vivado/2020.1/include/hls_isequal_isnotequal_apfixed.h:75:0: warning: ignoring #pragma HLS pipeline [-Wunknown-pragmas]
+000- #pragma HLS pipeline
+000- ^
+000/adler32_security_benchmark/Emulation-HW83-1-1ignoring #pragma HLS pipeline [-Wunknown-pragmas]1-/opt/Xilinx/Vivado/2020.1/include/hls_isequal_isnotequal_apfixed.h:83:0: warning: ignoring #pragma HLS pipeline [-Wunknown-pragmas]
+000- #pragma HLS pipeline
+000- ^
+000/adler32_security_benchmark/Emulation-HW91-1-1ignoring #pragma HLS pipeline [-Wunknown-pragmas]1-/opt/Xilinx/Vivado/2020.1/include/hls_isequal_isnotequal_apfixed.h:91:0: warning: ignoring #pragma HLS pipeline [-Wunknown-pragmas]
+000- #pragma HLS pipeline
+000- ^
+000/adler32_security_benchmark/Emulation-HW99-1-1ignoring #pragma HLS pipeline [-Wunknown-pragmas]1-/opt/Xilinx/Vivado/2020.1/include/hls_isequal_isnotequal_apfixed.h:99:0: warning: ignoring #pragma HLS pipeline [-Wunknown-pragmas]
+000- #pragma HLS pipeline
+000- ^
+000/adler32_security_benchmark/Emulation-HW108-1-1ignoring #pragma HLS pipeline [-Wunknown-pragmas]1-/opt/Xilinx/Vivado/2020.1/include/hls_isequal_isnotequal_apfixed.h:108:0: warning: ignoring #pragma HLS pipeline [-Wunknown-pragmas]
+000- #pragma HLS pipeline
+000- ^
+000/adler32_security_benchmark/Emulation-HW116-1-1ignoring #pragma HLS pipeline [-Wunknown-pragmas]1-/opt/Xilinx/Vivado/2020.1/include/hls_isequal_isnotequal_apfixed.h:116:0: warning: ignoring #pragma HLS pipeline [-Wunknown-pragmas]
+000- #pragma HLS pipeline
+000- ^
+000/adler32_security_benchmark/Emulation-HW124-1-1ignoring #pragma HLS pipeline [-Wunknown-pragmas]1-/opt/Xilinx/Vivado/2020.1/include/hls_isequal_isnotequal_apfixed.h:124:0: warning: ignoring #pragma HLS pipeline [-Wunknown-pragmas]
+000- #pragma HLS pipeline
+000- ^
+000/adler32_security_benchmark/Emulation-HW132-1-1ignoring #pragma HLS pipeline [-Wunknown-pragmas]1-/opt/Xilinx/Vivado/2020.1/include/hls_isequal_isnotequal_apfixed.h:132:0: warning: ignoring #pragma HLS pipeline [-Wunknown-pragmas]
+000- #pragma HLS pipeline
+000- ^
+000/adler32_security_benchmark/Emulation-HW140-1-1ignoring #pragma HLS pipeline [-Wunknown-pragmas]1-/opt/Xilinx/Vivado/2020.1/include/hls_isequal_isnotequal_apfixed.h:140:0: warning: ignoring #pragma HLS pipeline [-Wunknown-pragmas]
+000- #pragma HLS pipeline
+000- ^
+000/adler32_security_benchmark/Emulation-HW148-1-1ignoring #pragma HLS pipeline [-Wunknown-pragmas]1-/opt/Xilinx/Vivado/2020.1/include/hls_isequal_isnotequal_apfixed.h:148:0: warning: ignoring #pragma HLS pipeline [-Wunknown-pragmas]
+000- #pragma HLS pipeline
+000- ^
+000/adler32_security_benchmark/Emulation-HW156-1-1ignoring #pragma HLS pipeline [-Wunknown-pragmas]1-/opt/Xilinx/Vivado/2020.1/include/hls_isequal_isnotequal_apfixed.h:156:0: warning: ignoring #pragma HLS pipeline [-Wunknown-pragmas]
+000- #pragma HLS pipeline
+000- ^
+000/adler32_security_benchmark/Emulation-HW164-1-1ignoring #pragma HLS pipeline [-Wunknown-pragmas]1-/opt/Xilinx/Vivado/2020.1/include/hls_isequal_isnotequal_apfixed.h:164:0: warning: ignoring #pragma HLS pipeline [-Wunknown-pragmas]
+000- #pragma HLS pipeline
+000- ^
+000-In file included from /opt/Xilinx/Vivado/2020.1/include/hls_math.h:1069:0,
+000-                 from /home/centos/workspace/adler32_security_benchmark/libs/xf_security/L1/include/xf_security/adler32.hpp:29,
+000-                 from /home/centos/workspace/adler32_security_benchmark/src/kernel/adler32_kernel.hpp:22,
+000-                 from ../src/host/main.cpp:21:
+000/adler32_security_benchmark/Emulation-HW41-1-1ignoring #pragma HLS pipeline [-Wunknown-pragmas]1-/opt/Xilinx/Vivado/2020.1/include/hls_all_any_apfixed.h:41:0: warning: ignoring #pragma HLS pipeline [-Wunknown-pragmas]
+000- #pragma HLS pipeline II=1
+000- ^
+000/adler32_security_benchmark/Emulation-HW52-1-1ignoring #pragma HLS pipeline [-Wunknown-pragmas]1-/opt/Xilinx/Vivado/2020.1/include/hls_all_any_apfixed.h:52:0: warning: ignoring #pragma HLS pipeline [-Wunknown-pragmas]
+000- #pragma HLS pipeline II=1
+000- ^
+000/adler32_security_benchmark/Emulation-HW63-1-1ignoring #pragma HLS pipeline [-Wunknown-pragmas]1-/opt/Xilinx/Vivado/2020.1/include/hls_all_any_apfixed.h:63:0: warning: ignoring #pragma HLS pipeline [-Wunknown-pragmas]
+000- #pragma HLS pipeline II=1
+000- ^
+000/adler32_security_benchmark/Emulation-HW74-1-1ignoring #pragma HLS pipeline [-Wunknown-pragmas]1-/opt/Xilinx/Vivado/2020.1/include/hls_all_any_apfixed.h:74:0: warning: ignoring #pragma HLS pipeline [-Wunknown-pragmas]
+000- #pragma HLS pipeline II=1
+000- ^
+000/adler32_security_benchmark/Emulation-HW85-1-1ignoring #pragma HLS pipeline [-Wunknown-pragmas]1-/opt/Xilinx/Vivado/2020.1/include/hls_all_any_apfixed.h:85:0: warning: ignoring #pragma HLS pipeline [-Wunknown-pragmas]
+000- #pragma HLS pipeline II=1
+000- ^
+000/adler32_security_benchmark/Emulation-HW96-1-1ignoring #pragma HLS pipeline [-Wunknown-pragmas]1-/opt/Xilinx/Vivado/2020.1/include/hls_all_any_apfixed.h:96:0: warning: ignoring #pragma HLS pipeline [-Wunknown-pragmas]
+000- #pragma HLS pipeline II=1
+000- ^
+000/adler32_security_benchmark/Emulation-HW107-1-1ignoring #pragma HLS pipeline [-Wunknown-pragmas]1-/opt/Xilinx/Vivado/2020.1/include/hls_all_any_apfixed.h:107:0: warning: ignoring #pragma HLS pipeline [-Wunknown-pragmas]
+000- #pragma HLS pipeline II=1
+000- ^
+000/adler32_security_benchmark/Emulation-HW118-1-1ignoring #pragma HLS pipeline [-Wunknown-pragmas]1-/opt/Xilinx/Vivado/2020.1/include/hls_all_any_apfixed.h:118:0: warning: ignoring #pragma HLS pipeline [-Wunknown-pragmas]
+000- #pragma HLS pipeline II=1
+000- ^
+000-In file included from /opt/Xilinx/Vivado/2020.1/include/hls_math.h:1070:0,
+000-                 from /home/centos/workspace/adler32_security_benchmark/libs/xf_security/L1/include/xf_security/adler32.hpp:29,
+000-                 from /home/centos/workspace/adler32_security_benchmark/src/kernel/adler32_kernel.hpp:22,
+000-                 from ../src/host/main.cpp:21:
+000/adler32_security_benchmark/Emulation-HW65-1-1ignoring #pragma HLS pipeline [-Wunknown-pragmas]1-/opt/Xilinx/Vivado/2020.1/include/hls_select_bitselect_apfixed.h:65:0: warning: ignoring #pragma HLS pipeline [-Wunknown-pragmas]
+000- #pragma HLS pipeline
+000- ^
+000/adler32_security_benchmark/Emulation-HW73-1-1ignoring #pragma HLS pipeline [-Wunknown-pragmas]1-/opt/Xilinx/Vivado/2020.1/include/hls_select_bitselect_apfixed.h:73:0: warning: ignoring #pragma HLS pipeline [-Wunknown-pragmas]
+000- #pragma HLS pipeline
+000- ^
+000/adler32_security_benchmark/Emulation-HW81-1-1ignoring #pragma HLS pipeline [-Wunknown-pragmas]1-/opt/Xilinx/Vivado/2020.1/include/hls_select_bitselect_apfixed.h:81:0: warning: ignoring #pragma HLS pipeline [-Wunknown-pragmas]
+000- #pragma HLS pipeline
+000- ^
+000/adler32_security_benchmark/Emulation-HW88-1-1ignoring #pragma HLS pipeline [-Wunknown-pragmas]1-/opt/Xilinx/Vivado/2020.1/include/hls_select_bitselect_apfixed.h:88:0: warning: ignoring #pragma HLS pipeline [-Wunknown-pragmas]
+000- #pragma HLS pipeline
+000- ^
+000-In file included from /opt/Xilinx/Vivado/2020.1/include/hls_math.h:1071:0,
+000-                 from /home/centos/workspace/adler32_security_benchmark/libs/xf_security/L1/include/xf_security/adler32.hpp:29,
+000-                 from /home/centos/workspace/adler32_security_benchmark/src/kernel/adler32_kernel.hpp:22,
+000-                 from ../src/host/main.cpp:21:
+000/adler32_security_benchmark/Emulation-HW516-1-1ignoring #pragma HLS PIPELINE [-Wunknown-pragmas]1-/opt/Xilinx/Vivado/2020.1/include/hls_erf_apfixed.h:516:0: warning: ignoring #pragma HLS PIPELINE [-Wunknown-pragmas]
+000-     #pragma HLS PIPELINE II=1
+000- ^
+000-In file included from /opt/Xilinx/Vivado/2020.1/include/hls_math.h:1073:0,
+000-                 from /home/centos/workspace/adler32_security_benchmark/libs/xf_security/L1/include/xf_security/adler32.hpp:29,
+000-                 from /home/centos/workspace/adler32_security_benchmark/src/kernel/adler32_kernel.hpp:22,
+000-                 from ../src/host/main.cpp:21:
+000/adler32_security_benchmark/Emulation-HW64-1-1ignoring #pragma HLS pipeline [-Wunknown-pragmas]1-/opt/Xilinx/Vivado/2020.1/include/hls_lgamma_apfixed.h:64:0: warning: ignoring #pragma HLS pipeline [-Wunknown-pragmas]
+000-     #pragma HLS pipeline
+000- ^
+000-In file included from /opt/Xilinx/Vivado/2020.1/include/hls_math.h:1073:0,
+000-                 from /home/centos/workspace/adler32_security_benchmark/libs/xf_security/L1/include/xf_security/adler32.hpp:29,
+000-                 from /home/centos/workspace/adler32_security_benchmark/src/kernel/adler32_kernel.hpp:22,
+000-                 from ../src/host/main.cpp:21:
+000/adler32_security_benchmark/Emulation-HW256-1-1ignoring #pragma unroll  [-Wunknown-pragmas]1-/opt/Xilinx/Vivado/2020.1/include/hls_lgamma_apfixed.h:256:0: warning: ignoring #pragma unroll  [-Wunknown-pragmas]
+000-     #pragma unroll
+000- ^
+000-In file included from /opt/Xilinx/Vivado/2020.1/include/hls_math.h:1074:0,
+000-                 from /home/centos/workspace/adler32_security_benchmark/libs/xf_security/L1/include/xf_security/adler32.hpp:29,
+000-                 from /home/centos/workspace/adler32_security_benchmark/src/kernel/adler32_kernel.hpp:22,
+000-                 from ../src/host/main.cpp:21:
+000/adler32_security_benchmark/Emulation-HW65-1-1ignoring #pragma HLS pipeline [-Wunknown-pragmas]1-/opt/Xilinx/Vivado/2020.1/include/hls_tgamma_apfixed.h:65:0: warning: ignoring #pragma HLS pipeline [-Wunknown-pragmas]
+000- #pragma HLS pipeline
+000- ^
+000/adler32_security_benchmark/Emulation-HW146-1-1ignoring #pragma unroll  [-Wunknown-pragmas]1-/opt/Xilinx/Vivado/2020.1/include/hls_tgamma_apfixed.h:146:0: warning: ignoring #pragma unroll  [-Wunknown-pragmas]
+000- #pragma unroll
+000- ^
+000-In file included from /opt/Xilinx/Vivado/2020.1/include/hls_math.h:1074:0,
+000-                 from /home/centos/workspace/adler32_security_benchmark/libs/xf_security/L1/include/xf_security/adler32.hpp:29,
+000-                 from /home/centos/workspace/adler32_security_benchmark/src/kernel/adler32_kernel.hpp:22,
+000-                 from ../src/host/main.cpp:21:
+000/adler32_security_benchmark/Emulation-HW191-1-1ignoring #pragma HLS pipeline [-Wunknown-pragmas]1-/opt/Xilinx/Vivado/2020.1/include/hls_tgamma_apfixed.h:191:0: warning: ignoring #pragma HLS pipeline [-Wunknown-pragmas]
+000- #pragma HLS pipeline
+000- ^
+000-In file included from /opt/Xilinx/Vivado/2020.1/include/hls_math.h:1076:0,
+000-                 from /home/centos/workspace/adler32_security_benchmark/libs/xf_security/L1/include/xf_security/adler32.hpp:29,
+000-                 from /home/centos/workspace/adler32_security_benchmark/src/kernel/adler32_kernel.hpp:22,
+000-                 from ../src/host/main.cpp:21:
+000/adler32_security_benchmark/Emulation-HW24-1-1ignoring #pragma HLS unroll [-Wunknown-pragmas]1-/opt/Xilinx/Vivado/2020.1/include/hls_mad_apfixed.h:24:0: warning: ignoring #pragma HLS unroll [-Wunknown-pragmas]
+000-            #pragma HLS unroll
+000- ^
+000-In file included from /opt/Xilinx/Vivado/2020.1/include/hls_math.h:1078:0,
+000-                 from /home/centos/workspace/adler32_security_benchmark/libs/xf_security/L1/include/xf_security/adler32.hpp:29,
+000-                 from /home/centos/workspace/adler32_security_benchmark/src/kernel/adler32_kernel.hpp:22,
+000-                 from ../src/host/main.cpp:21:
+000/adler32_security_benchmark/Emulation-HW196-1-1ignoring #pragma HLS unroll [-Wunknown-pragmas]1-/opt/Xilinx/Vivado/2020.1/include/hls_hypot_apfixed.h:196:0: warning: ignoring #pragma HLS unroll [-Wunknown-pragmas]
+000-        #pragma HLS unroll
+000- ^
+000-In file included from /home/centos/workspace/adler32_security_benchmark/src/kernel/adler32_kernel.hpp:22:0,
+000-                 from ../src/host/main.cpp:21:
+000/adler32_security_benchmark/libs/xf_security/L1/include/xf_security/adler32.hpp45-1-1ignoring #pragma HLS inline [-Wunknown-pragmas]1-/home/centos/workspace/adler32_security_benchmark/libs/xf_security/L1/include/xf_security/adler32.hpp:45:0: warning: ignoring #pragma HLS inline [-Wunknown-pragmas]
+000- #pragma HLS inline
+000- ^
+000/adler32_security_benchmark/libs/xf_security/L1/include/xf_security/adler32.hpp47-1-1ignoring #pragma HLS array_partition [-Wunknown-pragmas]1-/home/centos/workspace/adler32_security_benchmark/libs/xf_security/L1/include/xf_security/adler32.hpp:47:0: warning: ignoring #pragma HLS array_partition [-Wunknown-pragmas]
+000- #pragma HLS array_partition variable = tmp dim = 1 complete
+000- ^
+000/adler32_security_benchmark/libs/xf_security/L1/include/xf_security/adler32.hpp49-1-1ignoring #pragma HLS unroll [-Wunknown-pragmas]1-/home/centos/workspace/adler32_security_benchmark/libs/xf_security/L1/include/xf_security/adler32.hpp:49:0: warning: ignoring #pragma HLS unroll [-Wunknown-pragmas]
+000- #pragma HLS unroll
+000- ^
+000/adler32_security_benchmark/libs/xf_security/L1/include/xf_security/adler32.hpp59-1-1ignoring #pragma HLS inline [-Wunknown-pragmas]1-/home/centos/workspace/adler32_security_benchmark/libs/xf_security/L1/include/xf_security/adler32.hpp:59:0: warning: ignoring #pragma HLS inline [-Wunknown-pragmas]
+000- #pragma HLS inline
+000- ^
+000/adler32_security_benchmark/libs/xf_security/L1/include/xf_security/adler32.hpp93-1-1ignoring #pragma HLS PIPELINE [-Wunknown-pragmas]1-/home/centos/workspace/adler32_security_benchmark/libs/xf_security/L1/include/xf_security/adler32.hpp:93:0: warning: ignoring #pragma HLS PIPELINE [-Wunknown-pragmas]
+000- #pragma HLS PIPELINE II = 1
+000- ^
+000/adler32_security_benchmark/libs/xf_security/L1/include/xf_security/adler32.hpp94-1-1ignoring #pragma HLS loop_tripcount [-Wunknown-pragmas]1-/home/centos/workspace/adler32_security_benchmark/libs/xf_security/L1/include/xf_security/adler32.hpp:94:0: warning: ignoring #pragma HLS loop_tripcount [-Wunknown-pragmas]
+000- #pragma HLS loop_tripcount max = 100 min = 100
+000- ^
+000/adler32_security_benchmark/libs/xf_security/L1/include/xf_security/adler32.hpp97-1-1ignoring #pragma HLS array_partition [-Wunknown-pragmas]1-/home/centos/workspace/adler32_security_benchmark/libs/xf_security/L1/include/xf_security/adler32.hpp:97:0: warning: ignoring #pragma HLS array_partition [-Wunknown-pragmas]
+000- #pragma HLS array_partition variable = sTmp dim = 1
+000- ^
+000/adler32_security_benchmark/libs/xf_security/L1/include/xf_security/adler32.hpp99-1-1ignoring #pragma HLS unroll [-Wunknown-pragmas]1-/home/centos/workspace/adler32_security_benchmark/libs/xf_security/L1/include/xf_security/adler32.hpp:99:0: warning: ignoring #pragma HLS unroll [-Wunknown-pragmas]
+000- #pragma HLS unroll
+000- ^
+000/adler32_security_benchmark/libs/xf_security/L1/include/xf_security/adler32.hpp132-1-1ignoring #pragma HLS PIPELINE [-Wunknown-pragmas]1-/home/centos/workspace/adler32_security_benchmark/libs/xf_security/L1/include/xf_security/adler32.hpp:132:0: warning: ignoring #pragma HLS PIPELINE [-Wunknown-pragmas]
+000- #pragma HLS PIPELINE II = 1
+000- ^
+000/adler32_security_benchmark/libs/xf_security/L1/include/xf_security/adler32.hpp133-1-1ignoring #pragma HLS loop_tripcount [-Wunknown-pragmas]1-/home/centos/workspace/adler32_security_benchmark/libs/xf_security/L1/include/xf_security/adler32.hpp:133:0: warning: ignoring #pragma HLS loop_tripcount [-Wunknown-pragmas]
+000- #pragma HLS loop_tripcount max = W min = W
+000- ^
+000-../src/host/main.cpp: In function 'int main(int, const char**)':
+000/adler32_security_benchmark/src/host/main.cpp123-1-1unused variable 'test_time' [-Wunused-variable]1-../src/host/main.cpp:123:42: warning: unused variable 'test_time' [-Wunused-variable]
+000-     struct timeval start_time, end_time, test_time;
+000-                                          ^
+000-g++ -o "adler32_security_benchmark" libs/xf_security/ext/xcl2/xcl2.o src/host/main.o -lssl -lcrypto -lxilinxopencl -lpthread -lrt -lstdc++ -lmpfr -lgmp -lhlsmc++-GCC46 -lIp_floating_point_v7_0_bitacc_cmodel -lIp_xfft_v9_1_bitacc_cmodel -lIp_fir_compiler_v7_2_bitacc_cmodel -lIp_dds_compiler_v6_0_bitacc_cmodel -L/opt/xilinx/xrt/lib/ -L/opt/Xilinx/Vivado/2020.1/lnx64/tools/fpo_v7_0 -L/opt/Xilinx/Vivado/2020.1/lnx64/lib/csim -L/opt/Xilinx/Vivado/2020.1/lnx64/tools/dds_v6_0 -L/opt/Xilinx/Vivado/2020.1/lnx64/tools/fir_v7_0 -L/opt/Xilinx/Vivado/2020.1/lnx64/tools/fft_v9_1 -Wl,-rpath-link,/opt/xilinx/xrt/lib -Wl,-rpath,/opt/Xilinx/Vivado/2020.1/lnx64/lib/csim -Wl,-rpath,/opt/Xilinx/Vivado/2020.1/lnx64/tools/fpo_v7_0 -Wl,-rpath,/opt/Xilinx/Vivado/2020.1/lnx64/tools/fft_v9_1 -Wl,-rpath,/opt/Xilinx/Vivado/2020.1/lnx64/tools/fir_v7_0 -Wl,-rpath,/opt/Xilinx/Vivado/2020.1/lnx64/tools/dds_v6_0
+000/adler32_security_benchmark/Emulation-HW0-1-1libgmp.so.11, needed by /opt/Xilinx/Vivado/2020.1/lnx64/tools/fft_v9_1/libIp_xfft_v9_1_bitacc_cmodel.so, may conflict with libgmp.so.71-/bin/ld: warning: libgmp.so.11, needed by /opt/Xilinx/Vivado/2020.1/lnx64/tools/fft_v9_1/libIp_xfft_v9_1_bitacc_cmodel.so, may conflict with libgmp.so.7
+000-/opt/Xilinx/Vitis/2020.1/bin/v++ --package --config package.cfg Adler32Kernel.xclbin
+000-Option Map File Used: '/opt/Xilinx/Vitis/2020.1/data/vitis/vpp/optMap.xml'
+000-
+000-****** v++ v2020.1 (64-bit)
+000-  **** SW Build 2902540 on Wed May 27 19:54:35 MDT 2020
+000-    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+000-
+000-INFO: [v++ 60-1306] Additional information associated with this v++ package can be found at:
+000-	Reports: /home/centos/workspace/adler32_security_benchmark/Emulation-HW/package.build/reports/package
+000-	Log files: /home/centos/workspace/adler32_security_benchmark/Emulation-HW/package.build/logs/package
+000-INFO: [v++ 60-1657] Initializing dispatch client.
+000-Running Dispatch Server on port:41403
+000-INFO: [v++ 60-1548] Creating build summary session with primary output ./v++.package_summary, at Thu Jan 14 22:04:30 2021
+000-INFO: [v++ 60-1316] Initiating connection to rulecheck server, at Thu Jan 14 22:04:30 2021
+000-INFO: [v++ 60-895]   Target platform: /home/centos/src/project_data/aws-fpga/Vitis/aws_platform/xilinx_aws-vu9p-f1_shell-v04261818_201920_2/xilinx_aws-vu9p-f1_shell-v04261818_201920_2.xpfm
+000-INFO: [v++ 60-1578]   This platform contains Xilinx Shell Archive '/home/centos/src/project_data/aws-fpga/Vitis/aws_platform/xilinx_aws-vu9p-f1_shell-v04261818_201920_2/hw/xilinx_aws-vu9p-f1_shell-v04261818_201920_2.xsa'
+000-INFO: [v++ 60-2256] Packaging for hardware emulation
+000-INFO: [v++ 60-2343] Use the vitis_analyzer tool to visualize and navigate the relevant reports. Run the following command. 
+000-    vitis_analyzer ./v++.package_summary 
+000-INFO: [v++ 60-791] Total elapsed time: 0h 0m 14s
+000-INFO: [v++ 60-1653] Closing dispatch client.
+000-/opt/Xilinx/Vitis/2020.1/bin/emconfigutil --od . --nd 1  --platform /home/centos/src/project_data/aws-fpga/Vitis/aws_platform/xilinx_aws-vu9p-f1_shell-v04261818_201920_2/xilinx_aws-vu9p-f1_shell-v04261818_201920_2.xpfm
+000-
+000-****** configutil v2020.1 (64-bit)
+000-  **** SW Build 2902540 on Wed May 27 19:54:35 MDT 2020
+000-    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+000-
+000-INFO: [ConfigUtil 60-895]   Target platform: /home/centos/src/project_data/aws-fpga/Vitis/aws_platform/xilinx_aws-vu9p-f1_shell-v04261818_201920_2/xilinx_aws-vu9p-f1_shell-v04261818_201920_2.xpfm
+000-INFO: [ConfigUtil 60-1578]   This platform contains Xilinx Shell Archive '/home/centos/src/project_data/aws-fpga/Vitis/aws_platform/xilinx_aws-vu9p-f1_shell-v04261818_201920_2/hw/xilinx_aws-vu9p-f1_shell-v04261818_201920_2.xsa'
+000-emulation configuration file `emconfig.json` is created in . directory 
+00255-
+22:04:42 Build Finished (took 10m:27s.353ms)
+

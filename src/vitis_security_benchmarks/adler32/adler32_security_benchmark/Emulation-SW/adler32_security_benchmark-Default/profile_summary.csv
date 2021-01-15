@@ -1,0 +1,123 @@
+Profile Summary
+Generated on: 2021-01-14 21:51:55
+Msec since Epoch: 1610661115779
+Profiled application: adler32_security_benchmark
+Target platform: 
+Tool version: 2020.1
+XRT build version: 2.6.0
+Build version branch: 2020.1
+Build version hash: 12115fd4054cb46a5ade62fafa74c523f59116e6
+Build version date: 2020-07-09 15:20:59 
+Target devices: xilinx_aws-vu9p-f1_shell-v04261818_201920_2-0
+Flow mode: Software Emulation
+
+OpenCL API Calls
+API Name,Number Of Calls,Total Time (ms),Minimum Time (ms),Average Time (ms),Maximum Time (ms),
+clReleaseContext,1,5001.68,5001.68,5001.68,5001.68,
+clFinish,1,489.032,489.032,489.032,489.032,
+clCreateProgramWithBinary,1,17.8289,17.8289,17.8289,17.8289,
+clCreateKernel,1,1.31574,1.31574,1.31574,1.31574,
+clEnqueueMigrateMemObjects,2,0.444331,0.031862,0.222165,0.412469,
+clReleaseKernel,1,0.365819,0.365819,0.365819,0.365819,
+clCreateBuffer,4,0.344604,0.047563,0.086151,0.167498,
+clEnqueueTask,1,0.184473,0.184473,0.184473,0.184473,
+clReleaseMemObject,8,0.07571,0.005563,0.00946375,0.035627,
+clReleaseProgram,1,0.074585,0.074585,0.074585,0.074585,
+clGetPlatformIDs,2,0.063892,0.006286,0.031946,0.057606,
+clGetEventProfilingInfo,8,0.05624,0.005645,0.00703,0.012685,
+clSetKernelArg,6,0.040768,0.005455,0.00679467,0.009719,
+clReleaseEvent,3,0.031009,0.006265,0.0103363,0.016872,
+clRetainMemObject,4,0.025075,0.005297,0.00626875,0.008269,
+clCreateContext,1,0.019537,0.019537,0.019537,0.019537,
+clReleaseDevice,2,0.017178,0.006326,0.008589,0.010852,
+clCreateCommandQueue,1,0.01676,0.01676,0.01676,0.01676,
+clGetDeviceIDs,2,0.015738,0.005224,0.007869,0.010514,
+clGetDeviceInfo,2,0.015239,0.007102,0.0076195,0.008137,
+clGetPlatformInfo,2,0.010985,0.005152,0.0054925,0.005833,
+clRetainDevice,2,0.010512,0.00492,0.005256,0.005592,
+clReleaseCommandQueue,1,0.010026,0.010026,0.010026,0.010026,
+
+
+Kernel Execution
+Kernel,Number Of Enqueues,Total Time (ms),Minimum Time (ms),Average Time (ms),Maximum Time (ms),
+Adler32Kernel,1,487.903,487.903,487.903,487.903,
+
+
+Compute Unit Utilization
+Device,Compute Unit,Kernel,Global Work Size,Local Work Size,Number Of Calls,Dataflow Execution,Max Overlapping Executions,Dataflow Acceleration,Total Time (ms),Minimum Time (ms),Average Time (ms),Maximum Time (ms),Clock Frequency (MHz),
+xilinx_aws-vu9p-f1_shell-v04261818_201920_2-0,Adler32Kernel_1,Adler32Kernel,1:1:1,1:1:1,1,No,0,1.000000x,487.569,487.569,487.569,487.569,300,
+
+
+Data Transfer: Host to Global Memory
+Context:Number of Devices,Transfer Type,Number Of Buffer Transfers,Transfer Rate (MB/s),Average Bandwidth Utilization (%),Average Buffer Size (KB),Total Time (ms),Average Time (ms),
+
+
+Data Transfer: Kernels to Global Memory
+Device,Compute Unit/Port Name,Kernel Arguments,Memory Resources,Transfer Type,Number Of Transfers,Transfer Rate (MB/s),Average Bandwidth Utilization (%),Average Size (KB),Average Latency (ns),
+
+
+Top Data Transfer: Kernels to Global Memory
+Device,Compute Unit,Number of Transfers,Average Bytes per Transfer,Transfer Efficiency (%),Total Data Transfer (MB),Total Write (MB),Total Read (MB),Total Transfer Rate (MB/s),
+
+
+Top Kernel Execution
+Kernel Instance Address,Kernel,Context ID,Command Queue ID,Device,Start Time (ms),Duration (ms),Global Work Size,Local Work Size,
+31464816,Adler32Kernel,0,0,xilinx_aws-vu9p-f1_shell-v04261818_201920_2-0,32.3168,487.903,1:1:1,1:1:1,
+
+
+Top Memory Writes: Host to Global Memory
+Buffer Address,Context ID,Command Queue ID,Start Time (ms),Duration (ms),Buffer Size (KB),Writing Rate(MB/s),
+0,0,0,31.2912,N/A,131.2,N/A,
+0,0,0,32.2085,N/A,131.264,N/A,
+
+
+Top Memory Reads: Host to Global Memory
+Buffer Address,Context ID,Command Queue ID,Start Time (ms),Duration (ms),Buffer Size (KB),Reading Rate(MB/s),
+139264,0,0,520.339,N/A,0.064,N/A,
+
+
+Guidance Parameters
+Parameter,Element,Value,
+DEVICE_EXEC_TIME,xilinx_aws-vu9p-f1_shell-v04261818_201920_2-0,487.902605,
+CU_CALLS,xilinx_aws-vu9p-f1_shell-v04261818_201920_2-0|Adler32Kernel_1,1,
+MIGRATE_MEM,host,2,
+PLRAM_DEVICE,all,1,
+HBM_DEVICE,all,0,
+KDMA_DEVICE,all,0,
+P2P_DEVICE,all,0,
+P2P_HOST_TRANSFERS,host,0,
+PORT_BIT_WIDTH,Adler32Kernel_1/m_axi_gmem0,32,
+PORT_BIT_WIDTH,Adler32Kernel_1/m_axi_gmem1,32,
+PORT_BIT_WIDTH,Adler32Kernel_1/m_axi_gmem2,512,
+PORT_BIT_WIDTH,Adler32Kernel_1/m_axi_gmem3,32,
+KERNEL_COUNT,Adler32Kernel,1,
+OBJECTS_RELEASED,all,1,
+TRACE_MEMORY,all,NA,
+CU_CONTEXT_EN,all,0,
+MAX_PARALLEL_KERNEL_ENQUEUES,Adler32Kernel,1,
+COMMAND_QUEUE_OOO,31316880,1,
+KERNEL_BUFFER_INFO,Adler32Kernel|len||1,64,
+KERNEL_BUFFER_INFO,Adler32Kernel|adler||1,64,
+KERNEL_BUFFER_INFO,Adler32Kernel|inData||1,131072,
+KERNEL_BUFFER_INFO,Adler32Kernel|adler32Result||1,64,
+MEMORY_TYPE_BIT_WIDTH,xilinx_aws-vu9p-f1_shell-v04261818_201920_2-0|DDR,512,
+MEMORY_TYPE_BIT_WIDTH,xilinx_aws-vu9p-f1_shell-v04261818_201920_2-0|HBM,256,
+MEMORY_TYPE_BIT_WIDTH,xilinx_aws-vu9p-f1_shell-v04261818_201920_2-0|PLRAM,512,
+XRT_INI_SETTING,continuous_trace,0,
+XRT_INI_SETTING,continuous_trace_interval_ms,10,
+XRT_INI_SETTING,data_transfer_trace,off,
+XRT_INI_SETTING,launch_waveform,batch,
+XRT_INI_SETTING,lop_trace,0,
+XRT_INI_SETTING,power_profile,0,
+XRT_INI_SETTING,profile,1,
+XRT_INI_SETTING,stall_trace,off,
+XRT_INI_SETTING,timeline_trace,1,
+XRT_INI_SETTING,trace_buffer_size,1M,
+XRT_INI_SETTING,verbosity,4,
+BUFFER_RD_ACTIVE_TIME_MS,all,0.12796,
+BUFFER_WR_ACTIVE_TIME_MS,all,0.916539,
+BUFFER_TX_ACTIVE_TIME_MS,all,489.175,
+APPLICATION_RUN_TIME_MS,all,5523.14,
+TOTAL_KERNEL_RUN_TIME_MS,all,487.903,
+
+
